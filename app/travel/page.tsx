@@ -565,11 +565,11 @@ export default function TravelPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {europeLocations.map((location, index) => {
                 const hasImages = (location as Location).images && (location as Location).images!.length > 0;
-                // Cycle through: sage, olive (dark), warm-neutral
+                // Cycle through: sage, warm-neutral, olive (dark)
                 const styles = [
                   { bg: "panel-gradient-sage", isDark: false },
-                  { bg: "panel-gradient-olive", isDark: true },
-                  { bg: "panel-gradient-warm-neutral", isDark: false }
+                  { bg: "panel-gradient-warm-neutral", isDark: false },
+                  { bg: "panel-gradient-olive", isDark: true }
                 ];
                 const style = styles[index % 3];
                 return (
