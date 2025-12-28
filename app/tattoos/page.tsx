@@ -67,20 +67,53 @@ export default function TattoosPage() {
           <div className="grid md:grid-cols-12 gap-8 items-start">
             {/* Body Silhouette */}
             <div className="md:col-span-5 relative flex justify-center">
-              <div className="relative w-64 h-[500px]">
-                {/* Simple body outline SVG */}
+              <div className="relative w-48 h-[480px]">
+                {/* Athletic body silhouette SVG */}
                 <svg
-                  viewBox="0 0 100 200"
+                  viewBox="0 0 200 480"
                   className="w-full h-full"
                   style={{ filter: 'drop-shadow(0 4px 20px rgba(42,60,36,0.1))' }}
                 >
-                  {/* Body silhouette */}
-                  <ellipse cx="50" cy="18" rx="12" ry="14" fill="#97a97c" opacity="0.3" />
-                  <path
-                    d="M38 32 L35 55 L25 48 L15 70 L20 72 L28 60 L32 75 L30 130 L35 180 L42 180 L45 130 L50 130 L55 130 L58 180 L65 180 L70 130 L68 75 L72 60 L80 72 L85 70 L75 48 L65 55 L62 32 Z"
-                    fill="#97a97c"
-                    opacity="0.3"
-                  />
+                  {/* Head */}
+                  <ellipse cx="100" cy="32" rx="20" ry="26" fill="#97a97c" opacity="0.4" />
+                  {/* Neck */}
+                  <path d="M94 56 Q100 58 106 56 L105 72 Q100 74 95 72 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Chest */}
+                  <path d="M72 74 Q100 70 128 74 L126 118 Q100 124 74 118 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Upper Arm */}
+                  <path d="M72 75 L62 78 Q56 82 55 88 L52 132 Q54 136 58 134 L66 118 L72 118 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Right Upper Arm */}
+                  <path d="M128 75 L138 78 Q144 82 145 88 L148 132 Q146 136 142 134 L134 118 L128 118 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Forearm */}
+                  <path d="M52 136 L48 188 Q46 196 50 200 L56 198 L60 136 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Right Forearm */}
+                  <path d="M148 136 L152 188 Q154 196 150 200 L144 198 L140 136 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Hand */}
+                  <ellipse cx="50" cy="212" rx="7" ry="13" fill="#97a97c" opacity="0.4" />
+                  {/* Right Hand */}
+                  <ellipse cx="150" cy="212" rx="7" ry="13" fill="#97a97c" opacity="0.4" />
+                  {/* Torso */}
+                  <path d="M74 120 Q100 126 126 120 L122 165 Q100 170 78 165 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Waist */}
+                  <path d="M78 167 Q100 172 122 167 L120 200 Q100 204 80 200 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Hips */}
+                  <path d="M80 202 Q100 206 120 202 L122 240 Q100 245 78 240 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Thigh */}
+                  <path d="M78 242 Q86 246 97 244 L95 320 Q88 323 82 320 L76 245 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Right Thigh */}
+                  <path d="M103 244 Q114 246 122 242 L124 245 L118 320 Q112 323 105 320 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Calf */}
+                  <path d="M82 322 Q89 328 95 322 L93 400 Q88 404 84 400 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Right Calf */}
+                  <path d="M105 322 Q111 328 118 322 L116 400 Q112 404 107 400 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Ankle */}
+                  <path d="M84 402 Q88 406 93 402 L92 425 Q88 428 85 425 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Right Ankle */}
+                  <path d="M107 402 Q112 406 116 402 L115 425 Q112 428 108 425 Z" fill="#97a97c" opacity="0.4" />
+                  {/* Left Foot */}
+                  <ellipse cx="88" cy="440" rx="10" ry="16" fill="#97a97c" opacity="0.4" />
+                  {/* Right Foot */}
+                  <ellipse cx="112" cy="440" rx="10" ry="16" fill="#97a97c" opacity="0.4" />
                 </svg>
 
                 {/* Tattoo markers */}
@@ -93,7 +126,7 @@ export default function TattoosPage() {
                     className="absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-200"
                     style={{
                       left: `${tattoo.position.x}%`,
-                      top: `${tattoo.position.y / 2}%`,
+                      top: `${tattoo.position.y}%`,
                       zIndex: hoveredTattoo === tattoo.id || selectedTattoo?.id === tattoo.id ? 20 : 10
                     }}
                   >

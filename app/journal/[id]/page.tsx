@@ -43,23 +43,55 @@ export default async function JournalEntryPage({ params }: Props) {
           <div className="max-w-3xl">
             <article className="prose-editorial">
               {sections.map((section, index) => {
-                // Check if this section starts with a header
+                // Check if this section starts with a ## header
                 const headerMatch = section.match(/^## (.+)\n\n/);
                 if (headerMatch) {
                   const header = headerMatch[1];
                   const content = section.replace(/^## .+\n\n/, "");
+
+                  // Split content by ### subheaders
+                  const subsections = content.split(/\n\n(?=### )/);
+
                   return (
                     <div key={index} className="mb-10">
-                      <h2 className="font-display text-lg text-charcoal mb-4">{header}</h2>
-                      {content.split("\n\n").map((para, pIndex) => (
-                        <p key={pIndex} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
-                          {para}
-                        </p>
-                      ))}
+                      <h2
+                        className="text-xl text-charcoal mb-6"
+                        style={{ fontFamily: 'Georgia, serif' }}
+                      >
+                        {header}
+                      </h2>
+                      {subsections.map((subsection, sIndex) => {
+                        const subheaderMatch = subsection.match(/^### (.+)\n\n/);
+                        if (subheaderMatch) {
+                          const subheader = subheaderMatch[1];
+                          const subcontent = subsection.replace(/^### .+\n\n/, "");
+                          return (
+                            <div key={sIndex} className="mb-8">
+                              <h3
+                                className="text-sm text-charcoal/80 mb-4 italic"
+                                style={{ fontFamily: 'Georgia, serif' }}
+                              >
+                                {subheader}
+                              </h3>
+                              {subcontent.split("\n\n").map((para, pIndex) => (
+                                <p key={pIndex} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
+                                  {para}
+                                </p>
+                              ))}
+                            </div>
+                          );
+                        }
+                        // Regular paragraphs within section
+                        return subsection.split("\n\n").map((para, pIndex) => (
+                          <p key={`${sIndex}-${pIndex}`} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
+                            {para}
+                          </p>
+                        ));
+                      })}
                     </div>
                   );
                 }
-                // Regular paragraph
+                // Regular paragraph (no header)
                 return section.split("\n\n").map((para, pIndex) => (
                   <p key={`${index}-${pIndex}`} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
                     {para}
