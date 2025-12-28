@@ -7,6 +7,7 @@ import watching from "@/data/watching.json";
 type Film = typeof watching.films[0];
 type Book = typeof watching.books[0];
 type Playlist = typeof watching.playlists[0];
+type Track = { artist: string; track: string; album: string; genre: string };
 
 export default function WatchingPage() {
   const [activeTab, setActiveTab] = useState<"films" | "books" | "music">("films");
@@ -15,6 +16,8 @@ export default function WatchingPage() {
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
   const [suggestion, setSuggestion] = useState("");
   const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
+  const [expandedPlaylist, setExpandedPlaylist] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const filteredFilms = useMemo(() => {
     return watching.films.filter((f: Film) => {
@@ -305,101 +308,116 @@ export default function WatchingPage() {
           )}
 
           {activeTab === "music" && (
-            <div className="space-y-12">
-              {/* Group playlists by vibe */}
-              {["Running", "Focus", "Mood", "Social"].map((vibe) => {
-                const vibePlaylists = watching.playlists.filter((p: Playlist) => p.vibe === vibe);
-                if (vibePlaylists.length === 0) return null;
+            <div className="space-y-6">
+              {/* Stats bar */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="text-sm" style={{ color: 'rgba(42,60,36,0.6)' }}>
+                  {watching.playlists.length} vibes · {watching.playlists.reduce((acc: number, p: Playlist) => acc + p.trackCount, 0).toLocaleString()} tracks
+                </span>
+              </div>
 
-                return (
-                  <div key={vibe}>
-                    <div className="flex items-center gap-3 mb-6">
-                      <h3
-                        className="text-2xl tracking-tight"
-                        style={{
-                          fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                          color: '#2a3c24'
-                        }}
-                      >
-                        {vibe}
-                      </h3>
-                      <span
-                        className="text-xs px-2 py-0.5 rounded-full"
-                        style={{ backgroundColor: 'rgba(212,237,57,0.3)', color: '#2a3c24' }}
-                      >
-                        {vibePlaylists.length} playlists
-                      </span>
-                    </div>
+              {/* Vibe playlists */}
+              <div className="space-y-4">
+                {watching.playlists.map((playlist: Playlist) => {
+                  const colorLower = playlist.color.toLowerCase();
+                  const isDark = ['#2a3c24', '#3b412d', '#4e6041', '#546e40', '#677955'].includes(colorLower);
+                  const isExpanded = expandedPlaylist === playlist.id;
+                  const tracks = (playlist as Playlist & { tracks?: Track[] }).tracks || [];
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {vibePlaylists.map((playlist: Playlist) => {
-                        const colorLower = playlist.color.toLowerCase();
-                        const isDark = ['#2a3c24', '#3b412d', '#4e6041', '#546e40', '#677955'].includes(colorLower);
-                        return (
-                          <div
-                            key={playlist.id}
-                            className="rounded-xl p-5 transition-transform hover:scale-[1.02]"
-                            style={{ backgroundColor: playlist.color }}
-                          >
-                            <div className="flex items-start justify-between gap-3 mb-3">
-                              <h4
-                                className="text-lg tracking-tight"
+                  return (
+                    <div key={playlist.id} className="rounded-xl overflow-hidden">
+                      {/* Header - clickable */}
+                      <button
+                        onClick={() => setExpandedPlaylist(isExpanded ? null : playlist.id)}
+                        className="w-full text-left p-5 transition-all"
+                        style={{ backgroundColor: playlist.color }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <h3
+                                className="text-xl tracking-tight"
                                 style={{
                                   fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
                                   color: isDark ? '#fff5eb' : '#2a3c24'
                                 }}
                               >
                                 {playlist.title}
-                              </h4>
+                              </h3>
                               <span
-                                className="text-[10px] px-2 py-0.5 rounded-full flex-shrink-0"
+                                className="text-xs px-2 py-0.5 rounded-full"
                                 style={{
                                   backgroundColor: isDark ? 'rgba(255,255,255,0.2)' : 'rgba(42,60,36,0.15)',
                                   color: isDark ? '#fff5eb' : '#2a3c24'
                                 }}
                               >
-                                {playlist.mood}
+                                {playlist.trackCount} tracks
                               </span>
                             </div>
                             <p
-                              className="text-sm leading-relaxed mb-3"
+                              className="text-sm leading-relaxed"
                               style={{ color: isDark ? 'rgba(255,245,235,0.8)' : 'rgba(42,60,36,0.7)' }}
                             >
                               {playlist.description}
                             </p>
-                            <div className="flex items-center justify-between">
-                              <span
-                                className="text-xs"
-                                style={{ color: isDark ? 'rgba(255,245,235,0.6)' : 'rgba(42,60,36,0.5)' }}
-                              >
-                                {playlist.trackCount} tracks
-                              </span>
-                              {playlist.appleMusicUrl && (
-                                <a
-                                  href={playlist.appleMusicUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 text-xs transition-opacity hover:opacity-70"
-                                  style={{ color: isDark ? '#d4ed39' : '#546e40' }}
-                                >
-                                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.997 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03c.525 0 1.048-.034 1.57-.1.823-.106 1.597-.35 2.296-.81.84-.553 1.472-1.287 1.88-2.208.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.042-1.785-.455-2.07-1.36-.296-.94.1-1.913 1.03-2.372.37-.182.77-.282 1.17-.348.37-.06.74-.1 1.11-.16.36-.06.52-.24.56-.6 0-.05.01-.11.01-.16V8.27c0-.25-.13-.4-.38-.34l-.02.01-4.74 1.13c-.06.01-.12.03-.19.05-.1.03-.2.1-.23.2-.03.07-.04.15-.04.23V14.05v2.57c0 .44-.06.87-.25 1.27-.3.64-.81 1.03-1.49 1.2-.34.08-.68.14-1.03.16-.94.05-1.76-.4-2.07-1.28-.34-1 .08-2.01 1.04-2.49.38-.19.8-.29 1.22-.36.38-.06.76-.11 1.14-.17.32-.05.49-.22.54-.54.01-.05.01-.1.01-.16V7.62c0-.31.1-.54.36-.71.13-.08.27-.14.41-.18 1.32-.36 2.64-.7 3.96-1.06l2.85-.77c.08-.02.16-.04.24-.05.33-.05.55.14.55.48v4.75z"/>
-                                  </svg>
-                                  <span>Listen</span>
-                                </a>
-                              )}
-                            </div>
                           </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
+                          <svg
+                            className="w-5 h-5 flex-shrink-0 ml-4 transition-transform"
+                            style={{
+                              color: isDark ? '#fff5eb' : '#2a3c24',
+                              transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
+                            }}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </button>
 
-              <p className="text-center text-sm" style={{ color: 'rgba(42,60,36,0.5)' }}>
-                Add your Apple Music playlist URLs to enable listening links
-              </p>
+                      {/* Expanded track list */}
+                      {isExpanded && tracks.length > 0 && (
+                        <div className="bg-white border-x border-b border-sand/30 max-h-96 overflow-y-auto">
+                          <div className="divide-y divide-sand/20">
+                            {tracks.slice(0, 100).map((track: Track, idx: number) => (
+                              <div
+                                key={`${track.artist}-${track.track}-${idx}`}
+                                className="px-5 py-3 hover:bg-sand/10 transition-colors"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <span className="text-xs text-olive/40 w-6 flex-shrink-0 pt-0.5">
+                                    {idx + 1}
+                                  </span>
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-sm text-deep-forest truncate">
+                                      {track.track}
+                                    </p>
+                                    <p className="text-xs text-olive/60 truncate">
+                                      {track.artist}
+                                      {track.album && <span> · {track.album}</span>}
+                                    </p>
+                                  </div>
+                                  {track.genre && (
+                                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-sage/10 text-olive/50 flex-shrink-0">
+                                      {track.genre}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                            {tracks.length > 100 && (
+                              <div className="px-5 py-3 text-center text-xs text-olive/50">
+                                + {tracks.length - 100} more tracks
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
@@ -424,14 +442,26 @@ export default function WatchingPage() {
 
             {!suggestionSubmitted ? (
               <form
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  if (suggestion.trim()) {
-                    setSuggestionSubmitted(true);
-                    // In a real implementation, this would:
-                    // 1. Search TMDB/Google Books/Apple Music API
-                    // 2. Validate the result exists
-                    // 3. Store the validated suggestion
+                  if (suggestion.trim() && !isSubmitting) {
+                    setIsSubmitting(true);
+                    try {
+                      await fetch('/api/suggestions', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          type: activeTab,
+                          suggestion: suggestion.trim(),
+                          timestamp: new Date().toISOString()
+                        })
+                      });
+                      setSuggestionSubmitted(true);
+                    } catch (error) {
+                      console.error('Failed to submit suggestion:', error);
+                    } finally {
+                      setIsSubmitting(false);
+                    }
                   }
                 }}
                 className="flex gap-3"
