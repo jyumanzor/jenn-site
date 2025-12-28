@@ -144,8 +144,16 @@ export default function TattoosPage() {
                           : 'w-3 h-3'
                       }`}
                       style={{
-                        backgroundColor: selectedTattoo?.id === tattoo.id ? '#d4ed39' : '#2a3c24',
-                        boxShadow: selectedTattoo?.id === tattoo.id ? '0 0 0 2px #fff5eb, 0 0 0 4px #d4ed39' : 'none'
+                        backgroundColor: selectedTattoo?.id === tattoo.id
+                          ? '#d4ed39'
+                          : hoveredTattoo === tattoo.id
+                          ? '#d4ed39'
+                          : '#2a3c24',
+                        boxShadow: selectedTattoo?.id === tattoo.id
+                          ? '0 0 0 2px #fff5eb, 0 0 0 4px #d4ed39'
+                          : hoveredTattoo === tattoo.id
+                          ? '0 0 8px rgba(212, 237, 57, 0.6)'
+                          : 'none'
                       }}
                     />
                     {(hoveredTattoo === tattoo.id && selectedTattoo?.id !== tattoo.id) && (

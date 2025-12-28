@@ -57,7 +57,7 @@ export default function WatchingPage() {
               }}
             >
               Films, books &<br />
-              <span style={{ color: '#d4ed39' }}>music.</span>
+              <span style={{ color: '#ffcb69' }}>music.</span>
             </h1>
             <p
               className="text-lg md:text-xl leading-relaxed max-w-xl"
