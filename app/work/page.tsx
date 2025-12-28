@@ -134,9 +134,9 @@ export default function WorkPage() {
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12 mb-8">
             <div className="md:col-span-4">
-              <p className="light-bg-label mb-4">The side quests</p>
+              <p className="light-bg-label mb-4">Other experience</p>
               <p className="light-bg-body text-sm leading-relaxed">
-                Not everything fits in a consulting box.
+                Retail, fitness, hospitality.
               </p>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function WorkPage() {
             <div className="md:col-span-4">
               <p className="light-bg-label mb-4">What I do</p>
               <p className="light-bg-body text-sm leading-relaxed">
-                Core competencies built through rigorous training and real-world application.
+                Core competencies.
               </p>
             </div>
             <div className="md:col-span-8">

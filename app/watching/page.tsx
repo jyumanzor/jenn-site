@@ -54,13 +54,13 @@ export default function WatchingPage() {
               }}
             >
               Films, books &<br />
-              <span style={{ color: '#d4ed39' }}>sounds</span> that stay.
+              <span style={{ color: '#d4ed39' }}>music.</span>
             </h1>
             <p
               className="text-lg md:text-xl leading-relaxed max-w-xl"
               style={{ color: 'rgba(42,60,36,0.7)' }}
             >
-              A curated collection of stories, ideas, and music that shaped how I see the world.
+              What I watch, read, and listen to.
             </p>
           </div>
         </div>
@@ -419,7 +419,7 @@ export default function WatchingPage() {
               Suggest a {activeTab === "films" ? "film" : activeTab === "books" ? "book" : "playlist"}
             </h3>
             <p className="text-sm mb-6" style={{ color: 'rgba(42,60,36,0.6)' }}>
-              Think I&apos;d love something? Search for it below and I&apos;ll check it out.
+              Recommendations welcome.
             </p>
 
             {!suggestionSubmitted ? (

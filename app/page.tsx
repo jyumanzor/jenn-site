@@ -71,8 +71,7 @@ export default function Home() {
                 Economic consultant focused on damages analysis in commercial litigation.
               </p>
               <p className="light-bg-body text-sm leading-relaxed">
-                Running taught me that progress is measurable. You set a distance and a time,
-                then test yourself against it. Boston and Chicago marathons in 2026.
+                Boston and Chicago marathons in 2026. Sub-3:00 goal.
               </p>
             </div>
           </div>
@@ -176,7 +175,7 @@ export default function Home() {
             <div className="md:col-span-4">
               <p className="light-bg-label mb-3">Travel</p>
               <p className="light-bg-body text-sm leading-snug mb-4">
-                11 countries. Places that shaped me.
+                11 countries visited.
               </p>
               <Link
                 href="/travel"

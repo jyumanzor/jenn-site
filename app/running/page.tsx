@@ -180,11 +180,10 @@ export default function RunningPage() {
             <div className="md:col-span-7">
               <p className="light-bg-label mb-4">Running</p>
               <h1 className="font-display text-4xl md:text-5xl text-deep-forest mb-6 leading-tight">
-                The pursuit of measurable progress.
+                Marathon training & race history.
               </h1>
               <p className="text-base text-olive leading-relaxed reading-width font-light">
-                Every race is a test. Every finish line is data. Working toward all seven
-                World Marathon Majors—Boston and Chicago in 2026.
+                Working toward all seven World Marathon Majors. Boston and Chicago in 2026.
               </p>
             </div>
             <div className="md:col-span-5">
@@ -294,7 +293,7 @@ export default function RunningPage() {
               <p className="light-bg-label mb-4">Race history</p>
               <h2 className="light-bg-header text-2xl mb-4">Marathons completed.</h2>
               <p className="light-bg-body text-sm leading-relaxed">
-                Chronological journey. Each finish line is data.
+                All races, chronological order.
               </p>
             </div>
             <div className="md:col-span-8">
@@ -414,7 +413,7 @@ export default function RunningPage() {
               <p className="light-bg-label mb-4">Beyond 26.2</p>
               <h2 className="light-bg-header text-2xl mb-4">Ultras.</h2>
               <p className="light-bg-body text-sm leading-relaxed">
-                When marathons aren&apos;t enough.
+                50K and longer.
               </p>
             </div>
             <div className="md:col-span-8 space-y-4">
@@ -489,7 +488,7 @@ export default function RunningPage() {
                 <div className="md:col-span-7 space-y-4">
                   {/* Cool Facts */}
                   <div className="bg-white/10 backdrop-blur rounded-xl p-5">
-                    <p className="dark-bg-label mb-3">Cool facts</p>
+                    <p className="dark-bg-label mb-3">Details</p>
                     <ul className="space-y-2">
                       {selectedMajor.facts.map((fact, i) => (
                         <li key={i} className="dark-bg-body text-sm flex gap-2">

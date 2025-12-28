@@ -74,7 +74,7 @@ export default function TravelPage() {
         <div className="container-editorial">
           <div className="mb-6">
             <p className="light-bg-label mb-2">Timeline</p>
-            <p className="text-sm text-charcoal/60">A chronological look at where life has taken me.</p>
+            <p className="text-sm text-charcoal/60">Where I&apos;ve lived, in order.</p>
           </div>
           <TravelTimeline />
         </div>
