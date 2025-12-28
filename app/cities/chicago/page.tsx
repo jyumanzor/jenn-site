@@ -109,7 +109,7 @@ export default function ChicagoPage() {
                 className="text-sm leading-relaxed"
                 style={{ color: 'rgba(42,60,36,0.7)' }}
               >
-                QuestBridge full ride. Four years in Hyde Park. Returning for Booth in 2026.
+                Four years in Hyde Park. Returning for Booth in 2026.
               </p>
             </div>
             <div className="md:col-span-8">
@@ -117,17 +117,32 @@ export default function ChicagoPage() {
                 className="rounded-2xl p-8"
                 style={{ background: 'linear-gradient(135deg, #97a97c 0%, #cbad8c 100%)' }}
               >
-                <h3
-                  className="text-xl mb-4"
-                  style={{
-                    fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                    color: '#2a3c24'
-                  }}
-                >
-                  University of Chicago
-                </h3>
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h3
+                    className="text-xl"
+                    style={{
+                      fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                      color: '#2a3c24'
+                    }}
+                  >
+                    University of Chicago
+                  </h3>
+                  <a
+                    href="https://www.questbridge.org/high-school-students/national-college-match"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full transition-all hover:scale-105"
+                    style={{ backgroundColor: '#2a3c24', color: '#d4ed39' }}
+                    title="QuestBridge matches high-achieving, low-income students with full scholarships to top colleges"
+                  >
+                    <span>QuestBridge</span>
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </a>
+                </div>
                 <p className="leading-relaxed mb-6" style={{ color: 'rgba(42,60,36,0.8)' }}>
-                  Sociology and HIPS. QuestBridge full ride.
+                  Sociology and HIPS. Match Scholar for undergrad and MBA.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div
