@@ -74,35 +74,9 @@ export default function TravelPage() {
         <div className="container-editorial">
           <div className="mb-6">
             <p className="light-bg-label mb-2">Timeline</p>
-            <p className="text-sm text-charcoal/60">Where I&apos;ve lived, in order.</p>
+            <p className="text-sm text-charcoal/60">Where I&apos;ve visited, in order.</p>
           </div>
           <TravelTimeline />
-        </div>
-      </section>
-
-      <hr className="rule" />
-
-      {/* Stats Grid */}
-      <section className="py-10 bg-cream">
-        <div className="container-editorial">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="panel-gradient-deep text-center">
-              <p className="dark-bg-header text-3xl">{travel.stats.countries}</p>
-              <p className="dark-bg-label mt-1">Countries</p>
-            </div>
-            <div className="panel-gradient-sage text-center">
-              <p className="light-bg-header text-3xl">{travel.stats.cities}</p>
-              <p className="light-bg-label mt-1">Cities</p>
-            </div>
-            <div className="panel-gradient-warm-neutral text-center">
-              <p className="light-bg-header text-3xl">{usLocations.length}</p>
-              <p className="light-bg-label mt-1">US</p>
-            </div>
-            <div className="panel-gradient-olive text-center">
-              <p className="dark-bg-header text-3xl">{asiaLocations.length + europeLocations.length}</p>
-              <p className="dark-bg-label mt-1">Int&apos;l</p>
-            </div>
-          </div>
         </div>
       </section>
 
