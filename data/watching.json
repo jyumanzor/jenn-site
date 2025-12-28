@@ -682,6 +682,45 @@
       "accolades": "Oscar Best Picture, Best Director, Best Actor",
       "notes": "The father of the atomic bomb. Three hours of dread.",
       "themes": ["Power", "Guilt", "Legacy"]
+    },
+    {
+      "id": "whiplash",
+      "title": "Whiplash",
+      "director": "Damien Chazelle",
+      "year": 2014,
+      "status": "watched",
+      "genre": "Drama",
+      "country": "USA",
+      "cast": ["Miles Teller", "J.K. Simmons"],
+      "accolades": "Oscar Best Supporting Actor, Best Film Editing",
+      "notes": "Not quite my tempo. J.K. Simmons as a jazz tyrant.",
+      "themes": ["Obsession", "Ambition", "Abuse"]
+    },
+    {
+      "id": "hereditary",
+      "title": "Hereditary",
+      "director": "Ari Aster",
+      "year": 2018,
+      "status": "watched",
+      "genre": "Horror",
+      "country": "USA",
+      "cast": ["Toni Collette", "Alex Wolff", "Milly Shapiro"],
+      "accolades": "Sundance Film Festival",
+      "notes": "Family trauma as horror. That dinner scene. That car scene.",
+      "themes": ["Grief", "Family", "Fate"]
+    },
+    {
+      "id": "the-farewell",
+      "title": "The Farewell",
+      "director": "Lulu Wang",
+      "year": 2019,
+      "status": "watched",
+      "genre": "Drama/Comedy",
+      "country": "USA/China",
+      "cast": ["Awkwafina", "Tzi Ma", "Zhao Shuzhen"],
+      "accolades": "Golden Globe Best Actress",
+      "notes": "Based on an actual lie. East meets West through a fake wedding.",
+      "themes": ["Family", "Culture", "Lies"]
     }
   ],
   "books": [
