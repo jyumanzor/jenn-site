@@ -6,11 +6,19 @@ import Image from "next/image";
 import travel from "@/data/travel.json";
 import TravelTimeline from "@/components/TravelTimeline";
 
-type Location = typeof travel.locations[0] & {
+interface Location {
+  id: string;
+  city: string;
+  country: string;
+  coordinates: { lat: number; lng: number };
+  type: string;
+  visits: string;
+  notes: string;
+  highlights: string[];
   images?: string[];
   extendedNotes?: string;
   facts?: Record<string, string[]>;
-};
+}
 
 export default function TravelPage() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
