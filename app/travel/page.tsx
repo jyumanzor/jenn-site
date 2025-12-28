@@ -62,7 +62,7 @@ export default function TravelPage() {
               Favorite places
             </h1>
             <p className="light-bg-body leading-relaxed reading-width">
-              {travel.stats.cities} cities across {travel.stats.countries} countries. Trips since 2021.
+              {travel.stats.cities} cities across {travel.stats.countries} countries. Trips since 2018.
             </p>
             <p className="text-xs text-olive/60 mt-3 italic">Click any city with photos to see more.</p>
           </div>
