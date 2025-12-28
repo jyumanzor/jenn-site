@@ -11,7 +11,8 @@
       "isPR": true,
       "temp": "55°F",
       "conditions": "Cool, overcast",
-      "notes": "PR race. Perfect conditions."
+      "placement": "3rd overall",
+      "notes": "PR race. 3rd overall."
     },
     {
       "id": "irving-frost-2024",
@@ -24,7 +25,8 @@
       "isPR": false,
       "temp": "42°F",
       "conditions": "Cold, windy",
-      "notes": "Winter race in Texas."
+      "placement": "1st in division",
+      "notes": "1st in division. Winter race in Texas."
     },
     {
       "id": "honolulu-2025",
@@ -37,7 +39,9 @@
       "isPR": false,
       "temp": "75°F",
       "conditions": "Humid, warm",
-      "notes": "Beautiful course, challenging heat."
+      "placement": "29th in division",
+      "participants": "34,000+",
+      "notes": "Fun race. 34k+ runners."
     },
     {
       "id": "cascade-express-2024",
