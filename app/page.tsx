@@ -51,7 +51,7 @@ export default function Home() {
 
             {/* Lime accent panel */}
             <Link href="/watching" className="group">
-              <div className="rounded-xl p-5 relative overflow-hidden group-hover:scale-[1.02] transition-transform" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #b5c4a0 100%)' }}>
+              <div className="rounded-xl p-6 relative overflow-hidden group-hover:scale-[1.02] transition-transform" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #b5c4a0 100%)' }}>
                 <span className="mb-3 block text-xs uppercase tracking-wider font-medium" style={{ color: '#2a3c24' }}>03</span>
                 <h3 className="text-lg mb-2" style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#2a3c24' }}>Explore</h3>
                 <p className="text-sm leading-snug" style={{ color: 'rgba(42,60,36,0.8)' }}>
@@ -128,7 +128,7 @@ export default function Home() {
                   <p className="light-bg-header text-3xl">6</p>
                   <p className="light-bg-label mt-1">Marathons</p>
                 </div>
-                <div className="rounded-lg p-4 text-center" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #c5d654 100%)' }}>
+                <div className="rounded-xl p-4 text-center" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #c5d654 100%)' }}>
                   <p className="text-3xl" style={{ fontFamily: 'var(--font-instrument), Georgia, serif', color: '#2a3c24' }}>0/7</p>
                   <p className="text-xs uppercase tracking-wider mt-1" style={{ color: '#3B412D' }}>Majors</p>
                 </div>
