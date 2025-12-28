@@ -36,8 +36,8 @@
       "country": "United States",
       "coordinates": { "lat": 21.3069, "lng": -157.8583 },
       "type": "race",
-      "visits": "December 2024",
-      "notes": "Honolulu Marathon. December 2024.",
+      "visits": "December 2025",
+      "notes": "Honolulu Marathon. December 2025.",
       "highlights": ["Waikiki", "Diamond Head", "Maui"],
       "images": [
         "honolulu/23E65343-3C9A-4F2F-B872-EE47B5D814E7.jpeg",
@@ -202,7 +202,7 @@
       "country": "United States",
       "coordinates": { "lat": 39.9526, "lng": -75.1652 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2023, 2025",
       "notes": "Day trips from DC.",
       "highlights": ["Old City", "Art Museum"]
     },
@@ -212,7 +212,7 @@
       "country": "Japan",
       "coordinates": { "lat": 35.6762, "lng": 139.6503 },
       "type": "travel",
-      "visits": "October 2024",
+      "visits": "October 2025",
       "notes": "First time in Japan. Itoya Ginza.",
       "highlights": ["Itoya Ginza", "Shibuya", "Shinjuku"],
       "images": [
@@ -246,7 +246,7 @@
       "country": "Japan",
       "coordinates": { "lat": 35.0116, "lng": 135.7681 },
       "type": "travel",
-      "visits": "2024",
+      "visits": "2025",
       "notes": "Temples, shrines, tea.",
       "highlights": ["Fushimi Inari", "Gion", "Bamboo Grove"],
       "images": [
@@ -265,7 +265,7 @@
       "country": "Japan",
       "coordinates": { "lat": 34.6937, "lng": 135.5023 },
       "type": "travel",
-      "visits": "2024",
+      "visits": "2025",
       "notes": "Food capital of Japan.",
       "highlights": ["Dotonbori", "Street Food"],
       "images": [
@@ -282,7 +282,7 @@
       "country": "Japan",
       "coordinates": { "lat": 34.3853, "lng": 132.4553 },
       "type": "travel",
-      "visits": "2024",
+      "visits": "2025",
       "notes": "Peace Memorial.",
       "highlights": ["Peace Park", "Miyajima"],
       "images": [

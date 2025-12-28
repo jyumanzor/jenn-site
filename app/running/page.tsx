@@ -205,7 +205,7 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Stats Panels */}
-      <section className="py-16">
+      <section className="py-16 bg-ivory">
         <div className="container-editorial">
           <div className="grid md:grid-cols-4 gap-4">
             <div className="panel-gradient-deep">
@@ -287,7 +287,7 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Race History - Marathons */}
-      <section className="py-16 bg-cream">
+      <section className="py-16 bg-ivory">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
@@ -407,7 +407,7 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Ultras */}
-      <section className="py-16 bg-ivory">
+      <section className="py-16 bg-cream">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
@@ -644,13 +644,12 @@ export default function RunningPage() {
               how fast you can get your body to travel 26.2.
             </blockquote>
             <p className="text-cream/60 text-sm mt-6">— Why I run</p>
-            <p className="text-cream/40 text-xs mt-2 italic">From my MBA application essays</p>
           </div>
         </div>
       </section>
 
       {/* Back Link */}
-      <section className="py-12 bg-cream">
+      <section className="py-12 bg-ivory">
         <div className="container-editorial">
           <Link href="/" className="inline-flex items-center gap-2 text-deep-forest hover:text-olive transition-colors text-sm font-medium">
             <span>←</span>
