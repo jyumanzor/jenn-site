@@ -251,22 +251,19 @@ export default function TattoosPage() {
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {literaryTattoos.map((tattoo, index) => {
-                const colors = ['#2a3c24', '#4e6041', '#546e40', '#677955', '#8b9d72'];
-                return (
-                  <button
-                    key={tattoo.id}
-                    onClick={() => setSelectedTattoo(tattoo as Tattoo)}
-                    className="px-5 py-3 rounded-full transition-all hover:scale-105"
-                    style={{
-                      backgroundColor: colors[index % colors.length],
-                      color: '#fff5eb'
-                    }}
-                  >
-                    <span className="font-medium">{tattoo.name}</span>
-                  </button>
-                );
-              })}
+              {literaryTattoos.map((tattoo) => (
+                <button
+                  key={tattoo.id}
+                  onClick={() => setSelectedTattoo(tattoo as Tattoo)}
+                  className="px-5 py-3 rounded-full transition-all hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #2a3c24 0%, #4e6041 100%)',
+                    color: '#fff5eb'
+                  }}
+                >
+                  <span className="font-medium">{tattoo.name}</span>
+                </button>
+              ))}
             </div>
           </div>
 
@@ -285,23 +282,19 @@ export default function TattoosPage() {
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {personalTattoos.map((tattoo, index) => {
-                const colors = ['#ecc064', '#ffcb69', '#ffd475', '#d4ed39', '#b29e56'];
-                const isDark = index === 4;
-                return (
-                  <button
-                    key={tattoo.id}
-                    onClick={() => setSelectedTattoo(tattoo as Tattoo)}
-                    className="px-5 py-3 rounded-full transition-all hover:scale-105"
-                    style={{
-                      backgroundColor: colors[index % colors.length],
-                      color: isDark ? '#fff5eb' : '#2a3c24'
-                    }}
-                  >
-                    <span className="font-medium">{tattoo.name}</span>
-                  </button>
-                );
-              })}
+              {personalTattoos.map((tattoo) => (
+                <button
+                  key={tattoo.id}
+                  onClick={() => setSelectedTattoo(tattoo as Tattoo)}
+                  className="px-5 py-3 rounded-full transition-all hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #4e6041 0%, #677955 100%)',
+                    color: '#fff5eb'
+                  }}
+                >
+                  <span className="font-medium">{tattoo.name}</span>
+                </button>
+              ))}
             </div>
           </div>
 
@@ -320,22 +313,19 @@ export default function TattoosPage() {
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {whimsicalTattoos.map((tattoo, index) => {
-                const colors = ['#97a97c', '#8b9d72', '#73855f', '#677955', '#5a6c4b'];
-                return (
-                  <button
-                    key={tattoo.id}
-                    onClick={() => setSelectedTattoo(tattoo as Tattoo)}
-                    className="px-5 py-3 rounded-full transition-all hover:scale-105"
-                    style={{
-                      backgroundColor: colors[index % colors.length],
-                      color: '#fff5eb'
-                    }}
-                  >
-                    <span className="font-medium">{tattoo.name}</span>
-                  </button>
-                );
-              })}
+              {whimsicalTattoos.map((tattoo) => (
+                <button
+                  key={tattoo.id}
+                  onClick={() => setSelectedTattoo(tattoo as Tattoo)}
+                  className="px-5 py-3 rounded-full transition-all hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #677955 0%, #97a97c 100%)',
+                    color: '#fff5eb'
+                  }}
+                >
+                  <span className="font-medium">{tattoo.name}</span>
+                </button>
+              ))}
             </div>
           </div>
         </div>

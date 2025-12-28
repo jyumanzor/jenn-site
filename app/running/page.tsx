@@ -251,18 +251,13 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Upcoming */}
-      <section className="py-16 bg-olive">
+      <section className="py-16 bg-cream">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
-              <p className="text-cream/60 text-xs uppercase tracking-wide font-medium mb-3">2026</p>
-              <h2
-                className="text-2xl text-ivory mb-4 tracking-tight leading-tight"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                Upcoming races
-              </h2>
-              <p className="text-cream/80 text-sm leading-relaxed">
+              <p className="light-bg-label mb-3">2026</p>
+              <h2 className="light-bg-header text-2xl mb-4">Upcoming races</h2>
+              <p className="light-bg-body text-sm leading-relaxed">
                 Registered for Boston and Chicago. Two more majors.
               </p>
             </div>
@@ -412,7 +407,7 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Ultras */}
-      <section className="py-16" style={{ backgroundColor: 'rgba(212, 237, 57, 0.15)' }}>
+      <section className="py-16 bg-ivory">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
@@ -426,23 +421,22 @@ export default function RunningPage() {
               {races.ultras.map((race: Ultra) => (
                 <div
                   key={race.id}
-                  className="backdrop-blur rounded-xl p-6"
-                  style={{ backgroundColor: 'rgba(212, 237, 57, 0.35)', border: '1px solid rgba(212, 237, 57, 0.5)' }}
+                  className="rounded-xl p-6 panel-gradient-sage"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 flex-wrap mb-1">
-                        <h3 className="font-display text-xl" style={{ color: '#2a3c24' }}>
+                        <h3 className="font-display text-xl text-deep-forest">
                           {race.name}
                         </h3>
-                        <span className="px-2 py-0.5 text-xs rounded-full font-semibold" style={{ backgroundColor: '#2a3c24', color: '#d4ed39' }}>{race.distance}</span>
+                        <span className="px-2 py-0.5 text-xs rounded-full font-semibold bg-deep-forest text-sage">{race.distance}</span>
                       </div>
-                      <p className="text-sm" style={{ color: 'rgba(42, 60, 36, 0.7)' }}>
+                      <p className="text-sm text-deep-forest/70">
                         {race.location} · {formatDate(race.date)}
                       </p>
                       {/* Weather badge */}
                       {race.temp && (
-                        <div className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full text-xs" style={{ backgroundColor: 'rgba(42, 60, 36, 0.1)', color: '#2a3c24' }}>
+                        <div className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full text-xs bg-deep-forest/10 text-deep-forest">
                           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                           </svg>
@@ -453,7 +447,7 @@ export default function RunningPage() {
                       )}
                     </div>
                     <div className="text-left md:text-right">
-                      <p className="font-display text-3xl" style={{ color: '#2a3c24' }}>{race.time}</p>
+                      <p className="font-display text-3xl text-deep-forest">{race.time}</p>
                     </div>
                   </div>
                 </div>
@@ -582,7 +576,7 @@ export default function RunningPage() {
       <hr className="rule" />
 
       {/* Marathon Stats */}
-      <section className="py-16" style={{ backgroundColor: '#fff5eb', background: 'linear-gradient(135deg, #fff5eb 0%, #ffeac4 100%)' }}>
+      <section className="py-16 bg-cream">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
