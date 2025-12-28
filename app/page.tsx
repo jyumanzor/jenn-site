@@ -122,9 +122,9 @@ export default function Home() {
                   <p className="light-bg-header text-3xl">6</p>
                   <p className="light-bg-label mt-1">Marathons</p>
                 </div>
-                <div className="bg-ivory rounded-lg p-4 text-center">
-                  <p className="light-bg-header text-3xl">0/7</p>
-                  <p className="light-bg-label mt-1">Majors</p>
+                <div className="rounded-lg p-4 text-center" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #c5d654 100%)' }}>
+                  <p className="text-3xl" style={{ fontFamily: 'var(--font-instrument), Georgia, serif', color: '#2a3c24' }}>0/7</p>
+                  <p className="text-xs uppercase tracking-wider mt-1" style={{ color: '#3B412D' }}>Majors</p>
                 </div>
               </div>
             </div>
