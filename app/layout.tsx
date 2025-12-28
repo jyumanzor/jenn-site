@@ -19,10 +19,10 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Jenn Umanzor",
-  description: "Hi, I'm Jenn. Welcome to my digital, mental palace.",
+  description: "Hi, I'm Jenn. Welcome to my digital mental palace.",
   openGraph: {
     title: "Jenn Umanzor",
-    description: "Hi, I'm Jenn. Welcome to my digital, mental palace.",
+    description: "Hi, I'm Jenn. Welcome to my digital mental palace.",
     type: "website",
   },
 };
