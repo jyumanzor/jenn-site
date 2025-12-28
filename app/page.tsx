@@ -120,15 +120,15 @@ export default function Home() {
             </div>
             <div className="md:col-span-8">
               <div className="grid grid-cols-3 gap-3">
-                <div className="panel-gradient-deep p-4 text-center">
+                <div className="panel-gradient-deep p-4 text-center flex flex-col justify-center">
                   <p className="dark-bg-header text-3xl">3:09</p>
                   <p className="dark-bg-label mt-1">PR</p>
                 </div>
-                <div className="panel-gradient-sage p-4 text-center">
+                <div className="panel-gradient-sage p-4 text-center flex flex-col justify-center">
                   <p className="light-bg-header text-3xl">6</p>
                   <p className="light-bg-label mt-1">Marathons</p>
                 </div>
-                <div className="rounded-xl p-4 text-center" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #c5d654 100%)' }}>
+                <div className="rounded-xl p-4 text-center flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #c5d654 100%)' }}>
                   <p className="text-3xl" style={{ fontFamily: 'var(--font-instrument), Georgia, serif', color: '#2a3c24' }}>0/7</p>
                   <p className="text-xs uppercase tracking-wider mt-1" style={{ color: '#3B412D' }}>Majors</p>
                 </div>
