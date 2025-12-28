@@ -27,7 +27,7 @@ export default async function JournalEntryPage({ params }: Props) {
               ← Back to journal
             </Link>
             <p className="section-label mb-4">{entry.category}</p>
-            <h1 className="font-display text-3xl md:text-4xl text-charcoal mb-6 leading-tight">
+            <h1 className="font-display text-2xl md:text-3xl text-charcoal mb-6 leading-tight">
               {entry.title}
             </h1>
             <p className="text-warm-gray">{entry.date}</p>
@@ -50,9 +50,9 @@ export default async function JournalEntryPage({ params }: Props) {
                   const content = section.replace(/^## .+\n\n/, "");
                   return (
                     <div key={index} className="mb-10">
-                      <h2 className="font-display text-xl text-charcoal mb-4">{header}</h2>
+                      <h2 className="font-display text-lg text-charcoal mb-4">{header}</h2>
                       {content.split("\n\n").map((para, pIndex) => (
-                        <p key={pIndex} className="text-charcoal leading-relaxed mb-4 reading-width">
+                        <p key={pIndex} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
                           {para}
                         </p>
                       ))}
@@ -61,7 +61,7 @@ export default async function JournalEntryPage({ params }: Props) {
                 }
                 // Regular paragraph
                 return section.split("\n\n").map((para, pIndex) => (
-                  <p key={`${index}-${pIndex}`} className="text-charcoal leading-relaxed mb-4 reading-width">
+                  <p key={`${index}-${pIndex}`} className="text-sm text-charcoal leading-relaxed mb-4 reading-width">
                     {para}
                   </p>
                 ));
