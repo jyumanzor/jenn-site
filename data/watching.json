@@ -309,7 +309,7 @@
       "title": "Electronic / Dance",
       "description": "House, disco, and electronic dance music.",
       "trackCount": 561,
-      "color": "#D4ED39",
+      "color": "#FFF5EB",
       "tracks": [
         {
           "artist": "Robert Parker",
@@ -3684,7 +3684,7 @@
       "title": "Running / Tempo",
       "description": "Bad Bunny, Young Miko, Kendrick. High energy for hard efforts.",
       "trackCount": 377,
-      "color": "#FF6B6B",
+      "color": "#FAF1E8",
       "tracks": [
         {
           "artist": "Hi-Tek",
@@ -5955,7 +5955,7 @@
       "title": "Indie / Alternative",
       "description": "The Strokes to Radiohead. Guitar-driven and raw.",
       "trackCount": 376,
-      "color": "#7EC8E3",
+      "color": "#F7E5DA",
       "tracks": [
         {
           "artist": "Kilo Kish",
@@ -8220,7 +8220,7 @@
       "title": "Instrumental",
       "description": "Aphex Twin, Chet Baker, and classical. No lyrics.",
       "trackCount": 259,
-      "color": "#A8D5BA",
+      "color": "#EFE4D6",
       "tracks": [
         {
           "artist": "Chet Baker",
@@ -9783,7 +9783,7 @@
       "title": "Pop",
       "description": "Pop hits and earworms.",
       "trackCount": 246,
-      "color": "#FFB5C5",
+      "color": "#E7D8C6",
       "tracks": [
         {
           "artist": "Fleetwood Mac",
@@ -11268,7 +11268,7 @@
       "title": "Discovery",
       "description": "New finds and miscellaneous favorites.",
       "trackCount": 170,
-      "color": "#C4A77D",
+      "color": "#CBAD8C",
       "tracks": [
         {
           "artist": "Abu",
@@ -11281,12 +11281,6 @@
           "track": "Disko Roze",
           "album": "Laura",
           "genre": "Worldwide"
-        },
-        {
-          "artist": "Teletubbies",
-          "track": "Teletubbies Say \"Eh-Oh!\"",
-          "album": "Teletubbies: The Album",
-          "genre": "Children's Music"
         },
         {
           "artist": "Alberto Continentino, Renato Massa Calmon, Armando Mar\u00e7al, Jess\u00e9 Sadoc, Renato Franco & Marcos Valle",
@@ -11475,12 +11469,6 @@
           "genre": "M\u00fasica tropical"
         },
         {
-          "artist": "Teletubbies",
-          "track": "Big Hugs",
-          "album": "Big Hugs (Big Hugs)",
-          "genre": "Children's Music"
-        },
-        {
           "artist": "SpongeBob SquarePants",
           "track": "Electric Zoo",
           "album": "Spongebob Squarepants - The Yellow Album",
@@ -11497,12 +11485,6 @@
           "track": "This Time Around",
           "album": "Quiet Signs",
           "genre": "Folk"
-        },
-        {
-          "artist": "Teletubbies",
-          "track": "Teletubbies Theme",
-          "album": "Big Hugs (Big Hugs)",
-          "genre": "Children's Music"
         },
         {
           "artist": "William Onyeabor",
@@ -12297,7 +12279,7 @@
       "title": "Smooth R&B",
       "description": "Soul and R&B for late nights.",
       "trackCount": 137,
-      "color": "#8B6B61",
+      "color": "#97A97C",
       "tracks": [
         {
           "artist": "Jackie Shane",
@@ -13128,7 +13110,7 @@
       "title": "Pretty Songs",
       "description": "Clairo, Beach House, The Marías, Frank Ocean. Soft and dreamy.",
       "trackCount": 64,
-      "color": "#E6C4E6",
+      "color": "#546E40",
       "tracks": [
         {
           "artist": "Beach House",
@@ -13521,7 +13503,7 @@
       "title": "Soundtracks",
       "description": "Film scores from Beale Street, Moonlight, Lost, Suspiria, and more.",
       "trackCount": 25,
-      "color": "#546E40",
+      "color": "#3C422E",
       "tracks": [
         {
           "artist": "Kermit",
@@ -13704,7 +13686,7 @@
       "title": "Sad Girl Tunes",
       "description": "Phoebe Bridgers, Lana Del Rey, Bon Iver.",
       "trackCount": 31,
-      "color": "#546E40",
+      "color": "#3B412D",
       "tracks": [
         {
           "artist": "FKA twigs",

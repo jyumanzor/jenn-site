@@ -254,52 +254,89 @@ export default function WatchingPage() {
           {activeTab === "books" && (
             <div>
               {/* Group by category */}
-              {watching.filters.bookCategories.map((category: string) => {
+              {watching.filters.bookCategories.map((category: string, catIndex: number) => {
                 const categoryBooks = watching.books.filter((b: Book) => b.category === category);
                 if (categoryBooks.length === 0) return null;
 
+                // Category header gradients
+                const categoryGradients = [
+                  'linear-gradient(135deg, #3B412D 0%, #546E40 100%)',
+                  'linear-gradient(135deg, #546E40 0%, #97A97C 100%)',
+                  'linear-gradient(135deg, #97A97C 0%, #CBAD8C 100%)',
+                  'linear-gradient(135deg, #CBAD8C 0%, #E7D8C6 100%)',
+                ];
+
                 return (
                   <div key={category} className="mb-12">
-                    <h2
-                      className="text-2xl text-deep-forest mb-6 tracking-tight"
-                      style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+                    <div
+                      className="rounded-xl px-6 py-4 mb-6"
+                      style={{ background: categoryGradients[catIndex % categoryGradients.length] }}
                     >
-                      {category}
-                    </h2>
-                    <div className="space-y-4">
-                      {categoryBooks.map((book: Book, index: number) => (
-                        <div
-                          key={book.title}
-                          className="bg-white/80 border border-sand/50 rounded-xl p-6"
-                        >
-                          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                            {/* Number */}
-                            <div className="flex-shrink-0">
-                              <div className="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center text-sm font-medium text-deep-forest">
-                                {index + 1}
+                      <h2
+                        className="text-2xl tracking-tight"
+                        style={{
+                          fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                          color: catIndex < 2 ? '#FFF5EB' : '#3B412D'
+                        }}
+                      >
+                        {category}
+                      </h2>
+                    </div>
+                    <div className="space-y-3">
+                      {categoryBooks.map((book: Book, index: number) => {
+                        // Alternate book card backgrounds for variety
+                        const bookBgs = [
+                          { bg: '#FFF5EB', border: '#CBAD8C' },
+                          { bg: '#FAF1E8', border: '#E7D8C6' },
+                          { bg: '#F7E5DA', border: '#CBAD8C' },
+                          { bg: '#EFE4D6', border: '#97A97C' },
+                        ];
+                        const bookStyle = bookBgs[index % bookBgs.length];
+
+                        return (
+                          <div
+                            key={book.title}
+                            className="rounded-xl p-5"
+                            style={{
+                              backgroundColor: bookStyle.bg,
+                              border: `1px solid ${bookStyle.border}40`
+                            }}
+                          >
+                            <div className="flex flex-col md:flex-row gap-4 md:gap-5">
+                              {/* Number */}
+                              <div className="flex-shrink-0">
+                                <div
+                                  className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium"
+                                  style={{ backgroundColor: '#97A97C30', color: '#3B412D' }}
+                                >
+                                  {index + 1}
+                                </div>
+                              </div>
+
+                              {/* Info */}
+                              <div className="flex-1 min-w-0">
+                                <h3
+                                  className="text-lg tracking-tight"
+                                  style={{
+                                    fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                                    color: '#3B412D'
+                                  }}
+                                >
+                                  {book.title}
+                                </h3>
+                                <p className="text-[11px] uppercase tracking-wide mt-1" style={{ color: '#546E40' }}>
+                                  {book.author}
+                                </p>
+                                {book.notes && (
+                                  <p className="text-sm mt-2 leading-relaxed" style={{ color: 'rgba(59,65,45,0.65)' }}>
+                                    {book.notes}
+                                  </p>
+                                )}
                               </div>
                             </div>
-
-                            {/* Info */}
-                            <div className="flex-1 min-w-0">
-                              <h3
-                                className="text-xl text-deep-forest tracking-tight"
-                                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-                              >
-                                {book.title}
-                              </h3>
-                              <p className="text-[11px] uppercase tracking-wide text-deep-forest/40 mt-1">
-                                {book.author}
-                              </p>
-                              {book.notes && (
-                                <p className="text-sm text-deep-forest/60 mt-3 leading-relaxed">
-                                  {book.notes}
-                                </p>
-                              )}
-                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 );
@@ -320,9 +357,25 @@ export default function WatchingPage() {
               <div className="space-y-4">
                 {watching.playlists.map((playlist: Playlist) => {
                   const colorLower = playlist.color.toLowerCase();
-                  const isDark = ['#2a3c24', '#3b412d', '#4e6041', '#546e40', '#677955'].includes(colorLower);
+                  // Dark backgrounds: dark olive, dark forest, very dark green
+                  const isDark = ['#546e40', '#3c422e', '#3b412d'].includes(colorLower);
                   const isExpanded = expandedPlaylist === playlist.id;
                   const tracks = (playlist as Playlist & { tracks?: Track[] }).tracks || [];
+
+                  // Gradient mapping for visual variety
+                  const gradientMap: Record<string, string> = {
+                    '#fff5eb': 'linear-gradient(135deg, #FFF5EB 0%, #F7E5DA 50%, #CBAD8C 100%)',
+                    '#faf1e8': 'linear-gradient(135deg, #FAF1E8 0%, #EFE4D6 50%, #E7D8C6 100%)',
+                    '#f7e5da': 'linear-gradient(135deg, #F7E5DA 0%, #EFE4D6 60%, #CBAD8C 100%)',
+                    '#efe4d6': 'linear-gradient(135deg, #EFE4D6 0%, #E7D8C6 50%, #CBAD8C 100%)',
+                    '#e7d8c6': 'linear-gradient(135deg, #E7D8C6 0%, #CBAD8C 60%, #97A97C 100%)',
+                    '#cbad8c': 'linear-gradient(135deg, #CBAD8C 0%, #97A97C 60%, #546E40 100%)',
+                    '#97a97c': 'linear-gradient(135deg, #97A97C 0%, #546E40 60%, #3C422E 100%)',
+                    '#546e40': 'linear-gradient(135deg, #546E40 0%, #3C422E 60%, #3B412D 100%)',
+                    '#3c422e': 'linear-gradient(135deg, #3C422E 0%, #3B412D 60%, #2a3c24 100%)',
+                    '#3b412d': 'linear-gradient(135deg, #3B412D 0%, #2a3c24 60%, #1f2a1a 100%)',
+                  };
+                  const bgStyle = gradientMap[colorLower] || `linear-gradient(135deg, ${playlist.color} 0%, ${playlist.color} 100%)`;
 
                   return (
                     <div key={playlist.id} className="rounded-xl overflow-hidden">
@@ -330,7 +383,7 @@ export default function WatchingPage() {
                       <button
                         onClick={() => setExpandedPlaylist(isExpanded ? null : playlist.id)}
                         className="w-full text-left p-5 transition-all"
-                        style={{ backgroundColor: playlist.color }}
+                        style={{ background: bgStyle }}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex-1">
@@ -376,41 +429,68 @@ export default function WatchingPage() {
                         </div>
                       </button>
 
-                      {/* Expanded track list */}
+                      {/* Expanded track list - show all with sub-genre colors */}
                       {isExpanded && tracks.length > 0 && (
-                        <div className="bg-white border-x border-b border-sand/30 max-h-96 overflow-y-auto">
+                        <div className="bg-white border-x border-b border-sand/30 max-h-[600px] overflow-y-auto">
                           <div className="divide-y divide-sand/20">
-                            {tracks.slice(0, 100).map((track: Track, idx: number) => (
-                              <div
-                                key={`${track.artist}-${track.track}-${idx}`}
-                                className="px-5 py-3 hover:bg-sand/10 transition-colors"
-                              >
-                                <div className="flex items-start gap-3">
-                                  <span className="text-xs text-olive/40 w-6 flex-shrink-0 pt-0.5">
-                                    {idx + 1}
-                                  </span>
-                                  <div className="flex-1 min-w-0">
-                                    <p className="text-sm text-deep-forest truncate">
-                                      {track.track}
-                                    </p>
-                                    <p className="text-xs text-olive/60 truncate">
-                                      {track.artist}
-                                      {track.album && <span> · {track.album}</span>}
-                                    </p>
-                                  </div>
-                                  {track.genre && (
-                                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-sage/10 text-olive/50 flex-shrink-0">
-                                      {track.genre}
+                            {tracks.map((track: Track, idx: number) => {
+                              // Sub-genre color mapping using extended palette
+                              const genreColors: Record<string, { bg: string; text: string }> = {
+                                'house': { bg: '#d4ed39', text: '#2a3c24' },
+                                'disco': { bg: '#ffcb69', text: '#2a3c24' },
+                                'electronic': { bg: '#c5a95b', text: '#2a3c24' },
+                                'techno': { bg: '#546e40', text: '#fff5eb' },
+                                'hip-hop': { bg: '#5a6c4b', text: '#fff5eb' },
+                                'rap': { bg: '#425438', text: '#fff5eb' },
+                                'r&b': { bg: '#73855f', text: '#fff5eb' },
+                                'soul': { bg: '#8b9d72', text: '#2a3c24' },
+                                'indie': { bg: '#97a97c', text: '#2a3c24' },
+                                'alternative': { bg: '#7f9168', text: '#fff5eb' },
+                                'rock': { bg: '#657043', text: '#fff5eb' },
+                                'pop': { bg: '#ffeac4', text: '#2a3c24' },
+                                'jazz': { bg: '#cbad8c', text: '#2a3c24' },
+                                'classical': { bg: '#f7e5da', text: '#2a3c24' },
+                                'ambient': { bg: '#ffe5b0', text: '#2a3c24' },
+                                'folk': { bg: '#b29e56', text: '#2a3c24' },
+                                'country': { bg: '#9f9251', text: '#2a3c24' },
+                                'latin': { bg: '#ecc064', text: '#2a3c24' },
+                                'reggaeton': { bg: '#fabf34', text: '#2a3c24' },
+                                'default': { bg: '#efe4d6', text: '#3b412d' }
+                              };
+                              const genre = track.genre?.toLowerCase() || '';
+                              const genreColor = Object.entries(genreColors).find(([key]) =>
+                                genre.includes(key)
+                              )?.[1] || genreColors.default;
+
+                              return (
+                                <div
+                                  key={`${track.artist}-${track.track}-${idx}`}
+                                  className="px-5 py-2.5 hover:bg-sand/10 transition-colors"
+                                >
+                                  <div className="flex items-center gap-3">
+                                    <span className="text-[10px] text-olive/40 w-5 flex-shrink-0 text-right">
+                                      {idx + 1}
                                     </span>
-                                  )}
+                                    <div className="flex-1 min-w-0">
+                                      <p className="text-sm text-deep-forest truncate leading-tight">
+                                        {track.track}
+                                      </p>
+                                      <p className="text-[11px] text-olive/60 truncate">
+                                        {track.artist}
+                                      </p>
+                                    </div>
+                                    {track.genre && (
+                                      <span
+                                        className="text-[9px] px-1.5 py-0.5 rounded-full flex-shrink-0 font-medium"
+                                        style={{ backgroundColor: genreColor.bg, color: genreColor.text }}
+                                      >
+                                        {track.genre}
+                                      </span>
+                                    )}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
-                            {tracks.length > 100 && (
-                              <div className="px-5 py-3 text-center text-xs text-olive/50">
-                                + {tracks.length - 100} more tracks
-                              </div>
-                            )}
+                              );
+                            })}
                           </div>
                         </div>
                       )}

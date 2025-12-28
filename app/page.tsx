@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-ivory">
+    <div className="bg-cream">
       {/* Editorial Hero */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-20 relative overflow-hidden">
         <div className="container-editorial relative z-10">
@@ -151,7 +151,7 @@ export default function Home() {
               <div className="panel-gradient-deep group-hover:scale-[1.01] transition-transform">
                 <span className="dark-bg-label">Home</span>
                 <h3 className="dark-bg-header text-xl mt-1 mb-1">Washington, DC</h3>
-                <p className="dark-bg-body text-sm">149 restaurants</p>
+                <p className="dark-bg-body text-sm">Five years of discovering corners and routines</p>
               </div>
             </Link>
 
@@ -159,7 +159,7 @@ export default function Home() {
               <div className="panel-gradient-olive group-hover:scale-[1.01] transition-transform">
                 <span className="dark-bg-label">Roots</span>
                 <h3 className="dark-bg-header text-xl mt-1 mb-1">Chicago</h3>
-                <p className="dark-bg-body text-sm">UChicago</p>
+                <p className="dark-bg-body text-sm">UChicago years and marathon 2026</p>
               </div>
             </Link>
           </div>

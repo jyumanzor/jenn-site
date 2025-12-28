@@ -29,7 +29,7 @@ export default function TattoosPage() {
   );
 
   return (
-    <div className="bg-ivory">
+    <div className="bg-cream">
       {/* Hero */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-20 relative overflow-hidden">
         <div
@@ -391,40 +391,117 @@ export default function TattoosPage() {
       <hr className="rule" />
 
       {/* Timeline */}
-      <section className="py-12" style={{ backgroundColor: 'rgba(212,237,57,0.1)' }}>
+      <section className="py-16 overflow-hidden" style={{ background: 'linear-gradient(180deg, #F7E5DA 0%, #EFE4D6 100%)' }}>
         <div className="container-editorial">
-          <p className="text-xs uppercase tracking-widest mb-6 text-center" style={{ color: '#546e40' }}>
-            Timeline
+          <h2
+            className="text-2xl md:text-3xl mb-3 text-center"
+            style={{
+              fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+              color: '#2a3c24'
+            }}
+          >
+            The story so far
+          </h2>
+          <p className="text-xs uppercase tracking-widest mb-10 text-center" style={{ color: '#546e40' }}>
+            8 years of collecting
           </p>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {[
-              { year: "2017", city: "Dallas / Austin", tattoos: ["Yellow Umbrella", "Heart"] },
-              { year: "2018", city: "Chicago", tattoos: ["So It Goes", "Es Muss Sein", "Elephant"] },
-              { year: "2019", city: "Chicago", tattoos: ["Volcano"] },
-              { year: "2022", city: "Dallas", tattoos: ["410", "Cowboy Hat"] },
-              { year: "2023", city: "Dallas", tattoos: ["Spoon", "Bike", "Marathon"] },
-              { year: "2024", city: "NYC / Dallas", tattoos: ["Disco Ball", "Squirrel", "Honey Pot"] },
-              { year: "2025", city: "DC", tattoos: ["Hummingbird"] },
-            ].map((period) => (
-              <div key={period.year} className="text-center">
-                <p
-                  className="text-2xl mb-1"
-                  style={{
-                    fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                    color: '#2a3c24'
-                  }}
-                >
-                  {period.year}
-                </p>
-                <p className="text-xs mb-2" style={{ color: '#546e40' }}>{period.city}</p>
-                <p className="text-xs" style={{ color: 'rgba(42,60,36,0.5)' }}>
-                  {period.tattoos.length} tattoo{period.tattoos.length > 1 ? 's' : ''}
-                </p>
-              </div>
-            ))}
+
+          {/* Timeline track */}
+          <div className="relative">
+            {/* Connecting line */}
+            <div
+              className="absolute top-8 left-0 right-0 h-0.5"
+              style={{ background: 'linear-gradient(90deg, #fff5eb 0%, #ffcb69 25%, #cbad8c 40%, #97a97c 55%, #5a6c4b 75%, #2a3c24 100%)' }}
+            />
+
+            <div className="grid grid-cols-7 gap-2 md:gap-4 relative">
+              {[
+                { year: "2017", city: "Dallas", tattoos: ["Umbrella", "Heart"], color: '#fff5eb', textDark: true },
+                { year: "2018", city: "Chicago", tattoos: ["So It Goes", "Es Muss Sein", "Elephant"], color: '#ffeac4', textDark: true },
+                { year: "2019", city: "Chicago", tattoos: ["Volcano"], color: '#ffcb69', textDark: true },
+                { year: "2022", city: "Dallas", tattoos: ["410", "Cowboy Hat"], color: '#cbad8c', textDark: true },
+                { year: "2023", city: "Dallas", tattoos: ["Spoon", "Bike", "Marathon"], color: '#97a97c', textDark: true },
+                { year: "2024", city: "NYC", tattoos: ["Disco Ball", "Squirrel", "Honey"], color: '#5a6c4b', textDark: false },
+                { year: "2025", city: "DC", tattoos: ["Hummingbird"], color: '#2a3c24', textDark: false },
+              ].map((period) => (
+                  <div key={period.year} className="flex flex-col items-center group">
+                    {/* Year node */}
+                    <button
+                      onClick={() => {
+                        const tattoo = tattoos.tattoos.find(t =>
+                          period.tattoos.some(name =>
+                            t.name.toLowerCase().includes(name.toLowerCase())
+                          )
+                        );
+                        if (tattoo) setSelectedTattoo(tattoo as Tattoo);
+                      }}
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 relative z-10"
+                      style={{
+                        backgroundColor: period.color,
+                        boxShadow: '0 4px 12px rgba(42,60,36,0.15)',
+                        border: period.textDark ? '2px solid rgba(42,60,36,0.1)' : 'none'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(42,60,36,0.25)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(42,60,36,0.15)';
+                      }}
+                    >
+                      <span
+                        className="text-sm md:text-base font-medium"
+                        style={{ color: period.textDark ? '#3B412D' : '#FFF5EB' }}
+                      >
+                        {period.year.slice(2)}
+                      </span>
+                    </button>
+
+                    {/* City label */}
+                    <p
+                      className="text-[10px] md:text-xs mt-3 font-medium transition-colors duration-300 group-hover:text-[#2a3c24]"
+                      style={{ color: '#546E40' }}
+                    >
+                      {period.city}
+                    </p>
+
+                    {/* Tattoo pills - matching year colors */}
+                    <div className="flex flex-col items-center gap-1.5 mt-3">
+                      {period.tattoos.map((name, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            const tattoo = tattoos.tattoos.find(t =>
+                              t.name.toLowerCase().includes(name.toLowerCase())
+                            );
+                            if (tattoo) setSelectedTattoo(tattoo as Tattoo);
+                          }}
+                          className="text-[10px] md:text-xs px-2.5 py-1 rounded-full whitespace-nowrap font-medium transition-all duration-200 hover:scale-105 cursor-pointer"
+                          style={{
+                            backgroundColor: period.color,
+                            color: period.textDark ? '#3B412D' : '#FFF5EB',
+                            boxShadow: '0 2px 6px rgba(42,60,36,0.1)',
+                            border: period.textDark ? '1px solid rgba(42,60,36,0.15)' : 'none'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.boxShadow = '0 4px 12px rgba(42,60,36,0.2)';
+                            e.currentTarget.style.transform = 'scale(1.05)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.boxShadow = '0 2px 6px rgba(42,60,36,0.1)';
+                            e.currentTarget.style.transform = 'scale(1)';
+                          }}
+                        >
+                          {name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
-          <p className="text-center text-xs mt-8" style={{ color: 'rgba(42,60,36,0.4)' }}>
-            First tattoo: March 29, 2017 — 8 years of collecting
+
+          <p className="text-center text-xs mt-10" style={{ color: 'rgba(42,60,36,0.5)' }}>
+            Click a year or tattoo to explore
           </p>
         </div>
       </section>

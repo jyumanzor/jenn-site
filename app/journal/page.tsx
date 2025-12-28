@@ -25,28 +25,49 @@ export default function JournalPage() {
       <section className="py-12">
         <div className="container-editorial">
           {journal.entries.map((entry, index) => {
-            // Cycle through: sage, olive (dark), warm-neutral
+            // Extended palette with more variety - neutrals, greens, warm tones
             const styles = [
-              { bg: "panel-gradient-sage", isDark: false },
-              { bg: "panel-gradient-olive", isDark: true },
-              { bg: "panel-gradient-warm-neutral", isDark: false }
+              { bg: 'linear-gradient(135deg, #97A97C 0%, #546E40 60%, #3C422E 100%)', isDark: true },
+              { bg: 'linear-gradient(135deg, #F7E5DA 0%, #EFE4D6 50%, #CBAD8C 100%)', isDark: false },
+              { bg: 'linear-gradient(135deg, #3B412D 0%, #3C422E 50%, #546E40 100%)', isDark: true },
+              { bg: 'linear-gradient(135deg, #CBAD8C 0%, #97A97C 60%, #546E40 100%)', isDark: true },
+              { bg: 'linear-gradient(135deg, #EFE4D6 0%, #E7D8C6 50%, #CBAD8C 100%)', isDark: false },
+              { bg: 'linear-gradient(135deg, #546E40 0%, #3C422E 60%, #3B412D 100%)', isDark: true },
             ];
-            const style = styles[index % 3];
+            const style = styles[index % styles.length];
             return (
               <article key={entry.id} className="mb-4">
-                <div className={`rounded-xl p-6 ${style.bg}`}>
+                <div className="rounded-xl p-6" style={{ background: style.bg }}>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className={`text-xs uppercase tracking-wider px-2 py-0.5 rounded ${style.isDark ? "bg-white/15 text-cream" : "bg-deep-forest/12 text-deep-forest"}`}>
+                    <span
+                      className="text-xs uppercase tracking-wider px-2 py-0.5 rounded"
+                      style={{
+                        backgroundColor: style.isDark ? 'rgba(255,255,255,0.15)' : 'rgba(59,65,45,0.12)',
+                        color: style.isDark ? '#FFF5EB' : '#3B412D'
+                      }}
+                    >
                       {entry.category}
                     </span>
-                    <span className={`text-xs ${style.isDark ? "text-cream/50" : "text-deep-forest/50"}`}>
+                    <span
+                      className="text-xs"
+                      style={{ color: style.isDark ? 'rgba(255,245,235,0.5)' : 'rgba(59,65,45,0.5)' }}
+                    >
                       {entry.date}
                     </span>
                   </div>
-                  <h2 className={`font-display text-xl mb-3 ${style.isDark ? "text-cream" : "text-deep-forest"}`}>
+                  <h2
+                    className="text-xl mb-3"
+                    style={{
+                      fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                      color: style.isDark ? '#FFF5EB' : '#3B412D'
+                    }}
+                  >
                     {entry.title}
                   </h2>
-                  <p className={`text-sm leading-relaxed mb-4 reading-width ${style.isDark ? "text-cream/70" : "text-deep-forest/70"}`}>
+                  <p
+                    className="text-sm leading-relaxed mb-4 reading-width"
+                    style={{ color: style.isDark ? 'rgba(255,245,235,0.7)' : 'rgba(59,65,45,0.7)' }}
+                  >
                     {entry.excerpt}
                   </p>
                   <Link
