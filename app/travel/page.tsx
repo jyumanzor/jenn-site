@@ -105,9 +105,9 @@ export default function TravelPage() {
               <div className="grid md:grid-cols-12 gap-8">
                 {/* Left: Info & Facts */}
                 <div className="md:col-span-5 space-y-6">
-                  {/* About */}
+                  {/* Trip Details */}
                   <div className="bg-white/10 backdrop-blur rounded-xl p-5">
-                    <h3 className="text-gold text-xs uppercase tracking-wider mb-3">About</h3>
+                    <h3 className="text-xs uppercase tracking-wider mb-3" style={{ color: '#d4ed39' }}>Trip Details</h3>
                     <p className="dark-bg-body text-sm leading-relaxed">
                       {(selectedLocation as Location).extendedNotes || selectedLocation.notes}
                     </p>
@@ -126,13 +126,15 @@ export default function TravelPage() {
                   {/* Facts - Scaffolded Headers */}
                   {(selectedLocation as Location).facts && (
                     <div className="space-y-4">
-                      {Object.entries((selectedLocation as Location).facts!).map(([category, items]) => (
+                      {Object.entries((selectedLocation as Location).facts!)
+                        .filter(([category]) => !category.toLowerCase().includes('food'))
+                        .map(([category, items]) => (
                         <div key={category} className="bg-white/10 backdrop-blur rounded-xl p-5">
-                          <h3 className="text-gold text-xs uppercase tracking-wider mb-3">{category}</h3>
+                          <h3 className="text-xs uppercase tracking-wider mb-3" style={{ color: '#d4ed39' }}>{category}</h3>
                           <ul className="space-y-2">
                             {items.map((item, idx) => (
                               <li key={idx} className="dark-bg-body text-sm flex gap-2">
-                                <span className="text-gold/60">•</span>
+                                <span style={{ color: 'rgba(212, 237, 57, 0.6)' }}>•</span>
                                 {item}
                               </li>
                             ))}

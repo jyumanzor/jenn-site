@@ -25,7 +25,7 @@
         "chicago/chicago-03.jpeg",
         "chicago/chicago-04.jpeg"
       ],
-      "extendedNotes": "Four years at UChicago, walking distance from the lake. Hyde Park bookstores, late nights in the Reg, winters that test you.",
+      "extendedNotes": "Four years at UChicago. Hyde Park bookstores, the Reg, Lake Michigan. Returning for Booth in 2026.",
       "facts": {
         "Architecture": [
           "Frank Lloyd Wright's Robie House in Hyde Park",
@@ -91,19 +91,19 @@
       "extendedNotes": "5am start, sunrise along Waikiki Beach. Course runs Ala Moana to Hawaii Kai. Finish at Kapiolani Park.",
       "facts": {
         "The Race": [
-          "5am start, ran into sunrise",
+          "5am start, ran into sunrise along Waikiki",
           "Course: Ala Moana through Hawaii Kai",
           "Finish at Kapiolani Park"
         ],
         "The Trip": [
           "Day trip to Maui via puddle jumper",
           "Hiked Diamond Head at dawn",
-          "Explored North Shore beaches"
+          "North Shore beaches"
         ],
-        "Food & Drink": [
-          "Poke bowls everywhere",
-          "Shave ice at Matsumoto's",
-          "Malasadas from Leonard's"
+        "The Island": [
+          "Oahu: 600,000+ residents, most populated Hawaiian island",
+          "Pearl Harbor: USS Arizona Memorial",
+          "Diamond Head: volcanic crater, iconic silhouette"
         ]
       }
     },
@@ -206,7 +206,7 @@
         "Culture": [
           "Venice Beach: Muscle Beach, boardwalk, street performers",
           "Getty Center: free admission, stunning architecture",
-          "Taco culture: 10,000+ taquerias"
+          "LACMA: Urban Light installation, 202 street lamps"
         ]
       }
     },
@@ -350,7 +350,7 @@
         "atlanta/atlanta-03.jpeg",
         "atlanta/atlanta-04.jpeg"
       ],
-      "extendedNotes": "The capital of the New South. Civil rights history, hip-hop culture, and humid summer days in Piedmont Park.",
+      "extendedNotes": "Civil rights history, Piedmont Park, and Southern hospitality.",
       "facts": {
         "History": [
           "Burned in Sherman's March to the Sea, 1864",
@@ -384,7 +384,7 @@
         "miami/miami-03.jpeg",
         "miami/miami-04.jpeg"
       ],
-      "extendedNotes": "Art Deco on Ocean Drive, Cuban coffee in Little Havana, street art in Wynwood. Miami feels more Caribbean than American.",
+      "extendedNotes": "Art Deco on Ocean Drive, Little Havana, street art in Wynwood.",
       "facts": {
         "Culture": [
           "70% of residents speak Spanish at home",
@@ -477,10 +477,10 @@
           "Mural Arts: 4,000+ murals—largest public art program in US",
           "BYOB restaurant culture: no corkage fees"
         ],
-        "Food": [
-          "Cheesesteak debate: Pat's vs. Geno's since 1966",
-          "Reading Terminal Market: 80+ vendors since 1893",
-          "Roast pork sandwich: the local's cheesesteak"
+        "Neighborhoods": [
+          "Old City: Independence Hall, Liberty Bell",
+          "Fishtown: galleries, breweries, converted warehouses",
+          "Rittenhouse Square: urban park, upscale dining"
         ]
       }
     },
@@ -497,7 +497,7 @@
         "tokyo/45EB4D40-E6A3-4349-B3D4-EAED922549D4.jpeg",
         "tokyo/F6A215C6-A815-4207-904C-120CBE2A1BE7.jpeg"
       ],
-      "extendedNotes": "First time in Japan. Shibuya Crossing, Meiji Shrine, Itoya Ginza (12 floors of stationery). Golden Gai for late-night drinks. Tsukiji for breakfast.",
+      "extendedNotes": "First time in Japan. Shibuya Crossing, Meiji Shrine, Itoya Ginza. Golden Gai and Tsukiji.",
       "facts": {
         "Neighborhoods": [
           "Shibuya—Crossing, shopping, nightlife",
@@ -509,12 +509,12 @@
           "Itoya Ginza—12 floors of stationery",
           "Shibuya Crossing at night",
           "Meiji Shrine forest walk",
-          "Tsukiji Outer Market for breakfast"
+          "Tsukiji Outer Market"
         ],
-        "Food": [
-          "Ramen in every neighborhood",
-          "Conveyor belt sushi",
-          "7-Eleven surprisingly amazing"
+        "The City": [
+          "37 million metro area—world's largest",
+          "Trains run on time to the second",
+          "Vending machines every 12 meters on average"
         ]
       }
     },
@@ -575,7 +575,7 @@
         "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg",
         "osaka/8307BB4B-A664-4A82-834B-4F1E7B2D4029_4_5005_c.jpeg"
       ],
-      "extendedNotes": "Dotonbori at night. Takoyaki, okonomiyaki, kushikatsu. Street food is the draw.",
+      "extendedNotes": "Dotonbori at night. Day trips to Kyoto and Nara.",
       "facts": {
         "The City": [
           "Japan's second largest city, 2.7 million residents",
@@ -587,10 +587,10 @@
           "More relaxed and humorous than Tokyo",
           "Glico Running Man sign: Dotonbori landmark since 1935"
         ],
-        "Food": [
-          "Takoyaki: octopus balls invented here in 1935",
-          "Okonomiyaki: savory pancakes, Osaka-style",
-          "Kushikatsu: deep-fried skewers, never double-dip"
+        "History": [
+          "Merchant city since the Edo period",
+          "Osaka Castle: rebuilt in 1931, original from 1583",
+          "Historically called 'the nation's kitchen'"
         ]
       }
     },
@@ -642,7 +642,7 @@
         "paris/IMG_1582.jpeg",
         "paris/IMG_1700.jpeg"
       ],
-      "extendedNotes": "Walking along the Seine, Musée d'Orsay, long café lunches in the Marais. The light really is different.",
+      "extendedNotes": "The Seine, Musée d'Orsay, the Marais. March light.",
       "facts": {
         "History": [
           "Founded by Celtic Parisii tribe, 3rd century BC",
@@ -656,8 +656,8 @@
         ],
         "Culture": [
           "Café culture: the original third place",
-          "Baguette tradition: must be made fresh daily by law",
-          "Over 400 parks and gardens in the city"
+          "Over 400 parks and gardens in the city",
+          "Six train stations named after writers"
         ]
       }
     },
@@ -680,7 +680,7 @@
         "london/london-07.jpeg",
         "london/london-08.jpeg"
       ],
-      "extendedNotes": "West End shows, browsing the V&A, pub dinners. London rewards walking—every neighborhood has its own character.",
+      "extendedNotes": "West End shows, the V&A, walking between neighborhoods.",
       "facts": {
         "History": [
           "Founded by Romans as Londinium, 43 AD",
@@ -746,10 +746,10 @@
           "Chapultepec: one of world's largest urban parks",
           "Roma: film neighborhood, earthquake-scarred charm"
         ],
-        "Food": [
-          "Taco al pastor: Lebanese-Mexican fusion",
-          "Mezcal bars in Roma and Condesa",
-          "Street food culture: 50,000+ vendors"
+        "History": [
+          "Aztec capital Tenochtitlan founded 1325",
+          "Zócalo: one of the largest public plazas in the world",
+          "Palacio de Bellas Artes: Art Nouveau and Art Deco"
         ]
       }
     },
@@ -769,7 +769,7 @@
         "toronto/toronto-04.jpeg",
         "toronto/toronto-05.jpeg"
       ],
-      "extendedNotes": "Ferry to the Toronto Islands for skyline views, wandering Kensington Market, diverse food scene in every neighborhood.",
+      "extendedNotes": "Toronto Islands, Kensington Market, TIFF visit.",
       "facts": {
         "The City": [
           "Most populous city in Canada (2.9 million)",
