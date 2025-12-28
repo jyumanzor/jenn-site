@@ -93,124 +93,223 @@
   ],
   "playlists": [
     {
-      "id": "long-runs",
-      "title": "Long Runs",
-      "description": "18+ miles. Steady pace, steady mind.",
-      "vibe": "Running",
-      "mood": "Focused",
-      "trackCount": 45,
-      "appleMusicUrl": "",
-      "color": "#3B412D"
-    },
-    {
-      "id": "tempo-days",
-      "title": "Tempo Days",
-      "description": "When the pace needs to hurt.",
-      "vibe": "Running",
-      "mood": "Intense",
-      "trackCount": 32,
-      "appleMusicUrl": "",
-      "color": "#546E40"
-    },
-    {
-      "id": "recovery-walks",
-      "title": "Recovery Walks",
-      "description": "Easy miles. Podcasts and chill.",
-      "vibe": "Running",
-      "mood": "Relaxed",
-      "trackCount": 28,
-      "appleMusicUrl": "",
-      "color": "#97A97C"
-    },
-    {
-      "id": "focus-work",
-      "title": "Deep Work",
-      "description": "No lyrics. No distractions. Just flow.",
-      "vibe": "Focus",
-      "mood": "Ambient",
-      "trackCount": 60,
-      "appleMusicUrl": "",
-      "color": "#546E40"
-    },
-    {
-      "id": "late-nights",
-      "title": "Late Nights",
-      "description": "2am coding sessions. Synth and electronic.",
-      "vibe": "Focus",
-      "mood": "Nocturnal",
-      "trackCount": 48,
-      "appleMusicUrl": "",
-      "color": "#3B412D"
-    },
-    {
-      "id": "morning-coffee",
-      "title": "Morning Coffee",
-      "description": "Slow starts. Acoustic and gentle.",
-      "vibe": "Mood",
-      "mood": "Calm",
-      "trackCount": 35,
-      "appleMusicUrl": "",
-      "color": "#F7E5DA"
-    },
-    {
-      "id": "dinner-party",
-      "title": "Dinner Party",
-      "description": "Hosting vibes. Jazz and soul.",
-      "vibe": "Social",
-      "mood": "Warm",
-      "trackCount": 55,
-      "appleMusicUrl": "",
-      "color": "#FFCB69"
-    },
-    {
-      "id": "wine-down",
-      "title": "Wine Down",
-      "description": "End of day. Mellow and introspective.",
-      "vibe": "Mood",
-      "mood": "Reflective",
-      "trackCount": 42,
-      "appleMusicUrl": "",
-      "color": "#97A97C"
-    },
-    {
-      "id": "road-trip",
-      "title": "Road Trip",
-      "description": "Windows down. Sing-along energy.",
-      "vibe": "Social",
-      "mood": "Energetic",
-      "trackCount": 65,
-      "appleMusicUrl": "",
-      "color": "#D4ED39"
-    },
-    {
-      "id": "rainy-days",
-      "title": "Rainy Days",
-      "description": "Cozy indoors. Lo-fi and soft jazz.",
-      "vibe": "Mood",
-      "mood": "Cozy",
-      "trackCount": 50,
-      "appleMusicUrl": "",
-      "color": "#546E40"
-    },
-    {
-      "id": "getting-ready",
-      "title": "Getting Ready",
-      "description": "Pre-going out energy. Hype and confidence.",
-      "vibe": "Social",
-      "mood": "Hype",
-      "trackCount": 38,
-      "appleMusicUrl": "",
+      "id": "im-hot",
+      "title": "im hot",
+      "description": "Bad Bunny, Young Miko, KAROL G. Latin heat and confidence.",
+      "vibe": "Going Out",
+      "mood": "Confident",
+      "trackCount": 129,
+      "topArtists": ["Bad Bunny", "Rauw Alejandro", "KAROL G", "Kendrick Lamar"],
+      "topGenres": ["Latin", "Urbano latino", "Hip-Hop/Rap"],
       "color": "#FABF34"
     },
     {
-      "id": "sunday-reset",
-      "title": "Sunday Reset",
-      "description": "Cleaning, cooking, resetting for the week.",
+      "id": "jfy26",
+      "title": "JFY26",
+      "description": "Current rotation. Frank Ocean, Phoenix, Bad Bunny, The Marías.",
+      "vibe": "Going Out",
+      "mood": "Fresh",
+      "trackCount": 77,
+      "topArtists": ["Bad Bunny", "The Marías", "Rainbow Kitten Surprise", "The Weeknd"],
+      "topGenres": ["Hip-Hop/Rap", "Alternative", "Latin"],
+      "color": "#D4ED39"
+    },
+    {
+      "id": "joy",
+      "title": "joy",
+      "description": "Aphex Twin, Beach Boys, Beatles, KAYTRANADA. Pure serotonin.",
       "vibe": "Mood",
-      "mood": "Peaceful",
-      "trackCount": 45,
-      "appleMusicUrl": "",
-      "color": "#FFF5EB"
+      "mood": "Euphoric",
+      "trackCount": 73,
+      "topArtists": ["Bad Bunny", "KAYTRAMINÉ", "Aphex Twin", "ROSALÍA"],
+      "topGenres": ["Alternative", "Hip-Hop/Rap", "Electronic", "Latin"],
+      "color": "#97A97C"
+    },
+    {
+      "id": "slow-flow",
+      "title": "Slow Flow",
+      "description": "Clairo, Daniel Caesar, Frank Ocean. Smooth and introspective.",
+      "vibe": "Mood",
+      "mood": "Mellow",
+      "trackCount": 108,
+      "topArtists": ["Clairo", "Daniel Caesar", "Frank Ocean", "Olivia Rodrigo"],
+      "topGenres": ["Alternative", "R&B/Soul", "Pop"],
+      "color": "#546E40"
+    },
+    {
+      "id": "aligned",
+      "title": "Aligned",
+      "description": "The Marías, Natalia Lacunza, Bad Bunny. Latin alternative and soft R&B.",
+      "vibe": "Mood",
+      "mood": "Centered",
+      "trackCount": 142,
+      "topArtists": ["Natalia Lacunza", "Bad Bunny", "The Marías", "Kanye West"],
+      "topGenres": ["Alternative", "Pop", "R&B/Soul", "Pop Latino"],
+      "color": "#3B412D"
+    },
+    {
+      "id": "cc",
+      "title": "CC",
+      "description": "Lana Del Rey, Ritt Momney, Beach Fossils. Indie deep cuts.",
+      "vibe": "Focus",
+      "mood": "Dreamy",
+      "trackCount": 99,
+      "topArtists": ["Lana Del Rey", "Ritt Momney", "Natalia Lafourcade", "Beach Fossils"],
+      "topGenres": ["Alternative", "Rock", "Pop", "R&B/Soul"],
+      "color": "#677955"
+    },
+    {
+      "id": "crying-cat",
+      "title": "The Library",
+      "description": "1800+ tracks. Everything from Aphex Twin to Fleetwood Mac.",
+      "vibe": "Discovery",
+      "mood": "Eclectic",
+      "trackCount": 1858,
+      "topArtists": ["Aphex Twin", "Todd Terje", "Ariel Pink", "Radiohead"],
+      "topGenres": ["Electronic", "Alternative", "Pop", "Hip-Hop/Rap"],
+      "color": "#4e6041"
+    }
+  ],
+  "favorites": [
+    {
+      "artist": "Daniel Caesar",
+      "track": "Transform",
+      "album": "Freudian",
+      "genre": "R&B/Soul",
+      "vibe": "Smooth"
+    },
+    {
+      "artist": "Beach House",
+      "track": "Better Times",
+      "album": "Once Twice Melody",
+      "genre": "Alternative",
+      "vibe": "Dreamy"
+    },
+    {
+      "artist": "Lorde",
+      "track": "Ribs",
+      "album": "Pure Heroine",
+      "genre": "Alternative",
+      "vibe": "Nostalgic"
+    },
+    {
+      "artist": "Frank Ocean",
+      "track": "Biking",
+      "album": "Single",
+      "genre": "R&B/Soul",
+      "vibe": "Smooth"
+    },
+    {
+      "artist": "Phoenix",
+      "track": "Lisztomania",
+      "album": "Wolfgang Amadeus Phoenix",
+      "genre": "Alternative",
+      "vibe": "Upbeat"
+    },
+    {
+      "artist": "John Mayer",
+      "track": "Stop This Train",
+      "album": "Continuum",
+      "genre": "Singer/Songwriter",
+      "vibe": "Reflective"
+    },
+    {
+      "artist": "Natalia Lafourcade",
+      "track": "Tú Sí Sabes Quererme",
+      "album": "Musas",
+      "genre": "Pop Latino",
+      "vibe": "Warm"
+    },
+    {
+      "artist": "Carla Morrison",
+      "track": "Duele",
+      "album": "Déjenme Llorar",
+      "genre": "Pop Latino",
+      "vibe": "Emotional"
+    },
+    {
+      "artist": "Rex Orange County",
+      "track": "4 Seasons",
+      "album": "Apricot Princess",
+      "genre": "Alternative",
+      "vibe": "Sweet"
+    },
+    {
+      "artist": "Nina Simone",
+      "track": "Here Comes the Sun",
+      "album": "Here Comes the Sun",
+      "genre": "Jazz",
+      "vibe": "Warm"
+    },
+    {
+      "artist": "Arcade Fire",
+      "track": "In the Backseat",
+      "album": "Funeral",
+      "genre": "Alternative",
+      "vibe": "Emotional"
+    },
+    {
+      "artist": "Florence + the Machine",
+      "track": "Dog Days Are Over",
+      "album": "Lungs",
+      "genre": "Alternative",
+      "vibe": "Euphoric"
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "track": "Swimming Pools (Drank)",
+      "album": "good kid, m.A.A.d city",
+      "genre": "Hip-Hop/Rap",
+      "vibe": "Introspective"
+    },
+    {
+      "artist": "Drake",
+      "track": "Passionfruit",
+      "album": "More Life",
+      "genre": "R&B/Soul",
+      "vibe": "Smooth"
+    },
+    {
+      "artist": "James Blake",
+      "track": "(Pick Me Up) Euphoria",
+      "album": "Euphoria Soundtrack",
+      "genre": "Soundtrack",
+      "vibe": "Cinematic"
+    },
+    {
+      "artist": "Lana Del Rey",
+      "track": "The greatest",
+      "album": "Norman Fucking Rockwell!",
+      "genre": "Alternative",
+      "vibe": "Melancholic"
+    },
+    {
+      "artist": "Sara Bareilles",
+      "track": "She Used to Be Mine",
+      "album": "What's Inside: Songs from Waitress",
+      "genre": "Pop",
+      "vibe": "Emotional"
+    },
+    {
+      "artist": "St. Vincent",
+      "track": "Marry Me",
+      "album": "Marry Me",
+      "genre": "Alternative",
+      "vibe": "Intimate"
+    },
+    {
+      "artist": "Bee Gees",
+      "track": "How Deep Is Your Love",
+      "album": "Saturday Night Fever",
+      "genre": "Pop",
+      "vibe": "Classic"
+    },
+    {
+      "artist": "Bad Bunny",
+      "track": "EoO",
+      "album": "DeBÍ TiRAR MáS FOToS",
+      "genre": "Latin",
+      "vibe": "Current"
     }
   ],
   "filters": {
@@ -218,14 +317,15 @@
     "genres": ["Romance", "Drama"],
     "directors": ["Wong Kar-wai", "Celine Song"],
     "bookCategories": ["Philosophy", "Running", "Memoir"],
-    "playlistVibes": ["Running", "Focus", "Mood", "Social"],
-    "playlistMoods": ["Focused", "Intense", "Relaxed", "Ambient", "Nocturnal", "Calm", "Warm", "Reflective", "Energetic", "Cozy", "Hype", "Peaceful"]
+    "playlistVibes": ["Going Out", "Mood", "Focus", "Discovery"],
+    "favoriteVibes": ["Smooth", "Dreamy", "Nostalgic", "Upbeat", "Reflective", "Warm", "Emotional", "Euphoric", "Introspective", "Cinematic", "Melancholic", "Intimate", "Classic", "Current"]
   },
   "stats": {
     "totalFilms": 2,
     "watched": 2,
     "wantToWatch": 0,
     "totalBooks": 10,
-    "totalPlaylists": 12
+    "totalPlaylists": 7,
+    "totalFavorites": 120
   }
 }
