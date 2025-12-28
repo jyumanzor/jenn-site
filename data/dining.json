@@ -315,7 +315,7 @@
     {
       "id": "little-pearl",
       "name": "Little Pearl",
-      "neighborhood": "Capitol HIll",
+      "neighborhood": "Capitol Hill",
       "cuisine": "Contemporary",
       "price": "$$$",
       "rating": 3,
@@ -1810,7 +1810,7 @@
     {
       "id": "heat-da-spot",
       "name": "Heat da Spot",
-      "neighborhood": "Various",
+      "neighborhood": "Shaw",
       "cuisine": "Caribbean",
       "price": "$",
       "rating": 4,
@@ -1936,6 +1936,117 @@
       "notes": "really cute ice cream place in georgetown with FROYO OPTIONS\u2026 that are GOOD",
       "vibe": "",
       "menuLink": ""
+    },
+    {
+      "id": "le-diplomate",
+      "name": "Le Diplomate",
+      "neighborhood": "14th Street",
+      "cuisine": "French Bistro",
+      "price": "$$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "DC institution | Tom Sietsema Hall of Fame",
+      "notes": "THE french bistro of DC, always a scene, steak frites are iconic, great for brunch too",
+      "vibe": "French bistro, brunch, date night",
+      "menuLink": "https://lediplomatedc.com/"
+    },
+    {
+      "id": "reynolds",
+      "name": "Reynolds",
+      "neighborhood": "Dupont Circle",
+      "cuisine": "Bar",
+      "price": "$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "From the Casamara team",
+      "notes": "phenomenal cocktails, intimate speakeasy vibe, same team as Casamara",
+      "vibe": "Speakeasy cocktail bar",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "death-and-co",
+      "name": "Death and Co",
+      "neighborhood": "Blagden Alley",
+      "cuisine": "Bar",
+      "price": "$$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "NYC institution | James Beard Award",
+      "notes": "legendary cocktail bar from NYC, moody vibes, expertly crafted drinks",
+      "vibe": "Craft cocktail destination",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "cana",
+      "name": "Cana",
+      "neighborhood": "Adams Morgan",
+      "cuisine": "Bar",
+      "price": "$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "",
+      "notes": "rum-focused bar with Caribbean vibes, great atmosphere",
+      "vibe": "Rum bar, tropical cocktails",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "maison-bar-a-vins",
+      "name": "Maison Bar À Vins",
+      "neighborhood": "Adams Morgan",
+      "cuisine": "Bar",
+      "price": "$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "",
+      "notes": "French wine bar with excellent selection and cozy vibe",
+      "vibe": "French wine bar",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "bar-betsie",
+      "name": "Bar Betsie",
+      "neighborhood": "Union Market",
+      "cuisine": "Bar",
+      "price": "$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "",
+      "notes": "stylish cocktail bar with excellent drinks",
+      "vibe": "Cocktail bar",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "silver-lyan",
+      "name": "Silver Lyan",
+      "neighborhood": "Penn Quarter",
+      "cuisine": "Bar",
+      "price": "$$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "Ryan Chetiyawardana (Mr Lyan)",
+      "notes": "inventive cocktails from the Mr Lyan team, hotel bar vibes",
+      "vibe": "Craft cocktail bar",
+      "menuLink": "",
+      "isBar": true
+    },
+    {
+      "id": "residents-cafe-bar",
+      "name": "Residents Cafe and Bar",
+      "neighborhood": "Dupont Circle",
+      "cuisine": "Bar",
+      "price": "$$",
+      "rating": 5,
+      "visited": true,
+      "accolades": "",
+      "notes": "great neighborhood cafe and bar",
+      "vibe": "Neighborhood bar",
+      "menuLink": "",
+      "isBar": true
     }
   ],
   "filters": {
@@ -1950,6 +2061,7 @@
       "Asian Fusion",
       "Bagels",
       "Balkan",
+      "Bar",
       "Brazilian",
       "British",
       "Burgers",
@@ -1969,6 +2081,7 @@
       "Filipino",
       "French",
       "French Bakery",
+      "French Bistro",
       "French Caf\u00e9",
       "Greek",
       "Himalayan",
@@ -2019,7 +2132,6 @@
       "Barracks Row",
       "Blagden Alley",
       "Bloomingdale",
-      "Capitol HIll",
       "Capitol Hill",
       "Capitol Hill/Shaw",
       "Cardozo",
@@ -2064,14 +2176,14 @@
     ],
     "priceRanges": [
       "$",
-      "80411",
-      "80411$",
-      "8041180411"
+      "$$",
+      "$$$",
+      "$$$$"
     ]
   },
   "stats": {
-    "total": 149,
-    "visited": 97,
+    "total": 157,
+    "visited": 105,
     "michelin": 38
   }
 }

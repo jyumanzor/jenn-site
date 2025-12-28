@@ -38,8 +38,6 @@ export default function DiningPage() {
       .map(([name]) => name);
   }, []);
 
-  // Stats
-  const visitedCount = dining.restaurants.filter((r: Restaurant) => r.visited).length;
 
   return (
     <div className="bg-cream">
@@ -63,45 +61,60 @@ export default function DiningPage() {
 
       <hr className="rule" />
 
-      {/* Stats Panels */}
+      {/* Top Picks */}
       <section className="py-12">
         <div className="container-editorial">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="bg-ivory rounded-xl p-5 text-center">
-              <p
-                className="text-3xl text-deep-forest"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                {dining.restaurants.length}
-              </p>
-              <p className="text-deep-forest/60 text-xs mt-1">Total</p>
+          {/* Top Restaurants */}
+          <div className="mb-10">
+            <p className="light-bg-label mb-4">Top restaurants</p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {[
+                { id: "roses-luxury", name: "Rose's Luxury", neighborhood: "Barracks Row" },
+                { id: "sushi-nakazawa", name: "Sushi Nakazawa", neighborhood: "Penn Quarter" },
+                { id: "casamara", name: "Casamara", neighborhood: "Dupont Circle" },
+                { id: "causa", name: "Causa", neighborhood: "Blagden Alley" },
+                { id: "lapis", name: "Lapis", neighborhood: "Adams Morgan" },
+                { id: "seven-reasons", name: "Seven Reasons", neighborhood: "Penn Quarter" },
+                { id: "moon-rabbit", name: "Moon Rabbit", neighborhood: "Penn Quarter" },
+                { id: "anju", name: "Anju", neighborhood: "Dupont Circle" },
+                { id: "onggi", name: "Onggi", neighborhood: "Dupont Circle" },
+                { id: "le-diplomate", name: "Le Diplomate", neighborhood: "14th Street" },
+              ].map((restaurant, i) => (
+                <button
+                  key={restaurant.id}
+                  onClick={() => setSearchQuery(restaurant.name)}
+                  className="group panel-gradient-deep hover:scale-[1.02] transition-transform cursor-pointer text-left"
+                >
+                  <span className="dark-bg-label">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="dark-bg-header text-sm mt-1">{restaurant.name}</h3>
+                  <p className="dark-bg-body text-xs mt-0.5 opacity-70">{restaurant.neighborhood}</p>
+                </button>
+              ))}
             </div>
-            <div className="panel-gradient-olive rounded-xl p-5 text-center">
-              <p
-                className="text-3xl text-cream"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                {visitedCount}
-              </p>
-              <p className="text-cream/70 text-xs mt-1">Visited</p>
-            </div>
-            <div className="bg-sage/30 rounded-xl p-5 text-center">
-              <p
-                className="text-3xl text-deep-forest"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                {dining.restaurants.filter((r: Restaurant) => r.accolades?.includes("Michelin")).length}
-              </p>
-              <p className="text-deep-forest/60 text-xs mt-1">Michelin</p>
-            </div>
-            <div className="bg-ivory rounded-xl p-5 text-center">
-              <p
-                className="text-3xl text-deep-forest"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                {topNeighborhoods.length}+
-              </p>
-              <p className="text-deep-forest/60 text-xs mt-1">Neighborhoods</p>
+          </div>
+
+          {/* Top Bars */}
+          <div>
+            <p className="light-bg-label mb-4">Top bars</p>
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+              {[
+                { id: "reynolds", name: "Reynolds", neighborhood: "Dupont Circle" },
+                { id: "death-and-co", name: "Death and Co", neighborhood: "Blagden Alley" },
+                { id: "cana", name: "Cana", neighborhood: "Adams Morgan" },
+                { id: "maison-bar-a-vins", name: "Maison Bar À Vins", neighborhood: "Adams Morgan" },
+                { id: "bar-betsie", name: "Bar Betsie", neighborhood: "Union Market" },
+                { id: "silver-lyan", name: "Silver Lyan", neighborhood: "Penn Quarter" },
+              ].map((bar, i) => (
+                <button
+                  key={bar.id}
+                  onClick={() => setSearchQuery(bar.name)}
+                  className="group panel-gradient-olive hover:scale-[1.02] transition-transform cursor-pointer text-left"
+                >
+                  <span className="dark-bg-label">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="dark-bg-header text-sm mt-1">{bar.name}</h3>
+                  <p className="dark-bg-body text-xs mt-0.5 opacity-70">{bar.neighborhood}</p>
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -240,19 +253,40 @@ export default function DiningPage() {
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mt-3">
-                        <span className="px-2 py-0.5 bg-sage/20 rounded text-xs text-deep-forest">
+                        <span
+                          className="px-2 py-0.5 rounded text-xs font-medium"
+                          style={{
+                            backgroundColor: restaurant.cuisine?.includes('Korean') || restaurant.cuisine?.includes('Japanese') || restaurant.cuisine?.includes('Vietnamese')
+                              ? 'rgba(212,237,57,0.25)'
+                              : restaurant.cuisine?.includes('Italian') || restaurant.cuisine?.includes('French')
+                              ? 'rgba(203,173,140,0.3)'
+                              : restaurant.cuisine?.includes('Mexican') || restaurant.cuisine?.includes('Latin')
+                              ? 'rgba(250,191,52,0.25)'
+                              : 'rgba(151,169,124,0.3)',
+                            color: '#2a3c24'
+                          }}
+                        >
                           {restaurant.cuisine}
                         </span>
-                        <span className="px-2 py-0.5 bg-sage/20 rounded text-xs text-deep-forest">
+                        <span
+                          className="px-2 py-0.5 rounded text-xs"
+                          style={{
+                            backgroundColor: restaurant.price === '$$$$' ? 'rgba(212,237,57,0.3)' : 'rgba(84,110,64,0.15)',
+                            color: '#2a3c24'
+                          }}
+                        >
                           {restaurant.price}
                         </span>
                         {restaurant.visited && (
-                          <span className="px-2 py-0.5 bg-olive/20 rounded text-xs text-deep-forest font-medium">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium" style={{ backgroundColor: 'rgba(42,60,36,0.9)', color: '#d4ed39' }}>
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                            </svg>
                             Visited
                           </span>
                         )}
                         {hasMichelin && (
-                          <span className="px-2 py-0.5 bg-gold/20 rounded text-xs text-deep-forest font-medium">
+                          <span className="px-2 py-0.5 rounded text-xs font-medium" style={{ backgroundColor: 'rgba(250,191,52,0.3)', color: '#2a3c24' }}>
                             {"⭐".repeat(michelinStars || 1)} Michelin
                           </span>
                         )}

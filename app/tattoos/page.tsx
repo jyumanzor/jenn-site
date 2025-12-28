@@ -7,6 +7,10 @@ import tattoos from "@/data/tattoos.json";
 type Tattoo = typeof tattoos.tattoos[0] & {
   quote?: string;
   source?: string;
+  date?: string;
+  city?: string;
+  shop?: string | null;
+  order?: number;
 };
 
 export default function TattoosPage() {
@@ -187,9 +191,28 @@ export default function TattoosPage() {
                       Close
                     </button>
                   </div>
-                  <p className="text-sm mb-4" style={{ color: 'rgba(255,245,235,0.6)' }}>
-                    {selectedTattoo.style}
-                  </p>
+                  <div className="flex flex-wrap gap-3 mb-4">
+                    <span className="text-sm" style={{ color: 'rgba(255,245,235,0.6)' }}>
+                      {selectedTattoo.style}
+                    </span>
+                    {(selectedTattoo as Tattoo).date && (
+                      <>
+                        <span style={{ color: 'rgba(255,245,235,0.3)' }}>•</span>
+                        <span className="text-sm" style={{ color: 'rgba(255,245,235,0.6)' }}>
+                          {new Date((selectedTattoo as Tattoo).date!).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                        </span>
+                      </>
+                    )}
+                    {(selectedTattoo as Tattoo).city && (
+                      <>
+                        <span style={{ color: 'rgba(255,245,235,0.3)' }}>•</span>
+                        <span className="text-sm" style={{ color: 'rgba(255,245,235,0.6)' }}>
+                          {(selectedTattoo as Tattoo).city}
+                          {(selectedTattoo as Tattoo).shop && ` @ ${(selectedTattoo as Tattoo).shop}`}
+                        </span>
+                      </>
+                    )}
+                  </div>
                   <p className="mb-6" style={{ color: 'rgba(255,245,235,0.9)' }}>
                     {selectedTattoo.description}
                   </p>
@@ -367,49 +390,42 @@ export default function TattoosPage() {
 
       <hr className="rule" />
 
-      {/* Quick Stats */}
+      {/* Timeline */}
       <section className="py-12" style={{ backgroundColor: 'rgba(212,237,57,0.1)' }}>
         <div className="container-editorial">
-          <div className="flex flex-wrap justify-center gap-8 text-center">
-            <div>
-              <p
-                className="text-4xl mb-1"
-                style={{
-                  fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                  color: '#2a3c24'
-                }}
-              >
-                {tattoos.stats.total}
-              </p>
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#546e40' }}>Total</p>
-            </div>
-            <div className="w-px" style={{ backgroundColor: 'rgba(42,60,36,0.2)' }} />
-            <div>
-              <p
-                className="text-4xl mb-1"
-                style={{
-                  fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                  color: '#2a3c24'
-                }}
-              >
-                Fine Line
-              </p>
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#546e40' }}>Style</p>
-            </div>
-            <div className="w-px" style={{ backgroundColor: 'rgba(42,60,36,0.2)' }} />
-            <div>
-              <p
-                className="text-4xl mb-1"
-                style={{
-                  fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
-                  color: '#2a3c24'
-                }}
-              >
-                5
-              </p>
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#546e40' }}>Literary</p>
-            </div>
+          <p className="text-xs uppercase tracking-widest mb-6 text-center" style={{ color: '#546e40' }}>
+            Timeline
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {[
+              { year: "2017", city: "Dallas / Austin", tattoos: ["Yellow Umbrella", "Heart"] },
+              { year: "2018", city: "Chicago", tattoos: ["So It Goes", "Es Muss Sein", "Elephant"] },
+              { year: "2019", city: "Chicago", tattoos: ["Volcano"] },
+              { year: "2022", city: "Dallas", tattoos: ["410", "Cowboy Hat"] },
+              { year: "2023", city: "Dallas", tattoos: ["Spoon", "Bike", "Marathon"] },
+              { year: "2024", city: "NYC / Dallas", tattoos: ["Disco Ball", "Squirrel", "Honey Pot"] },
+              { year: "2025", city: "DC", tattoos: ["Hummingbird"] },
+            ].map((period) => (
+              <div key={period.year} className="text-center">
+                <p
+                  className="text-2xl mb-1"
+                  style={{
+                    fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                    color: '#2a3c24'
+                  }}
+                >
+                  {period.year}
+                </p>
+                <p className="text-xs mb-2" style={{ color: '#546e40' }}>{period.city}</p>
+                <p className="text-xs" style={{ color: 'rgba(42,60,36,0.5)' }}>
+                  {period.tattoos.length} tattoo{period.tattoos.length > 1 ? 's' : ''}
+                </p>
+              </div>
+            ))}
           </div>
+          <p className="text-center text-xs mt-8" style={{ color: 'rgba(42,60,36,0.4)' }}>
+            First tattoo: March 29, 2017 — 8 years of collecting
+          </p>
         </div>
       </section>
 

@@ -42,6 +42,203 @@
         "Identity",
         "What-ifs"
       ]
+    },
+    {
+      "id": "minari",
+      "title": "Minari",
+      "director": "Lee Isaac Chung",
+      "year": 2020,
+      "status": "watched",
+      "rating": 9,
+      "genre": "Drama",
+      "country": "USA/Korea",
+      "cast": [
+        "Steven Yeun",
+        "Yeri Han",
+        "Youn Yuh-jung"
+      ],
+      "accolades": "Oscar Best Supporting Actress, Golden Globe",
+      "notes": "The American Dream through a Korean-American family. Water celery and perseverance.",
+      "themes": [
+        "Family",
+        "Immigration",
+        "Roots"
+      ]
+    },
+    {
+      "id": "if-beale-street-could-talk",
+      "title": "If Beale Street Could Talk",
+      "director": "Barry Jenkins",
+      "year": 2018,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Drama",
+      "country": "USA",
+      "cast": [
+        "KiKi Layne",
+        "Stephan James",
+        "Regina King"
+      ],
+      "accolades": "Oscar Best Supporting Actress",
+      "notes": "Baldwin's prose brought to life. Love as resistance.",
+      "themes": [
+        "Love",
+        "Injustice",
+        "Resilience"
+      ]
+    },
+    {
+      "id": "the-brutalist",
+      "title": "The Brutalist",
+      "director": "Brady Corbet",
+      "year": 2024,
+      "status": "watched",
+      "rating": 9,
+      "genre": "Drama",
+      "country": "USA",
+      "cast": [
+        "Adrien Brody",
+        "Felicity Jones",
+        "Guy Pearce"
+      ],
+      "accolades": "Venice Silver Lion",
+      "notes": "Architecture as art and obsession. The immigrant experience and creative vision.",
+      "themes": [
+        "Art",
+        "Obsession",
+        "Immigration"
+      ]
+    },
+    {
+      "id": "american-fiction",
+      "title": "American Fiction",
+      "director": "Cord Jefferson",
+      "year": 2023,
+      "status": "watched",
+      "rating": 9,
+      "genre": "Comedy/Drama",
+      "country": "USA",
+      "cast": [
+        "Jeffrey Wright",
+        "Tracee Ellis Ross",
+        "Issa Rae"
+      ],
+      "accolades": "Oscar Best Adapted Screenplay",
+      "notes": "Sharp satire on race and publishing. Percival Everett's wit.",
+      "themes": [
+        "Identity",
+        "Satire",
+        "Authenticity"
+      ]
+    },
+    {
+      "id": "the-substance",
+      "title": "The Substance",
+      "director": "Coralie Fargeat",
+      "year": 2024,
+      "status": "watched",
+      "rating": 9,
+      "genre": "Horror",
+      "country": "France/USA",
+      "cast": [
+        "Demi Moore",
+        "Margaret Qualley"
+      ],
+      "accolades": "Cannes Best Screenplay",
+      "notes": "Body horror and beauty standards. Grotesque and unforgettable.",
+      "themes": [
+        "Aging",
+        "Beauty",
+        "Identity"
+      ]
+    },
+    {
+      "id": "interstellar",
+      "title": "Interstellar",
+      "director": "Christopher Nolan",
+      "year": 2014,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Sci-Fi",
+      "country": "USA",
+      "cast": [
+        "Matthew McConaughey",
+        "Anne Hathaway",
+        "Jessica Chastain"
+      ],
+      "accolades": "Oscar Best Visual Effects",
+      "notes": "Love transcends time and space. Hans Zimmer's organ.",
+      "themes": [
+        "Time",
+        "Love",
+        "Survival"
+      ]
+    },
+    {
+      "id": "parasite",
+      "title": "Parasite",
+      "director": "Bong Joon-ho",
+      "year": 2019,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Thriller",
+      "country": "Korea",
+      "cast": [
+        "Song Kang-ho",
+        "Lee Sun-kyun",
+        "Cho Yeo-jeong"
+      ],
+      "accolades": "Oscar Best Picture, Palme d'Or",
+      "notes": "Class warfare as a genre-defying masterpiece.",
+      "themes": [
+        "Class",
+        "Inequality",
+        "Deception"
+      ]
+    },
+    {
+      "id": "burning",
+      "title": "Burning",
+      "director": "Lee Chang-dong",
+      "year": 2018,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Drama/Thriller",
+      "country": "Korea",
+      "cast": [
+        "Yoo Ah-in",
+        "Steven Yeun",
+        "Jeon Jong-seo"
+      ],
+      "accolades": "FIPRESCI Prize at Cannes",
+      "notes": "Slow-burning mystery. Murakami adapted to devastating effect.",
+      "themes": [
+        "Class",
+        "Obsession",
+        "Ambiguity"
+      ]
+    },
+    {
+      "id": "phantom-thread",
+      "title": "Phantom Thread",
+      "director": "Paul Thomas Anderson",
+      "year": 2017,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Drama/Romance",
+      "country": "USA",
+      "cast": [
+        "Daniel Day-Lewis",
+        "Vicky Krieps",
+        "Lesley Manville"
+      ],
+      "accolades": "Oscar Best Costume Design",
+      "notes": "Fashion, control, and twisted love. DDL's final performance.",
+      "themes": [
+        "Obsession",
+        "Control",
+        "Love"
+      ]
     }
   ],
   "books": [
@@ -109,8 +306,8 @@
   "playlists": [
     {
       "id": "dance-party",
-      "title": "Dance Party",
-      "description": "House, disco, electronic. Move your body.",
+      "title": "Electronic / Dance",
+      "description": "House, disco, and electronic dance music.",
       "trackCount": 561,
       "color": "#D4ED39",
       "tracks": [
@@ -3487,7 +3684,7 @@
       "title": "Running / Tempo",
       "description": "Bad Bunny, Young Miko, Kendrick. High energy for hard efforts.",
       "trackCount": 377,
-      "color": "#FABF34",
+      "color": "#FF6B6B",
       "tracks": [
         {
           "artist": "Hi-Tek",
@@ -5758,7 +5955,7 @@
       "title": "Indie / Alternative",
       "description": "The Strokes to Radiohead. Guitar-driven and raw.",
       "trackCount": 376,
-      "color": "#4e6041",
+      "color": "#7EC8E3",
       "tracks": [
         {
           "artist": "Kilo Kish",
@@ -8021,9 +8218,9 @@
     {
       "id": "instrumental",
       "title": "Instrumental",
-      "description": "Aphex Twin, Chet Baker, classical. No words needed.",
+      "description": "Aphex Twin, Chet Baker, and classical. No lyrics.",
       "trackCount": 259,
-      "color": "#677955",
+      "color": "#A8D5BA",
       "tracks": [
         {
           "artist": "Chet Baker",
@@ -9584,9 +9781,9 @@
     {
       "id": "pop",
       "title": "Pop",
-      "description": "Catchiness is a virtue.",
+      "description": "Pop hits and earworms.",
       "trackCount": 246,
-      "color": "#F7E5DA",
+      "color": "#FFB5C5",
       "tracks": [
         {
           "artist": "Fleetwood Mac",
@@ -11069,9 +11266,9 @@
     {
       "id": "discovery",
       "title": "Discovery",
-      "description": "Everything else worth exploring.",
+      "description": "New finds and miscellaneous favorites.",
       "trackCount": 170,
-      "color": "#8B8780",
+      "color": "#C4A77D",
       "tracks": [
         {
           "artist": "Abu",
@@ -12098,9 +12295,9 @@
     {
       "id": "smooth-r&b",
       "title": "Smooth R&B",
-      "description": "Soul, groove, late night vibes.",
+      "description": "Soul and R&B for late nights.",
       "trackCount": 137,
-      "color": "#CBAD8C",
+      "color": "#8B6B61",
       "tracks": [
         {
           "artist": "Jackie Shane",
@@ -12929,9 +13126,9 @@
     {
       "id": "pretty-songs",
       "title": "Pretty Songs",
-      "description": "Clairo, Beach House, The Mar\u00edas, Frank Ocean. Beautiful and tender.",
+      "description": "Clairo, Beach House, The Marías, Frank Ocean. Soft and dreamy.",
       "trackCount": 64,
-      "color": "#97A97C",
+      "color": "#E6C4E6",
       "tracks": [
         {
           "artist": "Beach House",
@@ -13322,26 +13519,14 @@
     {
       "id": "soundtracks",
       "title": "Soundtracks",
-      "description": "Film scores and musical moments that stay with you.",
-      "trackCount": 57,
-      "color": "#3B412D",
+      "description": "Film scores from Beale Street, Moonlight, Lost, Suspiria, and more.",
+      "trackCount": 25,
+      "color": "#546E40",
       "tracks": [
         {
           "artist": "Kermit",
           "track": "Rainbow Connection",
           "album": "The Muppet Movie (Original Motion Picture Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Jerry Martin",
-          "track": "Mall Rat",
-          "album": "The Sims (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Danny Elfman",
-          "track": "Breakfast Machine (From \"Pee Wee's Big Adventure\")",
-          "album": "Pee-Wee's Big Adventure / Back To School (Soundtracks)",
           "genre": "Soundtrack"
         },
         {
@@ -13351,39 +13536,9 @@
           "genre": "Soundtrack"
         },
         {
-          "artist": "Jagex Audio Team",
-          "track": "Garden",
-          "album": "Runescape: Original Soundtrack Classics",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Tim and Eric",
-          "track": "Wipe My Butt",
-          "album": "Awesome Record, Great Songs",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Boyo",
-          "track": "Pocoyo",
-          "album": "Pocoyo - Single",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Thom Yorke",
           "track": "Suspirium",
           "album": "Suspiria (Music for the Luca Guadagnino Film)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Pentagon",
-          "track": "Heal",
-          "album": "Melody in the Mist (Ico OST)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Television's Greatest Hits Band",
-          "track": "The Three Stooges",
-          "album": "Television's Greatest Hits: Classic TV Theme Songs",
           "genre": "Soundtrack"
         },
         {
@@ -13393,87 +13548,9 @@
           "genre": "Soundtrack"
         },
         {
-          "artist": "Keiichi Okabe",
-          "track": "Pascal",
-          "album": "NieR:Automata Original Soundtrack",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Mister Rogers",
           "track": "It's Such a Good Feeling",
           "album": "Won't You Be My Neighbor? (Original Motion Picture Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Tim and Eric",
-          "track": "Petite Feet",
-          "album": "Awesome Record, Great Songs",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Tim and Eric",
-          "track": "Sports!",
-          "album": "Awesome Record, Great Songs",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Tim and Eric",
-          "track": "Dirty Socks",
-          "album": "Awesome Record, Great Songs",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "PPF",
-          "track": "Delfino Plaza (Super Mario Sunshine)",
-          "album": "Delfino Plaza (Super Mario Sunshine) - Single",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Bobby Morganstein",
-          "track": "Seinfeld",
-          "album": "The Complete TV Themes #23, Vol. 1",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Luciano Michelini",
-          "track": "Frolic (Theme from Curb Your Enthusiasm)",
-          "album": "TV Tunes (Music from the Original TV Series)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "Free Money",
-          "album": "Pikuniku (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "The Mountain Village",
-          "album": "Pikuniku (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "Mother's Lullaby",
-          "album": "Pikuniku (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "Everything's Gonna Be Okay",
-          "album": "Pikuniku (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "The Crate, Co-Op 1",
-          "album": "Pikuniku (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Calum Bowen",
-          "track": "Lovely City",
-          "album": "Lovely Planet (Original Game Soundtrack)",
           "genre": "Soundtrack"
         },
         {
@@ -13483,33 +13560,15 @@
           "genre": "Soundtrack"
         },
         {
-          "artist": "Frank Chacksfield",
-          "track": "Gay Dog",
-          "album": "Archives Vol. 9",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Dave Blume",
           "track": "Theme from \"Taxi Driver\"",
           "album": "Taxi Driver (Original Soundtrack Recording)",
           "genre": "Soundtrack"
         },
         {
-          "artist": "Yuzo Koshiro & Motohiro Kawashima",
-          "track": "Go Straight (Video Game Soundtrack)",
-          "album": "Streets of Rage 2 (Official Video Game Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Lori Goldston",
           "track": "Messy",
           "album": "Creekside: Solo Cello",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Pentagon",
-          "track": "continue",
-          "album": "ICO~\u9727\u306e\u4e2d\u306e\u65cb\u5f8b~",
           "genre": "Soundtrack"
         },
         {
@@ -13525,12 +13584,6 @@
           "genre": "Soundtrack"
         },
         {
-          "artist": "Pentagon",
-          "track": "heal",
-          "album": "ICO~\u9727\u306e\u4e2d\u306e\u65cb\u5f8b~",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Piero Umiliani",
           "track": "Le ragazze dell'arcipelago",
           "album": "Svezia, inferno e paradiso",
@@ -13540,12 +13593,6 @@
           "artist": "Piero Umiliani",
           "track": "Mah\u00e8",
           "album": "La ragazza dalla pelle di luna",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Soichi Terada",
-          "track": "\u30b5\u30eb\u306a\u3052\u30b9\u30bf\u30b8\u30a2\u30e0 Super Monkey Throw Studium",
-          "album": "Ape Escape 3 (Originape Soundtracks) \u30b5\u30eb\u30b2\u30c3\u30c1\u30e53\u30fb\u30aa\u30ea\u30b8\u30b5\u30eb\u30fb\u30b5\u30a6\u30f3\u30c9\u30c8\u30e9\u30c3\u30af",
           "genre": "Soundtrack"
         },
         {
@@ -13573,12 +13620,6 @@
           "genre": "Original Score"
         },
         {
-          "artist": "Nobuo Uematsu",
-          "track": "Main Theme of Final Fantasy VII (Final Fantasy VII)",
-          "album": "Distant Worlds II: More Music from Final Fantasy",
-          "genre": "Soundtrack"
-        },
-        {
           "artist": "Nicholas Britell",
           "track": "Succession (Main Title Theme)",
           "album": "Succession: Season 1 (HBO Original Series Soundtrack)",
@@ -13589,18 +13630,6 @@
           "track": "Tenerezza",
           "album": "Mark il poliziotto",
           "genre": "Original Score"
-        },
-        {
-          "artist": "\u30ab\u30d7\u30b3\u30f3\u30fb\u30b5\u30a6\u30f3\u30c9\u30c1\u30fc\u30e0",
-          "track": "\u672a\u6765\u3078\u306e\u5e0c\u671b",
-          "album": "Monster Hunter X (Original Soundtrack)",
-          "genre": "Soundtrack"
-        },
-        {
-          "artist": "Anamanaguchi",
-          "track": "Cheap Shop",
-          "album": "Scott Pilgrim vs. the World: The Game (Original Videogame Soundtrack)",
-          "genre": "Soundtrack"
         },
         {
           "artist": "Michael Giacchino",
@@ -13673,7 +13702,7 @@
     {
       "id": "sad-girl-tunes",
       "title": "Sad Girl Tunes",
-      "description": "Phoebe Bridgers, Lana, Bon Iver. For the melancholy moments.",
+      "description": "Phoebe Bridgers, Lana Del Rey, Bon Iver.",
       "trackCount": 31,
       "color": "#546E40",
       "tracks": [
@@ -14027,7 +14056,7 @@
       "Memoir"
     ],
     "playlistVibes": [
-      "Dance Party",
+      "Electronic / Dance",
       "Running / Tempo",
       "Indie / Alternative",
       "Instrumental",
@@ -14056,8 +14085,8 @@
     ]
   },
   "stats": {
-    "totalFilms": 2,
-    "watched": 2,
+    "totalFilms": 11,
+    "watched": 11,
     "wantToWatch": 0,
     "totalBooks": 10,
     "totalPlaylists": 10,
