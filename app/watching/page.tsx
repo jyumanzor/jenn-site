@@ -143,7 +143,7 @@ export default function WatchingPage() {
                 style={{ backgroundColor: '#97a97c', color: '#2a3c24' }}
               >
                 <span>📊</span>
-                <span>Miscellaneous Archives</span>
+                <span>Explore Misc Archives</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
