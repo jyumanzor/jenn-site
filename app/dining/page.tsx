@@ -188,14 +188,14 @@ export default function DiningPage() {
       <section className="py-12">
         <div className="container-editorial">
           <div className="space-y-4">
-            {filteredRestaurants.map((restaurant: Restaurant) => {
+            {filteredRestaurants.map((restaurant: Restaurant, index: number) => {
               const isFavorite = restaurant.rating === 5;
               const hasMichelin = restaurant.accolades?.includes("Michelin");
               const michelinStars = restaurant.accolades?.match(/Michelin (⭐+)/)?.[1]?.length || 0;
 
               return (
                 <div
-                  key={`${restaurant.rank}-${restaurant.name}`}
+                  key={restaurant.id}
                   className={`rounded-xl p-6 transition-all ${
                     isFavorite
                       ? "bg-ivory border-2 border-gold/30"
@@ -208,7 +208,7 @@ export default function DiningPage() {
                       <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium ${
                         isFavorite ? "bg-gold text-deep-forest" : "bg-sage/20 text-deep-forest"
                       }`}>
-                        {restaurant.rank}
+                        {index + 1}
                       </div>
                     </div>
 
