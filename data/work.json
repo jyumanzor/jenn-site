@@ -36,38 +36,21 @@
       ]
     },
     {
-      "id": "morning-consult-senior",
-      "title": "Senior Associate, Client Services",
+      "id": "morning-consult",
+      "title": "Associate → Senior Associate, Client Services",
       "company": "Morning Consult",
       "location": "Washington, DC",
-      "timeline": "Jul 2022 - Aug 2022",
-      "duration": "2 mos",
+      "timeline": "Jun 2021 - Aug 2022",
+      "duration": "1 yr 3 mos",
       "type": "Full-time",
       "category": "research",
       "shortDescription": "Market research & client analysis. Fortune 500 newsletter oversight.",
       "responsibilities": [
-        "Met demands of client projects based on strategic need",
         "Drafted questionnaires to gauge public sentiment",
         "Analyzed market research for deliverables with actionable insights",
         "Oversaw weekly research newsletter for Fortune 500 companies",
         "Created custom brand trackers and monthly KPI dashboards",
-        "Managed Salesforce fulfillments and leveraged client research for revenue opportunities"
-      ]
-    },
-    {
-      "id": "morning-consult",
-      "title": "Associate, Client Services",
-      "company": "Morning Consult",
-      "location": "Washington, DC",
-      "timeline": "Jun 2021 - Jul 2022",
-      "duration": "1 yr 2 mos",
-      "type": "Full-time",
-      "category": "research",
-      "shortDescription": "Market research, client services, data analysis, reporting.",
-      "responsibilities": [
-        "Market research and client services",
-        "Data analysis and reporting",
-        "Client relationship management"
+        "Managed Salesforce fulfillments and client research for revenue opportunities"
       ]
     },
     {
