@@ -647,7 +647,7 @@ export default function RunningPage() {
                 </div>
                 <div className="panel-gradient-warm-neutral">
                   <p className="light-bg-label mb-1">Improvement</p>
-                  <p className="font-display text-3xl text-deep-forest">20:00</p>
+                  <p className="font-display text-3xl text-deep-forest">19:52</p>
                   <p className="light-bg-body text-xs mt-1">first to PR</p>
                 </div>
               </div>
