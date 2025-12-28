@@ -8,7 +8,7 @@
       "institution": "MIT, MIT, University of Chicago",
       "citation": "For studies of how institutions are formed and affect prosperity",
       "keyWork": "Why Nations Fail (2012)",
-      "workLink": "https://economics.mit.edu/people/faculty/daron-acemoglu",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2024/summary/",
       "summary": "Demonstrated that inclusive political and economic institutions are the primary driver of long-term prosperity, while extractive institutions lead to poverty.",
       "explainer": {
         "concept": "Institutional Economics",
@@ -23,7 +23,7 @@
       "institution": "Harvard University",
       "citation": "For having advanced our understanding of women's labour market outcomes",
       "keyWork": "Career and Family: Women's Century-Long Journey (2021)",
-      "workLink": "https://scholar.harvard.edu/goldin",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2023/summary/",
       "summary": "Provided the first comprehensive account of women's earnings and labor market participation over centuries, revealing the causes of the gender gap.",
       "explainer": {
         "concept": "Gender Economics & Labor History",
@@ -38,7 +38,7 @@
       "institution": "Brookings Institution, University of Chicago, Washington University",
       "citation": "For research on banks and financial crises",
       "keyWork": "Diamond-Dybvig Model (1983), Bernanke's Great Depression research",
-      "workLink": "https://www.brookings.edu/people/ben-s-bernanke/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2022/summary/",
       "summary": "Explained why banks exist, why they're vulnerable to runs, and how banking failures amplify economic downturns.",
       "explainer": {
         "concept": "Bank Runs & Financial Intermediation",
@@ -53,7 +53,7 @@
       "institution": "UC Berkeley, MIT, Stanford",
       "citation": "For methodological contributions to the analysis of causal relationships",
       "keyWork": "Natural Experiments methodology, Minimum Wage studies",
-      "workLink": "https://davidcard.berkeley.edu/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2021/summary/",
       "summary": "Revolutionized how economists use real-world data to answer cause-and-effect questions, showing that minimum wage increases don't necessarily reduce employment.",
       "explainer": {
         "concept": "Natural Experiments & Causal Inference",
@@ -68,7 +68,7 @@
       "institution": "Stanford University",
       "citation": "For improvements to auction theory and inventions of new auction formats",
       "keyWork": "Spectrum Auction Design for FCC",
-      "workLink": "https://milgrom.stanford.edu/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2020/summary/",
       "summary": "Developed the theory and practical designs for complex auctions, including the simultaneous multiple-round auction used for radio spectrum licenses.",
       "explainer": {
         "concept": "Auction Theory & Mechanism Design",
@@ -83,7 +83,7 @@
       "institution": "MIT, MIT, Harvard",
       "citation": "For their experimental approach to alleviating global poverty",
       "keyWork": "Poor Economics (2011), J-PAL field experiments",
-      "workLink": "https://www.povertyactionlab.org/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2019/summary/",
       "summary": "Pioneered the use of randomized controlled trials (RCTs) to test anti-poverty interventions, discovering what actually works vs. what sounds good.",
       "explainer": {
         "concept": "Randomized Controlled Trials in Development",
@@ -98,7 +98,7 @@
       "institution": "Yale, NYU",
       "citation": "For integrating climate change/technological innovation into macroeconomic analysis",
       "keyWork": "DICE Model (climate economics), Endogenous Growth Theory",
-      "workLink": "https://williamnordhaus.com/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2018/summary/",
       "summary": "Nordhaus created models showing how to price carbon emissions; Romer explained how ideas drive economic growth.",
       "explainer": {
         "concept": "Climate Economics & Endogenous Growth",
@@ -113,7 +113,7 @@
       "institution": "University of Chicago",
       "citation": "For contributions to behavioural economics",
       "keyWork": "Nudge (2008), Mental Accounting theory",
-      "workLink": "https://www.chicagobooth.edu/faculty/directory/t/richard-h-thaler",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2017/summary/",
       "summary": "Integrated psychology into economics, showing that humans aren't fully rational and that 'nudges' can improve decisions without restricting choice.",
       "explainer": {
         "concept": "Behavioral Economics & Nudge Theory",
@@ -128,7 +128,7 @@
       "institution": "Harvard, MIT",
       "citation": "For contributions to contract theory",
       "keyWork": "Incomplete Contracts Theory, Principal-Agent Theory",
-      "workLink": "https://scholar.harvard.edu/hart",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2016/summary/",
       "summary": "Explained how contracts should be designed when you can't anticipate everything, and how to align incentives between owners and managers.",
       "explainer": {
         "concept": "Contract Theory & Incentive Design",
@@ -143,7 +143,7 @@
       "institution": "Princeton",
       "citation": "For analysis of consumption, poverty, and welfare",
       "keyWork": "The Great Escape (2013), Almost Ideal Demand System",
-      "workLink": "https://scholar.princeton.edu/deaton",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2015/summary/",
       "summary": "Developed methods to measure poverty and welfare accurately, and documented humanity's dramatic escape from deprivation over centuries.",
       "explainer": {
         "concept": "Welfare Measurement & Demand Analysis",
@@ -158,7 +158,7 @@
       "institution": "Toulouse School of Economics",
       "citation": "For analysis of market power and regulation",
       "keyWork": "The Theory of Industrial Organization (1988)",
-      "workLink": "https://www.tse-fr.eu/people/jean-tirole",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2014/summary/",
       "summary": "Developed tools to understand and regulate industries with few large players, including two-sided markets like platforms.",
       "explainer": {
         "concept": "Industrial Organization & Platform Economics",
@@ -173,7 +173,7 @@
       "institution": "Chicago, Chicago, Yale",
       "citation": "For empirical analysis of asset prices",
       "keyWork": "Efficient Market Hypothesis (Fama), Irrational Exuberance (Shiller)",
-      "workLink": "https://www.chicagobooth.edu/faculty/directory/f/eugene-f-fama",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2013/summary/",
       "summary": "Fama showed markets quickly incorporate information (you can't beat the market). Shiller showed markets have predictable long-run patterns driven by psychology (bubbles exist).",
       "explainer": {
         "concept": "Market Efficiency vs. Behavioral Finance",
@@ -188,7 +188,7 @@
       "institution": "Stanford, UCLA",
       "citation": "For the theory of stable allocations and the practice of market design",
       "keyWork": "Gale-Shapley Algorithm, Kidney Exchange Design",
-      "workLink": "https://web.stanford.edu/~alroth/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2012/summary/",
       "summary": "Developed matching algorithms that pair students with schools, residents with hospitals, and organ donors with recipients optimally.",
       "explainer": {
         "concept": "Matching Theory & Market Design",
@@ -203,7 +203,7 @@
       "institution": "NYU, Princeton",
       "citation": "For empirical research on cause and effect in the macroeconomy",
       "keyWork": "Rational Expectations, Vector Autoregression (VAR) models",
-      "workLink": "https://www.tomsargent.com/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2011/summary/",
       "summary": "Developed methods to understand how monetary and fiscal policy affect the economy, accounting for how people adjust their expectations.",
       "explainer": {
         "concept": "Rational Expectations & Macroeconometrics",
@@ -218,7 +218,7 @@
       "institution": "MIT, Northwestern, LSE",
       "citation": "For analysis of markets with search frictions",
       "keyWork": "DMP Model of unemployment",
-      "workLink": "https://econ.duke.edu/people/peter-diamond",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2010/summary/",
       "summary": "Explained why unemployment persists even when jobs are available: matching workers to jobs takes time and effort (search frictions).",
       "explainer": {
         "concept": "Search & Matching Theory",
@@ -233,7 +233,7 @@
       "institution": "Indiana University, UC Berkeley",
       "citation": "For analysis of economic governance",
       "keyWork": "Governing the Commons (Ostrom), Transaction Cost Economics (Williamson)",
-      "workLink": "https://ostromworkshop.indiana.edu/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2009/summary/",
       "summary": "Ostrom showed communities can self-govern common resources without privatization or government. Williamson explained when firms should make vs. buy.",
       "explainer": {
         "concept": "Commons Governance & Transaction Costs",
@@ -248,7 +248,7 @@
       "institution": "Princeton",
       "citation": "For analysis of trade patterns and location of economic activity",
       "keyWork": "New Trade Theory, Economic Geography",
-      "workLink": "https://www.gc.cuny.edu/people/paul-krugman",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2008/summary/",
       "summary": "Explained why similar countries trade with each other (not just for comparative advantage) and why economic activity clusters in cities and regions.",
       "explainer": {
         "concept": "New Trade Theory & Agglomeration",
@@ -263,7 +263,7 @@
       "institution": "Minnesota, Harvard, Chicago",
       "citation": "For having laid the foundations of mechanism design theory",
       "keyWork": "Mechanism Design Theory, Revelation Principle",
-      "workLink": "https://scholar.harvard.edu/maskin",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2007/summary/",
       "summary": "Developed the theory of designing rules and institutions to achieve desired outcomes when participants have private information and self-interest.",
       "explainer": {
         "concept": "Mechanism Design",
@@ -278,7 +278,7 @@
       "institution": "Columbia",
       "citation": "For analysis of intertemporal tradeoffs in macroeconomic policy",
       "keyWork": "Natural Rate of Unemployment, Golden Rule of Capital Accumulation",
-      "workLink": "https://econ.columbia.edu/econpeople/edmund-phelps/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2006/summary/",
       "summary": "Showed that monetary policy can't permanently reduce unemployment below its 'natural rate' without accelerating inflation.",
       "explainer": {
         "concept": "Natural Rate Hypothesis",
@@ -293,7 +293,7 @@
       "institution": "Hebrew University, Maryland",
       "citation": "For enhancing understanding of conflict and cooperation through game theory",
       "keyWork": "Repeated Games theory (Aumann), Strategy of Conflict (Schelling)",
-      "workLink": "https://www.ma.huji.ac.il/~raumann/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2005/summary/",
       "summary": "Aumann showed how repeated interaction enables cooperation. Schelling applied game theory to nuclear deterrence and conflict resolution.",
       "explainer": {
         "concept": "Repeated Games & Strategic Commitment",
@@ -308,7 +308,7 @@
       "institution": "Carnegie Mellon, Arizona State",
       "citation": "For contributions to dynamic macroeconomics",
       "keyWork": "Real Business Cycle Theory, Time Inconsistency",
-      "workLink": "https://www.minneapolisfed.org/people/edward-c-prescott",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2004/summary/",
       "summary": "Showed that business cycles can arise from real productivity shocks (not just monetary factors) and that policy commitment matters.",
       "explainer": {
         "concept": "Time Inconsistency & Real Business Cycles",
@@ -323,7 +323,7 @@
       "institution": "NYU, UC San Diego",
       "citation": "For methods of analyzing economic time series",
       "keyWork": "ARCH/GARCH models (Engle), Cointegration (Granger)",
-      "workLink": "https://vlab.stern.nyu.edu/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2003/summary/",
       "summary": "Engle developed models for time-varying volatility in financial markets. Granger showed how to analyze long-run relationships between non-stationary series.",
       "explainer": {
         "concept": "Volatility Modeling & Cointegration",
@@ -338,7 +338,7 @@
       "institution": "Princeton, George Mason",
       "citation": "For integrating psychology into economics and laboratory experiments",
       "keyWork": "Prospect Theory (Kahneman), Experimental Economics (Smith)",
-      "workLink": "https://scholar.princeton.edu/kahneman",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2002/summary/",
       "summary": "Kahneman showed systematic biases in human judgment. Smith demonstrated that experimental methods could test economic theories.",
       "explainer": {
         "concept": "Prospect Theory & Experimental Economics",
@@ -353,7 +353,7 @@
       "institution": "Berkeley, Stanford, Columbia",
       "citation": "For analyses of markets with asymmetric information",
       "keyWork": "Market for Lemons (Akerlof), Signaling (Spence), Screening (Stiglitz)",
-      "workLink": "https://www.gsb.stanford.edu/faculty-research/faculty/michael-spence",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2001/summary/",
       "summary": "Showed how markets malfunction when one side has more information than the other, and how signals and screening mechanisms can help.",
       "explainer": {
         "concept": "Information Asymmetry",
@@ -368,7 +368,7 @@
       "institution": "Chicago, UC Berkeley",
       "citation": "For developing methods for analyzing individual and household behavior",
       "keyWork": "Heckman Selection Correction, Discrete Choice Models (McFadden)",
-      "workLink": "https://cehd.uchicago.edu/heckman/",
+      "workLink": "https://www.nobelprize.org/prizes/economic-sciences/2000/summary/",
       "summary": "Heckman solved the 'selection bias' problem in data. McFadden developed models for analyzing choices among discrete alternatives.",
       "explainer": {
         "concept": "Selection Bias & Discrete Choice",
