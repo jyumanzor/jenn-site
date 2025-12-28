@@ -160,6 +160,21 @@ export default function ChicagoPage() {
                     </p>
                     <p className="text-xs uppercase tracking-wider" style={{ color: '#546e40' }}>Sept 2026</p>
                   </div>
+                  <div
+                    className="rounded-xl p-4"
+                    style={{ backgroundColor: 'rgba(42,60,36,0.1)' }}
+                  >
+                    <p
+                      className="text-2xl mb-1"
+                      style={{
+                        fontFamily: 'var(--font-instrument), Georgia, serif',
+                        color: '#2a3c24'
+                      }}
+                    >
+                      Hallowed Grounds
+                    </p>
+                    <p className="text-xs uppercase tracking-wider" style={{ color: '#546e40' }}>Fav cafe</p>
+                  </div>
                 </div>
               </div>
             </div>
