@@ -109,7 +109,7 @@ export default function ChicagoPage() {
                 className="text-sm leading-relaxed"
                 style={{ color: 'rgba(42,60,36,0.7)' }}
               >
-                First-generation college graduate. Four years in Hyde Park.
+                QuestBridge full ride. Four years in Hyde Park. Returning for Booth in 2026.
               </p>
             </div>
             <div className="md:col-span-8">
@@ -127,9 +127,9 @@ export default function ChicagoPage() {
                   University of Chicago
                 </h3>
                 <p className="leading-relaxed mb-6" style={{ color: 'rgba(42,60,36,0.8)' }}>
-                  Economics and Public Policy. The place that shaped how I think about problems, data, and rigorous analysis. First in my family to graduate from college.
+                  Sociology and HIPS. Full ride through QuestBridge. The place that shaped how I think about problems, data, and rigorous analysis.
                 </p>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap gap-4">
                   <div
                     className="rounded-xl p-4"
                     style={{ backgroundColor: 'rgba(42,60,36,0.1)' }}
@@ -156,9 +156,9 @@ export default function ChicagoPage() {
                         color: '#2a3c24'
                       }}
                     >
-                      Hyde Park
+                      Booth
                     </p>
-                    <p className="text-xs uppercase tracking-wider" style={{ color: '#546e40' }}>Neighborhood</p>
+                    <p className="text-xs uppercase tracking-wider" style={{ color: '#546e40' }}>Sept 2026</p>
                   </div>
                 </div>
               </div>
