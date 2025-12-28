@@ -406,7 +406,7 @@ export default function RunningPage() {
                                   </svg>
                                   {/* Tooltip */}
                                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-deep-forest text-cream text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-lg">
-                                    Based on {race.time} finish time for women 25-29
+                                    {race.time} in F25-29 division
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-deep-forest"></div>
                                   </div>
                                 </div>
