@@ -1,0 +1,381 @@
+{
+  "title": "Nobel Prize in Economics",
+  "description": "Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel (2000-2024)",
+  "laureates": [
+    {
+      "year": 2024,
+      "names": ["Daron Acemoglu", "Simon Johnson", "James A. Robinson"],
+      "institution": "MIT, MIT, University of Chicago",
+      "citation": "For studies of how institutions are formed and affect prosperity",
+      "keyWork": "Why Nations Fail (2012)",
+      "workLink": "https://economics.mit.edu/people/faculty/daron-acemoglu",
+      "summary": "Demonstrated that inclusive political and economic institutions are the primary driver of long-term prosperity, while extractive institutions lead to poverty.",
+      "explainer": {
+        "concept": "Institutional Economics",
+        "simpleExplanation": "Countries aren't poor because of geography or culture—they're poor because their institutions (laws, property rights, political systems) are designed to extract wealth for elites rather than create broad-based opportunity.",
+        "keyInsight": "Compare North and South Korea: same culture, same geography, vastly different outcomes. The difference is institutions.",
+        "relevance": "Essential for understanding development economics, foreign investment risk, and why some reforms succeed while others fail."
+      }
+    },
+    {
+      "year": 2023,
+      "names": ["Claudia Goldin"],
+      "institution": "Harvard University",
+      "citation": "For having advanced our understanding of women's labour market outcomes",
+      "keyWork": "Career and Family: Women's Century-Long Journey (2021)",
+      "workLink": "https://scholar.harvard.edu/goldin",
+      "summary": "Provided the first comprehensive account of women's earnings and labor market participation over centuries, revealing the causes of the gender gap.",
+      "explainer": {
+        "concept": "Gender Economics & Labor History",
+        "simpleExplanation": "The gender pay gap isn't just about discrimination—it's largely driven by 'greedy jobs' that demand 24/7 availability and disproportionately penalize anyone (usually women) who takes time for caregiving.",
+        "keyInsight": "The gap widened with the first child ('motherhood penalty') and has been shrinking as jobs become more flexible and couples share responsibilities more equally.",
+        "relevance": "Critical for HR policy, labor law, and understanding workforce composition trends."
+      }
+    },
+    {
+      "year": 2022,
+      "names": ["Ben S. Bernanke", "Douglas W. Diamond", "Philip H. Dybvig"],
+      "institution": "Brookings Institution, University of Chicago, Washington University",
+      "citation": "For research on banks and financial crises",
+      "keyWork": "Diamond-Dybvig Model (1983), Bernanke's Great Depression research",
+      "workLink": "https://www.brookings.edu/people/ben-s-bernanke/",
+      "summary": "Explained why banks exist, why they're vulnerable to runs, and how banking failures amplify economic downturns.",
+      "explainer": {
+        "concept": "Bank Runs & Financial Intermediation",
+        "simpleExplanation": "Banks transform short-term deposits into long-term loans. This 'maturity transformation' is valuable but fragile—if everyone tries to withdraw at once, even healthy banks collapse. This is why we have deposit insurance.",
+        "keyInsight": "During the Great Depression, bank failures weren't just symptoms—they were causes of the downturn, destroying the credit system.",
+        "relevance": "Foundational for understanding 2008 crisis responses, stress testing, and banking regulation."
+      }
+    },
+    {
+      "year": 2021,
+      "names": ["David Card", "Joshua D. Angrist", "Guido W. Imbens"],
+      "institution": "UC Berkeley, MIT, Stanford",
+      "citation": "For methodological contributions to the analysis of causal relationships",
+      "keyWork": "Natural Experiments methodology, Minimum Wage studies",
+      "workLink": "https://davidcard.berkeley.edu/",
+      "summary": "Revolutionized how economists use real-world data to answer cause-and-effect questions, showing that minimum wage increases don't necessarily reduce employment.",
+      "explainer": {
+        "concept": "Natural Experiments & Causal Inference",
+        "simpleExplanation": "You can't run controlled experiments on the economy, but sometimes reality creates 'natural experiments'—like when one state raises minimum wage and a neighboring state doesn't. Comparing them reveals causal effects.",
+        "keyInsight": "The famous Card-Krueger study compared fast-food employment in NJ (after min wage hike) vs PA (no change), finding no job losses—overturning conventional wisdom.",
+        "relevance": "This methodology is now standard in policy evaluation, litigation economics, and damages estimation."
+      }
+    },
+    {
+      "year": 2020,
+      "names": ["Paul R. Milgrom", "Robert B. Wilson"],
+      "institution": "Stanford University",
+      "citation": "For improvements to auction theory and inventions of new auction formats",
+      "keyWork": "Spectrum Auction Design for FCC",
+      "workLink": "https://milgrom.stanford.edu/",
+      "summary": "Developed the theory and practical designs for complex auctions, including the simultaneous multiple-round auction used for radio spectrum licenses.",
+      "explainer": {
+        "concept": "Auction Theory & Mechanism Design",
+        "simpleExplanation": "Different auction formats extract different amounts of value and produce different outcomes. The 'winner's curse' (winning means you probably overbid) affects strategy. Understanding bidder behavior helps design auctions that maximize revenue or efficiency.",
+        "keyInsight": "Their spectrum auction design raised $120+ billion for governments while efficiently allocating licenses to companies that valued them most.",
+        "relevance": "Used in FCC spectrum sales, Treasury bond auctions, electricity markets, and M&A competitive bidding."
+      }
+    },
+    {
+      "year": 2019,
+      "names": ["Abhijit Banerjee", "Esther Duflo", "Michael Kremer"],
+      "institution": "MIT, MIT, Harvard",
+      "citation": "For their experimental approach to alleviating global poverty",
+      "keyWork": "Poor Economics (2011), J-PAL field experiments",
+      "workLink": "https://www.povertyactionlab.org/",
+      "summary": "Pioneered the use of randomized controlled trials (RCTs) to test anti-poverty interventions, discovering what actually works vs. what sounds good.",
+      "explainer": {
+        "concept": "Randomized Controlled Trials in Development",
+        "simpleExplanation": "Instead of assuming what helps the poor, actually test it. Randomly assign some villages to get bed nets, microloans, or education subsidies, then measure outcomes vs. control groups.",
+        "keyInsight": "Many beloved interventions failed testing; others succeeded unexpectedly. Deworming kids improved school attendance more than many educational interventions.",
+        "relevance": "This 'evidence-based' approach transformed development economics and influenced billions in aid spending."
+      }
+    },
+    {
+      "year": 2018,
+      "names": ["William D. Nordhaus", "Paul M. Romer"],
+      "institution": "Yale, NYU",
+      "citation": "For integrating climate change/technological innovation into macroeconomic analysis",
+      "keyWork": "DICE Model (climate economics), Endogenous Growth Theory",
+      "workLink": "https://williamnordhaus.com/",
+      "summary": "Nordhaus created models showing how to price carbon emissions; Romer explained how ideas drive economic growth.",
+      "explainer": {
+        "concept": "Climate Economics & Endogenous Growth",
+        "simpleExplanation": "Nordhaus: Carbon emissions have costs (future climate damage). His DICE model calculates the 'social cost of carbon'—how much we should pay per ton to offset damage. Romer: Growth comes from ideas, which are non-rival (your use doesn't diminish mine), creating increasing returns.",
+        "keyInsight": "Nordhaus showed carbon pricing is the most efficient climate solution. Romer showed R&D subsidies can permanently raise growth rates.",
+        "relevance": "Foundational for carbon tax design, climate litigation damages, and innovation policy."
+      }
+    },
+    {
+      "year": 2017,
+      "names": ["Richard H. Thaler"],
+      "institution": "University of Chicago",
+      "citation": "For contributions to behavioural economics",
+      "keyWork": "Nudge (2008), Mental Accounting theory",
+      "workLink": "https://www.chicagobooth.edu/faculty/directory/t/richard-h-thaler",
+      "summary": "Integrated psychology into economics, showing that humans aren't fully rational and that 'nudges' can improve decisions without restricting choice.",
+      "explainer": {
+        "concept": "Behavioral Economics & Nudge Theory",
+        "simpleExplanation": "People have predictable biases: we value $100 lost more than $100 gained (loss aversion), we stick with defaults (status quo bias), we treat money differently based on its 'account' (mental accounting). Knowing these, you can design choice environments that lead to better outcomes.",
+        "keyInsight": "Automatic enrollment in 401(k)s (with opt-out) dramatically increased retirement savings—a 'nudge' that changed behavior without mandates.",
+        "relevance": "Used in policy design, consumer protection, employee benefits, and marketing strategy."
+      }
+    },
+    {
+      "year": 2016,
+      "names": ["Oliver Hart", "Bengt Holmström"],
+      "institution": "Harvard, MIT",
+      "citation": "For contributions to contract theory",
+      "keyWork": "Incomplete Contracts Theory, Principal-Agent Theory",
+      "workLink": "https://scholar.harvard.edu/hart",
+      "summary": "Explained how contracts should be designed when you can't anticipate everything, and how to align incentives between owners and managers.",
+      "explainer": {
+        "concept": "Contract Theory & Incentive Design",
+        "simpleExplanation": "Real contracts can't specify every contingency (they're 'incomplete'). So who should have decision rights when unforeseen issues arise? Usually whoever has more at stake. Also: paying CEOs with stock aligns their interests with shareholders, but creates other problems (short-termism, excessive risk).",
+        "keyInsight": "The theory explains when to outsource vs. keep in-house, how to structure executive pay, and why privatization sometimes fails.",
+        "relevance": "Essential for M&A deal structure, executive compensation design, and public-private partnership contracts."
+      }
+    },
+    {
+      "year": 2015,
+      "names": ["Angus Deaton"],
+      "institution": "Princeton",
+      "citation": "For analysis of consumption, poverty, and welfare",
+      "keyWork": "The Great Escape (2013), Almost Ideal Demand System",
+      "workLink": "https://scholar.princeton.edu/deaton",
+      "summary": "Developed methods to measure poverty and welfare accurately, and documented humanity's dramatic escape from deprivation over centuries.",
+      "explainer": {
+        "concept": "Welfare Measurement & Demand Analysis",
+        "simpleExplanation": "How do you measure if people are better off? Income alone is misleading. Deaton's demand system shows how spending patterns reveal true preferences. His poverty measures account for purchasing power differences across countries.",
+        "keyInsight": "Global extreme poverty fell from 90% in 1800 to under 10% today—the greatest achievement in human history, often overlooked.",
+        "relevance": "Foundation for World Bank poverty metrics, cost-of-living adjustments, and damages calculations using consumption data."
+      }
+    },
+    {
+      "year": 2014,
+      "names": ["Jean Tirole"],
+      "institution": "Toulouse School of Economics",
+      "citation": "For analysis of market power and regulation",
+      "keyWork": "The Theory of Industrial Organization (1988)",
+      "workLink": "https://www.tse-fr.eu/people/jean-tirole",
+      "summary": "Developed tools to understand and regulate industries with few large players, including two-sided markets like platforms.",
+      "explainer": {
+        "concept": "Industrial Organization & Platform Economics",
+        "simpleExplanation": "Industries with high barriers to entry need careful regulation—but one-size-fits-all rules backfire. Tirole showed how optimal regulation varies by industry structure. His 'two-sided market' theory explains platforms: Uber needs both drivers AND riders; pricing to one side affects the other.",
+        "keyInsight": "A platform might rationally charge one side nothing (or pay them) to attract the other side—which looks anti-competitive but may be efficient.",
+        "relevance": "Essential for antitrust in tech, telecom regulation, and understanding gig economy platforms."
+      }
+    },
+    {
+      "year": 2013,
+      "names": ["Eugene F. Fama", "Lars Peter Hansen", "Robert J. Shiller"],
+      "institution": "Chicago, Chicago, Yale",
+      "citation": "For empirical analysis of asset prices",
+      "keyWork": "Efficient Market Hypothesis (Fama), Irrational Exuberance (Shiller)",
+      "workLink": "https://www.chicagobooth.edu/faculty/directory/f/eugene-f-fama",
+      "summary": "Fama showed markets quickly incorporate information (you can't beat the market). Shiller showed markets have predictable long-run patterns driven by psychology (bubbles exist).",
+      "explainer": {
+        "concept": "Market Efficiency vs. Behavioral Finance",
+        "simpleExplanation": "Fama: Stock prices already reflect all available information, so active investing is mostly futile—buy index funds. Shiller: But markets overshoot; high price-to-earnings ratios predict lower future returns. Both are right at different time horizons.",
+        "keyInsight": "Short-term: markets are hard to beat (Fama wins). Long-term: valuation matters and bubbles burst (Shiller wins). Hansen provided the econometric tools to test both.",
+        "relevance": "Foundational for investment strategy, damages calculations in securities litigation, and asset pricing models."
+      }
+    },
+    {
+      "year": 2012,
+      "names": ["Alvin E. Roth", "Lloyd S. Shapley"],
+      "institution": "Stanford, UCLA",
+      "citation": "For the theory of stable allocations and the practice of market design",
+      "keyWork": "Gale-Shapley Algorithm, Kidney Exchange Design",
+      "workLink": "https://web.stanford.edu/~alroth/",
+      "summary": "Developed matching algorithms that pair students with schools, residents with hospitals, and organ donors with recipients optimally.",
+      "explainer": {
+        "concept": "Matching Theory & Market Design",
+        "simpleExplanation": "Some markets can't use prices (you can't buy kidneys or school spots). Instead, we use algorithms that consider preferences on both sides and find 'stable' matches where no pair wants to trade. The hospital-resident match ensures no resident and hospital both prefer each other over their assigned match.",
+        "keyInsight": "Roth's kidney exchange allows incompatible donor-patient pairs to swap, dramatically increasing transplants without buying organs.",
+        "relevance": "Used in medical residency matching, school choice programs, and increasingly in job markets."
+      }
+    },
+    {
+      "year": 2011,
+      "names": ["Thomas J. Sargent", "Christopher A. Sims"],
+      "institution": "NYU, Princeton",
+      "citation": "For empirical research on cause and effect in the macroeconomy",
+      "keyWork": "Rational Expectations, Vector Autoregression (VAR) models",
+      "workLink": "https://www.tomsargent.com/",
+      "summary": "Developed methods to understand how monetary and fiscal policy affect the economy, accounting for how people adjust their expectations.",
+      "explainer": {
+        "concept": "Rational Expectations & Macroeconometrics",
+        "simpleExplanation": "Sargent: People anticipate policy changes, which limits policy effectiveness—if the Fed always inflates away recessions, people expect inflation and raise prices preemptively. Sims: VAR models let us trace how shocks (oil prices, Fed rate changes) ripple through the economy over time.",
+        "keyInsight": "Policy surprises matter more than anticipated policies. Credible commitments change behavior before policies are even implemented.",
+        "relevance": "Foundation for central bank communication strategy, forecasting, and policy simulation."
+      }
+    },
+    {
+      "year": 2010,
+      "names": ["Peter A. Diamond", "Dale T. Mortensen", "Christopher A. Pissarides"],
+      "institution": "MIT, Northwestern, LSE",
+      "citation": "For analysis of markets with search frictions",
+      "keyWork": "DMP Model of unemployment",
+      "workLink": "https://econ.duke.edu/people/peter-diamond",
+      "summary": "Explained why unemployment persists even when jobs are available: matching workers to jobs takes time and effort (search frictions).",
+      "explainer": {
+        "concept": "Search & Matching Theory",
+        "simpleExplanation": "Finding a job isn't instant—you search, apply, interview. Firms also search for candidates. This 'friction' means vacancies and unemployment coexist. The model explains how unemployment benefits, firing costs, and hiring incentives affect labor markets.",
+        "keyInsight": "There's an optimal level of unemployment benefits: too low means desperation and bad matches; too high means extended job search beyond what's efficient.",
+        "relevance": "Used in labor policy analysis, understanding unemployment dynamics, and evaluating job training programs."
+      }
+    },
+    {
+      "year": 2009,
+      "names": ["Elinor Ostrom", "Oliver E. Williamson"],
+      "institution": "Indiana University, UC Berkeley",
+      "citation": "For analysis of economic governance",
+      "keyWork": "Governing the Commons (Ostrom), Transaction Cost Economics (Williamson)",
+      "workLink": "https://ostromworkshop.indiana.edu/",
+      "summary": "Ostrom showed communities can self-govern common resources without privatization or government. Williamson explained when firms should make vs. buy.",
+      "explainer": {
+        "concept": "Commons Governance & Transaction Costs",
+        "simpleExplanation": "Ostrom: The 'tragedy of the commons' isn't inevitable—communities often develop rules to sustainably manage shared resources (fisheries, forests, irrigation). Williamson: Firms exist because market transactions have costs (negotiating, enforcing contracts). Complex, uncertain transactions are better handled in-house.",
+        "keyInsight": "Ostrom (first woman to win) showed that neither pure markets nor government regulation are always best—local governance structures can outperform both.",
+        "relevance": "Critical for environmental policy, make-vs-buy decisions, and understanding why firms vertically integrate."
+      }
+    },
+    {
+      "year": 2008,
+      "names": ["Paul Krugman"],
+      "institution": "Princeton",
+      "citation": "For analysis of trade patterns and location of economic activity",
+      "keyWork": "New Trade Theory, Economic Geography",
+      "workLink": "https://www.gc.cuny.edu/people/paul-krugman",
+      "summary": "Explained why similar countries trade with each other (not just for comparative advantage) and why economic activity clusters in cities and regions.",
+      "explainer": {
+        "concept": "New Trade Theory & Agglomeration",
+        "simpleExplanation": "Classical trade theory says countries trade because they're different (Brazil has coffee, Japan has tech). Krugman showed that even identical countries benefit from trade because specialization + economies of scale + consumer variety preferences create mutual gains. Also explains why industries cluster (Silicon Valley, Hollywood).",
+        "keyInsight": "Trade isn't just about exploiting differences—it's about creating variety and exploiting scale. This justified intra-industry trade (US exports cars, imports cars).",
+        "relevance": "Foundational for trade policy analysis, understanding globalization, and regional economic development."
+      }
+    },
+    {
+      "year": 2007,
+      "names": ["Leonid Hurwicz", "Eric S. Maskin", "Roger B. Myerson"],
+      "institution": "Minnesota, Harvard, Chicago",
+      "citation": "For having laid the foundations of mechanism design theory",
+      "keyWork": "Mechanism Design Theory, Revelation Principle",
+      "workLink": "https://scholar.harvard.edu/maskin",
+      "summary": "Developed the theory of designing rules and institutions to achieve desired outcomes when participants have private information and self-interest.",
+      "explainer": {
+        "concept": "Mechanism Design",
+        "simpleExplanation": "Instead of analyzing existing markets, work backwards: what rules would produce the outcome you want? The 'revelation principle' shows you only need to consider mechanisms where people truthfully report their private information. This helps design auctions, voting systems, and regulations.",
+        "keyInsight": "The theory proves some desirable outcomes are impossible to achieve (Arrow's impossibility theorem extends here) while showing how to get as close as possible.",
+        "relevance": "Used in auction design, regulatory structure, incentive contracts, and voting system analysis."
+      }
+    },
+    {
+      "year": 2006,
+      "names": ["Edmund S. Phelps"],
+      "institution": "Columbia",
+      "citation": "For analysis of intertemporal tradeoffs in macroeconomic policy",
+      "keyWork": "Natural Rate of Unemployment, Golden Rule of Capital Accumulation",
+      "workLink": "https://econ.columbia.edu/econpeople/edmund-phelps/",
+      "summary": "Showed that monetary policy can't permanently reduce unemployment below its 'natural rate' without accelerating inflation.",
+      "explainer": {
+        "concept": "Natural Rate Hypothesis",
+        "simpleExplanation": "There's a level of unemployment determined by labor market structure (matching efficiency, skills, mobility). Policy can temporarily push unemployment below this, but only by accelerating inflation. Eventually, expectations adjust and unemployment returns—but now with higher inflation.",
+        "keyInsight": "The long-run Phillips curve is vertical: there's no permanent trade-off between inflation and unemployment. This ended the belief that we could 'buy' low unemployment with moderate inflation.",
+        "relevance": "Central to understanding Fed policy, inflation targeting, and the costs of disinflation."
+      }
+    },
+    {
+      "year": 2005,
+      "names": ["Robert J. Aumann", "Thomas C. Schelling"],
+      "institution": "Hebrew University, Maryland",
+      "citation": "For enhancing understanding of conflict and cooperation through game theory",
+      "keyWork": "Repeated Games theory (Aumann), Strategy of Conflict (Schelling)",
+      "workLink": "https://www.ma.huji.ac.il/~raumann/",
+      "summary": "Aumann showed how repeated interaction enables cooperation. Schelling applied game theory to nuclear deterrence and conflict resolution.",
+      "explainer": {
+        "concept": "Repeated Games & Strategic Commitment",
+        "simpleExplanation": "Aumann: In one-shot games, cheating pays. But when the game repeats, reputation matters and cooperation becomes self-enforcing—today's cheating brings future punishment. Schelling: Sometimes being irrational (or appearing so) is strategic. 'Burning bridges' (removing your escape option) makes threats credible.",
+        "keyInsight": "Schelling's work influenced Cold War strategy: making nuclear retaliation automatic (MAD) was stabilizing precisely because it removed the option to back down.",
+        "relevance": "Essential for negotiation strategy, competition analysis, and understanding long-term business relationships."
+      }
+    },
+    {
+      "year": 2004,
+      "names": ["Finn E. Kydland", "Edward C. Prescott"],
+      "institution": "Carnegie Mellon, Arizona State",
+      "citation": "For contributions to dynamic macroeconomics",
+      "keyWork": "Real Business Cycle Theory, Time Inconsistency",
+      "workLink": "https://www.minneapolisfed.org/people/edward-c-prescott",
+      "summary": "Showed that business cycles can arise from real productivity shocks (not just monetary factors) and that policy commitment matters.",
+      "explainer": {
+        "concept": "Time Inconsistency & Real Business Cycles",
+        "simpleExplanation": "Time inconsistency: A government may promise low future taxes to encourage investment, but once investment is made, reneging and taxing it is tempting. Rational people anticipate this, so the promise isn't credible. Solution: tie your own hands (independent central banks, constitutional constraints). RBC: Economic fluctuations can be optimal responses to productivity shocks, not market failures requiring intervention.",
+        "keyInsight": "Rules beat discretion. An independent Fed with clear mandates is more credible than politicians making monetary policy.",
+        "relevance": "Foundation for central bank independence, credible commitment in policy, and DSGE modeling."
+      }
+    },
+    {
+      "year": 2003,
+      "names": ["Robert F. Engle", "Clive W.J. Granger"],
+      "institution": "NYU, UC San Diego",
+      "citation": "For methods of analyzing economic time series",
+      "keyWork": "ARCH/GARCH models (Engle), Cointegration (Granger)",
+      "workLink": "https://vlab.stern.nyu.edu/",
+      "summary": "Engle developed models for time-varying volatility in financial markets. Granger showed how to analyze long-run relationships between non-stationary series.",
+      "explainer": {
+        "concept": "Volatility Modeling & Cointegration",
+        "simpleExplanation": "Engle: Market volatility clusters—calm periods follow calm; turbulent periods follow turbulent. GARCH models capture this, improving risk forecasting. Granger: Some economic series (like consumption and income) may wander randomly but move together in the long run. Cointegration tests identify these relationships.",
+        "keyInsight": "GARCH revolutionized risk management: VaR calculations, options pricing, and regulatory capital requirements all use volatility forecasts from GARCH-type models.",
+        "relevance": "Foundational for financial risk modeling, portfolio management, and economic forecasting."
+      }
+    },
+    {
+      "year": 2002,
+      "names": ["Daniel Kahneman", "Vernon L. Smith"],
+      "institution": "Princeton, George Mason",
+      "citation": "For integrating psychology into economics and laboratory experiments",
+      "keyWork": "Prospect Theory (Kahneman), Experimental Economics (Smith)",
+      "workLink": "https://scholar.princeton.edu/kahneman",
+      "summary": "Kahneman showed systematic biases in human judgment. Smith demonstrated that experimental methods could test economic theories.",
+      "explainer": {
+        "concept": "Prospect Theory & Experimental Economics",
+        "simpleExplanation": "Kahneman: People evaluate outcomes relative to a reference point, weight losses more than gains, and overweight small probabilities. This explains insurance buying, gambling, and risk aversion patterns that expected utility can't. Smith: You can run controlled experiments on economic behavior, testing if theories hold in lab markets.",
+        "keyInsight": "The 'endowment effect': people value things more once they own them. This has massive implications for negotiations, policy design, and legal damages.",
+        "relevance": "Foundational for behavioral economics, consumer protection policy, and litigation strategy."
+      }
+    },
+    {
+      "year": 2001,
+      "names": ["George A. Akerlof", "A. Michael Spence", "Joseph E. Stiglitz"],
+      "institution": "Berkeley, Stanford, Columbia",
+      "citation": "For analyses of markets with asymmetric information",
+      "keyWork": "Market for Lemons (Akerlof), Signaling (Spence), Screening (Stiglitz)",
+      "workLink": "https://www.gsb.stanford.edu/faculty-research/faculty/michael-spence",
+      "summary": "Showed how markets malfunction when one side has more information than the other, and how signals and screening mechanisms can help.",
+      "explainer": {
+        "concept": "Information Asymmetry",
+        "simpleExplanation": "Akerlof: If buyers can't tell good used cars from 'lemons,' they offer low prices, driving good cars out—market collapses. Spence: Education may be valuable mainly as a 'signal' of ability, not for what's learned. Stiglitz: Insurance companies use deductibles to screen risk types (high deductible = low risk self-selects in).",
+        "keyInsight": "Information asymmetry explains why some markets fail or don't exist, why we have warranties and credentials, and why insurance markets have deductibles.",
+        "relevance": "Essential for understanding M&A due diligence, insurance markets, labor economics, and disclosure requirements."
+      }
+    },
+    {
+      "year": 2000,
+      "names": ["James J. Heckman", "Daniel L. McFadden"],
+      "institution": "Chicago, UC Berkeley",
+      "citation": "For developing methods for analyzing individual and household behavior",
+      "keyWork": "Heckman Selection Correction, Discrete Choice Models (McFadden)",
+      "workLink": "https://cehd.uchicago.edu/heckman/",
+      "summary": "Heckman solved the 'selection bias' problem in data. McFadden developed models for analyzing choices among discrete alternatives.",
+      "explainer": {
+        "concept": "Selection Bias & Discrete Choice",
+        "simpleExplanation": "Heckman: Observing only workers' wages ignores non-workers—but non-workers aren't random. This 'selection' biases estimates of wage determinants. His correction is now standard. McFadden: When people choose among options (which car to buy, which transit to take), his models predict choices based on attributes—revolutionizing demand forecasting.",
+        "keyInsight": "McFadden's work predicted BART ridership in San Francisco before it was built—and got it right. The model is now used for new product demand, transportation planning, and conjoint analysis.",
+        "relevance": "Heckman correction is standard in damages estimation. Discrete choice models are used in marketing, antitrust, and transportation economics."
+      }
+    }
+  ]
+}

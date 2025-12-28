@@ -19,6 +19,34 @@ export default function WatchingPage() {
   const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
   const [expandedPlaylist, setExpandedPlaylist] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedMusicGenre, setSelectedMusicGenre] = useState<string>("all");
+
+  // Build unique music genres from all tracks across playlists
+  const allTracks = useMemo(() => {
+    const tracks: (Track & { playlistTitle: string })[] = [];
+    watching.playlists.forEach((playlist: Playlist) => {
+      const playlistTracks = (playlist as Playlist & { tracks?: Track[] }).tracks || [];
+      playlistTracks.forEach((track: Track) => {
+        tracks.push({ ...track, playlistTitle: playlist.title });
+      });
+    });
+    return tracks;
+  }, []);
+
+  const uniqueMusicGenres = useMemo(() => {
+    const genres = new Set<string>();
+    allTracks.forEach((track) => {
+      if (track.genre) genres.add(track.genre);
+    });
+    return Array.from(genres).sort();
+  }, [allTracks]);
+
+  const filteredTracks = useMemo(() => {
+    if (selectedMusicGenre === "all") return [];
+    return allTracks.filter((track) =>
+      track.genre?.toLowerCase() === selectedMusicGenre.toLowerCase()
+    );
+  }, [allTracks, selectedMusicGenre]);
 
   // Build unique genres and directors from actual data
   const uniqueGenres = useMemo(() => {
@@ -84,6 +112,43 @@ export default function WatchingPage() {
             >
               What I watch, read, and listen to.
             </p>
+
+            {/* Archive Links */}
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Link
+                href="/watching/oscars"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all"
+                style={{ backgroundColor: '#ffcb69', color: '#2a3c24' }}
+              >
+                <span>🏆</span>
+                <span>Explore Oscar Nominees</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/watching/pulitzers"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all"
+                style={{ backgroundColor: '#cbad8c', color: '#2a3c24' }}
+              >
+                <span>📚</span>
+                <span>Explore Pulitzer Winners</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/watching/misc"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all"
+                style={{ backgroundColor: '#97a97c', color: '#2a3c24' }}
+              >
+                <span>📊</span>
+                <span>Miscellaneous Archives</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -425,12 +490,116 @@ export default function WatchingPage() {
 
           {activeTab === "music" && (
             <div className="space-y-6">
-              {/* Stats bar */}
-              <div className="flex flex-wrap gap-3 mb-8">
+              {/* Stats bar and Genre Filter */}
+              <div className="flex flex-wrap gap-3 mb-8 items-center justify-between">
                 <span className="text-sm" style={{ color: 'rgba(42,60,36,0.6)' }}>
                   {watching.playlists.length} vibes · {watching.playlists.reduce((acc: number, p: Playlist) => acc + p.trackCount, 0).toLocaleString()} tracks
                 </span>
+
+                <div className="flex items-center gap-2">
+                  <span className="text-xs" style={{ color: 'rgba(42,60,36,0.5)' }}>Filter by genre:</span>
+                  <select
+                    value={selectedMusicGenre}
+                    onChange={(e) => setSelectedMusicGenre(e.target.value)}
+                    className="px-3 py-1.5 bg-white rounded-full text-xs border border-sand focus:outline-none focus:border-olive"
+                  >
+                    <option value="all">All Genres</option>
+                    {uniqueMusicGenres.map((g: string) => (
+                      <option key={g} value={g}>{g}</option>
+                    ))}
+                  </select>
+                  {selectedMusicGenre !== "all" && (
+                    <button
+                      onClick={() => setSelectedMusicGenre("all")}
+                      className="text-xs text-olive hover:text-deep-forest transition-colors underline"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
               </div>
+
+              {/* Filtered Tracks View (when genre selected) */}
+              {selectedMusicGenre !== "all" && (
+                <div className="mb-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3
+                      className="text-xl"
+                      style={{
+                        fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                        color: '#2a3c24'
+                      }}
+                    >
+                      {selectedMusicGenre} tracks
+                    </h3>
+                    <span className="text-sm" style={{ color: 'rgba(42,60,36,0.6)' }}>
+                      {filteredTracks.length} tracks found
+                    </span>
+                  </div>
+                  <div className="bg-white rounded-xl border border-sand/30 overflow-hidden max-h-[500px] overflow-y-auto">
+                    <div className="divide-y divide-sand/20">
+                      {filteredTracks.map((track, idx) => {
+                        const genreColors: Record<string, { bg: string; text: string }> = {
+                          'house': { bg: '#d4ed39', text: '#2a3c24' },
+                          'disco': { bg: '#ffcb69', text: '#2a3c24' },
+                          'electronic': { bg: '#c5a95b', text: '#2a3c24' },
+                          'techno': { bg: '#546e40', text: '#fff5eb' },
+                          'hip-hop': { bg: '#5a6c4b', text: '#fff5eb' },
+                          'rap': { bg: '#425438', text: '#fff5eb' },
+                          'r&b': { bg: '#73855f', text: '#fff5eb' },
+                          'soul': { bg: '#8b9d72', text: '#2a3c24' },
+                          'indie': { bg: '#97a97c', text: '#2a3c24' },
+                          'alternative': { bg: '#7f9168', text: '#fff5eb' },
+                          'rock': { bg: '#657043', text: '#fff5eb' },
+                          'pop': { bg: '#ffeac4', text: '#2a3c24' },
+                          'jazz': { bg: '#cbad8c', text: '#2a3c24' },
+                          'classical': { bg: '#f7e5da', text: '#2a3c24' },
+                          'ambient': { bg: '#ffe5b0', text: '#2a3c24' },
+                          'folk': { bg: '#b29e56', text: '#2a3c24' },
+                          'country': { bg: '#9f9251', text: '#2a3c24' },
+                          'latin': { bg: '#ecc064', text: '#2a3c24' },
+                          'reggaeton': { bg: '#fabf34', text: '#2a3c24' },
+                          'default': { bg: '#efe4d6', text: '#3b412d' }
+                        };
+                        const genre = track.genre?.toLowerCase() || '';
+                        const genreColor = Object.entries(genreColors).find(([key]) =>
+                          genre.includes(key)
+                        )?.[1] || genreColors.default;
+
+                        return (
+                          <div
+                            key={`filtered-${track.artist}-${track.track}-${idx}`}
+                            className="px-5 py-3 hover:bg-sand/10 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <span className="text-[10px] text-olive/40 w-5 flex-shrink-0 text-right">
+                                {idx + 1}
+                              </span>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm text-deep-forest truncate leading-tight">
+                                  {track.track}
+                                </p>
+                                <p className="text-[11px] text-olive/60 truncate">
+                                  {track.artist}
+                                </p>
+                              </div>
+                              <span
+                                className="text-[9px] px-2 py-0.5 rounded-full flex-shrink-0 font-medium"
+                                style={{ backgroundColor: genreColor.bg, color: genreColor.text }}
+                              >
+                                {track.genre}
+                              </span>
+                              <span className="text-[9px] px-2 py-0.5 rounded-full bg-sand/30 text-olive/70 flex-shrink-0">
+                                {track.playlistTitle}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Vibe playlists */}
               <div className="space-y-4">

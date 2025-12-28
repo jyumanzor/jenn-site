@@ -243,6 +243,16 @@ export default function RunningPage() {
               <p className="dark-bg-body text-sm leading-relaxed">
                 Pfitzinger 18/70 plan. Click any day to adjust run type. Miles and paces update automatically.
               </p>
+              <Link
+                href="/running/training"
+                className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full text-sm font-medium transition-all"
+                style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}
+              >
+                <span>View Training Dashboard</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
             <div className="md:col-span-8">
               <RunningSchedule />

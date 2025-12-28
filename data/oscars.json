@@ -1,0 +1,3790 @@
+{
+  "title": "Oscar Nominees",
+  "description": "Academy Award nominees and winners (2015-2025)",
+  "categories": [
+    "Best Picture",
+    "Best Director",
+    "Best Actor",
+    "Best Actress",
+    "Best Animated Feature",
+    "Best International Feature",
+    "Best Cinematography",
+    "Best Production Design",
+    "Best Original Score"
+  ],
+  "nominees": [
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Anora",
+      "credits": "Sean Baker",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "The Brutalist",
+      "credits": "Brady Corbet",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "A Complete Unknown",
+      "credits": "James Mangold",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Conclave",
+      "credits": "Edward Berger",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Dune: Part Two",
+      "credits": "Denis Villeneuve",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Emilia Pérez",
+      "credits": "Jacques Audiard",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "I'm Still Here",
+      "credits": "Walter Salles",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Nickel Boys",
+      "credits": "RaMell Ross",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "The Substance",
+      "credits": "Coralie Fargeat",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Picture",
+      "title": "Wicked",
+      "credits": "Jon M. Chu",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Director",
+      "title": "Anora",
+      "credits": "Sean Baker",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Director",
+      "title": "The Brutalist",
+      "credits": "Brady Corbet",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Director",
+      "title": "A Complete Unknown",
+      "credits": "James Mangold",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Director",
+      "title": "Emilia Pérez",
+      "credits": "Jacques Audiard",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Director",
+      "title": "The Substance",
+      "credits": "Coralie Fargeat",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actor",
+      "title": "The Brutalist",
+      "credits": "Adrien Brody",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Actor",
+      "title": "A Complete Unknown",
+      "credits": "Timothée Chalamet",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actor",
+      "title": "Sing Sing",
+      "credits": "Colman Domingo",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actor",
+      "title": "The Apprentice",
+      "credits": "Sebastian Stan",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actor",
+      "title": "A Real Pain",
+      "credits": "Ralph Fiennes",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actress",
+      "title": "Anora",
+      "credits": "Mikey Madison",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Actress",
+      "title": "Wicked",
+      "credits": "Cynthia Erivo",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actress",
+      "title": "Emilia Pérez",
+      "credits": "Karla Sofía Gascón",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actress",
+      "title": "I'm Still Here",
+      "credits": "Fernanda Torres",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Actress",
+      "title": "The Substance",
+      "credits": "Demi Moore",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Animated Feature",
+      "title": "Flow",
+      "credits": "Gints Zilbalodis",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Animated Feature",
+      "title": "Inside Out 2",
+      "credits": "Kelsey Mann",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Animated Feature",
+      "title": "Memoir of a Snail",
+      "credits": "Adam Elliot",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Animated Feature",
+      "title": "Wallace & Gromit: Vengeance Most Fowl",
+      "credits": "Nick Park",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Animated Feature",
+      "title": "The Wild Robot",
+      "credits": "Chris Sanders",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best International Feature",
+      "title": "I'm Still Here",
+      "credits": "Brazil",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best International Feature",
+      "title": "The Girl with the Needle",
+      "credits": "Denmark",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best International Feature",
+      "title": "Emilia Pérez",
+      "credits": "France",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best International Feature",
+      "title": "The Seed of the Sacred Fig",
+      "credits": "Germany",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best International Feature",
+      "title": "Flow",
+      "credits": "Latvia",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Cinematography",
+      "title": "The Brutalist",
+      "credits": "Lol Crawley",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Cinematography",
+      "title": "Dune: Part Two",
+      "credits": "Greig Fraser",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Cinematography",
+      "title": "Emilia Pérez",
+      "credits": "Paul Guilhaume",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Cinematography",
+      "title": "Maria",
+      "credits": "Ed Lachman",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Cinematography",
+      "title": "Nosferatu",
+      "credits": "Jarin Blaschke",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Production Design",
+      "title": "The Brutalist",
+      "credits": "Judy Becker",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Production Design",
+      "title": "Conclave",
+      "credits": "Suzie Davies",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Production Design",
+      "title": "Dune: Part Two",
+      "credits": "Patrice Vermette",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Production Design",
+      "title": "Nosferatu",
+      "credits": "Craig Lathrop",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Production Design",
+      "title": "Wicked",
+      "credits": "Nathan Crowley",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Original Score",
+      "title": "The Brutalist",
+      "credits": "Daniel Blumberg",
+      "winner": true
+    },
+    {
+      "year": 2025,
+      "category": "Best Original Score",
+      "title": "Conclave",
+      "credits": "Volker Bertelmann",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Original Score",
+      "title": "Emilia Pérez",
+      "credits": "Clément Ducol, Camille",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Original Score",
+      "title": "Wicked",
+      "credits": "John Powell, Stephen Schwartz",
+      "winner": false
+    },
+    {
+      "year": 2025,
+      "category": "Best Original Score",
+      "title": "The Wild Robot",
+      "credits": "Kris Bowers",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Oppenheimer",
+      "credits": "Christopher Nolan",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "American Fiction",
+      "credits": "Cord Jefferson",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Anatomy of a Fall",
+      "credits": "Justine Triet",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Barbie",
+      "credits": "Greta Gerwig",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "The Holdovers",
+      "credits": "Alexander Payne",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Killers of the Flower Moon",
+      "credits": "Martin Scorsese",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Maestro",
+      "credits": "Bradley Cooper",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Past Lives",
+      "credits": "Celine Song",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "Poor Things",
+      "credits": "Yorgos Lanthimos",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Picture",
+      "title": "The Zone of Interest",
+      "credits": "Jonathan Glazer",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Director",
+      "title": "Oppenheimer",
+      "credits": "Christopher Nolan",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Director",
+      "title": "Anatomy of a Fall",
+      "credits": "Justine Triet",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Director",
+      "title": "Killers of the Flower Moon",
+      "credits": "Martin Scorsese",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Director",
+      "title": "Poor Things",
+      "credits": "Yorgos Lanthimos",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Director",
+      "title": "The Zone of Interest",
+      "credits": "Jonathan Glazer",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actor",
+      "title": "Oppenheimer",
+      "credits": "Cillian Murphy",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Actor",
+      "title": "Maestro",
+      "credits": "Bradley Cooper",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actor",
+      "title": "Rustin",
+      "credits": "Colman Domingo",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actor",
+      "title": "The Holdovers",
+      "credits": "Paul Giamatti",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actor",
+      "title": "American Fiction",
+      "credits": "Jeffrey Wright",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actress",
+      "title": "Poor Things",
+      "credits": "Emma Stone",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Actress",
+      "title": "Nyad",
+      "credits": "Annette Bening",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actress",
+      "title": "Maestro",
+      "credits": "Carey Mulligan",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actress",
+      "title": "Killers of the Flower Moon",
+      "credits": "Lily Gladstone",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Actress",
+      "title": "Anatomy of a Fall",
+      "credits": "Sandra Hüller",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Animated Feature",
+      "title": "The Boy and the Heron",
+      "credits": "Hayao Miyazaki",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Animated Feature",
+      "title": "Elemental",
+      "credits": "Peter Sohn",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Animated Feature",
+      "title": "Nimona",
+      "credits": "Nick Bruno, Troy Quane",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Animated Feature",
+      "title": "Robot Dreams",
+      "credits": "Pablo Berger",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Animated Feature",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "credits": "Joaquim Dos Santos",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best International Feature",
+      "title": "The Zone of Interest",
+      "credits": "United Kingdom",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best International Feature",
+      "title": "Io Capitano",
+      "credits": "Italy",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best International Feature",
+      "title": "Perfect Days",
+      "credits": "Japan",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best International Feature",
+      "title": "Society of the Snow",
+      "credits": "Spain",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best International Feature",
+      "title": "The Teachers' Lounge",
+      "credits": "Germany",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Cinematography",
+      "title": "Oppenheimer",
+      "credits": "Hoyte van Hoytema",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Cinematography",
+      "title": "El Conde",
+      "credits": "Edward Lachman",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Cinematography",
+      "title": "Killers of the Flower Moon",
+      "credits": "Rodrigo Prieto",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Cinematography",
+      "title": "Maestro",
+      "credits": "Matthew Libatique",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Cinematography",
+      "title": "Poor Things",
+      "credits": "Robbie Ryan",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Production Design",
+      "title": "Poor Things",
+      "credits": "James Price, Shona Heath",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Production Design",
+      "title": "Barbie",
+      "credits": "Sarah Greenwood",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Production Design",
+      "title": "Killers of the Flower Moon",
+      "credits": "Jack Fisk",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Production Design",
+      "title": "Napoleon",
+      "credits": "Arthur Max",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Production Design",
+      "title": "Oppenheimer",
+      "credits": "Ruth De Jong",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Original Score",
+      "title": "Oppenheimer",
+      "credits": "Ludwig Göransson",
+      "winner": true
+    },
+    {
+      "year": 2024,
+      "category": "Best Original Score",
+      "title": "American Fiction",
+      "credits": "Laura Karpman",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Original Score",
+      "title": "Indiana Jones and the Dial of Destiny",
+      "credits": "John Williams",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Original Score",
+      "title": "Killers of the Flower Moon",
+      "credits": "Robbie Robertson",
+      "winner": false
+    },
+    {
+      "year": 2024,
+      "category": "Best Original Score",
+      "title": "Poor Things",
+      "credits": "Jerskin Fendrix",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Everything Everywhere All at Once",
+      "credits": "Daniel Kwan, Daniel Scheinert",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "All Quiet on the Western Front",
+      "credits": "Edward Berger",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Avatar: The Way of Water",
+      "credits": "James Cameron",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "The Banshees of Inisherin",
+      "credits": "Martin McDonagh",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Elvis",
+      "credits": "Baz Luhrmann",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "The Fabelmans",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Tár",
+      "credits": "Todd Field",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Top Gun: Maverick",
+      "credits": "Joseph Kosinski",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Triangle of Sadness",
+      "credits": "Ruben Östlund",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Picture",
+      "title": "Women Talking",
+      "credits": "Sarah Polley",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Director",
+      "title": "Everything Everywhere All at Once",
+      "credits": "Daniel Kwan, Daniel Scheinert",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Director",
+      "title": "The Banshees of Inisherin",
+      "credits": "Martin McDonagh",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Director",
+      "title": "The Fabelmans",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Director",
+      "title": "Tár",
+      "credits": "Todd Field",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Director",
+      "title": "Triangle of Sadness",
+      "credits": "Ruben Östlund",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actor",
+      "title": "The Whale",
+      "credits": "Brendan Fraser",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Actor",
+      "title": "Elvis",
+      "credits": "Austin Butler",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actor",
+      "title": "The Banshees of Inisherin",
+      "credits": "Colin Farrell",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actor",
+      "title": "Living",
+      "credits": "Bill Nighy",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actor",
+      "title": "The Fabelmans",
+      "credits": "Paul Mescal",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actress",
+      "title": "Everything Everywhere All at Once",
+      "credits": "Michelle Yeoh",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Actress",
+      "title": "Tár",
+      "credits": "Cate Blanchett",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actress",
+      "title": "To Leslie",
+      "credits": "Andrea Riseborough",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actress",
+      "title": "Women Talking",
+      "credits": "Michelle Williams",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Actress",
+      "title": "The Fabelmans",
+      "credits": "Ana de Armas",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Animated Feature",
+      "title": "Guillermo del Toro's Pinocchio",
+      "credits": "Guillermo del Toro",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Animated Feature",
+      "title": "Marcel the Shell with Shoes On",
+      "credits": "Dean Fleischer Camp",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Animated Feature",
+      "title": "Puss in Boots: The Last Wish",
+      "credits": "Joel Crawford",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Animated Feature",
+      "title": "The Sea Beast",
+      "credits": "Chris Williams",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Animated Feature",
+      "title": "Turning Red",
+      "credits": "Domee Shi",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best International Feature",
+      "title": "All Quiet on the Western Front",
+      "credits": "Germany",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best International Feature",
+      "title": "Argentina, 1985",
+      "credits": "Argentina",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best International Feature",
+      "title": "Close",
+      "credits": "Belgium",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best International Feature",
+      "title": "EO",
+      "credits": "Poland",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best International Feature",
+      "title": "The Quiet Girl",
+      "credits": "Ireland",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Cinematography",
+      "title": "All Quiet on the Western Front",
+      "credits": "James Friend",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Cinematography",
+      "title": "Bardo",
+      "credits": "Darius Khondji",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Cinematography",
+      "title": "Elvis",
+      "credits": "Mandy Walker",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Cinematography",
+      "title": "Empire of Light",
+      "credits": "Roger Deakins",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Cinematography",
+      "title": "Tár",
+      "credits": "Florian Hoffmeister",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Production Design",
+      "title": "All Quiet on the Western Front",
+      "credits": "Christian M. Goldbeck",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Production Design",
+      "title": "Avatar: The Way of Water",
+      "credits": "Dylan Cole, Ben Procter",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Production Design",
+      "title": "Babylon",
+      "credits": "Florencia Martin",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Production Design",
+      "title": "Elvis",
+      "credits": "Catherine Martin",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Production Design",
+      "title": "The Fabelmans",
+      "credits": "Rick Carter",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Original Score",
+      "title": "All Quiet on the Western Front",
+      "credits": "Volker Bertelmann",
+      "winner": true
+    },
+    {
+      "year": 2023,
+      "category": "Best Original Score",
+      "title": "Babylon",
+      "credits": "Justin Hurwitz",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Original Score",
+      "title": "The Banshees of Inisherin",
+      "credits": "Carter Burwell",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Original Score",
+      "title": "Everything Everywhere All at Once",
+      "credits": "Son Lux",
+      "winner": false
+    },
+    {
+      "year": 2023,
+      "category": "Best Original Score",
+      "title": "The Fabelmans",
+      "credits": "John Williams",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "CODA",
+      "credits": "Sian Heder",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Belfast",
+      "credits": "Kenneth Branagh",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Don't Look Up",
+      "credits": "Adam McKay",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Drive My Car",
+      "credits": "Ryusuke Hamaguchi",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Dune",
+      "credits": "Denis Villeneuve",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "King Richard",
+      "credits": "Reinaldo Marcus Green",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Licorice Pizza",
+      "credits": "Paul Thomas Anderson",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "Nightmare Alley",
+      "credits": "Guillermo del Toro",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "The Power of the Dog",
+      "credits": "Jane Campion",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Picture",
+      "title": "West Side Story",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Director",
+      "title": "The Power of the Dog",
+      "credits": "Jane Campion",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Director",
+      "title": "Belfast",
+      "credits": "Kenneth Branagh",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Director",
+      "title": "Drive My Car",
+      "credits": "Ryusuke Hamaguchi",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Director",
+      "title": "Licorice Pizza",
+      "credits": "Paul Thomas Anderson",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Director",
+      "title": "West Side Story",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actor",
+      "title": "King Richard",
+      "credits": "Will Smith",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Actor",
+      "title": "Being the Ricardos",
+      "credits": "Javier Bardem",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actor",
+      "title": "The Power of the Dog",
+      "credits": "Benedict Cumberbatch",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actor",
+      "title": "tick, tick... BOOM!",
+      "credits": "Andrew Garfield",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actor",
+      "title": "The Tragedy of Macbeth",
+      "credits": "Denzel Washington",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actress",
+      "title": "The Eyes of Tammy Faye",
+      "credits": "Jessica Chastain",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Actress",
+      "title": "Being the Ricardos",
+      "credits": "Nicole Kidman",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actress",
+      "title": "Spencer",
+      "credits": "Kristen Stewart",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actress",
+      "title": "The Lost Daughter",
+      "credits": "Olivia Colman",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Actress",
+      "title": "Parallel Mothers",
+      "credits": "Penélope Cruz",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Animated Feature",
+      "title": "Encanto",
+      "credits": "Jared Bush, Byron Howard",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Animated Feature",
+      "title": "Flee",
+      "credits": "Jonas Poher Rasmussen",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Animated Feature",
+      "title": "Luca",
+      "credits": "Enrico Casarosa",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Animated Feature",
+      "title": "The Mitchells vs. the Machines",
+      "credits": "Mike Rianda",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Animated Feature",
+      "title": "Raya and the Last Dragon",
+      "credits": "Don Hall, Carlos López Estrada",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best International Feature",
+      "title": "Drive My Car",
+      "credits": "Japan",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best International Feature",
+      "title": "Flee",
+      "credits": "Denmark",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best International Feature",
+      "title": "The Hand of God",
+      "credits": "Italy",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best International Feature",
+      "title": "Lunana: A Yak in the Classroom",
+      "credits": "Bhutan",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best International Feature",
+      "title": "The Worst Person in the World",
+      "credits": "Norway",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Cinematography",
+      "title": "Dune",
+      "credits": "Greig Fraser",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Cinematography",
+      "title": "Nightmare Alley",
+      "credits": "Dan Laustsen",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Cinematography",
+      "title": "The Power of the Dog",
+      "credits": "Ari Wegner",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Cinematography",
+      "title": "The Tragedy of Macbeth",
+      "credits": "Bruno Delbonnel",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Cinematography",
+      "title": "West Side Story",
+      "credits": "Janusz Kaminski",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Production Design",
+      "title": "Dune",
+      "credits": "Patrice Vermette",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Production Design",
+      "title": "Nightmare Alley",
+      "credits": "Tamara Deverell",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Production Design",
+      "title": "The Power of the Dog",
+      "credits": "Grant Major",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Production Design",
+      "title": "The Tragedy of Macbeth",
+      "credits": "Stefan Dechant",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Production Design",
+      "title": "West Side Story",
+      "credits": "Adam Stockhausen",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Original Score",
+      "title": "Dune",
+      "credits": "Hans Zimmer",
+      "winner": true
+    },
+    {
+      "year": 2022,
+      "category": "Best Original Score",
+      "title": "Don't Look Up",
+      "credits": "Nicholas Britell",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Original Score",
+      "title": "Encanto",
+      "credits": "Germaine Franco",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Original Score",
+      "title": "Parallel Mothers",
+      "credits": "Alberto Iglesias",
+      "winner": false
+    },
+    {
+      "year": 2022,
+      "category": "Best Original Score",
+      "title": "The Power of the Dog",
+      "credits": "Jonny Greenwood",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Nomadland",
+      "credits": "Chloé Zhao",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "The Father",
+      "credits": "Florian Zeller",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Judas and the Black Messiah",
+      "credits": "Shaka King",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Mank",
+      "credits": "David Fincher",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Minari",
+      "credits": "Lee Isaac Chung",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Promising Young Woman",
+      "credits": "Emerald Fennell",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "Sound of Metal",
+      "credits": "Darius Marder",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Picture",
+      "title": "The Trial of the Chicago 7",
+      "credits": "Aaron Sorkin",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Director",
+      "title": "Nomadland",
+      "credits": "Chloé Zhao",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Director",
+      "title": "Another Round",
+      "credits": "Thomas Vinterberg",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Director",
+      "title": "Mank",
+      "credits": "David Fincher",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Director",
+      "title": "Minari",
+      "credits": "Lee Isaac Chung",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Director",
+      "title": "Promising Young Woman",
+      "credits": "Emerald Fennell",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actor",
+      "title": "The Father",
+      "credits": "Anthony Hopkins",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Actor",
+      "title": "Sound of Metal",
+      "credits": "Riz Ahmed",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actor",
+      "title": "Ma Rainey's Black Bottom",
+      "credits": "Chadwick Boseman",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actor",
+      "title": "Mank",
+      "credits": "Gary Oldman",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actor",
+      "title": "Minari",
+      "credits": "Steven Yeun",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actress",
+      "title": "Nomadland",
+      "credits": "Frances McDormand",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Actress",
+      "title": "Ma Rainey's Black Bottom",
+      "credits": "Viola Davis",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actress",
+      "title": "Promising Young Woman",
+      "credits": "Carey Mulligan",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actress",
+      "title": "The United States vs. Billie Holiday",
+      "credits": "Andra Day",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Actress",
+      "title": "Pieces of a Woman",
+      "credits": "Vanessa Kirby",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Animated Feature",
+      "title": "Soul",
+      "credits": "Pete Docter",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Animated Feature",
+      "title": "Onward",
+      "credits": "Dan Scanlon",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Animated Feature",
+      "title": "Over the Moon",
+      "credits": "Glen Keane",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Animated Feature",
+      "title": "A Shaun the Sheep Movie: Farmageddon",
+      "credits": "Will Becher, Richard Phelan",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Animated Feature",
+      "title": "Wolfwalkers",
+      "credits": "Tomm Moore, Ross Stewart",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best International Feature",
+      "title": "Another Round",
+      "credits": "Denmark",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best International Feature",
+      "title": "Better Days",
+      "credits": "Hong Kong",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best International Feature",
+      "title": "Collective",
+      "credits": "Romania",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best International Feature",
+      "title": "The Man Who Sold His Skin",
+      "credits": "Tunisia",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best International Feature",
+      "title": "Quo Vadis, Aida?",
+      "credits": "Bosnia and Herzegovina",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Cinematography",
+      "title": "Mank",
+      "credits": "Erik Messerschmidt",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Cinematography",
+      "title": "Judas and the Black Messiah",
+      "credits": "Sean Bobbitt",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Cinematography",
+      "title": "News of the World",
+      "credits": "Dariusz Wolski",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Cinematography",
+      "title": "Nomadland",
+      "credits": "Joshua James Richards",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Cinematography",
+      "title": "The Trial of the Chicago 7",
+      "credits": "Phedon Papamichael",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Production Design",
+      "title": "Mank",
+      "credits": "Donald Graham Burt",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Production Design",
+      "title": "The Father",
+      "credits": "Peter Francis",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Production Design",
+      "title": "Ma Rainey's Black Bottom",
+      "credits": "Mark Ricker",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Production Design",
+      "title": "News of the World",
+      "credits": "David Crank",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Production Design",
+      "title": "Tenet",
+      "credits": "Nathan Crowley",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Original Score",
+      "title": "Soul",
+      "credits": "Trent Reznor, Atticus Ross, Jon Batiste",
+      "winner": true
+    },
+    {
+      "year": 2021,
+      "category": "Best Original Score",
+      "title": "Da 5 Bloods",
+      "credits": "Terence Blanchard",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Original Score",
+      "title": "Mank",
+      "credits": "Trent Reznor, Atticus Ross",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Original Score",
+      "title": "Minari",
+      "credits": "Emile Mosseri",
+      "winner": false
+    },
+    {
+      "year": 2021,
+      "category": "Best Original Score",
+      "title": "News of the World",
+      "credits": "James Newton Howard",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Parasite",
+      "credits": "Bong Joon-ho",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Ford v Ferrari",
+      "credits": "James Mangold",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "The Irishman",
+      "credits": "Martin Scorsese",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Jojo Rabbit",
+      "credits": "Taika Waititi",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Joker",
+      "credits": "Todd Phillips",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Little Women",
+      "credits": "Greta Gerwig",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Marriage Story",
+      "credits": "Noah Baumbach",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "1917",
+      "credits": "Sam Mendes",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Picture",
+      "title": "Once Upon a Time in Hollywood",
+      "credits": "Quentin Tarantino",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Director",
+      "title": "Parasite",
+      "credits": "Bong Joon-ho",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Director",
+      "title": "The Irishman",
+      "credits": "Martin Scorsese",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Director",
+      "title": "Joker",
+      "credits": "Todd Phillips",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Director",
+      "title": "1917",
+      "credits": "Sam Mendes",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Director",
+      "title": "Once Upon a Time in Hollywood",
+      "credits": "Quentin Tarantino",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actor",
+      "title": "Joker",
+      "credits": "Joaquin Phoenix",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Actor",
+      "title": "Marriage Story",
+      "credits": "Adam Driver",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actor",
+      "title": "Once Upon a Time in Hollywood",
+      "credits": "Leonardo DiCaprio",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actor",
+      "title": "The Two Popes",
+      "credits": "Jonathan Pryce",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actor",
+      "title": "Pain and Glory",
+      "credits": "Antonio Banderas",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actress",
+      "title": "Judy",
+      "credits": "Renée Zellweger",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Actress",
+      "title": "Marriage Story",
+      "credits": "Scarlett Johansson",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actress",
+      "title": "Little Women",
+      "credits": "Saoirse Ronan",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actress",
+      "title": "Bombshell",
+      "credits": "Charlize Theron",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Actress",
+      "title": "Harriet",
+      "credits": "Cynthia Erivo",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Animated Feature",
+      "title": "Toy Story 4",
+      "credits": "Josh Cooley",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Animated Feature",
+      "title": "How to Train Your Dragon: The Hidden World",
+      "credits": "Dean DeBlois",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Animated Feature",
+      "title": "I Lost My Body",
+      "credits": "Jérémy Clapin",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Animated Feature",
+      "title": "Klaus",
+      "credits": "Sergio Pablos",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Animated Feature",
+      "title": "Missing Link",
+      "credits": "Chris Butler",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best International Feature",
+      "title": "Parasite",
+      "credits": "South Korea",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best International Feature",
+      "title": "Corpus Christi",
+      "credits": "Poland",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best International Feature",
+      "title": "Honeyland",
+      "credits": "North Macedonia",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best International Feature",
+      "title": "Les Misérables",
+      "credits": "France",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best International Feature",
+      "title": "Pain and Glory",
+      "credits": "Spain",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Cinematography",
+      "title": "1917",
+      "credits": "Roger Deakins",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Cinematography",
+      "title": "The Irishman",
+      "credits": "Rodrigo Prieto",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Cinematography",
+      "title": "Joker",
+      "credits": "Lawrence Sher",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Cinematography",
+      "title": "The Lighthouse",
+      "credits": "Jarin Blaschke",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Cinematography",
+      "title": "Once Upon a Time in Hollywood",
+      "credits": "Robert Richardson",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Production Design",
+      "title": "Once Upon a Time in Hollywood",
+      "credits": "Barbara Ling",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Production Design",
+      "title": "The Irishman",
+      "credits": "Bob Shaw",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Production Design",
+      "title": "Jojo Rabbit",
+      "credits": "Ra Vincent",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Production Design",
+      "title": "1917",
+      "credits": "Dennis Gassner",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Production Design",
+      "title": "Parasite",
+      "credits": "Lee Ha-jun",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Original Score",
+      "title": "Joker",
+      "credits": "Hildur Guðnadóttir",
+      "winner": true
+    },
+    {
+      "year": 2020,
+      "category": "Best Original Score",
+      "title": "Little Women",
+      "credits": "Alexandre Desplat",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Original Score",
+      "title": "Marriage Story",
+      "credits": "Randy Newman",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Original Score",
+      "title": "1917",
+      "credits": "Thomas Newman",
+      "winner": false
+    },
+    {
+      "year": 2020,
+      "category": "Best Original Score",
+      "title": "Star Wars: The Rise of Skywalker",
+      "credits": "John Williams",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "Green Book",
+      "credits": "Peter Farrelly",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "Black Panther",
+      "credits": "Ryan Coogler",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "BlacKkKlansman",
+      "credits": "Spike Lee",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "Bohemian Rhapsody",
+      "credits": "Bryan Singer",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "The Favourite",
+      "credits": "Yorgos Lanthimos",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "Roma",
+      "credits": "Alfonso Cuarón",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "A Star Is Born",
+      "credits": "Bradley Cooper",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Picture",
+      "title": "Vice",
+      "credits": "Adam McKay",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Director",
+      "title": "Roma",
+      "credits": "Alfonso Cuarón",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Director",
+      "title": "BlacKkKlansman",
+      "credits": "Spike Lee",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Director",
+      "title": "Cold War",
+      "credits": "Paweł Pawlikowski",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Director",
+      "title": "The Favourite",
+      "credits": "Yorgos Lanthimos",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Director",
+      "title": "Vice",
+      "credits": "Adam McKay",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actor",
+      "title": "Bohemian Rhapsody",
+      "credits": "Rami Malek",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Actor",
+      "title": "Vice",
+      "credits": "Christian Bale",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actor",
+      "title": "A Star Is Born",
+      "credits": "Bradley Cooper",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actor",
+      "title": "At Eternity's Gate",
+      "credits": "Willem Dafoe",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actor",
+      "title": "Green Book",
+      "credits": "Viggo Mortensen",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actress",
+      "title": "The Favourite",
+      "credits": "Olivia Colman",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Actress",
+      "title": "Roma",
+      "credits": "Yalitza Aparicio",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actress",
+      "title": "The Wife",
+      "credits": "Glenn Close",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actress",
+      "title": "A Star Is Born",
+      "credits": "Lady Gaga",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Actress",
+      "title": "Can You Ever Forgive Me?",
+      "credits": "Melissa McCarthy",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Animated Feature",
+      "title": "Spider-Man: Into the Spider-Verse",
+      "credits": "Bob Persichetti, Peter Ramsey",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Animated Feature",
+      "title": "Incredibles 2",
+      "credits": "Brad Bird",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Animated Feature",
+      "title": "Isle of Dogs",
+      "credits": "Wes Anderson",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Animated Feature",
+      "title": "Mirai",
+      "credits": "Mamoru Hosoda",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Animated Feature",
+      "title": "Ralph Breaks the Internet",
+      "credits": "Rich Moore, Phil Johnston",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best International Feature",
+      "title": "Roma",
+      "credits": "Mexico",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best International Feature",
+      "title": "Capernaum",
+      "credits": "Lebanon",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best International Feature",
+      "title": "Cold War",
+      "credits": "Poland",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best International Feature",
+      "title": "Never Look Away",
+      "credits": "Germany",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best International Feature",
+      "title": "Shoplifters",
+      "credits": "Japan",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Cinematography",
+      "title": "Roma",
+      "credits": "Alfonso Cuarón",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Cinematography",
+      "title": "Cold War",
+      "credits": "Łukasz Żal",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Cinematography",
+      "title": "The Favourite",
+      "credits": "Robbie Ryan",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Cinematography",
+      "title": "Never Look Away",
+      "credits": "Caleb Deschanel",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Cinematography",
+      "title": "A Star Is Born",
+      "credits": "Matthew Libatique",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Production Design",
+      "title": "Black Panther",
+      "credits": "Hannah Beachler",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Production Design",
+      "title": "The Favourite",
+      "credits": "Fiona Crombie",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Production Design",
+      "title": "First Man",
+      "credits": "Nathan Crowley",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Production Design",
+      "title": "Mary Poppins Returns",
+      "credits": "John Myhre",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Production Design",
+      "title": "Roma",
+      "credits": "Eugenio Caballero",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Original Score",
+      "title": "Black Panther",
+      "credits": "Ludwig Göransson",
+      "winner": true
+    },
+    {
+      "year": 2019,
+      "category": "Best Original Score",
+      "title": "BlacKkKlansman",
+      "credits": "Terence Blanchard",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Original Score",
+      "title": "If Beale Street Could Talk",
+      "credits": "Nicholas Britell",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Original Score",
+      "title": "Isle of Dogs",
+      "credits": "Alexandre Desplat",
+      "winner": false
+    },
+    {
+      "year": 2019,
+      "category": "Best Original Score",
+      "title": "Mary Poppins Returns",
+      "credits": "Marc Shaiman",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "The Shape of Water",
+      "credits": "Guillermo del Toro",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Call Me by Your Name",
+      "credits": "Luca Guadagnino",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Darkest Hour",
+      "credits": "Joe Wright",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Dunkirk",
+      "credits": "Christopher Nolan",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Get Out",
+      "credits": "Jordan Peele",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Lady Bird",
+      "credits": "Greta Gerwig",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Phantom Thread",
+      "credits": "Paul Thomas Anderson",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "The Post",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Picture",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "credits": "Martin McDonagh",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Director",
+      "title": "The Shape of Water",
+      "credits": "Guillermo del Toro",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Director",
+      "title": "Dunkirk",
+      "credits": "Christopher Nolan",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Director",
+      "title": "Get Out",
+      "credits": "Jordan Peele",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Director",
+      "title": "Lady Bird",
+      "credits": "Greta Gerwig",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Director",
+      "title": "Phantom Thread",
+      "credits": "Paul Thomas Anderson",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actor",
+      "title": "Darkest Hour",
+      "credits": "Gary Oldman",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Actor",
+      "title": "Call Me by Your Name",
+      "credits": "Timothée Chalamet",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actor",
+      "title": "Phantom Thread",
+      "credits": "Daniel Day-Lewis",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actor",
+      "title": "Roman J. Israel, Esq.",
+      "credits": "Denzel Washington",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actor",
+      "title": "The Post",
+      "credits": "Tom Hanks",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actress",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "credits": "Frances McDormand",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Actress",
+      "title": "I, Tonya",
+      "credits": "Margot Robbie",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actress",
+      "title": "Lady Bird",
+      "credits": "Saoirse Ronan",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actress",
+      "title": "The Shape of Water",
+      "credits": "Sally Hawkins",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Actress",
+      "title": "The Post",
+      "credits": "Meryl Streep",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Animated Feature",
+      "title": "Coco",
+      "credits": "Lee Unkrich",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Animated Feature",
+      "title": "The Boss Baby",
+      "credits": "Tom McGrath",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Animated Feature",
+      "title": "The Breadwinner",
+      "credits": "Nora Twomey",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Animated Feature",
+      "title": "Ferdinand",
+      "credits": "Carlos Saldanha",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Animated Feature",
+      "title": "Loving Vincent",
+      "credits": "Dorota Kobiela, Hugh Welchman",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best International Feature",
+      "title": "A Fantastic Woman",
+      "credits": "Chile",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best International Feature",
+      "title": "The Insult",
+      "credits": "Lebanon",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best International Feature",
+      "title": "Loveless",
+      "credits": "Russia",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best International Feature",
+      "title": "On Body and Soul",
+      "credits": "Hungary",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best International Feature",
+      "title": "The Square",
+      "credits": "Sweden",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Cinematography",
+      "title": "Blade Runner 2049",
+      "credits": "Roger Deakins",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Cinematography",
+      "title": "Darkest Hour",
+      "credits": "Bruno Delbonnel",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Cinematography",
+      "title": "Dunkirk",
+      "credits": "Hoyte van Hoytema",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Cinematography",
+      "title": "Mudbound",
+      "credits": "Rachel Morrison",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Cinematography",
+      "title": "The Shape of Water",
+      "credits": "Dan Laustsen",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Production Design",
+      "title": "The Shape of Water",
+      "credits": "Paul Denham Austerberry",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Production Design",
+      "title": "Beauty and the Beast",
+      "credits": "Sarah Greenwood",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Production Design",
+      "title": "Blade Runner 2049",
+      "credits": "Dennis Gassner",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Production Design",
+      "title": "Darkest Hour",
+      "credits": "Sarah Greenwood",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Production Design",
+      "title": "Dunkirk",
+      "credits": "Nathan Crowley",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Original Score",
+      "title": "The Shape of Water",
+      "credits": "Alexandre Desplat",
+      "winner": true
+    },
+    {
+      "year": 2018,
+      "category": "Best Original Score",
+      "title": "Dunkirk",
+      "credits": "Hans Zimmer",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Original Score",
+      "title": "Phantom Thread",
+      "credits": "Jonny Greenwood",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Original Score",
+      "title": "Star Wars: The Last Jedi",
+      "credits": "John Williams",
+      "winner": false
+    },
+    {
+      "year": 2018,
+      "category": "Best Original Score",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "credits": "Carter Burwell",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Moonlight",
+      "credits": "Barry Jenkins",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Arrival",
+      "credits": "Denis Villeneuve",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Fences",
+      "credits": "Denzel Washington",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Hacksaw Ridge",
+      "credits": "Mel Gibson",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Hell or High Water",
+      "credits": "David Mackenzie",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Hidden Figures",
+      "credits": "Theodore Melfi",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "La La Land",
+      "credits": "Damien Chazelle",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Lion",
+      "credits": "Garth Davis",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Picture",
+      "title": "Manchester by the Sea",
+      "credits": "Kenneth Lonergan",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Director",
+      "title": "La La Land",
+      "credits": "Damien Chazelle",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Director",
+      "title": "Arrival",
+      "credits": "Denis Villeneuve",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Director",
+      "title": "Hacksaw Ridge",
+      "credits": "Mel Gibson",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Director",
+      "title": "Manchester by the Sea",
+      "credits": "Kenneth Lonergan",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Director",
+      "title": "Moonlight",
+      "credits": "Barry Jenkins",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actor",
+      "title": "Manchester by the Sea",
+      "credits": "Casey Affleck",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Actor",
+      "title": "Hacksaw Ridge",
+      "credits": "Andrew Garfield",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actor",
+      "title": "La La Land",
+      "credits": "Ryan Gosling",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actor",
+      "title": "Captain Fantastic",
+      "credits": "Viggo Mortensen",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actor",
+      "title": "Fences",
+      "credits": "Denzel Washington",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actress",
+      "title": "La La Land",
+      "credits": "Emma Stone",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Actress",
+      "title": "Elle",
+      "credits": "Isabelle Huppert",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actress",
+      "title": "Loving",
+      "credits": "Ruth Negga",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actress",
+      "title": "Jackie",
+      "credits": "Natalie Portman",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Actress",
+      "title": "Hidden Figures",
+      "credits": "Meryl Streep",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Animated Feature",
+      "title": "Zootopia",
+      "credits": "Byron Howard, Rich Moore",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Animated Feature",
+      "title": "Kubo and the Two Strings",
+      "credits": "Travis Knight",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Animated Feature",
+      "title": "Moana",
+      "credits": "Ron Clements, John Musker",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Animated Feature",
+      "title": "My Life as a Zucchini",
+      "credits": "Claude Barras",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Animated Feature",
+      "title": "The Red Turtle",
+      "credits": "Michael Dudok de Wit",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best International Feature",
+      "title": "The Salesman",
+      "credits": "Iran",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best International Feature",
+      "title": "Land of Mine",
+      "credits": "Denmark",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best International Feature",
+      "title": "A Man Called Ove",
+      "credits": "Sweden",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best International Feature",
+      "title": "Tanna",
+      "credits": "Australia",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best International Feature",
+      "title": "Toni Erdmann",
+      "credits": "Germany",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Cinematography",
+      "title": "La La Land",
+      "credits": "Linus Sandgren",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Cinematography",
+      "title": "Arrival",
+      "credits": "Bradford Young",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Cinematography",
+      "title": "Lion",
+      "credits": "Greig Fraser",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Cinematography",
+      "title": "Moonlight",
+      "credits": "James Laxton",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Cinematography",
+      "title": "Silence",
+      "credits": "Rodrigo Prieto",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Production Design",
+      "title": "La La Land",
+      "credits": "David Wasco",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Production Design",
+      "title": "Arrival",
+      "credits": "Patrice Vermette",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Production Design",
+      "title": "Fantastic Beasts and Where to Find Them",
+      "credits": "Stuart Craig",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Production Design",
+      "title": "Hail, Caesar!",
+      "credits": "Jess Gonchor",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Production Design",
+      "title": "Passengers",
+      "credits": "Guy Hendrix Dyas",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Original Score",
+      "title": "La La Land",
+      "credits": "Justin Hurwitz",
+      "winner": true
+    },
+    {
+      "year": 2017,
+      "category": "Best Original Score",
+      "title": "Jackie",
+      "credits": "Mica Levi",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Original Score",
+      "title": "Lion",
+      "credits": "Dustin O'Halloran, Hauschka",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Original Score",
+      "title": "Moonlight",
+      "credits": "Nicholas Britell",
+      "winner": false
+    },
+    {
+      "year": 2017,
+      "category": "Best Original Score",
+      "title": "Passengers",
+      "credits": "Thomas Newman",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "Spotlight",
+      "credits": "Tom McCarthy",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "The Big Short",
+      "credits": "Adam McKay",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "Bridge of Spies",
+      "credits": "Steven Spielberg",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "Brooklyn",
+      "credits": "John Crowley",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "Mad Max: Fury Road",
+      "credits": "George Miller",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "The Martian",
+      "credits": "Ridley Scott",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "The Revenant",
+      "credits": "Alejandro G. Iñárritu",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Picture",
+      "title": "Room",
+      "credits": "Lenny Abrahamson",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Director",
+      "title": "The Revenant",
+      "credits": "Alejandro G. Iñárritu",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Director",
+      "title": "The Big Short",
+      "credits": "Adam McKay",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Director",
+      "title": "Mad Max: Fury Road",
+      "credits": "George Miller",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Director",
+      "title": "Room",
+      "credits": "Lenny Abrahamson",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Director",
+      "title": "Spotlight",
+      "credits": "Tom McCarthy",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actor",
+      "title": "The Revenant",
+      "credits": "Leonardo DiCaprio",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Actor",
+      "title": "Trumbo",
+      "credits": "Bryan Cranston",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actor",
+      "title": "The Martian",
+      "credits": "Matt Damon",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actor",
+      "title": "Steve Jobs",
+      "credits": "Michael Fassbender",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actor",
+      "title": "The Danish Girl",
+      "credits": "Eddie Redmayne",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actress",
+      "title": "Room",
+      "credits": "Brie Larson",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Actress",
+      "title": "Carol",
+      "credits": "Cate Blanchett",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actress",
+      "title": "Joy",
+      "credits": "Jennifer Lawrence",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actress",
+      "title": "45 Years",
+      "credits": "Charlotte Rampling",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Actress",
+      "title": "Brooklyn",
+      "credits": "Saoirse Ronan",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Animated Feature",
+      "title": "Inside Out",
+      "credits": "Pete Docter",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Animated Feature",
+      "title": "Anomalisa",
+      "credits": "Charlie Kaufman, Duke Johnson",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Animated Feature",
+      "title": "Boy and the World",
+      "credits": "Alê Abreu",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Animated Feature",
+      "title": "Shaun the Sheep Movie",
+      "credits": "Mark Burton, Richard Starzak",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Animated Feature",
+      "title": "When Marnie Was There",
+      "credits": "Hiromasa Yonebayashi",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best International Feature",
+      "title": "Son of Saul",
+      "credits": "Hungary",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best International Feature",
+      "title": "Embrace of the Serpent",
+      "credits": "Colombia",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best International Feature",
+      "title": "Mustang",
+      "credits": "France",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best International Feature",
+      "title": "Theeb",
+      "credits": "Jordan",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best International Feature",
+      "title": "A War",
+      "credits": "Denmark",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Cinematography",
+      "title": "The Revenant",
+      "credits": "Emmanuel Lubezki",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Cinematography",
+      "title": "Carol",
+      "credits": "Edward Lachman",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Cinematography",
+      "title": "The Hateful Eight",
+      "credits": "Robert Richardson",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Cinematography",
+      "title": "Mad Max: Fury Road",
+      "credits": "John Seale",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Cinematography",
+      "title": "Sicario",
+      "credits": "Roger Deakins",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Production Design",
+      "title": "Mad Max: Fury Road",
+      "credits": "Colin Gibson",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Production Design",
+      "title": "Bridge of Spies",
+      "credits": "Adam Stockhausen",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Production Design",
+      "title": "The Danish Girl",
+      "credits": "Eve Stewart",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Production Design",
+      "title": "The Martian",
+      "credits": "Arthur Max",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Production Design",
+      "title": "The Revenant",
+      "credits": "Jack Fisk",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Original Score",
+      "title": "The Hateful Eight",
+      "credits": "Ennio Morricone",
+      "winner": true
+    },
+    {
+      "year": 2016,
+      "category": "Best Original Score",
+      "title": "Bridge of Spies",
+      "credits": "Thomas Newman",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Original Score",
+      "title": "Carol",
+      "credits": "Carter Burwell",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Original Score",
+      "title": "Sicario",
+      "credits": "Jóhann Jóhannsson",
+      "winner": false
+    },
+    {
+      "year": 2016,
+      "category": "Best Original Score",
+      "title": "Star Wars: The Force Awakens",
+      "credits": "John Williams",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "Birdman",
+      "credits": "Alejandro G. Iñárritu",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "American Sniper",
+      "credits": "Clint Eastwood",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "Boyhood",
+      "credits": "Richard Linklater",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "The Grand Budapest Hotel",
+      "credits": "Wes Anderson",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "The Imitation Game",
+      "credits": "Morten Tyldum",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "Selma",
+      "credits": "Ava DuVernay",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "The Theory of Everything",
+      "credits": "James Marsh",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Picture",
+      "title": "Whiplash",
+      "credits": "Damien Chazelle",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Director",
+      "title": "Birdman",
+      "credits": "Alejandro G. Iñárritu",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Director",
+      "title": "Boyhood",
+      "credits": "Richard Linklater",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Director",
+      "title": "Foxcatcher",
+      "credits": "Bennett Miller",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Director",
+      "title": "The Grand Budapest Hotel",
+      "credits": "Wes Anderson",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Director",
+      "title": "The Imitation Game",
+      "credits": "Morten Tyldum",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actor",
+      "title": "The Theory of Everything",
+      "credits": "Eddie Redmayne",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Actor",
+      "title": "American Sniper",
+      "credits": "Bradley Cooper",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actor",
+      "title": "The Imitation Game",
+      "credits": "Benedict Cumberbatch",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actor",
+      "title": "Foxcatcher",
+      "credits": "Steve Carell",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actor",
+      "title": "Birdman",
+      "credits": "Michael Keaton",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actress",
+      "title": "Still Alice",
+      "credits": "Julianne Moore",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Actress",
+      "title": "Two Days, One Night",
+      "credits": "Marion Cotillard",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actress",
+      "title": "Gone Girl",
+      "credits": "Rosamund Pike",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actress",
+      "title": "Wild",
+      "credits": "Reese Witherspoon",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Actress",
+      "title": "Cake",
+      "credits": "Jennifer Aniston",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Animated Feature",
+      "title": "Big Hero 6",
+      "credits": "Don Hall, Chris Williams",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Animated Feature",
+      "title": "The Boxtrolls",
+      "credits": "Graham Annable, Anthony Stacchi",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Animated Feature",
+      "title": "How to Train Your Dragon 2",
+      "credits": "Dean DeBlois",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Animated Feature",
+      "title": "Song of the Sea",
+      "credits": "Tomm Moore",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Animated Feature",
+      "title": "The Tale of the Princess Kaguya",
+      "credits": "Isao Takahata",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best International Feature",
+      "title": "Ida",
+      "credits": "Poland",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best International Feature",
+      "title": "Leviathan",
+      "credits": "Russia",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best International Feature",
+      "title": "Tangerines",
+      "credits": "Estonia",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best International Feature",
+      "title": "Timbuktu",
+      "credits": "Mauritania",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best International Feature",
+      "title": "Wild Tales",
+      "credits": "Argentina",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Cinematography",
+      "title": "Birdman",
+      "credits": "Emmanuel Lubezki",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Cinematography",
+      "title": "The Grand Budapest Hotel",
+      "credits": "Robert Yeoman",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Cinematography",
+      "title": "Ida",
+      "credits": "Łukasz Żal, Ryszard Lenczewski",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Cinematography",
+      "title": "Mr. Turner",
+      "credits": "Dick Pope",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Cinematography",
+      "title": "Unbroken",
+      "credits": "Roger Deakins",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Production Design",
+      "title": "The Grand Budapest Hotel",
+      "credits": "Adam Stockhausen",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Production Design",
+      "title": "The Imitation Game",
+      "credits": "Maria Djurkovic",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Production Design",
+      "title": "Interstellar",
+      "credits": "Nathan Crowley",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Production Design",
+      "title": "Into the Woods",
+      "credits": "Dennis Gassner",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Production Design",
+      "title": "Mr. Turner",
+      "credits": "Suzie Davies",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Original Score",
+      "title": "The Grand Budapest Hotel",
+      "credits": "Alexandre Desplat",
+      "winner": true
+    },
+    {
+      "year": 2015,
+      "category": "Best Original Score",
+      "title": "The Imitation Game",
+      "credits": "Alexandre Desplat",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Original Score",
+      "title": "Interstellar",
+      "credits": "Hans Zimmer",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Original Score",
+      "title": "Mr. Turner",
+      "credits": "Gary Yershon",
+      "winner": false
+    },
+    {
+      "year": 2015,
+      "category": "Best Original Score",
+      "title": "The Theory of Everything",
+      "credits": "Jóhann Jóhannsson",
+      "winner": false
+    }
+  ]
+}

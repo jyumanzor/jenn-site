@@ -1,0 +1,898 @@
+{
+  "title": "Pulitzer Prize",
+  "description": "Pulitzer Prize for Fiction and General Nonfiction winners and finalists (2010-2025)",
+  "categories": ["Fiction", "General Nonfiction"],
+  "entries": [
+    {
+      "year": 2025,
+      "category": "Fiction",
+      "title": "James",
+      "author": "Percival Everett",
+      "publisher": "Doubleday",
+      "winner": true,
+      "description": "A reimagining of Adventures of Huckleberry Finn told from the perspective of the enslaved man Jim, exploring the absurdity of racial supremacy and the search for family and freedom."
+    },
+    {
+      "year": 2025,
+      "category": "Fiction",
+      "title": "Headshot",
+      "author": "Rita Bullwinkel",
+      "publisher": "Viking",
+      "winner": false,
+      "description": "A novel following eight teenage girls competing in a boxing tournament in Reno, Nevada, exploring violence, ambition, and female power."
+    },
+    {
+      "year": 2025,
+      "category": "Fiction",
+      "title": "Mice 1961",
+      "author": "Stacey Levine",
+      "publisher": "Verse Chorus Press",
+      "winner": false,
+      "description": "An experimental novel set in a small Washington State town where peculiar events unfold among ordinary residents."
+    },
+    {
+      "year": 2025,
+      "category": "Fiction",
+      "title": "The Unicorn Woman",
+      "author": "Gayl Jones",
+      "publisher": "Beacon Press",
+      "winner": false,
+      "description": "A novel exploring race, identity, and mythology through the story of a Black woman in America."
+    },
+    {
+      "year": 2025,
+      "category": "General Nonfiction",
+      "title": "To the Success of Our Hopeless Cause: The Many Lives of the Soviet Dissident Movement",
+      "author": "Benjamin Nathans",
+      "publisher": "Princeton University Press",
+      "winner": true,
+      "description": "A chronicle of how an improbable band of Soviet dissidents demanded the Kremlin obey its own laws, ultimately undermining the Soviet system."
+    },
+    {
+      "year": 2025,
+      "category": "General Nonfiction",
+      "title": "I Am on the Hit List: A Journalist's Murder and the Rise of Autocracy in India",
+      "author": "Rollo Romig",
+      "publisher": "Penguin Books",
+      "winner": false,
+      "description": "An investigation into the assassination of Indian journalist Gauri Lankesh and the rise of Hindu nationalism."
+    },
+    {
+      "year": 2025,
+      "category": "General Nonfiction",
+      "title": "Until I Find You: Disappeared Children and Coercive Adoptions in Guatemala",
+      "author": "Rachel Nolan",
+      "publisher": "Harvard University Press",
+      "winner": false,
+      "description": "A deeply researched account of Guatemala's adoption industry and the families torn apart by coercive practices."
+    },
+    {
+      "year": 2024,
+      "category": "Fiction",
+      "title": "Night Watch",
+      "author": "Jayne Anne Phillips",
+      "publisher": "Knopf",
+      "winner": true,
+      "description": "A haunting Civil War-era story centered on a mother and daughter grappling with trauma and survival in a West Virginia asylum."
+    },
+    {
+      "year": 2024,
+      "category": "Fiction",
+      "title": "Same Bed Different Dreams",
+      "author": "Ed Park",
+      "publisher": "Random House",
+      "winner": false,
+      "description": "A genre-bending novel interweaving Korean history, a secret society, and a Silicon Valley tech company."
+    },
+    {
+      "year": 2024,
+      "category": "Fiction",
+      "title": "Wednesday's Child",
+      "author": "Yiyun Li",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "A novel exploring grief, motherhood, and the complexities of Chinese-American identity."
+    },
+    {
+      "year": 2024,
+      "category": "General Nonfiction",
+      "title": "A Day in the Life of Abed Salama: Anatomy of a Jerusalem Tragedy",
+      "author": "Nathan Thrall",
+      "publisher": "Metropolitan Books",
+      "winner": true,
+      "description": "A devastating account of a school bus accident that reveals the profound inequalities of life under Israeli occupation."
+    },
+    {
+      "year": 2024,
+      "category": "General Nonfiction",
+      "title": "Cobalt Red: How the Blood of the Congo Powers Our Lives",
+      "author": "Siddharth Kara",
+      "publisher": "St. Martin's Press",
+      "winner": false,
+      "description": "An expose of the human toll of cobalt mining in the Democratic Republic of the Congo, which supplies most of the world's cobalt for electronics."
+    },
+    {
+      "year": 2024,
+      "category": "General Nonfiction",
+      "title": "Fire Weather: A True Story from a Hotter World",
+      "author": "John Vaillant",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "An account of the 2016 Fort McMurray wildfire in Canada that destroyed the hub of Canada's oil industry and displaced 88,000 people."
+    },
+    {
+      "year": 2023,
+      "category": "Fiction",
+      "title": "Demon Copperhead",
+      "author": "Barbara Kingsolver",
+      "publisher": "Harper",
+      "winner": true,
+      "description": "A modern retelling of David Copperfield set in Appalachian Virginia, exploring the opioid crisis through a boy's coming-of-age story."
+    },
+    {
+      "year": 2023,
+      "category": "Fiction",
+      "title": "Trust",
+      "author": "Hernan Diaz",
+      "publisher": "Riverhead Books",
+      "winner": true,
+      "description": "A puzzle-box narrative examining wealth, power, and the nature of storytelling through four interconnected accounts set in Gilded Age New York."
+    },
+    {
+      "year": 2023,
+      "category": "Fiction",
+      "title": "The Immortal King Rao",
+      "author": "Vauhini Vara",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "In an advanced tech society, Athena carries her father's memories and desires to join a tech-free resistance movement."
+    },
+    {
+      "year": 2023,
+      "category": "General Nonfiction",
+      "title": "His Name Is George Floyd: One Man's Life and the Struggle for Racial Justice",
+      "author": "Robert Samuels and Toluse Olorunnipa",
+      "publisher": "Viking",
+      "winner": true,
+      "description": "A comprehensive biography of George Floyd that traces his life from Houston's Third Ward to his murder in Minneapolis."
+    },
+    {
+      "year": 2023,
+      "category": "General Nonfiction",
+      "title": "Kingdom of Characters: The Language Revolution That Made China Modern",
+      "author": "Jing Tsu",
+      "publisher": "Riverhead Books",
+      "winner": false,
+      "description": "The story of how China modernized its language system and fought to preserve Chinese characters in the digital age."
+    },
+    {
+      "year": 2023,
+      "category": "General Nonfiction",
+      "title": "Sounds Wild and Broken: Sonic Marvels, Evolution's Creativity, and the Crisis of Sensory Extinction",
+      "author": "David George Haskell",
+      "publisher": "Viking",
+      "winner": false,
+      "description": "An exploration of how sound evolved on Earth and the threats facing the planet's acoustic diversity."
+    },
+    {
+      "year": 2023,
+      "category": "General Nonfiction",
+      "title": "Under the Skin: The Hidden Toll of Racism on American Lives and on the Health of Our Nation",
+      "author": "Linda Villarosa",
+      "publisher": "Doubleday",
+      "winner": false,
+      "description": "An investigation into how racism in American medicine has led to devastating health disparities for Black Americans."
+    },
+    {
+      "year": 2022,
+      "category": "Fiction",
+      "title": "The Netanyahus",
+      "author": "Joshua Cohen",
+      "publisher": "NYRB",
+      "winner": true,
+      "description": "A darkly comic historical novel about a Jewish historian's chaotic encounter with the Netanyahu family at a 1960s American college."
+    },
+    {
+      "year": 2022,
+      "category": "Fiction",
+      "title": "Monkey Boy",
+      "author": "Francisco Goldman",
+      "publisher": "Grove Press",
+      "winner": false,
+      "description": "A semi-autobiographical novel about a writer returning to Boston to confront his traumatic childhood and family secrets."
+    },
+    {
+      "year": 2022,
+      "category": "Fiction",
+      "title": "Palmares",
+      "author": "Gayl Jones",
+      "publisher": "Beacon Press",
+      "winner": false,
+      "description": "An epic novel following an enslaved woman in 17th-century Brazil and her quest for freedom in the legendary settlement of Palmares."
+    },
+    {
+      "year": 2022,
+      "category": "General Nonfiction",
+      "title": "Invisible Child: Poverty, Survival & Hope in an American City",
+      "author": "Andrea Elliott",
+      "publisher": "Random House",
+      "winner": true,
+      "description": "An eight-year investigation following a homeless girl named Dasani through the New York City shelter system."
+    },
+    {
+      "year": 2022,
+      "category": "General Nonfiction",
+      "title": "Home, Land, Security: Deradicalization and the Journey Back from Extremism",
+      "author": "Carla Power",
+      "publisher": "One World",
+      "winner": false,
+      "description": "An exploration of how former extremists from around the world have been deradicalized and reintegrated into society."
+    },
+    {
+      "year": 2022,
+      "category": "General Nonfiction",
+      "title": "The Family Roe: An American Story",
+      "author": "Joshua Prager",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "A comprehensive biography of Norma McCorvey, the plaintiff known as Jane Roe, and the legacy of Roe v. Wade."
+    },
+    {
+      "year": 2021,
+      "category": "Fiction",
+      "title": "The Night Watchman",
+      "author": "Louise Erdrich",
+      "publisher": "Harper",
+      "winner": true,
+      "description": "Based on Erdrich's grandfather's fight against Native American dispossession and termination policy in 1950s North Dakota."
+    },
+    {
+      "year": 2021,
+      "category": "Fiction",
+      "title": "A Registry of My Passage Upon the Earth",
+      "author": "Daniel Mason",
+      "publisher": "Little, Brown",
+      "winner": false,
+      "description": "A collection of interconnected stories spanning centuries and continents, exploring the nature of storytelling itself."
+    },
+    {
+      "year": 2021,
+      "category": "Fiction",
+      "title": "Telephone",
+      "author": "Percival Everett",
+      "publisher": "Graywolf Press",
+      "winner": false,
+      "description": "A novel about a geologist whose daughter falls ill with a mysterious disease, leading him on a journey to find answers."
+    },
+    {
+      "year": 2021,
+      "category": "General Nonfiction",
+      "title": "Wilmington's Lie: The Murderous Coup of 1898 and the Rise of White Supremacy",
+      "author": "David Zucchino",
+      "publisher": "Atlantic Monthly Press",
+      "winner": true,
+      "description": "A gripping account of the violent overthrow of the elected government of a Black-majority North Carolina city after Reconstruction."
+    },
+    {
+      "year": 2021,
+      "category": "General Nonfiction",
+      "title": "Minor Feelings: An Asian American Reckoning",
+      "author": "Cathy Park Hong",
+      "publisher": "One World",
+      "winner": false,
+      "description": "A collection of essays exploring Asian American identity, art, and the psychology of racial consciousness in America."
+    },
+    {
+      "year": 2021,
+      "category": "General Nonfiction",
+      "title": "Yellow Bird: Oil, Murder, and a Woman's Search for Justice in Indian Country",
+      "author": "Sierra Crane Murdoch",
+      "publisher": "Random House",
+      "winner": false,
+      "description": "The true story of an Arikara woman's obsessive investigation into a murder on the Fort Berthold Indian Reservation."
+    },
+    {
+      "year": 2020,
+      "category": "Fiction",
+      "title": "The Nickel Boys",
+      "author": "Colson Whitehead",
+      "publisher": "Doubleday",
+      "winner": true,
+      "description": "The story of two boys at a brutal reform school in Jim Crow-era Florida, inspired by the true story of the Dozier School."
+    },
+    {
+      "year": 2020,
+      "category": "Fiction",
+      "title": "The Dutch House",
+      "author": "Ann Patchett",
+      "publisher": "Harper",
+      "winner": false,
+      "description": "A family saga spanning five decades about a brother and sister bound by their childhood home and the stepmother who banished them."
+    },
+    {
+      "year": 2020,
+      "category": "Fiction",
+      "title": "The Topeka School",
+      "author": "Ben Lerner",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "A novel set in 1990s Kansas exploring masculinity, rhetoric, and the roots of contemporary American dysfunction."
+    },
+    {
+      "year": 2020,
+      "category": "General Nonfiction",
+      "title": "The Undying: Pain, Vulnerability, Mortality, Medicine, Art, Time, Dreams, Data, Exhaustion, Cancer, and Care",
+      "author": "Anne Boyer",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": true,
+      "description": "A memoir and meditation on cancer, mortality, and the failures of the American healthcare system."
+    },
+    {
+      "year": 2020,
+      "category": "General Nonfiction",
+      "title": "Solitary: Unbroken by Four Decades in Solitary Confinement",
+      "author": "Albert Woodfox",
+      "publisher": "Grove Press",
+      "winner": false,
+      "description": "An unflinching memoir of wrongful conviction and 44 years in solitary confinement at Louisiana's Angola prison."
+    },
+    {
+      "year": 2020,
+      "category": "General Nonfiction",
+      "title": "Elderhood: Redefining Aging, Transforming Medicine, Reimagining Life",
+      "author": "Louise Aronson",
+      "publisher": "Bloomsbury",
+      "winner": false,
+      "description": "A geriatrician's empathetic critique of how society and healthcare mistreat the elderly."
+    },
+    {
+      "year": 2019,
+      "category": "Fiction",
+      "title": "The Overstory",
+      "author": "Richard Powers",
+      "publisher": "W.W. Norton",
+      "winner": true,
+      "description": "An epic novel weaving together nine Americans whose lives are shaped by trees and environmental activism."
+    },
+    {
+      "year": 2019,
+      "category": "Fiction",
+      "title": "The Great Believers",
+      "author": "Rebecca Makkai",
+      "publisher": "Viking",
+      "winner": false,
+      "description": "A dual narrative exploring the AIDS crisis in 1980s Chicago and its lasting effects decades later in Paris."
+    },
+    {
+      "year": 2019,
+      "category": "Fiction",
+      "title": "There There",
+      "author": "Tommy Orange",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "A multi-voiced novel following twelve urban Native Americans converging on a powwow in Oakland, California."
+    },
+    {
+      "year": 2019,
+      "category": "General Nonfiction",
+      "title": "Amity and Prosperity: One Family and the Fracturing of America",
+      "author": "Eliza Griswold",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": true,
+      "description": "A chronicle of an Appalachian family's struggle against corporate oil fracking and the destruction it wreaks on their community."
+    },
+    {
+      "year": 2019,
+      "category": "General Nonfiction",
+      "title": "In a Day's Work: The Fight to End Sexual Violence Against America's Most Vulnerable Workers",
+      "author": "Bernice Yeung",
+      "publisher": "The New Press",
+      "winner": false,
+      "description": "An investigation into sexual assault against low-wage immigrant women workers and their fight for justice."
+    },
+    {
+      "year": 2019,
+      "category": "General Nonfiction",
+      "title": "Rising: Dispatches from the New American Shore",
+      "author": "Elizabeth Rush",
+      "publisher": "Milkweed Editions",
+      "winner": false,
+      "description": "A firsthand account of communities across America threatened by rising seas and climate change."
+    },
+    {
+      "year": 2018,
+      "category": "Fiction",
+      "title": "Less",
+      "author": "Andrew Sean Greer",
+      "publisher": "Lee Boudreaux Books/Little, Brown",
+      "winner": true,
+      "description": "A comic novel following a struggling novelist who travels the world to avoid his ex-boyfriend's wedding while confronting aging and love."
+    },
+    {
+      "year": 2018,
+      "category": "Fiction",
+      "title": "In the Distance",
+      "author": "Hernan Diaz",
+      "publisher": "Coffee House Press",
+      "winner": false,
+      "description": "A Swedish immigrant's odyssey across 19th-century America, traveling from coast to coast the wrong way."
+    },
+    {
+      "year": 2018,
+      "category": "Fiction",
+      "title": "The Idiot",
+      "author": "Elif Batuman",
+      "publisher": "Penguin Press",
+      "winner": false,
+      "description": "A young woman's first year at Harvard in the 1990s, navigating email, intellectual life, and unrequited love."
+    },
+    {
+      "year": 2018,
+      "category": "General Nonfiction",
+      "title": "Locking Up Our Own: Crime and Punishment in Black America",
+      "author": "James Forman Jr.",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": true,
+      "description": "An examination of how Black communities contributed to mass incarceration while fighting for public safety."
+    },
+    {
+      "year": 2018,
+      "category": "General Nonfiction",
+      "title": "Notes on a Foreign Country: An American Abroad in a Post-American World",
+      "author": "Suzy Hansen",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "An American journalist's reckoning with her country's foreign policy while living in Istanbul."
+    },
+    {
+      "year": 2018,
+      "category": "General Nonfiction",
+      "title": "The Evolution of Beauty: How Darwin's Forgotten Theory of Mate Choice Shapes the Animal World - and Us",
+      "author": "Richard O. Prum",
+      "publisher": "Doubleday",
+      "winner": false,
+      "description": "An ornithologist's argument for the role of aesthetic evolution in shaping animal and human beauty."
+    },
+    {
+      "year": 2017,
+      "category": "Fiction",
+      "title": "The Underground Railroad",
+      "author": "Colson Whitehead",
+      "publisher": "Doubleday",
+      "winner": true,
+      "description": "A reimagining of American slavery where the Underground Railroad is a literal railway beneath the Southern soil."
+    },
+    {
+      "year": 2017,
+      "category": "Fiction",
+      "title": "Imagine Me Gone",
+      "author": "Adam Haslett",
+      "publisher": "Little, Brown",
+      "winner": false,
+      "description": "A novel about a family haunted by mental illness across generations, exploring love, loyalty, and loss."
+    },
+    {
+      "year": 2017,
+      "category": "Fiction",
+      "title": "The Sport of Kings",
+      "author": "C. E. Morgan",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "An epic saga of race, class, and horse breeding in Kentucky spanning generations."
+    },
+    {
+      "year": 2017,
+      "category": "General Nonfiction",
+      "title": "Evicted: Poverty and Profit in the American City",
+      "author": "Matthew Desmond",
+      "publisher": "Crown",
+      "winner": true,
+      "description": "An expose of the American housing crisis following eight families in Milwaukee facing eviction."
+    },
+    {
+      "year": 2017,
+      "category": "General Nonfiction",
+      "title": "Strangers in Their Own Land: Anger and Mourning on the American Right",
+      "author": "Arlie Russell Hochschild",
+      "publisher": "The New Press",
+      "winner": false,
+      "description": "A sociologist's empathetic exploration of Tea Party supporters in Louisiana's petrochemical corridor."
+    },
+    {
+      "year": 2017,
+      "category": "General Nonfiction",
+      "title": "In a Different Key: The Story of Autism",
+      "author": "John Donvan and Caren Zucker",
+      "publisher": "Crown",
+      "winner": false,
+      "description": "A comprehensive history of autism from its first diagnosis to the present day."
+    },
+    {
+      "year": 2016,
+      "category": "Fiction",
+      "title": "The Sympathizer",
+      "author": "Viet Thanh Nguyen",
+      "publisher": "Grove Press",
+      "winner": true,
+      "description": "A spy thriller about a communist double agent in the final days of the Vietnam War and its aftermath in America."
+    },
+    {
+      "year": 2016,
+      "category": "Fiction",
+      "title": "Get in Trouble",
+      "author": "Kelly Link",
+      "publisher": "Random House",
+      "winner": false,
+      "description": "A collection of fantastical short stories blending horror, fairy tale, and science fiction."
+    },
+    {
+      "year": 2016,
+      "category": "Fiction",
+      "title": "Maud's Line",
+      "author": "Margaret Verble",
+      "publisher": "Houghton Mifflin Harcourt",
+      "winner": false,
+      "description": "A novel set in 1920s Oklahoma Indian Territory about a Cherokee woman torn between tradition and change."
+    },
+    {
+      "year": 2016,
+      "category": "General Nonfiction",
+      "title": "Black Flags: The Rise of ISIS",
+      "author": "Joby Warrick",
+      "publisher": "Doubleday",
+      "winner": true,
+      "description": "An account of how Abu Musab al-Zarqawi's extremism and U.S. policy failures led to the rise of ISIS."
+    },
+    {
+      "year": 2016,
+      "category": "General Nonfiction",
+      "title": "Between the World and Me",
+      "author": "Ta-Nehisi Coates",
+      "publisher": "Spiegel & Grau",
+      "winner": false,
+      "description": "A letter to the author's teenage son about the history and reality of being Black in America."
+    },
+    {
+      "year": 2016,
+      "category": "General Nonfiction",
+      "title": "Ordinary Light",
+      "author": "Tracy K. Smith",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "A memoir about the author's childhood in California and her relationship with her mother."
+    },
+    {
+      "year": 2015,
+      "category": "Fiction",
+      "title": "All the Light We Cannot See",
+      "author": "Anthony Doerr",
+      "publisher": "Scribner",
+      "winner": true,
+      "description": "A blind French girl and a German boy whose paths collide in occupied France during World War II."
+    },
+    {
+      "year": 2015,
+      "category": "Fiction",
+      "title": "The Moor's Account",
+      "author": "Laila Lalami",
+      "publisher": "Pantheon",
+      "winner": false,
+      "description": "A fictional memoir of the first Black explorer of America, an enslaved Moroccan man in 16th-century Florida."
+    },
+    {
+      "year": 2015,
+      "category": "Fiction",
+      "title": "Let Me Be Frank with You",
+      "author": "Richard Ford",
+      "publisher": "Ecco",
+      "winner": false,
+      "description": "Four linked stories continuing the saga of Frank Bascombe as he navigates life in post-Hurricane Sandy New Jersey."
+    },
+    {
+      "year": 2015,
+      "category": "General Nonfiction",
+      "title": "The Sixth Extinction: An Unnatural History",
+      "author": "Elizabeth Kolbert",
+      "publisher": "Henry Holt",
+      "winner": true,
+      "description": "An investigation into the man-made mass extinction currently threatening Earth's biodiversity."
+    },
+    {
+      "year": 2015,
+      "category": "General Nonfiction",
+      "title": "Age of Ambition: Chasing Fortune, Truth, and Faith in the New China",
+      "author": "Evan Osnos",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "A portrait of contemporary China through the stories of ordinary people seeking prosperity and meaning."
+    },
+    {
+      "year": 2015,
+      "category": "General Nonfiction",
+      "title": "No Good Men Among the Living: America, the Taliban, and the War Through Afghan Eyes",
+      "author": "Anand Gopal",
+      "publisher": "Metropolitan Books",
+      "winner": false,
+      "description": "An account of the Afghanistan war told through three Afghans caught between American forces and the Taliban."
+    },
+    {
+      "year": 2014,
+      "category": "Fiction",
+      "title": "The Goldfinch",
+      "author": "Donna Tartt",
+      "publisher": "Little, Brown",
+      "winner": true,
+      "description": "A young man's life transformed after surviving a terrorist bombing at an art museum, centered on a stolen painting."
+    },
+    {
+      "year": 2014,
+      "category": "Fiction",
+      "title": "The Son",
+      "author": "Philipp Meyer",
+      "publisher": "Ecco",
+      "winner": false,
+      "description": "An epic multigenerational saga of a Texas family spanning 150 years of American expansion."
+    },
+    {
+      "year": 2014,
+      "category": "Fiction",
+      "title": "The Woman Who Lost Her Soul",
+      "author": "Bob Shacochis",
+      "publisher": "Atlantic Monthly Press",
+      "winner": false,
+      "description": "A sprawling novel about an American woman whose death in Haiti leads to revelations about Cold War espionage."
+    },
+    {
+      "year": 2014,
+      "category": "General Nonfiction",
+      "title": "Toms River: A Story of Science and Salvation",
+      "author": "Dan Fagin",
+      "publisher": "Bantam Books",
+      "winner": true,
+      "description": "An investigation into a New Jersey seashore town's cluster of childhood cancers linked to industrial pollution."
+    },
+    {
+      "year": 2014,
+      "category": "General Nonfiction",
+      "title": "The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide",
+      "author": "Gary J. Bass",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "An account of how Nixon and Kissinger supported Pakistan during the 1971 genocide in Bangladesh."
+    },
+    {
+      "year": 2014,
+      "category": "General Nonfiction",
+      "title": "The Insurgents: David Petraeus and the Plot to Change the American Way of War",
+      "author": "Fred Kaplan",
+      "publisher": "Simon & Schuster",
+      "winner": false,
+      "description": "The story of how a small group of military officers transformed American counterinsurgency strategy."
+    },
+    {
+      "year": 2013,
+      "category": "Fiction",
+      "title": "The Orphan Master's Son",
+      "author": "Adam Johnson",
+      "publisher": "Random House",
+      "winner": true,
+      "description": "A sweeping epic set in North Korea following a man who takes on the identity of a high-ranking official."
+    },
+    {
+      "year": 2013,
+      "category": "Fiction",
+      "title": "What We Talk About When We Talk About Anne Frank",
+      "author": "Nathan Englander",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "A collection of stories exploring Jewish identity, faith, and the legacy of the Holocaust."
+    },
+    {
+      "year": 2013,
+      "category": "Fiction",
+      "title": "The Snow Child",
+      "author": "Eowyn Ivey",
+      "publisher": "Reagan Arthur/Little, Brown",
+      "winner": false,
+      "description": "A magical realist novel set in 1920s Alaska about a childless couple who build a snow girl that comes to life."
+    },
+    {
+      "year": 2013,
+      "category": "General Nonfiction",
+      "title": "Devil in the Grove: Thurgood Marshall, the Groveland Boys, and the Dawn of a New America",
+      "author": "Gilbert King",
+      "publisher": "Harper",
+      "winner": true,
+      "description": "A chronicle of racial injustice in 1949 Florida where four Black men were falsely accused of rape."
+    },
+    {
+      "year": 2013,
+      "category": "General Nonfiction",
+      "title": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+      "author": "Katherine Boo",
+      "publisher": "Random House",
+      "winner": false,
+      "description": "A portrait of life in a Mumbai slum as residents struggle to survive and rise amid corruption and poverty."
+    },
+    {
+      "year": 2013,
+      "category": "General Nonfiction",
+      "title": "The Passage of Power: The Years of Lyndon Johnson",
+      "author": "Robert A. Caro",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "The fourth volume of Caro's LBJ biography, covering Kennedy's assassination and Johnson's ascent to power."
+    },
+    {
+      "year": 2012,
+      "category": "Fiction",
+      "title": "No Award",
+      "author": "N/A",
+      "publisher": "N/A",
+      "winner": true,
+      "description": "The Pulitzer board declined to award a prize for fiction in 2012, despite three nominated finalists."
+    },
+    {
+      "year": 2012,
+      "category": "Fiction",
+      "title": "Swamplandia!",
+      "author": "Karen Russell",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "A novel about a family of alligator wrestlers in the Florida Everglades whose tourist attraction is failing."
+    },
+    {
+      "year": 2012,
+      "category": "Fiction",
+      "title": "The Pale King",
+      "author": "David Foster Wallace",
+      "publisher": "Little, Brown",
+      "winner": false,
+      "description": "Wallace's unfinished posthumous novel about IRS employees in Illinois confronting boredom and meaning."
+    },
+    {
+      "year": 2012,
+      "category": "Fiction",
+      "title": "Train Dreams",
+      "author": "Denis Johnson",
+      "publisher": "Farrar, Straus and Giroux",
+      "winner": false,
+      "description": "A novella following a day laborer in the early 20th-century American West who loses everything to a forest fire."
+    },
+    {
+      "year": 2012,
+      "category": "General Nonfiction",
+      "title": "The Swerve: How the World Became Modern",
+      "author": "Stephen Greenblatt",
+      "publisher": "W.W. Norton",
+      "winner": true,
+      "description": "The story of how a 15th-century book hunter's discovery of an ancient Roman poem helped launch the Renaissance."
+    },
+    {
+      "year": 2012,
+      "category": "General Nonfiction",
+      "title": "One Hundred Names for Love: A Stroke, a Marriage, and the Language of Healing",
+      "author": "Diane Ackerman",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "A memoir about caring for the author's husband after a stroke destroyed his ability to use language."
+    },
+    {
+      "year": 2012,
+      "category": "General Nonfiction",
+      "title": "Unnatural Selection: Choosing Boys over Girls, and the Consequences of a World Full of Men",
+      "author": "Mara Hvistendahl",
+      "publisher": "PublicAffairs",
+      "winner": false,
+      "description": "An investigation into sex-selective abortion and its demographic consequences across Asia."
+    },
+    {
+      "year": 2011,
+      "category": "Fiction",
+      "title": "A Visit from the Goon Squad",
+      "author": "Jennifer Egan",
+      "publisher": "Knopf",
+      "winner": true,
+      "description": "An innovative, interconnected story about aging punk rockers and the passage of time in the digital age."
+    },
+    {
+      "year": 2011,
+      "category": "Fiction",
+      "title": "The Privileges",
+      "author": "Jonathan Dee",
+      "publisher": "Random House",
+      "winner": false,
+      "description": "A novel following a wealthy Manhattan couple's rise through New York society and the costs of their ambition."
+    },
+    {
+      "year": 2011,
+      "category": "Fiction",
+      "title": "The Surrendered",
+      "author": "Chang-rae Lee",
+      "publisher": "Riverhead Books",
+      "winner": false,
+      "description": "A novel spanning decades about three characters whose lives intersect during the Korean War."
+    },
+    {
+      "year": 2011,
+      "category": "General Nonfiction",
+      "title": "The Emperor of All Maladies: A Biography of Cancer",
+      "author": "Siddhartha Mukherjee",
+      "publisher": "Scribner",
+      "winner": true,
+      "description": "A comprehensive history of cancer from ancient Egypt to modern targeted therapies."
+    },
+    {
+      "year": 2011,
+      "category": "General Nonfiction",
+      "title": "Apollo's Fire: Igniting America's Clean Energy Economy",
+      "author": "Jay Inslee and Bracken Hendricks",
+      "publisher": "Island Press",
+      "winner": false,
+      "description": "A call for America to invest in clean energy technology and green jobs."
+    },
+    {
+      "year": 2011,
+      "category": "General Nonfiction",
+      "title": "The Shallows: What the Internet Is Doing to Our Brains",
+      "author": "Nicholas Carr",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "An examination of how the internet is rewiring our brains and affecting our ability to think deeply."
+    },
+    {
+      "year": 2010,
+      "category": "Fiction",
+      "title": "Tinkers",
+      "author": "Paul Harding",
+      "publisher": "Bellevue Literary Press",
+      "winner": true,
+      "description": "A dying man's memories of his father and grandfather in rural New England, a meditation on time and mortality."
+    },
+    {
+      "year": 2010,
+      "category": "Fiction",
+      "title": "In Other Rooms, Other Wonders",
+      "author": "Daniyal Mueenuddin",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "A story collection about social status and expectations within Pakistani culture across different classes."
+    },
+    {
+      "year": 2010,
+      "category": "Fiction",
+      "title": "Love in Infant Monkeys",
+      "author": "Lydia Millet",
+      "publisher": "Soft Skull Press",
+      "winner": false,
+      "description": "A collection of stories featuring celebrities and the animals that cross their paths."
+    },
+    {
+      "year": 2010,
+      "category": "General Nonfiction",
+      "title": "The Dead Hand: The Untold Story of the Cold War Arms Race and Its Dangerous Legacy",
+      "author": "David E. Hoffman",
+      "publisher": "Doubleday",
+      "winner": true,
+      "description": "An examination of the Cold War doomsday competition between superpowers and the continued threat of weapons of mass destruction."
+    },
+    {
+      "year": 2010,
+      "category": "General Nonfiction",
+      "title": "Half the Sky: Turning Oppression into Opportunity for Women Worldwide",
+      "author": "Nicholas D. Kristof and Sheryl WuDunn",
+      "publisher": "Knopf",
+      "winner": false,
+      "description": "A call to action against gender-based violence and oppression of women in the developing world."
+    },
+    {
+      "year": 2010,
+      "category": "General Nonfiction",
+      "title": "The Big Short: Inside the Doomsday Machine",
+      "author": "Michael Lewis",
+      "publisher": "W.W. Norton",
+      "winner": false,
+      "description": "The story of the eccentric traders and investors who foresaw the 2008 financial crisis and bet against the housing market."
+    }
+  ]
+}
