@@ -12,6 +12,7 @@
       "temp": "55°F",
       "conditions": "Cool, overcast",
       "placement": "3rd overall",
+      "ageGroupPercentile": "Top 1-2%",
       "notes": "PR race. 3rd overall."
     },
     {
@@ -26,6 +27,7 @@
       "temp": "42°F",
       "conditions": "Cold, windy",
       "placement": "1st in division",
+      "ageGroupPercentile": "Top 3-5%",
       "notes": "1st in division. Winter race in Texas."
     },
     {
@@ -41,6 +43,7 @@
       "conditions": "Humid, warm",
       "placement": "29th in division",
       "participants": "34,000+",
+      "ageGroupPercentile": "Top 10-12%",
       "notes": "Fun race. 34k+ runners."
     },
     {
@@ -54,6 +57,7 @@
       "isPR": false,
       "temp": "62°F",
       "conditions": "Cloudy, mild",
+      "ageGroupPercentile": "Top 10-12%",
       "notes": "Pacific Northwest scenery."
     },
     {
@@ -67,7 +71,8 @@
       "isPR": false,
       "temp": "58°F",
       "conditions": "Clear, cool",
-      "notes": "First BQ attempt."
+      "ageGroupPercentile": "Top 5-8%",
+      "notes": "First marathon."
     }
   ],
   "ultras": [
@@ -103,7 +108,8 @@
     "marathonPR": "3:09",
     "totalMarathons": 6,
     "bostonQualifications": 3,
-    "weeklyMileage": "50-60"
+    "weeklyMileage": "50-60",
+    "improvement": "20 min from first to PR"
   },
   "worldMajors": {
     "goal": 7,
