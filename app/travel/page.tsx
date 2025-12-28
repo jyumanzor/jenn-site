@@ -37,16 +37,16 @@ export default function TravelPage() {
   };
 
   // Group by region
-  const usLocations = travel.locations.filter(l => l.country === "United States");
+  const usLocations = travel.locations.filter(l => l.country === "United States") as Location[];
   const americasLocations = travel.locations.filter(l =>
     ["Canada", "Mexico"].includes(l.country)
-  );
+  ) as Location[];
   const asiaLocations = travel.locations.filter(l =>
     ["Japan", "Vietnam", "Thailand", "India", "Nepal", "Sri Lanka"].includes(l.country)
-  );
+  ) as Location[];
   const europeLocations = travel.locations.filter(l =>
     ["France", "United Kingdom", "Italy", "Spain", "Switzerland"].includes(l.country)
-  );
+  ) as Location[];
 
   return (
     <div className="bg-cream">
@@ -251,7 +251,7 @@ export default function TravelPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {usLocations
                 .filter(l => l.type === "travel")
-                .map((location: Location, index: number) => {
+                .map((location, index) => {
                   const hasImages = (location as Location).images && (location as Location).images!.length > 0;
                   const styles = [
                     { bg: "panel-gradient-deep", isDark: true },
@@ -338,7 +338,7 @@ export default function TravelPage() {
             }}
           >
             <div className="grid md:grid-cols-3 gap-4">
-              {asiaLocations.map((location: Location, index: number) => {
+              {asiaLocations.map((location, index) => {
                 const hasImages = (location as Location).images && (location as Location).images!.length > 0;
                 const styles = [
                   { bg: "panel-gradient-deep", isDark: true },
@@ -441,7 +441,7 @@ export default function TravelPage() {
               }}
             >
               <div className="grid md:grid-cols-2 gap-4">
-                {americasLocations.map((location: Location, index: number) => {
+                {americasLocations.map((location, index) => {
                   const hasImages = (location as Location).images && (location as Location).images!.length > 0;
                   const styles = [
                     { bg: "panel-gradient-deep", isDark: true },
@@ -540,7 +540,7 @@ export default function TravelPage() {
             }}
           >
             <div className="grid md:grid-cols-2 gap-4">
-              {europeLocations.map((location: Location, index: number) => {
+              {europeLocations.map((location, index) => {
                 const hasImages = (location as Location).images && (location as Location).images!.length > 0;
                 const styles = [
                   { bg: "panel-gradient-deep", isDark: true },
