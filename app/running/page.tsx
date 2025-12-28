@@ -5,7 +5,11 @@ import Link from "next/link";
 import races from "@/data/races.json";
 import RunningSchedule from "@/components/RunningSchedule";
 
-type Marathon = typeof races.marathons[0];
+type Marathon = typeof races.marathons[0] & {
+  placement?: string;
+  ageGroupPercentile?: string;
+  participants?: string;
+};
 type Ultra = typeof races.ultras[0];
 type Upcoming = typeof races.upcoming[0];
 
@@ -353,23 +357,61 @@ export default function RunningPage() {
                             >
                               {race.location} · {formatDate(race.date)}
                             </p>
-                            {/* Weather badge */}
-                            {race.temp && (
-                              <div
-                                className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full text-xs"
-                                style={{
-                                  backgroundColor: style.isDark ? 'rgba(255,255,255,0.1)' : 'rgba(42,60,36,0.1)',
-                                  color: style.isDark ? 'rgba(255,245,235,0.9)' : 'rgba(42,60,36,0.8)'
-                                }}
-                              >
-                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                                </svg>
-                                <span>{race.temp}</span>
-                                <span className="opacity-60">·</span>
-                                <span>{race.conditions}</span>
-                              </div>
-                            )}
+                            {/* Badges row */}
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {/* Weather badge */}
+                              {race.temp && (
+                                <div
+                                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs"
+                                  style={{
+                                    backgroundColor: style.isDark ? 'rgba(255,255,255,0.1)' : 'rgba(42,60,36,0.1)',
+                                    color: style.isDark ? 'rgba(255,245,235,0.9)' : 'rgba(42,60,36,0.8)'
+                                  }}
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                  </svg>
+                                  <span>{race.temp}</span>
+                                  <span className="opacity-60">·</span>
+                                  <span>{race.conditions}</span>
+                                </div>
+                              )}
+                              {/* Placement badge */}
+                              {(race as Marathon).placement && (
+                                <div
+                                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
+                                  style={{
+                                    backgroundColor: '#d4ed39',
+                                    color: '#2a3c24'
+                                  }}
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                  </svg>
+                                  <span>{(race as Marathon).placement}</span>
+                                </div>
+                              )}
+                              {/* Percentile badge with info */}
+                              {(race as Marathon).ageGroupPercentile && (
+                                <div
+                                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs group relative cursor-help"
+                                  style={{
+                                    backgroundColor: style.isDark ? 'rgba(255,203,105,0.2)' : 'rgba(42,60,36,0.1)',
+                                    color: style.isDark ? '#ffcb69' : '#2a3c24'
+                                  }}
+                                >
+                                  <span>{(race as Marathon).ageGroupPercentile}</span>
+                                  <svg className="w-3 h-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  {/* Tooltip */}
+                                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-deep-forest text-cream text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-lg">
+                                    Based on {race.time} finish time for women 25-29
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-deep-forest"></div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
                           </div>
                           <div className="text-left md:text-right">
                             <p
@@ -583,7 +625,7 @@ export default function RunningPage() {
               <p className="light-bg-label mb-4">Performance</p>
               <h2 className="light-bg-header text-2xl mb-4">By the numbers.</h2>
               <p className="light-bg-body text-sm leading-relaxed">
-                Stats from completed marathons. Age division rankings coming soon.
+                Stats from completed marathons.
               </p>
             </div>
             <div className="md:col-span-8">
@@ -594,40 +636,39 @@ export default function RunningPage() {
                   <p className="dark-bg-body text-xs mt-1">Geneva 2025</p>
                 </div>
                 <div className="panel-gradient-olive">
-                  <p className="dark-bg-label mb-1">Avg Pace</p>
-                  <p className="font-display text-3xl text-ivory">7:14</p>
-                  <p className="dark-bg-body text-xs mt-1">min/mile</p>
+                  <p className="dark-bg-label mb-1">Best Finish</p>
+                  <p className="font-display text-3xl text-ivory">3rd</p>
+                  <p className="dark-bg-body text-xs mt-1">overall female</p>
                 </div>
                 <div className="panel-gradient-sage">
-                  <p className="light-bg-label mb-1">BQ Times</p>
-                  <p className="font-display text-3xl text-deep-forest">4</p>
-                  <p className="light-bg-body text-xs mt-1">Boston qualifiers</p>
+                  <p className="light-bg-label mb-1">Division Wins</p>
+                  <p className="font-display text-3xl text-deep-forest">1</p>
+                  <p className="light-bg-body text-xs mt-1">1st in age group</p>
                 </div>
                 <div className="panel-gradient-warm-neutral">
                   <p className="light-bg-label mb-1">Improvement</p>
-                  <p className="font-display text-3xl text-deep-forest">38:49</p>
-                  <p className="light-bg-body text-xs mt-1">from first to PR</p>
+                  <p className="font-display text-3xl text-deep-forest">20:00</p>
+                  <p className="light-bg-body text-xs mt-1">first to PR</p>
                 </div>
               </div>
 
-              {/* Age Division Placeholder */}
+              {/* Age Group Percentiles */}
               <div className="mt-6 rounded-xl p-6" style={{ backgroundColor: '#F5E6D3' }}>
-                <p className="light-bg-label mb-4">Age Division Rankings</p>
+                <p className="light-bg-label mb-4">Age Group Percentiles</p>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
-                    <p className="font-display text-2xl text-deep-forest">—</p>
-                    <p className="light-bg-body text-xs mt-1">Best Overall</p>
+                    <p className="font-display text-2xl text-deep-forest">Top 1-2%</p>
+                    <p className="light-bg-body text-xs mt-1">Best (PR)</p>
                   </div>
                   <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
-                    <p className="font-display text-2xl text-deep-forest">—</p>
-                    <p className="light-bg-body text-xs mt-1">Best in Division</p>
+                    <p className="font-display text-2xl text-deep-forest">Top 5%</p>
+                    <p className="light-bg-body text-xs mt-1">Average</p>
                   </div>
                   <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
-                    <p className="font-display text-2xl text-deep-forest">—</p>
-                    <p className="light-bg-body text-xs mt-1">Avg Percentile</p>
+                    <p className="font-display text-2xl text-deep-forest">3</p>
+                    <p className="light-bg-body text-xs mt-1">BQ races</p>
                   </div>
                 </div>
-                <p className="text-deep-forest/50 text-xs mt-4 italic">Add your age division rankings to fill in these stats</p>
               </div>
             </div>
           </div>
