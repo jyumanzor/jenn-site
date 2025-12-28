@@ -211,19 +211,19 @@ export default function RunningPage() {
       <section className="py-16 bg-ivory">
         <div className="container-editorial">
           <div className="grid md:grid-cols-4 gap-4">
-            <div className="panel-gradient-deep">
+            <div className="panel-gradient-deep text-center">
               <p className="font-display text-4xl text-ivory">{races.stats.marathonPR}</p>
               <p className="text-tan text-xs uppercase tracking-wide mt-2">Marathon PR</p>
             </div>
-            <div className="panel-gradient-olive">
+            <div className="panel-gradient-olive text-center">
               <p className="font-display text-4xl text-gold">{races.stats.totalMarathons}</p>
               <p className="text-cream/90 text-xs uppercase tracking-wide mt-2">Marathons</p>
             </div>
-            <div className="panel-gradient-sage">
+            <div className="panel-gradient-sage text-center">
               <p className="font-display text-4xl text-deep-forest">{races.stats.bostonQualifications}</p>
               <p className="text-deep-forest/80 text-xs uppercase tracking-wide mt-2">Boston Qualifiers</p>
             </div>
-            <div className="panel-gradient-forest">
+            <div className="panel-gradient-forest text-center">
               <p className="font-display text-4xl text-ivory">{races.worldMajors.completed.length}/{races.worldMajors.goal}</p>
               <p className="text-tan text-xs uppercase tracking-wide mt-2">World Majors</p>
             </div>
