@@ -214,29 +214,36 @@ function getWeekSchedule(weekStart: Date): WeekSchedule {
   return schedule;
 }
 
-function getDefaultWeek(): WeekSchedule {
-  return getWeekSchedule(getWeekStart(new Date()));
+function getDefaultWeek(weekStart: Date): WeekSchedule {
+  return getWeekSchedule(weekStart);
 }
 
 export default function RunningSchedule() {
   const [currentWeekStart, setCurrentWeekStart] = useState<Date>(getWeekStart(new Date()));
-  const [schedule, setSchedule] = useState<WeekSchedule>(getDefaultWeek());
+  const [schedule, setSchedule] = useState<WeekSchedule>(() => getDefaultWeek(getWeekStart(new Date())));
   const [editingDay, setEditingDay] = useState<string | null>(null);
+  const [userOverrides, setUserOverrides] = useState<Record<string, WeekSchedule>>({});
 
-  // Load from localStorage on mount
+  // Load user overrides from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem(`schedule-${currentWeekStart.toISOString().split('T')[0]}`);
+    const saved = localStorage.getItem('training-overrides');
     if (saved) {
-      setSchedule(JSON.parse(saved));
-    } else {
-      setSchedule(getDefaultWeek());
+      setUserOverrides(JSON.parse(saved));
     }
-  }, [currentWeekStart]);
+  }, []);
 
-  // Save to localStorage on change
+  // Update schedule when week changes
   useEffect(() => {
-    localStorage.setItem(`schedule-${currentWeekStart.toISOString().split('T')[0]}`, JSON.stringify(schedule));
-  }, [schedule, currentWeekStart]);
+    const weekKey = currentWeekStart.toISOString().split('T')[0];
+    const baseSchedule = getDefaultWeek(currentWeekStart);
+
+    // Apply user overrides if any exist for this week
+    if (userOverrides[weekKey]) {
+      setSchedule(userOverrides[weekKey]);
+    } else {
+      setSchedule(baseSchedule);
+    }
+  }, [currentWeekStart, userOverrides]);
 
   const navigateWeek = (direction: number) => {
     const newDate = new Date(currentWeekStart);
@@ -245,25 +252,36 @@ export default function RunningSchedule() {
     setEditingDay(null);
   };
 
+  const saveOverride = (newSchedule: WeekSchedule) => {
+    const weekKey = currentWeekStart.toISOString().split('T')[0];
+    const newOverrides = { ...userOverrides, [weekKey]: newSchedule };
+    setUserOverrides(newOverrides);
+    localStorage.setItem('training-overrides', JSON.stringify(newOverrides));
+  };
+
   const updateDayType = (day: string, type: RunType) => {
-    setSchedule(prev => ({
-      ...prev,
+    const newSchedule = {
+      ...schedule,
       [day]: {
         type,
         miles: runTypes[type].defaultMiles
       }
-    }));
+    };
+    setSchedule(newSchedule);
+    saveOverride(newSchedule);
     setEditingDay(null);
   };
 
   const updateDayMiles = (day: string, miles: number) => {
-    setSchedule(prev => ({
-      ...prev,
+    const newSchedule = {
+      ...schedule,
       [day]: {
-        ...prev[day],
+        ...schedule[day],
         miles: Math.max(0, miles)
       }
-    }));
+    };
+    setSchedule(newSchedule);
+    saveOverride(newSchedule);
   };
 
   const weekEndDate = new Date(currentWeekStart);
