@@ -333,7 +333,8 @@ export default function WatchingPage() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {vibePlaylists.map((playlist: Playlist) => {
-                        const isDark = ['#2a3c24', '#4e6041', '#546e40', '#677955'].includes(playlist.color);
+                        const colorLower = playlist.color.toLowerCase();
+                        const isDark = ['#2a3c24', '#3b412d', '#4e6041', '#546e40', '#677955'].includes(colorLower);
                         return (
                           <div
                             key={playlist.id}

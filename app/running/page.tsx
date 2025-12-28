@@ -154,7 +154,7 @@ const worldMajors: WorldMajor[] = [
 
 const statusColors = {
   completed: { bg: "panel-gradient-deep", text: "text-ivory", badge: "bg-gold text-deep-forest", label: "Completed" },
-  registered: { bg: "panel-gradient-olive", text: "text-ivory", badge: "bg-cream text-deep-forest", label: "Registered" },
+  registered: { bg: "panel-gradient-olive", text: "text-ivory", badge: "bg-[#d4ed39] text-deep-forest", label: "Registered" },
   qualified: { bg: "panel-gradient-sage", text: "text-deep-forest", badge: "bg-deep-forest text-cream", label: "Qualified" },
   lottery: { bg: "panel-gradient-warm-neutral", text: "text-deep-forest", badge: "bg-olive text-cream", label: "Lottery" },
   special: { bg: "bg-sand", text: "text-deep-forest", badge: "bg-terracotta text-cream", label: "Special Entry" }
@@ -302,16 +302,16 @@ export default function RunningPage() {
                 {[...races.marathons]
                   .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
                   .map((race: Marathon, index: number, sortedArr) => {
-                    // Gradient from deep forest (oldest) → sage → gold (newest)
+                    // Gradient from deep forest (oldest) → olive → sage → cream (newest)
                     const gradients = [
-                      { bg: 'linear-gradient(135deg, #2a3c24 0%, #36482e 100%)', isDark: true },
-                      { bg: 'linear-gradient(135deg, #36482e 0%, #4e6041 100%)', isDark: true },
-                      { bg: 'linear-gradient(135deg, #4e6041 0%, #677955 100%)', isDark: true },
-                      { bg: 'linear-gradient(135deg, #677955 0%, #8b9d72 100%)', isDark: true },
-                      { bg: 'linear-gradient(135deg, #8b9d72 0%, #97a97c 100%)', isDark: false },
-                      { bg: 'linear-gradient(135deg, #97a97c 0%, #b29e56 100%)', isDark: false },
-                      { bg: 'linear-gradient(135deg, #b29e56 0%, #ecc064 100%)', isDark: false },
-                      { bg: 'linear-gradient(135deg, #ecc064 0%, #ffcb69 100%)', isDark: false },
+                      { bg: 'linear-gradient(135deg, #2a3c24 0%, #3B412D 100%)', isDark: true },
+                      { bg: 'linear-gradient(135deg, #3B412D 0%, #4a5539 100%)', isDark: true },
+                      { bg: 'linear-gradient(135deg, #4a5539 0%, #546E40 100%)', isDark: true },
+                      { bg: 'linear-gradient(135deg, #546E40 0%, #6b8a53 100%)', isDark: true },
+                      { bg: 'linear-gradient(135deg, #6b8a53 0%, #97a97c 100%)', isDark: false },
+                      { bg: 'linear-gradient(135deg, #97a97c 0%, #b5c4a0 100%)', isDark: false },
+                      { bg: 'linear-gradient(135deg, #b5c4a0 0%, #F7E5DA 100%)', isDark: false },
+                      { bg: 'linear-gradient(135deg, #F7E5DA 0%, #FFF5EB 100%)', isDark: false },
                     ];
                     const gradientIndex = Math.floor((index / sortedArr.length) * gradients.length);
                     const style = gradients[Math.min(gradientIndex, gradients.length - 1)];
@@ -530,8 +530,9 @@ export default function RunningPage() {
               <p className="light-bg-label mb-4">World Majors</p>
               <h2 className="light-bg-header text-2xl mb-4">The checklist.</h2>
               <p className="light-bg-body text-sm leading-relaxed">
-                Six races. 1 down, 5 to go. Click any race to learn more.
+                Seven races. 0 down, 7 to go.
               </p>
+              <p className="text-xs text-olive/60 mt-2 italic">Click any race for details.</p>
             </div>
             <div className="md:col-span-8">
               {/* Status Legend */}
@@ -611,18 +612,18 @@ export default function RunningPage() {
               </div>
 
               {/* Age Division Placeholder */}
-              <div className="mt-6 rounded-xl p-6" style={{ backgroundColor: '#ffdf9c' }}>
+              <div className="mt-6 rounded-xl p-6" style={{ backgroundColor: '#F5E6D3' }}>
                 <p className="light-bg-label mb-4">Age Division Rankings</p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.6)' }}>
+                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
                     <p className="font-display text-2xl text-deep-forest">—</p>
                     <p className="light-bg-body text-xs mt-1">Best Overall</p>
                   </div>
-                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.6)' }}>
+                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
                     <p className="font-display text-2xl text-deep-forest">—</p>
                     <p className="light-bg-body text-xs mt-1">Best in Division</p>
                   </div>
-                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.6)' }}>
+                  <div className="rounded-lg p-4 text-center" style={{ backgroundColor: 'rgba(255,245,235,0.7)' }}>
                     <p className="font-display text-2xl text-deep-forest">—</p>
                     <p className="light-bg-body text-xs mt-1">Avg Percentile</p>
                   </div>

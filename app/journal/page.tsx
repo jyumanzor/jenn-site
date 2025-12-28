@@ -21,55 +21,38 @@ export default function JournalPage() {
 
       <hr className="rule" />
 
-      {/* Entries - gradient flow from deep green to gold */}
+      {/* Entries */}
       <section className="py-12">
         <div className="container-editorial">
           {journal.entries.map((entry, index) => {
-            // Top-to-bottom gradient flow: deep greens → mid greens → golds
+            // Cycle through: sage, olive (dark), warm-neutral
             const styles = [
-              { bg: 'linear-gradient(135deg, #2a3c24 0%, #36482e 100%)', isDark: true },      // 1. Deepest forest
-              { bg: 'linear-gradient(135deg, #36482e 0%, #4e6041 100%)', isDark: true },      // 2. Forest to olive
-              { bg: 'linear-gradient(135deg, #4e6041 0%, #677955 100%)', isDark: true },      // 3. Olive to moss
-              { bg: 'linear-gradient(135deg, #677955 0%, #8b9d72 100%)', isDark: true },      // 4. Moss to sage
-              { bg: 'linear-gradient(135deg, #8b9d72 0%, #97a97c 100%)', isDark: false },     // 5. Sage blend
+              { bg: "panel-gradient-sage", isDark: false },
+              { bg: "panel-gradient-olive", isDark: true },
+              { bg: "panel-gradient-warm-neutral", isDark: false }
             ];
-            const style = styles[index % styles.length];
+            const style = styles[index % 3];
             return (
               <article key={entry.id} className="mb-4">
-                <div className="rounded-xl p-6" style={{ background: style.bg }}>
+                <div className={`rounded-xl p-6 ${style.bg}`}>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span
-                      className="text-xs uppercase tracking-wider px-2 py-0.5 rounded"
-                      style={{
-                        backgroundColor: style.isDark ? 'rgba(255,255,255,0.15)' : 'rgba(42,60,36,0.12)',
-                        color: style.isDark ? '#fff5eb' : '#2a3c24'
-                      }}
-                    >
+                    <span className={`text-xs uppercase tracking-wider px-2 py-0.5 rounded ${style.isDark ? "bg-white/15 text-cream" : "bg-deep-forest/12 text-deep-forest"}`}>
                       {entry.category}
                     </span>
-                    <span
-                      className="text-xs"
-                      style={{ color: style.isDark ? 'rgba(255,245,235,0.5)' : 'rgba(42,60,36,0.5)' }}
-                    >
+                    <span className={`text-xs ${style.isDark ? "text-cream/50" : "text-deep-forest/50"}`}>
                       {entry.date}
                     </span>
                   </div>
-                  <h2
-                    className="font-display text-xl mb-3"
-                    style={{ color: style.isDark ? '#fff5eb' : '#2a3c24' }}
-                  >
+                  <h2 className={`font-display text-xl mb-3 ${style.isDark ? "text-cream" : "text-deep-forest"}`}>
                     {entry.title}
                   </h2>
-                  <p
-                    className="text-sm leading-relaxed mb-4 reading-width"
-                    style={{ color: style.isDark ? 'rgba(255,245,235,0.8)' : 'rgba(42,60,36,0.7)' }}
-                  >
+                  <p className={`text-sm leading-relaxed mb-4 reading-width ${style.isDark ? "text-cream/70" : "text-deep-forest/70"}`}>
                     {entry.excerpt}
                   </p>
                   <Link
                     href={`/journal/${entry.id}`}
-                    className="inline-flex items-center gap-1.5 text-sm transition-opacity hover:opacity-70"
-                    style={{ color: style.isDark ? '#d4ed39' : '#546e40' }}
+                    className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-full transition-all bg-deep-forest hover:bg-olive"
+                    style={{ color: '#d4ed39' }}
                   >
                     Read more
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,38 +82,31 @@ export default function JournalPage() {
 
           <div className="grid md:grid-cols-2 gap-3">
             {journal.himymQuotes.map((quote, index) => {
-              // Continues the gradient: olive-yellows → golds → warm creams (8 quotes)
-              const gradients = [
-                { bg: 'linear-gradient(135deg, #9f9251 0%, #b29e56 100%)' },   // 1. Olive-gold
-                { bg: 'linear-gradient(135deg, #b29e56 0%, #c5a95b 100%)' },   // 2. Bronze
-                { bg: 'linear-gradient(135deg, #c5a95b 0%, #d9b45f 100%)' },   // 3. Antique gold
-                { bg: 'linear-gradient(135deg, #d9b45f 0%, #ecc064 100%)' },   // 4. Gold
-                { bg: 'linear-gradient(135deg, #ecc064 0%, #ffcb69 100%)' },   // 5. Bright gold
-                { bg: 'linear-gradient(135deg, #ffcb69 0%, #ffd475 100%)' },   // 6. Light gold
-                { bg: 'linear-gradient(135deg, #ffd475 0%, #ffdf9c 100%)' },   // 7. Pale gold
-                { bg: 'linear-gradient(135deg, #ffdf9c 0%, #fff5eb 100%)' },   // 8. Cream
+              // Mixed pattern to avoid color blocking on left/right columns
+              // For 2-col grid: 0=sage, 1=warm, 2=olive, 3=sage, 4=warm, 5=olive, 6=sage, 7=warm
+              const styles = [
+                { bg: "panel-gradient-sage", isDark: false },
+                { bg: "panel-gradient-warm-neutral", isDark: false },
+                { bg: "panel-gradient-olive", isDark: true },
+                { bg: "panel-gradient-sage", isDark: false },
+                { bg: "panel-gradient-warm-neutral", isDark: false },
+                { bg: "panel-gradient-olive", isDark: true },
+                { bg: "panel-gradient-sage", isDark: false },
+                { bg: "panel-gradient-warm-neutral", isDark: false }
               ];
-              const style = gradients[index % gradients.length];
+              const style = styles[index % styles.length];
               return (
                 <div
                   key={index}
-                  className="rounded-xl p-5"
-                  style={{ background: style.bg }}
+                  className={`rounded-xl p-5 ${style.bg}`}
                 >
                   <div className="flex gap-3">
                     <span
-                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs"
-                      style={{
-                        backgroundColor: 'rgba(42,60,36,0.15)',
-                        color: '#2a3c24'
-                      }}
+                      className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs ${style.isDark ? "bg-white/20 text-cream" : "bg-deep-forest/15 text-deep-forest"}`}
                     >
                       {index + 1}
                     </span>
-                    <blockquote
-                      className="text-sm leading-relaxed"
-                      style={{ color: '#2a3c24' }}
-                    >
+                    <blockquote className={`text-sm leading-relaxed ${style.isDark ? "text-cream" : "text-deep-forest"}`}>
                       &ldquo;{quote}&rdquo;
                     </blockquote>
                   </div>

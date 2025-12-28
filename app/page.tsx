@@ -45,11 +45,11 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Light panel */}
-            <div className="panel-sand">
-              <span className="light-bg-label mb-3 block">03</span>
-              <h3 className="light-bg-header text-lg mb-2">Explore</h3>
-              <p className="light-bg-body text-sm leading-snug">
+            {/* Lime accent panel */}
+            <div className="rounded-xl p-5 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #b5c4a0 100%)' }}>
+              <span className="mb-3 block text-xs uppercase tracking-wider font-medium" style={{ color: '#2a3c24' }}>03</span>
+              <h3 className="text-lg mb-2" style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#2a3c24' }}>Explore</h3>
+              <p className="text-sm leading-snug" style={{ color: 'rgba(42,60,36,0.8)' }}>
                 Cities, restaurants, films.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function Home() {
                   <p className="dark-bg-label mt-1">PR</p>
                 </div>
                 <div className="panel-gradient-sage p-4 text-center">
-                  <p className="light-bg-header text-3xl">5</p>
+                  <p className="light-bg-header text-3xl">6</p>
                   <p className="light-bg-label mt-1">Marathons</p>
                 </div>
                 <div className="bg-ivory rounded-lg p-4 text-center">
@@ -178,8 +178,29 @@ export default function Home() {
               <p className="light-bg-body text-sm leading-snug mb-4">
                 11 countries. Places that shaped me.
               </p>
-              <Link href="/travel" className="btn-secondary text-sm">
-                View all →
+              <Link
+                href="/travel"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 group"
+                style={{
+                  background: 'linear-gradient(135deg, #2a3c24 0%, #4e6041 100%)',
+                  color: '#d4ed39',
+                  boxShadow: '0 2px 8px rgba(42,60,36,0.3)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #d4ed39 0%, #b29e56 100%)';
+                  e.currentTarget.style.color = '#2a3c24';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(212,237,57,0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #2a3c24 0%, #4e6041 100%)';
+                  e.currentTarget.style.color = '#d4ed39';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(42,60,36,0.3)';
+                }}
+              >
+                <span>View all</span>
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
             <div className="md:col-span-8">

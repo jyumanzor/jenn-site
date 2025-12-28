@@ -6,7 +6,7 @@
       "country": "United States",
       "coordinates": { "lat": 38.9072, "lng": -77.0369 },
       "type": "home",
-      "visits": "2023-present",
+      "visits": "2019-present",
       "notes": "Home base. FTI Consulting.",
       "highlights": ["Georgetown", "Dupont Circle", "U Street"]
     },
@@ -16,9 +16,15 @@
       "country": "United States",
       "coordinates": { "lat": 41.8781, "lng": -87.6298 },
       "type": "roots",
-      "visits": "2017-2021, 2025",
+      "visits": "2017-2021, May 2025, October 2026",
       "notes": "UChicago years. Still coming back.",
-      "highlights": ["Hyde Park", "The Loop"]
+      "highlights": ["Hyde Park", "The Loop"],
+      "images": [
+        "chicago/chicago-01.jpeg",
+        "chicago/chicago-02.jpeg",
+        "chicago/chicago-03.jpeg",
+        "chicago/chicago-04.jpeg"
+      ]
     },
     {
       "id": "boston",
@@ -26,7 +32,7 @@
       "country": "United States",
       "coordinates": { "lat": 42.3601, "lng": -71.0589 },
       "type": "race",
-      "visits": "April 2026",
+      "visits": "July 2025, April 2026",
       "notes": "Boston Marathon. Registered.",
       "highlights": ["Heartbreak Hill", "Boylston Street finish"]
     },
@@ -82,7 +88,7 @@
       "country": "United States",
       "coordinates": { "lat": 40.7128, "lng": -74.0060 },
       "type": "travel",
-      "visits": "2024, 2025",
+      "visits": "2024, February 2025",
       "notes": "Museums, theater, food.",
       "highlights": ["Manhattan", "Museums"]
     },
@@ -112,7 +118,7 @@
       "country": "United States",
       "coordinates": { "lat": 32.7157, "lng": -117.1611 },
       "type": "travel",
-      "visits": "2025",
+      "visits": "July 2025",
       "notes": "Summer in Southern California.",
       "highlights": ["Beaches", "Gaslamp Quarter"]
     },
@@ -164,7 +170,13 @@
       "type": "travel",
       "visits": "July 2025",
       "notes": "Southern hospitality.",
-      "highlights": ["Midtown", "Piedmont Park"]
+      "highlights": ["Midtown", "Piedmont Park"],
+      "images": [
+        "atlanta/atlanta-01.jpeg",
+        "atlanta/atlanta-02.jpeg",
+        "atlanta/atlanta-03.jpeg",
+        "atlanta/atlanta-04.jpeg"
+      ]
     },
     {
       "id": "miami",
@@ -172,9 +184,15 @@
       "country": "United States",
       "coordinates": { "lat": 25.7617, "lng": -80.1918 },
       "type": "travel",
-      "visits": "2022, 2025",
+      "visits": "2022, August 2025",
       "notes": "Beach, Cuban food.",
-      "highlights": ["South Beach", "Wynwood", "Little Havana"]
+      "highlights": ["South Beach", "Wynwood", "Little Havana"],
+      "images": [
+        "miami/miami-01.jpeg",
+        "miami/miami-02.jpeg",
+        "miami/miami-03.jpeg",
+        "miami/miami-04.jpeg"
+      ]
     },
     {
       "id": "maine",
@@ -202,7 +220,7 @@
       "country": "United States",
       "coordinates": { "lat": 39.9526, "lng": -75.1652 },
       "type": "travel",
-      "visits": "2023, 2025",
+      "visits": "2023, August 2025",
       "notes": "Day trips from DC.",
       "highlights": ["Old City", "Art Museum"]
     },
@@ -246,7 +264,7 @@
       "country": "Japan",
       "coordinates": { "lat": 35.0116, "lng": 135.7681 },
       "type": "travel",
-      "visits": "2025",
+      "visits": "October 2025",
       "notes": "Temples, shrines, tea.",
       "highlights": ["Fushimi Inari", "Gion", "Bamboo Grove"],
       "images": [
@@ -255,7 +273,12 @@
         "kyoto/BB63F833-DBBF-4E52-AEA8-DD781F11F481.jpeg",
         "kyoto/9DE55D14-CE7E-4E0B-BC28-363AD8D0C2C7.jpeg",
         "kyoto/E84BECF3-5A2D-47EE-BAF2-412FEBAC9D52.jpeg",
-        "kyoto/D38CFE83-C514-453D-8FCA-60B2F4E134E6.jpeg"
+        "kyoto/D38CFE83-C514-453D-8FCA-60B2F4E134E6.jpeg",
+        "kyoto/1999C0CA-87E3-41DC-A308-6F94CDC9EC6A_4_5005_c.jpeg",
+        "kyoto/4D14EA91-D725-44D8-B215-6889DBBA193E_4_5005_c.jpeg",
+        "kyoto/68C30565-0FBD-44CE-ACD5-F3291EAC9F2A_4_5005_c.jpeg",
+        "kyoto/7C51F28B-DF3E-4A4A-8F7C-5F838F26E280_4_5005_c.jpeg",
+        "kyoto/F143A52B-6586-41D1-A996-FD26772BA8B8_4_5005_c.jpeg"
       ],
       "extendedNotes": "Fushimi Inari (10,000 torii gates), Arashiyama bamboo grove, Gion district. Day trips from Osaka."
     },
@@ -265,14 +288,15 @@
       "country": "Japan",
       "coordinates": { "lat": 34.6937, "lng": 135.5023 },
       "type": "travel",
-      "visits": "2025",
+      "visits": "October 2025",
       "notes": "Food capital of Japan.",
       "highlights": ["Dotonbori", "Street Food"],
       "images": [
         "osaka/CB5FF304-5FB2-4438-B0AE-0FF1147C0529.jpeg",
         "osaka/3B55F406-49D2-4E53-9F17-03A618E5A567.jpeg",
         "osaka/980EE59A-0327-4DD2-ABB5-7110DCD38182.jpeg",
-        "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg"
+        "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg",
+        "osaka/8307BB4B-A664-4A82-834B-4F1E7B2D4029_4_5005_c.jpeg"
       ],
       "extendedNotes": "Dotonbori at night. Takoyaki, okonomiyaki, kushikatsu. Street food is the draw."
     },
@@ -280,9 +304,9 @@
       "id": "hiroshima",
       "city": "Hiroshima",
       "country": "Japan",
-      "coordinates": { "lat": 34.3853, "lng": 132.4553 },
+      "coordinates": { "lat": 34.6937, "lng": 132.4553 },
       "type": "travel",
-      "visits": "2025",
+      "visits": "October 2025",
       "notes": "Peace Memorial.",
       "highlights": ["Peace Park", "Miyajima"],
       "images": [
@@ -296,9 +320,17 @@
       "country": "France",
       "coordinates": { "lat": 48.8566, "lng": 2.3522 },
       "type": "travel",
-      "visits": "2025",
+      "visits": "March 2025",
       "notes": "Seine, museums, cafes.",
-      "highlights": ["Seine", "Museums", "Cafes"]
+      "highlights": ["Seine", "Museums", "Cafes"],
+      "images": [
+        "paris/IMG_1002.jpeg",
+        "paris/IMG_1034.jpeg",
+        "paris/IMG_1152.jpeg",
+        "paris/IMG_1222.jpeg",
+        "paris/IMG_1582.jpeg",
+        "paris/IMG_1700.jpeg"
+      ]
     },
     {
       "id": "london",
@@ -308,7 +340,17 @@
       "type": "travel",
       "visits": "March 2025",
       "notes": "V&A, West End, pubs.",
-      "highlights": ["West End", "Museums", "Pubs"]
+      "highlights": ["West End", "Museums", "Pubs"],
+      "images": [
+        "london/london-01.jpeg",
+        "london/london-02.jpeg",
+        "london/london-03.jpeg",
+        "london/london-04.jpeg",
+        "london/london-05.jpeg",
+        "london/london-06.jpeg",
+        "london/london-07.jpeg",
+        "london/london-08.jpeg"
+      ]
     },
     {
       "id": "spain",
@@ -336,9 +378,16 @@
       "country": "Canada",
       "coordinates": { "lat": 43.6532, "lng": -79.3832 },
       "type": "travel",
-      "visits": "August-September 2025",
+      "visits": "September 2025",
       "notes": "Toronto Islands, food scene.",
-      "highlights": ["Toronto Islands", "Kensington Market", "CN Tower"]
+      "highlights": ["Toronto Islands", "Kensington Market", "CN Tower"],
+      "images": [
+        "toronto/toronto-01.jpeg",
+        "toronto/toronto-02.jpeg",
+        "toronto/toronto-03.jpeg",
+        "toronto/toronto-04.jpeg",
+        "toronto/toronto-05.jpeg"
+      ]
     },
     {
       "id": "hanoi",

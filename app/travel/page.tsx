@@ -64,6 +64,7 @@ export default function TravelPage() {
             <p className="light-bg-body leading-relaxed reading-width">
               {travel.stats.cities} cities across {travel.stats.countries} countries. Trips since 2021.
             </p>
+            <p className="text-xs text-olive/60 mt-3 italic">Click any city with photos to see more.</p>
           </div>
         </div>
       </section>
@@ -217,7 +218,7 @@ export default function TravelPage() {
                 United States
               </h2>
               <p className="light-bg-body text-sm leading-relaxed">
-                {usLocations.filter(l => l.type === "travel").length} cities.
+                {usLocations.filter(l => l.type === "travel" || l.type === "race").length} cities.
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -225,7 +226,7 @@ export default function TravelPage() {
                 className="text-xs px-2 py-0.5 rounded-full"
                 style={{ backgroundColor: 'rgba(42,60,36,0.1)', color: '#2a3c24' }}
               >
-                {usLocations.filter(l => l.type === "travel").length} places
+                {usLocations.filter(l => l.type === "travel" || l.type === "race").length} places
               </span>
               <svg
                 className="w-5 h-5 transition-transform duration-200"
@@ -250,20 +251,16 @@ export default function TravelPage() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {usLocations
-                .filter(l => l.type === "travel")
+                .filter(l => l.type === "travel" || l.type === "race")
                 .map((location, index) => {
                   const hasImages = (location as Location).images && (location as Location).images!.length > 0;
+                  // Cycle through: sage, olive (dark), warm-neutral
                   const styles = [
-                    { bg: "panel-gradient-deep", isDark: true },
-                    { bg: "panel-gradient-olive", isDark: true },
-                    { bg: "bg-gold/20 border border-gold/30", isDark: false },
                     { bg: "panel-gradient-sage", isDark: false },
-                    { bg: "bg-ivory border border-olive/15", isDark: false },
-                    { bg: "panel-gradient-warm-neutral", isDark: false },
-                    { bg: "bg-sage/30", isDark: false },
-                    { bg: "bg-cream border border-gold/20", isDark: false }
+                    { bg: "panel-gradient-olive", isDark: true },
+                    { bg: "panel-gradient-warm-neutral", isDark: false }
                   ];
-                  const style = styles[index % styles.length];
+                  const style = styles[index % 3];
                   return (
                     <button
                       key={location.id}
@@ -278,11 +275,15 @@ export default function TravelPage() {
                       >
                         {location.city.split(",")[0]}
                       </h3>
-                      <p className={`text-xs mt-2 leading-relaxed ${style.isDark ? "text-cream/70" : "text-charcoal/70"}`}>{location.notes}</p>
+                      <p className={`text-xs mt-2 leading-relaxed ${style.isDark ? "text-cream/70" : "text-deep-forest/70"}`}>{location.notes}</p>
                       {hasImages && (
-                        <p className={`text-xs mt-2 ${style.isDark ? "text-gold" : "text-olive"}`}>
-                          {(location as Location).images!.length} photos →
-                        </p>
+                        <span className="inline-flex items-center gap-1.5 mt-3 px-2.5 py-1 rounded-full text-xs" style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}>
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {(location as Location).images!.length} photos
+                        </span>
                       )}
                     </button>
                   );
@@ -340,13 +341,17 @@ export default function TravelPage() {
             <div className="grid md:grid-cols-3 gap-4">
               {asiaLocations.map((location, index) => {
                 const hasImages = (location as Location).images && (location as Location).images!.length > 0;
+                // Mixed pattern to avoid column color blocking in 3-col grid
                 const styles = [
-                  { bg: "panel-gradient-deep", isDark: true },
-                  { bg: "panel-gradient-sage", isDark: false },
-                  { bg: "bg-ivory border border-olive/20", isDark: false },
-                  { bg: "panel-gradient-olive", isDark: true },
-                  { bg: "bg-sage/20", isDark: false },
-                  { bg: "panel-gradient-warm-neutral", isDark: false }
+                  { bg: "panel-gradient-sage", isDark: false },      // 0
+                  { bg: "panel-gradient-warm-neutral", isDark: false }, // 1
+                  { bg: "panel-gradient-olive", isDark: true },      // 2
+                  { bg: "panel-gradient-olive", isDark: true },      // 3
+                  { bg: "panel-gradient-sage", isDark: false },      // 4
+                  { bg: "panel-gradient-warm-neutral", isDark: false }, // 5
+                  { bg: "panel-gradient-warm-neutral", isDark: false }, // 6
+                  { bg: "panel-gradient-olive", isDark: true },      // 7
+                  { bg: "panel-gradient-sage", isDark: false },      // 8
                 ];
                 const style = styles[index % styles.length];
                 return (
@@ -382,9 +387,13 @@ export default function TravelPage() {
                       ))}
                     </div>
                     {hasImages && (
-                      <p className={`text-xs mt-3 ${style.isDark ? "text-gold" : "text-olive"}`}>
-                        {(location as Location).images!.length} photos →
-                      </p>
+                      <span className="inline-flex items-center gap-1.5 mt-3 px-2.5 py-1 rounded-full text-xs" style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}>
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {(location as Location).images!.length} photos
+                      </span>
                     )}
                   </button>
                 );
@@ -443,19 +452,29 @@ export default function TravelPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 {americasLocations.map((location, index) => {
                   const hasImages = (location as Location).images && (location as Location).images!.length > 0;
+                  // Cycle through: sage, olive (dark), warm-neutral
                   const styles = [
-                    { bg: "panel-gradient-deep", isDark: true },
-                    { bg: "panel-gradient-sage", isDark: false }
+                    { bg: "panel-gradient-sage", isDark: false },
+                    { bg: "panel-gradient-olive", isDark: true },
+                    { bg: "panel-gradient-warm-neutral", isDark: false }
                   ];
-                  const style = styles[index % styles.length];
+                  const style = styles[index % 3];
                   return (
                     <button
                       key={location.id}
                       onClick={() => hasImages ? setSelectedLocation(location as Location) : null}
-                      className={`${style.bg} rounded-xl p-5 text-left transition-all ${hasImages ? "hover:scale-[1.02] cursor-pointer" : "cursor-default"} ${
+                      className={`${style.bg} rounded-xl p-5 text-left transition-all relative ${hasImages ? "hover:scale-[1.02] cursor-pointer ring-2 ring-lime/40" : "cursor-default"} ${
                         selectedLocation?.id === location.id ? "ring-2 ring-gold" : ""
                       }`}
                     >
+                      {hasImages && (
+                        <span className="absolute top-3 right-3 w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: '#d4ed39' }}>
+                          <svg className="w-4 h-4" style={{ color: '#2a3c24' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </span>
+                      )}
                       <div className="flex items-start justify-between gap-4 mb-1">
                         <h3
                           className={`text-xl tracking-tight ${style.isDark ? "text-cream" : "text-deep-forest"}`}
@@ -463,11 +482,11 @@ export default function TravelPage() {
                         >
                           {location.city}
                         </h3>
-                        <span className={`text-[11px] px-2 py-1 rounded ${style.isDark ? "bg-white/20 text-cream/60" : "bg-olive/20 text-deep-forest/50"}`}>
+                        <span className={`text-[11px] px-2 py-1 rounded ${style.isDark ? "bg-white/20 text-cream/70" : "bg-olive/20 text-charcoal/70"}`}>
                           {location.country}
                         </span>
                       </div>
-                      <p className={`text-xs leading-relaxed mb-4 ${style.isDark ? "text-cream/60" : "text-deep-forest/50"}`}>
+                      <p className={`text-xs leading-relaxed mb-4 ${style.isDark ? "text-cream/70" : "text-charcoal/70"}`}>
                         {location.notes}
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -481,9 +500,13 @@ export default function TravelPage() {
                         ))}
                       </div>
                       {hasImages && (
-                        <p className={`text-xs mt-3 ${style.isDark ? "text-gold" : "text-olive"}`}>
-                          {(location as Location).images!.length} photos →
-                        </p>
+                        <span className="inline-flex items-center gap-1.5 mt-3 px-2.5 py-1 rounded-full text-xs" style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}>
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {(location as Location).images!.length} photos
+                        </span>
                       )}
                     </button>
                   );
@@ -542,11 +565,13 @@ export default function TravelPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {europeLocations.map((location, index) => {
                 const hasImages = (location as Location).images && (location as Location).images!.length > 0;
+                // Cycle through: sage, olive (dark), warm-neutral
                 const styles = [
-                  { bg: "panel-gradient-deep", isDark: true },
-                  { bg: "panel-gradient-sage", isDark: false }
+                  { bg: "panel-gradient-sage", isDark: false },
+                  { bg: "panel-gradient-olive", isDark: true },
+                  { bg: "panel-gradient-warm-neutral", isDark: false }
                 ];
-                const style = styles[index % styles.length];
+                const style = styles[index % 3];
                 return (
                   <button
                     key={location.id}
@@ -580,9 +605,13 @@ export default function TravelPage() {
                       ))}
                     </div>
                     {hasImages && (
-                      <p className={`text-xs mt-3 ${style.isDark ? "text-gold" : "text-olive"}`}>
-                        {(location as Location).images!.length} photos →
-                      </p>
+                      <span className="inline-flex items-center gap-1.5 mt-3 px-2.5 py-1 rounded-full text-xs" style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}>
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {(location as Location).images!.length} photos
+                      </span>
                     )}
                   </button>
                 );

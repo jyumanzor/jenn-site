@@ -15,76 +15,18 @@
       "themes": ["Longing", "Restraint", "Time"]
     },
     {
-      "id": "chungking-express",
-      "title": "Chungking Express",
-      "director": "Wong Kar-wai",
-      "year": 1994,
-      "status": "want-to-watch",
-      "genre": "Romance",
-      "country": "Hong Kong",
-      "cast": ["Tony Leung", "Faye Wong", "Brigitte Lin"],
-      "accolades": "Hong Kong Film Award",
-      "themes": ["Urban loneliness", "Coincidence"]
-    },
-    {
-      "id": "happy-together",
-      "title": "Happy Together",
-      "director": "Wong Kar-wai",
-      "year": 1997,
-      "status": "want-to-watch",
-      "genre": "Romance",
-      "country": "Hong Kong",
-      "cast": ["Tony Leung", "Leslie Cheung"],
-      "accolades": "Cannes Best Director",
-      "themes": ["Love", "Exile", "Identity"]
-    },
-    {
-      "id": "aftersun",
-      "title": "Aftersun",
-      "director": "Charlotte Wells",
-      "year": 2022,
-      "status": "want-to-watch",
-      "genre": "Drama",
-      "country": "UK",
-      "cast": ["Paul Mescal", "Frankie Corio"],
-      "accolades": "BAFTA Outstanding British Film, Spirit Award",
-      "themes": ["Memory", "Father-daughter", "Grief"]
-    },
-    {
       "id": "past-lives",
       "title": "Past Lives",
       "director": "Celine Song",
       "year": 2023,
-      "status": "want-to-watch",
+      "status": "watched",
+      "rating": 10,
       "genre": "Romance",
       "country": "USA/Korea",
       "cast": ["Greta Lee", "Teo Yoo", "John Magaro"],
       "accolades": "Oscar nomination, Gotham Award",
+      "notes": "In-yun. The paths we take and the ones we don't.",
       "themes": ["In-yun", "Identity", "What-ifs"]
-    },
-    {
-      "id": "fallen-angels",
-      "title": "Fallen Angels",
-      "director": "Wong Kar-wai",
-      "year": 1995,
-      "status": "want-to-watch",
-      "genre": "Crime/Romance",
-      "country": "Hong Kong",
-      "cast": ["Leon Lai", "Michelle Reis", "Takeshi Kaneshiro"],
-      "accolades": "Hong Kong Film Award",
-      "themes": ["Isolation", "Night", "Connection"]
-    },
-    {
-      "id": "2046",
-      "title": "2046",
-      "director": "Wong Kar-wai",
-      "year": 2004,
-      "status": "want-to-watch",
-      "genre": "Romance/Sci-Fi",
-      "country": "Hong Kong",
-      "cast": ["Tony Leung", "Gong Li", "Faye Wong", "Zhang Ziyi"],
-      "accolades": "Cannes Competition",
-      "themes": ["Memory", "Loss", "Time"]
     }
   ],
   "books": [
@@ -101,28 +43,46 @@
       "category": "Philosophy"
     },
     {
-      "title": "Endure",
-      "author": "Alex Hutchinson",
-      "notes": "The science of human performance. Essential for marathon training.",
-      "category": "Running"
+      "title": "The Second Sex",
+      "author": "Simone de Beauvoir",
+      "notes": "One is not born, but rather becomes, a woman.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "The Republic",
+      "author": "Plato",
+      "notes": "Justice, the ideal state, and the allegory of the cave.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "Nicomachean Ethics",
+      "author": "Aristotle",
+      "notes": "The good life and human flourishing.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "Being and Nothingness",
+      "author": "Jean-Paul Sartre",
+      "notes": "Existence precedes essence.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "The Human Condition",
+      "author": "Hannah Arendt",
+      "notes": "Labor, work, action. What it means to be political.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "Discipline and Punish",
+      "author": "Michel Foucault",
+      "notes": "Power, surveillance, and the birth of the prison.",
+      "category": "Philosophy"
     },
     {
       "title": "Born to Run",
       "author": "Christopher McDougall",
       "notes": "The book that made me want to run ultras.",
       "category": "Running"
-    },
-    {
-      "title": "Let Your Mind Run",
-      "author": "Deena Kastor",
-      "notes": "Mental training from an Olympic medalist.",
-      "category": "Running"
-    },
-    {
-      "title": "Educated",
-      "author": "Tara Westover",
-      "notes": "First-gen energy. The power of education to transform.",
-      "category": "Memoir"
     },
     {
       "title": "Crying in H Mart",
@@ -140,7 +100,7 @@
       "mood": "Focused",
       "trackCount": 45,
       "appleMusicUrl": "",
-      "color": "#2a3c24"
+      "color": "#3B412D"
     },
     {
       "id": "tempo-days",
@@ -150,7 +110,7 @@
       "mood": "Intense",
       "trackCount": 32,
       "appleMusicUrl": "",
-      "color": "#4e6041"
+      "color": "#546E40"
     },
     {
       "id": "recovery-walks",
@@ -160,7 +120,7 @@
       "mood": "Relaxed",
       "trackCount": 28,
       "appleMusicUrl": "",
-      "color": "#97a97c"
+      "color": "#97A97C"
     },
     {
       "id": "focus-work",
@@ -170,7 +130,7 @@
       "mood": "Ambient",
       "trackCount": 60,
       "appleMusicUrl": "",
-      "color": "#546e40"
+      "color": "#546E40"
     },
     {
       "id": "late-nights",
@@ -180,7 +140,7 @@
       "mood": "Nocturnal",
       "trackCount": 48,
       "appleMusicUrl": "",
-      "color": "#2a3c24"
+      "color": "#3B412D"
     },
     {
       "id": "morning-coffee",
@@ -190,7 +150,7 @@
       "mood": "Calm",
       "trackCount": 35,
       "appleMusicUrl": "",
-      "color": "#ffcb69"
+      "color": "#F7E5DA"
     },
     {
       "id": "dinner-party",
@@ -200,7 +160,7 @@
       "mood": "Warm",
       "trackCount": 55,
       "appleMusicUrl": "",
-      "color": "#ecc064"
+      "color": "#FFCB69"
     },
     {
       "id": "wine-down",
@@ -210,7 +170,7 @@
       "mood": "Reflective",
       "trackCount": 42,
       "appleMusicUrl": "",
-      "color": "#8b9d72"
+      "color": "#97A97C"
     },
     {
       "id": "road-trip",
@@ -220,7 +180,7 @@
       "mood": "Energetic",
       "trackCount": 65,
       "appleMusicUrl": "",
-      "color": "#d4ed39"
+      "color": "#D4ED39"
     },
     {
       "id": "rainy-days",
@@ -230,7 +190,7 @@
       "mood": "Cozy",
       "trackCount": 50,
       "appleMusicUrl": "",
-      "color": "#677955"
+      "color": "#546E40"
     },
     {
       "id": "getting-ready",
@@ -240,7 +200,7 @@
       "mood": "Hype",
       "trackCount": 38,
       "appleMusicUrl": "",
-      "color": "#fabf34"
+      "color": "#FABF34"
     },
     {
       "id": "sunday-reset",
@@ -250,22 +210,22 @@
       "mood": "Peaceful",
       "trackCount": 45,
       "appleMusicUrl": "",
-      "color": "#f7e5da"
+      "color": "#FFF5EB"
     }
   ],
   "filters": {
     "statuses": ["watched", "want-to-watch"],
-    "genres": ["Romance", "Drama", "Crime/Romance", "Romance/Sci-Fi"],
-    "directors": ["Wong Kar-wai", "Charlotte Wells", "Celine Song"],
+    "genres": ["Romance", "Drama"],
+    "directors": ["Wong Kar-wai", "Celine Song"],
     "bookCategories": ["Philosophy", "Running", "Memoir"],
     "playlistVibes": ["Running", "Focus", "Mood", "Social"],
     "playlistMoods": ["Focused", "Intense", "Relaxed", "Ambient", "Nocturnal", "Calm", "Warm", "Reflective", "Energetic", "Cozy", "Hype", "Peaceful"]
   },
   "stats": {
-    "totalFilms": 7,
-    "watched": 1,
-    "wantToWatch": 6,
-    "totalBooks": 7,
+    "totalFilms": 2,
+    "watched": 2,
+    "wantToWatch": 0,
+    "totalBooks": 10,
     "totalPlaylists": 12
   }
 }

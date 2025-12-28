@@ -69,7 +69,7 @@ export default function ChicagoPage() {
                 </p>
                 <div className="flex gap-4">
                   <div>
-                    <p className="font-display text-lg text-olive">2020</p>
+                    <p className="font-display text-lg text-olive">2021</p>
                     <p className="text-warm-gray text-sm">Graduated</p>
                   </div>
                   <div>

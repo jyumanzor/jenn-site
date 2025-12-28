@@ -142,7 +142,7 @@ export default function Footer() {
                     className="text-xl text-cream"
                     style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
                   >
-                    5
+                    6
                   </p>
                   <p className="text-cream/60 text-xs mt-0.5">Marathons</p>
                 </div>

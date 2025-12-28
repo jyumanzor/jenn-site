@@ -57,6 +57,7 @@ export default function TattoosPage() {
             >
               {tattoos.stats.total} fine line tattoos. Each one marks something—a book, a person, a moment, a belief.
             </p>
+            <p className="text-xs mt-3 italic" style={{ color: 'rgba(84,110,64,0.6)' }}>Click body or buttons to explore.</p>
           </div>
         </div>
       </section>

@@ -55,7 +55,7 @@ export default function WorkPage() {
       <hr className="rule" />
 
       {/* Current Role */}
-      <section className="py-12">
+      <section className="py-12 bg-ivory">
         <div className="container-editorial">
           <p className="light-bg-label mb-8">Current role</p>
 
@@ -130,7 +130,7 @@ export default function WorkPage() {
       )}
 
       {/* The Quirky Jobs */}
-      <section className="py-12 bg-ivory">
+      <section className="py-12 bg-cream">
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12 mb-8">
             <div className="md:col-span-4">
@@ -385,20 +385,19 @@ export default function WorkPage() {
       <hr className="rule" />
 
       {/* Connect */}
-      <section className="py-14" style={{ backgroundColor: 'rgba(212, 237, 57, 0.15)' }}>
+      <section className="py-14" style={{ backgroundColor: '#fff8e7' }}>
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* Left column: headline + copy */}
             <div className="md:col-span-5">
               <h2
                 className="text-deep-forest mb-4 tracking-tight leading-none"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', fontSize: 'clamp(2.05rem, 6vw, 4.7rem)' }}
+                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}
               >
                 Let&apos;s connect
               </h2>
               <p className="text-base text-deep-forest/70 leading-relaxed">
-                Whether it&apos;s about work, running,<br />
-                or grabbing coffee in DC.
+                Whether it&apos;s about work, running, or grabbing coffee in DC.
               </p>
             </div>
 

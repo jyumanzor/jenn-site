@@ -7,6 +7,13 @@ type Location = typeof travel.locations[0] & {
   images?: string[];
 };
 
+// Month name to number mapping
+const monthToNum: Record<string, number> = {
+  'january': 1, 'february': 2, 'march': 3, 'april': 4,
+  'may': 5, 'june': 6, 'july': 7, 'august': 8,
+  'september': 9, 'october': 10, 'november': 11, 'december': 12
+};
+
 // Get primary year for sorting
 const getPrimaryYear = (visits: string): number => {
   if (visits.includes("present")) return 2025;
@@ -17,12 +24,27 @@ const getPrimaryYear = (visits: string): number => {
   return 2024;
 };
 
+// Get month number for sorting within a year (1-12, or 0 if no month specified)
+const getMonth = (visits: string): number => {
+  const lowerVisits = visits.toLowerCase();
+  for (const [month, num] of Object.entries(monthToNum)) {
+    if (lowerVisits.includes(month)) {
+      return num;
+    }
+  }
+  return 0; // No specific month
+};
+
 export default function TravelTimeline() {
-  // Get locations with photos or notable trips, sorted by year
+  // Get locations with photos or notable trips, sorted by year and month
   const timelineLocations = travel.locations
     .filter(l => l.type === "travel" || l.type === "race")
-    .map(l => ({ ...l, year: getPrimaryYear(l.visits) }))
-    .sort((a, b) => b.year - a.year);
+    .map(l => ({ ...l, year: getPrimaryYear(l.visits), month: getMonth(l.visits) }))
+    .sort((a, b) => {
+      // Sort by year descending, then by month ascending within year
+      if (b.year !== a.year) return b.year - a.year;
+      return a.month - b.month; // Earlier months first within the year
+    });
 
   // Group by year
   const years = [...new Set(timelineLocations.map(l => l.year))].sort((a, b) => b - a);

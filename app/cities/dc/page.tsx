@@ -29,7 +29,7 @@ export default function DCPage() {
               <p className="stat-label">Restaurants ranked</p>
             </div>
             <div>
-              <p className="stat-large">4</p>
+              <p className="stat-large">6</p>
               <p className="stat-label">Years living here</p>
             </div>
             <div>
