@@ -72,7 +72,7 @@ export default function Nav() {
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="relative flex items-center gap-2 px-4 py-2 rounded-full text-cream transition-colors"
-              style={{ backgroundColor: '#2a3c24' }}
+              style={{ backgroundColor: '#36482e' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3B412D'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#546E40'}
               aria-label="Toggle menu"
@@ -108,7 +108,7 @@ export default function Nav() {
         className={`fixed top-0 right-0 z-50 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-out flex flex-col ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{ backgroundColor: '#2a3c24' }}
+        style={{ backgroundColor: '#36482e' }}
       >
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-6 border-b border-cream/10">

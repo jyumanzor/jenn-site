@@ -52,7 +52,24 @@
       "type": "race",
       "visits": "July 2025, April 2026",
       "notes": "Boston Marathon. Registered.",
-      "highlights": ["Heartbreak Hill", "Boylston Street finish"]
+      "highlights": ["Heartbreak Hill", "Boylston Street finish"],
+      "facts": {
+        "The Marathon": [
+          "World's oldest annual marathon, started 1897",
+          "26.2 miles from Hopkinton to Boylston Street",
+          "Heartbreak Hill: mile 20-21, the famous climb"
+        ],
+        "History": [
+          "Founded 1630—one of America's oldest cities",
+          "Birthplace of the American Revolution",
+          "Home to Harvard (1636) and MIT"
+        ],
+        "Culture": [
+          "Freedom Trail: 2.5 miles of revolutionary history",
+          "Fenway Park: oldest MLB stadium (1912)",
+          "World-class hospitals and universities"
+        ]
+      }
     },
     {
       "id": "honolulu",
@@ -98,7 +115,19 @@
       "type": "race",
       "visits": "September 2025",
       "notes": "Marathon PR: 3:09. Last Chance BQ.2.",
-      "highlights": ["Fox River Trail", "PR race"]
+      "highlights": ["Fox River Trail", "PR race"],
+      "facts": {
+        "The Race": [
+          "Last Chance BQ.2: flat, fast Boston qualifier course",
+          "Fox River Trail: crushed limestone path",
+          "September timing for ideal running weather"
+        ],
+        "The Town": [
+          "Historic downtown on the Fox River",
+          "Founded 1835, named after Geneva, Switzerland",
+          "Known for antique shops and Swedish Days festival"
+        ]
+      }
     },
     {
       "id": "new-york",
@@ -108,7 +137,24 @@
       "type": "travel",
       "visits": "2024, February 2025",
       "notes": "Museums, theater, food.",
-      "highlights": ["Manhattan", "Museums"]
+      "highlights": ["Manhattan", "Museums"],
+      "facts": {
+        "The City": [
+          "8.3 million residents, largest US city",
+          "Five boroughs: Manhattan, Brooklyn, Queens, Bronx, Staten Island",
+          "472 subway stations—largest in the Western Hemisphere"
+        ],
+        "Culture": [
+          "Broadway: 41 theaters in the Theater District",
+          "The Met: 2 million works spanning 5,000 years",
+          "MoMA: world's first museum dedicated to modern art"
+        ],
+        "History": [
+          "Originally New Amsterdam, Dutch colony founded 1626",
+          "Ellis Island processed 12 million immigrants (1892-1954)",
+          "Empire State Building: world's tallest 1931-1970"
+        ]
+      }
     },
     {
       "id": "san-francisco",
@@ -118,7 +164,24 @@
       "type": "travel",
       "visits": "2018",
       "notes": "Tech, fog, good coffee.",
-      "highlights": ["Golden Gate", "Mission District"]
+      "highlights": ["Golden Gate", "Mission District"],
+      "facts": {
+        "The City": [
+          "7x7 miles—one of the smallest major US cities",
+          "43 named hills, famous cable cars since 1873",
+          "The fog has a name: Karl"
+        ],
+        "History": [
+          "Gold Rush transformed it from 200 to 36,000 people (1848-1852)",
+          "1906 earthquake and fire destroyed 80% of the city",
+          "Summer of Love, 1967: birthplace of counterculture"
+        ],
+        "Culture": [
+          "Golden Gate Bridge: Art Deco, International Orange",
+          "Mission District: oldest neighborhood, murals everywhere",
+          "Third-wave coffee revolution started here"
+        ]
+      }
     },
     {
       "id": "los-angeles",
@@ -128,7 +191,24 @@
       "type": "travel",
       "visits": "2018",
       "notes": "Family, beaches.",
-      "highlights": ["Venice Beach", "Downtown LA"]
+      "highlights": ["Venice Beach", "Downtown LA"],
+      "facts": {
+        "The City": [
+          "Second largest US city, 4 million residents",
+          "503 square miles—you need a car",
+          "More museums per capita than any other US city"
+        ],
+        "Hollywood": [
+          "Film industry moved here 1910s for the sunlight",
+          "Hollywood sign originally said 'Hollywoodland' (1923)",
+          "First talkie: The Jazz Singer (1927)"
+        ],
+        "Culture": [
+          "Venice Beach: Muscle Beach, boardwalk, street performers",
+          "Getty Center: free admission, stunning architecture",
+          "Taco culture: 10,000+ taquerias"
+        ]
+      }
     },
     {
       "id": "san-diego",
@@ -138,7 +218,24 @@
       "type": "travel",
       "visits": "July 2025",
       "notes": "Summer in Southern California.",
-      "highlights": ["Beaches", "Gaslamp Quarter"]
+      "highlights": ["Beaches", "Gaslamp Quarter"],
+      "facts": {
+        "The City": [
+          "America's Finest City—70°F average year-round",
+          "70 miles of coastline and beaches",
+          "Birthplace of California (first European settlement, 1769)"
+        ],
+        "Culture": [
+          "San Diego Zoo: 3,700 animals, world-famous",
+          "Craft beer capital: 150+ breweries",
+          "Gaslamp Quarter: 16 blocks of Victorian architecture"
+        ],
+        "History": [
+          "Named by Spanish explorer Sebastián Vizcaíno, 1602",
+          "Major naval base since WWII",
+          "Border with Tijuana: busiest land crossing in the world"
+        ]
+      }
     },
     {
       "id": "sea-island",
@@ -148,7 +245,19 @@
       "type": "travel",
       "visits": "2024",
       "notes": "Georgia coast.",
-      "highlights": ["Beach", "Golf"]
+      "highlights": ["Beach", "Golf"],
+      "facts": {
+        "The Island": [
+          "Part of Georgia's Golden Isles barrier islands",
+          "5 miles of private beach",
+          "The Cloister resort opened 1928"
+        ],
+        "History": [
+          "G8 Summit hosted here in 2004",
+          "Originally a cotton plantation",
+          "Spanish explorers arrived in the 1500s"
+        ]
+      }
     },
     {
       "id": "dallas",
@@ -158,7 +267,24 @@
       "type": "travel",
       "visits": "Multiple",
       "notes": "Texas trips.",
-      "highlights": ["Deep Ellum", "Arts District"]
+      "highlights": ["Deep Ellum", "Arts District"],
+      "facts": {
+        "The City": [
+          "9th largest US city, 1.3 million residents",
+          "No zoning laws—unique urban development",
+          "DFW Airport: world's 4th busiest"
+        ],
+        "Culture": [
+          "Deep Ellum: live music district since the 1920s jazz era",
+          "Dallas Arts District: largest urban arts district in the US",
+          "State Fair of Texas: Big Tex, Fletcher's corny dogs"
+        ],
+        "History": [
+          "Named for Vice President George M. Dallas, 1846",
+          "JFK assassination: Dealey Plaza, November 22, 1963",
+          "Oil boom transformed the city in the 1930s"
+        ]
+      }
     },
     {
       "id": "orlando",
@@ -168,7 +294,19 @@
       "type": "travel",
       "visits": "2018",
       "notes": "Theme parks, family visits.",
-      "highlights": ["Theme Parks"]
+      "highlights": ["Theme Parks"],
+      "facts": {
+        "Theme Parks": [
+          "Walt Disney World opened 1971—twice the size of Manhattan",
+          "75 million tourists annually—most visited US destination",
+          "Universal, SeaWorld, LEGOLAND all within 30 miles"
+        ],
+        "The City": [
+          "Originally named Jernigan, renamed Orlando in 1857",
+          "More than 100 lakes within city limits",
+          "NASA's Kennedy Space Center 45 minutes east"
+        ]
+      }
     },
     {
       "id": "seattle",
@@ -178,7 +316,24 @@
       "type": "travel",
       "visits": "September 2024",
       "notes": "PNW. Mt. Rainier. Pike Place.",
-      "highlights": ["Pike Place", "Mt. Rainier", "Bainbridge Island"]
+      "highlights": ["Pike Place", "Mt. Rainier", "Bainbridge Island"],
+      "facts": {
+        "The City": [
+          "Surrounded by water, mountains, and evergreen forests",
+          "More coffee shops per capita than any US city",
+          "Rain reputation exaggerated: less annual rain than NYC"
+        ],
+        "Culture": [
+          "Pike Place Market: opened 1907, oldest farmers market in US",
+          "Birthplace of Starbucks (1971), Amazon, Microsoft",
+          "Grunge music scene: Nirvana, Pearl Jam, Soundgarden"
+        ],
+        "Nature": [
+          "Mt. Rainier: 14,411 ft, visible from the city on clear days",
+          "Olympic National Park 2 hours west",
+          "San Juan Islands: orcas, kayaking, ferries"
+        ]
+      }
     },
     {
       "id": "atlanta",
@@ -256,7 +411,24 @@
       "type": "travel",
       "visits": "2021-2024",
       "notes": "Lobster, lighthouses, summer escapes.",
-      "highlights": ["Walpole", "Damariscotta", "South Bristol"]
+      "highlights": ["Walpole", "Damariscotta", "South Bristol"],
+      "facts": {
+        "The Coast": [
+          "3,478 miles of coastline—more than California",
+          "65 historic lighthouses still standing",
+          "Acadia: first national park east of the Mississippi"
+        ],
+        "Culture": [
+          "Lobster capital: 80% of US lobster catch",
+          "Damariscotta: oyster middens 2,000+ years old",
+          "L.L. Bean flagship open 24/7/365 since 1951"
+        ],
+        "History": [
+          "Maine was part of Massachusetts until 1820",
+          "Wyeth family painted the Midcoast for generations",
+          "Shipbuilding heritage: Bath Iron Works since 1884"
+        ]
+      }
     },
     {
       "id": "savannah",
@@ -266,7 +438,24 @@
       "type": "travel",
       "visits": "October 2023",
       "notes": "Historic squares, Spanish moss.",
-      "highlights": ["Historic District", "Forsyth Park"]
+      "highlights": ["Historic District", "Forsyth Park"],
+      "facts": {
+        "The City": [
+          "Founded 1733—Georgia's first city",
+          "22 of original 24 squares remain",
+          "Largest National Historic Landmark District in the US"
+        ],
+        "Culture": [
+          "SCAD (Savannah College of Art and Design) transformed the city",
+          "Midnight in the Garden of Good and Evil set here",
+          "Open container laws: walk the streets with a drink"
+        ],
+        "History": [
+          "Sherman spared Savannah in his March to the Sea",
+          "Spanish moss isn't Spanish or moss—it's a bromeliad",
+          "Forsyth Park fountain modeled after one in Paris"
+        ]
+      }
     },
     {
       "id": "philadelphia",
@@ -276,7 +465,24 @@
       "type": "travel",
       "visits": "2023, August 2025",
       "notes": "Day trips from DC.",
-      "highlights": ["Old City", "Art Museum"]
+      "highlights": ["Old City", "Art Museum"],
+      "facts": {
+        "History": [
+          "US capital 1790-1800, before Washington DC",
+          "Declaration of Independence signed here, 1776",
+          "First US zoo, first hospital, first library"
+        ],
+        "Culture": [
+          "Philadelphia Museum of Art: Rocky Steps, 240,000 works",
+          "Mural Arts: 4,000+ murals—largest public art program in US",
+          "BYOB restaurant culture: no corkage fees"
+        ],
+        "Food": [
+          "Cheesesteak debate: Pat's vs. Geno's since 1966",
+          "Reading Terminal Market: 80+ vendors since 1893",
+          "Roast pork sandwich: the local's cheesesteak"
+        ]
+      }
     },
     {
       "id": "tokyo",
@@ -334,7 +540,24 @@
         "kyoto/7C51F28B-DF3E-4A4A-8F7C-5F838F26E280_4_5005_c.jpeg",
         "kyoto/F143A52B-6586-41D1-A996-FD26772BA8B8_4_5005_c.jpeg"
       ],
-      "extendedNotes": "Fushimi Inari (10,000 torii gates), Arashiyama bamboo grove, Gion district. Day trips from Osaka."
+      "extendedNotes": "Fushimi Inari (10,000 torii gates), Arashiyama bamboo grove, Gion district. Day trips from Osaka.",
+      "facts": {
+        "History": [
+          "Imperial capital of Japan for 1,000 years (794-1868)",
+          "Spared from WWII bombing to preserve cultural heritage",
+          "2,000+ temples and shrines within the city"
+        ],
+        "Culture": [
+          "Gion: famous geisha district, preserved wooden machiya",
+          "Matcha tea ceremony originated in Kyoto temples",
+          "Traditional kaiseki cuisine refined here"
+        ],
+        "Must-See": [
+          "Fushimi Inari: 10,000 vermillion torii gates",
+          "Arashiyama: bamboo grove, monkey park",
+          "Kinkaku-ji: Golden Pavilion, rebuilt in 1955"
+        ]
+      }
     },
     {
       "id": "osaka",
@@ -352,7 +575,24 @@
         "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg",
         "osaka/8307BB4B-A664-4A82-834B-4F1E7B2D4029_4_5005_c.jpeg"
       ],
-      "extendedNotes": "Dotonbori at night. Takoyaki, okonomiyaki, kushikatsu. Street food is the draw."
+      "extendedNotes": "Dotonbori at night. Takoyaki, okonomiyaki, kushikatsu. Street food is the draw.",
+      "facts": {
+        "The City": [
+          "Japan's second largest city, 2.7 million residents",
+          "Known as 'Japan's Kitchen' for street food culture",
+          "Osakans say 'kuidaore'—eat until you drop"
+        ],
+        "Culture": [
+          "Bunraku puppet theater originated here",
+          "More relaxed and humorous than Tokyo",
+          "Glico Running Man sign: Dotonbori landmark since 1935"
+        ],
+        "Food": [
+          "Takoyaki: octopus balls invented here in 1935",
+          "Okonomiyaki: savory pancakes, Osaka-style",
+          "Kushikatsu: deep-fried skewers, never double-dip"
+        ]
+      }
     },
     {
       "id": "hiroshima",
@@ -366,7 +606,24 @@
       "images": [
         "hiroshima/1C05A174-11BD-4916-A265-EB9996D521BA.jpeg"
       ],
-      "extendedNotes": "Peace Memorial Museum, A-Bomb Dome. Day trip to Miyajima for the floating torii gate."
+      "extendedNotes": "Peace Memorial Museum, A-Bomb Dome. Day trip to Miyajima for the floating torii gate.",
+      "facts": {
+        "History": [
+          "Atomic bomb dropped August 6, 1945, 8:15am",
+          "A-Bomb Dome: only structure left standing near hypocenter",
+          "City rebuilt as a symbol of peace"
+        ],
+        "Peace Memorial": [
+          "Peace Park designed by Kenzo Tange, 1954",
+          "Sadako's paper cranes: 1,000 for a wish",
+          "Flame will burn until all nuclear weapons are abolished"
+        ],
+        "Miyajima": [
+          "Floating torii gate: one of Japan's three great views",
+          "Sacred island: no births or deaths allowed historically",
+          "Friendly deer roam freely"
+        ]
+      }
     },
     {
       "id": "paris",
@@ -450,7 +707,24 @@
       "type": "travel",
       "visits": "August 2022",
       "notes": "Basque country, Mediterranean coast.",
-      "highlights": ["La Ciudad", "Guggenheim", "San Sebastián"]
+      "highlights": ["La Ciudad", "Guggenheim", "San Sebastián"],
+      "facts": {
+        "Valencia": [
+          "City of Arts and Sciences: futuristic Calatrava complex",
+          "Birthplace of paella—never add chorizo",
+          "Las Fallas festival: giant sculptures burned each March"
+        ],
+        "Bilbao": [
+          "Guggenheim Museum transformed the city in 1997",
+          "Basque country: distinct language, oldest in Europe",
+          "Pintxos: Basque tapas, toothpick-speared bites"
+        ],
+        "San Sebastián": [
+          "More Michelin stars per capita than anywhere",
+          "La Concha: one of Europe's best urban beaches",
+          "Basque culinary capital"
+        ]
+      }
     },
     {
       "id": "mexico-city",
@@ -460,7 +734,24 @@
       "type": "travel",
       "visits": "May 2025",
       "notes": "Tepoztlán, Chapultepec, Roma.",
-      "highlights": ["Roma Norte", "Chapultepec", "Tepoztlán"]
+      "highlights": ["Roma Norte", "Chapultepec", "Tepoztlán"],
+      "facts": {
+        "The City": [
+          "Largest city in North America, 21+ million metro",
+          "Built on Lake Texcoco, sinking 4 inches per year",
+          "Aztec capital Tenochtitlan founded here in 1325"
+        ],
+        "Culture": [
+          "Frida Kahlo's Casa Azul in Coyoacán",
+          "Chapultepec: one of world's largest urban parks",
+          "Roma: film neighborhood, earthquake-scarred charm"
+        ],
+        "Food": [
+          "Taco al pastor: Lebanese-Mexican fusion",
+          "Mezcal bars in Roma and Condesa",
+          "Street food culture: 50,000+ vendors"
+        ]
+      }
     },
     {
       "id": "toronto",
@@ -527,7 +818,24 @@
       "type": "travel",
       "visits": "2019",
       "notes": "Central Vietnam coast.",
-      "highlights": ["Imperial City", "Beaches"]
+      "highlights": ["Imperial City", "Beaches"],
+      "facts": {
+        "Hue": [
+          "Imperial capital of Vietnam 1802-1945",
+          "Forbidden Purple City modeled on Beijing's",
+          "Perfume River runs through the citadel"
+        ],
+        "Da Nang": [
+          "Vietnam's third largest city, rising beach destination",
+          "Marble Mountains: five limestone peaks with caves and pagodas",
+          "My Son sanctuary: 4th-century Cham Hindu temples"
+        ],
+        "History": [
+          "DMZ (demilitarized zone) 100km north of Hue",
+          "Heavily bombed in Vietnam War, citadel rebuilt",
+          "Nguyen Dynasty tombs scattered along the Perfume River"
+        ]
+      }
     },
     {
       "id": "bangkok",
@@ -591,7 +899,24 @@
       "type": "travel",
       "visits": "2019",
       "notes": "Red Fort, Chandni Chowk.",
-      "highlights": ["Red Fort", "Chandni Chowk"]
+      "highlights": ["Red Fort", "Chandni Chowk"],
+      "facts": {
+        "History": [
+          "Eight cities built on this site over 3,000 years",
+          "New Delhi designed by Edwin Lutyens, 1911-1931",
+          "Red Fort: Mughal emperors ruled from here 1648-1857"
+        ],
+        "Culture": [
+          "Chandni Chowk: one of India's oldest markets (1650)",
+          "Jama Masjid: largest mosque in India",
+          "India Gate: memorial to 70,000 WWI soldiers"
+        ],
+        "The City": [
+          "Capital since 1911, 32+ million metro area",
+          "Metro system: 286 stations, one of world's largest",
+          "Three UNESCO World Heritage sites within city limits"
+        ]
+      }
     },
     {
       "id": "nepal",
@@ -628,7 +953,24 @@
       "type": "travel",
       "visits": "November-December 2023",
       "notes": "Colombo, tea country.",
-      "highlights": ["Colombo", "Central Province"]
+      "highlights": ["Colombo", "Central Province"],
+      "facts": {
+        "The Island": [
+          "Teardrop of India—25,332 square miles",
+          "2,500+ years of recorded history",
+          "8 UNESCO World Heritage sites"
+        ],
+        "Culture": [
+          "Ceylon tea: introduced by British in 1867",
+          "Sigiriya: ancient rock fortress, 5th century",
+          "Ayurvedic medicine tradition thousands of years old"
+        ],
+        "Nature": [
+          "Highest biodiversity density in Asia",
+          "Blue whales off southern coast",
+          "Train through tea country: one of world's great rides"
+        ]
+      }
     }
   ],
   "stats": {
