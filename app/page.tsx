@@ -151,7 +151,7 @@ export default function Home() {
               <div className="panel-gradient-deep group-hover:scale-[1.01] transition-transform">
                 <span className="dark-bg-label">Home</span>
                 <h3 className="dark-bg-header text-xl mt-1 mb-1">Washington, DC</h3>
-                <p className="dark-bg-body text-sm">Five years of discovering corners and routines</p>
+                <p className="dark-bg-body text-sm">Six years of discovering corners and routines</p>
               </div>
             </Link>
 

@@ -32,7 +32,7 @@ export default function DCPage() {
               className="text-lg leading-relaxed max-w-xl"
               style={{ color: 'rgba(42,60,36,0.7)' }}
             >
-              My first city. Five years of discovering corners, routines, and places that feel like mine.
+              My first city. Six years of discovering corners, routines, and places that feel like mine.
             </p>
           </div>
         </div>

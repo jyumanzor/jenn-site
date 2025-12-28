@@ -24,7 +24,25 @@
         "chicago/chicago-02.jpeg",
         "chicago/chicago-03.jpeg",
         "chicago/chicago-04.jpeg"
-      ]
+      ],
+      "extendedNotes": "Four years at UChicago, walking distance from the lake. Hyde Park bookstores, late nights in the Reg, winters that test you.",
+      "facts": {
+        "Architecture": [
+          "Frank Lloyd Wright's Robie House in Hyde Park",
+          "The Loop's steel-frame skyscrapers invented the modern skyline",
+          "Chicago School of Architecture born from the 1871 fire rebuild"
+        ],
+        "Hyde Park": [
+          "Home to the University of Chicago since 1890",
+          "Obama's pre-White House neighborhood",
+          "Seminary Co-op: one of the great academic bookstores"
+        ],
+        "The City": [
+          "Third largest US city, 2.7 million residents",
+          "77 distinct neighborhoods",
+          "Lake Michigan shoreline runs 26 miles through the city"
+        ]
+      }
     },
     {
       "id": "boston",
@@ -176,7 +194,25 @@
         "atlanta/atlanta-02.jpeg",
         "atlanta/atlanta-03.jpeg",
         "atlanta/atlanta-04.jpeg"
-      ]
+      ],
+      "extendedNotes": "The capital of the New South. Civil rights history, hip-hop culture, and humid summer days in Piedmont Park.",
+      "facts": {
+        "History": [
+          "Burned in Sherman's March to the Sea, 1864",
+          "Birthplace of Martin Luther King Jr.",
+          "Hosted the 1996 Summer Olympics"
+        ],
+        "Culture": [
+          "Birthplace of Coca-Cola (1886)",
+          "Hip-hop capital: OutKast, T.I., Migos, Lil Baby",
+          "CNN and Delta Air Lines headquarters"
+        ],
+        "Neighborhoods": [
+          "Midtown—arts district, High Museum",
+          "Buckhead—upscale dining and shopping",
+          "Little Five Points—eclectic, indie shops"
+        ]
+      }
     },
     {
       "id": "miami",
@@ -192,7 +228,25 @@
         "miami/miami-02.jpeg",
         "miami/miami-03.jpeg",
         "miami/miami-04.jpeg"
-      ]
+      ],
+      "extendedNotes": "Art Deco on Ocean Drive, Cuban coffee in Little Havana, street art in Wynwood. Miami feels more Caribbean than American.",
+      "facts": {
+        "Culture": [
+          "70% of residents speak Spanish at home",
+          "Little Havana: Cuban exile community since 1959",
+          "Art Basel Miami Beach every December"
+        ],
+        "Architecture": [
+          "Largest collection of Art Deco buildings in the world",
+          "South Beach historic district: 800+ preserved buildings",
+          "Designed for tropical living in the 1920s-30s"
+        ],
+        "Neighborhoods": [
+          "Wynwood—40+ acres of street art murals",
+          "Design District—luxury fashion and galleries",
+          "Coral Gables—Mediterranean Revival architecture"
+        ]
+      }
     },
     {
       "id": "maine",
@@ -330,7 +384,25 @@
         "paris/IMG_1222.jpeg",
         "paris/IMG_1582.jpeg",
         "paris/IMG_1700.jpeg"
-      ]
+      ],
+      "extendedNotes": "Walking along the Seine, Musée d'Orsay, long café lunches in the Marais. The light really is different.",
+      "facts": {
+        "History": [
+          "Founded by Celtic Parisii tribe, 3rd century BC",
+          "Haussmann redesigned the city 1853-1870",
+          "20 arrondissements spiral clockwise from center"
+        ],
+        "Museums": [
+          "Louvre: world's largest, 35,000 works on display",
+          "Musée d'Orsay: Impressionists in a former train station",
+          "Centre Pompidou: modern art, inside-out architecture"
+        ],
+        "Culture": [
+          "Café culture: the original third place",
+          "Baguette tradition: must be made fresh daily by law",
+          "Over 400 parks and gardens in the city"
+        ]
+      }
     },
     {
       "id": "london",
@@ -350,7 +422,25 @@
         "london/london-06.jpeg",
         "london/london-07.jpeg",
         "london/london-08.jpeg"
-      ]
+      ],
+      "extendedNotes": "West End shows, browsing the V&A, pub dinners. London rewards walking—every neighborhood has its own character.",
+      "facts": {
+        "History": [
+          "Founded by Romans as Londinium, 43 AD",
+          "Great Fire of 1666 destroyed 80% of the city",
+          "The Tube opened 1863—world's first underground railway"
+        ],
+        "Culture": [
+          "West End: 40+ theaters, second only to Broadway",
+          "V&A: world's largest decorative arts museum",
+          "Pub culture: 3,500+ pubs in Greater London"
+        ],
+        "Neighborhoods": [
+          "South Bank—Tate Modern, National Theatre",
+          "Shoreditch—street art, vintage shops",
+          "Notting Hill—pastel houses, Portobello Market"
+        ]
+      }
     },
     {
       "id": "spain",
@@ -387,7 +477,25 @@
         "toronto/toronto-03.jpeg",
         "toronto/toronto-04.jpeg",
         "toronto/toronto-05.jpeg"
-      ]
+      ],
+      "extendedNotes": "Ferry to the Toronto Islands for skyline views, wandering Kensington Market, diverse food scene in every neighborhood.",
+      "facts": {
+        "The City": [
+          "Most populous city in Canada (2.9 million)",
+          "Over 200 ethnicities—one of the most diverse cities globally",
+          "51% of residents born outside Canada"
+        ],
+        "Culture": [
+          "TIFF: Toronto International Film Festival each September",
+          "CN Tower: 553m, tallest free-standing structure 1975-2007",
+          "Hockey is religion: Maple Leafs haven't won since 1967"
+        ],
+        "Neighborhoods": [
+          "Kensington Market—bohemian, vintage, street food",
+          "Distillery District—Victorian industrial, galleries",
+          "Chinatown—one of North America's largest"
+        ]
+      }
     },
     {
       "id": "hanoi",
@@ -397,7 +505,19 @@
       "type": "travel",
       "visits": "2019",
       "notes": "Old Quarter, street food, coffee.",
-      "highlights": ["Old Quarter", "Street Food", "Coffee"]
+      "highlights": ["Old Quarter", "Street Food", "Coffee"],
+      "facts": {
+        "History": [
+          "Founded in 1010 AD as Thang Long (Rising Dragon)",
+          "Continuous habitation for over 1,000 years",
+          "Renamed Hanoi (City Between Rivers) in 1831"
+        ],
+        "Culture": [
+          "Vietnamese coffee: egg coffee invented here in 1946",
+          "Pho originated in the early 20th century",
+          "36 streets of the Old Quarter—each named for a trade"
+        ]
+      }
     },
     {
       "id": "hue",
@@ -417,7 +537,24 @@
       "type": "travel",
       "visits": "2019",
       "notes": "Temples, street food, markets.",
-      "highlights": ["Temples", "Street Food", "Markets"]
+      "highlights": ["Temples", "Street Food", "Markets"],
+      "facts": {
+        "The City": [
+          "Full ceremonial name is 169 letters—world's longest",
+          "10+ million residents, one of Asia's largest cities",
+          "Never colonized—the only Southeast Asian country"
+        ],
+        "Temples": [
+          "Wat Phra Kaew: Temple of the Emerald Buddha",
+          "Wat Arun: Temple of Dawn, iconic Khmer-style spires",
+          "Over 400 Buddhist temples in the city"
+        ],
+        "Culture": [
+          "Street food capital—50,000+ vendors",
+          "Chatuchak Weekend Market: 15,000 stalls",
+          "Thai massage originated as temple medicine"
+        ]
+      }
     },
     {
       "id": "mumbai",
@@ -427,7 +564,24 @@
       "type": "travel",
       "visits": "2019",
       "notes": "Gateway of India, street life.",
-      "highlights": ["Gateway of India", "Street Life"]
+      "highlights": ["Gateway of India", "Street Life"],
+      "facts": {
+        "The City": [
+          "Financial capital of India, 20+ million metro area",
+          "Originally seven islands, joined by land reclamation",
+          "Renamed from Bombay in 1995"
+        ],
+        "Culture": [
+          "Bollywood: world's largest film industry by output",
+          "Dabbawalas: 5,000 deliverymen, 200,000 lunches daily",
+          "Local trains: 7.5 million passengers per day"
+        ],
+        "Landmarks": [
+          "Gateway of India: built 1924 for King George V visit",
+          "Chhatrapati Shivaji Terminus: Victorian Gothic railway station",
+          "Marine Drive: 'Queen's Necklace' at night"
+        ]
+      }
     },
     {
       "id": "new-delhi",
@@ -447,7 +601,24 @@
       "type": "travel",
       "visits": "November 2023",
       "notes": "Kathmandu, Pokhara, Bhaktapur.",
-      "highlights": ["Kathmandu", "Pokhara", "Bhaktapur"]
+      "highlights": ["Kathmandu", "Pokhara", "Bhaktapur"],
+      "facts": {
+        "Geography": [
+          "8 of the world's 10 highest peaks, including Everest",
+          "Elevation ranges from 60m to 8,848m",
+          "Landlocked between China and India"
+        ],
+        "Culture": [
+          "Birthplace of Buddha (Lumbini, 563 BC)",
+          "Only country with non-rectangular flag",
+          "Hindu and Buddhist traditions blend seamlessly"
+        ],
+        "Kathmandu Valley": [
+          "Three ancient royal cities: Kathmandu, Patan, Bhaktapur",
+          "Durbar Square: UNESCO World Heritage sites",
+          "Boudhanath: one of the largest stupas in the world"
+        ]
+      }
     },
     {
       "id": "sri-lanka",
