@@ -1,0 +1,847 @@
+@import "tailwindcss";
+
+/* ===== JENN — GRAZA-INSPIRED WARM & PLAYFUL ===== */
+
+:root {
+  /* === LOCKED COLOR PALETTE === */
+
+  /* Neutrals */
+  --ivory: #FFF5EB;
+  --cream: #F7E5DA;
+  --cream-light: #FAEDCD;
+  --cream-warm: #F6EAD8;
+  --canvas: #FBF6EE;
+  --charcoal: #2F2F2C;
+  --ink: #1F1F1C;
+
+  /* Sage / Olive (Primary Accent) */
+  --sage: #97A97C;
+  --sage-mid: #9FB08A;
+  --sage-light: #A3B18A;
+  --olive-dark: #5F6F3E;
+  --olive: #6E7F4E;
+  --deep-forest: #3B412D;
+  --forest-mid: #3C422E;
+  --dark-olive: #546E40;
+
+  /* Gold (Secondary, accent only) */
+  --gold: #FABF34;
+  --gold-light: #FFE082;
+  --gold-muted: #E8D48A;
+
+  /* Warm tones */
+  --tan: #CBAD8C;
+  --honey: #D99A57;
+
+  /* Semantic aliases */
+  --background: var(--canvas);
+  --foreground: var(--charcoal);
+  --primary: var(--deep-forest);
+  --accent: var(--sage);
+}
+
+@theme inline {
+  /* Warm Neutrals */
+  --color-cream: #FBF8F3;
+  --color-sand: #F5EFE6;
+  --color-stone: #E8E0D5;
+  --color-warm-gray: #9C9488;
+  --color-warm-beige: #EDE5D8;
+  --color-taupe: #C4B8A5;
+  --color-charcoal: #3D3D3D;
+  --color-ivory: #FFF5EB;
+
+  /* Greens */
+  --color-forest: #2D5A47;
+  --color-forest-light: #3D7A5F;
+  --color-moss: #5A7A65;
+  --color-sage: #8BA888;
+  --color-sage-muted: #A8B98D;
+  --color-olive: #546E40;
+  --color-deep-forest: #3B412D;
+  --color-dark-olive: #546E40;
+
+  /* Warm Accents */
+  --color-lime: #C8E050;
+  --color-lime-light: #D8EE80;
+  --color-gold: #FABF34;
+  --color-honey: #D4A853;
+  --color-ochre: #CC7722;
+  --color-tangerine: #E07B39;
+  --color-terracotta: #C4745A;
+  --color-rust: #B4654A;
+  --color-amber: #F5B041;
+
+  /* Fonts */
+  --font-display: var(--font-instrument);
+  --font-body: var(--font-source-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: 2.75rem;
+  letter-spacing: 0.015em;
+}
+
+h2 {
+  font-size: 1.875rem;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large display headers - always serif */
+.display-xl {
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-size: 3.25rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.015em;
+}
+
+.display-lg {
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.display-md {
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .display-xl { font-size: 4.5rem; }
+  .display-lg { font-size: 3.25rem; }
+  .display-md { font-size: 2.5rem; }
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--forest);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sand); }
+::-webkit-scrollbar-thumb { background: var(--forest); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--forest-light); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes stripe-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 20px; }
+}
+
+.animate-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Container */
+.container-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-main { padding: 0 3rem; }
+}
+
+/* Link Style */
+a {
+  color: var(--forest);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--forest-light);
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(45, 90, 71, 0.08);
+}
+
+/* Card with playful border on hover */
+.card-playful {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-playful::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 19px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--lime),
+    var(--lime) 4px,
+    var(--forest) 4px,
+    var(--forest) 8px
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.card-playful:hover::before {
+  opacity: 1;
+  animation: stripe-move 0.5s linear infinite;
+}
+
+.card-playful:hover {
+  transform: translateY(-4px);
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  background: var(--sand);
+  color: var(--charcoal);
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background: var(--lime);
+  color: var(--forest);
+}
+
+/* Button with animated stripe border (Graza-style) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--forest);
+  color: white;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  position: relative;
+  transition: transform 0.2s ease;
+  overflow: visible;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 103px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--lime),
+    var(--lime) 3px,
+    transparent 3px,
+    transparent 6px
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+  animation: stripe-move 0.4s linear infinite;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: transparent;
+  color: var(--charcoal);
+  border: 1.5px solid var(--stone);
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--forest);
+}
+
+/* Accent button (lime) with stripe animation */
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--lime);
+  color: var(--forest);
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  position: relative;
+  transition: all 0.2s;
+  overflow: visible;
+}
+
+.btn-accent::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 103px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--forest),
+    var(--forest) 3px,
+    transparent 3px,
+    transparent 6px
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: var(--lime-light);
+  transform: translateY(-2px);
+  color: var(--forest);
+}
+
+.btn-accent:hover::before {
+  opacity: 1;
+  animation: stripe-move 0.4s linear infinite;
+}
+
+/* Stat Number */
+.stat-number {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--forest);
+  line-height: 1;
+}
+
+/* Section Label */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+
+/* Playful underline on hover */
+.link-playful {
+  position: relative;
+  display: inline-block;
+}
+
+.link-playful::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link-playful:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Race Report Card */
+.race-report-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.race-report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(45, 90, 71, 0.12);
+}
+
+/* Weather badge */
+.weather-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--sand);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  color: var(--warm-gray);
+}
+
+/* BQ Badge */
+.bq-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  background: var(--lime);
+  color: var(--forest);
+  border-radius: 100px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* PR Badge */
+.pr-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  background: var(--honey);
+  color: white;
+  border-radius: 100px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Expandable section */
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.expandable-content.expanded {
+  max-height: 2000px;
+}
+
+/* Race splits visualization */
+.splits-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--sand);
+  overflow: hidden;
+}
+
+.splits-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--forest), var(--lime));
+  transition: width 0.5s ease;
+}
+
+/* Striped accent background */
+.bg-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--lime),
+    var(--lime) 10px,
+    var(--lime-light) 10px,
+    var(--lime-light) 20px
+  );
+}
+
+/* Playful quote block */
+.quote-playful {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--lime);
+  font-style: italic;
+  color: var(--warm-gray);
+}
+
+.quote-playful::before {
+  content: '"';
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  font-size: 3rem;
+  color: var(--lime);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* ===== EDITORIAL PALETTE - Locked Colors ===== */
+:root {
+  /* Deep Greens - Primary */
+  --deep-forest: #3B412D;
+  --forest-mid: #3C422E;
+  --olive-dark: #546E40;
+  --olive-mid: #6B8B4E;
+
+  /* Sage Greens - Secondary */
+  --sage-deep: #97A97C;
+  --sage-mid: #A8B98D;
+  --sage-light: #B8C9A0;
+
+  /* Warm Neutrals */
+  --ivory: #FFF5EB;
+  --cream: #FAF3E8;
+  --sand: #EDE5D8;
+  --taupe: #C4B8A5;
+
+  /* Text Colors */
+  --text-dark: #3B412D;
+  --text-light: #FFF5EB;
+}
+
+/* ===== CONTAINER - Editorial ===== */
+.container-editorial {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-editorial { padding: 0 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .container-editorial { padding: 0 4rem; }
+}
+
+/* ===== BACKGROUND COLORS ===== */
+.bg-ivory { background-color: #FFF5EB; }
+.bg-cream { background-color: #FAF3E8; }
+.bg-sand { background-color: #EDE5D8; }
+.bg-deep-forest { background-color: #3B412D; }
+
+/* ===== TEXT COLOR CLASSES (LOCKED RULES) ===== */
+
+/* For DARK GREEN backgrounds (#546E40, #3B412D, #3C422E) */
+.dark-bg-header {
+  color: #FFF5EB;
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.dark-bg-body {
+  color: #F7E5DA;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-weight: 300;
+}
+
+.dark-bg-label {
+  color: #CBAD8C;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* For LIGHT/CREAM backgrounds (#FFF5EB, #F7E5DA) */
+.light-bg-header {
+  color: #3B412D;
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.light-bg-body {
+  color: #3B412D;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-weight: 300;
+}
+
+/* Labels/descriptors use DARKEST GREEN for clarity */
+.light-bg-label {
+  color: #3B412D;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Small descriptor text - always dark green, never faded */
+.descriptor {
+  color: #546E40;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.descriptor-small {
+  color: #3C422E;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+/* Metadata - darker for clarity */
+.metadata {
+  color: #3C422E;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* === GOLD ACCENT (RESTRICTED USE) === */
+/* Gold is ONLY for: numbers, icons, tiny emphasis details */
+/* NEVER for body text or gradients */
+.accent-gold {
+  color: #FABF34;
+}
+
+.accent-gold-number {
+  color: #FABF34;
+  font-family: var(--font-instrument), 'Instrument Serif', Georgia, serif;
+  font-weight: 500;
+}
+
+.accent-gold-icon {
+  color: #FABF34;
+}
+
+/* ===== GRADIENT PANELS (3-COLOR TONAL) ===== */
+
+/* Deep Forest - dark olive tonal gradient */
+.panel-gradient-deep {
+  background: linear-gradient(160deg, #3B412D 0%, #3C422E 50%, #546E40 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Olive - sage to dark olive gradient */
+.panel-gradient-olive {
+  background: linear-gradient(160deg, #97A97C 0%, #546E40 60%, #3C422E 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Forest - mid forest tonal */
+.panel-gradient-forest {
+  background: linear-gradient(160deg, #546E40 0%, #3C422E 60%, #3B412D 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Sage - light sage gradient (light bg) */
+.panel-gradient-sage {
+  background: linear-gradient(160deg, #CBAD8C 0%, #97A97C 60%, #546E40 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Warm Neutral - cream to tan gradient (light bg) */
+.panel-gradient-warm-neutral {
+  background: linear-gradient(160deg, #FFF5EB 0%, #F7E5DA 50%, #CBAD8C 100%);
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Ochre - warm brown tonal gradient */
+.panel-gradient-ochre {
+  background: linear-gradient(160deg, #D4A853 0%, #CC7722 60%, #B4654A 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Tangerine - warm orange tonal gradient */
+.panel-gradient-tangerine {
+  background: linear-gradient(160deg, #F5B041 0%, #E07B39 60%, #C4745A 100%);
+  color: #FFF5EB;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Honey - golden warm gradient */
+.panel-gradient-honey {
+  background: linear-gradient(160deg, #FABF34 0%, #D4A853 60%, #CC7722 100%);
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Cream to Sage - soft warm to green */
+.panel-gradient-cream-sage {
+  background: linear-gradient(160deg, #F7E5DA 0%, #EDE5D8 40%, #97A97C 100%);
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Moss - lighter green tonal */
+.panel-gradient-moss {
+  background: linear-gradient(160deg, #A8B98D 0%, #97A97C 50%, #6B8B4E 100%);
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* ===== CONNECT SECTION (sage bg, cream cards) ===== */
+.connect-section {
+  background: #C9D4B0;
+  padding: 3rem 0;
+}
+
+.connect-card {
+  background: #FAF7F2;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.connect-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== SOLID PANELS ===== */
+.panel-sand {
+  background: #EDE5D8;
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.panel-cream {
+  background: #FAF3E8;
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.panel-ivory {
+  background: #FFF5EB;
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.panel-wheat {
+  background: #F5E6D3;
+  color: #3B412D;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* ===== DIVIDER RULE ===== */
+.rule {
+  border: none;
+  border-top: 1px solid #EDE5D8;
+  margin: 0;
+}
+
+/* ===== QUOTE PANEL ===== */
+.quote-panel {
+  background: linear-gradient(160deg, #3B412D 0%, #546E40 100%);
+  color: #FFF5EB;
+  padding: 3rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.quote-panel::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 4rem;
+  color: rgba(255, 245, 235, 0.2);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* ===== LINK STYLES ===== */
+.link-editorial {
+  color: #3B412D;
+  text-decoration: none;
+  border-bottom: 1px solid #EDE5D8;
+  transition: border-color 0.2s ease;
+}
+
+.link-editorial:hover {
+  border-color: #546E40;
+  color: #3B412D;
+}
+
+/* ===== READING WIDTH ===== */
+.reading-width {
+  max-width: 65ch;
+}

@@ -1,0 +1,425 @@
+{
+  "locations": [
+    {
+      "id": "washington-dc",
+      "city": "Washington, DC",
+      "country": "United States",
+      "coordinates": { "lat": 38.9072, "lng": -77.0369 },
+      "type": "home",
+      "visits": "2023-present",
+      "notes": "Home base. FTI Consulting.",
+      "highlights": ["Georgetown", "Dupont Circle", "U Street"]
+    },
+    {
+      "id": "chicago",
+      "city": "Chicago",
+      "country": "United States",
+      "coordinates": { "lat": 41.8781, "lng": -87.6298 },
+      "type": "roots",
+      "visits": "2017-2021, 2025",
+      "notes": "UChicago years. Still coming back.",
+      "highlights": ["Hyde Park", "The Loop"]
+    },
+    {
+      "id": "boston",
+      "city": "Boston",
+      "country": "United States",
+      "coordinates": { "lat": 42.3601, "lng": -71.0589 },
+      "type": "race",
+      "visits": "April 2026",
+      "notes": "Boston Marathon. Registered.",
+      "highlights": ["Heartbreak Hill", "Boylston Street finish"]
+    },
+    {
+      "id": "honolulu",
+      "city": "Honolulu",
+      "country": "United States",
+      "coordinates": { "lat": 21.3069, "lng": -157.8583 },
+      "type": "race",
+      "visits": "December 2024",
+      "notes": "Honolulu Marathon. December 2024.",
+      "highlights": ["Waikiki", "Diamond Head", "Maui"],
+      "images": [
+        "honolulu/23E65343-3C9A-4F2F-B872-EE47B5D814E7.jpeg",
+        "honolulu/49E79786-2B91-4EFB-B8AB-4BB350CAED17.jpeg",
+        "honolulu/54FB6E75-DA60-47A1-9349-9E0AA4814025.jpeg",
+        "honolulu/C671988B-3634-4461-9063-140C963CC9FD.jpeg",
+        "honolulu/A0A9E36A-4DB8-4880-BF26-F0C2753B438A.jpeg",
+        "honolulu/DC5FFD9C-CD37-468F-B11A-90E25D6CBA34.jpeg"
+      ],
+      "extendedNotes": "5am start, sunrise along Waikiki Beach. Course runs Ala Moana to Hawaii Kai. Finish at Kapiolani Park.",
+      "facts": {
+        "The Race": [
+          "5am start, ran into sunrise",
+          "Course: Ala Moana through Hawaii Kai",
+          "Finish at Kapiolani Park"
+        ],
+        "The Trip": [
+          "Day trip to Maui via puddle jumper",
+          "Hiked Diamond Head at dawn",
+          "Explored North Shore beaches"
+        ],
+        "Food & Drink": [
+          "Poke bowls everywhere",
+          "Shave ice at Matsumoto's",
+          "Malasadas from Leonard's"
+        ]
+      }
+    },
+    {
+      "id": "geneva",
+      "city": "Geneva, IL",
+      "country": "United States",
+      "coordinates": { "lat": 41.8875, "lng": -88.3059 },
+      "type": "race",
+      "visits": "September 2025",
+      "notes": "Marathon PR: 3:09. Last Chance BQ.2.",
+      "highlights": ["Fox River Trail", "PR race"]
+    },
+    {
+      "id": "new-york",
+      "city": "New York",
+      "country": "United States",
+      "coordinates": { "lat": 40.7128, "lng": -74.0060 },
+      "type": "travel",
+      "visits": "2024, 2025",
+      "notes": "Museums, theater, food.",
+      "highlights": ["Manhattan", "Museums"]
+    },
+    {
+      "id": "san-francisco",
+      "city": "San Francisco",
+      "country": "United States",
+      "coordinates": { "lat": 37.7749, "lng": -122.4194 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Tech, fog, good coffee.",
+      "highlights": ["Golden Gate", "Mission District"]
+    },
+    {
+      "id": "los-angeles",
+      "city": "Los Angeles",
+      "country": "United States",
+      "coordinates": { "lat": 34.0522, "lng": -118.2437 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Family, beaches.",
+      "highlights": ["Venice Beach", "Downtown LA"]
+    },
+    {
+      "id": "san-diego",
+      "city": "San Diego",
+      "country": "United States",
+      "coordinates": { "lat": 32.7157, "lng": -117.1611 },
+      "type": "travel",
+      "visits": "2025",
+      "notes": "Summer in Southern California.",
+      "highlights": ["Beaches", "Gaslamp Quarter"]
+    },
+    {
+      "id": "sea-island",
+      "city": "Sea Island",
+      "country": "United States",
+      "coordinates": { "lat": 31.1966, "lng": -81.3577 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Georgia coast.",
+      "highlights": ["Beach", "Golf"]
+    },
+    {
+      "id": "dallas",
+      "city": "Dallas",
+      "country": "United States",
+      "coordinates": { "lat": 32.7767, "lng": -96.7970 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Texas trips.",
+      "highlights": ["Deep Ellum", "Arts District"]
+    },
+    {
+      "id": "orlando",
+      "city": "Orlando",
+      "country": "United States",
+      "coordinates": { "lat": 28.5383, "lng": -81.3792 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Theme parks, family visits.",
+      "highlights": ["Theme Parks"]
+    },
+    {
+      "id": "seattle",
+      "city": "Seattle",
+      "country": "United States",
+      "coordinates": { "lat": 47.6062, "lng": -122.3321 },
+      "type": "travel",
+      "visits": "September 2024",
+      "notes": "PNW. Mt. Rainier. Pike Place.",
+      "highlights": ["Pike Place", "Mt. Rainier", "Bainbridge Island"]
+    },
+    {
+      "id": "atlanta",
+      "city": "Atlanta",
+      "country": "United States",
+      "coordinates": { "lat": 33.7490, "lng": -84.3880 },
+      "type": "travel",
+      "visits": "July 2025",
+      "notes": "Southern hospitality.",
+      "highlights": ["Midtown", "Piedmont Park"]
+    },
+    {
+      "id": "miami",
+      "city": "Miami",
+      "country": "United States",
+      "coordinates": { "lat": 25.7617, "lng": -80.1918 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Beach, Cuban food.",
+      "highlights": ["South Beach", "Wynwood", "Little Havana"]
+    },
+    {
+      "id": "maine",
+      "city": "Maine Coast",
+      "country": "United States",
+      "coordinates": { "lat": 43.8610, "lng": -69.5275 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Lobster, lighthouses, summer escapes.",
+      "highlights": ["Walpole", "Damariscotta", "South Bristol"]
+    },
+    {
+      "id": "savannah",
+      "city": "Savannah",
+      "country": "United States",
+      "coordinates": { "lat": 32.0809, "lng": -81.0912 },
+      "type": "travel",
+      "visits": "October 2023",
+      "notes": "Historic squares, Spanish moss.",
+      "highlights": ["Historic District", "Forsyth Park"]
+    },
+    {
+      "id": "philadelphia",
+      "city": "Philadelphia",
+      "country": "United States",
+      "coordinates": { "lat": 39.9526, "lng": -75.1652 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Day trips from DC.",
+      "highlights": ["Old City", "Art Museum"]
+    },
+    {
+      "id": "tokyo",
+      "city": "Tokyo",
+      "country": "Japan",
+      "coordinates": { "lat": 35.6762, "lng": 139.6503 },
+      "type": "travel",
+      "visits": "October 2024",
+      "notes": "First time in Japan. Itoya Ginza.",
+      "highlights": ["Itoya Ginza", "Shibuya", "Shinjuku"],
+      "images": [
+        "tokyo/45EB4D40-E6A3-4349-B3D4-EAED922549D4.jpeg",
+        "tokyo/F6A215C6-A815-4207-904C-120CBE2A1BE7.jpeg"
+      ],
+      "extendedNotes": "First time in Japan. Shibuya Crossing, Meiji Shrine, Itoya Ginza (12 floors of stationery). Golden Gai for late-night drinks. Tsukiji for breakfast.",
+      "facts": {
+        "Neighborhoods": [
+          "Shibuya—Crossing, shopping, nightlife",
+          "Shinjuku—Golden Gai, late-night bars",
+          "Ginza—Upscale shopping, Itoya flagship",
+          "Harajuku—Street fashion, Meiji Shrine"
+        ],
+        "Must-Do": [
+          "Itoya Ginza—12 floors of stationery",
+          "Shibuya Crossing at night",
+          "Meiji Shrine forest walk",
+          "Tsukiji Outer Market for breakfast"
+        ],
+        "Food": [
+          "Ramen in every neighborhood",
+          "Conveyor belt sushi",
+          "7-Eleven surprisingly amazing"
+        ]
+      }
+    },
+    {
+      "id": "kyoto",
+      "city": "Kyoto",
+      "country": "Japan",
+      "coordinates": { "lat": 35.0116, "lng": 135.7681 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Temples, shrines, tea.",
+      "highlights": ["Fushimi Inari", "Gion", "Bamboo Grove"],
+      "images": [
+        "kyoto/5A1077BF-8089-43C3-9A8E-62F84A82E9F3.jpeg",
+        "kyoto/3ED1E25E-5FC6-4AFB-A4B0-271ACB0AA33E.jpeg",
+        "kyoto/BB63F833-DBBF-4E52-AEA8-DD781F11F481.jpeg",
+        "kyoto/9DE55D14-CE7E-4E0B-BC28-363AD8D0C2C7.jpeg",
+        "kyoto/E84BECF3-5A2D-47EE-BAF2-412FEBAC9D52.jpeg",
+        "kyoto/D38CFE83-C514-453D-8FCA-60B2F4E134E6.jpeg"
+      ],
+      "extendedNotes": "Fushimi Inari (10,000 torii gates), Arashiyama bamboo grove, Gion district. Day trips from Osaka."
+    },
+    {
+      "id": "osaka",
+      "city": "Osaka",
+      "country": "Japan",
+      "coordinates": { "lat": 34.6937, "lng": 135.5023 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Food capital of Japan.",
+      "highlights": ["Dotonbori", "Street Food"],
+      "images": [
+        "osaka/CB5FF304-5FB2-4438-B0AE-0FF1147C0529.jpeg",
+        "osaka/3B55F406-49D2-4E53-9F17-03A618E5A567.jpeg",
+        "osaka/980EE59A-0327-4DD2-ABB5-7110DCD38182.jpeg",
+        "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg"
+      ],
+      "extendedNotes": "Dotonbori at night. Takoyaki, okonomiyaki, kushikatsu. Street food is the draw."
+    },
+    {
+      "id": "hiroshima",
+      "city": "Hiroshima",
+      "country": "Japan",
+      "coordinates": { "lat": 34.3853, "lng": 132.4553 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Peace Memorial.",
+      "highlights": ["Peace Park", "Miyajima"],
+      "images": [
+        "hiroshima/1C05A174-11BD-4916-A265-EB9996D521BA.jpeg"
+      ],
+      "extendedNotes": "Peace Memorial Museum, A-Bomb Dome. Day trip to Miyajima for the floating torii gate."
+    },
+    {
+      "id": "paris",
+      "city": "Paris",
+      "country": "France",
+      "coordinates": { "lat": 48.8566, "lng": 2.3522 },
+      "type": "travel",
+      "visits": "2025",
+      "notes": "Seine, museums, cafes.",
+      "highlights": ["Seine", "Museums", "Cafes"]
+    },
+    {
+      "id": "london",
+      "city": "London",
+      "country": "United Kingdom",
+      "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+      "type": "travel",
+      "visits": "March 2025",
+      "notes": "V&A, West End, pubs.",
+      "highlights": ["West End", "Museums", "Pubs"]
+    },
+    {
+      "id": "spain",
+      "city": "Valencia & Bilbao",
+      "country": "Spain",
+      "coordinates": { "lat": 39.4699, "lng": -0.3763 },
+      "type": "travel",
+      "visits": "August 2022",
+      "notes": "Basque country, Mediterranean coast.",
+      "highlights": ["La Ciudad", "Guggenheim", "San Sebastián"]
+    },
+    {
+      "id": "mexico-city",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.4326, "lng": -99.1332 },
+      "type": "travel",
+      "visits": "May 2025",
+      "notes": "Tepoztlán, Chapultepec, Roma.",
+      "highlights": ["Roma Norte", "Chapultepec", "Tepoztlán"]
+    },
+    {
+      "id": "toronto",
+      "city": "Toronto",
+      "country": "Canada",
+      "coordinates": { "lat": 43.6532, "lng": -79.3832 },
+      "type": "travel",
+      "visits": "August-September 2025",
+      "notes": "Toronto Islands, food scene.",
+      "highlights": ["Toronto Islands", "Kensington Market", "CN Tower"]
+    },
+    {
+      "id": "hanoi",
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "coordinates": { "lat": 21.0285, "lng": 105.8542 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Old Quarter, street food, coffee.",
+      "highlights": ["Old Quarter", "Street Food", "Coffee"]
+    },
+    {
+      "id": "hue",
+      "city": "Hue & Da Nang",
+      "country": "Vietnam",
+      "coordinates": { "lat": 16.4637, "lng": 107.5909 },
+      "type": "travel",
+      "visits": "2024",
+      "notes": "Central Vietnam coast.",
+      "highlights": ["Imperial City", "Beaches"]
+    },
+    {
+      "id": "bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "coordinates": { "lat": 13.7563, "lng": 100.5018 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Temples, street food, markets.",
+      "highlights": ["Temples", "Street Food", "Markets"]
+    },
+    {
+      "id": "mumbai",
+      "city": "Mumbai",
+      "country": "India",
+      "coordinates": { "lat": 19.0760, "lng": 72.8777 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Gateway of India, street life.",
+      "highlights": ["Gateway of India", "Street Life"]
+    },
+    {
+      "id": "new-delhi",
+      "city": "New Delhi",
+      "country": "India",
+      "coordinates": { "lat": 28.6139, "lng": 77.2090 },
+      "type": "travel",
+      "visits": "Multiple",
+      "notes": "Red Fort, Chandni Chowk.",
+      "highlights": ["Red Fort", "Chandni Chowk"]
+    },
+    {
+      "id": "nepal",
+      "city": "Nepal",
+      "country": "Nepal",
+      "coordinates": { "lat": 27.7172, "lng": 85.3240 },
+      "type": "travel",
+      "visits": "November 2023",
+      "notes": "Kathmandu, Pokhara, Bhaktapur.",
+      "highlights": ["Kathmandu", "Pokhara", "Bhaktapur"]
+    },
+    {
+      "id": "sri-lanka",
+      "city": "Sri Lanka",
+      "country": "Sri Lanka",
+      "coordinates": { "lat": 6.9271, "lng": 79.8612 },
+      "type": "travel",
+      "visits": "November-December 2023",
+      "notes": "Colombo, tea country.",
+      "highlights": ["Colombo", "Central Province"]
+    }
+  ],
+  "stats": {
+    "countries": 15,
+    "cities": 38,
+    "marathonCities": 3
+  },
+  "types": {
+    "home": "Current home base",
+    "roots": "Formative years",
+    "race": "Marathon destination",
+    "travel": "Exploration"
+  }
+}

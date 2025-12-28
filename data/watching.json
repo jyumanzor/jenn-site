@@ -1,0 +1,271 @@
+{
+  "films": [
+    {
+      "id": "in-the-mood-for-love",
+      "title": "In the Mood for Love",
+      "director": "Wong Kar-wai",
+      "year": 2000,
+      "status": "watched",
+      "rating": 10,
+      "genre": "Romance",
+      "country": "Hong Kong",
+      "cast": ["Tony Leung", "Maggie Cheung"],
+      "accolades": "Cannes Best Actor, BAFTA nomination",
+      "notes": "The most beautiful film ever made. Longing, restraint, and the tragedy of timing.",
+      "themes": ["Longing", "Restraint", "Time"]
+    },
+    {
+      "id": "chungking-express",
+      "title": "Chungking Express",
+      "director": "Wong Kar-wai",
+      "year": 1994,
+      "status": "want-to-watch",
+      "genre": "Romance",
+      "country": "Hong Kong",
+      "cast": ["Tony Leung", "Faye Wong", "Brigitte Lin"],
+      "accolades": "Hong Kong Film Award",
+      "themes": ["Urban loneliness", "Coincidence"]
+    },
+    {
+      "id": "happy-together",
+      "title": "Happy Together",
+      "director": "Wong Kar-wai",
+      "year": 1997,
+      "status": "want-to-watch",
+      "genre": "Romance",
+      "country": "Hong Kong",
+      "cast": ["Tony Leung", "Leslie Cheung"],
+      "accolades": "Cannes Best Director",
+      "themes": ["Love", "Exile", "Identity"]
+    },
+    {
+      "id": "aftersun",
+      "title": "Aftersun",
+      "director": "Charlotte Wells",
+      "year": 2022,
+      "status": "want-to-watch",
+      "genre": "Drama",
+      "country": "UK",
+      "cast": ["Paul Mescal", "Frankie Corio"],
+      "accolades": "BAFTA Outstanding British Film, Spirit Award",
+      "themes": ["Memory", "Father-daughter", "Grief"]
+    },
+    {
+      "id": "past-lives",
+      "title": "Past Lives",
+      "director": "Celine Song",
+      "year": 2023,
+      "status": "want-to-watch",
+      "genre": "Romance",
+      "country": "USA/Korea",
+      "cast": ["Greta Lee", "Teo Yoo", "John Magaro"],
+      "accolades": "Oscar nomination, Gotham Award",
+      "themes": ["In-yun", "Identity", "What-ifs"]
+    },
+    {
+      "id": "fallen-angels",
+      "title": "Fallen Angels",
+      "director": "Wong Kar-wai",
+      "year": 1995,
+      "status": "want-to-watch",
+      "genre": "Crime/Romance",
+      "country": "Hong Kong",
+      "cast": ["Leon Lai", "Michelle Reis", "Takeshi Kaneshiro"],
+      "accolades": "Hong Kong Film Award",
+      "themes": ["Isolation", "Night", "Connection"]
+    },
+    {
+      "id": "2046",
+      "title": "2046",
+      "director": "Wong Kar-wai",
+      "year": 2004,
+      "status": "want-to-watch",
+      "genre": "Romance/Sci-Fi",
+      "country": "Hong Kong",
+      "cast": ["Tony Leung", "Gong Li", "Faye Wong", "Zhang Ziyi"],
+      "accolades": "Cannes Competition",
+      "themes": ["Memory", "Loss", "Time"]
+    }
+  ],
+  "books": [
+    {
+      "title": "The Stranger",
+      "author": "Albert Camus",
+      "notes": "The absurd and the indifference of the universe.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "The Myth of Sisyphus",
+      "author": "Albert Camus",
+      "notes": "One must imagine Sisyphus happy.",
+      "category": "Philosophy"
+    },
+    {
+      "title": "Endure",
+      "author": "Alex Hutchinson",
+      "notes": "The science of human performance. Essential for marathon training.",
+      "category": "Running"
+    },
+    {
+      "title": "Born to Run",
+      "author": "Christopher McDougall",
+      "notes": "The book that made me want to run ultras.",
+      "category": "Running"
+    },
+    {
+      "title": "Let Your Mind Run",
+      "author": "Deena Kastor",
+      "notes": "Mental training from an Olympic medalist.",
+      "category": "Running"
+    },
+    {
+      "title": "Educated",
+      "author": "Tara Westover",
+      "notes": "First-gen energy. The power of education to transform.",
+      "category": "Memoir"
+    },
+    {
+      "title": "Crying in H Mart",
+      "author": "Michelle Zauner",
+      "notes": "Grief, identity, and the love in food.",
+      "category": "Memoir"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "long-runs",
+      "title": "Long Runs",
+      "description": "18+ miles. Steady pace, steady mind.",
+      "vibe": "Running",
+      "mood": "Focused",
+      "trackCount": 45,
+      "appleMusicUrl": "",
+      "color": "#2a3c24"
+    },
+    {
+      "id": "tempo-days",
+      "title": "Tempo Days",
+      "description": "When the pace needs to hurt.",
+      "vibe": "Running",
+      "mood": "Intense",
+      "trackCount": 32,
+      "appleMusicUrl": "",
+      "color": "#4e6041"
+    },
+    {
+      "id": "recovery-walks",
+      "title": "Recovery Walks",
+      "description": "Easy miles. Podcasts and chill.",
+      "vibe": "Running",
+      "mood": "Relaxed",
+      "trackCount": 28,
+      "appleMusicUrl": "",
+      "color": "#97a97c"
+    },
+    {
+      "id": "focus-work",
+      "title": "Deep Work",
+      "description": "No lyrics. No distractions. Just flow.",
+      "vibe": "Focus",
+      "mood": "Ambient",
+      "trackCount": 60,
+      "appleMusicUrl": "",
+      "color": "#546e40"
+    },
+    {
+      "id": "late-nights",
+      "title": "Late Nights",
+      "description": "2am coding sessions. Synth and electronic.",
+      "vibe": "Focus",
+      "mood": "Nocturnal",
+      "trackCount": 48,
+      "appleMusicUrl": "",
+      "color": "#2a3c24"
+    },
+    {
+      "id": "morning-coffee",
+      "title": "Morning Coffee",
+      "description": "Slow starts. Acoustic and gentle.",
+      "vibe": "Mood",
+      "mood": "Calm",
+      "trackCount": 35,
+      "appleMusicUrl": "",
+      "color": "#ffcb69"
+    },
+    {
+      "id": "dinner-party",
+      "title": "Dinner Party",
+      "description": "Hosting vibes. Jazz and soul.",
+      "vibe": "Social",
+      "mood": "Warm",
+      "trackCount": 55,
+      "appleMusicUrl": "",
+      "color": "#ecc064"
+    },
+    {
+      "id": "wine-down",
+      "title": "Wine Down",
+      "description": "End of day. Mellow and introspective.",
+      "vibe": "Mood",
+      "mood": "Reflective",
+      "trackCount": 42,
+      "appleMusicUrl": "",
+      "color": "#8b9d72"
+    },
+    {
+      "id": "road-trip",
+      "title": "Road Trip",
+      "description": "Windows down. Sing-along energy.",
+      "vibe": "Social",
+      "mood": "Energetic",
+      "trackCount": 65,
+      "appleMusicUrl": "",
+      "color": "#d4ed39"
+    },
+    {
+      "id": "rainy-days",
+      "title": "Rainy Days",
+      "description": "Cozy indoors. Lo-fi and soft jazz.",
+      "vibe": "Mood",
+      "mood": "Cozy",
+      "trackCount": 50,
+      "appleMusicUrl": "",
+      "color": "#677955"
+    },
+    {
+      "id": "getting-ready",
+      "title": "Getting Ready",
+      "description": "Pre-going out energy. Hype and confidence.",
+      "vibe": "Social",
+      "mood": "Hype",
+      "trackCount": 38,
+      "appleMusicUrl": "",
+      "color": "#fabf34"
+    },
+    {
+      "id": "sunday-reset",
+      "title": "Sunday Reset",
+      "description": "Cleaning, cooking, resetting for the week.",
+      "vibe": "Mood",
+      "mood": "Peaceful",
+      "trackCount": 45,
+      "appleMusicUrl": "",
+      "color": "#f7e5da"
+    }
+  ],
+  "filters": {
+    "statuses": ["watched", "want-to-watch"],
+    "genres": ["Romance", "Drama", "Crime/Romance", "Romance/Sci-Fi"],
+    "directors": ["Wong Kar-wai", "Charlotte Wells", "Celine Song"],
+    "bookCategories": ["Philosophy", "Running", "Memoir"],
+    "playlistVibes": ["Running", "Focus", "Mood", "Social"],
+    "playlistMoods": ["Focused", "Intense", "Relaxed", "Ambient", "Nocturnal", "Calm", "Warm", "Reflective", "Energetic", "Cozy", "Hype", "Peaceful"]
+  },
+  "stats": {
+    "totalFilms": 7,
+    "watched": 1,
+    "wantToWatch": 6,
+    "totalBooks": 7,
+    "totalPlaylists": 12
+  }
+}

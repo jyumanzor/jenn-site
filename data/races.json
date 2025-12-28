@@ -1,0 +1,110 @@
+{
+  "marathons": [
+    {
+      "id": "geneva-2025",
+      "name": "Last Chance BQ.2 Chicagoland",
+      "date": "2025-09-06",
+      "location": "Geneva, IL",
+      "time": "3:09:26",
+      "pace": "7:14/mi",
+      "bostonQualifier": true,
+      "isPR": true,
+      "temp": "55°F",
+      "conditions": "Cool, overcast",
+      "notes": "PR race. Perfect conditions."
+    },
+    {
+      "id": "irving-frost-2024",
+      "name": "Irving Frost Marathon",
+      "date": "2024-12-21",
+      "location": "Irving, TX",
+      "time": "3:21:13",
+      "pace": "7:41/mi",
+      "bostonQualifier": true,
+      "isPR": false,
+      "temp": "42°F",
+      "conditions": "Cold, windy",
+      "notes": "Winter race in Texas."
+    },
+    {
+      "id": "honolulu-2025",
+      "name": "Honolulu Marathon",
+      "date": "2025-12-08",
+      "location": "Honolulu, HI",
+      "time": "3:36:56",
+      "pace": "8:16/mi",
+      "bostonQualifier": false,
+      "isPR": false,
+      "temp": "75°F",
+      "conditions": "Humid, warm",
+      "notes": "Beautiful course, challenging heat."
+    },
+    {
+      "id": "cascade-express-2024",
+      "name": "Cascade Express Marathon",
+      "date": "2024-09-07",
+      "location": "North Bend, WA",
+      "time": "3:35:23",
+      "pace": "8:13/mi",
+      "bostonQualifier": false,
+      "isPR": false,
+      "temp": "62°F",
+      "conditions": "Cloudy, mild",
+      "notes": "Pacific Northwest scenery."
+    },
+    {
+      "id": "grand-rapids-2023",
+      "name": "Last Chance BQ.2 Grand Rapids",
+      "date": "2023-09-09",
+      "location": "Grand Rapids, MI",
+      "time": "3:29:18",
+      "pace": "7:59/mi",
+      "bostonQualifier": true,
+      "isPR": false,
+      "temp": "58°F",
+      "conditions": "Clear, cool",
+      "notes": "First BQ attempt."
+    }
+  ],
+  "ultras": [
+    {
+      "id": "tacobell-2025",
+      "name": "Taco Bell DC 50K",
+      "date": "2025-11-29",
+      "location": "Alexandria, VA",
+      "time": "4:39:00",
+      "distance": "31 miles",
+      "temp": "48°F",
+      "conditions": "Fall weather",
+      "notes": "First ultra."
+    }
+  ],
+  "upcoming": [
+    {
+      "id": "boston-2026",
+      "name": "Boston Marathon",
+      "date": "2026-04-20",
+      "location": "Boston, MA",
+      "status": "registered"
+    },
+    {
+      "id": "chicago-2026",
+      "name": "Chicago Marathon",
+      "date": "2026-10-11",
+      "location": "Chicago, IL",
+      "status": "registered"
+    }
+  ],
+  "stats": {
+    "marathonPR": "3:09",
+    "totalMarathons": 5,
+    "bostonQualifications": 3,
+    "weeklyMileage": "50-60"
+  },
+  "worldMajors": {
+    "goal": 7,
+    "completed": [],
+    "registered": ["Boston 2026", "Chicago 2026"],
+    "remaining": ["NYC", "Berlin", "Tokyo", "London", "Sydney"]
+  }
+}

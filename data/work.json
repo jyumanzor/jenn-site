@@ -1,0 +1,320 @@
+{
+  "current": {
+    "title": "Senior Consultant, Economics",
+    "company": "FTI Consulting",
+    "location": "Washington, DC",
+    "timeline": "Sep 2022 - Present",
+    "type": "Full-time",
+    "description": "Litigation & Dispute Resolution practice. Leading team expansion, mentoring analysts and interns.",
+    "responsibilities": [
+      "Applies advanced statistical tools (Stata, Excel, R) for economic analyses, models, damage estimation, and valuations",
+      "Produces meticulously crafted reports for economic experts and judges",
+      "Collaborates with legal counsel for data gathering, processing, and prioritization",
+      "Project management to deliver reports aligned with court timelines",
+      "Leads, mentors, and guides analysts and interns — expanded practice threefold",
+      "Develops training programs for new hires",
+      "Campus recruiter and consultant facilitator"
+    ],
+    "skills": ["Stata", "Excel", "R", "Economic modeling", "Damages estimation", "Team leadership"]
+  },
+  "positions": [
+    {
+      "id": "lululemon",
+      "title": "Educator",
+      "company": "lululemon",
+      "location": "Washington, DC",
+      "timeline": "Sep 2022 - Jan 2025",
+      "duration": "2 yrs 5 mos",
+      "type": "Part-time",
+      "category": "retail",
+      "shortDescription": "Part-time alongside consulting. Community events & customer experience.",
+      "responsibilities": [
+        "Helped store exceed 'reach' sales targets by fostering customer loyalty",
+        "Cultivated open team communication aligned with company values",
+        "Provided personalized product recommendations addressing customer concerns",
+        "Elevated customer engagement through community events"
+      ]
+    },
+    {
+      "id": "morning-consult-senior",
+      "title": "Senior Associate, Client Services",
+      "company": "Morning Consult",
+      "location": "Washington, DC",
+      "timeline": "Jul 2022 - Aug 2022",
+      "duration": "2 mos",
+      "type": "Full-time",
+      "category": "research",
+      "shortDescription": "Market research & client analysis. Fortune 500 newsletter oversight.",
+      "responsibilities": [
+        "Met demands of client projects based on strategic need",
+        "Drafted questionnaires to gauge public sentiment",
+        "Analyzed market research for deliverables with actionable insights",
+        "Oversaw weekly research newsletter for Fortune 500 companies",
+        "Created custom brand trackers and monthly KPI dashboards",
+        "Managed Salesforce fulfillments and leveraged client research for revenue opportunities"
+      ]
+    },
+    {
+      "id": "morning-consult",
+      "title": "Associate, Client Services",
+      "company": "Morning Consult",
+      "location": "Washington, DC",
+      "timeline": "Jun 2021 - Jul 2022",
+      "duration": "1 yr 2 mos",
+      "type": "Full-time",
+      "category": "research",
+      "shortDescription": "Market research, client services, data analysis, reporting.",
+      "responsibilities": [
+        "Market research and client services",
+        "Data analysis and reporting",
+        "Client relationship management"
+      ]
+    },
+    {
+      "id": "solidcore",
+      "title": "Fitness Instructor",
+      "company": "[solidcore]",
+      "location": "Washington, DC",
+      "timeline": "Jul 2021 - Apr 2022",
+      "duration": "10 mos",
+      "type": "Part-time",
+      "category": "fitness",
+      "shortDescription": "Led 50-minute strength workouts on Megaformer machines.",
+      "responsibilities": [
+        "Led clients through 50-minute strength-based workouts on reformer machines",
+        "Built client relationships and community",
+        "Developed leadership and communication skills"
+      ]
+    },
+    {
+      "id": "survey-lab",
+      "title": "Senior Research Analyst",
+      "company": "Survey Lab, University of Chicago",
+      "location": "Chicago, IL",
+      "timeline": "Jan 2021 - Oct 2021",
+      "duration": "10 mos",
+      "type": "Full-time",
+      "category": "research",
+      "shortDescription": "Healthcare research & call operations. Trained research assistants.",
+      "responsibilities": [
+        "Managed call operations for dental programs assessing healthcare coverage biases for children",
+        "Conducted screening interviews",
+        "Data entry, cleaning, and pilot questionnaire development",
+        "Trained research assistants"
+      ]
+    },
+    {
+      "id": "consilium",
+      "title": "Junior Associate",
+      "company": "Consilium Group Advisors",
+      "location": "Washington, DC",
+      "timeline": "Sep 2020 - Jun 2021",
+      "duration": "10 mos",
+      "type": "Part-time",
+      "category": "consulting",
+      "shortDescription": "International development. M&E reports for Peru, The Gambia, Senegal.",
+      "responsibilities": [
+        "Strategic project management for international development efforts",
+        "Produced monitoring and evaluation reports for Peru, The Gambia, and Senegal",
+        "Assessed country fragility, resilience, and risks for World Bank operations",
+        "Analyzed economic indicators and government administration challenges"
+      ]
+    },
+    {
+      "id": "brookings",
+      "title": "Research Intern",
+      "company": "The Brookings Institution",
+      "location": "Washington, DC",
+      "timeline": "Jun 2020 - Dec 2020",
+      "duration": "7 mos",
+      "type": "Part-time",
+      "category": "research",
+      "shortDescription": "The Hamilton Project. Published on higher education inequality.",
+      "responsibilities": [
+        "Conducted research for The Hamilton Project on economic development",
+        "Produced written analysis and data visualizations for economic analyses",
+        "Fact-checking and copyediting for Economic Studies department",
+        "Published: 'Higher education's reopening decisions affected the most vulnerable students'"
+      ],
+      "publication": "Higher education's reopening decisions affected the most vulnerable students"
+    },
+    {
+      "id": "aegis",
+      "title": "Summer Data Intern",
+      "company": "Aegis Mobile",
+      "location": "Vienna, VA",
+      "timeline": "Jun 2020 - Sep 2020",
+      "duration": "4 mos",
+      "type": "Part-time",
+      "category": "data",
+      "shortDescription": "Compliance risk research. Predictive models for partner vetting.",
+      "responsibilities": [
+        "Conducted due-diligence research for compliance risk identification",
+        "Supported multiple client projects across Finance, Government, Technology sectors",
+        "Developed predictive models through behavioral vetting",
+        "Calculated numerical benchmarks for partner risk assessment"
+      ]
+    },
+    {
+      "id": "uchicago-iam",
+      "title": "Identity and Access Management Data Analyst",
+      "company": "University of Chicago",
+      "location": "Chicago, IL",
+      "timeline": "Jan 2020 - Jun 2020",
+      "duration": "6 mos",
+      "type": "Part-time",
+      "category": "data",
+      "shortDescription": "Knowledge base use cases. Testing methodology & data synthesis.",
+      "responsibilities": [
+        "Identified knowledge base use cases to inform product decisions",
+        "Developed framework and testing methodology for feature evaluation",
+        "Created pivot tables for data synthesis and analysis recommendations"
+      ]
+    },
+    {
+      "id": "wilson-center",
+      "title": "Research Assistant and Scholar Intern",
+      "company": "Woodrow Wilson International Center for Scholars",
+      "location": "Washington, DC",
+      "timeline": "Jun 2019 - Sep 2019",
+      "duration": "4 mos",
+      "type": "Part-time",
+      "category": "research",
+      "shortDescription": "Archival research at National Archives & Library of Congress.",
+      "responsibilities": [
+        "Conducted extensive archival research at National Archives and Library of Congress",
+        "Managed manuscript edits for major book project on political transparency",
+        "Facilitated communication and IRB compliance for interviews",
+        "Conducted POLITICO report on gender parity in governance"
+      ]
+    },
+    {
+      "id": "tmw-center",
+      "title": "Observational Coding Assistant",
+      "company": "TMW Center for Early Learning + Public Health",
+      "location": "Chicago, IL",
+      "timeline": "Jul 2018 - Dec 2018",
+      "duration": "6 mos",
+      "type": "Part-time",
+      "category": "research",
+      "shortDescription": "Child developmental assessments. Linguistic software preparation.",
+      "responsibilities": [
+        "Prepared evidence-based home visiting interventions for statistical analysis",
+        "Reviewed child developmental assessments for coding",
+        "Data cleaning for linguistic software preparation"
+      ]
+    },
+    {
+      "id": "ssa-fellow",
+      "title": "Undergraduate Research Fellow",
+      "company": "University of Chicago School of Social Service Administration",
+      "location": "Chicago, IL",
+      "timeline": "May 2018 - Oct 2018",
+      "duration": "6 mos",
+      "type": "Part-time",
+      "category": "research",
+      "shortDescription": "Chicago's CityKey Municipal ID research. Field interviews.",
+      "responsibilities": [
+        "Investigated role of Chicago's CityKey Municipal ID in institutional access",
+        "Copyedited grant proposals",
+        "Conducted field research with longitudinal interviews",
+        "Managed media tracking and administered tablet-based surveys"
+      ]
+    },
+    {
+      "id": "violence-lab",
+      "title": "Undergraduate Data Analyst",
+      "company": "The Violence, Law, & Politics Lab",
+      "location": "University of Chicago",
+      "timeline": "Nov 2017 - Jun 2018",
+      "duration": "8 mos",
+      "type": "Part-time",
+      "category": "data",
+      "shortDescription": "Digitized political districts. Archival research on homicide hotspots.",
+      "responsibilities": [
+        "Digitized political districts in various American cities",
+        "Conducted and coded archival research on homicide hotspots (Chicago and New Orleans, 1890-1965)",
+        "Produced qualitative analysis using ArcGIS and Stata"
+      ]
+    },
+    {
+      "id": "tutor",
+      "title": "Mathematics Tutor",
+      "company": "Axis Tutors / Ray Elementary School",
+      "location": "Chicago, IL",
+      "timeline": "Feb 2018 - Feb 2020",
+      "duration": "2 yrs",
+      "type": "Part-time",
+      "category": "education",
+      "shortDescription": "Algebra instruction for 5th graders. Weekly tutorials.",
+      "responsibilities": [
+        "Instructed algebra to 5th grade students",
+        "Assessed written assignments",
+        "Held weekly tutorials for comprehension"
+      ]
+    },
+    {
+      "id": "barista",
+      "title": "Barista",
+      "company": "Starbucks",
+      "location": "Northpark Mall, Dallas",
+      "timeline": "2015 - June 2017",
+      "duration": "~2 yrs",
+      "type": "Part-time",
+      "category": "retail",
+      "shortDescription": "First job at 16. Customer service & fast-paced retail.",
+      "responsibilities": [
+        "Customer service in fast-paced environment",
+        "Cash handling and inventory management",
+        "Opening and closing procedures"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Chicago",
+      "degree": "BA in Sociology & HIPS",
+      "timeline": "2017-2021",
+      "honors": ["Dean's List", "Lawrence A. Kimpton Fellow"],
+      "activities": ["Model UN", "Women in Public Service (WPSP)"]
+    },
+    {
+      "school": "Princeton University",
+      "degree": "Summer Certificate, International Relations",
+      "timeline": "2016",
+      "honors": ["Grade: A"],
+      "activities": ["Presentations on international relations, gender studies, environmental politics"]
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "SQL", "Stata", "R", "Excel", "ArcGIS", "Salesforce"],
+    "analysis": ["Statistical Analysis", "Economic Modeling", "Predictive Analytics", "Data Visualization"],
+    "soft": ["Leadership", "Team mentoring", "Project management", "Client relations"]
+  },
+  "languages": [
+    { "language": "Spanish", "level": "Native/Bilingual" },
+    { "language": "French", "level": "Professional Working" },
+    { "language": "Hindi", "level": "Proficient" }
+  ],
+  "publications": [
+    {
+      "title": "Higher education's reopening decisions affected the most vulnerable students",
+      "publisher": "Brookings Institution",
+      "date": "Jan 2021"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "ASPCA of DC",
+      "role": "Volunteer",
+      "timeline": "2023 - Present",
+      "description": "Animal welfare and shelter support. I love animals."
+    },
+    {
+      "organization": "Chicago HOPES for Kids",
+      "role": "Mentor",
+      "timeline": "Summer 2018",
+      "description": "Support for homeless youth. Reading instruction, parent advising, curriculum goals."
+    }
+  ]
+}
