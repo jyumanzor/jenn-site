@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { kv } from '@vercel/kv';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend lazily to avoid build-time errors
+const getResend = () => {
+  if (!process.env.RESEND_API_KEY) return null;
+  return new Resend(process.env.RESEND_API_KEY);
+};
 
 interface Suggestion {
   id: string;
@@ -48,7 +52,8 @@ export async function POST(request: Request) {
     }
 
     // Send email notification via Resend
-    if (process.env.RESEND_API_KEY && process.env.NOTIFICATION_EMAIL) {
+    const resend = getResend();
+    if (resend && process.env.NOTIFICATION_EMAIL) {
       try {
         await resend.emails.send({
           from: 'Jenn Site <onboarding@resend.dev>',
