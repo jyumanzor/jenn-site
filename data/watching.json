@@ -259,11 +259,12 @@
       "title": "The Shape of Water",
       "director": "Guillermo del Toro",
       "year": 2017,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Fantasy/Romance",
       "country": "USA",
       "cast": ["Sally Hawkins", "Michael Shannon", "Octavia Spencer"],
       "accolades": "Oscar Best Picture, Best Director",
+      "notes": "Cold War fairy tale. Del Toro's love letter to monsters and outsiders.",
       "themes": ["Otherness", "Love", "Cold War"]
     },
     {
@@ -271,11 +272,12 @@
       "title": "Spotlight",
       "director": "Tom McCarthy",
       "year": 2015,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Drama",
       "country": "USA",
       "cast": ["Michael Keaton", "Mark Ruffalo", "Rachel McAdams"],
       "accolades": "Oscar Best Picture, Best Original Screenplay",
+      "notes": "Journalism as it should be. The Boston Globe exposes systemic abuse.",
       "themes": ["Journalism", "Institutions", "Truth"]
     },
     {
@@ -283,11 +285,12 @@
       "title": "Birdman",
       "director": "Alejandro González Iñárritu",
       "year": 2014,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Michael Keaton", "Edward Norton", "Emma Stone"],
       "accolades": "Oscar Best Picture, Best Director",
+      "notes": "One continuous shot. Keaton's comeback about comebacks.",
       "themes": ["Ego", "Art", "Relevance"]
     },
     {
@@ -295,11 +298,12 @@
       "title": "Argo",
       "director": "Ben Affleck",
       "year": 2012,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Thriller",
       "country": "USA",
       "cast": ["Ben Affleck", "Bryan Cranston", "John Goodman"],
       "accolades": "Oscar Best Picture",
+      "notes": "Fake movie, real rescue. Hollywood saves the day.",
       "themes": ["Espionage", "Hollywood", "History"]
     },
     {
@@ -307,11 +311,12 @@
       "title": "12 Years a Slave",
       "director": "Steve McQueen",
       "year": 2013,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Drama",
       "country": "USA/UK",
       "cast": ["Chiwetel Ejiofor", "Lupita Nyong'o", "Michael Fassbender"],
       "accolades": "Oscar Best Picture, Best Adapted Screenplay",
+      "notes": "Solomon Northup's memoir. Unflinching and essential.",
       "themes": ["Slavery", "Survival", "Humanity"]
     },
     {
@@ -319,11 +324,12 @@
       "title": "The Lobster",
       "director": "Yorgos Lanthimos",
       "year": 2015,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "Greece/UK",
       "cast": ["Colin Farrell", "Rachel Weisz", "Léa Seydoux"],
       "accolades": "Cannes Jury Prize",
+      "notes": "Find a partner or become an animal. Lanthimos at his most absurd.",
       "themes": ["Love", "Society", "Absurdism"]
     },
     {
@@ -331,11 +337,12 @@
       "title": "Poor Things",
       "director": "Yorgos Lanthimos",
       "year": 2023,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "UK/USA",
       "cast": ["Emma Stone", "Mark Ruffalo", "Willem Dafoe"],
       "accolades": "Oscar Best Actress, Venice Golden Lion",
+      "notes": "Frankenstein meets feminist awakening. Maximalist and joyful.",
       "themes": ["Identity", "Freedom", "Sexuality"]
     },
     {
@@ -343,11 +350,12 @@
       "title": "The Favourite",
       "director": "Yorgos Lanthimos",
       "year": 2018,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "UK/USA",
       "cast": ["Olivia Colman", "Emma Stone", "Rachel Weisz"],
       "accolades": "Oscar Best Actress, BAFTA Best Film",
+      "notes": "Queen Anne's court. Three women, zero trust, seventeen rabbits.",
       "themes": ["Power", "Manipulation", "Court intrigue"]
     },
     {
@@ -355,11 +363,12 @@
       "title": "The Big Short",
       "director": "Adam McKay",
       "year": 2015,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Christian Bale", "Steve Carell", "Ryan Gosling"],
       "accolades": "Oscar Best Adapted Screenplay",
+      "notes": "The 2008 crash explained with celebrity cameos and rage.",
       "themes": ["Finance", "Corruption", "2008 Crisis"]
     },
     {
@@ -367,11 +376,12 @@
       "title": "Little Women",
       "director": "Greta Gerwig",
       "year": 2019,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Drama",
       "country": "USA",
       "cast": ["Saoirse Ronan", "Florence Pugh", "Timothée Chalamet"],
       "accolades": "Oscar Best Costume Design",
+      "notes": "Gerwig's structural genius. The March sisters, non-linearly.",
       "themes": ["Ambition", "Sisterhood", "Art"]
     },
     {
@@ -379,11 +389,12 @@
       "title": "The Pianist",
       "director": "Roman Polanski",
       "year": 2002,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Drama",
       "country": "France/Poland/UK",
       "cast": ["Adrien Brody"],
       "accolades": "Oscar Best Actor, Best Director, Palme d'Or",
+      "notes": "Szpilman's survival. Brody's gaunt, devastating performance.",
       "themes": ["Survival", "Music", "Holocaust"]
     },
     {
@@ -391,11 +402,12 @@
       "title": "Bottle Rocket",
       "director": "Wes Anderson",
       "year": 1996,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Crime",
       "country": "USA",
       "cast": ["Owen Wilson", "Luke Wilson", "James Caan"],
       "accolades": "Sundance premiere",
+      "notes": "Where it all began. The Wilson brothers rob a bookstore.",
       "themes": ["Friendship", "Ambition", "Failure"]
     },
     {
@@ -403,11 +415,12 @@
       "title": "Rushmore",
       "director": "Wes Anderson",
       "year": 1998,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Jason Schwartzman", "Bill Murray", "Olivia Williams"],
       "accolades": "Independent Spirit Award",
+      "notes": "Max Fischer's extracurriculars. Murray's career revival starts here.",
       "themes": ["Obsession", "Youth", "Ambition"]
     },
     {
@@ -415,11 +428,12 @@
       "title": "The Royal Tenenbaums",
       "director": "Wes Anderson",
       "year": 2001,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Gene Hackman", "Anjelica Huston", "Gwyneth Paltrow"],
       "accolades": "Oscar nomination Best Original Screenplay",
+      "notes": "Prodigies grown up and broken. Needle drops and raccoon coats.",
       "themes": ["Family", "Failure", "Redemption"]
     },
     {
@@ -427,11 +441,12 @@
       "title": "The Life Aquatic with Steve Zissou",
       "director": "Wes Anderson",
       "year": 2004,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Adventure",
       "country": "USA",
       "cast": ["Bill Murray", "Owen Wilson", "Cate Blanchett"],
       "accolades": "Technical Grand Prize",
+      "notes": "Jacques Cousteau meets midlife crisis. Portuguese Bowie covers.",
       "themes": ["Obsession", "Father-son", "Adventure"]
     },
     {
@@ -439,11 +454,12 @@
       "title": "The Darjeeling Limited",
       "director": "Wes Anderson",
       "year": 2007,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Owen Wilson", "Adrien Brody", "Jason Schwartzman"],
       "accolades": "Venice Film Festival",
+      "notes": "Three brothers, one train, too much baggage. India in pastels.",
       "themes": ["Brothers", "Grief", "Spirituality"]
     },
     {
@@ -451,11 +467,12 @@
       "title": "Fantastic Mr. Fox",
       "director": "Wes Anderson",
       "year": 2009,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Animation/Comedy",
       "country": "USA",
       "cast": ["George Clooney", "Meryl Streep", "Bill Murray"],
       "accolades": "Oscar nomination Best Animated Feature",
+      "notes": "Stop-motion Roald Dahl. Different, but cussing good.",
       "themes": ["Identity", "Family", "Nature vs civilization"]
     },
     {
@@ -463,11 +480,12 @@
       "title": "Moonrise Kingdom",
       "director": "Wes Anderson",
       "year": 2012,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Jared Gilman", "Kara Hayward", "Bruce Willis"],
       "accolades": "Oscar nomination Best Original Screenplay",
+      "notes": "Two kids, one island, scout camp chaos. Pure and strange.",
       "themes": ["Young love", "Outsiders", "Adventure"]
     },
     {
@@ -475,11 +493,12 @@
       "title": "The Grand Budapest Hotel",
       "director": "Wes Anderson",
       "year": 2014,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA/Germany",
       "cast": ["Ralph Fiennes", "Tony Revolori", "Saoirse Ronan"],
-      "accolades": "4 Oscars, BAFTA Best Original Screenplay",
+      "accolades": "Oscar Best Production Design, Best Costume Design",
+      "notes": "Gustave H. and Zero. Anderson's most beloved, for good reason.",
       "themes": ["Nostalgia", "Friendship", "Europe between wars"]
     },
     {
@@ -487,11 +506,12 @@
       "title": "Isle of Dogs",
       "director": "Wes Anderson",
       "year": 2018,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Animation/Comedy",
       "country": "USA/Germany",
       "cast": ["Bryan Cranston", "Koyu Rankin", "Edward Norton"],
       "accolades": "Berlin Silver Bear for Best Director",
+      "notes": "Japanese dystopia, exiled dogs. Stop-motion political fable.",
       "themes": ["Loyalty", "Authoritarianism", "Friendship"]
     },
     {
@@ -499,11 +519,12 @@
       "title": "The French Dispatch",
       "director": "Wes Anderson",
       "year": 2021,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA/Germany",
       "cast": ["Benicio del Toro", "Tilda Swinton", "Frances McDormand"],
       "accolades": "Cannes Film Festival",
+      "notes": "New Yorker magazine as film. Three stories, maximum Anderson.",
       "themes": ["Journalism", "Art", "Stories"]
     },
     {
@@ -511,11 +532,12 @@
       "title": "Asteroid City",
       "director": "Wes Anderson",
       "year": 2023,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Comedy/Drama",
       "country": "USA",
       "cast": ["Jason Schwartzman", "Scarlett Johansson", "Tom Hanks"],
       "accolades": "Cannes Film Festival",
+      "notes": "Desert, aliens, grief. A play within a film within a broadcast.",
       "themes": ["Grief", "Art", "Meaning"]
     },
     {
@@ -523,11 +545,12 @@
       "title": "Following",
       "director": "Christopher Nolan",
       "year": 1998,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Thriller",
       "country": "UK",
       "cast": ["Jeremy Theobald", "Alex Haw"],
       "accolades": "Nolan's debut feature",
+      "notes": "$6000 budget, shot on weekends. The DNA of everything after.",
       "themes": ["Obsession", "Identity", "Crime"]
     },
     {
@@ -535,11 +558,12 @@
       "title": "Memento",
       "director": "Christopher Nolan",
       "year": 2000,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Thriller",
       "country": "USA",
       "cast": ["Guy Pearce", "Carrie-Anne Moss", "Joe Pantoliano"],
       "accolades": "Oscar nomination Best Original Screenplay",
+      "notes": "Reverse chronology. Can you trust your own memory?",
       "themes": ["Memory", "Revenge", "Identity"]
     },
     {
@@ -547,11 +571,12 @@
       "title": "Insomnia",
       "director": "Christopher Nolan",
       "year": 2002,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Thriller",
       "country": "USA",
       "cast": ["Al Pacino", "Robin Williams", "Hilary Swank"],
       "accolades": "Nolan's first studio film",
+      "notes": "Alaska, no darkness, no sleep. Williams against type.",
       "themes": ["Guilt", "Morality", "Sleep"]
     },
     {
@@ -559,11 +584,12 @@
       "title": "Batman Begins",
       "director": "Christopher Nolan",
       "year": 2005,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Action/Drama",
       "country": "USA/UK",
       "cast": ["Christian Bale", "Michael Caine", "Liam Neeson"],
       "accolades": "Revitalized superhero genre",
+      "notes": "Why do we fall? The grounded Batman we needed.",
       "themes": ["Fear", "Justice", "Identity"]
     },
     {
@@ -571,11 +597,12 @@
       "title": "The Prestige",
       "director": "Christopher Nolan",
       "year": 2006,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Mystery/Drama",
       "country": "USA/UK",
       "cast": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"],
       "accolades": "Oscar nominations",
+      "notes": "Rival magicians. Are you watching closely?",
       "themes": ["Obsession", "Sacrifice", "Illusion"]
     },
     {
@@ -583,11 +610,12 @@
       "title": "The Dark Knight",
       "director": "Christopher Nolan",
       "year": 2008,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Action/Crime",
       "country": "USA/UK",
       "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
       "accolades": "Oscar Best Supporting Actor (Ledger)",
+      "notes": "Ledger's Joker. Chaos as ideology. A superhero crime epic.",
       "themes": ["Chaos", "Morality", "Heroism"]
     },
     {
@@ -595,11 +623,12 @@
       "title": "Inception",
       "director": "Christopher Nolan",
       "year": 2010,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Sci-Fi/Action",
       "country": "USA/UK",
       "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
-      "accolades": "4 Oscars including Cinematography",
+      "accolades": "Oscar Best Cinematography, Best Visual Effects",
+      "notes": "Dreams within dreams. The spinning top never stops.",
       "themes": ["Dreams", "Reality", "Guilt"]
     },
     {
@@ -607,11 +636,12 @@
       "title": "The Dark Knight Rises",
       "director": "Christopher Nolan",
       "year": 2012,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Action/Drama",
       "country": "USA/UK",
       "cast": ["Christian Bale", "Tom Hardy", "Anne Hathaway"],
       "accolades": "Box office success",
+      "notes": "Bane's voice, broken Batman. The trilogy ends.",
       "themes": ["Legacy", "Pain", "Revolution"]
     },
     {
@@ -619,11 +649,12 @@
       "title": "Dunkirk",
       "director": "Christopher Nolan",
       "year": 2017,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "War/Drama",
       "country": "USA/UK",
       "cast": ["Fionn Whitehead", "Tom Hardy", "Mark Rylance"],
-      "accolades": "3 Oscars, Best Director nomination",
+      "accolades": "Oscar Best Film Editing, Best Sound Mixing",
+      "notes": "Three timelines, pure survival. Zimmer's ticking clock.",
       "themes": ["Survival", "Time", "Heroism"]
     },
     {
@@ -631,11 +662,12 @@
       "title": "Tenet",
       "director": "Christopher Nolan",
       "year": 2020,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Sci-Fi/Action",
       "country": "USA/UK",
       "cast": ["John David Washington", "Robert Pattinson", "Elizabeth Debicki"],
       "accolades": "Oscar Best Visual Effects",
+      "notes": "Time inversion. Don't try to understand it, feel it.",
       "themes": ["Time", "Entropy", "Fate"]
     },
     {
@@ -643,11 +675,12 @@
       "title": "Oppenheimer",
       "director": "Christopher Nolan",
       "year": 2023,
-      "status": "watchlist",
+      "status": "watched",
       "genre": "Drama/Biography",
       "country": "USA",
       "cast": ["Cillian Murphy", "Emily Blunt", "Robert Downey Jr."],
-      "accolades": "7 Oscars including Best Picture, Best Director",
+      "accolades": "Oscar Best Picture, Best Director, Best Actor",
+      "notes": "The father of the atomic bomb. Three hours of dread.",
       "themes": ["Power", "Guilt", "Legacy"]
     }
   ],

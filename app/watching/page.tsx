@@ -14,22 +14,41 @@ export default function WatchingPage() {
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [selectedDirector, setSelectedDirector] = useState<string>("all");
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
+  const [oscarOnly, setOscarOnly] = useState(false);
   const [suggestion, setSuggestion] = useState("");
   const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
   const [expandedPlaylist, setExpandedPlaylist] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Build unique genres and directors from actual data
+  const uniqueGenres = useMemo(() => {
+    const genres = new Set<string>();
+    watching.films.forEach((f: Film) => {
+      if (f.genre) genres.add(f.genre);
+    });
+    return Array.from(genres).sort();
+  }, []);
+
+  const uniqueDirectors = useMemo(() => {
+    const directors = new Set<string>();
+    watching.films.forEach((f: Film) => {
+      if (f.director) directors.add(f.director);
+    });
+    return Array.from(directors).sort();
+  }, []);
 
   const filteredFilms = useMemo(() => {
     return watching.films.filter((f: Film) => {
       if (selectedStatus !== "all" && f.status !== selectedStatus) return false;
       if (selectedDirector !== "all" && f.director !== selectedDirector) return false;
       if (selectedGenre !== "all" && f.genre !== selectedGenre) return false;
+      if (oscarOnly && (!f.accolades || !f.accolades.toLowerCase().includes('oscar'))) return false;
       return true;
     });
-  }, [selectedStatus, selectedDirector, selectedGenre]);
+  }, [selectedStatus, selectedDirector, selectedGenre, oscarOnly]);
 
   const watchedCount = watching.films.filter((f: Film) => f.status === "watched").length;
-  const wantToWatchCount = watching.films.filter((f: Film) => f.status === "want-to-watch").length;
+  const watchlistCount = watching.films.filter((f: Film) => f.status === "watchlist").length;
 
   return (
     <div className="bg-cream min-h-screen">
@@ -107,7 +126,7 @@ export default function WatchingPage() {
             </div>
 
             {activeTab === "films" && (
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 items-center">
                 {/* Status Filter */}
                 <button
                   onClick={() => setSelectedStatus(selectedStatus === "watched" ? "all" : "watched")}
@@ -117,18 +136,46 @@ export default function WatchingPage() {
                       : "bg-white text-dark-brown hover:bg-stone"
                   }`}
                 >
-                  Watched
+                  Watched ({watchedCount})
                 </button>
                 <button
-                  onClick={() => setSelectedStatus(selectedStatus === "want-to-watch" ? "all" : "want-to-watch")}
+                  onClick={() => setSelectedStatus(selectedStatus === "watchlist" ? "all" : "watchlist")}
                   className={`px-3 py-1.5 rounded-full text-xs transition-colors ${
-                    selectedStatus === "want-to-watch"
+                    selectedStatus === "watchlist"
                       ? "bg-olive text-warm-beige"
                       : "bg-white text-dark-brown hover:bg-stone"
                   }`}
                 >
-                  Want to Watch
+                  Watchlist ({watchlistCount})
                 </button>
+
+                {/* Divider */}
+                <span className="text-sand">|</span>
+
+                {/* Oscar Filter */}
+                <button
+                  onClick={() => setOscarOnly(!oscarOnly)}
+                  className={`px-3 py-1.5 rounded-full text-xs transition-colors flex items-center gap-1 ${
+                    oscarOnly
+                      ? "bg-gold text-deep-forest"
+                      : "bg-white text-dark-brown hover:bg-stone"
+                  }`}
+                >
+                  <span>🏆</span>
+                  <span>Oscar</span>
+                </button>
+
+                {/* Genre Filter */}
+                <select
+                  value={selectedGenre}
+                  onChange={(e) => setSelectedGenre(e.target.value)}
+                  className="px-3 py-1.5 bg-white rounded-full text-xs border border-sand focus:outline-none focus:border-olive"
+                >
+                  <option value="all">All Genres</option>
+                  {uniqueGenres.map((g: string) => (
+                    <option key={g} value={g}>{g}</option>
+                  ))}
+                </select>
 
                 {/* Director Filter */}
                 <select
@@ -137,10 +184,25 @@ export default function WatchingPage() {
                   className="px-3 py-1.5 bg-white rounded-full text-xs border border-sand focus:outline-none focus:border-olive"
                 >
                   <option value="all">All Directors</option>
-                  {watching.filters.directors.map((d: string) => (
+                  {uniqueDirectors.map((d: string) => (
                     <option key={d} value={d}>{d}</option>
                   ))}
                 </select>
+
+                {/* Clear Filters */}
+                {(selectedStatus !== "all" || selectedGenre !== "all" || selectedDirector !== "all" || oscarOnly) && (
+                  <button
+                    onClick={() => {
+                      setSelectedStatus("all");
+                      setSelectedGenre("all");
+                      setSelectedDirector("all");
+                      setOscarOnly(false);
+                    }}
+                    className="px-3 py-1.5 rounded-full text-xs text-olive hover:text-deep-forest transition-colors underline"
+                  >
+                    Clear filters
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -206,16 +268,33 @@ export default function WatchingPage() {
 
                           {/* Tags */}
                           <div className="flex flex-wrap gap-2 mt-3">
-                            <span className="px-2 py-0.5 bg-sage/20 rounded text-xs text-deep-forest">
+                            <span
+                              className="px-2.5 py-1 rounded text-xs font-medium"
+                              style={{ backgroundColor: '#97a97c', color: '#2a3c24' }}
+                            >
                               {film.genre || film.country}
                             </span>
                             {film.status === "watched" ? (
-                              <span className="px-2 py-0.5 bg-olive/20 rounded text-xs text-deep-forest font-medium">
+                              <span
+                                className="px-2.5 py-1 rounded text-xs font-medium"
+                                style={{ backgroundColor: '#2a3c24', color: '#d4ed39' }}
+                              >
                                 Watched
                               </span>
                             ) : (
-                              <span className="px-2 py-0.5 bg-sand rounded text-xs text-deep-forest/60">
-                                Want to Watch
+                              <span
+                                className="px-2.5 py-1 rounded text-xs font-medium"
+                                style={{ backgroundColor: '#cbad8c', color: '#2a3c24' }}
+                              >
+                                Watchlist
+                              </span>
+                            )}
+                            {film.accolades?.toLowerCase().includes('oscar') && (
+                              <span
+                                className="px-2.5 py-1 rounded text-xs font-medium"
+                                style={{ backgroundColor: '#ffcb69', color: '#2a3c24' }}
+                              >
+                                🏆 Oscar
                               </span>
                             )}
                           </div>
