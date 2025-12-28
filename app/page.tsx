@@ -28,31 +28,37 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-4">
             {/* Dark green panel */}
-            <div className="panel-gradient-olive">
-              <span className="dark-bg-label mb-3 block">01</span>
-              <h3 className="dark-bg-header text-lg mb-2">Build</h3>
-              <p className="dark-bg-body text-sm leading-snug">
-                Damages models for commercial litigation.
-              </p>
-            </div>
+            <Link href="/work" className="group">
+              <div className="panel-gradient-olive group-hover:scale-[1.02] transition-transform">
+                <span className="dark-bg-label mb-3 block">01</span>
+                <h3 className="dark-bg-header text-lg mb-2">Build</h3>
+                <p className="dark-bg-body text-sm leading-snug">
+                  Damages models for commercial litigation.
+                </p>
+              </div>
+            </Link>
 
             {/* Sage panel */}
-            <div className="panel-gradient-sage">
-              <span className="light-bg-label mb-3 block">02</span>
-              <h3 className="light-bg-header text-lg mb-2">Run</h3>
-              <p className="light-bg-body text-sm leading-snug">
-                Marathons. Seven World Majors. Sub-3:00.
-              </p>
-            </div>
+            <Link href="/running" className="group">
+              <div className="panel-gradient-sage group-hover:scale-[1.02] transition-transform">
+                <span className="light-bg-label mb-3 block">02</span>
+                <h3 className="light-bg-header text-lg mb-2">Run</h3>
+                <p className="light-bg-body text-sm leading-snug">
+                  Marathons. Seven World Majors. Sub-3:00.
+                </p>
+              </div>
+            </Link>
 
             {/* Lime accent panel */}
-            <div className="rounded-xl p-5 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #b5c4a0 100%)' }}>
-              <span className="mb-3 block text-xs uppercase tracking-wider font-medium" style={{ color: '#2a3c24' }}>03</span>
-              <h3 className="text-lg mb-2" style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#2a3c24' }}>Explore</h3>
-              <p className="text-sm leading-snug" style={{ color: 'rgba(42,60,36,0.8)' }}>
-                Cities, restaurants, films.
-              </p>
-            </div>
+            <Link href="/watching" className="group">
+              <div className="rounded-xl p-5 relative overflow-hidden group-hover:scale-[1.02] transition-transform" style={{ background: 'linear-gradient(135deg, #d4ed39 0%, #b5c4a0 100%)' }}>
+                <span className="mb-3 block text-xs uppercase tracking-wider font-medium" style={{ color: '#2a3c24' }}>03</span>
+                <h3 className="text-lg mb-2" style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#2a3c24' }}>Explore</h3>
+                <p className="text-sm leading-snug" style={{ color: 'rgba(42,60,36,0.8)' }}>
+                  Cities, restaurants, films.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

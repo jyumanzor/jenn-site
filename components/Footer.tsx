@@ -101,6 +101,13 @@ export default function Footer() {
               <p className="text-cream/50 text-xs uppercase tracking-wider mb-3">More</p>
               <div className="flex flex-col gap-2">
                 <Link
+                  href="/cities/dc"
+                  className="text-base transition-colors hover:opacity-70"
+                  style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#D4ED39' }}
+                >
+                  City Guides
+                </Link>
+                <Link
                   href="/tattoos"
                   className="text-base transition-colors hover:opacity-70"
                   style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#D4ED39' }}

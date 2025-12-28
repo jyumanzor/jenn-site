@@ -10,6 +10,15 @@ const navLinks = [
   { href: "/dining", label: "Dining", description: "Restaurant guides" },
   { href: "/travel", label: "Travel", description: "Places & memories" },
   { href: "/watching", label: "Culture", description: "Films, books & music" },
+  {
+    href: "#",
+    label: "City Guides",
+    description: "DC & Chicago",
+    sublinks: [
+      { href: "/cities/dc", label: "Washington, DC" },
+      { href: "/cities/chicago", label: "Chicago" }
+    ]
+  },
   { href: "/tattoos", label: "Tattoos", description: "Stories on skin" },
   { href: "/journal", label: "Journal", description: "Essays & notes" },
   { href: "/work", label: "Work", description: "Professional" },
@@ -132,42 +141,78 @@ export default function Nav() {
         {/* Nav Links - Scrollable */}
         <div className="flex-1 overflow-y-auto p-6 space-y-2">
           {navLinks.map((link, index) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block p-4 rounded-xl transition-all duration-200 ${
-                pathname === link.href
-                  ? "bg-gold text-deep-forest"
-                  : "bg-cream/10 text-cream"
-              }`}
-              style={{
-                transitionDelay: sidebarOpen ? `${index * 50}ms` : "0ms",
-              }}
-              onMouseEnter={(e) => {
-                if (pathname !== link.href) {
-                  e.currentTarget.style.backgroundColor = '#FFCB69';
-                  e.currentTarget.style.color = '#3B412D';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (pathname !== link.href) {
-                  e.currentTarget.style.backgroundColor = 'rgba(250, 243, 232, 0.1)';
-                  e.currentTarget.style.color = '#FAF3E8';
-                }
-              }}
-            >
-              <span
-                className="block text-lg font-medium"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
-              >
-                {link.label}
-              </span>
-              <span className={`text-xs mt-0.5 block ${
-                pathname === link.href ? "text-deep-forest/70" : "text-cream/70"
-              }`}>
-                {link.description}
-              </span>
-            </Link>
+            <div key={link.href + link.label}>
+              {link.sublinks ? (
+                <div
+                  className="p-4 rounded-xl bg-cream/10 text-cream"
+                  style={{
+                    transitionDelay: sidebarOpen ? `${index * 50}ms` : "0ms",
+                  }}
+                >
+                  <span
+                    className="block text-lg font-medium"
+                    style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+                  >
+                    {link.label}
+                  </span>
+                  <span className="text-xs mt-0.5 block text-cream/70">
+                    {link.description}
+                  </span>
+                  <div className="mt-3 pl-3 border-l border-cream/20 space-y-2">
+                    {link.sublinks.map((sublink) => (
+                      <Link
+                        key={sublink.href}
+                        href={sublink.href}
+                        className={`block text-sm py-1 transition-colors ${
+                          pathname === sublink.href
+                            ? "text-gold"
+                            : "text-cream/80 hover:text-gold"
+                        }`}
+                        style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+                      >
+                        {sublink.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  href={link.href}
+                  className={`block p-4 rounded-xl transition-all duration-200 ${
+                    pathname === link.href
+                      ? "bg-gold text-deep-forest"
+                      : "bg-cream/10 text-cream"
+                  }`}
+                  style={{
+                    transitionDelay: sidebarOpen ? `${index * 50}ms` : "0ms",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (pathname !== link.href) {
+                      e.currentTarget.style.backgroundColor = '#FFCB69';
+                      e.currentTarget.style.color = '#3B412D';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (pathname !== link.href) {
+                      e.currentTarget.style.backgroundColor = 'rgba(250, 243, 232, 0.1)';
+                      e.currentTarget.style.color = '#FAF3E8';
+                    }
+                  }}
+                >
+                  <span
+                    className="block text-lg font-medium"
+                    style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+                  >
+                    {link.label}
+                  </span>
+                  <span className={`text-xs mt-0.5 block ${
+                    pathname === link.href ? "text-deep-forest/70" : "text-cream/70"
+                  }`}>
+                    {link.description}
+                  </span>
+                </Link>
+              )}
+            </div>
           ))}
         </div>
       </div>
