@@ -121,7 +121,7 @@ export default function Home() {
             <div className="md:col-span-8">
               <div className="grid grid-cols-3 gap-3">
                 <div className="panel-gradient-deep p-4 text-center flex flex-col justify-center">
-                  <p className="dark-bg-header text-3xl">3:09</p>
+                  <p className="text-3xl text-gold" style={{ fontFamily: 'var(--font-instrument), Georgia, serif' }}>3:09</p>
                   <p className="dark-bg-label mt-1">PR</p>
                 </div>
                 <div className="panel-gradient-sage p-4 text-center flex flex-col justify-center">
