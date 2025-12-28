@@ -100,14 +100,14 @@ export default function TattoosPage() {
                     <div
                       className={`rounded-full transition-all duration-200 flex items-center justify-center ${
                         selectedTattoo?.id === tattoo.id
-                          ? 'w-6 h-6 ring-2 ring-offset-2'
+                          ? 'w-6 h-6'
                           : hoveredTattoo === tattoo.id
                           ? 'w-5 h-5'
                           : 'w-3 h-3'
                       }`}
                       style={{
                         backgroundColor: selectedTattoo?.id === tattoo.id ? '#d4ed39' : '#2a3c24',
-                        ringColor: '#d4ed39'
+                        boxShadow: selectedTattoo?.id === tattoo.id ? '0 0 0 2px #fff5eb, 0 0 0 4px #d4ed39' : 'none'
                       }}
                     />
                     {(hoveredTattoo === tattoo.id && selectedTattoo?.id !== tattoo.id) && (
