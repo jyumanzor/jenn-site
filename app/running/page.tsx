@@ -157,7 +157,7 @@ const statusColors = {
   registered: { bg: "panel-gradient-olive", text: "text-ivory", badge: "bg-[#d4ed39] text-deep-forest", label: "Registered" },
   qualified: { bg: "panel-gradient-sage", text: "text-deep-forest", badge: "bg-deep-forest text-cream", label: "Qualified" },
   lottery: { bg: "panel-gradient-warm-neutral", text: "text-deep-forest", badge: "bg-olive text-cream", label: "Lottery" },
-  special: { bg: "bg-sand", text: "text-deep-forest", badge: "bg-terracotta text-cream", label: "Special Entry" }
+  special: { bg: "panel-gradient-warm-neutral", text: "text-deep-forest", badge: "bg-terracotta text-cream", label: "Special Entry" }
 };
 
 export default function RunningPage() {
