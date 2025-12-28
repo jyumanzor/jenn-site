@@ -14,6 +14,7 @@ const runTypes = {
   lr: { label: "Long Run", abbrev: "LR", defaultMiles: 16, pace: "7:33-8:14", color: "bg-[#546E40]/20", textColor: "text-[#3B412D]" },
   mp: { label: "Marathon Pace", abbrev: "MP", defaultMiles: 10, pace: "6:52", color: "bg-[#546E40]/30", textColor: "text-[#2D3D20]" },
   hmp: { label: "Half Marathon Pace", abbrev: "HM", defaultMiles: 8, pace: "6:31-6:44", color: "bg-[#CBAD8C]/40", textColor: "text-[#5B4B35]" },
+  race: { label: "Tune-up Race", abbrev: "Race", defaultMiles: 10, pace: "Race effort", color: "bg-[#d4ed39]/40", textColor: "text-[#2D3D20]" },
 };
 
 type RunType = keyof typeof runTypes;
@@ -32,8 +33,27 @@ const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 // Boston Marathon: April 20, 2026
 const RACE_DATE = new Date("2026-04-20");
 
-// Training plan from Pfitzinger 18/70
+// Training plan from Pfitzinger 18/70 - extracted from Excel
 const trainingPlan: Record<string, string> = {
+  "2025-12-03": "GA 5",
+  "2025-12-04": "Rec 3",
+  "2025-12-06": "Rest",
+  "2025-12-07": "GA 5",
+  "2025-12-08": "GA 7",
+  "2025-12-09": "Rest",
+  "2025-12-10": "VO2 5",
+  "2025-12-11": "Rec 3",
+  "2025-12-12": "GA 5",
+  "2025-12-13": "Rest",
+  "2025-12-14": "GA 5",
+  "2025-12-15": "MLR 8",
+  "2025-12-16": "Rest",
+  "2025-12-17": "LT 8",
+  "2025-12-18": "Rest",
+  "2025-12-19": "GA 9",
+  "2025-12-20": "Rest",
+  "2025-12-21": "Rec 4",
+  "2025-12-22": "MLR 12",
   "2025-12-23": "Rec 5",
   "2025-12-24": "GA 8",
   "2025-12-25": "Rest",
@@ -109,7 +129,7 @@ const trainingPlan: Record<string, string> = {
   "2026-03-05": "MLR 12",
   "2026-03-06": "Rest",
   "2026-03-07": "Rec 5",
-  "2026-03-08": "GA 10",
+  "2026-03-08": "Race 10",
   "2026-03-09": "LR 17",
   "2026-03-10": "Rest",
   "2026-03-11": "GA 8",
@@ -123,7 +143,7 @@ const trainingPlan: Record<string, string> = {
   "2026-03-19": "MLR 11",
   "2026-03-20": "Rest",
   "2026-03-21": "Rec 4",
-  "2026-03-22": "GA 10",
+  "2026-03-22": "Race 10",
   "2026-03-23": "LR 17",
   "2026-03-24": "Rest",
   "2026-03-25": "Rec 7",
@@ -137,7 +157,7 @@ const trainingPlan: Record<string, string> = {
   "2026-04-02": "Rec 6",
   "2026-04-03": "Rest",
   "2026-04-04": "Rec 4",
-  "2026-04-05": "GA 10",
+  "2026-04-05": "Race 8",
   "2026-04-06": "LR 16",
   "2026-04-07": "Rest",
   "2026-04-08": "GA 7",
@@ -158,8 +178,12 @@ const trainingPlan: Record<string, string> = {
 function parseWorkout(workout: string): { type: RunType; miles: number } {
   const lower = workout.toLowerCase().trim();
 
-  if (lower === "rest" || lower === "marathon") {
+  if (lower === "rest") {
     return { type: "rest", miles: 0 };
+  }
+
+  if (lower === "marathon") {
+    return { type: "race", miles: 26 };
   }
 
   // Extract miles from workout string (e.g., "GA 10" -> 10)
@@ -174,6 +198,7 @@ function parseWorkout(workout: string): { type: RunType; miles: number } {
   if (lower.startsWith("lr")) return { type: "lr", miles };
   if (lower.startsWith("mp")) return { type: "mp", miles };
   if (lower.startsWith("hm")) return { type: "hmp", miles };
+  if (lower.startsWith("race")) return { type: "race", miles };
 
   return { type: "ga", miles };
 }
