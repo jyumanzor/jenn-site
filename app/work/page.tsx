@@ -384,32 +384,6 @@ export default function WorkPage() {
 
       <hr className="rule" />
 
-      {/* Volunteer */}
-      <section className="py-12">
-        <div className="container-editorial">
-          <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-4">
-              <p className="light-bg-label mb-4">Giving back</p>
-            </div>
-            <div className="md:col-span-8">
-              <div className="grid md:grid-cols-2 gap-4">
-                {work.volunteer.map((vol: { organization: string; role: string; timeline: string; description: string }) => (
-                  <div key={vol.organization} className="panel-gradient-olive">
-                    <h3 className="dark-bg-header text-lg leading-tight mb-1">{vol.organization}</h3>
-                    <p className="dark-bg-label mb-2">{vol.role} · {vol.timeline}</p>
-                    <p className="dark-bg-body text-sm leading-snug">
-                      {vol.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr className="rule" />
-
       {/* Connect */}
       <section className="py-14" style={{ backgroundColor: 'rgba(212, 237, 57, 0.15)' }}>
         <div className="container-editorial">

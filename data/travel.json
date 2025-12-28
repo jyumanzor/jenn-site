@@ -92,7 +92,7 @@
       "country": "United States",
       "coordinates": { "lat": 37.7749, "lng": -122.4194 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2018",
       "notes": "Tech, fog, good coffee.",
       "highlights": ["Golden Gate", "Mission District"]
     },
@@ -102,7 +102,7 @@
       "country": "United States",
       "coordinates": { "lat": 34.0522, "lng": -118.2437 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2018",
       "notes": "Family, beaches.",
       "highlights": ["Venice Beach", "Downtown LA"]
     },
@@ -142,7 +142,7 @@
       "country": "United States",
       "coordinates": { "lat": 28.5383, "lng": -81.3792 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2018",
       "notes": "Theme parks, family visits.",
       "highlights": ["Theme Parks"]
     },
@@ -172,7 +172,7 @@
       "country": "United States",
       "coordinates": { "lat": 25.7617, "lng": -80.1918 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2022, 2025",
       "notes": "Beach, Cuban food.",
       "highlights": ["South Beach", "Wynwood", "Little Havana"]
     },
@@ -182,7 +182,7 @@
       "country": "United States",
       "coordinates": { "lat": 43.8610, "lng": -69.5275 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2021-2024",
       "notes": "Lobster, lighthouses, summer escapes.",
       "highlights": ["Walpole", "Damariscotta", "South Bristol"]
     },
@@ -346,7 +346,7 @@
       "country": "Vietnam",
       "coordinates": { "lat": 21.0285, "lng": 105.8542 },
       "type": "travel",
-      "visits": "2024",
+      "visits": "2019",
       "notes": "Old Quarter, street food, coffee.",
       "highlights": ["Old Quarter", "Street Food", "Coffee"]
     },
@@ -356,7 +356,7 @@
       "country": "Vietnam",
       "coordinates": { "lat": 16.4637, "lng": 107.5909 },
       "type": "travel",
-      "visits": "2024",
+      "visits": "2019",
       "notes": "Central Vietnam coast.",
       "highlights": ["Imperial City", "Beaches"]
     },
@@ -366,7 +366,7 @@
       "country": "Thailand",
       "coordinates": { "lat": 13.7563, "lng": 100.5018 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2019",
       "notes": "Temples, street food, markets.",
       "highlights": ["Temples", "Street Food", "Markets"]
     },
@@ -376,7 +376,7 @@
       "country": "India",
       "coordinates": { "lat": 19.0760, "lng": 72.8777 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2019",
       "notes": "Gateway of India, street life.",
       "highlights": ["Gateway of India", "Street Life"]
     },
@@ -386,7 +386,7 @@
       "country": "India",
       "coordinates": { "lat": 28.6139, "lng": 77.2090 },
       "type": "travel",
-      "visits": "Multiple",
+      "visits": "2019",
       "notes": "Red Fort, Chandni Chowk.",
       "highlights": ["Red Fort", "Chandni Chowk"]
     },
