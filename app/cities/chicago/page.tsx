@@ -32,7 +32,7 @@ export default function ChicagoPage() {
               className="text-lg leading-relaxed max-w-xl"
               style={{ color: 'rgba(42,60,36,0.7)' }}
             >
-              UChicago roots. Marathon 2026. A city I know from college, returning for the race.
+              College, marathon, business school. Coming back in 2026.
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function ChicagoPage() {
                 className="text-sm leading-relaxed"
                 style={{ color: 'rgba(42,60,36,0.7)' }}
               >
-                Running my first World Major in a city I know.
+                Second World Major. Back where I went to college.
               </p>
             </div>
             <div className="md:col-span-8">
@@ -84,7 +84,7 @@ export default function ChicagoPage() {
                   October 11, 2026 · Grant Park
                 </p>
                 <p className="leading-relaxed" style={{ color: 'rgba(255,245,235,0.85)' }}>
-                  Flat, fast, and through 29 neighborhoods. One of the best marathon courses in the world. Returning to the city where I went to college.
+                  Flat course through 29 neighborhoods. Running it after Boston.
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function ChicagoPage() {
                   University of Chicago
                 </h3>
                 <p className="leading-relaxed mb-6" style={{ color: 'rgba(42,60,36,0.8)' }}>
-                  Sociology and HIPS. Full ride through QuestBridge. The place that shaped how I think about problems, data, and rigorous analysis.
+                  Sociology and HIPS. QuestBridge full ride.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div
