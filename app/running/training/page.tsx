@@ -350,7 +350,7 @@ const ActiveCaloriesChart = ({ data }: { data: typeof ouraFullData.daily }) => {
             <YAxis hide />
             <Tooltip
               contentStyle={{ backgroundColor: colors.cream, border: "1px solid #e7d8c6", borderRadius: "8px", fontSize: "12px" }}
-              formatter={(value: number) => [`${value.toLocaleString()} kcal`, "Active Calories"]}
+              formatter={(value) => [`${(value ?? 0).toLocaleString()} kcal`, "Active Calories"]}
               labelFormatter={(label) => new Date(label).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
             />
             <Bar dataKey="activeCalories" radius={[4, 4, 0, 0]}>
