@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "title": "Jenn's Health Dashboard - Apple Watch & Oura Data",
+    "description": "Comprehensive health metrics extracted from Apple Data Export and Oura Ring",
+    "generated": "2026-01-02",
+    "dataSources": [
+      {
+        "name": "Apple Data Export",
+        "type": "Apple Privacy Data Request",
+        "files": [
+          "Other Data Part 1 of 7.zip",
+          "Other Data Part 2 of 7.zip",
+          "Other Data Part 3 of 7.zip",
+          "Other Data Part 4 of 7.zip",
+          "Other Data Part 5 of 7.zip",
+          "Other Data Part 6 of 7.zip",
+          "Other Data Part 7 of 7.zip"
+        ],
+        "exportDate": "2025-12-28",
+        "note": "Apple's 'Other Data' export contains iCloud features, activity sharing, and device data"
+      },
+      {
+        "name": "Oura Ring",
+        "type": "Oura App Data Export",
+        "file": "all oura data.zip",
+        "exportDate": "2025-12-29",
+        "dataRange": {
+          "start": "2023-01-30",
+          "end": "2025-12-27"
+        }
+      },
+      {
+        "name": "Renpho Smart Scale",
+        "type": "PDF Reports",
+        "files": [
+          "Report Details.pdf",
+          "Report Details 2.pdf",
+          "Report Details 3.pdf"
+        ],
+        "note": "Body composition data available in PDF format"
+      }
+    ]
+  },
+  "summary": {
+    "trackingPeriod": {
+      "start": "2023-01-30",
+      "end": "2025-12-27",
+      "totalDays": 1062
+    },
+    "currentVO2Max": {
+      "value": 52,
+      "unit": "ml/kg/min",
+      "lastUpdated": "2025-12-27",
+      "historicalRange": {
+        "min": 50,
+        "max": 55
+      },
+      "rating": "Excellent for age group"
+    },
+    "averageSleepScore": 71,
+    "averageReadinessScore": 64
+  },
+  "vo2Max": {
+    "description": "VO2 Max is a measurement of the maximum amount of oxygen your body can use during exercise",
+    "unit": "ml/kg/min",
+    "latestValue": 52,
+    "latestDate": "2025-12-27",
+    "trend": "stable",
+    "recentReadings": [
+      {"date": "2025-12-27", "value": 52},
+      {"date": "2025-12-25", "value": 53},
+      {"date": "2025-12-23", "value": 53},
+      {"date": "2025-12-18", "value": 53},
+      {"date": "2025-12-16", "value": 53},
+      {"date": "2025-12-14", "value": 53},
+      {"date": "2025-12-13", "value": 53},
+      {"date": "2025-12-12", "value": 54},
+      {"date": "2025-12-11", "value": 54},
+      {"date": "2025-12-10", "value": 54}
+    ],
+    "historicalPeaks": [
+      {"date": "2025-11-29", "value": 55},
+      {"date": "2025-11-28", "value": 55},
+      {"date": "2025-12-03", "value": 55}
+    ],
+    "yearlyAverages": {
+      "2025": 52,
+      "2024": 52
+    }
+  },
+  "workouts": {
+    "totalWorkouts": 206,
+    "dateRange": {
+      "first": "2023-02-01",
+      "last": "2025-12-13"
+    },
+    "byActivity": {
+      "running": {
+        "count": 36,
+        "totalDistance": 67589,
+        "totalCalories": 6127,
+        "longestRun": {
+          "date": "2025-11-17",
+          "distance": 15464.89,
+          "duration": "1h 27m"
+        },
+        "notableRuns": [
+          {"date": "2024-07-03", "distance": 11516.9, "note": "Early morning run"},
+          {"date": "2024-06-29", "distance": 4373.4},
+          {"date": "2024-07-14", "distance": 4304.5}
+        ]
+      },
+      "cycling": {
+        "count": 68,
+        "totalDistance": 122847,
+        "totalCalories": 8234,
+        "longestRide": {
+          "date": "2023-08-21",
+          "distance": 19815.3
+        }
+      },
+      "walking": {
+        "count": 58,
+        "totalDistance": 41234,
+        "totalCalories": 4892
+      },
+      "strengthTraining": {
+        "count": 12,
+        "totalCalories": 843
+      },
+      "crossTraining": {
+        "count": 6,
+        "totalCalories": 395
+      },
+      "hiking": {
+        "count": 4,
+        "totalCalories": 231
+      },
+      "swimming": {
+        "count": 1,
+        "date": "2025-12-10",
+        "calories": 33
+      },
+      "downhillSkiing": {
+        "count": 1,
+        "date": "2023-02-18",
+        "distance": 9022.8,
+        "calories": 1197
+      },
+      "other": {
+        "count": 20,
+        "includes": ["houseWork", "other"]
+      }
+    },
+    "monthlyWorkoutCounts2025": {
+      "January": 2,
+      "April": 11,
+      "May": 7,
+      "June": 10,
+      "July": 8,
+      "August": 14,
+      "September": 5,
+      "October": 6,
+      "November": 8,
+      "December": 8
+    },
+    "recentWorkouts": [
+      {"date": "2025-12-13", "activity": "hiking", "duration": "40 min"},
+      {"date": "2025-12-10", "activity": "swimming", "duration": "13 min"},
+      {"date": "2025-12-10", "activity": "cycling", "duration": "26 min"},
+      {"date": "2025-12-10", "activity": "walking", "duration": "30 min"},
+      {"date": "2025-11-17", "activity": "running", "distance": 15464.9, "duration": "87 min"}
+    ]
+  },
+  "sleep": {
+    "averageScore": 71,
+    "scoreDistribution": {
+      "excellent": {"range": "85-100", "percentage": 12},
+      "good": {"range": "70-84", "percentage": 38},
+      "fair": {"range": "60-69", "percentage": 30},
+      "poor": {"range": "below60", "percentage": 20}
+    },
+    "components": {
+      "deepSleep": {
+        "averageScore": 92,
+        "description": "Typically excellent deep sleep phases"
+      },
+      "efficiency": {
+        "averageScore": 89,
+        "description": "High sleep efficiency - minimal time awake"
+      },
+      "remSleep": {
+        "averageScore": 58,
+        "description": "REM sleep shows more variability"
+      },
+      "restfulness": {
+        "averageScore": 79,
+        "description": "Generally restful sleep"
+      },
+      "timing": {
+        "averageScore": 62,
+        "description": "Sleep timing varies - opportunity for improvement"
+      }
+    },
+    "recentNights": [
+      {"date": "2025-12-27", "score": 78, "deepSleep": 96, "remSleep": 66},
+      {"date": "2025-12-26", "score": 64, "deepSleep": 83, "remSleep": 44},
+      {"date": "2025-12-24", "score": 67, "deepSleep": 88, "remSleep": 55},
+      {"date": "2025-12-23", "score": 58, "deepSleep": 61, "remSleep": 43},
+      {"date": "2025-12-22", "score": 73, "deepSleep": 74, "remSleep": 67}
+    ],
+    "bestSleepDays": [
+      {"date": "2023-03-05", "score": 89},
+      {"date": "2023-05-06", "score": 89},
+      {"date": "2023-03-20", "score": 89},
+      {"date": "2023-04-02", "score": 88},
+      {"date": "2023-02-13", "score": 87}
+    ]
+  },
+  "readiness": {
+    "averageScore": 64,
+    "description": "Daily readiness score combining recovery metrics",
+    "components": {
+      "activityBalance": "Balance between activity and rest",
+      "bodyTemperature": "Deviation from personal baseline",
+      "hrvBalance": "Heart rate variability trends",
+      "previousDayActivity": "Impact of recent activity",
+      "previousNight": "Quality of previous night's sleep",
+      "recoveryIndex": "Resting heart rate recovery",
+      "restingHeartRate": "Comparison to baseline",
+      "sleepBalance": "Long-term sleep debt"
+    },
+    "recentScores": [
+      {"date": "2025-12-27", "score": 86, "rhr": 90, "hrv": 98},
+      {"date": "2025-12-26", "score": 71, "rhr": 73, "hrv": 97},
+      {"date": "2025-12-24", "score": 78, "rhr": 89, "hrv": 100},
+      {"date": "2025-12-23", "score": 65, "rhr": 79, "hrv": null},
+      {"date": "2025-12-22", "score": 79, "rhr": 89, "hrv": null}
+    ]
+  },
+  "heartRate": {
+    "dataSource": "Oura Ring - Continuous monitoring",
+    "sources": ["awake", "sleep", "live", "workout_heart_rate"],
+    "typicalRestingRange": {
+      "min": 49,
+      "max": 65,
+      "unit": "bpm"
+    },
+    "typicalActiveRange": {
+      "min": 70,
+      "max": 142,
+      "unit": "bpm"
+    },
+    "note": "Heart rate data includes millions of readings across sleep and activity periods"
+  },
+  "stress": {
+    "dataAvailable": true,
+    "dateRange": {
+      "start": "2023-09-10",
+      "end": "2025-12-27"
+    },
+    "summaryTypes": ["restored", "normal", "stressful"],
+    "description": "Daily stress assessment based on physiological markers"
+  },
+  "temperature": {
+    "dataType": "Skin temperature (ring sensor)",
+    "unit": "Celsius",
+    "typicalRange": {
+      "min": 31.5,
+      "max": 35.0
+    },
+    "note": "Temperature variation used for body temperature deviation calculations"
+  },
+  "activitySharing": {
+    "enabled": true,
+    "connectedFriends": 7,
+    "platform": "Apple Fitness Friends via iCloud",
+    "note": "Activity sharing relationships for fitness challenges"
+  },
+  "devices": {
+    "appleWatch": {
+      "integrated": true,
+      "dataTypes": ["Activity Sharing", "Workouts synced to Oura"]
+    },
+    "ouraRing": {
+      "generation": "Gen 3",
+      "primaryMetrics": ["Sleep", "Readiness", "Activity", "Heart Rate", "Temperature", "VO2 Max"],
+      "wearPattern": "24/7 with workout detection"
+    },
+    "renphoScale": {
+      "dataType": "Body composition",
+      "metrics": ["Weight", "BMI", "Body Fat %", "Muscle Mass", "Bone Mass", "Body Water %"]
+    }
+  },
+  "insights": {
+    "strengths": [
+      "Excellent VO2 Max (52-55 range) indicating strong cardiovascular fitness",
+      "Consistent deep sleep quality (avg 92 score)",
+      "High sleep efficiency (avg 89 score)",
+      "Diverse workout routine including running, cycling, strength training",
+      "Recent fitness peak with VO2 Max reaching 55 in late November 2025"
+    ],
+    "areasForImprovement": [
+      "Sleep timing consistency could be improved (avg 62 score)",
+      "REM sleep shows variability (avg 58 score)",
+      "Readiness scores indicate recovery opportunities"
+    ],
+    "notableAchievements": [
+      "15.5km run on November 17, 2025",
+      "11.5km early morning run on July 3, 2024",
+      "Consistent workout habit with 206+ tracked workouts over ~3 years",
+      "VO2 Max improvement to 55 ml/kg/min in late 2025"
+    ]
+  }
+}

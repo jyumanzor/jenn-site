@@ -167,7 +167,7 @@ export default function DCPage() {
   return (
     <div className="bg-cream">
       {/* Hero */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-20 relative overflow-hidden">
+      <section className="pt-8 pb-16 md:pt-16 md:pb-20 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-30"
           style={{

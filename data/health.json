@@ -1,0 +1,79 @@
+{
+  "profile": {
+    "gender": "Female",
+    "age": 26,
+    "height": "5'6\"",
+    "heightCm": 167.6
+  },
+  "measurements": [
+    {
+      "date": "2024-09-28",
+      "weight": 112.8,
+      "bodyFatMass": 10.2,
+      "boneMass": 6.8,
+      "proteinMass": 20.4,
+      "bodyWaterMass": 75.4,
+      "muscleMass": 95.8,
+      "skeletalMuscleMass": 56.4,
+      "bmi": 18.2,
+      "bodyFatPercentage": 9.0,
+      "visceralFat": 1,
+      "bmr": 1385,
+      "fatFreeMass": 102.6,
+      "subcutaneousFat": 6.2,
+      "smi": 7.0,
+      "metabolicAge": 23,
+      "whr": 0.72,
+      "bodyScore": 69
+    },
+    {
+      "date": "2024-12-19",
+      "weight": 114.4,
+      "bodyFatMass": 9.4,
+      "boneMass": 7.0,
+      "proteinMass": 21.0,
+      "bodyWaterMass": 76.8,
+      "muscleMass": 97.8,
+      "skeletalMuscleMass": 58.2,
+      "bmi": 18.4,
+      "bodyFatPercentage": 8.2,
+      "visceralFat": 1,
+      "bmr": 1397,
+      "fatFreeMass": 105.0,
+      "subcutaneousFat": 5.9,
+      "smi": 7.2,
+      "metabolicAge": 23,
+      "whr": 0.71,
+      "bodyScore": 71,
+      "segmentalFat": {
+        "leftArm": { "mass": 0.4, "percentage": 13.1 },
+        "rightArm": { "mass": 0.4, "percentage": 13.1 },
+        "trunk": { "mass": 5.6, "percentage": 43.9 },
+        "leftLeg": { "mass": 2.0, "percentage": 34.8 },
+        "rightLeg": { "mass": 1.8, "percentage": 33.2 }
+      },
+      "muscleBalance": {
+        "leftArm": { "mass": 5.8, "percentage": 131.2, "rating": "High" },
+        "rightArm": { "mass": 5.6, "percentage": 128.7, "rating": "High" },
+        "trunk": { "mass": 45.6, "percentage": 115.0, "rating": "High" },
+        "leftLeg": { "mass": 16.8, "percentage": 121.1, "rating": "High" },
+        "rightLeg": { "mass": 16.6, "percentage": 120.6, "rating": "High" }
+      }
+    }
+  ],
+  "targets": {
+    "optimalWeight": 133.8,
+    "targetWeightDelta": 21.4,
+    "targetFatMassDelta": 21.4,
+    "targetMuscleMassDelta": 0.0
+  },
+  "optimalRanges": {
+    "weight": { "min": 113.8, "max": 153.8 },
+    "bodyFatMass": { "min": 26.8, "max": 43.0 },
+    "boneMass": { "min": 5.8, "max": 7.4 },
+    "proteinMass": { "min": 17.4, "max": 22.2 },
+    "bodyWaterMass": { "min": 63.8, "max": 81.2 },
+    "muscleMass": { "min": 81.2, "max": 103.4 },
+    "skeletalMuscleMass": { "min": 50.4, "max": 61.8 }
+  }
+}

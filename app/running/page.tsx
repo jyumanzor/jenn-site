@@ -1,9 +1,62 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import races from "@/data/races.json";
 import RunningSchedule from "@/components/RunningSchedule";
+
+// Animated counter for dramatic stat reveals
+function AnimatedNumber({ value, suffix = "", delay = 0 }: { value: string; suffix?: string; delay?: number }) {
+  const [displayValue, setDisplayValue] = useState("0");
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const numericValue = parseFloat(value.replace(/[^0-9.]/g, ''));
+          const isTime = value.includes(':');
+
+          setTimeout(() => {
+            if (isTime) {
+              setDisplayValue(value);
+            } else {
+              const duration = 1200;
+              const startTime = performance.now();
+
+              const animate = (currentTime: number) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * numericValue);
+                setDisplayValue(current.toString());
+
+                if (progress < 1) {
+                  requestAnimationFrame(animate);
+                } else {
+                  setDisplayValue(value);
+                }
+              };
+
+              requestAnimationFrame(animate);
+            }
+          }, delay);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [value, delay, hasAnimated]);
+
+  return <span ref={ref}>{displayValue}{suffix}</span>;
+}
 
 type Marathon = typeof races.marathons[0] & {
   placement?: string;
@@ -166,6 +219,12 @@ const statusColors = {
 
 export default function RunningPage() {
   const [selectedMajor, setSelectedMajor] = useState<WorldMajor | null>(null);
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setHeroLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const formatDate = (dateStr: string) => {
     return new Date(dateStr).toLocaleDateString("en-US", {
@@ -177,31 +236,126 @@ export default function RunningPage() {
 
   return (
     <div className="bg-cream">
-      {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-cream">
-        <div className="container-editorial">
-          <div className="grid md:grid-cols-12 gap-8 items-end">
+      {/* Hero - Editorial Magazine Quality */}
+      <section className="pt-16 pb-24 md:pt-24 md:pb-32 bg-cream relative overflow-hidden">
+        {/* Subtle gradient orbs for depth */}
+        <div
+          className="absolute top-0 right-0 w-[500px] h-[500px] opacity-25 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, rgba(212,237,57,0.2) 0%, transparent 60%)',
+            transform: 'translate(20%, -30%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-15 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, rgba(250,191,52,0.2) 0%, transparent 60%)',
+            transform: 'translate(-30%, 30%)',
+          }}
+        />
+
+        <div className="container-editorial relative z-10">
+          {/* Editorial category marker */}
+          <div
+            className="flex items-center gap-3 mb-8 transition-all duration-700"
+            style={{
+              opacity: heroLoaded ? 1 : 0,
+              transform: heroLoaded ? 'translateY(0)' : 'translateY(20px)',
+            }}
+          >
+            <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: '#97A97C' }}>
+              Running
+            </span>
+            <div className="w-12 h-px" style={{ backgroundColor: '#97A97C' }} />
+            <span className="text-xs" style={{ color: 'rgba(59,65,45,0.5)' }}>
+              Training Log
+            </span>
+          </div>
+
+          <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-7">
-              <p className="light-bg-label mb-4">Running</p>
-              <h1 className="font-display text-4xl md:text-5xl text-deep-forest mb-6 leading-tight">
-                Marathon training & race history.
+              <h1
+                className="font-display text-5xl md:text-6xl lg:text-7xl text-deep-forest mb-8 leading-[0.95] tracking-tight transition-all duration-1000"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
+                  transitionDelay: '150ms',
+                }}
+              >
+                Marathon History{' '}
+                <span className="relative inline-block">
+                  & Training
+                  <span
+                    className="absolute -bottom-2 left-0 w-full h-1 rounded-full"
+                    style={{
+                      background: 'linear-gradient(90deg, #D4ED39, #FABF34)',
+                      transform: heroLoaded ? 'scaleX(1)' : 'scaleX(0)',
+                      transformOrigin: 'left',
+                      transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                      transitionDelay: '800ms',
+                    }}
+                  />
+                </span>
+                <span style={{ color: '#D4ED39' }}>.</span>
               </h1>
-              <p className="text-base text-olive leading-relaxed reading-width font-light">
+              <p
+                className="text-base md:text-lg text-olive leading-relaxed max-w-xl font-light transition-all duration-1000"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(20px)',
+                  transitionDelay: '300ms',
+                }}
+              >
                 Working toward all seven World Marathon Majors. Boston and Chicago in 2026.
               </p>
             </div>
-            <div className="md:col-span-5">
-              <div className="panel-gradient-deep p-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-gold font-display text-5xl">3:09</span>
-                  <span className="text-cream/60 text-sm">marathon PR</span>
+
+            {/* PR Feature Card with dramatic styling */}
+            <div
+              className="md:col-span-5 transition-all duration-1000"
+              style={{
+                opacity: heroLoaded ? 1 : 0,
+                transform: heroLoaded ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
+                transitionDelay: '400ms',
+              }}
+            >
+              <div
+                className="relative rounded-2xl p-8 overflow-hidden group"
+                style={{
+                  background: 'linear-gradient(135deg, #2A3C24 0%, #3d5235 100%)',
+                  boxShadow: '0 20px 60px rgba(42,60,36,0.3)',
+                }}
+              >
+                {/* Subtle glow on card */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'radial-gradient(circle at 70% 30%, rgba(212,237,57,0.15) 0%, transparent 60%)',
+                  }}
+                />
+                <div className="relative z-10">
+                  <span className="text-xs uppercase tracking-widest mb-4 block" style={{ color: '#97A97C' }}>
+                    Personal Record
+                  </span>
+                  <div className="flex items-baseline gap-3">
+                    <span
+                      className="font-display text-6xl md:text-7xl transition-all duration-300 group-hover:scale-105"
+                      style={{ color: '#FABF34' }}
+                    >
+                      <AnimatedNumber value="3:09" delay={600} />
+                    </span>
+                    <span className="text-cream/60 text-sm">marathon</span>
+                  </div>
+                  <div className="mt-6 pt-6 border-t" style={{ borderColor: 'rgba(255,245,235,0.1)' }}>
+                    <p className="text-cream/80 text-sm">
+                      Set at Geneva Marathon, Sep 2025
+                    </p>
+                  </div>
                 </div>
-                <p className="text-cream/80 text-sm mt-3">
-                  Geneva 2025. Sub-3 next.
-                </p>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 

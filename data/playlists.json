@@ -1,0 +1,180 @@
+{
+  "playlists": [
+    {
+      "id": "joy-aligned",
+      "name": "Joy Aligned",
+      "description": "Songs that feel like pure joy and alignment",
+      "vibe": "uplifting, authentic, euphoric",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Golden Hour", "artist": "JVKE", "isHighlighted": true },
+        { "title": "Good Days", "artist": "SZA", "isHighlighted": true },
+        { "title": "Feeling Good As Hell", "artist": "Lizzo", "isHighlighted": true },
+        { "title": "Here Comes the Sun", "artist": "The Beatles", "isHighlighted": true },
+        { "title": "Electric", "artist": "Katy Perry", "isHighlighted": false },
+        { "title": "Walking on Sunshine", "artist": "Katrina and the Waves", "isHighlighted": true },
+        { "title": "Lovely Day", "artist": "Bill Withers", "isHighlighted": true },
+        { "title": "Best Day of My Life", "artist": "American Authors", "isHighlighted": false },
+        { "title": "Sunflower", "artist": "Post Malone", "isHighlighted": true },
+        { "title": "Happy", "artist": "Pharrell Williams", "isHighlighted": true },
+        { "title": "On Top of the World", "artist": "Imagine Dragons", "isHighlighted": false },
+        { "title": "Can't Stop the Feeling", "artist": "Justin Timberlake", "isHighlighted": true },
+        { "title": "Good Vibrations", "artist": "The Beach Boys", "isHighlighted": true },
+        { "title": "Three Little Birds", "artist": "Bob Marley", "isHighlighted": true },
+        { "title": "Don't Stop Me Now", "artist": "Queen", "isHighlighted": true }
+      ]
+    },
+    {
+      "id": "im-hot",
+      "name": "I'm Hot",
+      "description": "Confidence anthems and main character energy",
+      "vibe": "confident, powerful, sexy",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Flowers", "artist": "Miley Cyrus", "isHighlighted": true },
+        { "title": "Woman", "artist": "Doja Cat", "isHighlighted": true },
+        { "title": "Good as Hell", "artist": "Lizzo", "isHighlighted": true },
+        { "title": "Run the World (Girls)", "artist": "Beyonce", "isHighlighted": true },
+        { "title": "Truth Hurts", "artist": "Lizzo", "isHighlighted": true },
+        { "title": "Confident", "artist": "Demi Lovato", "isHighlighted": true },
+        { "title": "Boss Bitch", "artist": "Doja Cat", "isHighlighted": false },
+        { "title": "Dangerous Woman", "artist": "Ariana Grande", "isHighlighted": true },
+        { "title": "Physical", "artist": "Dua Lipa", "isHighlighted": true },
+        { "title": "Blow", "artist": "Beyonce", "isHighlighted": false },
+        { "title": "Partition", "artist": "Beyonce", "isHighlighted": true },
+        { "title": "Feeling Myself", "artist": "Nicki Minaj ft. Beyonce", "isHighlighted": true },
+        { "title": "Salute", "artist": "Little Mix", "isHighlighted": false },
+        { "title": "Work Bitch", "artist": "Britney Spears", "isHighlighted": true },
+        { "title": "Level Up", "artist": "Ciara", "isHighlighted": false }
+      ]
+    },
+    {
+      "id": "fjy26",
+      "name": "FJY26",
+      "description": "The ultimate collection - Feel Joy Year 2026",
+      "vibe": "curated excellence, peak vibes, personal favorites",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Espresso", "artist": "Sabrina Carpenter", "isHighlighted": true },
+        { "title": "Von Dutch", "artist": "Charli XCX", "isHighlighted": true },
+        { "title": "Apple", "artist": "Charli XCX", "isHighlighted": true },
+        { "title": "360", "artist": "Charli XCX", "isHighlighted": true },
+        { "title": "HOT TO GO!", "artist": "Chappell Roan", "isHighlighted": true },
+        { "title": "Good Luck, Babe!", "artist": "Chappell Roan", "isHighlighted": true },
+        { "title": "Pink Pony Club", "artist": "Chappell Roan", "isHighlighted": true },
+        { "title": "Blinding Lights", "artist": "The Weeknd", "isHighlighted": true },
+        { "title": "Midnight City", "artist": "M83", "isHighlighted": true },
+        { "title": "Electric Feel", "artist": "MGMT", "isHighlighted": true },
+        { "title": "Tongue Tied", "artist": "Grouplove", "isHighlighted": true },
+        { "title": "Dog Days Are Over", "artist": "Florence + The Machine", "isHighlighted": true },
+        { "title": "Take On Me", "artist": "a-ha", "isHighlighted": true },
+        { "title": "Dreams", "artist": "Fleetwood Mac", "isHighlighted": true },
+        { "title": "Levitating", "artist": "Dua Lipa", "isHighlighted": true }
+      ]
+    },
+    {
+      "id": "shes-pedaling",
+      "name": "She's Pedaling",
+      "description": "High-energy cycling and workout anthems",
+      "vibe": "high energy, powerful, driving beats",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Physical", "artist": "Dua Lipa", "isHighlighted": true },
+        { "title": "Stronger", "artist": "Kanye West", "isHighlighted": true },
+        { "title": "Till I Collapse", "artist": "Eminem", "isHighlighted": true },
+        { "title": "Can't Hold Us", "artist": "Macklemore", "isHighlighted": true },
+        { "title": "Run the World (Girls)", "artist": "Beyonce", "isHighlighted": true },
+        { "title": "Blinding Lights", "artist": "The Weeknd", "isHighlighted": true },
+        { "title": "Levels", "artist": "Avicii", "isHighlighted": true },
+        { "title": "Wake Me Up", "artist": "Avicii", "isHighlighted": true },
+        { "title": "Titanium", "artist": "David Guetta ft. Sia", "isHighlighted": true },
+        { "title": "Pump It", "artist": "Black Eyed Peas", "isHighlighted": false },
+        { "title": "Eye of the Tiger", "artist": "Survivor", "isHighlighted": true },
+        { "title": "Unstoppable", "artist": "Sia", "isHighlighted": true },
+        { "title": "Warriors", "artist": "Imagine Dragons", "isHighlighted": false },
+        { "title": "Work Bitch", "artist": "Britney Spears", "isHighlighted": true },
+        { "title": "Power", "artist": "Kanye West", "isHighlighted": true }
+      ]
+    },
+    {
+      "id": "unabridged",
+      "name": "Unabridged",
+      "description": "Full emotional range, authentic expression",
+      "vibe": "emotional, authentic, full spectrum",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Vienna", "artist": "Billy Joel", "isHighlighted": true },
+        { "title": "Landslide", "artist": "Fleetwood Mac", "isHighlighted": true },
+        { "title": "The Night We Met", "artist": "Lord Huron", "isHighlighted": true },
+        { "title": "Skinny Love", "artist": "Bon Iver", "isHighlighted": true },
+        { "title": "Holocene", "artist": "Bon Iver", "isHighlighted": true },
+        { "title": "Cherry Wine", "artist": "Hozier", "isHighlighted": true },
+        { "title": "Take Me to Church", "artist": "Hozier", "isHighlighted": true },
+        { "title": "First Day of My Life", "artist": "Bright Eyes", "isHighlighted": true },
+        { "title": "To Build a Home", "artist": "The Cinematic Orchestra", "isHighlighted": true },
+        { "title": "Mad World", "artist": "Gary Jules", "isHighlighted": true },
+        { "title": "Creep", "artist": "Radiohead", "isHighlighted": true },
+        { "title": "Ivy", "artist": "Frank Ocean", "isHighlighted": true },
+        { "title": "Pink + White", "artist": "Frank Ocean", "isHighlighted": true },
+        { "title": "Motion Sickness", "artist": "Phoebe Bridgers", "isHighlighted": true },
+        { "title": "Liability", "artist": "Lorde", "isHighlighted": true }
+      ]
+    },
+    {
+      "id": "slow-flow",
+      "name": "Slow Flow",
+      "description": "Chill vibes for winding down and relaxation",
+      "vibe": "calm, reflective, peaceful",
+      "isHighFrequency": false,
+      "tracks": [
+        { "title": "Sunset Lover", "artist": "Petit Biscuit", "isHighlighted": true },
+        { "title": "Re: Stacks", "artist": "Bon Iver", "isHighlighted": true },
+        { "title": "Intro", "artist": "The xx", "isHighlighted": true },
+        { "title": "Nuvole Bianche", "artist": "Ludovico Einaudi", "isHighlighted": true },
+        { "title": "Experience", "artist": "Ludovico Einaudi", "isHighlighted": true },
+        { "title": "Time", "artist": "Hans Zimmer", "isHighlighted": true },
+        { "title": "Arrival of the Birds", "artist": "The Cinematic Orchestra", "isHighlighted": true },
+        { "title": "Gymnopédie No.1", "artist": "Erik Satie", "isHighlighted": true },
+        { "title": "Clair de Lune", "artist": "Debussy", "isHighlighted": true },
+        { "title": "Weightless", "artist": "Marconi Union", "isHighlighted": false },
+        { "title": "Bloom", "artist": "The Paper Kites", "isHighlighted": true },
+        { "title": "Saturn", "artist": "Sleeping At Last", "isHighlighted": true },
+        { "title": "Ocean Eyes", "artist": "Billie Eilish", "isHighlighted": true },
+        { "title": "Taro", "artist": "alt-J", "isHighlighted": false },
+        { "title": "Ribs", "artist": "Lorde", "isHighlighted": true }
+      ]
+    },
+    {
+      "id": "cc",
+      "name": "CC",
+      "description": "Core Collection - timeless favorites",
+      "vibe": "classic, essential, timeless",
+      "isHighFrequency": true,
+      "tracks": [
+        { "title": "Dreams", "artist": "Fleetwood Mac", "isHighlighted": true },
+        { "title": "Everywhere", "artist": "Fleetwood Mac", "isHighlighted": true },
+        { "title": "Africa", "artist": "Toto", "isHighlighted": true },
+        { "title": "September", "artist": "Earth Wind & Fire", "isHighlighted": true },
+        { "title": "Dancing Queen", "artist": "ABBA", "isHighlighted": true },
+        { "title": "Don't Stop Me Now", "artist": "Queen", "isHighlighted": true },
+        { "title": "Bohemian Rhapsody", "artist": "Queen", "isHighlighted": true },
+        { "title": "Take On Me", "artist": "a-ha", "isHighlighted": true },
+        { "title": "I Wanna Dance with Somebody", "artist": "Whitney Houston", "isHighlighted": true },
+        { "title": "Everybody Wants to Rule the World", "artist": "Tears for Fears", "isHighlighted": true },
+        { "title": "Come On Eileen", "artist": "Dexys Midnight Runners", "isHighlighted": true },
+        { "title": "Sweet Dreams", "artist": "Eurythmics", "isHighlighted": true },
+        { "title": "Just Like Heaven", "artist": "The Cure", "isHighlighted": true },
+        { "title": "Bizarre Love Triangle", "artist": "New Order", "isHighlighted": true },
+        { "title": "Blue Monday", "artist": "New Order", "isHighlighted": true }
+      ]
+    }
+  ],
+  "highlightCriteria": {
+    "description": "Songs are highlighted based on: appearing in multiple playlists, being core to Jenn's identity/vibe, high play frequency, or being essential to the playlist's theme",
+    "highFrequencyPlaylists": ["joy-aligned", "im-hot", "fjy26", "shes-pedaling", "unabridged", "cc"]
+  },
+  "meta": {
+    "lastUpdated": "2026-01-02",
+    "version": "1.0"
+  }
+}

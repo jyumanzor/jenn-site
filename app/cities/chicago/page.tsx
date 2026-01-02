@@ -1,7 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+// Scroll progress hook
+function useScrollProgress() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      setProgress(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return progress;
+}
+
+// Intersection observer hook for reveal animations
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsRevealed(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, isRevealed };
+}
 
 interface Place {
   name: string;
@@ -163,34 +208,97 @@ const neighborhoods: Place[] = [
   }
 ];
 
-export default function ChicagoPage() {
-  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-
-  const PlaceCard = ({ place, color }: { place: Place; color: string }) => (
-    <button
-      onClick={() => setSelectedPlace(place)}
-      className="rounded-xl p-5 text-left transition-all hover:scale-[1.02] hover:shadow-lg w-full"
-      style={{ backgroundColor: color }}
-    >
-      <h4
-        className="text-base mb-1"
-        style={{
-          fontFamily: 'var(--font-instrument), Georgia, serif',
-          color: '#2a3c24'
-        }}
-      >
-        {place.name}
-      </h4>
-      <p className="text-sm" style={{ color: 'rgba(42,60,36,0.7)' }}>
-        {place.desc}
-      </p>
-    </button>
-  );
+// Enhanced PlaceCard component with animations
+function PlaceCard({ place, color, index = 0, onSelect }: { place: Place; color: string; index?: number; onSelect: () => void }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const { ref, isRevealed } = useScrollReveal();
 
   return (
-    <div className="bg-cream">
+    <div
+      ref={ref}
+      style={{
+        opacity: isRevealed ? 1 : 0,
+        transform: isRevealed ? 'translateY(0)' : 'translateY(20px)',
+        transition: `opacity 0.5s ease ${index * 80}ms, transform 0.5s ease ${index * 80}ms`
+      }}
+    >
+      <button
+        onClick={onSelect}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="rounded-xl p-5 text-left w-full relative overflow-hidden"
+        style={{
+          backgroundColor: color,
+          transform: isHovered ? 'translateY(-4px) scale(1.01)' : 'translateY(0) scale(1)',
+          boxShadow: isHovered ? '0 16px 40px rgba(42, 60, 36, 0.12)' : '0 2px 8px rgba(42, 60, 36, 0.04)',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+        }}
+      >
+        {/* Gradient overlay on hover */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+          style={{
+            background: 'linear-gradient(135deg, rgba(212, 237, 57, 0.15) 0%, transparent 60%)',
+            opacity: isHovered ? 1 : 0
+          }}
+        />
+        <div className="relative z-10">
+          <h4
+            className="text-base mb-1 transition-all duration-300"
+            style={{
+              fontFamily: 'var(--font-instrument), Georgia, serif',
+              color: '#2a3c24',
+              transform: isHovered ? 'translateX(4px)' : 'translateX(0)'
+            }}
+          >
+            {place.name}
+          </h4>
+          <p
+            className="text-sm transition-all duration-300"
+            style={{
+              color: isHovered ? 'rgba(42,60,36,0.85)' : 'rgba(42,60,36,0.7)',
+              transform: isHovered ? 'translateX(4px)' : 'translateX(0)',
+              transitionDelay: '50ms'
+            }}
+          >
+            {place.desc}
+          </p>
+          {/* Arrow indicator on hover */}
+          <div
+            className="absolute right-4 top-1/2 -translate-y-1/2 transition-all duration-300"
+            style={{
+              opacity: isHovered ? 1 : 0,
+              transform: isHovered ? 'translateX(0)' : 'translateX(-8px)'
+            }}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#546e40' }}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+  );
+}
+
+export default function ChicagoPage() {
+  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  const scrollProgress = useScrollProgress();
+
+  return (
+    <div className="bg-cream relative">
+      {/* Scroll Progress Bar */}
+      <div
+        className="fixed top-0 left-0 h-1 z-50 transition-all duration-100"
+        style={{
+          width: `${scrollProgress}%`,
+          background: 'linear-gradient(90deg, #97A97C, #D4ED39)',
+          boxShadow: scrollProgress > 0 ? '0 0 10px rgba(212, 237, 57, 0.5)' : 'none'
+        }}
+      />
+
       {/* Hero */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-20 relative overflow-hidden">
+      <section className="pt-8 pb-16 md:pt-16 md:pb-20 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -406,8 +514,8 @@ export default function ChicagoPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
-            {museums.map((museum) => (
-              <PlaceCard key={museum.name} place={museum} color="#fff5eb" />
+            {museums.map((museum, index) => (
+              <PlaceCard key={museum.name} place={museum} color="#fff5eb" index={index} onSelect={() => setSelectedPlace(museum)} />
             ))}
           </div>
         </div>
@@ -435,8 +543,8 @@ export default function ChicagoPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
-            {cafes.map((cafe) => (
-              <PlaceCard key={cafe.name} place={cafe} color="#ffeac4" />
+            {cafes.map((cafe, index) => (
+              <PlaceCard key={cafe.name} place={cafe} color="#ffeac4" index={index} onSelect={() => setSelectedPlace(cafe)} />
             ))}
           </div>
         </div>
@@ -464,8 +572,8 @@ export default function ChicagoPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {routes.map((route) => (
-              <PlaceCard key={route.name} place={route} color="#d4ed39" />
+            {routes.map((route, index) => (
+              <PlaceCard key={route.name} place={route} color="#d4ed39" index={index} onSelect={() => setSelectedPlace(route)} />
             ))}
           </div>
         </div>
@@ -493,8 +601,8 @@ export default function ChicagoPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {neighborhoods.map((hood) => (
-              <PlaceCard key={hood.name} place={hood} color="#fff5eb" />
+            {neighborhoods.map((hood, index) => (
+              <PlaceCard key={hood.name} place={hood} color="#fff5eb" index={index} onSelect={() => setSelectedPlace(hood)} />
             ))}
           </div>
         </div>
@@ -516,16 +624,28 @@ export default function ChicagoPage() {
         </div>
       </section>
 
-      {/* Modal */}
+      {/* Enhanced Modal with animations */}
       {selectedPlace && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedPlace(null)}
+          style={{
+            animation: 'overlayFadeIn 0.2s ease-out'
+          }}
         >
-          <div className="absolute inset-0 bg-charcoal/60 backdrop-blur-sm" />
           <div
-            className="relative bg-cream rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+            className="absolute inset-0 backdrop-blur-sm"
+            style={{
+              backgroundColor: 'rgba(42, 60, 36, 0.6)'
+            }}
+          />
+          <div
+            className="relative bg-cream rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
+            style={{
+              boxShadow: '0 25px 80px rgba(42, 60, 36, 0.25), 0 10px 30px rgba(42, 60, 36, 0.15)',
+              animation: 'modalSlideIn 0.3s ease-out'
+            }}
           >
             {/* Header */}
             <div className="p-6 pb-4">

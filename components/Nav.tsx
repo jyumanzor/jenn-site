@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/running", label: "Running", description: "Races & training" },
   { href: "/dining", label: "Dining", description: "Restaurant guides" },
   { href: "/travel", label: "Travel", description: "Places & memories" },
-  { href: "/watching", label: "Culture", description: "Films, books & music" },
+  { href: "/culture", label: "Culture", description: "Films, books & music" },
   {
     href: "#",
     label: "City Guides",
@@ -22,6 +22,7 @@ const navLinks = [
   { href: "/tattoos", label: "Tattoos", description: "Stories on skin" },
   { href: "/journal", label: "Journal", description: "Essays & notes" },
   { href: "/work", label: "Work", description: "Professional" },
+  { href: "/portfolio", label: "Portfolio", description: "Design & code" },
 ];
 
 export default function Nav() {
@@ -67,14 +68,17 @@ export default function Nav() {
         <div className="container-editorial">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="group relative">
+            <Link href="/" className="group relative block">
               <span
-                className="font-display text-3xl tracking-tight text-charcoal transition-colors group-hover:text-terracotta"
-                style={{ fontStyle: "italic" }}
+                className="text-2xl italic transition-opacity group-hover:opacity-80"
+                style={{
+                  fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                  color: '#2A3C24',
+                  letterSpacing: '-0.02em',
+                }}
               >
                 Jenn
               </span>
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-terracotta transition-all duration-300 group-hover:w-full" />
             </Link>
 
             {/* Menu Button */}

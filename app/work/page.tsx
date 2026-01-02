@@ -35,7 +35,7 @@ export default function WorkPage() {
   return (
     <div className="bg-cream">
       {/* Hero */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16">
+      <section className="pt-8 pb-12 md:pt-16 md:pb-16">
         <div className="container-editorial">
           <div className="max-w-2xl">
             <p className="light-bg-label mb-3">Work</p>
@@ -129,6 +129,61 @@ export default function WorkPage() {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* Featured Project: FTI Portal */}
+      <section className="py-12" style={{ background: 'linear-gradient(135deg, #003763 0%, #0067B1 50%, #00C9D4 100%)' }}>
+        <div className="container-editorial">
+          <div className="grid md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-7">
+              <span className="text-xs uppercase tracking-wider mb-3 block" style={{ color: '#00C9D4' }}>
+                Featured Project
+              </span>
+              <h2
+                className="text-2xl md:text-3xl text-white mb-4"
+                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+              >
+                FTI LDR Training Portal
+              </h2>
+              <p className="text-white/80 leading-relaxed mb-6">
+                A comprehensive internal training platform I built for FTI Consulting&apos;s Litigation &amp; Dispute Resolution practice.
+                30+ pages, 10 interactive tools, and a 14-chapter R programming manual.
+              </p>
+              <Link
+                href="/work/fti-portal"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all hover:gap-3"
+                style={{ backgroundColor: '#1BB680', color: 'white' }}
+              >
+                View Case Study
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="md:col-span-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>30+</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Pages</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>10</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Tools</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>8</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Training Hubs</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#E8A847' }}>14</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">R Chapters</p>
+                </div>
               </div>
             </div>
           </div>

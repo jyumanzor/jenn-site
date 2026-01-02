@@ -133,7 +133,7 @@ export default function AnalysisDiagram() {
       {/* Diagram label */}
       <div className="absolute bottom-3 left-4">
         <span className="text-[10px] text-[#A09A90] uppercase tracking-widest">
-          Fig. 1 — Analysis Framework
+          Fig. 1—Analysis Framework
         </span>
       </div>
     </div>

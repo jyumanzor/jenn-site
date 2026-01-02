@@ -1,0 +1,89 @@
+{
+  "memos": [],
+  "prompts": [],
+  "projects": [
+    {
+      "id": "jenns-site",
+      "name": "Jenn's Site",
+      "description": "Personal website and portfolio",
+      "color": "#97A97C",
+      "docsPath": "/docs"
+    },
+    {
+      "id": "fti-site",
+      "name": "FTI Site",
+      "description": "Work-related site project",
+      "color": "#FABF34",
+      "docsPath": null
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "description": "Personal life, goals, and reflections",
+      "color": "#D4ED39",
+      "docsPath": null
+    },
+    {
+      "id": "work",
+      "name": "Work",
+      "description": "FTI consulting work and career",
+      "color": "#546E40",
+      "docsPath": null
+    },
+    {
+      "id": "running",
+      "name": "Running",
+      "description": "Marathon training and race planning",
+      "color": "#2A3C24",
+      "docsPath": null
+    },
+    {
+      "id": "ideas",
+      "name": "Ideas",
+      "description": "New concepts and creative thoughts",
+      "color": "#FFCB69",
+      "docsPath": null
+    }
+  ],
+  "categories": [
+    { "id": "task", "name": "Task", "icon": "check-circle" },
+    { "id": "idea", "name": "Idea", "icon": "lightbulb" },
+    { "id": "bug", "name": "Bug Fix", "icon": "bug" },
+    { "id": "feature", "name": "Feature", "icon": "star" },
+    { "id": "note", "name": "Note", "icon": "document" },
+    { "id": "question", "name": "Question", "icon": "question" }
+  ],
+  "priorities": [
+    { "id": "p1", "name": "Critical", "color": "#B4654A" },
+    { "id": "p2", "name": "High", "color": "#FABF34" },
+    { "id": "p3", "name": "Medium", "color": "#97A97C" },
+    { "id": "p4", "name": "Low", "color": "#CBAD8C" }
+  ],
+  "workflowConfig": {
+    "recorderModel": "B0DZWQ9WWJ",
+    "recorderName": "64GB Digital Voice Recorder with Noise Cancellation",
+    "transcriptionOptions": [
+      {
+        "id": "whisper-api",
+        "name": "OpenAI Whisper API",
+        "description": "Cloud-based, most accurate, costs per minute",
+        "recommended": true
+      },
+      {
+        "id": "whisper-local",
+        "name": "Whisper Local",
+        "description": "Run locally with whisper.cpp, free but requires setup"
+      },
+      {
+        "id": "otter-ai",
+        "name": "Otter.ai",
+        "description": "Free tier available, good for meetings"
+      },
+      {
+        "id": "manual",
+        "name": "Manual Entry",
+        "description": "Type or paste transcription directly"
+      }
+    ]
+  }
+}

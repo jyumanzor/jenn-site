@@ -87,7 +87,7 @@ export default function Footer() {
                   Travel
                 </Link>
                 <Link
-                  href="/watching"
+                  href="/culture"
                   className="text-base transition-colors hover:opacity-70"
                   style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#D4ED39' }}
                 >
@@ -127,6 +127,13 @@ export default function Footer() {
                   style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#D4ED39' }}
                 >
                   Work
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="text-base transition-colors hover:opacity-70"
+                  style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#D4ED39' }}
+                >
+                  Portfolio
                 </Link>
               </div>
             </div>
@@ -174,8 +181,20 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-cream/10 mt-6">
           <div className="container-editorial py-4">
-            <div className="text-xs text-cream/50 text-right pt-2">
-              <p>&copy; {currentYear} Jenn. Washington, DC.</p>
+            <div className="flex justify-between items-center pt-2">
+              <Link
+                href="/io"
+                className="text-xs px-3 py-1.5 rounded-full transition-all hover:scale-105"
+                style={{
+                  background: 'linear-gradient(135deg, #FABF34 0%, #D4A853 50%, #CC7722 100%)',
+                  color: '#2F2F2C',
+                  fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                  fontStyle: 'italic',
+                }}
+              >
+                Jenn&apos;s IO
+              </Link>
+              <p className="text-xs text-cream/50">&copy; {currentYear} Jenn. Washington, DC. <span className="text-cream/30">Est. 2025</span></p>
             </div>
           </div>
         </div>

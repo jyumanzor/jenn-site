@@ -1,0 +1,2165 @@
+{
+  "metadata": {
+    "title": "Healthy Foods Database for Marathon Runners",
+    "description": "Comprehensive nutrition database optimized for female endurance athletes",
+    "lastUpdated": "2026-01-02",
+    "version": "1.0",
+    "references": [
+      "Journal of the International Society of Sports Nutrition",
+      "British Journal of Sports Medicine",
+      "Nutrients - MDPI",
+      "American College of Sports Medicine Guidelines"
+    ]
+  },
+  "categories": [
+    {
+      "id": "nuts-seeds",
+      "name": "Nuts & Seeds",
+      "description": "Nutrient-dense sources of healthy fats, protein, and minerals essential for endurance performance",
+      "foods": [
+        {
+          "id": "chia-seeds",
+          "name": "Chia Seeds",
+          "category": "nuts-seeds",
+          "servingSize": "2 tbsp (28g)",
+          "calories": 138,
+          "macros": {
+            "protein": 4.7,
+            "carbs": 12,
+            "fat": 8.7,
+            "fiber": 9.8
+          },
+          "keyNutrients": [
+            { "name": "Omega-3 (ALA)", "amount": "5g", "dailyValue": 312 },
+            { "name": "Manganese", "amount": "0.6mg", "dailyValue": 26 },
+            { "name": "Phosphorus", "amount": "244mg", "dailyValue": 20 },
+            { "name": "Calcium", "amount": "179mg", "dailyValue": 14 },
+            { "name": "Magnesium", "amount": "95mg", "dailyValue": 23 }
+          ],
+          "benefits": [
+            "Exceptional omega-3 content supports cardiovascular health and reduces exercise-induced inflammation",
+            "High fiber content promotes sustained energy release during long runs",
+            "Hydrophilic properties help maintain hydration during endurance events",
+            "Rich in antioxidants that combat oxidative stress from intense training"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 98,
+          "notes": "Can absorb 10x their weight in water - excellent for pre-race hydration. Add to overnight oats or smoothies 2-3 hours before running."
+        },
+        {
+          "id": "almonds",
+          "name": "Almonds",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g, ~23 nuts)",
+          "calories": 164,
+          "macros": {
+            "protein": 6,
+            "carbs": 6,
+            "fat": 14,
+            "fiber": 3.5
+          },
+          "keyNutrients": [
+            { "name": "Vitamin E", "amount": "7.3mg", "dailyValue": 49 },
+            { "name": "Magnesium", "amount": "76mg", "dailyValue": 18 },
+            { "name": "Riboflavin (B2)", "amount": "0.3mg", "dailyValue": 23 },
+            { "name": "Manganese", "amount": "0.6mg", "dailyValue": 26 },
+            { "name": "Copper", "amount": "0.3mg", "dailyValue": 33 }
+          ],
+          "benefits": [
+            "Vitamin E protects muscle cells from oxidative damage during intense exercise",
+            "Magnesium supports muscle function and prevents cramping",
+            "Sustained energy from healthy fats ideal for endurance training",
+            "B vitamins support energy metabolism during long runs"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 94,
+          "notes": "Best consumed raw or dry-roasted without added oils. Excellent portable snack for training days."
+        },
+        {
+          "id": "walnuts",
+          "name": "Walnuts",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g, ~14 halves)",
+          "calories": 185,
+          "macros": {
+            "protein": 4.3,
+            "carbs": 3.9,
+            "fat": 18.5,
+            "fiber": 1.9
+          },
+          "keyNutrients": [
+            { "name": "Omega-3 (ALA)", "amount": "2.5g", "dailyValue": 156 },
+            { "name": "Copper", "amount": "0.45mg", "dailyValue": 50 },
+            { "name": "Manganese", "amount": "1mg", "dailyValue": 43 },
+            { "name": "Phosphorus", "amount": "98mg", "dailyValue": 8 },
+            { "name": "Vitamin B6", "amount": "0.15mg", "dailyValue": 9 }
+          ],
+          "benefits": [
+            "Highest omega-3 content among nuts reduces post-exercise inflammation",
+            "Polyphenols and antioxidants support brain health and cognitive function",
+            "May improve arterial function and blood flow during exercise",
+            "Supports recovery by reducing inflammatory markers after training"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 92,
+          "notes": "Best for recovery days due to anti-inflammatory properties. Store in refrigerator to preserve omega-3s."
+        },
+        {
+          "id": "pumpkin-seeds",
+          "name": "Pumpkin Seeds (Pepitas)",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g)",
+          "calories": 151,
+          "macros": {
+            "protein": 7,
+            "carbs": 5,
+            "fat": 13,
+            "fiber": 1.1
+          },
+          "keyNutrients": [
+            { "name": "Magnesium", "amount": "156mg", "dailyValue": 37 },
+            { "name": "Zinc", "amount": "2.2mg", "dailyValue": 20 },
+            { "name": "Iron", "amount": "2.3mg", "dailyValue": 13 },
+            { "name": "Phosphorus", "amount": "332mg", "dailyValue": 27 },
+            { "name": "Manganese", "amount": "0.9mg", "dailyValue": 39 }
+          ],
+          "benefits": [
+            "Exceptional magnesium content prevents muscle cramps and supports recovery",
+            "Iron supports oxygen transport crucial for endurance performance",
+            "Zinc supports immune function stressed by intense training",
+            "High protein content supports muscle repair and synthesis"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 91,
+          "notes": "Excellent source of plant-based iron for female athletes. Pair with vitamin C foods to enhance iron absorption."
+        },
+        {
+          "id": "flaxseeds",
+          "name": "Ground Flaxseeds",
+          "category": "nuts-seeds",
+          "servingSize": "2 tbsp (14g)",
+          "calories": 74,
+          "macros": {
+            "protein": 2.6,
+            "carbs": 4,
+            "fat": 5.9,
+            "fiber": 3.8
+          },
+          "keyNutrients": [
+            { "name": "Omega-3 (ALA)", "amount": "3.2g", "dailyValue": 200 },
+            { "name": "Thiamin (B1)", "amount": "0.2mg", "dailyValue": 17 },
+            { "name": "Magnesium", "amount": "54mg", "dailyValue": 13 },
+            { "name": "Phosphorus", "amount": "90mg", "dailyValue": 7 },
+            { "name": "Lignans", "amount": "85mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Richest plant source of omega-3 fatty acids for reducing inflammation",
+            "Lignans provide antioxidant and hormone-balancing effects",
+            "Soluble fiber promotes gut health and steady energy release",
+            "May help reduce blood pressure and support cardiovascular health"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 90,
+          "notes": "Must be ground to access nutrients. Store ground flax in freezer. Add to smoothies, oatmeal, or baked goods."
+        },
+        {
+          "id": "hemp-seeds",
+          "name": "Hemp Seeds (Hearts)",
+          "category": "nuts-seeds",
+          "servingSize": "3 tbsp (30g)",
+          "calories": 166,
+          "macros": {
+            "protein": 9.5,
+            "carbs": 2.6,
+            "fat": 14.6,
+            "fiber": 1.2
+          },
+          "keyNutrients": [
+            { "name": "Magnesium", "amount": "210mg", "dailyValue": 50 },
+            { "name": "Phosphorus", "amount": "495mg", "dailyValue": 40 },
+            { "name": "Zinc", "amount": "3mg", "dailyValue": 27 },
+            { "name": "Iron", "amount": "2.4mg", "dailyValue": 13 },
+            { "name": "Thiamin (B1)", "amount": "0.4mg", "dailyValue": 33 }
+          ],
+          "benefits": [
+            "Complete protein with all essential amino acids for muscle recovery",
+            "Optimal omega-6 to omega-3 ratio (3:1) for reducing inflammation",
+            "Exceptional magnesium content prevents cramping during long runs",
+            "Easily digestible protein ideal for pre or post-workout meals"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "One of few complete plant proteins. Mild nutty flavor works in smoothies, salads, or yogurt."
+        },
+        {
+          "id": "brazil-nuts",
+          "name": "Brazil Nuts",
+          "category": "nuts-seeds",
+          "servingSize": "3 nuts (15g)",
+          "calories": 99,
+          "macros": {
+            "protein": 2.2,
+            "carbs": 1.8,
+            "fat": 10,
+            "fiber": 1.1
+          },
+          "keyNutrients": [
+            { "name": "Selenium", "amount": "288mcg", "dailyValue": 524 },
+            { "name": "Magnesium", "amount": "56mg", "dailyValue": 13 },
+            { "name": "Copper", "amount": "0.26mg", "dailyValue": 29 },
+            { "name": "Phosphorus", "amount": "109mg", "dailyValue": 9 },
+            { "name": "Thiamin (B1)", "amount": "0.09mg", "dailyValue": 8 }
+          ],
+          "benefits": [
+            "Richest food source of selenium - crucial for thyroid function and metabolism",
+            "Selenium acts as powerful antioxidant protecting against exercise-induced oxidative stress",
+            "Supports immune function during high-volume training phases",
+            "May help reduce inflammation markers in athletes"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 85,
+          "notes": "Limit to 3-4 nuts daily due to extremely high selenium content. Excellent for thyroid support in female athletes."
+        },
+        {
+          "id": "pistachios",
+          "name": "Pistachios",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g, ~49 nuts)",
+          "calories": 159,
+          "macros": {
+            "protein": 5.7,
+            "carbs": 7.7,
+            "fat": 12.8,
+            "fiber": 3
+          },
+          "keyNutrients": [
+            { "name": "Vitamin B6", "amount": "0.48mg", "dailyValue": 28 },
+            { "name": "Thiamin (B1)", "amount": "0.25mg", "dailyValue": 21 },
+            { "name": "Potassium", "amount": "289mg", "dailyValue": 6 },
+            { "name": "Phosphorus", "amount": "137mg", "dailyValue": 11 },
+            { "name": "Copper", "amount": "0.37mg", "dailyValue": 41 }
+          ],
+          "benefits": [
+            "Highest B6 content among nuts supports energy metabolism and hemoglobin production",
+            "Lutein and zeaxanthin support eye health during outdoor training",
+            "Lower calorie than most nuts with excellent protein content",
+            "Potassium helps maintain electrolyte balance during long runs"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 84,
+          "notes": "Choose in-shell pistachios to slow consumption and increase mindful eating. Great post-run snack."
+        },
+        {
+          "id": "sunflower-seeds",
+          "name": "Sunflower Seeds",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g)",
+          "calories": 165,
+          "macros": {
+            "protein": 5.5,
+            "carbs": 6.8,
+            "fat": 14,
+            "fiber": 3
+          },
+          "keyNutrients": [
+            { "name": "Vitamin E", "amount": "7.4mg", "dailyValue": 49 },
+            { "name": "Selenium", "amount": "22.5mcg", "dailyValue": 41 },
+            { "name": "Copper", "amount": "0.5mg", "dailyValue": 56 },
+            { "name": "Vitamin B5", "amount": "2mg", "dailyValue": 40 },
+            { "name": "Phosphorus", "amount": "185mg", "dailyValue": 15 }
+          ],
+          "benefits": [
+            "Exceptional vitamin E content protects muscles from oxidative damage",
+            "Selenium and copper support antioxidant enzyme systems",
+            "B vitamins support energy production during endurance exercise",
+            "Phytosterols support healthy cholesterol levels"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 82,
+          "notes": "Choose unsalted for everyday consumption. Excellent addition to trail mix for long training runs."
+        },
+        {
+          "id": "cashews",
+          "name": "Cashews",
+          "category": "nuts-seeds",
+          "servingSize": "1 oz (28g, ~18 nuts)",
+          "calories": 157,
+          "macros": {
+            "protein": 5.2,
+            "carbs": 8.6,
+            "fat": 12.4,
+            "fiber": 0.9
+          },
+          "keyNutrients": [
+            { "name": "Copper", "amount": "0.62mg", "dailyValue": 69 },
+            { "name": "Magnesium", "amount": "83mg", "dailyValue": 20 },
+            { "name": "Manganese", "amount": "0.47mg", "dailyValue": 20 },
+            { "name": "Zinc", "amount": "1.6mg", "dailyValue": 15 },
+            { "name": "Iron", "amount": "1.9mg", "dailyValue": 11 }
+          ],
+          "benefits": [
+            "High copper content supports iron metabolism and red blood cell formation",
+            "Magnesium and zinc support muscle function and immune health",
+            "Lower fat content than most nuts with creamy satisfying texture",
+            "Iron supports oxygen transport for endurance performance"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": false,
+          "healthScore": 80,
+          "notes": "Higher in carbs than other nuts - can be useful for quick energy. Cashew butter is excellent in smoothies."
+        }
+      ]
+    },
+    {
+      "id": "green-vegetables",
+      "name": "Green Vegetables",
+      "description": "Nutrient-dense greens providing essential vitamins, minerals, and antioxidants for optimal performance and recovery",
+      "foods": [
+        {
+          "id": "spinach",
+          "name": "Spinach",
+          "category": "green-vegetables",
+          "servingSize": "1 cup raw (30g) / 1/2 cup cooked (90g)",
+          "calories": 7,
+          "macros": {
+            "protein": 0.9,
+            "carbs": 1.1,
+            "fat": 0.1,
+            "fiber": 0.7
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "145mcg", "dailyValue": 121 },
+            { "name": "Vitamin A", "amount": "2813 IU", "dailyValue": 56 },
+            { "name": "Folate", "amount": "58mcg", "dailyValue": 15 },
+            { "name": "Iron", "amount": "0.8mg", "dailyValue": 4 },
+            { "name": "Nitrates", "amount": "~250mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Natural nitrates improve oxygen efficiency and reduce oxygen cost during exercise",
+            "Vitamin K supports bone health essential for high-impact training",
+            "Folate supports red blood cell production for oxygen transport",
+            "Iron content (enhanced when cooked) supports endurance performance in female athletes"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 97,
+          "notes": "Consume raw in smoothies or lightly cooked. Nitrate benefits peak 2-3 hours after consumption - time pre-race accordingly."
+        },
+        {
+          "id": "kale",
+          "name": "Kale",
+          "category": "green-vegetables",
+          "servingSize": "1 cup raw chopped (67g)",
+          "calories": 33,
+          "macros": {
+            "protein": 2.9,
+            "carbs": 6,
+            "fat": 0.6,
+            "fiber": 2.6
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "547mcg", "dailyValue": 456 },
+            { "name": "Vitamin C", "amount": "80mg", "dailyValue": 89 },
+            { "name": "Vitamin A", "amount": "6693 IU", "dailyValue": 134 },
+            { "name": "Manganese", "amount": "0.5mg", "dailyValue": 22 },
+            { "name": "Calcium", "amount": "90mg", "dailyValue": 7 }
+          ],
+          "benefits": [
+            "Exceptionally high vitamin K supports bone density crucial for runners",
+            "Vitamin C supports collagen synthesis for connective tissue health",
+            "Powerful antioxidants (quercetin, kaempferol) combat exercise-induced oxidative stress",
+            "Beta-carotene supports immune function during high training loads"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 96,
+          "notes": "Massage raw kale with lemon juice to soften and improve nutrient absorption. Excellent in post-run smoothies."
+        },
+        {
+          "id": "broccoli",
+          "name": "Broccoli",
+          "category": "green-vegetables",
+          "servingSize": "1 cup chopped (91g)",
+          "calories": 31,
+          "macros": {
+            "protein": 2.5,
+            "carbs": 6,
+            "fat": 0.3,
+            "fiber": 2.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "81mg", "dailyValue": 90 },
+            { "name": "Vitamin K", "amount": "92mcg", "dailyValue": 77 },
+            { "name": "Folate", "amount": "57mcg", "dailyValue": 14 },
+            { "name": "Potassium", "amount": "288mg", "dailyValue": 6 },
+            { "name": "Sulforaphane", "amount": "~40mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Sulforaphane activates Nrf2 pathway for powerful cellular protection",
+            "High vitamin C supports immune function and iron absorption",
+            "Fiber promotes gut health and steady energy levels",
+            "Potassium supports electrolyte balance during endurance exercise"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 95,
+          "notes": "Light steaming preserves nutrients while making sulforaphane more bioavailable. Chew thoroughly to activate compounds."
+        },
+        {
+          "id": "arugula",
+          "name": "Arugula (Rocket)",
+          "category": "green-vegetables",
+          "servingSize": "2 cups (40g)",
+          "calories": 10,
+          "macros": {
+            "protein": 1,
+            "carbs": 1.5,
+            "fat": 0.3,
+            "fiber": 0.6
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "43mcg", "dailyValue": 36 },
+            { "name": "Nitrates", "amount": "~480mg", "dailyValue": null },
+            { "name": "Folate", "amount": "39mcg", "dailyValue": 10 },
+            { "name": "Calcium", "amount": "64mg", "dailyValue": 5 },
+            { "name": "Vitamin C", "amount": "6mg", "dailyValue": 7 }
+          ],
+          "benefits": [
+            "Highest nitrate content among leafy greens improves exercise efficiency",
+            "Glucosinolates provide potent anti-inflammatory and antioxidant effects",
+            "Low calorie density with high nutrient concentration",
+            "Peppery compounds may support healthy blood pressure"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 93,
+          "notes": "Excellent pre-race food due to exceptional nitrate content. Add to salads or sandwiches 2-3 hours before running."
+        },
+        {
+          "id": "bok-choy",
+          "name": "Bok Choy",
+          "category": "green-vegetables",
+          "servingSize": "1 cup shredded (70g)",
+          "calories": 9,
+          "macros": {
+            "protein": 1,
+            "carbs": 1.5,
+            "fat": 0.1,
+            "fiber": 0.7
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "31mg", "dailyValue": 34 },
+            { "name": "Vitamin A", "amount": "2170 IU", "dailyValue": 43 },
+            { "name": "Vitamin K", "amount": "32mcg", "dailyValue": 27 },
+            { "name": "Calcium", "amount": "74mg", "dailyValue": 6 },
+            { "name": "Potassium", "amount": "176mg", "dailyValue": 4 }
+          ],
+          "benefits": [
+            "Excellent calcium source with high bioavailability for bone health",
+            "Vitamin C and A support immune function and tissue repair",
+            "Low oxalate content means better mineral absorption than spinach",
+            "Cruciferous compounds support detoxification and recovery"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 91,
+          "notes": "One of the best plant-based calcium sources for female athletes. Excellent in stir-fries and soups."
+        },
+        {
+          "id": "swiss-chard",
+          "name": "Swiss Chard",
+          "category": "green-vegetables",
+          "servingSize": "1 cup raw (36g)",
+          "calories": 7,
+          "macros": {
+            "protein": 0.6,
+            "carbs": 1.3,
+            "fat": 0.1,
+            "fiber": 0.6
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "299mcg", "dailyValue": 249 },
+            { "name": "Vitamin A", "amount": "2202 IU", "dailyValue": 44 },
+            { "name": "Magnesium", "amount": "29mg", "dailyValue": 7 },
+            { "name": "Potassium", "amount": "136mg", "dailyValue": 3 },
+            { "name": "Iron", "amount": "0.6mg", "dailyValue": 3 }
+          ],
+          "benefits": [
+            "Exceptional vitamin K content supports bone health and blood clotting",
+            "Betalain pigments provide unique antioxidant and anti-inflammatory benefits",
+            "Magnesium supports muscle relaxation and prevents cramping",
+            "Syringic acid may help regulate blood sugar for steady energy"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 90,
+          "notes": "Rainbow chard contains additional betalain antioxidants. Sautee with garlic for maximum flavor."
+        },
+        {
+          "id": "brussels-sprouts",
+          "name": "Brussels Sprouts",
+          "category": "green-vegetables",
+          "servingSize": "1 cup (88g)",
+          "calories": 38,
+          "macros": {
+            "protein": 3,
+            "carbs": 8,
+            "fat": 0.3,
+            "fiber": 3.3
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "156mcg", "dailyValue": 130 },
+            { "name": "Vitamin C", "amount": "75mg", "dailyValue": 83 },
+            { "name": "Folate", "amount": "54mcg", "dailyValue": 14 },
+            { "name": "Manganese", "amount": "0.3mg", "dailyValue": 13 },
+            { "name": "Fiber", "amount": "3.3g", "dailyValue": 12 }
+          ],
+          "benefits": [
+            "High fiber content promotes gut health and satiety for weight management",
+            "Glucosinolates support detoxification pathways stressed by intense exercise",
+            "Excellent vitamin C supports collagen synthesis for joint health",
+            "ALA omega-3 content provides anti-inflammatory benefits"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 88,
+          "notes": "Roast at high heat to caramelize and reduce bitterness. Avoid eating too close to runs due to fiber content."
+        },
+        {
+          "id": "asparagus",
+          "name": "Asparagus",
+          "category": "green-vegetables",
+          "servingSize": "1 cup (134g)",
+          "calories": 27,
+          "macros": {
+            "protein": 2.9,
+            "carbs": 5.2,
+            "fat": 0.2,
+            "fiber": 2.8
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "70mcg", "dailyValue": 18 },
+            { "name": "Vitamin K", "amount": "56mcg", "dailyValue": 47 },
+            { "name": "Vitamin A", "amount": "1013 IU", "dailyValue": 20 },
+            { "name": "Thiamin (B1)", "amount": "0.2mg", "dailyValue": 17 },
+            { "name": "Potassium", "amount": "271mg", "dailyValue": 6 }
+          ],
+          "benefits": [
+            "Exceptional folate content supports red blood cell production",
+            "Natural diuretic properties help reduce bloating before races",
+            "Prebiotic fiber supports gut microbiome health",
+            "Glutathione content provides powerful antioxidant protection"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 87,
+          "notes": "Contains inulin prebiotic fiber for gut health. Roast or grill for best flavor."
+        },
+        {
+          "id": "green-beans",
+          "name": "Green Beans",
+          "category": "green-vegetables",
+          "servingSize": "1 cup (100g)",
+          "calories": 31,
+          "macros": {
+            "protein": 1.8,
+            "carbs": 7,
+            "fat": 0.1,
+            "fiber": 3.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "43mcg", "dailyValue": 36 },
+            { "name": "Vitamin C", "amount": "12mg", "dailyValue": 13 },
+            { "name": "Manganese", "amount": "0.2mg", "dailyValue": 9 },
+            { "name": "Folate", "amount": "33mcg", "dailyValue": 8 },
+            { "name": "Silicon", "amount": "~6mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Silicon content supports bone and connective tissue health",
+            "Moderate fiber content is easier to digest than other high-fiber vegetables",
+            "Chlorophyll supports blood health and oxygen transport",
+            "Antioxidants support recovery from exercise-induced oxidative stress"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 82,
+          "notes": "One of the easier-to-digest green vegetables. Good option closer to training if sensitive to high-fiber foods."
+        },
+        {
+          "id": "collard-greens",
+          "name": "Collard Greens",
+          "category": "green-vegetables",
+          "servingSize": "1 cup chopped (36g)",
+          "calories": 11,
+          "macros": {
+            "protein": 1,
+            "carbs": 2,
+            "fat": 0.2,
+            "fiber": 1.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin K", "amount": "184mcg", "dailyValue": 153 },
+            { "name": "Vitamin A", "amount": "2400 IU", "dailyValue": 48 },
+            { "name": "Vitamin C", "amount": "12.7mg", "dailyValue": 14 },
+            { "name": "Calcium", "amount": "84mg", "dailyValue": 6 },
+            { "name": "Folate", "amount": "46mcg", "dailyValue": 12 }
+          ],
+          "benefits": [
+            "Exceptional calcium with high bioavailability for bone health",
+            "Glucosinolates provide strong anti-inflammatory effects",
+            "High vitamin K supports bone metabolism in female athletes",
+            "Fiber supports healthy digestion and blood sugar control"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "Remove tough stems before cooking. Braise or sautee until tender for best digestibility."
+        }
+      ]
+    },
+    {
+      "id": "fruits",
+      "name": "Fruits",
+      "description": "Natural sources of quick energy, antioxidants, and essential vitamins for performance and recovery",
+      "foods": [
+        {
+          "id": "blueberries",
+          "name": "Blueberries",
+          "category": "fruits",
+          "servingSize": "1 cup (148g)",
+          "calories": 84,
+          "macros": {
+            "protein": 1.1,
+            "carbs": 21,
+            "fat": 0.5,
+            "fiber": 3.6
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "14.4mg", "dailyValue": 16 },
+            { "name": "Vitamin K", "amount": "28.6mcg", "dailyValue": 24 },
+            { "name": "Manganese", "amount": "0.5mg", "dailyValue": 22 },
+            { "name": "Anthocyanins", "amount": "~164mg", "dailyValue": null },
+            { "name": "Pterostilbene", "amount": "~0.03mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Anthocyanins shown to accelerate muscle recovery and reduce DOMS",
+            "Improve brain function and cognitive performance during fatigue",
+            "Reduce exercise-induced oxidative stress and inflammation",
+            "May improve insulin sensitivity and glycogen replenishment"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 97,
+          "notes": "Research shows 200-300g daily during heavy training reduces muscle damage markers. Frozen retain most nutrients."
+        },
+        {
+          "id": "tart-cherries",
+          "name": "Tart Cherries (Montmorency)",
+          "category": "fruits",
+          "servingSize": "1 cup (138g)",
+          "calories": 77,
+          "macros": {
+            "protein": 1.6,
+            "carbs": 19,
+            "fat": 0.5,
+            "fiber": 2.5
+          },
+          "keyNutrients": [
+            { "name": "Anthocyanins", "amount": "~62mg", "dailyValue": null },
+            { "name": "Vitamin A", "amount": "1989 IU", "dailyValue": 40 },
+            { "name": "Vitamin C", "amount": "10mg", "dailyValue": 11 },
+            { "name": "Potassium", "amount": "268mg", "dailyValue": 6 },
+            { "name": "Melatonin", "amount": "~13ng/g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Strong research showing reduced muscle soreness and faster recovery",
+            "Natural melatonin content supports quality sleep for recovery",
+            "Reduces inflammation markers (CRP, IL-6) after intense exercise",
+            "May reduce muscle strength loss following eccentric exercise"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 96,
+          "notes": "Tart cherry juice (8-12oz) before and after marathons significantly reduces recovery time. Natural sleep aid."
+        },
+        {
+          "id": "bananas",
+          "name": "Banana",
+          "category": "fruits",
+          "servingSize": "1 medium (118g)",
+          "calories": 105,
+          "macros": {
+            "protein": 1.3,
+            "carbs": 27,
+            "fat": 0.4,
+            "fiber": 3.1
+          },
+          "keyNutrients": [
+            { "name": "Potassium", "amount": "422mg", "dailyValue": 9 },
+            { "name": "Vitamin B6", "amount": "0.43mg", "dailyValue": 25 },
+            { "name": "Vitamin C", "amount": "10.3mg", "dailyValue": 11 },
+            { "name": "Magnesium", "amount": "32mg", "dailyValue": 8 },
+            { "name": "Manganese", "amount": "0.3mg", "dailyValue": 13 }
+          ],
+          "benefits": [
+            "Ideal quick energy source with easily digestible carbohydrates",
+            "Potassium helps prevent muscle cramps during endurance exercise",
+            "Natural packaging makes it perfect portable fuel for long runs",
+            "B6 supports energy metabolism and hemoglobin synthesis"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": false,
+          "healthScore": 92,
+          "notes": "Ripe bananas (with spots) digest faster for quick energy. Less ripe have more resistant starch for sustained energy."
+        },
+        {
+          "id": "oranges",
+          "name": "Orange",
+          "category": "fruits",
+          "servingSize": "1 large (184g)",
+          "calories": 86,
+          "macros": {
+            "protein": 1.7,
+            "carbs": 22,
+            "fat": 0.2,
+            "fiber": 4.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "98mg", "dailyValue": 109 },
+            { "name": "Folate", "amount": "55mcg", "dailyValue": 14 },
+            { "name": "Potassium", "amount": "333mg", "dailyValue": 7 },
+            { "name": "Thiamin (B1)", "amount": "0.16mg", "dailyValue": 13 },
+            { "name": "Hesperidin", "amount": "~28mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "High vitamin C supports immune function stressed by marathon training",
+            "Enhances iron absorption when eaten with iron-rich foods",
+            "Hesperidin flavonoid supports blood vessel health and circulation",
+            "Natural sugars provide quick energy with hydrating water content"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 90,
+          "notes": "Classic post-race recovery fruit. Pair with iron-rich foods to enhance absorption. Orange slices at mile 20 are a marathon tradition."
+        },
+        {
+          "id": "strawberries",
+          "name": "Strawberries",
+          "category": "fruits",
+          "servingSize": "1 cup halves (152g)",
+          "calories": 49,
+          "macros": {
+            "protein": 1,
+            "carbs": 12,
+            "fat": 0.5,
+            "fiber": 3
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "89mg", "dailyValue": 99 },
+            { "name": "Manganese", "amount": "0.6mg", "dailyValue": 26 },
+            { "name": "Folate", "amount": "36mcg", "dailyValue": 9 },
+            { "name": "Potassium", "amount": "233mg", "dailyValue": 5 },
+            { "name": "Anthocyanins", "amount": "~33mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Exceptional vitamin C boosts immune function and collagen synthesis",
+            "Low glycemic index provides sustained energy without blood sugar spikes",
+            "Ellagic acid supports muscle recovery and reduces inflammation",
+            "High water content aids hydration"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "Best eaten in season for maximum nutrient content. Excellent in recovery smoothies with protein."
+        },
+        {
+          "id": "dates",
+          "name": "Medjool Dates",
+          "category": "fruits",
+          "servingSize": "2 dates (48g)",
+          "calories": 133,
+          "macros": {
+            "protein": 0.9,
+            "carbs": 36,
+            "fat": 0.1,
+            "fiber": 3.2
+          },
+          "keyNutrients": [
+            { "name": "Potassium", "amount": "334mg", "dailyValue": 7 },
+            { "name": "Magnesium", "amount": "26mg", "dailyValue": 6 },
+            { "name": "Copper", "amount": "0.1mg", "dailyValue": 11 },
+            { "name": "Manganese", "amount": "0.13mg", "dailyValue": 6 },
+            { "name": "Vitamin B6", "amount": "0.12mg", "dailyValue": 7 }
+          ],
+          "benefits": [
+            "Natural energy gel alternative with easily digestible sugars",
+            "High potassium prevents cramping during long runs",
+            "Perfect for mid-run fueling with portable natural packaging",
+            "Antioxidants reduce oxidative stress from endurance exercise"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 85,
+          "notes": "Excellent natural alternative to energy gels. Stuff with almond butter for sustained energy during long runs."
+        },
+        {
+          "id": "pomegranate",
+          "name": "Pomegranate Seeds",
+          "category": "fruits",
+          "servingSize": "1/2 cup arils (87g)",
+          "calories": 72,
+          "macros": {
+            "protein": 1.4,
+            "carbs": 16,
+            "fat": 1,
+            "fiber": 3.5
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "9mg", "dailyValue": 10 },
+            { "name": "Vitamin K", "amount": "14mcg", "dailyValue": 12 },
+            { "name": "Folate", "amount": "33mcg", "dailyValue": 8 },
+            { "name": "Potassium", "amount": "205mg", "dailyValue": 4 },
+            { "name": "Punicalagins", "amount": "~100mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Punicalagins are exceptionally potent antioxidants for recovery",
+            "Nitrates improve exercise efficiency and blood flow",
+            "Reduces muscle soreness and accelerates strength recovery",
+            "Supports cardiovascular health for endurance performance"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 91,
+          "notes": "Pomegranate juice (8oz) pre-exercise shown to improve running time trial performance. Excellent for recovery smoothies."
+        },
+        {
+          "id": "watermelon",
+          "name": "Watermelon",
+          "category": "fruits",
+          "servingSize": "2 cups diced (304g)",
+          "calories": 92,
+          "macros": {
+            "protein": 1.9,
+            "carbs": 23,
+            "fat": 0.5,
+            "fiber": 1.2
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "24.7mg", "dailyValue": 27 },
+            { "name": "Vitamin A", "amount": "1730 IU", "dailyValue": 35 },
+            { "name": "Potassium", "amount": "341mg", "dailyValue": 7 },
+            { "name": "Citrulline", "amount": "~500mg", "dailyValue": null },
+            { "name": "Lycopene", "amount": "~14mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "L-citrulline reduces muscle soreness and improves recovery",
+            "High water content (92%) excellent for hydration",
+            "Lycopene provides powerful antioxidant protection",
+            "Natural sugars replenish glycogen stores post-exercise"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 86,
+          "notes": "Watermelon juice post-exercise reduces muscle soreness. Cold watermelon is refreshing recovery food after hot runs."
+        },
+        {
+          "id": "apples",
+          "name": "Apple",
+          "category": "fruits",
+          "servingSize": "1 medium (182g)",
+          "calories": 95,
+          "macros": {
+            "protein": 0.5,
+            "carbs": 25,
+            "fat": 0.3,
+            "fiber": 4.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "8.4mg", "dailyValue": 9 },
+            { "name": "Potassium", "amount": "195mg", "dailyValue": 4 },
+            { "name": "Quercetin", "amount": "~10mg", "dailyValue": null },
+            { "name": "Fiber", "amount": "4.4g", "dailyValue": 16 },
+            { "name": "Polyphenols", "amount": "~200mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Quercetin may improve endurance and reduce fatigue during exercise",
+            "Pectin fiber supports gut health and steady energy release",
+            "Portable natural fuel with balanced carbohydrates",
+            "Polyphenols support cardiovascular health"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 84,
+          "notes": "Eat with skin for maximum quercetin. Pair with nut butter for sustained energy. Good pre-run option 1-2 hours before."
+        },
+        {
+          "id": "kiwi",
+          "name": "Kiwi",
+          "category": "fruits",
+          "servingSize": "2 medium (148g)",
+          "calories": 90,
+          "macros": {
+            "protein": 1.7,
+            "carbs": 22,
+            "fat": 0.8,
+            "fiber": 4.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin C", "amount": "137mg", "dailyValue": 152 },
+            { "name": "Vitamin K", "amount": "60mcg", "dailyValue": 50 },
+            { "name": "Potassium", "amount": "461mg", "dailyValue": 10 },
+            { "name": "Folate", "amount": "37mcg", "dailyValue": 9 },
+            { "name": "Actinidin", "amount": "~40mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Exceptionally high vitamin C content exceeds oranges by 2x",
+            "Actinidin enzyme aids protein digestion for better recovery",
+            "Shown to improve sleep quality essential for recovery",
+            "High potassium content prevents muscle cramps"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 88,
+          "notes": "Eat 2 kiwis before bed to improve sleep quality (research-supported). Can eat skin for extra fiber and nutrients."
+        }
+      ]
+    },
+    {
+      "id": "legumes",
+      "name": "Legumes",
+      "description": "Excellent plant-based protein and complex carbohydrate sources for sustained energy and recovery",
+      "foods": [
+        {
+          "id": "lentils",
+          "name": "Lentils (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (198g)",
+          "calories": 230,
+          "macros": {
+            "protein": 18,
+            "carbs": 40,
+            "fat": 0.8,
+            "fiber": 15.6
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "358mcg", "dailyValue": 90 },
+            { "name": "Iron", "amount": "6.6mg", "dailyValue": 37 },
+            { "name": "Phosphorus", "amount": "356mg", "dailyValue": 28 },
+            { "name": "Potassium", "amount": "731mg", "dailyValue": 16 },
+            { "name": "Manganese", "amount": "1mg", "dailyValue": 43 }
+          ],
+          "benefits": [
+            "Exceptional iron content crucial for female endurance athletes",
+            "High protein supports muscle repair and synthesis",
+            "Complex carbs provide sustained energy for long training sessions",
+            "Folate supports red blood cell production for oxygen transport"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 96,
+          "notes": "Red lentils cook fastest (15 min) and are easier to digest. Pair with vitamin C foods to enhance iron absorption."
+        },
+        {
+          "id": "chickpeas",
+          "name": "Chickpeas (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (164g)",
+          "calories": 269,
+          "macros": {
+            "protein": 14.5,
+            "carbs": 45,
+            "fat": 4.3,
+            "fiber": 12.5
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "282mcg", "dailyValue": 71 },
+            { "name": "Iron", "amount": "4.7mg", "dailyValue": 26 },
+            { "name": "Phosphorus", "amount": "276mg", "dailyValue": 22 },
+            { "name": "Manganese", "amount": "1.7mg", "dailyValue": 74 },
+            { "name": "Copper", "amount": "0.6mg", "dailyValue": 67 }
+          ],
+          "benefits": [
+            "Complete amino acid profile when combined with grains",
+            "High fiber promotes satiety and stable blood sugar",
+            "Excellent source of plant-based iron for female athletes",
+            "Versatile - works in hummus, salads, curries, and snacks"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 93,
+          "notes": "Roasted chickpeas make excellent crunchy snacks. Hummus is a perfect recovery food with whole grain bread."
+        },
+        {
+          "id": "black-beans",
+          "name": "Black Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (172g)",
+          "calories": 227,
+          "macros": {
+            "protein": 15.2,
+            "carbs": 41,
+            "fat": 0.9,
+            "fiber": 15
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "256mcg", "dailyValue": 64 },
+            { "name": "Iron", "amount": "3.6mg", "dailyValue": 20 },
+            { "name": "Magnesium", "amount": "120mg", "dailyValue": 29 },
+            { "name": "Thiamin (B1)", "amount": "0.4mg", "dailyValue": 33 },
+            { "name": "Anthocyanins", "amount": "~40mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Anthocyanins in skin provide powerful antioxidant protection",
+            "High magnesium prevents muscle cramps during long runs",
+            "Resistant starch supports gut health and stable energy",
+            "Excellent protein-carb ratio for recovery meals"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 92,
+          "notes": "Don't drain the liquid - it contains water-soluble nutrients. Perfect in burritos, bowls, and soups."
+        },
+        {
+          "id": "edamame",
+          "name": "Edamame (Shelled)",
+          "category": "legumes",
+          "servingSize": "1 cup (155g)",
+          "calories": 188,
+          "macros": {
+            "protein": 18.5,
+            "carbs": 14,
+            "fat": 8,
+            "fiber": 8
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "482mcg", "dailyValue": 121 },
+            { "name": "Vitamin K", "amount": "41mcg", "dailyValue": 34 },
+            { "name": "Iron", "amount": "3.5mg", "dailyValue": 19 },
+            { "name": "Manganese", "amount": "1.6mg", "dailyValue": 70 },
+            { "name": "Phosphorus", "amount": "262mg", "dailyValue": 21 }
+          ],
+          "benefits": [
+            "Complete protein with all essential amino acids",
+            "Highest protein content among legumes per serving",
+            "Isoflavones may support bone health in female athletes",
+            "Quick to prepare - perfect for busy training schedules"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 94,
+          "notes": "Keep frozen edamame on hand for quick protein. Steam and sprinkle with sea salt for a perfect recovery snack."
+        },
+        {
+          "id": "kidney-beans",
+          "name": "Kidney Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (177g)",
+          "calories": 225,
+          "macros": {
+            "protein": 15.3,
+            "carbs": 40,
+            "fat": 0.9,
+            "fiber": 13.1
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "230mcg", "dailyValue": 58 },
+            { "name": "Iron", "amount": "3.9mg", "dailyValue": 22 },
+            { "name": "Phosphorus", "amount": "244mg", "dailyValue": 20 },
+            { "name": "Potassium", "amount": "713mg", "dailyValue": 15 },
+            { "name": "Thiamin (B1)", "amount": "0.3mg", "dailyValue": 25 }
+          ],
+          "benefits": [
+            "High potassium content supports electrolyte balance",
+            "Excellent source of plant-based iron for endurance",
+            "Resistant starch feeds beneficial gut bacteria",
+            "Steady energy release from complex carbohydrates"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 88,
+          "notes": "Must be thoroughly cooked - never eat raw or undercooked. Great in chili, salads, and grain bowls."
+        },
+        {
+          "id": "navy-beans",
+          "name": "Navy Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (182g)",
+          "calories": 255,
+          "macros": {
+            "protein": 15,
+            "carbs": 47,
+            "fat": 1.1,
+            "fiber": 19
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "255mcg", "dailyValue": 64 },
+            { "name": "Iron", "amount": "4.3mg", "dailyValue": 24 },
+            { "name": "Magnesium", "amount": "96mg", "dailyValue": 23 },
+            { "name": "Potassium", "amount": "708mg", "dailyValue": 15 },
+            { "name": "Thiamin (B1)", "amount": "0.4mg", "dailyValue": 33 }
+          ],
+          "benefits": [
+            "Highest fiber content among common beans for gut health",
+            "Excellent source of resistant starch for sustained energy",
+            "High iron and folate support red blood cell production",
+            "Potassium helps prevent muscle cramping"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 87,
+          "notes": "Traditional baked bean variety. High fiber means eat well before running to avoid GI issues."
+        },
+        {
+          "id": "pinto-beans",
+          "name": "Pinto Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (171g)",
+          "calories": 245,
+          "macros": {
+            "protein": 15.4,
+            "carbs": 45,
+            "fat": 1.1,
+            "fiber": 15.4
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "294mcg", "dailyValue": 74 },
+            { "name": "Iron", "amount": "3.6mg", "dailyValue": 20 },
+            { "name": "Phosphorus", "amount": "251mg", "dailyValue": 20 },
+            { "name": "Potassium", "amount": "746mg", "dailyValue": 16 },
+            { "name": "Selenium", "amount": "19mcg", "dailyValue": 35 }
+          ],
+          "benefits": [
+            "Selenium supports thyroid function and antioxidant defense",
+            "High folate crucial for female athletes of childbearing age",
+            "Excellent protein-to-carb ratio for muscle recovery",
+            "Promotes healthy gut bacteria diversity"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 86,
+          "notes": "Staple in Mexican cuisine. Make refried beans with minimal oil for healthy burritos."
+        },
+        {
+          "id": "split-peas",
+          "name": "Split Peas (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (196g)",
+          "calories": 231,
+          "macros": {
+            "protein": 16.3,
+            "carbs": 41,
+            "fat": 0.8,
+            "fiber": 16.3
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "127mcg", "dailyValue": 32 },
+            { "name": "Iron", "amount": "2.5mg", "dailyValue": 14 },
+            { "name": "Phosphorus", "amount": "194mg", "dailyValue": 16 },
+            { "name": "Potassium", "amount": "709mg", "dailyValue": 15 },
+            { "name": "Thiamin (B1)", "amount": "0.4mg", "dailyValue": 33 }
+          ],
+          "benefits": [
+            "Isoflavones support bone health in female athletes",
+            "High fiber promotes satiety and weight management",
+            "B vitamins support energy metabolism during training",
+            "Easily digestible compared to whole legumes"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 85,
+          "notes": "No soaking required - cook in 25-30 minutes. Perfect for hearty recovery soups."
+        },
+        {
+          "id": "white-beans",
+          "name": "Cannellini Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (179g)",
+          "calories": 249,
+          "macros": {
+            "protein": 17.4,
+            "carbs": 45,
+            "fat": 0.6,
+            "fiber": 12.4
+          },
+          "keyNutrients": [
+            { "name": "Iron", "amount": "5.2mg", "dailyValue": 29 },
+            { "name": "Folate", "amount": "145mcg", "dailyValue": 36 },
+            { "name": "Phosphorus", "amount": "202mg", "dailyValue": 16 },
+            { "name": "Potassium", "amount": "829mg", "dailyValue": 18 },
+            { "name": "Magnesium", "amount": "89mg", "dailyValue": 21 }
+          ],
+          "benefits": [
+            "Highest iron content among white beans for endurance",
+            "Exceptional potassium prevents cramping during marathons",
+            "Creamy texture makes them versatile for many dishes",
+            "Good source of plant-based protein for muscle recovery"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "Blend into dips or soups for creamy texture without added fat. Great in Italian dishes like minestrone."
+        },
+        {
+          "id": "mung-beans",
+          "name": "Mung Beans (Cooked)",
+          "category": "legumes",
+          "servingSize": "1 cup (202g)",
+          "calories": 212,
+          "macros": {
+            "protein": 14.2,
+            "carbs": 39,
+            "fat": 0.8,
+            "fiber": 15.4
+          },
+          "keyNutrients": [
+            { "name": "Folate", "amount": "321mcg", "dailyValue": 80 },
+            { "name": "Magnesium", "amount": "97mg", "dailyValue": 23 },
+            { "name": "Potassium", "amount": "537mg", "dailyValue": 11 },
+            { "name": "Phosphorus", "amount": "200mg", "dailyValue": 16 },
+            { "name": "Thiamin (B1)", "amount": "0.3mg", "dailyValue": 25 }
+          ],
+          "benefits": [
+            "Easiest legume to digest - gentle on the stomach",
+            "Excellent folate content for red blood cell production",
+            "Sprouted form even more nutritious and digestible",
+            "High magnesium prevents muscle cramps"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 84,
+          "notes": "Sprout at home for maximum nutrition. Popular in Asian cuisine - excellent in dal or sprouted in salads."
+        }
+      ]
+    },
+    {
+      "id": "whole-grains",
+      "name": "Whole Grains",
+      "description": "Complex carbohydrates providing sustained energy, fiber, and essential minerals for endurance performance",
+      "foods": [
+        {
+          "id": "oats",
+          "name": "Steel-Cut Oats",
+          "category": "whole-grains",
+          "servingSize": "1/4 cup dry (40g)",
+          "calories": 150,
+          "macros": {
+            "protein": 5,
+            "carbs": 27,
+            "fat": 2.5,
+            "fiber": 4
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "1.9mg", "dailyValue": 83 },
+            { "name": "Phosphorus", "amount": "165mg", "dailyValue": 13 },
+            { "name": "Magnesium", "amount": "55mg", "dailyValue": 13 },
+            { "name": "Iron", "amount": "1.7mg", "dailyValue": 9 },
+            { "name": "Beta-Glucan", "amount": "2g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Beta-glucan fiber provides sustained energy release for long runs",
+            "Low glycemic index prevents blood sugar crashes during training",
+            "Ideal pre-race breakfast - easily digestible and filling",
+            "Supports healthy cholesterol and cardiovascular health"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 95,
+          "notes": "Classic marathon morning breakfast. Eat 2-3 hours before running. Add banana and honey for quick energy."
+        },
+        {
+          "id": "quinoa",
+          "name": "Quinoa (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (185g)",
+          "calories": 222,
+          "macros": {
+            "protein": 8.1,
+            "carbs": 39,
+            "fat": 3.5,
+            "fiber": 5.2
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "1.2mg", "dailyValue": 52 },
+            { "name": "Phosphorus", "amount": "281mg", "dailyValue": 22 },
+            { "name": "Folate", "amount": "78mcg", "dailyValue": 20 },
+            { "name": "Magnesium", "amount": "118mg", "dailyValue": 28 },
+            { "name": "Iron", "amount": "2.8mg", "dailyValue": 16 }
+          ],
+          "benefits": [
+            "Complete protein with all 9 essential amino acids for recovery",
+            "High magnesium content prevents muscle cramps",
+            "Gluten-free option for sensitive athletes",
+            "Cooks quickly (15 min) for convenient meal prep"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 94,
+          "notes": "Rinse before cooking to remove bitter saponins. Tri-color quinoa adds visual variety with same nutrition."
+        },
+        {
+          "id": "brown-rice",
+          "name": "Brown Rice (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (195g)",
+          "calories": 216,
+          "macros": {
+            "protein": 5,
+            "carbs": 45,
+            "fat": 1.8,
+            "fiber": 3.5
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "1.8mg", "dailyValue": 78 },
+            { "name": "Selenium", "amount": "19mcg", "dailyValue": 35 },
+            { "name": "Magnesium", "amount": "84mg", "dailyValue": 20 },
+            { "name": "Phosphorus", "amount": "162mg", "dailyValue": 13 },
+            { "name": "Niacin (B3)", "amount": "2.6mg", "dailyValue": 16 }
+          ],
+          "benefits": [
+            "Excellent carbohydrate source for glycogen replenishment",
+            "Selenium supports thyroid function and antioxidant defense",
+            "Gentle on stomach - well-tolerated by most runners",
+            "Provides sustained energy without blood sugar spikes"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": false,
+          "healthScore": 88,
+          "notes": "Cook in batch and refrigerate - reheated rice has more resistant starch. Pairs well with any protein."
+        },
+        {
+          "id": "farro",
+          "name": "Farro (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (170g)",
+          "calories": 220,
+          "macros": {
+            "protein": 8,
+            "carbs": 44,
+            "fat": 1.5,
+            "fiber": 6
+          },
+          "keyNutrients": [
+            { "name": "Magnesium", "amount": "75mg", "dailyValue": 18 },
+            { "name": "Iron", "amount": "2.5mg", "dailyValue": 14 },
+            { "name": "Zinc", "amount": "2mg", "dailyValue": 18 },
+            { "name": "Niacin (B3)", "amount": "3.5mg", "dailyValue": 22 },
+            { "name": "Fiber", "amount": "6g", "dailyValue": 21 }
+          ],
+          "benefits": [
+            "Ancient grain with higher protein than most grains",
+            "Chewy texture satisfying for hearty recovery meals",
+            "Zinc supports immune function stressed by training",
+            "Complex carbs provide extended energy release"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 90,
+          "notes": "Pearled farro cooks faster (20 min). Nutty flavor excellent in grain salads and soups."
+        },
+        {
+          "id": "buckwheat",
+          "name": "Buckwheat Groats (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (168g)",
+          "calories": 155,
+          "macros": {
+            "protein": 5.7,
+            "carbs": 34,
+            "fat": 1,
+            "fiber": 4.5
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "0.7mg", "dailyValue": 30 },
+            { "name": "Magnesium", "amount": "86mg", "dailyValue": 20 },
+            { "name": "Copper", "amount": "0.4mg", "dailyValue": 44 },
+            { "name": "Phosphorus", "amount": "118mg", "dailyValue": 9 },
+            { "name": "Rutin", "amount": "~13mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Gluten-free despite the name (not related to wheat)",
+            "Rutin strengthens blood vessels and improves circulation",
+            "Complete protein profile for a grain",
+            "Lower glycemic index than many grains for steady energy"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "Soba noodles are made from buckwheat. Toast groats before cooking for nuttier flavor."
+        },
+        {
+          "id": "barley",
+          "name": "Hulled Barley (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (157g)",
+          "calories": 193,
+          "macros": {
+            "protein": 3.5,
+            "carbs": 44,
+            "fat": 0.7,
+            "fiber": 6
+          },
+          "keyNutrients": [
+            { "name": "Selenium", "amount": "13.5mcg", "dailyValue": 25 },
+            { "name": "Manganese", "amount": "0.6mg", "dailyValue": 26 },
+            { "name": "Phosphorus", "amount": "85mg", "dailyValue": 7 },
+            { "name": "Copper", "amount": "0.2mg", "dailyValue": 22 },
+            { "name": "Beta-Glucan", "amount": "2.5g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Highest beta-glucan content of all grains for heart health",
+            "Exceptional soluble fiber supports steady blood sugar",
+            "Selenium supports thyroid and immune function",
+            "Very filling for weight management during training"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 87,
+          "notes": "Hulled barley retains more nutrients than pearled. Excellent in soups and grain bowls."
+        },
+        {
+          "id": "wild-rice",
+          "name": "Wild Rice (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (164g)",
+          "calories": 166,
+          "macros": {
+            "protein": 6.5,
+            "carbs": 35,
+            "fat": 0.6,
+            "fiber": 3
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "0.5mg", "dailyValue": 22 },
+            { "name": "Zinc", "amount": "2.2mg", "dailyValue": 20 },
+            { "name": "Phosphorus", "amount": "134mg", "dailyValue": 11 },
+            { "name": "Folate", "amount": "43mcg", "dailyValue": 11 },
+            { "name": "Niacin (B3)", "amount": "2.1mg", "dailyValue": 13 }
+          ],
+          "benefits": [
+            "Higher protein content than other rice varieties",
+            "Zinc supports immune function and wound healing",
+            "Lower calorie than brown rice with more protein",
+            "Antioxidant content higher than white rice"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 86,
+          "notes": "Actually an aquatic grass, not true rice. Mix with brown rice for variety. Takes 45-60 min to cook."
+        },
+        {
+          "id": "millet",
+          "name": "Millet (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (174g)",
+          "calories": 207,
+          "macros": {
+            "protein": 6.1,
+            "carbs": 41,
+            "fat": 1.7,
+            "fiber": 2.3
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "0.3mg", "dailyValue": 13 },
+            { "name": "Phosphorus", "amount": "174mg", "dailyValue": 14 },
+            { "name": "Magnesium", "amount": "77mg", "dailyValue": 18 },
+            { "name": "Thiamin (B1)", "amount": "0.2mg", "dailyValue": 17 },
+            { "name": "Niacin (B3)", "amount": "2.3mg", "dailyValue": 14 }
+          ],
+          "benefits": [
+            "Alkaline grain that's gentle on the digestive system",
+            "Gluten-free option with good mineral content",
+            "Quick cooking time (20 min) for busy training days",
+            "Magnesium supports muscle function and recovery"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": false,
+          "healthScore": 82,
+          "notes": "Toast before cooking for nuttier flavor. Can be cooked fluffy like rice or creamy like polenta."
+        },
+        {
+          "id": "amaranth",
+          "name": "Amaranth (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (246g)",
+          "calories": 251,
+          "macros": {
+            "protein": 9.3,
+            "carbs": 46,
+            "fat": 3.9,
+            "fiber": 5.2
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "2.1mg", "dailyValue": 91 },
+            { "name": "Magnesium", "amount": "160mg", "dailyValue": 38 },
+            { "name": "Phosphorus", "amount": "364mg", "dailyValue": 29 },
+            { "name": "Iron", "amount": "5.2mg", "dailyValue": 29 },
+            { "name": "Calcium", "amount": "116mg", "dailyValue": 9 }
+          ],
+          "benefits": [
+            "Exceptional magnesium content prevents muscle cramps",
+            "High iron content crucial for female endurance athletes",
+            "Complete protein with lysine often lacking in grains",
+            "Gluten-free with excellent mineral density"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 91,
+          "notes": "Cooks to porridge-like consistency. Ancient Aztec superfood. Pop like popcorn for crunchy topping."
+        },
+        {
+          "id": "teff",
+          "name": "Teff (Cooked)",
+          "category": "whole-grains",
+          "servingSize": "1 cup (252g)",
+          "calories": 255,
+          "macros": {
+            "protein": 9.8,
+            "carbs": 50,
+            "fat": 1.6,
+            "fiber": 7.1
+          },
+          "keyNutrients": [
+            { "name": "Iron", "amount": "7.6mg", "dailyValue": 42 },
+            { "name": "Calcium", "amount": "123mg", "dailyValue": 9 },
+            { "name": "Magnesium", "amount": "126mg", "dailyValue": 30 },
+            { "name": "Manganese", "amount": "6.5mg", "dailyValue": 283 },
+            { "name": "Phosphorus", "amount": "302mg", "dailyValue": 24 }
+          ],
+          "benefits": [
+            "Exceptional iron content - highest among grains for female athletes",
+            "Ethiopian runners' traditional grain linked to their endurance success",
+            "High resistant starch content for gut health",
+            "Complete amino acid profile for muscle recovery"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 93,
+          "notes": "Staple of Ethiopian marathon champions. Used to make injera bread. Smallest grain - cooks in 20 min."
+        }
+      ]
+    },
+    {
+      "id": "lean-proteins",
+      "name": "Lean Proteins",
+      "description": "High-quality protein sources essential for muscle repair, recovery, and maintaining lean body mass during training",
+      "foods": [
+        {
+          "id": "salmon",
+          "name": "Wild Salmon",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 207,
+          "macros": {
+            "protein": 23,
+            "carbs": 0,
+            "fat": 12,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Omega-3 (EPA+DHA)", "amount": "1.8g", "dailyValue": null },
+            { "name": "Vitamin D", "amount": "526 IU", "dailyValue": 66 },
+            { "name": "Vitamin B12", "amount": "4.9mcg", "dailyValue": 204 },
+            { "name": "Selenium", "amount": "36mcg", "dailyValue": 65 },
+            { "name": "Niacin (B3)", "amount": "8.9mg", "dailyValue": 56 }
+          ],
+          "benefits": [
+            "EPA and DHA omega-3s reduce exercise-induced inflammation significantly",
+            "Vitamin D supports bone health and immune function crucial for runners",
+            "High-quality complete protein supports muscle repair and growth",
+            "May improve blood flow and oxygen delivery during exercise"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 98,
+          "notes": "Wild-caught contains more omega-3s than farmed. Aim for 2-3 servings per week. Sockeye has highest omega-3 content."
+        },
+        {
+          "id": "chicken-breast",
+          "name": "Chicken Breast",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 165,
+          "macros": {
+            "protein": 31,
+            "carbs": 0,
+            "fat": 3.6,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Niacin (B3)", "amount": "10.3mg", "dailyValue": 64 },
+            { "name": "Vitamin B6", "amount": "0.6mg", "dailyValue": 35 },
+            { "name": "Selenium", "amount": "24mcg", "dailyValue": 44 },
+            { "name": "Phosphorus", "amount": "228mg", "dailyValue": 18 },
+            { "name": "Vitamin B12", "amount": "0.3mcg", "dailyValue": 13 }
+          ],
+          "benefits": [
+            "Highest protein-to-calorie ratio among common proteins",
+            "B vitamins support energy metabolism during training",
+            "Lean protein supports muscle synthesis without excess fat",
+            "Selenium supports thyroid function and antioxidant defense"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": false,
+          "healthScore": 90,
+          "notes": "Versatile and quick to prepare. Pair with vegetables and whole grains for balanced recovery meals."
+        },
+        {
+          "id": "eggs",
+          "name": "Eggs (Whole)",
+          "category": "lean-proteins",
+          "servingSize": "2 large (100g)",
+          "calories": 143,
+          "macros": {
+            "protein": 12.6,
+            "carbs": 0.7,
+            "fat": 9.5,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Vitamin B12", "amount": "0.9mcg", "dailyValue": 38 },
+            { "name": "Selenium", "amount": "31mcg", "dailyValue": 56 },
+            { "name": "Riboflavin (B2)", "amount": "0.5mg", "dailyValue": 38 },
+            { "name": "Choline", "amount": "294mg", "dailyValue": 53 },
+            { "name": "Vitamin D", "amount": "82 IU", "dailyValue": 10 }
+          ],
+          "benefits": [
+            "Complete protein with highest bioavailability of any food",
+            "Choline supports brain function and muscle control",
+            "Leucine content optimizes muscle protein synthesis",
+            "Versatile and quick for busy training schedules"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": false,
+          "healthScore": 93,
+          "notes": "Eat the whole egg - yolk contains most nutrients. Pasture-raised have higher omega-3s. Great post-run breakfast."
+        },
+        {
+          "id": "greek-yogurt",
+          "name": "Greek Yogurt (Plain, 2%)",
+          "category": "lean-proteins",
+          "servingSize": "1 cup (227g)",
+          "calories": 150,
+          "macros": {
+            "protein": 20,
+            "carbs": 8,
+            "fat": 4,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Calcium", "amount": "230mg", "dailyValue": 18 },
+            { "name": "Vitamin B12", "amount": "1.3mcg", "dailyValue": 54 },
+            { "name": "Phosphorus", "amount": "274mg", "dailyValue": 22 },
+            { "name": "Riboflavin (B2)", "amount": "0.3mg", "dailyValue": 23 },
+            { "name": "Probiotics", "amount": "billions CFU", "dailyValue": null }
+          ],
+          "benefits": [
+            "Probiotics support gut health crucial for nutrient absorption",
+            "High calcium supports bone density for high-impact running",
+            "Casein protein provides slow-release amino acids for recovery",
+            "Perfect post-run snack with fruit and granola"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": false,
+          "healthScore": 92,
+          "notes": "Choose plain and add your own fruit to control sugar. Excellent base for overnight oats and smoothies."
+        },
+        {
+          "id": "tofu",
+          "name": "Firm Tofu",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 91,
+          "macros": {
+            "protein": 10,
+            "carbs": 2,
+            "fat": 5,
+            "fiber": 0.5
+          },
+          "keyNutrients": [
+            { "name": "Calcium", "amount": "350mg", "dailyValue": 27 },
+            { "name": "Iron", "amount": "2.5mg", "dailyValue": 14 },
+            { "name": "Manganese", "amount": "0.7mg", "dailyValue": 30 },
+            { "name": "Selenium", "amount": "14mcg", "dailyValue": 25 },
+            { "name": "Isoflavones", "amount": "~25mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Complete plant protein with all essential amino acids",
+            "Calcium-set tofu excellent for bone health in female athletes",
+            "Isoflavones may support bone density and hormonal balance",
+            "Versatile for any cuisine and quick to prepare"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 88,
+          "notes": "Press before cooking to improve texture. Choose calcium-set varieties for highest calcium content."
+        },
+        {
+          "id": "tempeh",
+          "name": "Tempeh",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 222,
+          "macros": {
+            "protein": 21,
+            "carbs": 11,
+            "fat": 11,
+            "fiber": 7
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "1.3mg", "dailyValue": 57 },
+            { "name": "Phosphorus", "amount": "266mg", "dailyValue": 21 },
+            { "name": "Magnesium", "amount": "81mg", "dailyValue": 19 },
+            { "name": "Riboflavin (B2)", "amount": "0.4mg", "dailyValue": 31 },
+            { "name": "Niacin (B3)", "amount": "4.4mg", "dailyValue": 28 }
+          ],
+          "benefits": [
+            "Fermented soy is more digestible with enhanced nutrients",
+            "Probiotics from fermentation support gut health",
+            "Higher protein than tofu with more fiber",
+            "Complete protein ideal for plant-based athletes"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 89,
+          "notes": "Steam or simmer before cooking to reduce bitterness. Excellent grilled or crumbled into dishes."
+        },
+        {
+          "id": "sardines",
+          "name": "Sardines (Canned in Olive Oil)",
+          "category": "lean-proteins",
+          "servingSize": "1 can (92g)",
+          "calories": 191,
+          "macros": {
+            "protein": 22.6,
+            "carbs": 0,
+            "fat": 10.5,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Omega-3 (EPA+DHA)", "amount": "1.4g", "dailyValue": null },
+            { "name": "Vitamin B12", "amount": "8.2mcg", "dailyValue": 342 },
+            { "name": "Vitamin D", "amount": "178 IU", "dailyValue": 22 },
+            { "name": "Calcium", "amount": "351mg", "dailyValue": 27 },
+            { "name": "Selenium", "amount": "49mcg", "dailyValue": 89 }
+          ],
+          "benefits": [
+            "Exceptional omega-3 content for anti-inflammatory benefits",
+            "Bones provide significant calcium for bone health",
+            "Sustainable, low-mercury fish safe for regular consumption",
+            "Convenient protein source requiring no cooking"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": true,
+          "healthScore": 95,
+          "notes": "Eat the bones for calcium. Choose wild-caught in olive oil. Excellent on whole grain crackers or salads."
+        },
+        {
+          "id": "turkey-breast",
+          "name": "Turkey Breast",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 153,
+          "macros": {
+            "protein": 30,
+            "carbs": 0,
+            "fat": 3,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Selenium", "amount": "31mcg", "dailyValue": 56 },
+            { "name": "Niacin (B3)", "amount": "6.4mg", "dailyValue": 40 },
+            { "name": "Vitamin B6", "amount": "0.5mg", "dailyValue": 29 },
+            { "name": "Phosphorus", "amount": "196mg", "dailyValue": 16 },
+            { "name": "Zinc", "amount": "1.5mg", "dailyValue": 14 }
+          ],
+          "benefits": [
+            "Highest protein with lowest fat among poultry options",
+            "Tryptophan supports quality sleep for recovery",
+            "Selenium supports immune function during heavy training",
+            "Lean protein ideal for weight-conscious athletes"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": false,
+          "healthScore": 87,
+          "notes": "Fresh turkey breast preferred over processed deli meat. Great for meal prep with vegetables."
+        },
+        {
+          "id": "cottage-cheese",
+          "name": "Cottage Cheese (2%)",
+          "category": "lean-proteins",
+          "servingSize": "1 cup (226g)",
+          "calories": 183,
+          "macros": {
+            "protein": 24,
+            "carbs": 9.5,
+            "fat": 5,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Vitamin B12", "amount": "1.4mcg", "dailyValue": 58 },
+            { "name": "Selenium", "amount": "20mcg", "dailyValue": 36 },
+            { "name": "Phosphorus", "amount": "303mg", "dailyValue": 24 },
+            { "name": "Riboflavin (B2)", "amount": "0.4mg", "dailyValue": 31 },
+            { "name": "Sodium", "amount": "706mg", "dailyValue": 31 }
+          ],
+          "benefits": [
+            "Casein protein provides slow-release amino acids overnight",
+            "Ideal before bed for overnight muscle recovery",
+            "High protein with moderate calories for lean body composition",
+            "Pairs well with fruit for satisfying recovery snack"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": false,
+          "healthScore": 85,
+          "notes": "Perfect nighttime protein for overnight recovery. Choose lower sodium versions when available."
+        },
+        {
+          "id": "shrimp",
+          "name": "Shrimp",
+          "category": "lean-proteins",
+          "servingSize": "4 oz (113g)",
+          "calories": 120,
+          "macros": {
+            "protein": 23,
+            "carbs": 1,
+            "fat": 2,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Selenium", "amount": "42mcg", "dailyValue": 76 },
+            { "name": "Vitamin B12", "amount": "1.4mcg", "dailyValue": 58 },
+            { "name": "Phosphorus", "amount": "201mg", "dailyValue": 16 },
+            { "name": "Iodine", "amount": "35mcg", "dailyValue": 23 },
+            { "name": "Astaxanthin", "amount": "~2mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Astaxanthin is powerful antioxidant for recovery",
+            "Exceptionally lean with high protein density",
+            "Iodine supports thyroid function and metabolism",
+            "Quick to cook - ready in minutes for fast meals"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": true,
+          "healthScore": 86,
+          "notes": "Choose wild-caught when possible. Astaxanthin gives shrimp their pink color and provides antioxidant benefits."
+        }
+      ]
+    },
+    {
+      "id": "treats",
+      "name": "Treats",
+      "description": "Healthy indulgences that provide pleasure while offering nutritional benefits for athletes",
+      "foods": [
+        {
+          "id": "dark-chocolate",
+          "name": "Dark Chocolate (70-85%)",
+          "category": "treats",
+          "servingSize": "1 oz (28g)",
+          "calories": 170,
+          "macros": {
+            "protein": 2.2,
+            "carbs": 13,
+            "fat": 12,
+            "fiber": 3.1
+          },
+          "keyNutrients": [
+            { "name": "Iron", "amount": "3.4mg", "dailyValue": 19 },
+            { "name": "Magnesium", "amount": "64mg", "dailyValue": 15 },
+            { "name": "Copper", "amount": "0.5mg", "dailyValue": 56 },
+            { "name": "Manganese", "amount": "0.5mg", "dailyValue": 22 },
+            { "name": "Flavanols", "amount": "~200mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Flavanols improve blood flow and may enhance exercise performance",
+            "Epicatechin may improve muscle efficiency and mitochondrial function",
+            "Magnesium supports muscle function and prevents cramps",
+            "Mood-boosting compounds support mental wellbeing during hard training"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 82,
+          "notes": "Choose 70%+ cacao for maximum flavanol content. 1-2 oz daily is the sweet spot for benefits."
+        },
+        {
+          "id": "raw-honey",
+          "name": "Raw Honey",
+          "category": "treats",
+          "servingSize": "1 tbsp (21g)",
+          "calories": 64,
+          "macros": {
+            "protein": 0.1,
+            "carbs": 17,
+            "fat": 0,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Antioxidants", "amount": "various", "dailyValue": null },
+            { "name": "Enzymes", "amount": "various", "dailyValue": null },
+            { "name": "Bee Pollen", "amount": "trace", "dailyValue": null },
+            { "name": "Propolis", "amount": "trace", "dailyValue": null },
+            { "name": "Natural Sugars", "amount": "17g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Quick energy source with natural sugars for endurance",
+            "Antimicrobial properties may support immune health",
+            "Can soothe throat irritation from cold-weather running",
+            "Natural alternative to processed sugars in energy foods"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 72,
+          "notes": "Use as natural energy gel during long runs. Mix with water for homemade sports drink. Raw honey retains beneficial enzymes."
+        },
+        {
+          "id": "maple-syrup",
+          "name": "Pure Maple Syrup",
+          "category": "treats",
+          "servingSize": "2 tbsp (40g)",
+          "calories": 104,
+          "macros": {
+            "protein": 0,
+            "carbs": 27,
+            "fat": 0,
+            "fiber": 0
+          },
+          "keyNutrients": [
+            { "name": "Manganese", "amount": "1.4mg", "dailyValue": 61 },
+            { "name": "Riboflavin (B2)", "amount": "0.5mg", "dailyValue": 38 },
+            { "name": "Zinc", "amount": "0.8mg", "dailyValue": 7 },
+            { "name": "Calcium", "amount": "41mg", "dailyValue": 3 },
+            { "name": "Polyphenols", "amount": "~54 types", "dailyValue": null }
+          ],
+          "benefits": [
+            "Contains 54 unique polyphenol compounds with antioxidant activity",
+            "Lower glycemic index than refined sugar for steadier energy",
+            "Quebecol compound unique to maple has anti-inflammatory properties",
+            "Natural source of quick energy for training"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 68,
+          "notes": "Grade B (now called Grade A Dark) has more minerals and antioxidants. Use in oatmeal or homemade energy bars."
+        },
+        {
+          "id": "coconut-butter",
+          "name": "Coconut Butter",
+          "category": "treats",
+          "servingSize": "2 tbsp (32g)",
+          "calories": 210,
+          "macros": {
+            "protein": 2,
+            "carbs": 8,
+            "fat": 20,
+            "fiber": 5
+          },
+          "keyNutrients": [
+            { "name": "MCTs", "amount": "~10g", "dailyValue": null },
+            { "name": "Lauric Acid", "amount": "~8g", "dailyValue": null },
+            { "name": "Iron", "amount": "1.6mg", "dailyValue": 9 },
+            { "name": "Fiber", "amount": "5g", "dailyValue": 18 },
+            { "name": "Manganese", "amount": "0.7mg", "dailyValue": 30 }
+          ],
+          "benefits": [
+            "MCTs provide quick energy without carbohydrate dependence",
+            "Lauric acid supports immune function",
+            "Satisfying fat content helps with satiety",
+            "Fiber from coconut meat supports gut health"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": false,
+          "healthScore": 70,
+          "notes": "Different from coconut oil - includes the coconut meat. Excellent in smoothies or spread on toast."
+        },
+        {
+          "id": "cacao-nibs",
+          "name": "Cacao Nibs",
+          "category": "treats",
+          "servingSize": "2 tbsp (28g)",
+          "calories": 140,
+          "macros": {
+            "protein": 4,
+            "carbs": 10,
+            "fat": 12,
+            "fiber": 5
+          },
+          "keyNutrients": [
+            { "name": "Magnesium", "amount": "80mg", "dailyValue": 19 },
+            { "name": "Iron", "amount": "2.8mg", "dailyValue": 16 },
+            { "name": "Copper", "amount": "0.5mg", "dailyValue": 56 },
+            { "name": "Theobromine", "amount": "~400mg", "dailyValue": null },
+            { "name": "Flavanols", "amount": "~400mg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Pure form of chocolate with maximum flavanol content",
+            "No added sugars - bitter chocolate flavor",
+            "Theobromine provides mild energy boost without jitters",
+            "Exceptional magnesium for muscle function"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 85,
+          "notes": "Add to trail mix, smoothies, or yogurt. Bitter flavor - pairs well with fruit for balance."
+        },
+        {
+          "id": "dried-mango",
+          "name": "Dried Mango (Unsweetened)",
+          "category": "treats",
+          "servingSize": "1/4 cup (40g)",
+          "calories": 128,
+          "macros": {
+            "protein": 0.8,
+            "carbs": 32,
+            "fat": 0.2,
+            "fiber": 2.4
+          },
+          "keyNutrients": [
+            { "name": "Vitamin A", "amount": "900 IU", "dailyValue": 18 },
+            { "name": "Vitamin C", "amount": "20mg", "dailyValue": 22 },
+            { "name": "Folate", "amount": "28mcg", "dailyValue": 7 },
+            { "name": "Potassium", "amount": "248mg", "dailyValue": 5 },
+            { "name": "Beta-Carotene", "amount": "~540mcg", "dailyValue": null }
+          ],
+          "benefits": [
+            "Natural quick energy for long runs and training",
+            "Beta-carotene supports immune function and recovery",
+            "Portable and doesn't require refrigeration",
+            "Satisfies sweet cravings with real fruit nutrition"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 75,
+          "notes": "Choose unsweetened/unsulfured varieties. Great alternative to commercial energy chews during runs."
+        },
+        {
+          "id": "frozen-banana-bites",
+          "name": "Frozen Banana Ice Cream",
+          "category": "treats",
+          "servingSize": "1 medium banana frozen (118g)",
+          "calories": 105,
+          "macros": {
+            "protein": 1.3,
+            "carbs": 27,
+            "fat": 0.4,
+            "fiber": 3.1
+          },
+          "keyNutrients": [
+            { "name": "Potassium", "amount": "422mg", "dailyValue": 9 },
+            { "name": "Vitamin B6", "amount": "0.43mg", "dailyValue": 25 },
+            { "name": "Vitamin C", "amount": "10.3mg", "dailyValue": 11 },
+            { "name": "Magnesium", "amount": "32mg", "dailyValue": 8 },
+            { "name": "Resistant Starch", "amount": "~3g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Blended frozen banana creates creamy ice cream texture",
+            "No added sugars - just naturally sweet fruit",
+            "Potassium helps prevent muscle cramps",
+            "Cooling treat perfect for hot summer training"
+          ],
+          "runnerTiming": "recovery",
+          "antiInflammatory": false,
+          "healthScore": 80,
+          "notes": "Freeze ripe bananas and blend until creamy. Add cacao powder or nut butter for variations. Guilt-free dessert."
+        },
+        {
+          "id": "energy-balls",
+          "name": "Date-Nut Energy Balls",
+          "category": "treats",
+          "servingSize": "2 balls (~50g)",
+          "calories": 180,
+          "macros": {
+            "protein": 4,
+            "carbs": 28,
+            "fat": 8,
+            "fiber": 4
+          },
+          "keyNutrients": [
+            { "name": "Potassium", "amount": "280mg", "dailyValue": 6 },
+            { "name": "Magnesium", "amount": "35mg", "dailyValue": 8 },
+            { "name": "Iron", "amount": "1.2mg", "dailyValue": 7 },
+            { "name": "Fiber", "amount": "4g", "dailyValue": 14 },
+            { "name": "Natural Sugars", "amount": "22g", "dailyValue": null }
+          ],
+          "benefits": [
+            "Perfect grab-and-go energy for training",
+            "Dates provide natural quick energy like commercial gels",
+            "Nuts add protein and healthy fats for sustained energy",
+            "Customizable with various nuts, seeds, and add-ins"
+          ],
+          "runnerTiming": "pre-run",
+          "antiInflammatory": true,
+          "healthScore": 78,
+          "notes": "Blend dates, nuts, and oats in food processor. Add cacao, coconut, or nut butter for variety. Keep refrigerated."
+        },
+        {
+          "id": "nut-butter",
+          "name": "Almond Butter (Natural)",
+          "category": "treats",
+          "servingSize": "2 tbsp (32g)",
+          "calories": 196,
+          "macros": {
+            "protein": 7,
+            "carbs": 6,
+            "fat": 18,
+            "fiber": 3.3
+          },
+          "keyNutrients": [
+            { "name": "Vitamin E", "amount": "7.7mg", "dailyValue": 51 },
+            { "name": "Magnesium", "amount": "89mg", "dailyValue": 21 },
+            { "name": "Riboflavin (B2)", "amount": "0.3mg", "dailyValue": 23 },
+            { "name": "Manganese", "amount": "0.6mg", "dailyValue": 26 },
+            { "name": "Phosphorus", "amount": "163mg", "dailyValue": 13 }
+          ],
+          "benefits": [
+            "Vitamin E protects muscles from exercise-induced oxidative damage",
+            "Magnesium prevents cramping during long runs",
+            "Healthy fats provide sustained energy",
+            "Perfect paired with banana or apple for pre-run fuel"
+          ],
+          "runnerTiming": "anytime",
+          "antiInflammatory": true,
+          "healthScore": 88,
+          "notes": "Choose natural with no added oils or sugar. Stir well before use. Excellent on toast, in smoothies, or with fruit."
+        },
+        {
+          "id": "coconut-water",
+          "name": "Coconut Water",
+          "category": "treats",
+          "servingSize": "1 cup (240ml)",
+          "calories": 46,
+          "macros": {
+            "protein": 1.7,
+            "carbs": 9,
+            "fat": 0.5,
+            "fiber": 2.6
+          },
+          "keyNutrients": [
+            { "name": "Potassium", "amount": "600mg", "dailyValue": 13 },
+            { "name": "Sodium", "amount": "252mg", "dailyValue": 11 },
+            { "name": "Magnesium", "amount": "60mg", "dailyValue": 14 },
+            { "name": "Manganese", "amount": "0.3mg", "dailyValue": 13 },
+            { "name": "Calcium", "amount": "58mg", "dailyValue": 4 }
+          ],
+          "benefits": [
+            "Natural electrolyte replacement without artificial ingredients",
+            "Exceptional potassium content prevents muscle cramps",
+            "More hydrating than water due to electrolyte content",
+            "Lower sugar than most commercial sports drinks"
+          ],
+          "runnerTiming": "post-run",
+          "antiInflammatory": false,
+          "healthScore": 76,
+          "notes": "Natural sports drink alternative. Choose 100% coconut water with no added sugars. Great post-run hydration."
+        }
+      ]
+    }
+  ]
+}

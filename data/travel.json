@@ -17,13 +17,23 @@
       "coordinates": { "lat": 41.8781, "lng": -87.6298 },
       "type": "roots",
       "visits": "2017-2021, May 2025, October 2026",
-      "notes": "UChicago years. Still coming back.",
-      "highlights": ["Hyde Park", "The Loop"],
+      "notes": "UChicago years. Quick May trip to retrieve storage. Booth MBA 2026.",
+      "highlights": ["Hyde Park", "The Loop", "Booth"],
       "images": [
         "chicago/chicago-01.jpeg",
         "chicago/chicago-02.jpeg",
         "chicago/chicago-03.jpeg",
-        "chicago/chicago-04.jpeg"
+        "chicago/chicago-04.jpeg",
+        "chicago/IMG_4992.jpeg",
+        "chicago/IMG_5026.jpeg",
+        "chicago/IMG_5050.jpeg",
+        "chicago/IMG_5054.jpeg",
+        "chicago/IMG_5230.jpeg",
+        "chicago/IMG_5249.jpeg",
+        "chicago/IMG_5250.jpeg",
+        "chicago/IMG_5251.jpeg",
+        "chicago/IMG_5421.jpeg",
+        "chicago/IMG_5544.jpeg"
       ],
       "extendedNotes": "Four years at UChicago. Hyde Park bookstores, the Reg, Lake Michigan. Returning for Booth in 2026.",
       "facts": {
@@ -53,6 +63,28 @@
       "visits": "July 2025, April 2026",
       "notes": "Boston Marathon. Registered.",
       "highlights": ["Heartbreak Hill", "Boylston Street finish"],
+      "images": [
+        "Boston/IMG_8810.jpeg",
+        "Boston/IMG_8815.jpeg",
+        "Boston/IMG_8831.jpeg",
+        "Boston/IMG_8844.jpeg",
+        "Boston/IMG_8866.jpeg",
+        "Boston/IMG_8867.jpeg",
+        "Boston/IMG_8890.jpeg",
+        "Boston/IMG_8896.jpeg",
+        "Boston/IMG_8898.jpeg",
+        "Boston/IMG_8902.jpeg",
+        "Boston/IMG_8954.jpeg",
+        "Boston/IMG_8956.jpeg",
+        "Boston/IMG_8960.jpeg",
+        "Boston/IMG_8965.jpeg",
+        "Boston/IMG_8966.jpeg",
+        "Boston/IMG_8968.jpeg",
+        "Boston/IMG_8970.jpeg",
+        "Boston/IMG_9057.jpeg",
+        "Boston/IMG_9058.jpeg"
+      ],
+      "extendedNotes": "Scouting trip for the 2026 Boston Marathon. Walked the final miles of the course from Heartbreak Hill to Boylston Street. Exploring the city's history and running culture.",
       "facts": {
         "The Marathon": [
           "World's oldest annual marathon, started 1897",
@@ -78,17 +110,32 @@
       "coordinates": { "lat": 21.3069, "lng": -157.8583 },
       "type": "race",
       "visits": "December 2025",
-      "notes": "Honolulu Marathon. December 2025.",
-      "highlights": ["Waikiki", "Diamond Head", "Maui"],
+      "notes": "Honolulu Marathon, Diamond Head sunrise hike, Lanikai Pillboxes, North Shore.",
+      "highlights": ["Marathon", "Diamond Head", "North Shore"],
       "images": [
+        "honolulu/diamond head HNL 12.25.png",
+        "honolulu/Lanakai Pillboxes HNL 12.25.png",
+        "honolulu/North Shore HNL 12.25.png",
+        "honolulu/Post marathon with Jenna sister - HNL 25.png",
+        "honolulu/Roosters in tree - Honolulu 12.25.png",
         "honolulu/23E65343-3C9A-4F2F-B872-EE47B5D814E7.jpeg",
         "honolulu/49E79786-2B91-4EFB-B8AB-4BB350CAED17.jpeg",
         "honolulu/54FB6E75-DA60-47A1-9349-9E0AA4814025.jpeg",
-        "honolulu/C671988B-3634-4461-9063-140C963CC9FD.jpeg",
+        "honolulu/917984E5-C4B4-414F-B244-7FB8C5709D91.jpeg",
         "honolulu/A0A9E36A-4DB8-4880-BF26-F0C2753B438A.jpeg",
-        "honolulu/DC5FFD9C-CD37-468F-B11A-90E25D6CBA34.jpeg"
+        "honolulu/C671988B-3634-4461-9063-140C963CC9FD.jpeg",
+        "honolulu/C6E4B2E2-C6BF-40EE-BAB0-5D9C2E411789.jpeg",
+        "honolulu/DC5FFD9C-CD37-468F-B11A-90E25D6CBA34.jpeg",
+        "honolulu/E87AB643-529F-4F70-8E19-3F64448C53BA_4_5005_c.jpeg",
+        "honolulu/E9D9B506-5AA0-40DE-B9D1-2FBCD2F50CCA_4_5005_c.jpeg",
+        "honolulu/EF533ABC-A7DB-40ED-8B14-6F82A1B75CCC_4_5005_c.jpeg",
+        "honolulu/00BB4238-1B22-47C4-A226-607FCB7EF6B9_4_5005_c.jpeg",
+        "honolulu/0B73604A-1DFB-4756-920F-9D7A759057AB_4_5005_c.jpeg",
+        "honolulu/2986E5F8-AF83-4E3C-A2F3-1EA02C086830_4_5005_c.jpeg",
+        "honolulu/honolulu-kaneohe-01.jpeg",
+        "honolulu/honolulu-kaneohe-02.jpeg"
       ],
-      "extendedNotes": "5am start, sunrise along Waikiki Beach. Course runs Ala Moana to Hawaii Kai. Finish at Kapiolani Park.",
+      "extendedNotes": "Honolulu Marathon with 5am start along Waikiki. Diamond Head crater hike at sunrise, Lanikai Pillboxes trail, North Shore beaches. Day trip to Maui via puddle jumper.",
       "facts": {
         "The Race": [
           "5am start, ran into sunrise along Waikiki",
@@ -114,8 +161,8 @@
       "coordinates": { "lat": 41.8875, "lng": -88.3059 },
       "type": "race",
       "visits": "September 2025",
-      "notes": "Marathon PR: 3:09. Last Chance BQ.2.",
-      "highlights": ["Fox River Trail", "PR race"],
+      "notes": "PR: 3:09. Flew in, raced, showered, flew out. Last Chance BQ.2.",
+      "highlights": ["Marathon PR", "Quick Turnaround"],
       "facts": {
         "The Race": [
           "Last Chance BQ.2: flat, fast Boston qualifier course",
@@ -136,8 +183,30 @@
       "coordinates": { "lat": 40.7128, "lng": -74.0060 },
       "type": "travel",
       "visits": "2024, February 2025",
-      "notes": "Museums, theater, food.",
-      "highlights": ["Manhattan", "Museums"],
+      "notes": "Super Bowl weekend. College friends, pizza lines, rooftop views.",
+      "highlights": ["Manhattan", "Museums", "Friend Reunions"],
+      "images": [
+        "New York/IMG_5485.jpeg",
+        "New York/IMG_5492.jpeg",
+        "New York/IMG_5501.jpeg",
+        "New York/IMG_5513.jpeg",
+        "New York/IMG_5515.jpeg",
+        "New York/IMG_5518.jpeg",
+        "New York/IMG_5525.jpeg",
+        "New York/IMG_5548.jpeg",
+        "New York/2024/IMG_7205.jpeg",
+        "New York/2024/IMG_7214.jpeg",
+        "New York/2024/IMG_7235.jpeg",
+        "New York/2024/IMG_7278.jpeg",
+        "New York/2024/IMG_7283.jpeg",
+        "New York/2024/IMG_7318.jpeg",
+        "New York/2024/IMG_7322.jpeg",
+        "New York/2024/IMG_7333.jpeg",
+        "New York/2024/IMG_7335.jpeg",
+        "New York/2024/IMG_7886.jpeg",
+        "New York/2024/IMG_7890.jpeg"
+      ],
+      "extendedNotes": "Super Bowl weekend trip in 2024 with college friends. Pizza lines, rooftop views of Manhattan skyline, walking across Brooklyn Bridge.",
       "facts": {
         "The City": [
           "8.3 million residents, largest US city",
@@ -163,7 +232,7 @@
       "coordinates": { "lat": 37.7749, "lng": -122.4194 },
       "type": "travel",
       "visits": "2018",
-      "notes": "Tech, fog, good coffee.",
+      "notes": "Golden Gate, Mission murals.",
       "highlights": ["Golden Gate", "Mission District"],
       "facts": {
         "The City": [
@@ -190,7 +259,7 @@
       "coordinates": { "lat": 34.0522, "lng": -118.2437 },
       "type": "travel",
       "visits": "2018",
-      "notes": "Family, beaches.",
+      "notes": "Venice Beach, Getty views.",
       "highlights": ["Venice Beach", "Downtown LA"],
       "facts": {
         "The City": [
@@ -217,8 +286,29 @@
       "coordinates": { "lat": 32.7157, "lng": -117.1611 },
       "type": "travel",
       "visits": "July 2025",
-      "notes": "Summer in Southern California.",
+      "notes": "Gaslamp Quarter, craft beer, beaches.",
       "highlights": ["Beaches", "Gaslamp Quarter"],
+      "images": [
+        "San Diego/IMG_1308.jpeg",
+        "San Diego/IMG_1377.jpeg",
+        "San Diego/IMG_1391.jpeg",
+        "San Diego/IMG_1583.jpeg",
+        "San Diego/IMG_1595.jpeg",
+        "San Diego/IMG_1644.jpeg",
+        "San Diego/IMG_2079.jpeg",
+        "San Diego/IMG_2098.jpeg",
+        "San Diego/IMG_2323.jpeg",
+        "San Diego/IMG_2337.jpeg",
+        "San Diego/IMG_2346.jpeg",
+        "San Diego/DSCF9926.JPG",
+        "San Diego/DSCF9958.JPG",
+        "San Diego/DSCF9962.JPG",
+        "San Diego/DSCF9969.JPG",
+        "San Diego/DSCF9974.JPG",
+        "San Diego/DSCF9984.JPG",
+        "San Diego/DSCF9986.JPG"
+      ],
+      "extendedNotes": "Beach days in La Jolla and exploring the Gaslamp Quarter. Perfect weather for sunset walks along the coast.",
       "facts": {
         "The City": [
           "America's Finest City—70°F average year-round",
@@ -244,8 +334,18 @@
       "coordinates": { "lat": 31.1966, "lng": -81.3577 },
       "type": "travel",
       "visits": "2024",
-      "notes": "Georgia coast.",
+      "notes": "Golden Isles, barrier island quiet.",
       "highlights": ["Beach", "Golf"],
+      "images": [
+        "Sea Island/IMG_0267.jpeg",
+        "Sea Island/IMG_0346.jpeg",
+        "Sea Island/IMG_0353.jpeg",
+        "Sea Island/IMG_0360.jpeg",
+        "Sea Island/IMG_0403.jpeg",
+        "Sea Island/IMG_0404.jpeg",
+        "Sea Island/IMG_0417.jpeg"
+      ],
+      "extendedNotes": "Quiet getaway to Georgia's Golden Isles. Private beaches and salt marshes at sunset.",
       "facts": {
         "The Island": [
           "Part of Georgia's Golden Isles barrier islands",
@@ -266,8 +366,16 @@
       "coordinates": { "lat": 32.7767, "lng": -96.7970 },
       "type": "travel",
       "visits": "Multiple",
-      "notes": "Texas trips.",
+      "notes": "Deep Ellum, Dallas Arts District.",
       "highlights": ["Deep Ellum", "Arts District"],
+      "images": [
+        "Dallas/IMG_6006.jpeg",
+        "Dallas/IMG_6039.jpeg",
+        "Dallas/IMG_6181.jpeg",
+        "Dallas/IMG_6196.jpeg",
+        "Dallas/IMG_6228.jpeg"
+      ],
+      "extendedNotes": "Home base for family visits. Deep Ellum murals, Dallas Arts District, and catching up with old friends.",
       "facts": {
         "The City": [
           "9th largest US city, 1.3 million residents",
@@ -293,7 +401,7 @@
       "coordinates": { "lat": 28.5383, "lng": -81.3792 },
       "type": "travel",
       "visits": "2018",
-      "notes": "Theme parks, family visits.",
+      "notes": "Disney, Universal, family trip.",
       "highlights": ["Theme Parks"],
       "facts": {
         "Theme Parks": [
@@ -317,6 +425,11 @@
       "visits": "September 2024",
       "notes": "PNW. Mt. Rainier. Pike Place.",
       "highlights": ["Pike Place", "Mt. Rainier", "Bainbridge Island"],
+      "images": [
+        "seattle/seattle-01.jpeg",
+        "seattle/seattle-02.jpeg"
+      ],
+      "extendedNotes": "Hiking trails through Mt. Rainier National Park with stunning alpine meadows. Pike Place Market exploring and ferry to Bainbridge Island.",
       "facts": {
         "The City": [
           "Surrounded by water, mountains, and evergreen forests",
@@ -342,15 +455,28 @@
       "coordinates": { "lat": 33.7490, "lng": -84.3880 },
       "type": "travel",
       "visits": "July 2025",
-      "notes": "Southern hospitality.",
+      "notes": "Civil rights history, Piedmont Park.",
       "highlights": ["Midtown", "Piedmont Park"],
       "images": [
         "atlanta/atlanta-01.jpeg",
         "atlanta/atlanta-02.jpeg",
         "atlanta/atlanta-03.jpeg",
-        "atlanta/atlanta-04.jpeg"
+        "atlanta/IMG_0008.jpeg",
+        "atlanta/IMG_0051.jpeg",
+        "atlanta/IMG_0136.jpeg",
+        "atlanta/IMG_0144.jpeg",
+        "atlanta/IMG_0280.jpeg",
+        "atlanta/IMG_0296.jpeg",
+        "atlanta/IMG_0310.jpeg",
+        "atlanta/IMG_0354.jpeg",
+        "atlanta/IMG_0377.jpeg",
+        "atlanta/IMG_0420.jpeg",
+        "atlanta/IMG_9877.jpeg",
+        "atlanta/IMG_9882.jpeg",
+        "atlanta/IMG_9897.jpeg",
+        "atlanta/IMG_9962.jpeg"
       ],
-      "extendedNotes": "Civil rights history, Piedmont Park, and Southern hospitality.",
+      "extendedNotes": "Martin Luther King Jr. birthplace and the National Center for Civil and Human Rights. Piedmont Park for running, Krog Street Market for food halls.",
       "facts": {
         "History": [
           "Burned in Sherman's March to the Sea, 1864",
@@ -376,15 +502,19 @@
       "coordinates": { "lat": 25.7617, "lng": -80.1918 },
       "type": "travel",
       "visits": "2022, August 2025",
-      "notes": "Beach, Cuban food.",
+      "notes": "Art Deco, Little Havana, Wynwood murals.",
       "highlights": ["South Beach", "Wynwood", "Little Havana"],
       "images": [
-        "miami/miami-01.jpeg",
         "miami/miami-02.jpeg",
         "miami/miami-03.jpeg",
-        "miami/miami-04.jpeg"
+        "miami/miami-04.jpeg",
+        "miami/IMG_2677.jpeg",
+        "miami/IMG_2705.jpeg",
+        "miami/IMG_2714.jpeg",
+        "miami/IMG_2730.jpeg",
+        "miami/IMG_2742.jpeg"
       ],
-      "extendedNotes": "Art Deco on Ocean Drive, Little Havana, street art in Wynwood.",
+      "extendedNotes": "Art Deco historic district on Ocean Drive. Little Havana for Cuban coffee, Wynwood Walls street art. Design District galleries.",
       "facts": {
         "Culture": [
           "70% of residents speak Spanish at home",
@@ -410,8 +540,16 @@
       "coordinates": { "lat": 43.8610, "lng": -69.5275 },
       "type": "travel",
       "visits": "2021-2024",
-      "notes": "Lobster, lighthouses, summer escapes.",
+      "notes": "Midcoast. Lobster shacks, quiet coves.",
       "highlights": ["Walpole", "Damariscotta", "South Bristol"],
+      "images": [
+        "Maine/IMG_2224.jpeg",
+        "Maine/IMG_2247.jpeg",
+        "Maine/IMG_2276.jpeg",
+        "Maine/IMG_2286.jpeg",
+        "Maine/IMG_2302.jpeg"
+      ],
+      "extendedNotes": "Quiet summers on the Midcoast. Lobster shacks in Damariscotta, kayaking in South Bristol, and foggy morning walks.",
       "facts": {
         "The Coast": [
           "3,478 miles of coastline—more than California",
@@ -464,8 +602,13 @@
       "coordinates": { "lat": 39.9526, "lng": -75.1652 },
       "type": "travel",
       "visits": "2023, August 2025",
-      "notes": "Day trips from DC.",
-      "highlights": ["Old City", "Art Museum"],
+      "notes": "Four Seasons rooftop. Friend reunions, day trips from DC.",
+      "highlights": ["Rooftop Views", "Old City", "Friend Visits"],
+      "images": [
+        "philadelphia/philadelphia-01.jpeg",
+        "philadelphia/philadelphia-02.jpeg"
+      ],
+      "extendedNotes": "Four Seasons rooftop views of the city skyline. Walking through Old City and Rittenhouse Square. Easy day trips from DC for friend reunions.",
       "facts": {
         "History": [
           "US capital 1790-1800, before Washington DC",
@@ -491,13 +634,15 @@
       "coordinates": { "lat": 35.6762, "lng": 139.6503 },
       "type": "travel",
       "visits": "October 2025",
-      "notes": "First time in Japan. Itoya Ginza.",
-      "highlights": ["Itoya Ginza", "Shibuya", "Shinjuku"],
+      "notes": "First Japan trip. Shibuya Crossing, Meiji Shrine, Itoya Ginza stationery store.",
+      "highlights": ["Itoya Ginza", "Shibuya Crossing", "Running"],
       "images": [
         "tokyo/45EB4D40-E6A3-4349-B3D4-EAED922549D4.jpeg",
-        "tokyo/F6A215C6-A815-4207-904C-120CBE2A1BE7.jpeg"
+        "tokyo/F6A215C6-A815-4207-904C-120CBE2A1BE7.jpeg",
+        "tokyo/tokyo-03.jpeg",
+        "tokyo/tokyo-04.jpeg"
       ],
-      "extendedNotes": "First time in Japan. Shibuya Crossing, Meiji Shrine, Itoya Ginza. Golden Gai and Tsukiji.",
+      "extendedNotes": "Shibuya Crossing at night, morning walk through Meiji Shrine forest. Itoya Ginza 12-floor stationery flagship. Golden Gai bars, Tsukiji outer market.",
       "facts": {
         "Neighborhoods": [
           "Shibuya—Crossing, shopping, nightlife",
@@ -525,22 +670,25 @@
       "coordinates": { "lat": 35.0116, "lng": 135.7681 },
       "type": "travel",
       "visits": "October 2025",
-      "notes": "Temples, shrines, tea.",
-      "highlights": ["Fushimi Inari", "Gion", "Bamboo Grove"],
+      "notes": "Fushimi Inari torii gates at dawn. Arashiyama bamboo grove, Gion district.",
+      "highlights": ["Fushimi Inari", "Arashiyama", "Gion"],
       "images": [
-        "kyoto/5A1077BF-8089-43C3-9A8E-62F84A82E9F3.jpeg",
-        "kyoto/3ED1E25E-5FC6-4AFB-A4B0-271ACB0AA33E.jpeg",
-        "kyoto/BB63F833-DBBF-4E52-AEA8-DD781F11F481.jpeg",
-        "kyoto/9DE55D14-CE7E-4E0B-BC28-363AD8D0C2C7.jpeg",
-        "kyoto/E84BECF3-5A2D-47EE-BAF2-412FEBAC9D52.jpeg",
-        "kyoto/D38CFE83-C514-453D-8FCA-60B2F4E134E6.jpeg",
-        "kyoto/1999C0CA-87E3-41DC-A308-6F94CDC9EC6A_4_5005_c.jpeg",
-        "kyoto/4D14EA91-D725-44D8-B215-6889DBBA193E_4_5005_c.jpeg",
-        "kyoto/68C30565-0FBD-44CE-ACD5-F3291EAC9F2A_4_5005_c.jpeg",
-        "kyoto/7C51F28B-DF3E-4A4A-8F7C-5F838F26E280_4_5005_c.jpeg",
-        "kyoto/F143A52B-6586-41D1-A996-FD26772BA8B8_4_5005_c.jpeg"
+        "japan/Kyoto/5A1077BF-8089-43C3-9A8E-62F84A82E9F3.jpeg",
+        "japan/Kyoto/3ED1E25E-5FC6-4AFB-A4B0-271ACB0AA33E.jpeg",
+        "japan/Kyoto/BB63F833-DBBF-4E52-AEA8-DD781F11F481.jpeg",
+        "japan/Kyoto/9DE55D14-CE7E-4E0B-BC28-363AD8D0C2C7.jpeg",
+        "japan/Kyoto/E84BECF3-5A2D-47EE-BAF2-412FEBAC9D52.jpeg",
+        "japan/Kyoto/D38CFE83-C514-453D-8FCA-60B2F4E134E6.jpeg",
+        "japan/Kyoto/1999C0CA-87E3-41DC-A308-6F94CDC9EC6A_4_5005_c.jpeg",
+        "japan/Kyoto/4D14EA91-D725-44D8-B215-6889DBBA193E_4_5005_c.jpeg",
+        "japan/Kyoto/68C30565-0FBD-44CE-ACD5-F3291EAC9F2A_4_5005_c.jpeg",
+        "japan/Kyoto/7C51F28B-DF3E-4A4A-8F7C-5F838F26E280_4_5005_c.jpeg",
+        "japan/Kyoto/F143A52B-6586-41D1-A996-FD26772BA8B8_4_5005_c.jpeg",
+        "japan/Kyoto/IMG_0612.jpeg",
+        "japan/Kyoto/IMG_0616.jpeg",
+        "japan/Kyoto/IMG_9866.jpeg"
       ],
-      "extendedNotes": "Fushimi Inari (10,000 torii gates), Arashiyama bamboo grove, Gion district. Day trips from Osaka.",
+      "extendedNotes": "Fushimi Inari shrine with 10,000 vermillion torii gates. Arashiyama bamboo grove and monkey park. Gion district evening walks. Day trips from Osaka base.",
       "facts": {
         "History": [
           "Imperial capital of Japan for 1,000 years (794-1868)",
@@ -566,16 +714,18 @@
       "coordinates": { "lat": 34.6937, "lng": 135.5023 },
       "type": "travel",
       "visits": "October 2025",
-      "notes": "Food capital of Japan.",
-      "highlights": ["Dotonbori", "Street Food"],
+      "notes": "Dotonbori neon signs at night. Base for Kyoto and Nara day trips.",
+      "highlights": ["Dotonbori", "Day Trips", "Street Food"],
       "images": [
         "osaka/CB5FF304-5FB2-4438-B0AE-0FF1147C0529.jpeg",
         "osaka/3B55F406-49D2-4E53-9F17-03A618E5A567.jpeg",
         "osaka/980EE59A-0327-4DD2-ABB5-7110DCD38182.jpeg",
         "osaka/2D4470F3-AD51-4CC1-806B-07A2DD866C80_4_5005_c.jpeg",
-        "osaka/8307BB4B-A664-4A82-834B-4F1E7B2D4029_4_5005_c.jpeg"
+        "osaka/8307BB4B-A664-4A82-834B-4F1E7B2D4029_4_5005_c.jpeg",
+        "osaka/osaka-dotonbori.jpeg",
+        "osaka/osaka-street.jpeg"
       ],
-      "extendedNotes": "Dotonbori at night. Day trips to Kyoto and Nara.",
+      "extendedNotes": "Dotonbori at night with the Glico Running Man sign. Street food culture: takoyaki, okonomiyaki. Central base for day trips to Kyoto, Nara, and Hiroshima.",
       "facts": {
         "The City": [
           "Japan's second largest city, 2.7 million residents",
@@ -601,12 +751,21 @@
       "coordinates": { "lat": 34.6937, "lng": 132.4553 },
       "type": "travel",
       "visits": "October 2025",
-      "notes": "Peace Memorial.",
-      "highlights": ["Peace Park", "Miyajima"],
+      "notes": "Peace Memorial Park and A-Bomb Dome. Miyajima Island floating torii gate.",
+      "highlights": ["Peace Park", "Miyajima", "Essay Inspiration"],
       "images": [
-        "hiroshima/1C05A174-11BD-4916-A265-EB9996D521BA.jpeg"
+        "japan/Hiroshima/1C05A174-11BD-4916-A265-EB9996D521BA.jpeg",
+        "japan/Hiroshima/IMG_2491.jpeg",
+        "japan/Hiroshima/IMG_3056.jpeg",
+        "japan/Hiroshima/IMG_3060.jpeg",
+        "japan/Hiroshima/IMG_3108.jpeg"
       ],
-      "extendedNotes": "Peace Memorial Museum, A-Bomb Dome. Day trip to Miyajima for the floating torii gate.",
+      "essay": {
+        "id": "hiroshima",
+        "title": "Hiroshima",
+        "excerpt": "It's not enough to feel moved by history. You have a responsibility to live differently because of it."
+      },
+      "extendedNotes": "Peace Memorial Museum and the A-Bomb Dome, the only structure left standing near the hypocenter. Day trip to Miyajima Island for the floating torii gate. This visit informed my Booth MBA application.",
       "facts": {
         "History": [
           "Atomic bomb dropped August 6, 1945, 8:15am",
@@ -632,17 +791,32 @@
       "coordinates": { "lat": 48.8566, "lng": 2.3522 },
       "type": "travel",
       "visits": "March 2025",
-      "notes": "Seine, museums, cafes.",
-      "highlights": ["Seine", "Museums", "Cafes"],
+      "notes": "Best friend's wedding. Seine boat tour, Musee d'Orsay, the Marais.",
+      "highlights": ["Wedding", "Musée d'Orsay", "Eiffel Tower"],
       "images": [
         "paris/IMG_1002.jpeg",
         "paris/IMG_1034.jpeg",
         "paris/IMG_1152.jpeg",
         "paris/IMG_1222.jpeg",
         "paris/IMG_1582.jpeg",
-        "paris/IMG_1700.jpeg"
+        "paris/IMG_1700.jpeg",
+        "paris/IMG_0620.jpeg",
+        "paris/IMG_0717.jpeg",
+        "paris/IMG_0818.jpeg",
+        "paris/IMG_0951.jpeg",
+        "paris/IMG_1050.jpeg",
+        "paris/IMG_1204.jpeg",
+        "paris/IMG_1355.jpeg",
+        "paris/IMG_1642.jpeg",
+        "paris/IMG_1802.jpeg",
+        "paris/IMG_1854.jpeg",
+        "paris/IMG_1965.jpeg",
+        "paris/IMG_2035.jpeg",
+        "paris/paris-eiffel-night.jpeg",
+        "paris/paris-versailles.jpeg",
+        "paris/paris-versailles-gates.jpeg"
       ],
-      "extendedNotes": "The Seine, Musée d'Orsay, the Marais. March light.",
+      "extendedNotes": "Best friend's wedding in March. Seine boat tour, Musee d'Orsay Impressionists collection, the Marais neighborhood. Day trip to Chateau de Fontainebleau.",
       "facts": {
         "History": [
           "Founded by Celtic Parisii tribe, 3rd century BC",
@@ -668,19 +842,31 @@
       "coordinates": { "lat": 51.5074, "lng": -0.1278 },
       "type": "travel",
       "visits": "March 2025",
-      "notes": "V&A, West End, pubs.",
-      "highlights": ["West End", "Museums", "Pubs"],
+      "notes": "V&A Museum, Hyde Park, West End shows, Paddington Station pilgrimage.",
+      "highlights": ["V&A Museum", "Hyde Park", "London Eye"],
       "images": [
-        "london/london-01.jpeg",
         "london/london-02.jpeg",
         "london/london-03.jpeg",
         "london/london-04.jpeg",
         "london/london-05.jpeg",
         "london/london-06.jpeg",
         "london/london-07.jpeg",
-        "london/london-08.jpeg"
+        "london/london-08.jpeg",
+        "london/london-paddington.jpeg",
+        "london/london-portobello.jpeg",
+        "london/IMG_2153.jpeg",
+        "london/IMG_2163.jpeg",
+        "london/IMG_2184.jpeg",
+        "london/IMG_2320.jpeg",
+        "london/IMG_2525.jpeg",
+        "london/IMG_2847.jpeg",
+        "london/IMG_3048.jpeg",
+        "london/IMG_3159.jpeg",
+        "london/IMG_3255.jpeg",
+        "london/IMG_3372.jpeg",
+        "london/IMG_3395.jpeg"
       ],
-      "extendedNotes": "West End shows, the V&A, walking between neighborhoods.",
+      "extendedNotes": "V&A decorative arts museum, Hyde Park walks, West End theater. London Eye at dusk. Walking between South Bank, Shoreditch, and Notting Hill.",
       "facts": {
         "History": [
           "Founded by Romans as Londinium, 43 AD",
@@ -733,8 +919,13 @@
       "coordinates": { "lat": 19.4326, "lng": -99.1332 },
       "type": "travel",
       "visits": "May 2025",
-      "notes": "Tepoztlán, Chapultepec, Roma.",
-      "highlights": ["Roma Norte", "Chapultepec", "Tepoztlán"],
+      "notes": "Tepoztlan mountain town. Roma Norte neighborhood, Chapultepec Park runs.",
+      "highlights": ["Tepoztlán", "Roma Norte", "Daily Runs"],
+      "images": [
+        "mexico-city/mexico-city-01.jpeg",
+        "mexico-city/mexico-city-02.jpeg"
+      ],
+      "extendedNotes": "Weekend escape to Tepoztlan mountain town with lush vegetation and ancient Aztec pyramid. Roma Norte neighborhood cafes, Chapultepec Park morning runs.",
       "facts": {
         "The City": [
           "Largest city in North America, 21+ million metro",
@@ -759,17 +950,28 @@
       "country": "Canada",
       "coordinates": { "lat": 43.6532, "lng": -79.3832 },
       "type": "travel",
-      "visits": "September 2025",
-      "notes": "Toronto Islands, food scene.",
-      "highlights": ["Toronto Islands", "Kensington Market", "CN Tower"],
+      "visits": "May 2025, September 2025",
+      "notes": "TIFF festival visit. Toronto Islands, Kensington Market, St. Lawrence Market.",
+      "highlights": ["TIFF", "Toronto Islands", "Kensington Market"],
       "images": [
         "toronto/toronto-01.jpeg",
         "toronto/toronto-02.jpeg",
         "toronto/toronto-03.jpeg",
         "toronto/toronto-04.jpeg",
-        "toronto/toronto-05.jpeg"
+        "toronto/toronto-05.jpeg",
+        "toronto/toronto-06.jpeg",
+        "toronto/toronto-07.jpeg",
+        "toronto/IMG_3868.jpeg",
+        "toronto/IMG_3875.jpeg",
+        "toronto/IMG_3905.jpeg",
+        "toronto/IMG_3948.jpeg",
+        "toronto/IMG_3969.jpeg",
+        "toronto/IMG_4117.jpeg",
+        "toronto/IMG_4201.jpeg",
+        "toronto/IMG_4232.jpeg",
+        "toronto/IMG_4300.jpeg"
       ],
-      "extendedNotes": "Toronto Islands, Kensington Market, TIFF visit.",
+      "extendedNotes": "Toronto International Film Festival visit in September. Toronto Islands ferry, Kensington Market vintage shops, St. Lawrence Market for peameal bacon sandwiches.",
       "facts": {
         "The City": [
           "Most populous city in Canada (2.9 million)",
@@ -927,6 +1129,28 @@
       "visits": "November 2023",
       "notes": "Kathmandu, Pokhara, Bhaktapur.",
       "highlights": ["Kathmandu", "Pokhara", "Bhaktapur"],
+      "images": [
+        "nepal/IMG_0049.jpeg",
+        "nepal/IMG_0158.jpeg",
+        "nepal/IMG_0389.jpeg",
+        "nepal/IMG_0405.jpeg",
+        "nepal/IMG_0789.jpeg",
+        "nepal/IMG_3829.jpeg",
+        "nepal/IMG_3831.jpeg",
+        "nepal/IMG_3888.jpeg",
+        "nepal/IMG_3953.jpeg",
+        "nepal/IMG_4117.jpeg",
+        "nepal/IMG_4163.jpeg",
+        "nepal/IMG_4215.jpeg",
+        "nepal/IMG_4237.jpeg",
+        "nepal/IMG_4319.jpeg",
+        "nepal/IMG_4405.jpeg",
+        "nepal/IMG_4424.jpeg",
+        "nepal/IMG_4511.jpeg",
+        "nepal/IMG_4577.jpeg",
+        "nepal/IMG_4710.jpeg"
+      ],
+      "extendedNotes": "Buddhist prayer wheels and stupas in Kathmandu. Sunrise over the Himalayas from Pokhara. Ancient temples and narrow streets of Bhaktapur.",
       "facts": {
         "Geography": [
           "8 of the world's 10 highest peaks, including Everest",
@@ -954,6 +1178,19 @@
       "visits": "November-December 2023",
       "notes": "Colombo, tea country.",
       "highlights": ["Colombo", "Central Province"],
+      "images": [
+        "Sri Lanka/IMG_0205.jpeg",
+        "Sri Lanka/IMG_0219.jpeg",
+        "Sri Lanka/IMG_0363.jpeg",
+        "Sri Lanka/IMG_4781.jpeg",
+        "Sri Lanka/IMG_4797.jpeg",
+        "Sri Lanka/IMG_5175.jpeg",
+        "Sri Lanka/IMG_8009.jpeg",
+        "Sri Lanka/IMG_8067.jpeg",
+        "Sri Lanka/IMG_8150.jpeg",
+        "Sri Lanka/IMG_8251.jpeg"
+      ],
+      "extendedNotes": "Traditional Sri Lankan wedding ceremonies with vibrant decorations. Exploring the streets of Colombo and coastal areas.",
       "facts": {
         "The Island": [
           "Teardrop of India—25,332 square miles",

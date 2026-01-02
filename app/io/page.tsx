@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 const dashboardSections = [
@@ -74,6 +72,18 @@ const dashboardSections = [
       </svg>
     ),
     color: "panel-gradient-sage"
+  },
+  {
+    id: "nutrition",
+    title: "Nutrition Log",
+    description: "Food logging, macros, runner fuel guide",
+    href: "/io/nutrition",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    color: "panel-gradient-honey"
   }
 ];
 
@@ -81,7 +91,7 @@ export default function IODashboardPage() {
   return (
     <div className="bg-cream min-h-screen">
       {/* Header */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16">
+      <section className="pt-8 pb-12 md:pt-16 md:pb-16">
         <div className="container-editorial">
           <div className="max-w-2xl">
             <p className="light-bg-label mb-3">Backend</p>
@@ -130,33 +140,6 @@ export default function IODashboardPage() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <hr className="rule" />
-
-      {/* Quick Stats */}
-      <section className="py-12 bg-ivory">
-        <div className="container-editorial">
-          <p className="light-bg-label mb-6">Quick Stats</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white rounded-xl p-5 text-center">
-              <p className="text-3xl font-bold text-deep-forest mb-1">12</p>
-              <p className="text-sm text-deep-forest/60">Therapy Sessions</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 text-center">
-              <p className="text-3xl font-bold text-deep-forest mb-1">47</p>
-              <p className="text-sm text-deep-forest/60">Saved Prompts</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 text-center">
-              <p className="text-3xl font-bold text-deep-forest mb-1">980</p>
-              <p className="text-sm text-deep-forest/60">Miles Logged</p>
-            </div>
-            <div className="bg-white rounded-xl p-5 text-center">
-              <p className="text-3xl font-bold text-deep-forest mb-1">3:09</p>
-              <p className="text-sm text-deep-forest/60">Marathon PR</p>
-            </div>
           </div>
         </div>
       </section>

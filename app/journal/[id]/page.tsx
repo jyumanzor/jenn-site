@@ -20,7 +20,7 @@ export default async function JournalEntryPage({ params }: Props) {
   return (
     <div className="bg-cream">
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20">
+      <section className="pt-12 pb-16 md:pt-20 md:pb-20">
         <div className="container-editorial">
           <div className="max-w-3xl">
             <Link href="/journal" className="link-editorial text-sm mb-8 inline-block">

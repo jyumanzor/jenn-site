@@ -1,11 +1,68 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import journal from "@/data/journal.json";
 
+const CORRECT_PASSWORD = 'jenn.io';
+
 export default function JournalPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const auth = localStorage.getItem('jenn-journal-auth');
+    if (auth === 'true') setIsAuthenticated(true);
+  }, []);
+
+  const handleLogin = () => {
+    if (password === CORRECT_PASSWORD) {
+      setIsAuthenticated(true);
+      localStorage.setItem('jenn-journal-auth', 'true');
+      setError('');
+    } else {
+      setError('Wrong password');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-cream">
+        <div className="text-center">
+          <h1 className="text-2xl mb-2 italic" style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}>
+            Journal
+          </h1>
+          <p className="text-sm mb-6" style={{ color: '#97A97C' }}>Private entries</p>
+          <div className="flex flex-col gap-3 items-center">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
+              placeholder="Password"
+              className="px-4 py-3 rounded-lg text-center text-sm"
+              style={{ background: '#FFF5EB', color: '#3B412D', border: '1px solid #97A97C', width: '200px' }}
+              autoFocus
+            />
+            <button
+              onClick={handleLogin}
+              className="px-4 py-2 rounded-lg text-sm font-medium"
+              style={{ background: '#546E40', color: '#FFF5EB' }}
+            >
+              Enter
+            </button>
+            {error && <p className="text-sm" style={{ color: '#CC7722' }}>{error}</p>}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-cream">
       {/* Hero */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16">
+      <section className="pt-8 pb-12 md:pt-16 md:pb-16">
         <div className="container-editorial">
           <div className="max-w-2xl">
             <p className="section-label mb-3">Journal</p>
@@ -48,15 +105,41 @@ export default function JournalPage() {
                     >
                       {entry.category}
                     </span>
+                    {entry.tags?.includes('MBA') && (
+                      <span
+                        className="text-xs uppercase tracking-wider px-2 py-0.5 rounded font-medium"
+                        style={{
+                          backgroundColor: '#d4ed39',
+                          color: '#2A3C24'
+                        }}
+                      >
+                        MBA
+                      </span>
+                    )}
+                    {entry.tags?.includes('thesis') && (
+                      <span
+                        className="text-xs uppercase tracking-wider px-2 py-0.5 rounded font-medium"
+                        style={{
+                          backgroundColor: style.isDark ? 'rgba(255,255,255,0.25)' : 'rgba(59,65,45,0.2)',
+                          color: style.isDark ? '#FFF5EB' : '#3B412D'
+                        }}
+                      >
+                        Thesis
+                      </span>
+                    )}
+                    {/* Year tag - always last */}
                     <span
-                      className="text-xs"
-                      style={{ color: style.isDark ? 'rgba(255,245,235,0.5)' : 'rgba(59,65,45,0.5)' }}
+                      className="text-xs px-2 py-0.5 rounded"
+                      style={{
+                        backgroundColor: style.isDark ? 'rgba(255,255,255,0.1)' : 'rgba(59,65,45,0.08)',
+                        color: style.isDark ? 'rgba(255,245,235,0.6)' : 'rgba(59,65,45,0.5)'
+                      }}
                     >
                       {entry.date}
                     </span>
                   </div>
                   <h2
-                    className="text-xl mb-3"
+                    className="text-xl mb-2"
                     style={{
                       fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
                       color: style.isDark ? '#FFF5EB' : '#3B412D'
@@ -64,6 +147,14 @@ export default function JournalPage() {
                   >
                     {entry.title}
                   </h2>
+                  {entry.context && (
+                    <p
+                      className="text-xs leading-relaxed mb-3 italic"
+                      style={{ color: style.isDark ? 'rgba(255,245,235,0.5)' : 'rgba(59,65,45,0.5)' }}
+                    >
+                      {entry.context}
+                    </p>
+                  )}
                   <p
                     className="text-sm leading-relaxed mb-4 reading-width"
                     style={{ color: style.isDark ? 'rgba(255,245,235,0.7)' : 'rgba(59,65,45,0.7)' }}
