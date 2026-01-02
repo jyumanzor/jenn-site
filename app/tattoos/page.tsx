@@ -33,8 +33,8 @@ const timelineData = [
   { year: "2017", city: "Dallas/Austin", tattoos: ["umbrella", "anatomical-heart"], color: '#FABF34', months: ["Mar", "Sep"] },
   { year: "2018", city: "Chicago", tattoos: ["so-it-goes", "es-muss-sein", "little-prince"], color: '#D4ED39', months: ["Jan", "Sep", "Oct"] },
   { year: "2019", city: "Chicago", tattoos: ["volcano"], color: '#97A97C', months: ["Jan"] },
-  { year: "2022", city: "Dallas", tattoos: ["410", "cowboy-hat"], color: '#FABF34', months: ["Sep"] },
-  { year: "2023", city: "Dallas", tattoos: ["spoon", "bike-lane", "marathon-clock"], color: '#D4ED39', months: ["Dec"] },
+  { year: "2022", city: "Dallas", tattoos: ["410", "cowboy-hat"], color: '#FABF34', months: ["Sep", "Sep"] },
+  { year: "2023", city: "Dallas", tattoos: ["spoon", "bike-lane", "marathon-clock"], color: '#D4ED39', months: ["Dec", "Dec", "Dec"] },
   { year: "2024", city: "NYC/Dallas", tattoos: ["disco-ball", "squirrel", "honey-pot"], color: '#97A97C', months: ["Jan", "Jan", "Dec"] },
   { year: "2025", city: "DC", tattoos: ["hummingbird"], color: '#D4ED39', months: ["Jul"] },
 ];

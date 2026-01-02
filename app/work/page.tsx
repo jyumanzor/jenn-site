@@ -173,15 +173,15 @@ export default function WorkPage() {
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Pages</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>14</p>
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>14</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Tools</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>12</p>
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>12</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Training Hubs</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#E8A847' }}>14</p>
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>14</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">R Chapters</p>
                 </div>
               </div>
