@@ -117,8 +117,8 @@ export default function FTIPortalPage() {
                 </span>
               </div>
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
-                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif' }}
+                className="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight"
+                style={{ fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif', color: '#FFFFFF' }}
               >
                 FTI LDR Training Portal
               </h1>

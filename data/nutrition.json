@@ -1,0 +1,329 @@
+{
+  "profile": {
+    "diet": "pescatarian",
+    "activity": "marathon_runner",
+    "goal": "performance_and_longevity",
+    "weeklyMileage": "50-70",
+    "targetRace": "sub-3:00 marathon",
+    "currentPR": "3:09"
+  },
+  "macroTargets": {
+    "training": {
+      "carbs": "55-60%",
+      "protein": "20-25%",
+      "fats": "20-25%",
+      "carbsGramsPerKg": "6-8",
+      "proteinGramsPerKg": "1.4-1.8"
+    },
+    "recovery": {
+      "carbToProteinRatio": "3:1",
+      "carbsPost": "60-90g",
+      "proteinPost": "20-30g",
+      "fluidOz": "16-24"
+    }
+  },
+  "blueprintMeals": {
+    "nuttyPudding": {
+      "name": "Nutty Pudding (Longevity Protein)",
+      "source": "Bryan Johnson Blueprint",
+      "timing": "breakfast",
+      "prepTime": "5 min",
+      "calories": 415,
+      "macros": {
+        "carbs": 36,
+        "protein": 33,
+        "fat": 22,
+        "fiber": 25
+      },
+      "ingredients": [
+        { "item": "Macadamia nut milk", "amount": "100 mL" },
+        { "item": "Ground macadamia nuts", "amount": "3 Tbsp" },
+        { "item": "Ground walnuts", "amount": "2 tsp" },
+        { "item": "Chia seeds", "amount": "2 Tbsp" },
+        { "item": "Ground flaxseed", "amount": "1 tsp" },
+        { "item": "Cocoa powder (Blueprint or high-quality)", "amount": "6g" },
+        { "item": "Sunflower lecithin", "amount": "1 tsp" },
+        { "item": "Ceylon cinnamon", "amount": "1/2 tsp" },
+        { "item": "Mixed berries (blueberries/raspberries/strawberries)", "amount": "1/2 cup" },
+        { "item": "Cherries", "amount": "3" },
+        { "item": "Pomegranate juice", "amount": "2 oz" },
+        { "item": "Pea protein (optional)", "amount": "30-60g" }
+      ],
+      "benefits": [
+        "High polyphenols from cocoa and berries (antioxidant)",
+        "Omega-3s from chia and flax (anti-inflammatory)",
+        "Monounsaturated fats from macadamia (heart health)",
+        "Complete protein for muscle recovery",
+        "High fiber for gut health"
+      ],
+      "runnerMod": "Add 30-60g pea protein on high-mileage days for recovery"
+    },
+    "superVeggie": {
+      "name": "Super Veggie",
+      "source": "Bryan Johnson Blueprint",
+      "timing": "lunch",
+      "prepTime": "25 min",
+      "calories": 350,
+      "macros": {
+        "carbs": 45,
+        "protein": 18,
+        "fat": 12,
+        "fiber": 20
+      },
+      "ingredients": [
+        { "item": "Black lentils (dry)", "amount": "45g" },
+        { "item": "Broccoli (head + stalk)", "amount": "250g" },
+        { "item": "Cauliflower", "amount": "150g" },
+        { "item": "Shiitake or maitake mushrooms", "amount": "50g" },
+        { "item": "Fresh ginger", "amount": "1 inch" },
+        { "item": "Garlic", "amount": "2 cloves" },
+        { "item": "Ground cumin", "amount": "1 Tbsp" },
+        { "item": "Apple cider vinegar", "amount": "1 Tbsp" },
+        { "item": "Fresh lime", "amount": "1" },
+        { "item": "Extra virgin olive oil", "amount": "1 Tbsp" },
+        { "item": "Hemp seeds (topping)", "amount": "2 Tbsp" },
+        { "item": "NuSalt (potassium chloride)", "amount": "to taste" }
+      ],
+      "method": [
+        "Boil lentils 18-20 min until al dente, drain and rinse",
+        "Boil vegetables 7-9 min until tender (or steam)",
+        "Blend cumin, ACV, lime, lentils, and vegetables until smooth",
+        "Drizzle with EVOO, top with hemp seeds",
+        "Season with NuSalt"
+      ],
+      "benefits": [
+        "High fiber for satiety and gut microbiome",
+        "Complete plant protein from lentils",
+        "Cruciferous vegetables for sulforaphane (anti-cancer)",
+        "Mushrooms for immune support",
+        "Potassium for electrolyte balance"
+      ],
+      "runnerMod": "Add extra lentils (60g dry) on long run days for more carbs"
+    }
+  },
+  "pescatarianMeals": {
+    "salmonBowl": {
+      "name": "Omega Recovery Bowl",
+      "timing": "post-long-run",
+      "prepTime": "20 min",
+      "calories": 650,
+      "macros": {
+        "carbs": 70,
+        "protein": 40,
+        "fat": 22
+      },
+      "ingredients": [
+        { "item": "Wild salmon fillet", "amount": "150g" },
+        { "item": "Quinoa (cooked)", "amount": "1 cup" },
+        { "item": "Sweet potato (roasted)", "amount": "1 medium" },
+        { "item": "Spinach", "amount": "2 cups" },
+        { "item": "Avocado", "amount": "1/2" },
+        { "item": "Lemon juice", "amount": "1 Tbsp" },
+        { "item": "EVOO", "amount": "1 Tbsp" },
+        { "item": "Hemp seeds", "amount": "1 Tbsp" }
+      ],
+      "benefits": [
+        "3:1 carb to protein ratio (optimal recovery)",
+        "Omega-3 DHA/EPA from salmon (anti-inflammatory)",
+        "Complex carbs for glycogen replenishment",
+        "Iron from spinach for oxygen transport",
+        "Potassium from sweet potato for electrolytes"
+      ]
+    },
+    "tunaPoke": {
+      "name": "Ahi Tuna Poke Bowl",
+      "timing": "dinner",
+      "prepTime": "15 min",
+      "calories": 550,
+      "macros": {
+        "carbs": 55,
+        "protein": 35,
+        "fat": 18
+      },
+      "ingredients": [
+        { "item": "Sushi-grade ahi tuna", "amount": "150g" },
+        { "item": "Brown rice (cooked)", "amount": "1 cup" },
+        { "item": "Edamame (shelled)", "amount": "1/2 cup" },
+        { "item": "Cucumber", "amount": "1/2" },
+        { "item": "Avocado", "amount": "1/2" },
+        { "item": "Sesame seeds", "amount": "1 Tbsp" },
+        { "item": "Low-sodium soy sauce", "amount": "2 Tbsp" },
+        { "item": "Sesame oil", "amount": "1 tsp" },
+        { "item": "Green onion", "amount": "2 stalks" }
+      ],
+      "benefits": [
+        "Lean protein for muscle repair",
+        "Complex carbs from brown rice",
+        "Healthy fats from avocado and sesame",
+        "Complete amino acid profile"
+      ]
+    },
+    "shrimpStirfry": {
+      "name": "Shrimp Power Stir-Fry",
+      "timing": "pre-long-run dinner",
+      "prepTime": "20 min",
+      "calories": 580,
+      "macros": {
+        "carbs": 65,
+        "protein": 35,
+        "fat": 16
+      },
+      "ingredients": [
+        { "item": "Shrimp (peeled)", "amount": "200g" },
+        { "item": "Brown rice or rice noodles", "amount": "1 cup cooked" },
+        { "item": "Broccoli florets", "amount": "1 cup" },
+        { "item": "Bell peppers (mixed)", "amount": "1 cup" },
+        { "item": "Snap peas", "amount": "1/2 cup" },
+        { "item": "Garlic", "amount": "3 cloves" },
+        { "item": "Fresh ginger", "amount": "1 Tbsp" },
+        { "item": "Low-sodium soy sauce", "amount": "2 Tbsp" },
+        { "item": "Coconut aminos", "amount": "1 Tbsp" },
+        { "item": "Sesame oil", "amount": "1 Tbsp" }
+      ],
+      "benefits": [
+        "High carb for glycogen loading",
+        "Lean protein from shrimp",
+        "Antioxidants from colorful vegetables",
+        "Anti-inflammatory ginger"
+      ]
+    },
+    "sardineToast": {
+      "name": "Sardine Super Toast",
+      "timing": "quick lunch",
+      "prepTime": "5 min",
+      "calories": 420,
+      "macros": {
+        "carbs": 35,
+        "protein": 28,
+        "fat": 20
+      },
+      "ingredients": [
+        { "item": "Wild sardines in olive oil", "amount": "1 can (120g)" },
+        { "item": "Sourdough bread", "amount": "2 slices" },
+        { "item": "Avocado", "amount": "1/2" },
+        { "item": "Cherry tomatoes", "amount": "5" },
+        { "item": "Lemon juice", "amount": "1 Tbsp" },
+        { "item": "Fresh dill", "amount": "1 Tbsp" },
+        { "item": "Capers", "amount": "1 tsp" },
+        { "item": "Red onion (thin slice)", "amount": "2 Tbsp" }
+      ],
+      "benefits": [
+        "Highest omega-3 per serving of any fish",
+        "Calcium from sardine bones",
+        "Vitamin D for bone health",
+        "No mercury concerns (small fish)"
+      ]
+    }
+  },
+  "berryNutMixes": {
+    "morningMix": {
+      "name": "Blueprint Morning Mix",
+      "ingredients": [
+        { "item": "Blueberries", "amount": "1/4 cup" },
+        { "item": "Raspberries", "amount": "1/4 cup" },
+        { "item": "Macadamia nuts", "amount": "10" },
+        { "item": "Walnuts", "amount": "7 halves" },
+        { "item": "Brazil nut", "amount": "1" }
+      ],
+      "benefits": "Polyphenols + healthy fats + selenium",
+      "calories": 280
+    },
+    "recoveryMix": {
+      "name": "Runner Recovery Mix",
+      "ingredients": [
+        { "item": "Tart cherries (dried)", "amount": "2 Tbsp" },
+        { "item": "Goji berries", "amount": "1 Tbsp" },
+        { "item": "Almonds", "amount": "15" },
+        { "item": "Pumpkin seeds", "amount": "2 Tbsp" },
+        { "item": "Dark chocolate chips (85%)", "amount": "1 Tbsp" }
+      ],
+      "benefits": "Anti-inflammatory + magnesium + antioxidants",
+      "calories": 320
+    },
+    "preRunMix": {
+      "name": "Quick Energy Mix",
+      "ingredients": [
+        { "item": "Medjool dates", "amount": "2" },
+        { "item": "Cashews", "amount": "10" },
+        { "item": "Dried mango", "amount": "2 Tbsp" },
+        { "item": "Coconut flakes", "amount": "1 Tbsp" }
+      ],
+      "benefits": "Quick carbs + potassium + electrolytes",
+      "calories": 340
+    }
+  },
+  "weeklyMealPlan": {
+    "monday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Super Veggie",
+      "dinner": "Salmon Bowl",
+      "snack": "Morning Mix"
+    },
+    "tuesday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Sardine Super Toast",
+      "dinner": "Shrimp Stir-Fry",
+      "snack": "Recovery Mix"
+    },
+    "wednesday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Super Veggie",
+      "dinner": "Tuna Poke Bowl",
+      "snack": "Morning Mix"
+    },
+    "thursday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Salmon Bowl (post-tempo)",
+      "dinner": "Super Veggie + extra lentils",
+      "snack": "Recovery Mix"
+    },
+    "friday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Sardine Super Toast",
+      "dinner": "Shrimp Stir-Fry (pre-long run carb load)",
+      "snack": "Pre-Run Mix"
+    },
+    "saturday": {
+      "breakfast": "Nutty Pudding + banana (pre-long run)",
+      "postRun": "Salmon Bowl (immediate recovery)",
+      "dinner": "Tuna Poke Bowl",
+      "snack": "Recovery Mix"
+    },
+    "sunday": {
+      "breakfast": "Nutty Pudding",
+      "lunch": "Super Veggie",
+      "dinner": "Shrimp Stir-Fry",
+      "snack": "Morning Mix"
+    }
+  },
+  "scienceNotes": {
+    "blueprintPrinciples": [
+      "Caloric restriction (24% below maintenance) for longevity biomarkers",
+      "Eating window: Final meal 2+ hours before bed for sleep quality",
+      "Plant-forward with strategic protein timing",
+      "High polyphenol intake (cocoa, berries) for cellular health",
+      "Omega-3 emphasis (aim for 2-3g EPA+DHA daily)"
+    ],
+    "runnerAdaptations": [
+      "Increase carbs to 6-8g/kg on training days (vs Blueprint's lower carb)",
+      "Protein timing: 20-30g within 45 min post-run",
+      "Pre-long-run: Extra carbs night before + morning of",
+      "Post-long-run: 3:1 carb:protein ratio for glycogen",
+      "Hydration: 16-24 oz fluid per hour of running"
+    ],
+    "pescatarianAdvantages": [
+      "Omega-3 DHA/EPA from fish (more bioavailable than plant ALA)",
+      "B12 from seafood (often lacking in vegan diets)",
+      "High-quality complete protein",
+      "Lower environmental impact than meat",
+      "Mercury management: favor small fish (sardines, anchovies)"
+    ]
+  },
+  "sources": [
+    "https://protocol.bryanjohnson.com/Step-1-Step-2-Step-3",
+    "https://blueprint.bryanjohnson.com/blogs/news/blueprint-recipes",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2547869/",
+    "https://www.hopkinsmedicine.org/health/wellness-and-prevention/runners-diet",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6839090/"
+  ]
+}

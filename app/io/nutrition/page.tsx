@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, ReactNode } from "react";
 import Link from "next/link";
+import nutritionData from "@/data/nutrition.json";
 
 // ===================== TYPES =====================
 interface FoodEntry {
@@ -585,6 +586,380 @@ function AIAnalysisPanel({ entries, onAnalyze, analysis, isAnalyzing }: {
   );
 }
 
+// Blueprint Meals Section
+function BlueprintMeals() {
+  const [activeTab, setActiveTab] = useState<'blueprint' | 'pescatarian' | 'mixes' | 'weekly'>('blueprint');
+  const [expandedMeal, setExpandedMeal] = useState<string | null>(null);
+
+  const blueprintMeals = nutritionData.blueprintMeals;
+  const pescatarianMeals = nutritionData.pescatarianMeals;
+  const mixes = nutritionData.berryNutMixes;
+  const weeklyPlan = nutritionData.weeklyMealPlan;
+  const science = nutritionData.scienceNotes;
+
+  return (
+    <div className="space-y-6">
+      {/* Tabs */}
+      <div className="flex flex-wrap gap-2">
+        {[
+          { key: 'blueprint' as const, label: 'Blueprint Core', icon: '🧪' },
+          { key: 'pescatarian' as const, label: 'Pescatarian', icon: '🐟' },
+          { key: 'mixes' as const, label: 'Nut & Berry Mixes', icon: '🫐' },
+          { key: 'weekly' as const, label: 'Weekly Plan', icon: '📅' },
+        ].map((tab) => (
+          <button
+            key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              activeTab === tab.key
+                ? 'bg-deep-forest text-ivory shadow-lg'
+                : 'bg-ivory text-deep-forest hover:bg-sage/20'
+            }`}
+          >
+            <span>{tab.icon}</span>
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Blueprint Core Tab */}
+      {activeTab === 'blueprint' && (
+        <div className="space-y-4">
+          <div className="p-4 rounded-xl bg-gradient-to-br from-sage/20 to-sage/5 border border-sage/30">
+            <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Bryan Johnson&apos;s Blueprint Protocol</p>
+            <p className="text-sm text-deep-forest/80">
+              Science-backed meals designed for longevity. Adapted here for a pescatarian marathon runner.
+            </p>
+          </div>
+
+          {/* Nutty Pudding */}
+          <div className="bg-ivory rounded-xl overflow-hidden">
+            <button
+              onClick={() => setExpandedMeal(expandedMeal === 'nutty' ? null : 'nutty')}
+              className="w-full p-5 flex items-start justify-between text-left hover:bg-sage/5 transition-colors"
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-2xl">🥜</span>
+                  <h4 className="text-lg font-medium text-deep-forest" style={{ fontFamily: 'var(--font-instrument)' }}>
+                    {blueprintMeals.nuttyPudding.name}
+                  </h4>
+                </div>
+                <p className="text-sm text-deep-forest/60">Breakfast • {blueprintMeals.nuttyPudding.prepTime} prep</p>
+              </div>
+              <div className="text-right">
+                <p className="text-lg font-bold" style={{ color: '#97A97C' }}>{blueprintMeals.nuttyPudding.calories}</p>
+                <p className="text-xs text-deep-forest/50">calories</p>
+              </div>
+            </button>
+            {expandedMeal === 'nutty' && (
+              <div className="px-5 pb-5 border-t border-sage/10">
+                {/* Macros */}
+                <div className="grid grid-cols-4 gap-3 py-4">
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Carbs</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.nuttyPudding.macros.carbs}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Protein</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.nuttyPudding.macros.protein}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Fat</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.nuttyPudding.macros.fat}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Fiber</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.nuttyPudding.macros.fiber}g</p>
+                  </div>
+                </div>
+
+                {/* Ingredients */}
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Ingredients</p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    {blueprintMeals.nuttyPudding.ingredients.map((ing, i) => (
+                      <div key={i} className="flex items-center justify-between p-2 rounded bg-cream">
+                        <span className="text-sm text-deep-forest">{ing.item}</span>
+                        <span className="text-xs text-deep-forest/50 font-mono">{ing.amount}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Benefits */}
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Benefits</p>
+                  <div className="flex flex-wrap gap-2">
+                    {blueprintMeals.nuttyPudding.benefits.map((b, i) => (
+                      <span key={i} className="px-3 py-1 rounded-full text-xs" style={{ backgroundColor: '#97A97C20', color: '#546E40' }}>
+                        {b}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Runner Mod */}
+                <div className="p-3 rounded-lg" style={{ backgroundColor: '#FABF3420', borderLeft: '3px solid #FABF34' }}>
+                  <p className="text-xs uppercase tracking-wider mb-1" style={{ color: '#FABF34' }}>Runner Modification</p>
+                  <p className="text-sm text-deep-forest">{blueprintMeals.nuttyPudding.runnerMod}</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Super Veggie */}
+          <div className="bg-ivory rounded-xl overflow-hidden">
+            <button
+              onClick={() => setExpandedMeal(expandedMeal === 'super' ? null : 'super')}
+              className="w-full p-5 flex items-start justify-between text-left hover:bg-sage/5 transition-colors"
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-2xl">🥦</span>
+                  <h4 className="text-lg font-medium text-deep-forest" style={{ fontFamily: 'var(--font-instrument)' }}>
+                    {blueprintMeals.superVeggie.name}
+                  </h4>
+                </div>
+                <p className="text-sm text-deep-forest/60">Lunch • {blueprintMeals.superVeggie.prepTime} prep</p>
+              </div>
+              <div className="text-right">
+                <p className="text-lg font-bold" style={{ color: '#97A97C' }}>{blueprintMeals.superVeggie.calories}</p>
+                <p className="text-xs text-deep-forest/50">calories</p>
+              </div>
+            </button>
+            {expandedMeal === 'super' && (
+              <div className="px-5 pb-5 border-t border-sage/10">
+                {/* Macros */}
+                <div className="grid grid-cols-4 gap-3 py-4">
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Carbs</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.superVeggie.macros.carbs}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Protein</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.superVeggie.macros.protein}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Fat</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.superVeggie.macros.fat}g</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50">Fiber</p>
+                    <p className="text-lg font-bold text-deep-forest">{blueprintMeals.superVeggie.macros.fiber}g</p>
+                  </div>
+                </div>
+
+                {/* Ingredients */}
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Ingredients</p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    {blueprintMeals.superVeggie.ingredients.map((ing, i) => (
+                      <div key={i} className="flex items-center justify-between p-2 rounded bg-cream">
+                        <span className="text-sm text-deep-forest">{ing.item}</span>
+                        <span className="text-xs text-deep-forest/50 font-mono">{ing.amount}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Method */}
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Method</p>
+                  <ol className="space-y-2">
+                    {blueprintMeals.superVeggie.method.map((step, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-deep-forest">
+                        <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style={{ backgroundColor: '#97A97C', color: '#FFF5EB' }}>
+                          {i + 1}
+                        </span>
+                        {step}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Benefits */}
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Benefits</p>
+                  <div className="flex flex-wrap gap-2">
+                    {blueprintMeals.superVeggie.benefits.map((b, i) => (
+                      <span key={i} className="px-3 py-1 rounded-full text-xs" style={{ backgroundColor: '#97A97C20', color: '#546E40' }}>
+                        {b}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Runner Mod */}
+                <div className="p-3 rounded-lg" style={{ backgroundColor: '#FABF3420', borderLeft: '3px solid #FABF34' }}>
+                  <p className="text-xs uppercase tracking-wider mb-1" style={{ color: '#FABF34' }}>Runner Modification</p>
+                  <p className="text-sm text-deep-forest">{blueprintMeals.superVeggie.runnerMod}</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Science Notes */}
+          <div className="p-4 rounded-xl" style={{ backgroundColor: '#3B412D' }}>
+            <p className="text-xs uppercase tracking-wider mb-3" style={{ color: '#FABF34' }}>Blueprint Science Principles</p>
+            <ul className="space-y-2">
+              {science.blueprintPrinciples.map((p, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: '#EFE4D6' }}>
+                  <span style={{ color: '#97A97C' }}>•</span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {/* Pescatarian Tab */}
+      {activeTab === 'pescatarian' && (
+        <div className="space-y-4">
+          {Object.entries(pescatarianMeals).map(([key, meal]) => (
+            <div key={key} className="bg-ivory rounded-xl overflow-hidden">
+              <button
+                onClick={() => setExpandedMeal(expandedMeal === key ? null : key)}
+                className="w-full p-5 flex items-start justify-between text-left hover:bg-sage/5 transition-colors"
+              >
+                <div>
+                  <h4 className="text-lg font-medium text-deep-forest" style={{ fontFamily: 'var(--font-instrument)' }}>
+                    {meal.name}
+                  </h4>
+                  <p className="text-sm text-deep-forest/60">{meal.timing} • {meal.prepTime} prep</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-lg font-bold" style={{ color: '#0067B1' }}>{meal.calories}</p>
+                  <p className="text-xs text-deep-forest/50">calories</p>
+                </div>
+              </button>
+              {expandedMeal === key && (
+                <div className="px-5 pb-5 border-t border-sage/10">
+                  {/* Macros */}
+                  <div className="grid grid-cols-3 gap-3 py-4">
+                    <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                      <p className="text-xs text-deep-forest/50">Carbs</p>
+                      <p className="text-lg font-bold text-deep-forest">{meal.macros.carbs}g</p>
+                    </div>
+                    <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                      <p className="text-xs text-deep-forest/50">Protein</p>
+                      <p className="text-lg font-bold text-deep-forest">{meal.macros.protein}g</p>
+                    </div>
+                    <div className="text-center p-3 rounded-lg" style={{ backgroundColor: '#EFE4D6' }}>
+                      <p className="text-xs text-deep-forest/50">Fat</p>
+                      <p className="text-lg font-bold text-deep-forest">{meal.macros.fat}g</p>
+                    </div>
+                  </div>
+
+                  {/* Ingredients */}
+                  <div className="mb-4">
+                    <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#0067B1' }}>Ingredients</p>
+                    <div className="grid md:grid-cols-2 gap-2">
+                      {meal.ingredients.map((ing, i) => (
+                        <div key={i} className="flex items-center justify-between p-2 rounded bg-cream">
+                          <span className="text-sm text-deep-forest">{ing.item}</span>
+                          <span className="text-xs text-deep-forest/50 font-mono">{ing.amount}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Benefits */}
+                  <div>
+                    <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#0067B1' }}>Runner Benefits</p>
+                    <div className="flex flex-wrap gap-2">
+                      {meal.benefits.map((b, i) => (
+                        <span key={i} className="px-3 py-1 rounded-full text-xs" style={{ backgroundColor: '#0067B120', color: '#003763' }}>
+                          {b}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+
+          {/* Pescatarian Advantages */}
+          <div className="p-4 rounded-xl" style={{ backgroundColor: '#003763' }}>
+            <p className="text-xs uppercase tracking-wider mb-3" style={{ color: '#00C9D4' }}>Pescatarian Advantages for Runners</p>
+            <ul className="space-y-2">
+              {science.pescatarianAdvantages.map((p, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: '#FFF5EB' }}>
+                  <span style={{ color: '#00C9D4' }}>•</span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {/* Mixes Tab */}
+      {activeTab === 'mixes' && (
+        <div className="grid md:grid-cols-3 gap-4">
+          {Object.entries(mixes).map(([key, mix]) => (
+            <div key={key} className="bg-ivory rounded-xl p-5">
+              <h4 className="font-medium text-deep-forest mb-1" style={{ fontFamily: 'var(--font-instrument)' }}>
+                {mix.name}
+              </h4>
+              <p className="text-sm mb-3" style={{ color: '#FABF34' }}>{mix.calories} cal</p>
+
+              <div className="space-y-2 mb-4">
+                {mix.ingredients.map((ing, i) => (
+                  <div key={i} className="flex items-center justify-between text-sm">
+                    <span className="text-deep-forest/80">{ing.item}</span>
+                    <span className="text-deep-forest/50 text-xs font-mono">{ing.amount}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-xs p-2 rounded" style={{ backgroundColor: '#97A97C20', color: '#546E40' }}>
+                {mix.benefits}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Weekly Plan Tab */}
+      {activeTab === 'weekly' && (
+        <div className="space-y-3">
+          {Object.entries(weeklyPlan).map(([day, meals]) => (
+            <div key={day} className="bg-ivory rounded-xl p-4">
+              <h4 className="font-medium text-deep-forest capitalize mb-3" style={{ fontFamily: 'var(--font-instrument)' }}>
+                {day}
+              </h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                {Object.entries(meals).map(([mealTime, mealName]) => (
+                  <div key={mealTime} className="p-2 rounded" style={{ backgroundColor: '#EFE4D6' }}>
+                    <p className="text-xs text-deep-forest/50 capitalize">{mealTime}</p>
+                    <p className="text-sm text-deep-forest">{mealName}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {/* Runner Adaptations */}
+          <div className="p-4 rounded-xl" style={{ backgroundColor: '#FABF3420', border: '1px solid #FABF34' }}>
+            <p className="text-xs uppercase tracking-wider mb-3" style={{ color: '#FABF34' }}>Runner Adaptations</p>
+            <ul className="space-y-2">
+              {science.runnerAdaptations.map((p, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-deep-forest">
+                  <span style={{ color: '#FABF34' }}>•</span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // Runner Recommendations Section
 function RunnerRecommendations() {
   const [activeTab, setActiveTab] = useState<keyof typeof RUNNER_RECOMMENDATIONS>("marathon");
@@ -1055,6 +1430,24 @@ export default function NutritionPage() {
               <FoodDatabaseCard key={food.name} food={food} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <hr className="rule" />
+
+      {/* Blueprint Meals */}
+      <section className="py-12 bg-cream">
+        <div className="container-editorial">
+          <div className="mb-6">
+            <p className="light-bg-label mb-2">Reliable Meals</p>
+            <h2 className="text-2xl text-deep-forest" style={{ fontFamily: 'var(--font-instrument)' }}>
+              Blueprint-Style Nutrition
+            </h2>
+            <p className="text-sm text-deep-forest/60 mt-2">
+              Science-backed meals from Bryan Johnson&apos;s Blueprint, adapted for pescatarian runners.
+            </p>
+          </div>
+          <BlueprintMeals />
         </div>
       </section>
 
