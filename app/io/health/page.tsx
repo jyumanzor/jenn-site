@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
+import IOAuthGate from "@/components/IOAuthGate";
 
 // Color palette
 const colors = {
@@ -1694,6 +1695,7 @@ export default function HealthDashboardPage() {
   }
 
   return (
+    <IOAuthGate>
     <div style={{ backgroundColor: colors.cream }} className="min-h-screen">
       {/* Hero Section */}
       <HeroSection latestHealth={latestHealth} latestOura={latestOura} />
@@ -1724,5 +1726,6 @@ export default function HealthDashboardPage() {
         </div>
       </section>
     </div>
+    </IOAuthGate>
   );
 }

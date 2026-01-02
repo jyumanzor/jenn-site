@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import playlistsData from "@/data/playlists.json";
+import IOAuthGate from "@/components/IOAuthGate";
 
 // Types
 interface Track {
@@ -351,6 +352,7 @@ export default function MusicAdminPage() {
   }
 
   return (
+    <IOAuthGate>
     <div className="min-h-screen" style={{ backgroundColor: "#FFF5EB" }}>
       {/* Header */}
       <section className="pt-8 pb-12 md:pt-16 md:pb-16">
@@ -884,5 +886,6 @@ export default function MusicAdminPage() {
         </div>
       </section>
     </div>
+    </IOAuthGate>
   );
 }

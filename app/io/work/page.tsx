@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
+import IOAuthGate from "@/components/IOAuthGate";
 
 // Types
 type TaskPriority = "high" | "medium" | "low";
@@ -204,6 +205,7 @@ export default function WorkJournalPage() {
   };
 
   return (
+    <IOAuthGate>
     <div className="bg-cream min-h-screen">
       {/* Header */}
       <section className="pt-8 pb-8 md:pt-16 md:pb-12">
@@ -553,5 +555,6 @@ export default function WorkJournalPage() {
         </div>
       )}
     </div>
+    </IOAuthGate>
   );
 }

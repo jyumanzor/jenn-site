@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import IOAuthGate from "@/components/IOAuthGate";
 
 // Color palette
 const colors = {
@@ -437,6 +438,7 @@ export default function RunningAdminPage() {
   }
 
   return (
+    <IOAuthGate>
     <div className="min-h-screen" style={{ backgroundColor: colors.cream }}>
       {/* Hero Header */}
       <section className="pt-28 pb-12 md:pt-36 md:pb-16" style={{ backgroundColor: colors.deepForest }}>
@@ -1006,5 +1008,6 @@ export default function RunningAdminPage() {
         </div>
       </section>
     </div>
+    </IOAuthGate>
   );
 }

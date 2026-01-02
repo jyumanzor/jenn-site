@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import IOAuthGate from "@/components/IOAuthGate";
 
 const tools = [
   {
@@ -56,6 +57,7 @@ export default function SandboxLanding() {
   };
 
   return (
+    <IOAuthGate>
     <div className="min-h-screen bg-cream">
       <div className="container-editorial pt-8 pb-16 md:pt-16 md:pb-20">
         {/* Header */}
@@ -171,5 +173,6 @@ export default function SandboxLanding() {
         </div>
       </div>
     </div>
+    </IOAuthGate>
   );
 }
