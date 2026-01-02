@@ -186,57 +186,6 @@ export default function PortfolioPage() {
               Building interfaces that feel considered. Every gradient, every interaction, every detail serves a purpose.
             </p>
           </div>
-
-          {/* Floating stats */}
-          <div
-            className={`mt-16 grid grid-cols-3 gap-4 max-w-xl transition-all duration-1000 delay-300 ${
-              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <div className="text-center">
-              <p
-                className="text-4xl md:text-5xl font-light"
-                style={{
-                  fontFamily: "var(--font-instrument)",
-                  color: "#d4ed39",
-                  textShadow: "0 2px 20px rgba(212,237,57,0.3)",
-                }}
-              >
-                2
-              </p>
-              <p className="text-xs uppercase tracking-wider mt-1" style={{ color: "#546E40" }}>
-                Major Projects
-              </p>
-            </div>
-            <div className="text-center">
-              <p
-                className="text-4xl md:text-5xl font-light"
-                style={{
-                  fontFamily: "var(--font-instrument)",
-                  color: "#FABF34",
-                }}
-              >
-                7+
-              </p>
-              <p className="text-xs uppercase tracking-wider mt-1" style={{ color: "#546E40" }}>
-                Features Built
-              </p>
-            </div>
-            <div className="text-center">
-              <p
-                className="text-4xl md:text-5xl font-light"
-                style={{
-                  fontFamily: "var(--font-instrument)",
-                  color: "#97A97C",
-                }}
-              >
-                10
-              </p>
-              <p className="text-xs uppercase tracking-wider mt-1" style={{ color: "#546E40" }}>
-                Brand Colors
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -406,15 +355,15 @@ export default function PortfolioPage() {
                 FTI LDR Training Portal
               </h2>
               <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.8)" }}>
-                A comprehensive internal training platform built for FTI Consulting&apos;s Litigation &amp; Dispute Resolution practice. 30+ pages, 10 interactive tools, and a 14-chapter R programming manual.
+                A comprehensive internal training platform built for FTI Consulting&apos;s Litigation &amp; Dispute Resolution practice. 71 pages, 14 interactive tools, and a 14-chapter R programming manual.
               </p>
 
               {/* Key Stats */}
               <div className="grid grid-cols-4 gap-4 mb-8">
                 {[
-                  { value: "30+", label: "Pages" },
-                  { value: "10", label: "Tools" },
-                  { value: "8", label: "Hubs" },
+                  { value: "71", label: "Pages" },
+                  { value: "14", label: "Tools" },
+                  { value: "12", label: "Hubs" },
                   { value: "14", label: "R Chapters" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">

@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const portalStats = {
-  totalPages: 30,
-  tools: 10,
-  trainingCategories: 8,
+  totalPages: 71,
+  tools: 14,
+  trainingHubs: 12,
   rManualChapters: 14,
+  teamFeatures: 9,
+  caseStudies: 5,
 };
 
 const tools = [
@@ -21,6 +23,10 @@ const tools = [
   { name: "Project Folder Generator", desc: "Standardized folder structures with shell scripts", color: "#008FBE" },
   { name: "Document Templates", desc: "Expert report structures with click-to-copy sections", color: "#E0503D" },
   { name: "Methodology Diagrams", desc: "Interactive visualization of economic methodologies", color: "#003763" },
+  { name: "Map Builder", desc: "Interactive geographic visualizations for case analysis", color: "#0067B1" },
+  { name: "Data QC Tool", desc: "Automated data quality checks and validation reports", color: "#00C9D4" },
+  { name: "Stata Guide", desc: "Comprehensive Stata reference with code examples", color: "#8B5CF6" },
+  { name: "Excel Checker", desc: "Automated spreadsheet auditing for common errors", color: "#E8A847" },
 ];
 
 const hubs = [
@@ -29,9 +35,13 @@ const hubs = [
   { name: "Technical Training", items: ["Stata", "Excel", "VBA Automation", "SQL Basics"], icon: "terminal" },
   { name: "Consultant Roadmap", items: ["New Hire Journey", "Time Entry Guide", "Communication Skills"], icon: "map" },
   { name: "Case Studies", items: ["IP/Pharma", "Antitrust", "Securities", "Class Actions"], icon: "briefcase" },
-  { name: "Economics Deep Dives", items: ["IP Damages", "Hatch-Waxman", "Business Valuation"], icon: "chart" },
+  { name: "Economics Deep Dives", items: ["IP Damages", "Hatch-Waxman", "Business Valuation", "Financial Concepts"], icon: "chart" },
   { name: "Templates Hub", items: ["Excel", "PowerPoint", "Word", "Project Folders"], icon: "file" },
   { name: "AI & Automation", items: ["Best Practices", "Prompt Bank", "Automation Guide"], icon: "sparkle" },
+  { name: "Legal Training", items: ["Expert Standards", "Discovery Process", "Workpapers Guide"], icon: "scale" },
+  { name: "Team Dashboard", items: ["Birthdays", "PTO Calendar", "Directory", "Org Chart"], icon: "users" },
+  { name: "Social Hub", items: ["Team Activities", "Dining Guide", "Photo Gallery"], icon: "heart" },
+  { name: "LDR Seminars", items: ["Training Sessions", "Recorded Presentations", "Resources"], icon: "video" },
 ];
 
 // Bar graph navigation items from the actual FTI portal
@@ -114,37 +124,49 @@ export default function FTIPortalPage() {
               </h1>
               <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl">
                 A comprehensive internal training platform built for FTI Consulting&apos;s
-                Litigation &amp; Dispute Resolution practice. 30+ pages, 10 interactive tools,
-                and an 14-chapter R programming manual.
+                Litigation &amp; Dispute Resolution practice. 71 pages, 14 interactive tools,
+                12 training hubs, and a 14-chapter R programming manual.
               </p>
             </div>
 
             {/* Stats */}
             <div className="md:col-span-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10">
-                  <p className="text-4xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>
-                    {portalStats.totalPages}+
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>
+                    {portalStats.totalPages}
                   </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Pages Built</p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">Pages</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10">
-                  <p className="text-4xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>
                     {portalStats.tools}
                   </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Interactive Tools</p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">Tools</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10">
-                  <p className="text-4xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>
-                    {portalStats.trainingCategories}
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>
+                    {portalStats.trainingHubs}
                   </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Training Hubs</p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">Hubs</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10">
-                  <p className="text-4xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#E8A847' }}>
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#E8A847' }}>
                     {portalStats.rManualChapters}
                   </p>
-                  <p className="text-white/60 text-xs uppercase tracking-wider mt-1">R Manual Chapters</p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">R Chapters</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#8B5CF6' }}>
+                    {portalStats.teamFeatures}
+                  </p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">Team Features</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center border border-white/10">
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#E0503D' }}>
+                    {portalStats.caseStudies}
+                  </p>
+                  <p className="text-white/60 text-[10px] uppercase tracking-wider mt-1">Case Studies</p>
                 </div>
               </div>
             </div>
@@ -326,7 +348,7 @@ export default function FTIPortalPage() {
                   <div className="absolute top-0 right-0 w-64 h-64 bg-[#00C9D4]/10 rounded-full blur-3xl" />
                   <div className="relative z-10">
                     <p className="text-[#00C9D4] text-xs font-medium uppercase tracking-wider mb-1">Team & Admin</p>
-                    <h3 className="text-white text-xl" style={{ fontFamily: 'var(--font-instrument)' }}>Team Dashboard</h3>
+                    <h3 className="text-xl" style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}>Team Dashboard</h3>
                   </div>
                 </div>
 
@@ -665,8 +687,8 @@ export default function FTIPortalPage() {
                 }}
               >
                 <h3
-                  className="text-2xl text-white mb-6"
-                  style={{ fontFamily: 'var(--font-instrument)' }}
+                  className="text-2xl mb-6"
+                  style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
                 >
                   {hubs[activeHub].name}
                 </h3>
@@ -676,7 +698,7 @@ export default function FTIPortalPage() {
                       key={i}
                       className="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/10"
                     >
-                      <span className="text-white/90">{item}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.9)' }}>{item}</span>
                     </div>
                   ))}
                 </div>

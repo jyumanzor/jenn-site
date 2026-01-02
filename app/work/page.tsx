@@ -153,7 +153,7 @@ export default function WorkPage() {
               </h2>
               <p className="text-white/80 leading-relaxed mb-6">
                 A comprehensive internal training platform I built for FTI Consulting&apos;s Litigation &amp; Dispute Resolution practice.
-                30+ pages, 10 interactive tools, and a 14-chapter R programming manual.
+                71 pages, 14 interactive tools, and a 14-chapter R programming manual.
               </p>
               <Link
                 href="/work/fti-portal"
@@ -169,15 +169,15 @@ export default function WorkPage() {
             <div className="md:col-span-5">
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>30+</p>
+                  <p className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-instrument)' }}>71</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Pages</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>10</p>
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#1BB680' }}>14</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Tools</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
-                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>8</p>
+                  <p className="text-3xl font-bold" style={{ fontFamily: 'var(--font-instrument)', color: '#00C9D4' }}>12</p>
                   <p className="text-white/60 text-xs uppercase tracking-wider mt-1">Training Hubs</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center border border-white/10">
