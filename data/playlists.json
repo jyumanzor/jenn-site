@@ -10,366 +10,729 @@
         {
           "title": "Rumination",
           "artist": "BAANDIT!",
-          "isHighlighted": true
+          "album": "Rumination - Single",
+          "plays": 322,
+          "isHighlighted": false
         },
         {
           "title": "Waayaha Cusub",
           "artist": "Shakarchi & Stranéus",
+          "album": "Steal Chickens From Men And the Future From God",
+          "plays": 19,
           "isHighlighted": false
         },
         {
           "title": "Windowlicker",
           "artist": "Aphex Twin",
+          "album": "Windowlicker - EP",
+          "plays": 13,
           "isHighlighted": false
         },
         {
           "title": "All I Wanna Do",
           "artist": "The Beach Boys",
-          "isHighlighted": true
+          "album": "Sunflower",
+          "plays": 67,
+          "isHighlighted": false
         },
         {
           "title": "She's Leaving Home",
           "artist": "The Beatles",
+          "album": "Sgt. Pepper's Lonely Hearts Club Band",
+          "plays": 14,
           "isHighlighted": false
         },
         {
           "title": "Can't Help It",
           "artist": "Baba Stiltz",
+          "album": "Can't Help It - Single",
+          "plays": 16,
           "isHighlighted": false
         },
         {
           "title": "Sports",
           "artist": "Viagra Boys",
+          "album": "Sports - Single",
+          "plays": 12,
           "isHighlighted": false
         },
         {
           "title": "Bubbles",
           "artist": "Yosi Horikawa",
+          "album": "Wandering - EP",
+          "plays": 16,
           "isHighlighted": false
         },
         {
           "title": "Veridis Quo",
           "artist": "Daft Punk",
+          "album": "Discovery",
+          "plays": 15,
           "isHighlighted": false
         },
         {
           "title": "Rocky Raccoon",
           "artist": "The Beatles",
+          "album": "The Beatles (The White Album)",
+          "plays": 11,
           "isHighlighted": false
         },
         {
           "title": "Mercy Mercy Me (The Ecology)",
           "artist": "Marvin Gaye",
-          "isHighlighted": true
+          "album": "What's Going On",
+          "plays": 93,
+          "isHighlighted": false
         },
         {
           "title": "Flim",
           "artist": "Aphex Twin",
+          "album": "Come to Daddy",
+          "plays": 19,
           "isHighlighted": false
         },
         {
           "title": "Meet the Frownies",
           "artist": "Mr Twin Sister",
+          "album": "Meet the Frownies - Single",
+          "plays": 30,
           "isHighlighted": false
         },
         {
           "title": "Little Bit",
           "artist": "Erika de Casier",
+          "album": "Essentials",
+          "plays": 45,
           "isHighlighted": false
         },
         {
           "title": "Obvs",
           "artist": "Jamie xx",
+          "album": "In Colour",
+          "plays": 18,
           "isHighlighted": false
         },
         {
           "title": "Make Love",
           "artist": "Daft Punk",
+          "album": "Human After All",
+          "plays": 5,
           "isHighlighted": false
         },
         {
           "title": "Passionfruit",
           "artist": "Benny Sings",
+          "album": "Santa Barbara - EP",
+          "plays": 13,
           "isHighlighted": false
         },
         {
           "title": "Someday",
           "artist": "The Strokes",
-          "isHighlighted": true
+          "album": "Is This It",
+          "plays": 61,
+          "isHighlighted": false
         },
         {
           "title": "Novacane",
           "artist": "Frank Ocean",
+          "album": "Novacane - Single",
+          "plays": 34,
           "isHighlighted": false
         },
         {
           "title": "Feel Good Inc. (feat. David Jolicoeur, Kelvin Mercer & Vincent Mason)",
           "artist": "Gorillaz & De La Soul",
+          "album": "Demon Days",
+          "plays": 32,
           "isHighlighted": false
         },
         {
           "title": "Iz - Us",
           "artist": "Aphex Twin",
+          "album": "Come to Daddy",
+          "plays": 10,
           "isHighlighted": false
         },
         {
           "title": "Keep on Mixing",
           "artist": "Mr Twin Sister",
+          "album": "Salt",
+          "plays": 3,
           "isHighlighted": false
         },
         {
           "title": "Islands",
           "artist": "The xx",
+          "album": "xx (Bonus Track Version)",
+          "plays": 39,
           "isHighlighted": false
         },
         {
           "title": "In My Room",
           "artist": "Frank Ocean",
+          "album": "In My Room - Single",
+          "plays": 27,
           "isHighlighted": false
         },
         {
           "title": "Clueless",
           "artist": "The Marías",
-          "isHighlighted": true
+          "album": "Superclean, Vol. II - EP",
+          "plays": 64,
+          "isHighlighted": false
         },
         {
           "title": "Xtal",
           "artist": "Aphex Twin",
+          "album": "Selected Ambient Works 85-92",
+          "plays": 15,
           "isHighlighted": false
         },
         {
           "title": "Blood Bank",
           "artist": "Bon Iver",
+          "album": "Blood Bank (10th Anniversary Edition) - EP",
+          "plays": 7,
           "isHighlighted": false
         },
         {
           "title": "Sofia",
           "artist": "Clairo",
-          "isHighlighted": true
+          "album": "Immunity",
+          "plays": 88,
+          "isHighlighted": false
         },
         {
           "title": "Like That (feat. Gucci Mane)",
           "artist": "Doja Cat",
+          "album": "Hot Pink (Video Deluxe)",
+          "plays": 9,
           "isHighlighted": false
         },
         {
           "title": "Softly",
           "artist": "Clairo",
+          "album": "Immunity",
+          "plays": 15,
           "isHighlighted": false
         },
         {
           "title": "CHIHIRO",
           "artist": "Billie Eilish",
-          "isHighlighted": true
+          "album": "HIT ME HARD AND SOFT",
+          "plays": 135,
+          "isHighlighted": false
         },
         {
           "title": "Kiss Me More (feat. SZA)",
           "artist": "Doja Cat",
+          "album": "Planet Her (Deluxe)",
+          "plays": 9,
           "isHighlighted": false
         },
         {
           "title": "Rollin (feat. Future & Khalid)",
           "artist": "Calvin Harris",
-          "isHighlighted": true
+          "album": "Funk Wav Bounces, Vol. 1",
+          "plays": 108,
+          "isHighlighted": false
         },
         {
           "title": "Gila",
           "artist": "Beach House",
+          "album": "Devotion",
+          "plays": 16,
           "isHighlighted": false
         },
         {
           "title": "Intimidated (feat. H.E.R.)",
           "artist": "KAYTRANADA",
+          "album": "Intimidated - EP",
+          "plays": 8,
           "isHighlighted": false
         },
         {
           "title": "Girl (feat. KAYTRANADA)",
           "artist": "The Internet",
+          "album": "Ego Death",
+          "plays": 0,
           "isHighlighted": false
         },
         {
           "title": "YOU'RE THE ONE (feat. Syd)",
           "artist": "KAYTRANADA",
+          "album": "99.9%",
+          "plays": 1,
           "isHighlighted": false
         },
         {
           "title": "Witchy (feat. Childish Gambino)",
           "artist": "KAYTRANADA",
+          "album": "TIMELESS",
+          "plays": 1,
           "isHighlighted": false
         },
         {
           "title": "4EVA",
           "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Pharrell Williams",
+          "album": "KAYTRAMINÉ",
+          "plays": 23,
           "isHighlighted": false
         },
         {
           "title": "10% (feat. Kali Uchis)",
           "artist": "KAYTRANADA",
+          "album": "BUBBA",
+          "plays": 38,
           "isHighlighted": false
         },
         {
           "title": "Who He Iz",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "album": "KAYTRAMINÉ",
+          "plays": 7,
           "isHighlighted": false
         },
         {
           "title": "letstalkaboutit",
           "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Freddie Gibbs",
+          "album": "KAYTRAMINÉ",
+          "plays": 14,
           "isHighlighted": false
         },
         {
           "title": "Westside",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
-          "isHighlighted": true
+          "album": "KAYTRAMINÉ",
+          "plays": 11,
+          "isHighlighted": false
         },
         {
           "title": "Master P",
           "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Big Sean",
+          "album": "KAYTRAMINÉ",
+          "plays": 12,
           "isHighlighted": false
         },
         {
           "title": "Rebuke",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "album": "KAYTRAMINÉ",
+          "plays": 10,
           "isHighlighted": false
         },
         {
           "title": "Sossaup",
           "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Amaarae",
+          "album": "KAYTRAMINÉ",
+          "plays": 8,
           "isHighlighted": false
         },
         {
           "title": "STFU3",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "album": "KAYTRAMINÉ",
+          "plays": 9,
           "isHighlighted": false
         },
         {
           "title": "UGH UGH",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "album": "KAYTRAMINÉ",
+          "plays": 15,
           "isHighlighted": false
         },
         {
           "title": "EYE",
           "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Snoop Dogg",
+          "album": "KAYTRAMINÉ",
+          "plays": 10,
           "isHighlighted": false
         },
         {
           "title": "K&A",
           "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "album": "KAYTRAMINÉ",
+          "plays": 10,
           "isHighlighted": false
         },
         {
           "title": "Alaska",
           "artist": "Maggie Rogers",
-          "isHighlighted": false
-        },
-        {
-          "title": "Fallingwater",
-          "artist": "Maggie Rogers",
+          "album": "Heard It In A Past Life",
+          "plays": 1,
           "isHighlighted": false
         },
         {
           "title": "Back to December",
           "artist": "Taylor Swift",
+          "album": "Speak Now",
+          "plays": 11,
           "isHighlighted": false
         },
         {
           "title": "Mio Cristo Piange Diamanti",
           "artist": "ROSALÍA",
+          "album": "LUX",
+          "plays": 19,
           "isHighlighted": false
         },
         {
           "title": "La Perla",
           "artist": "ROSALÍA & Yahritza Y Su Esencia",
+          "album": "LUX",
+          "plays": 18,
           "isHighlighted": false
         },
         {
           "title": "Berghain",
           "artist": "ROSALÍA, Björk & Yves Tumor",
-          "isHighlighted": true
+          "album": "LUX",
+          "plays": 6,
+          "isHighlighted": false
         },
         {
           "title": "De Madrugá",
           "artist": "ROSALÍA",
+          "album": "LUX",
+          "plays": 12,
           "isHighlighted": false
         },
         {
           "title": "Memória",
           "artist": "ROSALÍA & Carminho",
+          "album": "LUX",
+          "plays": 8,
           "isHighlighted": false
         },
         {
           "title": "Reliquia",
           "artist": "ROSALÍA",
+          "album": "LUX",
+          "plays": 15,
           "isHighlighted": false
         },
         {
           "title": "Porcelana",
           "artist": "ROSALÍA",
+          "album": "LUX",
+          "plays": 23,
           "isHighlighted": false
         },
         {
           "title": "Last Christmas (Single Version)",
           "artist": "Wham!",
+          "album": "Last Christmas - Single",
+          "plays": 46,
           "isHighlighted": false
         },
         {
           "title": "back to friends",
           "artist": "sombr",
-          "isHighlighted": true
+          "album": "back to friends - Single",
+          "plays": 801,
+          "isHighlighted": false
         },
         {
           "title": "Boston",
           "artist": "Augustana",
-          "isHighlighted": true
+          "album": "All the Stars and Boulevards",
+          "plays": 111,
+          "isHighlighted": false
         },
         {
           "title": "BAILE INoLVIDABLE",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 99,
+          "isHighlighted": false
         },
         {
           "title": "ALAMBRE PúA",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "ALAMBRE PúA - Single",
+          "plays": 76,
+          "isHighlighted": false
         },
         {
           "title": "WELTiTA",
           "artist": "Bad Bunny & Chuwi",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 284,
+          "isHighlighted": false
         },
         {
           "title": "CAFé CON RON",
           "artist": "Bad Bunny & Los Pleneros de la Cresta",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 63,
+          "isHighlighted": false
         },
         {
           "title": "TURiSTA",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 638,
+          "isHighlighted": false
         },
         {
           "title": "DtMF",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 187,
+          "isHighlighted": false
         },
         {
           "title": "EoO",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 183,
+          "isHighlighted": false
         },
         {
           "title": "LA MuDANZA",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "DeBÍ TiRAR MáS FOToS",
+          "plays": 58,
+          "isHighlighted": false
         },
         {
           "title": "WHERE SHE GOES",
           "artist": "Bad Bunny",
-          "isHighlighted": true
+          "album": "nadie sabe lo que va a pasar mañana",
+          "plays": 55,
+          "isHighlighted": false
         },
         {
           "title": "Callaíta",
           "artist": "Bad Bunny & Tainy",
+          "album": "Callaíta - Single",
+          "plays": 27,
+          "isHighlighted": false
+        },
+        {
+          "title": "Moon (feat. Bon Iver)",
+          "artist": "Daniel Caesar",
+          "album": "Son Of Spergy",
+          "plays": 12,
+          "isHighlighted": false
+        },
+        {
+          "title": "Beto’s Horns (fred remix) [Mixed]",
+          "artist": "Fred again.. & CA7RIEL & Paco Amoroso",
+          "album": "Apple Music Live: Fred again.. (DJ Mix)",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "I'm Tired (From \"Euphoria\" An Original HBO Series)",
+          "artist": "Labrinth & Zendaya",
+          "album": "I'm Tired (From \"Euphoria\" An Original HBO Series) - Single",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "(I Just) Died in Your Arms Tonight",
+          "artist": "Cutting Crew",
+          "album": "The Best of Cutting Crew",
+          "plays": 3,
+          "isHighlighted": false
+        },
+        {
+          "title": "Yeh I F****n' Did It (From \"Euphoria\" An Original HBO Series)",
+          "artist": "Labrinth",
+          "album": "Yeh I F****n' Did It (From \"Euphoria\" An Original HBO Series) - Single",
+          "plays": 6,
+          "isHighlighted": false
+        },
+        {
+          "title": "(Pick Me Up) Euphoria [feat. Labrinth] [From \"Euphoria\" An HBO Original Series]",
+          "artist": "James Blake",
+          "album": "(Pick Me Up) Euphoria [feat. Labrinth] [From \"Euphoria\" An HBO Original Series] - Single",
+          "plays": 1,
+          "isHighlighted": false
+        },
+        {
+          "title": "Fly Me to the Moon (In Other Words)",
+          "artist": "Bobby Womack",
+          "album": "The Best of Bobby Womack - The Soul Years",
+          "plays": 319,
+          "isHighlighted": false
+        },
+        {
+          "title": "Who Knows",
+          "artist": "Daniel Caesar",
+          "album": "Son Of Spergy",
+          "plays": 40,
+          "isHighlighted": false
+        },
+        {
+          "title": "Sugar on My Tongue",
+          "artist": "Tyler, The Creator",
+          "album": "DON'T TAP THE GLASS",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "Me Lo Merezco",
+          "artist": "ELENA ROSE",
+          "album": "En Las Nubes - Con Mis Panas",
+          "plays": 110,
+          "isHighlighted": false
+        },
+        {
+          "title": "Desenfocao'",
+          "artist": "Rauw Alejandro",
+          "album": "VICE VERSA",
+          "plays": 67,
+          "isHighlighted": false
+        },
+        {
+          "title": "Rumination",
+          "artist": "BAANDIT!",
+          "album": "Rumination - Single",
+          "plays": 322,
+          "isHighlighted": false
+        },
+        {
+          "title": "Run Cried the Crawling",
+          "artist": "Agnes Obel",
+          "album": "Aventine",
+          "plays": 5,
+          "isHighlighted": false
+        },
+        {
+          "title": "It Ain't Over 'Til It's Over",
+          "artist": "Lenny Kravitz",
+          "album": "Greatest Hits",
+          "plays": 2,
+          "isHighlighted": false
+        },
+        {
+          "title": "Sign Of The Times",
+          "artist": "Daniel Caesar",
+          "album": "Son Of Spergy",
+          "plays": 18,
+          "isHighlighted": false
+        },
+        {
+          "title": "Emily’s Song",
+          "artist": "Daniel Caesar",
+          "album": "Son Of Spergy",
+          "plays": 16,
+          "isHighlighted": false
+        },
+        {
+          "title": "Atmosphere",
+          "artist": "FISHER & Kita Alexander",
+          "album": "Atmosphere - Single",
+          "plays": 3,
+          "isHighlighted": false
+        },
+        {
+          "title": "TAKE IT OFF",
+          "artist": "FISHER & Aatig",
+          "album": "TAKE IT OFF - Single",
+          "plays": 3,
+          "isHighlighted": false
+        },
+        {
+          "title": "Stay",
+          "artist": "FISHER",
+          "album": "Stay - Single",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "Blackberries",
+          "artist": "FISHER & bbyclose",
+          "album": "Blackberries - Single",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "Losing It",
+          "artist": "FISHER",
+          "album": "Losing It - Single",
+          "plays": 1,
+          "isHighlighted": false
+        },
+        {
+          "title": "Somebody (feat. Kimbra & Sante Sansone)",
+          "artist": "Gotye, FISHER & Chris Lake",
+          "album": "Somebody (feat. Kimbra & Sante Sansone) - Single",
+          "plays": 2,
+          "isHighlighted": false
+        },
+        {
+          "title": "Stop It",
+          "artist": "FISHER",
+          "album": "Oi Oi - Single",
+          "plays": 3,
+          "isHighlighted": false
+        },
+        {
+          "title": "Just Feels Tight",
+          "artist": "FISHER",
+          "album": "Just Feels Tight - Single",
+          "plays": 4,
+          "isHighlighted": false
+        },
+        {
+          "title": "Wanna Go Dancin'",
+          "artist": "FISHER",
+          "album": "Freaks - Single",
+          "plays": 3,
+          "isHighlighted": false
+        },
+        {
+          "title": "Crowd Control",
+          "artist": "FISHER",
+          "album": "Crowd Control - Single",
+          "plays": 2,
+          "isHighlighted": false
+        },
+        {
+          "title": "Naked In Manhattan",
+          "artist": "Chappell Roan",
+          "album": "The Rise and Fall of a Midwest Princess",
+          "plays": 22,
+          "isHighlighted": false
+        },
+        {
+          "title": "Marea (We’ve Lost Dancing)",
+          "artist": "Fred again.. & The Blessed Madonna",
+          "album": "Marea (We’ve Lost Dancing) - Single",
+          "plays": 1,
+          "isHighlighted": false
+        },
+        {
+          "title": "Delilah (pull me out of this)",
+          "artist": "Fred again.. & Delilah Montagu",
+          "album": "Actual Life 3 (January 1 - September 9 2022)",
+          "plays": 1,
+          "isHighlighted": false
+        },
+        {
+          "title": "Winny",
+          "artist": "Fred again.., Sammy Virji & Winny",
+          "album": "Winny - Single",
+          "plays": 1,
+          "isHighlighted": false
+        },
+        {
+          "title": "ten",
+          "artist": "Fred again.. & Jozzy",
+          "album": "ten - Single",
+          "plays": 2,
+          "isHighlighted": false
+        },
+        {
+          "title": "Angie (I’ve Been Lost)",
+          "artist": "Fred again..",
+          "album": "Actual Life (April 14 - December 17 2020)",
+          "plays": 1,
           "isHighlighted": false
         }
       ]
