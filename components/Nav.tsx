@@ -118,7 +118,7 @@ export default function Nav() {
 
       {/* Sidebar Panel */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-out flex flex-col ${
+        className={`fixed top-0 right-0 z-50 h-full w-[320px] md:w-[380px] shadow-2xl transform transition-transform duration-300 ease-out flex flex-col ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{ backgroundColor: '#36482e' }}

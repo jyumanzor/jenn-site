@@ -1,0 +1,73 @@
+{
+  "lastUpdated": "2026-01-02",
+  "learnings": [
+    {
+      "id": "1",
+      "date": "2026-01-02",
+      "category": "design",
+      "context": "FTI Portal Page",
+      "learning": "All section titles on dark backgrounds need explicit white color (#FFFFFF) - Tailwind classes alone may not work due to specificity",
+      "tags": ["text-visibility", "color", "tailwind"]
+    },
+    {
+      "id": "2",
+      "date": "2026-01-02",
+      "category": "design",
+      "context": "FTI Portal Page",
+      "learning": "Subtext/descriptions should be text-sm (14px) not text-lg for better hierarchy",
+      "tags": ["typography", "hierarchy"]
+    },
+    {
+      "id": "3",
+      "date": "2026-01-02",
+      "category": "design",
+      "context": "Portfolio Page",
+      "learning": "Floating stats at top of pages can feel redundant - remove unless they add real value",
+      "tags": ["layout", "minimalism"]
+    },
+    {
+      "id": "4",
+      "date": "2026-01-02",
+      "category": "technical",
+      "context": "Nav Component",
+      "learning": "Nav sidebar needs explicit width values (320px mobile, 380px desktop) for proper slide-out",
+      "tags": ["navigation", "responsive"]
+    },
+    {
+      "id": "5",
+      "date": "2026-01-02",
+      "category": "content",
+      "context": "Journal Page",
+      "learning": "Journal entries need context/description explaining what prompted the writing - add 'context' field to journal.json",
+      "tags": ["content", "journal"]
+    },
+    {
+      "id": "6",
+      "date": "2026-01-02",
+      "category": "design",
+      "context": "FTI Portal",
+      "learning": "FTI brand colors: Navy #003763, Blue #0067B1, Cyan #00C9D4, Green #1BB680, Coral #E0503D",
+      "tags": ["color", "brand", "fti"]
+    }
+  ],
+  "forceCommands": [
+    {
+      "trigger": "text not visible",
+      "response": "Use explicit inline style={{ color: '#FFFFFF' }} instead of Tailwind text-white class for dark backgrounds"
+    },
+    {
+      "trigger": "nav not working",
+      "response": "Check sidebar width and translate-x values. Use fixed pixel widths like w-[320px]"
+    }
+  ],
+  "patterns": [
+    {
+      "problem": "Text on dark background not showing",
+      "solution": "Replace Tailwind color classes with inline style={{ color: '#FFFFFF' }} or rgba values"
+    },
+    {
+      "problem": "Section feels cluttered",
+      "solution": "Reduce font sizes (text-lg → text-sm), increase spacing, remove non-essential elements"
+    }
+  ]
+}
