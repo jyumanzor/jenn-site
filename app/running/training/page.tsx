@@ -415,7 +415,7 @@ const DistanceChart = ({ data }: { data: typeof ouraFullData.daily }) => {
             <YAxis hide />
             <Tooltip
               contentStyle={{ backgroundColor: colors.cream, border: "1px solid #e7d8c6", borderRadius: "8px", fontSize: "12px" }}
-              formatter={(value: number) => [`${value.toFixed(1)} mi`, "Distance"]}
+              formatter={(value) => [`${((value as number) ?? 0).toFixed(1)} mi`, "Distance"]}
               labelFormatter={(label) => new Date(label).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
             />
             <Bar dataKey="distance" fill={colors.blue} radius={[4, 4, 0, 0]} />
@@ -526,7 +526,7 @@ const VO2MaxChart = () => {
             <YAxis domain={[48, 56]} tick={{ fontSize: 10, fill: "rgba(42,60,36,0.5)" }} />
             <Tooltip
               contentStyle={{ backgroundColor: colors.cream, border: "1px solid #e7d8c6", borderRadius: "8px", fontSize: "12px" }}
-              formatter={(value: number) => [`${value} ml/kg/min`, "VO2 Max"]}
+              formatter={(value) => [`${value ?? 0} ml/kg/min`, "VO2 Max"]}
               labelFormatter={(label) => new Date(label).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
             />
             <Line type="monotone" dataKey="value" stroke={colors.lime} strokeWidth={2} dot={{ fill: colors.lime, r: 4 }} />
