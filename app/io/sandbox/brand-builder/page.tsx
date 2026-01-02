@@ -1150,12 +1150,10 @@ export default function BrandBuilder() {
                           name: suggestColorName(hex, i),
                         })));
                       }}
-                      className={`p-4 rounded-xl text-left transition-all hover:scale-[1.02] ${
-                        selectedFeel === feel.id ? 'ring-2' : ''
-                      }`}
+                      className="p-4 rounded-xl text-left transition-all hover:scale-[1.02]"
                       style={{
                         background: '#2a2a2a',
-                        ringColor: '#FABF34',
+                        boxShadow: selectedFeel === feel.id ? '0 0 0 2px #FABF34' : 'none',
                       }}
                     >
                       {/* Color Preview */}
