@@ -114,7 +114,7 @@ const ComparisonTable = ({ period }: { period: ComparisonPeriod }) => {
         rows: [
           { label: "Workouts", key: "workoutCount", values: recent3.map(m => m.workoutCount) },
           { label: "Duration (hrs)", key: "duration", values: recent3.map(m => Math.round(m.workoutCount * 0.6)) },
-          { label: "Active Calories", key: "calories", values: recent3.map(m => Math.round(m.totalActiveCalories / 1000) * 1000) },
+          { label: "Active Calories", key: "calories", values: recent3.map(m => Math.round(m.workoutCount * 350)) },
           { label: "Distance (mi)", key: "distance", values: recent3.map(m => Math.round(m.totalSteps / 2000)) },
           { label: "Days Tracked", key: "days", values: recent3.map(m => ({ value: m.daysTracked, percent: Math.round((m.daysTracked / 30) * 100) })) },
         ]
