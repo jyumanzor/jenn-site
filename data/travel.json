@@ -886,14 +886,14 @@
       }
     },
     {
-      "id": "spain",
-      "city": "Valencia & Bilbao",
+      "id": "valencia",
+      "city": "Valencia",
       "country": "Spain",
       "coordinates": { "lat": 39.4699, "lng": -0.3763 },
       "type": "travel",
       "visits": "August 2022",
-      "notes": "Basque country, Mediterranean coast.",
-      "highlights": ["La Ciudad", "Guggenheim", "San Sebastián"],
+      "notes": "Mediterranean coast, futuristic architecture.",
+      "highlights": ["City of Arts & Sciences", "Paella", "Las Fallas"],
       "images": [
         "Spain/Valencia/IMG_7324.jpeg",
         "Spain/Valencia/IMG_7382.jpeg",
@@ -907,7 +907,50 @@
         "Spain/Valencia/IMG_7648.jpeg",
         "Spain/Valencia/IMG_7658.jpeg",
         "Spain/Valencia/IMG_7765.jpeg",
-        "Spain/Valencia/IMG_7767.jpeg",
+        "Spain/Valencia/IMG_7767.jpeg"
+      ],
+      "facts": {
+        "Valencia": [
+          "City of Arts and Sciences: futuristic Calatrava complex",
+          "Birthplace of paella—never add chorizo",
+          "Las Fallas festival: giant sculptures burned each March"
+        ]
+      }
+    },
+    {
+      "id": "bilbao",
+      "city": "Bilbao",
+      "country": "Spain",
+      "coordinates": { "lat": 43.2630, "lng": -2.9350 },
+      "type": "travel",
+      "visits": "August 2022",
+      "notes": "Basque country, Guggenheim transformed the city.",
+      "highlights": ["Guggenheim", "Pintxos", "Old Town"],
+      "images": [
+        "Spain/Bilbao/IMG_8160.jpeg",
+        "Spain/Bilbao/IMG_8324.jpeg",
+        "Spain/Bilbao/IMG_8347.jpeg",
+        "Spain/Bilbao/IMG_8362.jpeg",
+        "Spain/Bilbao/IMG_8365.jpeg"
+      ],
+      "facts": {
+        "Bilbao": [
+          "Guggenheim Museum transformed the city in 1997",
+          "Basque country: distinct language, oldest in Europe",
+          "Pintxos: Basque tapas, toothpick-speared bites"
+        ]
+      }
+    },
+    {
+      "id": "san-sebastian",
+      "city": "San Sebastián",
+      "country": "Spain",
+      "coordinates": { "lat": 43.3183, "lng": -1.9812 },
+      "type": "travel",
+      "visits": "August 2022",
+      "notes": "Basque culinary capital, stunning beaches.",
+      "highlights": ["La Concha Beach", "Pintxos", "Michelin Stars"],
+      "images": [
         "Spain/San Sebeastian/IMG_8017.jpeg",
         "Spain/San Sebeastian/IMG_8021.jpeg",
         "Spain/San Sebeastian/IMG_8049.jpeg",
@@ -919,7 +962,26 @@
         "Spain/San Sebeastian/IMG_8129.jpeg",
         "Spain/San Sebeastian/IMG_8133.jpeg",
         "Spain/San Sebeastian/IMG_8140.jpeg",
-        "Spain/San Sebeastian/IMG_8147.jpeg",
+        "Spain/San Sebeastian/IMG_8147.jpeg"
+      ],
+      "facts": {
+        "San Sebastián": [
+          "More Michelin stars per capita than anywhere",
+          "La Concha: one of Europe's best urban beaches",
+          "Basque culinary capital"
+        ]
+      }
+    },
+    {
+      "id": "hondarribia",
+      "city": "Hondarribia",
+      "country": "Spain",
+      "coordinates": { "lat": 43.3667, "lng": -1.7961 },
+      "type": "travel",
+      "visits": "August 2022",
+      "notes": "Medieval fishing village on French border.",
+      "highlights": ["Old Town", "Harbor", "French Border"],
+      "images": [
         "Spain/Hondorribia/IMG_7840.jpeg",
         "Spain/Hondorribia/IMG_7843.jpeg",
         "Spain/Hondorribia/IMG_7872.jpeg",
@@ -928,28 +990,13 @@
         "Spain/Hondorribia/IMG_7930.jpeg",
         "Spain/Hondorribia/IMG_7936.jpeg",
         "Spain/Hondorribia/IMG_7942.jpeg",
-        "Spain/Hondorribia/IMG_7943.jpeg",
-        "Spain/Bilbao/IMG_8160.jpeg",
-        "Spain/Bilbao/IMG_8324.jpeg",
-        "Spain/Bilbao/IMG_8347.jpeg",
-        "Spain/Bilbao/IMG_8362.jpeg",
-        "Spain/Bilbao/IMG_8365.jpeg"
+        "Spain/Hondorribia/IMG_7943.jpeg"
       ],
       "facts": {
-        "Valencia": [
-          "City of Arts and Sciences: futuristic Calatrava complex",
-          "Birthplace of paella—never add chorizo",
-          "Las Fallas festival: giant sculptures burned each March"
-        ],
-        "Bilbao": [
-          "Guggenheim Museum transformed the city in 1997",
-          "Basque country: distinct language, oldest in Europe",
-          "Pintxos: Basque tapas, toothpick-speared bites"
-        ],
-        "San Sebastián": [
-          "More Michelin stars per capita than anywhere",
-          "La Concha: one of Europe's best urban beaches",
-          "Basque culinary capital"
+        "Hondarribia": [
+          "Medieval walled old town with colorful houses",
+          "Traditional fishing village on Bidasoa River",
+          "Just across the border from Hendaye, France"
         ]
       }
     },
