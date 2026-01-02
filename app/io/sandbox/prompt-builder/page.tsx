@@ -565,7 +565,7 @@ ${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
                       <span className="text-xs block mb-1" style={{ color: '#CBAD8C' }}>{qc.meaning}</span>
                       <span
                         className="text-xs line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity"
-                        style={{ color: '#3B412D' }}
+                        style={{ color: '#FFF5EB' }}
                       >
                         {qc.expansion}
                       </span>
@@ -605,7 +605,7 @@ ${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
                       >
                         {index + 1}
                       </span>
-                      <span className="flex-1 text-sm" style={{ color: '#3B412D' }}>
+                      <span className="flex-1 text-sm" style={{ color: '#FFF5EB' }}>
                         {cmd.text}
                       </span>
                       <div className="flex items-center gap-2 flex-shrink-0">
@@ -651,7 +651,7 @@ ${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
                         <button
                           onClick={() => copyToClipboard(cmd.text, cmd.id)}
                           className="flex-1 text-left text-sm"
-                          style={{ color: '#3B412D' }}
+                          style={{ color: '#FFF5EB' }}
                         >
                           {cmd.text}
                         </button>
@@ -1184,7 +1184,7 @@ ${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
                         background: copiedId === `frustration-${fc.code}` ? '#546E40' : '#3C422E',
                       }}
                     >
-                      <span className="text-sm" style={{ color: '#3B412D' }}>
+                      <span className="text-sm" style={{ color: '#FFF5EB' }}>
                         &ldquo;{fc.trigger}&rdquo;
                       </span>
                       <span
