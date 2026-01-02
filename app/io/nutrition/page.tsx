@@ -93,7 +93,6 @@ const QUICK_ADD_FOODS: FoodItem[] = [
   { name: "Oatmeal", category: "grains", calories: 150, protein: 5, carbs: 27, fat: 3, fiber: 4, benefits: ["Sustained energy", "Heart health"], timing: "2-3 hrs pre-run", healthScore: 92, servingSize: "1 cup cooked" },
   { name: "Greek Yogurt", category: "proteins", calories: 130, protein: 17, carbs: 6, fat: 4, fiber: 0, benefits: ["Muscle recovery", "Probiotics"], timing: "Post-run", healthScore: 90, servingSize: "170g" },
   { name: "Almonds", category: "nuts", calories: 164, protein: 6, carbs: 6, fat: 14, fiber: 3.5, benefits: ["Healthy fats", "Vitamin E"], timing: "Snack", healthScore: 94, servingSize: "1 oz (23)" },
-  { name: "Chicken Breast", category: "proteins", calories: 165, protein: 31, carbs: 0, fat: 3.6, fiber: 0, benefits: ["Lean protein", "B vitamins"], timing: "Post-run", healthScore: 88, servingSize: "4 oz" },
   { name: "Sweet Potato", category: "grains", calories: 103, protein: 2.3, carbs: 24, fat: 0.1, fiber: 3.8, benefits: ["Complex carbs", "Beta-carotene"], timing: "Post-run", healthScore: 95, servingSize: "1 medium" },
   { name: "Spinach", category: "greens", calories: 7, protein: 0.9, carbs: 1.1, fat: 0.1, fiber: 0.7, benefits: ["Iron", "Anti-inflammatory"], timing: "Any", healthScore: 98, servingSize: "1 cup raw" },
   { name: "Eggs", category: "proteins", calories: 78, protein: 6, carbs: 0.6, fat: 5, fiber: 0, benefits: ["Complete protein", "Choline"], timing: "Any", healthScore: 89, servingSize: "1 large" },
@@ -137,10 +136,8 @@ const HEALTHY_FOODS_DATABASE: FoodItem[] = [
 
   // Proteins
   { name: "Salmon", category: "proteins", calories: 208, protein: 20, carbs: 0, fat: 13, fiber: 0, benefits: ["Omega-3s", "Vitamin D", "Anti-inflammatory"], timing: "Post-run meal", healthScore: 96, servingSize: "4 oz" },
-  { name: "Chicken Breast", category: "proteins", calories: 165, protein: 31, carbs: 0, fat: 3.6, fiber: 0, benefits: ["Lean protein", "B vitamins", "Selenium"], timing: "Post-run meal", healthScore: 88, servingSize: "4 oz" },
   { name: "Eggs", category: "proteins", calories: 78, protein: 6, carbs: 0.6, fat: 5, fiber: 0, benefits: ["Complete protein", "Choline", "B12"], timing: "Any meal", healthScore: 89, servingSize: "1 large" },
   { name: "Greek Yogurt", category: "proteins", calories: 130, protein: 17, carbs: 6, fat: 4, fiber: 0, benefits: ["Probiotics", "Calcium", "Muscle recovery"], timing: "Post-run", healthScore: 90, servingSize: "170g" },
-  { name: "Turkey", category: "proteins", calories: 135, protein: 25, carbs: 0, fat: 3, fiber: 0, benefits: ["Lean protein", "Tryptophan", "Selenium"], timing: "Post-run meal", healthScore: 87, servingSize: "4 oz" },
 
   // Treats (healthier options)
   { name: "Dark Chocolate", category: "treats", calories: 170, protein: 2.2, carbs: 13, fat: 12, fiber: 3.1, benefits: ["Antioxidants", "Magnesium", "Mood boost"], timing: "Occasional treat", healthScore: 72, servingSize: "1 oz (70%+)" },
@@ -586,16 +583,112 @@ function AIAnalysisPanel({ entries, onAnalyze, analysis, isAnalyzing }: {
   );
 }
 
+// Meal options for the weekly planner
+const MEAL_OPTIONS = {
+  breakfast: [
+    "Nutty Pudding",
+    "Nutty Pudding + banana",
+    "Oatmeal with berries",
+    "Greek yogurt parfait",
+    "Eggs + avocado toast",
+    "Smoothie bowl"
+  ],
+  lunch: [
+    "Super Veggie",
+    "Super Veggie + extra lentils",
+    "Salmon Bowl",
+    "Sardine Super Toast",
+    "Quinoa salad",
+    "Lentil soup"
+  ],
+  dinner: [
+    "Salmon Bowl",
+    "Tuna Poke Bowl",
+    "Shrimp Stir-Fry",
+    "Shrimp Stir-Fry (carb load)",
+    "Super Veggie",
+    "Grilled fish + vegetables"
+  ],
+  snack: [
+    "Morning Mix",
+    "Recovery Mix",
+    "Pre-Run Mix",
+    "Greek yogurt",
+    "Fruit + nuts",
+    "Hummus + vegetables"
+  ],
+  postRun: [
+    "Salmon Bowl",
+    "Protein smoothie",
+    "Recovery shake",
+    "Greek yogurt + banana"
+  ]
+};
+
+type MealSlot = "breakfast" | "lunch" | "dinner" | "snack" | "postRun";
+type DayName = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
+
+interface WeeklyPlan {
+  [day: string]: {
+    [meal: string]: string;
+  };
+}
+
 // Blueprint Meals Section
 function BlueprintMeals() {
   const [activeTab, setActiveTab] = useState<'blueprint' | 'pescatarian' | 'mixes' | 'weekly'>('blueprint');
   const [expandedMeal, setExpandedMeal] = useState<string | null>(null);
+  const [weeklyPlan, setWeeklyPlan] = useState<WeeklyPlan>(nutritionData.weeklyMealPlan);
+  const [editingCell, setEditingCell] = useState<{ day: string; meal: string } | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const blueprintMeals = nutritionData.blueprintMeals;
   const pescatarianMeals = nutritionData.pescatarianMeals;
   const mixes = nutritionData.berryNutMixes;
-  const weeklyPlan = nutritionData.weeklyMealPlan;
+  const defaultWeeklyPlan = nutritionData.weeklyMealPlan;
   const science = nutritionData.scienceNotes;
+
+  // Load from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("jenn-weekly-meal-plan");
+    if (saved) {
+      try {
+        setWeeklyPlan(JSON.parse(saved));
+      } catch (e) {
+        console.error("Failed to parse weekly meal plan:", e);
+      }
+    }
+    setIsLoaded(true);
+  }, []);
+
+  // Save to localStorage
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem("jenn-weekly-meal-plan", JSON.stringify(weeklyPlan));
+    }
+  }, [weeklyPlan, isLoaded]);
+
+  const updateMeal = (day: string, meal: string, value: string) => {
+    setWeeklyPlan(prev => ({
+      ...prev,
+      [day]: {
+        ...prev[day],
+        [meal]: value
+      }
+    }));
+    setEditingCell(null);
+  };
+
+  const resetPlan = () => {
+    setWeeklyPlan(defaultWeeklyPlan);
+    localStorage.removeItem("jenn-weekly-meal-plan");
+  };
+
+  const getMealOptions = (meal: string): string[] => {
+    if (meal === "postRun") return MEAL_OPTIONS.postRun;
+    if (meal in MEAL_OPTIONS) return MEAL_OPTIONS[meal as MealSlot];
+    return MEAL_OPTIONS.snack;
+  };
 
   return (
     <div className="space-y-6">
@@ -925,22 +1018,74 @@ function BlueprintMeals() {
 
       {/* Weekly Plan Tab */}
       {activeTab === 'weekly' && (
-        <div className="space-y-3">
-          {Object.entries(weeklyPlan).map(([day, meals]) => (
-            <div key={day} className="bg-ivory rounded-xl p-4">
-              <h4 className="font-medium text-deep-forest capitalize mb-3" style={{ fontFamily: 'var(--font-instrument)' }}>
-                {day}
-              </h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                {Object.entries(meals).map(([mealTime, mealName]) => (
-                  <div key={mealTime} className="p-2 rounded" style={{ backgroundColor: '#EFE4D6' }}>
-                    <p className="text-xs text-deep-forest/50 capitalize">{mealTime}</p>
-                    <p className="text-sm text-deep-forest">{mealName}</p>
-                  </div>
-                ))}
+        <div className="space-y-4">
+          {/* Header with reset button */}
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-deep-forest/60">Click any meal to edit. Changes save automatically.</p>
+            <button
+              onClick={resetPlan}
+              className="px-3 py-1.5 text-xs rounded-lg transition-colors"
+              style={{ backgroundColor: '#FABF3420', color: '#FABF34', border: '1px solid #FABF34' }}
+            >
+              Reset to Default
+            </button>
+          </div>
+
+          {/* Editable Weekly Grid */}
+          <div className="space-y-3">
+            {Object.entries(weeklyPlan).map(([day, meals]) => (
+              <div key={day} className="bg-ivory rounded-xl p-4">
+                <h4 className="font-medium text-deep-forest capitalize mb-3" style={{ fontFamily: 'var(--font-instrument)' }}>
+                  {day}
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                  {Object.entries(meals).map(([mealTime, mealName]) => (
+                    <div key={mealTime} className="relative">
+                      {editingCell?.day === day && editingCell?.meal === mealTime ? (
+                        <div className="p-2 rounded" style={{ backgroundColor: '#97A97C20', border: '2px solid #97A97C' }}>
+                          <p className="text-xs text-deep-forest/50 capitalize mb-1">{mealTime}</p>
+                          <select
+                            value={mealName}
+                            onChange={(e) => updateMeal(day, mealTime, e.target.value)}
+                            onBlur={() => setEditingCell(null)}
+                            autoFocus
+                            className="w-full text-sm text-deep-forest bg-transparent border-none focus:outline-none cursor-pointer"
+                          >
+                            {getMealOptions(mealTime).map((option) => (
+                              <option key={option} value={option}>{option}</option>
+                            ))}
+                            <option value={mealName}>{mealName}</option>
+                          </select>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => setEditingCell({ day, meal: mealTime })}
+                          className="w-full p-2 rounded text-left transition-all hover:shadow-md group"
+                          style={{ backgroundColor: '#EFE4D6' }}
+                        >
+                          <p className="text-xs text-deep-forest/50 capitalize flex items-center justify-between">
+                            {mealTime}
+                            <svg className="w-3 h-3 opacity-0 group-hover:opacity-50 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                          </p>
+                          <p className="text-sm text-deep-forest">{mealName}</p>
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Quick Add Meal Slot */}
+          <div className="bg-ivory rounded-xl p-4">
+            <p className="text-xs uppercase tracking-wider mb-3" style={{ color: '#97A97C' }}>Add Custom Meal</p>
+            <p className="text-sm text-deep-forest/60">
+              Type a custom meal name in any cell to add it to your rotation.
+            </p>
+          </div>
 
           {/* Runner Adaptations */}
           <div className="p-4 rounded-xl" style={{ backgroundColor: '#FABF3420', border: '1px solid #FABF34' }}>
