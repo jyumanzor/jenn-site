@@ -270,7 +270,7 @@ const ZoneTimeChart = () => {
             <YAxis hide />
             <Tooltip
               contentStyle={{ backgroundColor: colors.cream, border: "1px solid #e7d8c6", borderRadius: "8px", fontSize: "12px" }}
-              formatter={(value: number, name: string) => [`${value} min`, name.replace("zone", "Zone ")]}
+              formatter={(value) => [`${value ?? 0} min`, ""]}
             />
             <Area type="monotone" dataKey="zone5" stackId="1" fill="url(#zone5Grad)" stroke="none" />
             <Area type="monotone" dataKey="zone4" stackId="1" fill="url(#zone4Grad)" stroke="none" />

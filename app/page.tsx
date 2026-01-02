@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <div className="bg-cream">
       {/* Editorial Hero - Magazine Quality */}
-      <section className="pt-16 pb-24 md:pt-24 md:pb-32 relative overflow-hidden">
+      <section className="pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         {/* Subtle gradient orb for depth */}
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] opacity-30 pointer-events-none"
