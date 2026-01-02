@@ -328,25 +328,27 @@ interface Location {
   };
 }
 
-// Detail Panel Component - renders inline below tiles
+// Detail Panel Component - fixed overlay at bottom of viewport
 function LocationDetail({ location, onClose }: { location: Location; onClose: () => void }) {
-  const detailRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    // Scroll the detail panel into view smoothly
-    if (detailRef.current) {
-      setTimeout(() => {
-        detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  }, [location.id]);
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return (
-    <div
-      ref={detailRef}
-      className="mt-6 rounded-2xl overflow-hidden animate-in"
-      style={{ background: 'linear-gradient(to right, #3B412D, #546E40)' }}
-    >
+    <div className="fixed inset-0 z-50 flex items-end justify-center" onClick={onClose}>
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-deep-forest/60 backdrop-blur-sm" />
+
+      {/* Panel */}
+      <div
+        className="relative w-full max-w-5xl mx-4 mb-4 rounded-2xl overflow-hidden animate-in slide-in-from-bottom-4 max-h-[85vh] overflow-y-auto"
+        style={{ background: 'linear-gradient(to right, #3B412D, #546E40)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
       <div className="p-6 md:p-8">
         {/* Header Row */}
         <div className="flex items-start justify-between mb-6">
@@ -438,6 +440,7 @@ function LocationDetail({ location, onClose }: { location: Location; onClose: ()
             <PhotoCarousel images={location.images || []} city={location.city} />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
@@ -749,10 +752,6 @@ export default function TravelPage() {
                   />
                 ))}
             </div>
-            {/* Detail panel appears here - below US tiles */}
-            {selectedLocation && selectedSection === 'us' && (
-              <LocationDetail location={selectedLocation} onClose={handleClose} />
-            )}
           </div>
         </div>
       </section>
@@ -802,10 +801,6 @@ export default function TravelPage() {
                 />
               ))}
             </div>
-            {/* Detail panel appears here - below Asia tiles */}
-            {selectedLocation && selectedSection === 'asia' && (
-              <LocationDetail location={selectedLocation} onClose={handleClose} />
-            )}
           </div>
         </div>
       </section>
@@ -857,10 +852,6 @@ export default function TravelPage() {
                     />
                   ))}
                 </div>
-                {/* Detail panel appears here - below Americas tiles */}
-                {selectedLocation && selectedSection === 'americas' && (
-                  <LocationDetail location={selectedLocation} onClose={handleClose} />
-                )}
               </div>
             </div>
           </section>
@@ -911,10 +902,6 @@ export default function TravelPage() {
                 />
               ))}
             </div>
-            {/* Detail panel appears here - below Europe tiles */}
-            {selectedLocation && selectedSection === 'europe' && (
-              <LocationDetail location={selectedLocation} onClose={handleClose} />
-            )}
           </div>
         </div>
       </section>
@@ -947,6 +934,11 @@ export default function TravelPage() {
           </div>
         </div>
       </section>
+
+      {/* Fixed Location Detail Overlay */}
+      {selectedLocation && (
+        <LocationDetail location={selectedLocation} onClose={handleClose} />
+      )}
     </div>
   );
 }

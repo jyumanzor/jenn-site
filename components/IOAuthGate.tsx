@@ -2,28 +2,41 @@
 
 import { useState, useEffect, ReactNode } from "react";
 
-const CORRECT_PASSWORD = "jenn.io";
-const AUTH_KEY = "jenn-io-auth";
+const DEFAULT_PASSWORD = "jenn.io";
+const DEFAULT_AUTH_KEY = "jenn-io-auth";
 
 interface IOAuthGateProps {
   children: ReactNode;
+  password?: string;
+  authKey?: string;
+  title?: string;
+  subtitle?: string;
 }
 
-export default function IOAuthGate({ children }: IOAuthGateProps) {
+export default function IOAuthGate({
+  children,
+  password: customPassword,
+  authKey: customAuthKey,
+  title = "Jenn's IO",
+  subtitle = "Backend tools & utilities"
+}: IOAuthGateProps) {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const correctPassword = customPassword || DEFAULT_PASSWORD;
+  const authStorageKey = customAuthKey || DEFAULT_AUTH_KEY;
+
   useEffect(() => {
     // Check localStorage on mount
-    const auth = localStorage.getItem(AUTH_KEY);
+    const auth = localStorage.getItem(authStorageKey);
     setIsAuthenticated(auth === "true");
-  }, []);
+  }, [authStorageKey]);
 
   const handleLogin = () => {
-    if (password === CORRECT_PASSWORD) {
+    if (password === correctPassword) {
       setIsAuthenticated(true);
-      localStorage.setItem(AUTH_KEY, "true");
+      localStorage.setItem(authStorageKey, "true");
       setError("");
     } else {
       setError("Wrong password");
@@ -64,10 +77,10 @@ export default function IOAuthGate({ children }: IOAuthGateProps) {
             className="text-3xl mb-2 italic"
             style={{ color: "#FFF5EB", fontFamily: "var(--font-instrument)" }}
           >
-            Jenn&apos;s IO
+            {title}
           </h1>
           <p className="text-sm mb-8" style={{ color: "#97A97C" }}>
-            Backend tools & utilities
+            {subtitle}
           </p>
           <div className="flex flex-col gap-3 items-center">
             <input

@@ -326,7 +326,12 @@ export default function JournalPage() {
   };
 
   return (
-    <IOAuthGate>
+    <IOAuthGate
+      password="jenn.uwu"
+      authKey="jenn-journal-auth"
+      title="Therapy Journal"
+      subtitle="Private reflection space"
+    >
     <div className="min-h-screen bg-[#FFF5EB]">
       {/* Subtle texture overlay */}
       <div

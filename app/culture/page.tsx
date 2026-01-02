@@ -4,6 +4,92 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import watching from "@/data/culture.json";
 
+// Song of the Day interface
+interface SongOfTheDay {
+  song: string;
+  playlist?: string;
+  date: string;
+}
+
+// Song of the Day component
+function SongOfTheDayCard() {
+  const [songData, setSongData] = useState<SongOfTheDay | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("song-of-the-day");
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as SongOfTheDay;
+        // Check if it's from today
+        const today = new Date().toISOString().split('T')[0];
+        if (parsed.date === today) {
+          setSongData(parsed);
+        }
+      } catch (e) {
+        console.error("Failed to parse song of the day:", e);
+      }
+    }
+  }, []);
+
+  if (!songData) return null;
+
+  return (
+    <div
+      className="mt-8 rounded-xl p-4 transition-all duration-300 cursor-default"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        background: isHovered
+          ? 'linear-gradient(135deg, #2a3c24 0%, #546e40 100%)'
+          : 'linear-gradient(135deg, #3B412D 0%, #4e6041 100%)',
+        transform: isHovered ? 'scale(1.02)' : 'scale(1)',
+        boxShadow: isHovered
+          ? '0 12px 32px rgba(42, 60, 36, 0.25)'
+          : '0 4px 12px rgba(42, 60, 36, 0.1)'
+      }}
+    >
+      <div className="flex items-center gap-3">
+        {/* Music icon */}
+        <div
+          className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300"
+          style={{
+            background: '#d4ed39',
+            transform: isHovered ? 'rotate(5deg) scale(1.1)' : 'rotate(0deg) scale(1)'
+          }}
+        >
+          <svg className="w-5 h-5" style={{ color: '#2a3c24' }} fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <p
+            className="text-xs uppercase tracking-wider mb-0.5"
+            style={{ color: '#d4ed39' }}
+          >
+            Song of the Day
+          </p>
+          <p
+            className="text-base font-medium truncate transition-all duration-300"
+            style={{
+              color: '#fff5eb',
+              fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif'
+            }}
+          >
+            {songData.song}
+          </p>
+          {songData.playlist && (
+            <p className="text-xs truncate" style={{ color: 'rgba(255,245,235,0.6)' }}>
+              from {songData.playlist}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Animated number counter
 function AnimatedNumber({ value, duration = 1000 }: { value: number; duration?: number }) {
   const [displayValue, setDisplayValue] = useState(0);
@@ -619,6 +705,9 @@ export default function WatchingPage() {
             >
               What I watch, read, and listen to.
             </p>
+
+            {/* Song of the Day */}
+            <SongOfTheDayCard />
 
             {/* Archive Links */}
             <div className="flex flex-wrap gap-3 mt-8">
