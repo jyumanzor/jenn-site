@@ -2,179 +2,3767 @@
   "playlists": [
     {
       "id": "joy-aligned",
-      "name": "Joy Aligned",
-      "description": "Songs that feel like pure joy and alignment",
-      "vibe": "uplifting, authentic, euphoric",
+      "name": "joy",
+      "description": "Songs that bring pure joy and alignment",
+      "vibe": "",
       "isHighFrequency": true,
       "tracks": [
-        { "title": "Golden Hour", "artist": "JVKE", "isHighlighted": true },
-        { "title": "Good Days", "artist": "SZA", "isHighlighted": true },
-        { "title": "Feeling Good As Hell", "artist": "Lizzo", "isHighlighted": true },
-        { "title": "Here Comes the Sun", "artist": "The Beatles", "isHighlighted": true },
-        { "title": "Electric", "artist": "Katy Perry", "isHighlighted": false },
-        { "title": "Walking on Sunshine", "artist": "Katrina and the Waves", "isHighlighted": true },
-        { "title": "Lovely Day", "artist": "Bill Withers", "isHighlighted": true },
-        { "title": "Best Day of My Life", "artist": "American Authors", "isHighlighted": false },
-        { "title": "Sunflower", "artist": "Post Malone", "isHighlighted": true },
-        { "title": "Happy", "artist": "Pharrell Williams", "isHighlighted": true },
-        { "title": "On Top of the World", "artist": "Imagine Dragons", "isHighlighted": false },
-        { "title": "Can't Stop the Feeling", "artist": "Justin Timberlake", "isHighlighted": true },
-        { "title": "Good Vibrations", "artist": "The Beach Boys", "isHighlighted": true },
-        { "title": "Three Little Birds", "artist": "Bob Marley", "isHighlighted": true },
-        { "title": "Don't Stop Me Now", "artist": "Queen", "isHighlighted": true }
+        {
+          "title": "Rumination",
+          "artist": "BAANDIT!",
+          "isHighlighted": true
+        },
+        {
+          "title": "Waayaha Cusub",
+          "artist": "Shakarchi & Stranéus",
+          "isHighlighted": false
+        },
+        {
+          "title": "Windowlicker",
+          "artist": "Aphex Twin",
+          "isHighlighted": false
+        },
+        {
+          "title": "All I Wanna Do",
+          "artist": "The Beach Boys",
+          "isHighlighted": true
+        },
+        {
+          "title": "She's Leaving Home",
+          "artist": "The Beatles",
+          "isHighlighted": false
+        },
+        {
+          "title": "Can't Help It",
+          "artist": "Baba Stiltz",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sports",
+          "artist": "Viagra Boys",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bubbles",
+          "artist": "Yosi Horikawa",
+          "isHighlighted": false
+        },
+        {
+          "title": "Veridis Quo",
+          "artist": "Daft Punk",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rocky Raccoon",
+          "artist": "The Beatles",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mercy Mercy Me (The Ecology)",
+          "artist": "Marvin Gaye",
+          "isHighlighted": true
+        },
+        {
+          "title": "Flim",
+          "artist": "Aphex Twin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Meet the Frownies",
+          "artist": "Mr Twin Sister",
+          "isHighlighted": false
+        },
+        {
+          "title": "Little Bit",
+          "artist": "Erika de Casier",
+          "isHighlighted": false
+        },
+        {
+          "title": "Obvs",
+          "artist": "Jamie xx",
+          "isHighlighted": false
+        },
+        {
+          "title": "Make Love",
+          "artist": "Daft Punk",
+          "isHighlighted": false
+        },
+        {
+          "title": "Passionfruit",
+          "artist": "Benny Sings",
+          "isHighlighted": false
+        },
+        {
+          "title": "Someday",
+          "artist": "The Strokes",
+          "isHighlighted": true
+        },
+        {
+          "title": "Novacane",
+          "artist": "Frank Ocean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Feel Good Inc. (feat. David Jolicoeur, Kelvin Mercer & Vincent Mason)",
+          "artist": "Gorillaz & De La Soul",
+          "isHighlighted": false
+        },
+        {
+          "title": "Iz - Us",
+          "artist": "Aphex Twin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Keep on Mixing",
+          "artist": "Mr Twin Sister",
+          "isHighlighted": false
+        },
+        {
+          "title": "Islands",
+          "artist": "The xx",
+          "isHighlighted": false
+        },
+        {
+          "title": "In My Room",
+          "artist": "Frank Ocean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Clueless",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Xtal",
+          "artist": "Aphex Twin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Blood Bank",
+          "artist": "Bon Iver",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sofia",
+          "artist": "Clairo",
+          "isHighlighted": true
+        },
+        {
+          "title": "Like That (feat. Gucci Mane)",
+          "artist": "Doja Cat",
+          "isHighlighted": false
+        },
+        {
+          "title": "Softly",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "CHIHIRO",
+          "artist": "Billie Eilish",
+          "isHighlighted": true
+        },
+        {
+          "title": "Kiss Me More (feat. SZA)",
+          "artist": "Doja Cat",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rollin (feat. Future & Khalid)",
+          "artist": "Calvin Harris",
+          "isHighlighted": true
+        },
+        {
+          "title": "Gila",
+          "artist": "Beach House",
+          "isHighlighted": false
+        },
+        {
+          "title": "Intimidated (feat. H.E.R.)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Girl (feat. KAYTRANADA)",
+          "artist": "The Internet",
+          "isHighlighted": false
+        },
+        {
+          "title": "YOU'RE THE ONE (feat. Syd)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Witchy (feat. Childish Gambino)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "4EVA",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Pharrell Williams",
+          "isHighlighted": false
+        },
+        {
+          "title": "10% (feat. Kali Uchis)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Who He Iz",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "letstalkaboutit",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Freddie Gibbs",
+          "isHighlighted": false
+        },
+        {
+          "title": "Westside",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": true
+        },
+        {
+          "title": "Master P",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Big Sean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rebuke",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sossaup",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Amaarae",
+          "isHighlighted": false
+        },
+        {
+          "title": "STFU3",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "UGH UGH",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "EYE",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Snoop Dogg",
+          "isHighlighted": false
+        },
+        {
+          "title": "K&A",
+          "artist": "KAYTRAMINÉ, Aminé & KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Alaska",
+          "artist": "Maggie Rogers",
+          "isHighlighted": false
+        },
+        {
+          "title": "Fallingwater",
+          "artist": "Maggie Rogers",
+          "isHighlighted": false
+        },
+        {
+          "title": "Back to December",
+          "artist": "Taylor Swift",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mio Cristo Piange Diamanti",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "La Perla",
+          "artist": "ROSALÍA & Yahritza Y Su Esencia",
+          "isHighlighted": false
+        },
+        {
+          "title": "Berghain",
+          "artist": "ROSALÍA, Björk & Yves Tumor",
+          "isHighlighted": true
+        },
+        {
+          "title": "De Madrugá",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Memória",
+          "artist": "ROSALÍA & Carminho",
+          "isHighlighted": false
+        },
+        {
+          "title": "Reliquia",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Porcelana",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Last Christmas (Single Version)",
+          "artist": "Wham!",
+          "isHighlighted": false
+        },
+        {
+          "title": "back to friends",
+          "artist": "sombr",
+          "isHighlighted": true
+        },
+        {
+          "title": "Boston",
+          "artist": "Augustana",
+          "isHighlighted": true
+        },
+        {
+          "title": "BAILE INoLVIDABLE",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "ALAMBRE PúA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "WELTiTA",
+          "artist": "Bad Bunny & Chuwi",
+          "isHighlighted": true
+        },
+        {
+          "title": "CAFé CON RON",
+          "artist": "Bad Bunny & Los Pleneros de la Cresta",
+          "isHighlighted": true
+        },
+        {
+          "title": "TURiSTA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "DtMF",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "EoO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "LA MuDANZA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "WHERE SHE GOES",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Callaíta",
+          "artist": "Bad Bunny & Tainy",
+          "isHighlighted": false
+        }
       ]
     },
     {
       "id": "im-hot",
-      "name": "I'm Hot",
+      "name": "im hot",
       "description": "Confidence anthems and main character energy",
-      "vibe": "confident, powerful, sexy",
+      "vibe": "",
       "isHighFrequency": true,
       "tracks": [
-        { "title": "Flowers", "artist": "Miley Cyrus", "isHighlighted": true },
-        { "title": "Woman", "artist": "Doja Cat", "isHighlighted": true },
-        { "title": "Good as Hell", "artist": "Lizzo", "isHighlighted": true },
-        { "title": "Run the World (Girls)", "artist": "Beyonce", "isHighlighted": true },
-        { "title": "Truth Hurts", "artist": "Lizzo", "isHighlighted": true },
-        { "title": "Confident", "artist": "Demi Lovato", "isHighlighted": true },
-        { "title": "Boss Bitch", "artist": "Doja Cat", "isHighlighted": false },
-        { "title": "Dangerous Woman", "artist": "Ariana Grande", "isHighlighted": true },
-        { "title": "Physical", "artist": "Dua Lipa", "isHighlighted": true },
-        { "title": "Blow", "artist": "Beyonce", "isHighlighted": false },
-        { "title": "Partition", "artist": "Beyonce", "isHighlighted": true },
-        { "title": "Feeling Myself", "artist": "Nicki Minaj ft. Beyonce", "isHighlighted": true },
-        { "title": "Salute", "artist": "Little Mix", "isHighlighted": false },
-        { "title": "Work Bitch", "artist": "Britney Spears", "isHighlighted": true },
-        { "title": "Level Up", "artist": "Ciara", "isHighlighted": false }
+        {
+          "title": "All My Stars Aligned",
+          "artist": "St. Vincent",
+          "isHighlighted": true
+        },
+        {
+          "title": "All We Ask (KCMP Session)",
+          "artist": "Grizzly Bear",
+          "isHighlighted": true
+        },
+        {
+          "title": "WASSUP",
+          "artist": "Young Miko",
+          "isHighlighted": true
+        },
+        {
+          "title": "WOAHH (feat. Clarent)",
+          "artist": "Rvssian, Young Miko & Omar Courtz",
+          "isHighlighted": false
+        },
+        {
+          "title": "FINA",
+          "artist": "Bad Bunny & Young Miko",
+          "isHighlighted": true
+        },
+        {
+          "title": "DISPO",
+          "artist": "KAROL G & Young Miko",
+          "isHighlighted": false
+        },
+        {
+          "title": "COLMILLO (feat. Jowell & Randy)",
+          "artist": "Tainy, J Balvin & Young Miko",
+          "isHighlighted": true
+        },
+        {
+          "title": "mañana",
+          "artist": "Tainy, Young Miko & The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tempo",
+          "artist": "Marshmello & Young Miko",
+          "isHighlighted": true
+        },
+        {
+          "title": "EoO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "VOY A LLeVARTE PA PR",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "BAILE INoLVIDABLE",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "WELTiTA",
+          "artist": "Bad Bunny & Chuwi",
+          "isHighlighted": true
+        },
+        {
+          "title": "VeLDÁ",
+          "artist": "Bad Bunny, Omar Courtz & Dei V",
+          "isHighlighted": true
+        },
+        {
+          "title": "EL CLúB",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "BOKeTE",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "KLOuFRENS",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "TURiSTA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "CAFé CON RON",
+          "artist": "Bad Bunny & Los Pleneros de la Cresta",
+          "isHighlighted": true
+        },
+        {
+          "title": "DtMF",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "LA MuDANZA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Qué Pasaría...",
+          "artist": "Rauw Alejandro & Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tú Con Él",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": true
+        },
+        {
+          "title": "Desenfocao'",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": true
+        },
+        {
+          "title": "Todo De Ti",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": true
+        },
+        {
+          "title": "Playing Around Before the Party Starts",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Too Sweet",
+          "artist": "Hozier",
+          "isHighlighted": true
+        },
+        {
+          "title": "You & Jennifer",
+          "artist": "bülow",
+          "isHighlighted": true
+        },
+        {
+          "title": "Your Graduation",
+          "artist": "Modern Baseball",
+          "isHighlighted": true
+        },
+        {
+          "title": "Echo Arms",
+          "artist": "Mr Twin Sister",
+          "isHighlighted": true
+        },
+        {
+          "title": "Maria I'm Drunk (feat. Justin Bieber & Young Thug)",
+          "artist": "Travis Scott",
+          "isHighlighted": true
+        },
+        {
+          "title": "(Nice Dream)",
+          "artist": "Radiohead",
+          "isHighlighted": true
+        },
+        {
+          "title": "Instant Crush",
+          "artist": "Daft Punk & Julian Casablancas",
+          "isHighlighted": true
+        },
+        {
+          "title": "Pulaski at Night",
+          "artist": "Andrew Bird",
+          "isHighlighted": false
+        },
+        {
+          "title": "On God",
+          "artist": "Kanye West",
+          "isHighlighted": true
+        },
+        {
+          "title": "Mr. Brightside",
+          "artist": "The Killers",
+          "isHighlighted": true
+        },
+        {
+          "title": "Endlessly",
+          "artist": "Omar Apollo",
+          "isHighlighted": false
+        },
+        {
+          "title": "My Kink Is Karma",
+          "artist": "Chappell Roan",
+          "isHighlighted": true
+        },
+        {
+          "title": "MONACO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "PERRO NEGRO",
+          "artist": "Bad Bunny & Feid",
+          "isHighlighted": true
+        },
+        {
+          "title": "tv off (feat. Lefty Gunplay)",
+          "artist": "Kendrick Lamar",
+          "isHighlighted": false
+        },
+        {
+          "title": "luther",
+          "artist": "Kendrick Lamar & SZA",
+          "isHighlighted": true
+        },
+        {
+          "title": "How To Love",
+          "artist": "Lil Wayne",
+          "isHighlighted": true
+        },
+        {
+          "title": "HYFR (Hell Ya F*****g Right) [feat. Lil Wayne]",
+          "artist": "Drake",
+          "isHighlighted": true
+        },
+        {
+          "title": "Passionfruit",
+          "artist": "Drake",
+          "isHighlighted": true
+        },
+        {
+          "title": "peekaboo (feat. AzChike)",
+          "artist": "Kendrick Lamar",
+          "isHighlighted": false
+        },
+        {
+          "title": "gloria",
+          "artist": "Kendrick Lamar & SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "family ties",
+          "artist": "Baby Keem & Kendrick Lamar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Black Boy Fly (Bonus Track)",
+          "artist": "Kendrick Lamar",
+          "isHighlighted": false
+        },
+        {
+          "title": "IV. Sweatpants (feat. Jason Martin)",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Les",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Nobody",
+          "artist": "Mitski",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tailwhip",
+          "artist": "Men I Trust",
+          "isHighlighted": true
+        },
+        {
+          "title": "Selfish",
+          "artist": "Slum Village, Kanye West & John Legend",
+          "isHighlighted": true
+        },
+        {
+          "title": "Doses & Mimosas",
+          "artist": "Cherub",
+          "isHighlighted": true
+        },
+        {
+          "title": "Bad Life (feat. Kali Uchis)",
+          "artist": "Omar Apollo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Keep Driving",
+          "artist": "Harry Styles",
+          "isHighlighted": true
+        },
+        {
+          "title": "Corazón Sin Cara",
+          "artist": "Prince Royce",
+          "isHighlighted": true
+        },
+        {
+          "title": "Click",
+          "artist": "Badgirl$",
+          "isHighlighted": true
+        },
+        {
+          "title": "RAF (feat. A$AP Rocky, Playboi Carti, Quavo, Lil Uzi Vert & Frank Ocean)",
+          "artist": "A$AP Mob",
+          "isHighlighted": true
+        },
+        {
+          "title": "La Apuesta",
+          "artist": "Ambar Lucid",
+          "isHighlighted": true
+        },
+        {
+          "title": "Pink + White",
+          "artist": "Frank Ocean",
+          "isHighlighted": true
+        },
+        {
+          "title": "Te Regalo",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "This Modern Love",
+          "artist": "Bloc Party",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tu Falta De Querer",
+          "artist": "Mon Laferte",
+          "isHighlighted": true
+        },
+        {
+          "title": "Si Supieras",
+          "artist": "Kevin Kaarl",
+          "isHighlighted": true
+        },
+        {
+          "title": "Si Antes Te Hubiera Conocido",
+          "artist": "KAROL G",
+          "isHighlighted": true
+        },
+        {
+          "title": "QUE CHIMBA DE VIDA",
+          "artist": "KAROL G",
+          "isHighlighted": false
+        },
+        {
+          "title": "TQG (feat. Shakira)",
+          "artist": "KAROL G",
+          "isHighlighted": true
+        },
+        {
+          "title": "La Bachata",
+          "artist": "Manuel Turizo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Carita Linda",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": true
+        },
+        {
+          "title": "Mientes Tan Bien",
+          "artist": "Sin Bandera",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mi manera de querer",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tú Sí Sabes Quererme",
+          "artist": "Natalia Lafourcade, Mare Advertencia & Ruben Blades",
+          "isHighlighted": false
+        },
+        {
+          "title": "Aventurera",
+          "artist": "Alex Ferreira & Natalia Lafourcade",
+          "isHighlighted": false
+        },
+        {
+          "title": "Una Vez Más",
+          "artist": "Ximena Sariñana",
+          "isHighlighted": true
+        },
+        {
+          "title": "Si Tú Te Vas",
+          "artist": "Ximena Sariñana",
+          "isHighlighted": false
+        },
+        {
+          "title": "AMARGURA",
+          "artist": "KAROL G",
+          "isHighlighted": false
+        },
+        {
+          "title": "DESPECHÁ",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Dancing in the Moonlight",
+          "artist": "Prince Royce",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cuando Me Enamoro (feat. Juan Luis Guerra)",
+          "artist": "Enrique Iglesias",
+          "isHighlighted": true
+        },
+        {
+          "title": "No Me Doy por Vencido",
+          "artist": "Luis Fonsi",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hubo Algo",
+          "artist": "Alex Ferreira & Vanessa Zamora",
+          "isHighlighted": false
+        },
+        {
+          "title": "Me Pierdo Contigo",
+          "artist": "Alex Ferreira",
+          "isHighlighted": true
+        },
+        {
+          "title": "La Javanaise",
+          "artist": "Alex Ferreira",
+          "isHighlighted": true
+        },
+        {
+          "title": "Un Veneno",
+          "artist": "C. Tangana & Niño de Elche",
+          "isHighlighted": true
+        },
+        {
+          "title": "DROGA",
+          "artist": "Mora & C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tú Me Dejaste De Querer",
+          "artist": "C. Tangana, Niño de Elche & La Húngara",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bien Duro",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "París",
+          "artist": "DELLAFUENTE, C. Tangana & Alizzz",
+          "isHighlighted": false
+        },
+        {
+          "title": "MAÑANA SERÁ BONITO",
+          "artist": "KAROL G & Carla Morrison",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hawái",
+          "artist": "Maluma",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hawaiian Roller Coaster Ride",
+          "artist": "Kamehameha Schools Children's Chorus & Mark Keali'i Ho'omalu",
+          "isHighlighted": false
+        },
+        {
+          "title": "Todo Lamento",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "Muchas Cosas",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cuestión De Suerte",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "CHIHIRO",
+          "artist": "Billie Eilish",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ella",
+          "artist": "maye",
+          "isHighlighted": true
+        },
+        {
+          "title": "Beach Bummer",
+          "artist": "No Vacation",
+          "isHighlighted": false
+        },
+        {
+          "title": "Lovefool",
+          "artist": "No Vacation",
+          "isHighlighted": false
+        },
+        {
+          "title": "Pan Dulce",
+          "artist": "Carla Morrison",
+          "isHighlighted": false
+        },
+        {
+          "title": "Buena Malicia",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Compartir",
+          "artist": "Carla Morrison",
+          "isHighlighted": false
+        },
+        {
+          "title": "ANSIEDÁ",
+          "artist": "Gepe & Esteman",
+          "isHighlighted": false
+        },
+        {
+          "title": "Los 3s",
+          "artist": "Gepe",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tocarte",
+          "artist": "Jorge Drexler & C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tinta y Tiempo",
+          "artist": "Jorge Drexler",
+          "isHighlighted": false
+        },
+        {
+          "title": "Yo Te Recuerdo, Caracas",
+          "artist": "Augusto Bracho",
+          "isHighlighted": false
+        },
+        {
+          "title": "no cambies tu andar",
+          "artist": "Alba Reche",
+          "isHighlighted": false
+        },
+        {
+          "title": "esa también fui yo (quiero acordarme)",
+          "artist": "Alba Reche",
+          "isHighlighted": false
+        },
+        {
+          "title": "como si no importara",
+          "artist": "Alba Reche & daniel sabater",
+          "isHighlighted": false
+        },
+        {
+          "title": "LATINA FOREVA",
+          "artist": "KAROL G",
+          "isHighlighted": false
+        },
+        {
+          "title": "Coleccionando Heridas",
+          "artist": "KAROL G & Marco Antonio Solís",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tastes So Good",
+          "artist": "Sabrina Claudio",
+          "isHighlighted": false
+        },
+        {
+          "title": "Frozen",
+          "artist": "Sabrina Claudio",
+          "isHighlighted": false
+        },
+        {
+          "title": "Simulation Swarm",
+          "artist": "Big Thief",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hush",
+          "artist": "The Marías",
+          "isHighlighted": false
+        },
+        {
+          "title": "Si Me Voy (feat. The Marias)",
+          "artist": "Cuco",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bossa No Sé (feat. Jean Carter)",
+          "artist": "Cuco",
+          "isHighlighted": true
+        },
+        {
+          "title": "Kill Bill",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Drew Barrymore",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "20 Something",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Linger (SiriusXM Session)",
+          "artist": "Royel Otis",
+          "isHighlighted": true
+        },
+        {
+          "title": "Crashing",
+          "artist": "d4vd & Kali Uchis",
+          "isHighlighted": false
+        },
+        {
+          "title": "DÁKITI",
+          "artist": "Bad Bunny & JHAYCO",
+          "isHighlighted": false
+        },
+        {
+          "title": "ADIVINO",
+          "artist": "Myke Towers & Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Heybb!",
+          "artist": "binki",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tears Dry On Their Own",
+          "artist": "Amy Winehouse",
+          "isHighlighted": true
+        },
+        {
+          "title": "PICK IT UP (feat. A$AP Rocky)",
+          "artist": "Famous Dex",
+          "isHighlighted": true
+        }
       ]
     },
     {
-      "id": "fjy26",
-      "name": "FJY26",
+      "id": "jfy26",
+      "name": "JFY26",
       "description": "The ultimate collection - Feel Joy Year 2026",
-      "vibe": "curated excellence, peak vibes, personal favorites",
+      "vibe": "",
       "isHighFrequency": true,
       "tracks": [
-        { "title": "Espresso", "artist": "Sabrina Carpenter", "isHighlighted": true },
-        { "title": "Von Dutch", "artist": "Charli XCX", "isHighlighted": true },
-        { "title": "Apple", "artist": "Charli XCX", "isHighlighted": true },
-        { "title": "360", "artist": "Charli XCX", "isHighlighted": true },
-        { "title": "HOT TO GO!", "artist": "Chappell Roan", "isHighlighted": true },
-        { "title": "Good Luck, Babe!", "artist": "Chappell Roan", "isHighlighted": true },
-        { "title": "Pink Pony Club", "artist": "Chappell Roan", "isHighlighted": true },
-        { "title": "Blinding Lights", "artist": "The Weeknd", "isHighlighted": true },
-        { "title": "Midnight City", "artist": "M83", "isHighlighted": true },
-        { "title": "Electric Feel", "artist": "MGMT", "isHighlighted": true },
-        { "title": "Tongue Tied", "artist": "Grouplove", "isHighlighted": true },
-        { "title": "Dog Days Are Over", "artist": "Florence + The Machine", "isHighlighted": true },
-        { "title": "Take On Me", "artist": "a-ha", "isHighlighted": true },
-        { "title": "Dreams", "artist": "Fleetwood Mac", "isHighlighted": true },
-        { "title": "Levitating", "artist": "Dua Lipa", "isHighlighted": true }
+        {
+          "title": "Biking (feat. JAY Z & Tyler, the Creator)",
+          "artist": "Frank Ocean",
+          "isHighlighted": true
+        },
+        {
+          "title": "Rome",
+          "artist": "Phoenix",
+          "isHighlighted": true
+        },
+        {
+          "title": "WELTiTA",
+          "artist": "Bad Bunny & Chuwi",
+          "isHighlighted": true
+        },
+        {
+          "title": "Moving On",
+          "artist": "Michael Giacchino, Tim Simonec & Hollywood Studio Symphony",
+          "isHighlighted": true
+        },
+        {
+          "title": "Downtown (feat. Melle Mel, Grandmaster Caz, Kool Moe Dee & Eric Nally)",
+          "artist": "Macklemore & Ryan Lewis",
+          "isHighlighted": false
+        },
+        {
+          "title": "CHIHIRO",
+          "artist": "Billie Eilish",
+          "isHighlighted": true
+        },
+        {
+          "title": "Linger (SiriusXM Session)",
+          "artist": "Royel Otis",
+          "isHighlighted": true
+        },
+        {
+          "title": "ALAMBRE PúA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Apego Feroz",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "Over the Moon",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Seven (Audiotree Live)",
+          "artist": "Rainbow Kitten Surprise",
+          "isHighlighted": true
+        },
+        {
+          "title": "Basta Ya",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "She Used to Be Mine",
+          "artist": "Sara Bareilles",
+          "isHighlighted": true
+        },
+        {
+          "title": "Merry Go 'Round",
+          "artist": "Kacey Musgraves",
+          "isHighlighted": true
+        },
+        {
+          "title": "EoO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ella",
+          "artist": "maye",
+          "isHighlighted": true
+        },
+        {
+          "title": "Elastic",
+          "artist": "Joey Purp",
+          "isHighlighted": true
+        },
+        {
+          "title": "Cerebral",
+          "artist": "Boys Noize & Pilo",
+          "isHighlighted": false
+        },
+        {
+          "title": "DtMF",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Me Lo Merezco",
+          "artist": "ELENA ROSE",
+          "isHighlighted": true
+        },
+        {
+          "title": "No One Noticed",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Imitadora",
+          "artist": "Romeo Santos",
+          "isHighlighted": false
+        },
+        {
+          "title": "Stop This Train",
+          "artist": "John Mayer",
+          "isHighlighted": true
+        },
+        {
+          "title": "Welcome To Japan",
+          "artist": "The Strokes",
+          "isHighlighted": true
+        },
+        {
+          "title": "She Lays Down",
+          "artist": "The 1975",
+          "isHighlighted": true
+        },
+        {
+          "title": "Doses & Mimosas",
+          "artist": "Cherub",
+          "isHighlighted": true
+        },
+        {
+          "title": "Desdeñosa (En Mano de Los Macorinos) [feat. Los Macorinos, Omara Portuondo & Eugenia León]",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": false
+        },
+        {
+          "title": "xanny",
+          "artist": "Billie Eilish",
+          "isHighlighted": true
+        },
+        {
+          "title": "Bossa No Sé (feat. Jean Carter)",
+          "artist": "Cuco",
+          "isHighlighted": true
+        },
+        {
+          "title": "Me (feat. Feyde)",
+          "artist": "Hans.",
+          "isHighlighted": true
+        },
+        {
+          "title": "It's Called: Freefall",
+          "artist": "Rainbow Kitten Surprise",
+          "isHighlighted": true
+        },
+        {
+          "title": "That's My Shit",
+          "artist": "Rainbow Kitten Surprise",
+          "isHighlighted": true
+        },
+        {
+          "title": "Deep Down Body Thurst",
+          "artist": "N.E.R.D",
+          "isHighlighted": true
+        },
+        {
+          "title": "Draw Your Swords",
+          "artist": "Angus & Julia Stone",
+          "isHighlighted": true
+        },
+        {
+          "title": "Mamita (feat. Natalia Lafourcade)",
+          "artist": "Rawayana",
+          "isHighlighted": false
+        },
+        {
+          "title": "My Love Mine All Mine",
+          "artist": "Mitski",
+          "isHighlighted": false
+        },
+        {
+          "title": "Do You Like Me?",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Drifting",
+          "artist": "Omar Apollo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sexy to Someone",
+          "artist": "Clairo",
+          "isHighlighted": true
+        },
+        {
+          "title": "No Broke Boys",
+          "artist": "Disco Lines & Tinashe",
+          "isHighlighted": false
+        },
+        {
+          "title": "This Must Be the Place (Naive Melody)",
+          "artist": "Talking Heads",
+          "isHighlighted": false
+        },
+        {
+          "title": "Man I Need",
+          "artist": "Olivia Dean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Like Him (feat. Lola Young)",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        },
+        {
+          "title": "Calm Down",
+          "artist": "Rema & Selena Gomez",
+          "isHighlighted": false
+        },
+        {
+          "title": "Heat Waves",
+          "artist": "Glass Animals",
+          "isHighlighted": false
+        },
+        {
+          "title": "dancing with myself",
+          "artist": "Royel Otis",
+          "isHighlighted": false
+        },
+        {
+          "title": "Back To Me",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Baby (Is It A Crime)",
+          "artist": "Rema",
+          "isHighlighted": false
+        },
+        {
+          "title": "REEL IT IN",
+          "artist": "Aminé",
+          "isHighlighted": false
+        },
+        {
+          "title": "Caroline",
+          "artist": "Aminé",
+          "isHighlighted": true
+        },
+        {
+          "title": "CUFF IT",
+          "artist": "Beyoncé",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mo Bamba",
+          "artist": "Sheck Wes",
+          "isHighlighted": true
+        },
+        {
+          "title": "Magnolia",
+          "artist": "Playboi Carti",
+          "isHighlighted": true
+        },
+        {
+          "title": "Yamborghini High (feat. Juicy J)",
+          "artist": "A$AP Mob",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ayy Ladies (feat. Tyga)",
+          "artist": "Travis Porter",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Motto (feat. Lil Wayne) [Bonus Track]",
+          "artist": "Drake",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Hills",
+          "artist": "The Weeknd",
+          "isHighlighted": true
+        },
+        {
+          "title": "Starboy (feat. Daft Punk)",
+          "artist": "The Weeknd",
+          "isHighlighted": false
+        },
+        {
+          "title": "Earned It (Fifty Shades of Grey)",
+          "artist": "The Weeknd",
+          "isHighlighted": true
+        },
+        {
+          "title": "Lose Control (feat. Ciara & Fat Man Scoop)",
+          "artist": "Missy Elliott",
+          "isHighlighted": false
+        },
+        {
+          "title": "Baguettes in the Face (feat. NAV, Playboi Carti & A Boogie wit da Hoodie)",
+          "artist": "Mustard",
+          "isHighlighted": false
+        },
+        {
+          "title": "This Is America",
+          "artist": "Childish Gambino",
+          "isHighlighted": false
+        },
+        {
+          "title": "MONACO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Lemon",
+          "artist": "N.E.R.D & Rihanna",
+          "isHighlighted": true
+        },
+        {
+          "title": "Bitches Ain't Shit",
+          "artist": "Suga Free",
+          "isHighlighted": true
+        },
+        {
+          "title": "Agora Hills",
+          "artist": "Doja Cat",
+          "isHighlighted": false
+        },
+        {
+          "title": "WHERE SHE GOES",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Unforgettable (feat. Swae Lee)",
+          "artist": "French Montana",
+          "isHighlighted": false
+        },
+        {
+          "title": "TURiSTA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "back to friends",
+          "artist": "sombr",
+          "isHighlighted": true
+        },
+        {
+          "title": "un x100to",
+          "artist": "Grupo Frontera & Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "DÁKITI",
+          "artist": "Bad Bunny & JHAYCO",
+          "isHighlighted": false
+        },
+        {
+          "title": "MIA (feat. Drake)",
+          "artist": "Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Safaera",
+          "artist": "Bad Bunny, Jowell & Randy & Ñengo Flow",
+          "isHighlighted": false
+        },
+        {
+          "title": "Yo Perreo Sola",
+          "artist": "Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "golden hour (Ruel Remix)",
+          "artist": "JVKE",
+          "isHighlighted": true
+        },
+        {
+          "title": "Walk On By",
+          "artist": "Dionne Warwick",
+          "isHighlighted": false
+        }
       ]
     },
     {
       "id": "shes-pedaling",
       "name": "She's Pedaling",
       "description": "High-energy cycling and workout anthems",
-      "vibe": "high energy, powerful, driving beats",
+      "vibe": "",
       "isHighFrequency": true,
       "tracks": [
-        { "title": "Physical", "artist": "Dua Lipa", "isHighlighted": true },
-        { "title": "Stronger", "artist": "Kanye West", "isHighlighted": true },
-        { "title": "Till I Collapse", "artist": "Eminem", "isHighlighted": true },
-        { "title": "Can't Hold Us", "artist": "Macklemore", "isHighlighted": true },
-        { "title": "Run the World (Girls)", "artist": "Beyonce", "isHighlighted": true },
-        { "title": "Blinding Lights", "artist": "The Weeknd", "isHighlighted": true },
-        { "title": "Levels", "artist": "Avicii", "isHighlighted": true },
-        { "title": "Wake Me Up", "artist": "Avicii", "isHighlighted": true },
-        { "title": "Titanium", "artist": "David Guetta ft. Sia", "isHighlighted": true },
-        { "title": "Pump It", "artist": "Black Eyed Peas", "isHighlighted": false },
-        { "title": "Eye of the Tiger", "artist": "Survivor", "isHighlighted": true },
-        { "title": "Unstoppable", "artist": "Sia", "isHighlighted": true },
-        { "title": "Warriors", "artist": "Imagine Dragons", "isHighlighted": false },
-        { "title": "Work Bitch", "artist": "Britney Spears", "isHighlighted": true },
-        { "title": "Power", "artist": "Kanye West", "isHighlighted": true }
+        {
+          "title": "Both of Us (Edit)",
+          "artist": "Jayda G",
+          "isHighlighted": false
+        },
+        {
+          "title": "Agitations tropicales",
+          "artist": "L'Impératrice",
+          "isHighlighted": false
+        },
+        {
+          "title": "10 Freaky Girls (feat. 21 Savage)",
+          "artist": "Metro Boomin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Never Come Back",
+          "artist": "Caribou",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ponzu Beach",
+          "artist": "Ponzu Island",
+          "isHighlighted": false
+        },
+        {
+          "title": "Toi Et Moi",
+          "artist": "Paradis",
+          "isHighlighted": false
+        },
+        {
+          "title": "Me Porto Bonito",
+          "artist": "Bad Bunny & Chencho Corleone",
+          "isHighlighted": false
+        },
+        {
+          "title": "LA CANCIÓN",
+          "artist": "J Balvin & Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mi Gente",
+          "artist": "J Balvin & Willy William",
+          "isHighlighted": false
+        },
+        {
+          "title": "()vȯ)) ̷̨ʅ(۝ʅ(Ɵʅ():::()̵̳̗̊(Ɵʅ()vȯ)) ̷̨ʅ",
+          "artist": "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ",
+          "isHighlighted": false
+        },
+        {
+          "title": "PICK IT UP (feat. A$AP Rocky)",
+          "artist": "Famous Dex",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ric Flair Drip",
+          "artist": "Offset & Metro Boomin",
+          "isHighlighted": true
+        },
+        {
+          "title": "What You Like (feat. Yunè Pinku)",
+          "artist": "Logic1000",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Spins",
+          "artist": "Mac Miller",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hawái",
+          "artist": "Maluma",
+          "isHighlighted": false
+        },
+        {
+          "title": "Un Veneno",
+          "artist": "C. Tangana & Niño de Elche",
+          "isHighlighted": true
+        },
+        {
+          "title": "Demasiadas Mujeres",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Have It All (feat. Pharrell)",
+          "artist": "Gucci Mane",
+          "isHighlighted": false
+        },
+        {
+          "title": "Todo De Ti",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": false
+        },
+        {
+          "title": "Just Wanna Rock",
+          "artist": "Lil Uzi Vert",
+          "isHighlighted": false
+        },
+        {
+          "title": "JAPAN",
+          "artist": "Famous Dex",
+          "isHighlighted": false
+        },
+        {
+          "title": "Operator (DJ Koze's Disco Edit)",
+          "artist": "Låpsley",
+          "isHighlighted": false
+        },
+        {
+          "title": "Try a Little Tenderness",
+          "artist": "Otis Redding",
+          "isHighlighted": false
+        },
+        {
+          "title": "Big Boy Diamonds (feat. Kodak Black & London On Da Track)",
+          "artist": "Gucci Mane",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tailwhip",
+          "artist": "Men I Trust",
+          "isHighlighted": true
+        },
+        {
+          "title": "Loving Is Easy (feat. Benny Sings)",
+          "artist": "Rex Orange County",
+          "isHighlighted": true
+        },
+        {
+          "title": "Obsesión",
+          "artist": "Aventura",
+          "isHighlighted": false
+        },
+        {
+          "title": "White (feat. Frank Ocean)",
+          "artist": "Odd Future",
+          "isHighlighted": true
+        },
+        {
+          "title": "Deep Down Body Thurst",
+          "artist": "N.E.R.D",
+          "isHighlighted": true
+        },
+        {
+          "title": "Like That (feat. Gucci Mane)",
+          "artist": "Doja Cat",
+          "isHighlighted": false
+        },
+        {
+          "title": "My Kink Is Karma",
+          "artist": "Chappell Roan",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tears Dry On Their Own",
+          "artist": "Amy Winehouse",
+          "isHighlighted": false
+        },
+        {
+          "title": "No Broke Boys",
+          "artist": "Disco Lines & Tinashe",
+          "isHighlighted": false
+        }
       ]
     },
     {
-      "id": "unabridged",
-      "name": "Unabridged",
-      "description": "Full emotional range, authentic expression",
-      "vibe": "emotional, authentic, full spectrum",
-      "isHighFrequency": true,
+      "id": "shes-pedaling-unabridged",
+      "name": "She's Pedaling Unabridged",
+      "description": "The extended cycling playlist",
+      "vibe": "",
+      "isHighFrequency": false,
       "tracks": [
-        { "title": "Vienna", "artist": "Billy Joel", "isHighlighted": true },
-        { "title": "Landslide", "artist": "Fleetwood Mac", "isHighlighted": true },
-        { "title": "The Night We Met", "artist": "Lord Huron", "isHighlighted": true },
-        { "title": "Skinny Love", "artist": "Bon Iver", "isHighlighted": true },
-        { "title": "Holocene", "artist": "Bon Iver", "isHighlighted": true },
-        { "title": "Cherry Wine", "artist": "Hozier", "isHighlighted": true },
-        { "title": "Take Me to Church", "artist": "Hozier", "isHighlighted": true },
-        { "title": "First Day of My Life", "artist": "Bright Eyes", "isHighlighted": true },
-        { "title": "To Build a Home", "artist": "The Cinematic Orchestra", "isHighlighted": true },
-        { "title": "Mad World", "artist": "Gary Jules", "isHighlighted": true },
-        { "title": "Creep", "artist": "Radiohead", "isHighlighted": true },
-        { "title": "Ivy", "artist": "Frank Ocean", "isHighlighted": true },
-        { "title": "Pink + White", "artist": "Frank Ocean", "isHighlighted": true },
-        { "title": "Motion Sickness", "artist": "Phoebe Bridgers", "isHighlighted": true },
-        { "title": "Liability", "artist": "Lorde", "isHighlighted": true }
+        {
+          "title": "Night Patrol (Radio Edit)",
+          "artist": "Lifelike",
+          "isHighlighted": false
+        },
+        {
+          "title": "As It Was",
+          "artist": "Harry Styles",
+          "isHighlighted": false
+        },
+        {
+          "title": "Straight Up Relaxin' (feat. Cosmo's Midnight)",
+          "artist": "Yung Bae",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cerebral",
+          "artist": "Boys Noize & Pilo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rollin (feat. Future & Khalid)",
+          "artist": "Calvin Harris",
+          "isHighlighted": true
+        },
+        {
+          "title": "Both of Us (Edit)",
+          "artist": "Jayda G",
+          "isHighlighted": false
+        },
+        {
+          "title": "Dang! (feat. Anderson .Paak)",
+          "artist": "Mac Miller",
+          "isHighlighted": false
+        },
+        {
+          "title": "Slide (feat. Frank Ocean & Migos)",
+          "artist": "Calvin Harris",
+          "isHighlighted": false
+        },
+        {
+          "title": "Agitations tropicales",
+          "artist": "L'Impératrice",
+          "isHighlighted": false
+        },
+        {
+          "title": "Magnolia",
+          "artist": "Playboi Carti",
+          "isHighlighted": true
+        },
+        {
+          "title": "10 Freaky Girls (feat. 21 Savage)",
+          "artist": "Metro Boomin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Black Skinhead",
+          "artist": "Kanye West",
+          "isHighlighted": false
+        },
+        {
+          "title": "I Love You",
+          "artist": "Lil B",
+          "isHighlighted": false
+        },
+        {
+          "title": "Choppa Won't Miss (feat. Young Thug)",
+          "artist": "Playboi Carti",
+          "isHighlighted": false
+        },
+        {
+          "title": "Lovefool",
+          "artist": "The Cardigans",
+          "isHighlighted": false
+        },
+        {
+          "title": "Blame It (feat. T-Pain)",
+          "artist": "Jamie Foxx",
+          "isHighlighted": false
+        },
+        {
+          "title": "Never Come Back",
+          "artist": "Caribou",
+          "isHighlighted": false
+        },
+        {
+          "title": "Do it Again",
+          "artist": "Shinichiro Yokota",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ponzu Beach",
+          "artist": "Ponzu Island",
+          "isHighlighted": false
+        },
+        {
+          "title": "Toi Et Moi",
+          "artist": "Paradis",
+          "isHighlighted": false
+        },
+        {
+          "title": "Gronlandic Edit",
+          "artist": "of Montreal",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sur la planche 2013",
+          "artist": "La Femme",
+          "isHighlighted": false
+        },
+        {
+          "title": "On Hold",
+          "artist": "The xx",
+          "isHighlighted": false
+        },
+        {
+          "title": "CUFF IT",
+          "artist": "Beyoncé",
+          "isHighlighted": false
+        },
+        {
+          "title": "About Damn Time",
+          "artist": "Lizzo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Music For a Sushi Restaurant",
+          "artist": "Harry Styles",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tití Me Preguntó",
+          "artist": "Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Me Porto Bonito",
+          "artist": "Bad Bunny & Chencho Corleone",
+          "isHighlighted": false
+        },
+        {
+          "title": "LA CANCIÓN",
+          "artist": "J Balvin & Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mi Gente",
+          "artist": "J Balvin & Willy William",
+          "isHighlighted": false
+        },
+        {
+          "title": "Transportin'",
+          "artist": "Kodak Black",
+          "isHighlighted": false
+        },
+        {
+          "title": "Raingurl",
+          "artist": "Yaeji",
+          "isHighlighted": false
+        },
+        {
+          "title": "Elastic",
+          "artist": "Joey Purp",
+          "isHighlighted": false
+        },
+        {
+          "title": "Come On Eileen",
+          "artist": "Dexys Midnight Runners",
+          "isHighlighted": false
+        },
+        {
+          "title": "Naive",
+          "artist": "The Kooks",
+          "isHighlighted": true
+        },
+        {
+          "title": "()vȯ)) ̷̨ʅ(۝ʅ(Ɵʅ():::()̵̳̗̊(Ɵʅ()vȯ)) ̷̨ʅ",
+          "artist": "⣎⡇ꉺლ༽இ•̛)ྀ◞ ༎ຶ ༽ৣৢ؞ৢ؞ؖ ꉺლ",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Heart Part 5",
+          "artist": "Kendrick Lamar",
+          "isHighlighted": false
+        },
+        {
+          "title": "PICK IT UP (feat. A$AP Rocky)",
+          "artist": "Famous Dex",
+          "isHighlighted": true
+        },
+        {
+          "title": "Mo Money Mo Problems (feat. Ma$e & Puff Daddy)",
+          "artist": "The Notorious B.I.G.",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ric Flair Drip",
+          "artist": "Offset & Metro Boomin",
+          "isHighlighted": true
+        },
+        {
+          "title": "a lot",
+          "artist": "21 Savage",
+          "isHighlighted": true
+        },
+        {
+          "title": "What You Like (feat. Yunè Pinku)",
+          "artist": "Logic1000",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Spins",
+          "artist": "Mac Miller",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mr. Blue Sky",
+          "artist": "Electric Light Orchestra",
+          "isHighlighted": false
+        },
+        {
+          "title": "brutal",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hawái",
+          "artist": "Maluma",
+          "isHighlighted": false
+        },
+        {
+          "title": "Antes de Morirme (feat. ROSALÍA)",
+          "artist": "C. Tangana",
+          "isHighlighted": true
+        },
+        {
+          "title": "París",
+          "artist": "DELLAFUENTE, C. Tangana & Alizzz",
+          "isHighlighted": false
+        },
+        {
+          "title": "Un Veneno",
+          "artist": "C. Tangana & Niño de Elche",
+          "isHighlighted": true
+        },
+        {
+          "title": "Demasiadas Mujeres",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Have It All (feat. Pharrell)",
+          "artist": "Gucci Mane",
+          "isHighlighted": false
+        },
+        {
+          "title": "4EVA",
+          "artist": "KAYTRAMINÉ, Aminé, KAYTRANADA & Pharrell Williams",
+          "isHighlighted": false
+        },
+        {
+          "title": "Todo De Ti",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": false
+        },
+        {
+          "title": "Losing It (Radio Edit)",
+          "artist": "FISHER",
+          "isHighlighted": false
+        },
+        {
+          "title": "Just Wanna Rock",
+          "artist": "Lil Uzi Vert",
+          "isHighlighted": false
+        },
+        {
+          "title": "Amazing",
+          "artist": "George Michael",
+          "isHighlighted": false
+        },
+        {
+          "title": "Where Angels Fear To Tread",
+          "artist": "Disclosure",
+          "isHighlighted": false
+        },
+        {
+          "title": "Feel So Good",
+          "artist": "Mase",
+          "isHighlighted": false
+        },
+        {
+          "title": "JAPAN",
+          "artist": "Famous Dex",
+          "isHighlighted": false
+        },
+        {
+          "title": "Heartbeat",
+          "artist": "Childish Gambino",
+          "isHighlighted": false
+        },
+        {
+          "title": "IV. Sweatpants (feat. Jason Martin)",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Operator (DJ Koze's Disco Edit)",
+          "artist": "Låpsley",
+          "isHighlighted": false
+        },
+        {
+          "title": "Fool On the Street",
+          "artist": "Rick James",
+          "isHighlighted": false
+        },
+        {
+          "title": "Kokomo, IN",
+          "artist": "Japanese Breakfast",
+          "isHighlighted": false
+        },
+        {
+          "title": "Amoeba",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Funky Galileo",
+          "artist": "Sure Sure",
+          "isHighlighted": false
+        },
+        {
+          "title": "Try a Little Tenderness",
+          "artist": "Otis Redding",
+          "isHighlighted": false
+        },
+        {
+          "title": "F**k Sleep (feat. FKA twigs)",
+          "artist": "A$AP Rocky",
+          "isHighlighted": false
+        },
+        {
+          "title": "Big Boy Diamonds (feat. Kodak Black & London On Da Track)",
+          "artist": "Gucci Mane",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tailwhip",
+          "artist": "Men I Trust",
+          "isHighlighted": true
+        },
+        {
+          "title": "Loving Is Easy (feat. Benny Sings)",
+          "artist": "Rex Orange County",
+          "isHighlighted": true
+        },
+        {
+          "title": "Obsesión",
+          "artist": "Aventura",
+          "isHighlighted": false
+        },
+        {
+          "title": "White (feat. Frank Ocean)",
+          "artist": "Odd Future",
+          "isHighlighted": true
+        },
+        {
+          "title": "Deep Down Body Thurst",
+          "artist": "N.E.R.D",
+          "isHighlighted": true
+        }
       ]
     },
     {
       "id": "slow-flow",
       "name": "Slow Flow",
-      "description": "Chill vibes for winding down and relaxation",
-      "vibe": "calm, reflective, peaceful",
-      "isHighFrequency": false,
+      "description": "Chill vibes for winding down",
+      "vibe": "",
+      "isHighFrequency": true,
       "tracks": [
-        { "title": "Sunset Lover", "artist": "Petit Biscuit", "isHighlighted": true },
-        { "title": "Re: Stacks", "artist": "Bon Iver", "isHighlighted": true },
-        { "title": "Intro", "artist": "The xx", "isHighlighted": true },
-        { "title": "Nuvole Bianche", "artist": "Ludovico Einaudi", "isHighlighted": true },
-        { "title": "Experience", "artist": "Ludovico Einaudi", "isHighlighted": true },
-        { "title": "Time", "artist": "Hans Zimmer", "isHighlighted": true },
-        { "title": "Arrival of the Birds", "artist": "The Cinematic Orchestra", "isHighlighted": true },
-        { "title": "Gymnopédie No.1", "artist": "Erik Satie", "isHighlighted": true },
-        { "title": "Clair de Lune", "artist": "Debussy", "isHighlighted": true },
-        { "title": "Weightless", "artist": "Marconi Union", "isHighlighted": false },
-        { "title": "Bloom", "artist": "The Paper Kites", "isHighlighted": true },
-        { "title": "Saturn", "artist": "Sleeping At Last", "isHighlighted": true },
-        { "title": "Ocean Eyes", "artist": "Billie Eilish", "isHighlighted": true },
-        { "title": "Taro", "artist": "alt-J", "isHighlighted": false },
-        { "title": "Ribs", "artist": "Lorde", "isHighlighted": true }
+        {
+          "title": "Pulaski at Night",
+          "artist": "Andrew Bird",
+          "isHighlighted": false
+        },
+        {
+          "title": "Beach Comber",
+          "artist": "Real Estate",
+          "isHighlighted": true
+        },
+        {
+          "title": "Invincible (feat. Daniel Caesar)",
+          "artist": "Omar Apollo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Feeding the Family",
+          "artist": "Spacey Jane",
+          "isHighlighted": false
+        },
+        {
+          "title": "Feels Better",
+          "artist": "Spacey Jane",
+          "isHighlighted": true
+        },
+        {
+          "title": "Intimidated (feat. H.E.R.)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Saint Ivy",
+          "artist": "Beach Fossils",
+          "isHighlighted": true
+        },
+        {
+          "title": "Obvs",
+          "artist": "Jamie xx",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hawái",
+          "artist": "Maluma",
+          "isHighlighted": false
+        },
+        {
+          "title": "CANDY",
+          "artist": "ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "blisters",
+          "artist": "serpentwithfeet",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rocky Raccoon",
+          "artist": "The Beatles",
+          "isHighlighted": false
+        },
+        {
+          "title": "Frank's Track",
+          "artist": "Kanye West",
+          "isHighlighted": true
+        },
+        {
+          "title": "Hunnybee",
+          "artist": "Unknown Mortal Orchestra",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cigarette Daydreams",
+          "artist": "Cage the Elephant",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bags",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "bless ur heart",
+          "artist": "serpentwithfeet",
+          "isHighlighted": false
+        },
+        {
+          "title": "drivers license",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "deja vu",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sofia",
+          "artist": "Clairo",
+          "isHighlighted": true
+        },
+        {
+          "title": "Flaming Hot Cheetos",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Pretty Girl",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Loving Is Easy (feat. Benny Sings)",
+          "artist": "Rex Orange County",
+          "isHighlighted": true
+        },
+        {
+          "title": "4EVER",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Softly",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ivy",
+          "artist": "Frank Ocean",
+          "isHighlighted": true
+        },
+        {
+          "title": "SUMMER",
+          "artist": "BROCKHAMPTON",
+          "isHighlighted": true
+        },
+        {
+          "title": "American Boyfriend",
+          "artist": "Kevin Abstract",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hello? (feat. Rejjie Snow)",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ghost Town (feat. PARTYNEXTDOOR)",
+          "artist": "Kanye West",
+          "isHighlighted": false
+        },
+        {
+          "title": "Show Me How",
+          "artist": "Men I Trust",
+          "isHighlighted": false
+        },
+        {
+          "title": "Supermodel",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "See You Again (feat. Kali Uchis)",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        },
+        {
+          "title": "Prune, You Talk Funny",
+          "artist": "Gus Dapperton",
+          "isHighlighted": false
+        },
+        {
+          "title": "Super Rich Kids (feat. Earl Sweatshirt)",
+          "artist": "Frank Ocean",
+          "isHighlighted": true
+        },
+        {
+          "title": "Edition",
+          "artist": "Rex Orange County",
+          "isHighlighted": true
+        },
+        {
+          "title": "It Gets Better",
+          "artist": "Rex Orange County",
+          "isHighlighted": false
+        },
+        {
+          "title": "Biking (Solo)",
+          "artist": "Frank Ocean",
+          "isHighlighted": true
+        },
+        {
+          "title": "In My Room",
+          "artist": "Frank Ocean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Nico's Red Truck",
+          "artist": "Dijon",
+          "isHighlighted": false
+        },
+        {
+          "title": "Death & Taxes",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "SUPERPOSITION (feat. John Mayer)",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Dear April (Side A - Acoustic)",
+          "artist": "Frank Ocean",
+          "isHighlighted": false
+        },
+        {
+          "title": "1 step forward, 3 steps back",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Calvaire",
+          "artist": "spill tab",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bad Life (feat. Kali Uchis)",
+          "artist": "Omar Apollo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Let Me Go",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Do You Like Me?",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "CYANIDE",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "OPEN UP",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "ARE YOU OK?",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "TOO DEEP TO TURN BACK",
+          "artist": "Daniel Caesar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Brillo",
+          "artist": "J Balvin & ROSALÍA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Querido Río",
+          "artist": "J Balvin",
+          "isHighlighted": false
+        },
+        {
+          "title": "Nunca Estoy",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bien Duro",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Un Veneno",
+          "artist": "C. Tangana & Niño de Elche",
+          "isHighlighted": true
+        },
+        {
+          "title": "Demasiadas Mujeres",
+          "artist": "C. Tangana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Put Your Records On",
+          "artist": "Ritt Momney",
+          "isHighlighted": false
+        },
+        {
+          "title": "On Love (An Alternative Response to Almitra's Request)",
+          "artist": "Ritt Momney",
+          "isHighlighted": false
+        },
+        {
+          "title": "Command V",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Something, in General",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Cinnamon Girl",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "Happiness is a butterfly",
+          "artist": "Lana Del Rey",
+          "isHighlighted": true
+        },
+        {
+          "title": "Saw You In A Dream",
+          "artist": "The Japanese House",
+          "isHighlighted": false
+        },
+        {
+          "title": "Who Will?",
+          "artist": "Q",
+          "isHighlighted": false
+        },
+        {
+          "title": "Talk Down",
+          "artist": "Dijon",
+          "isHighlighted": false
+        },
+        {
+          "title": "EARFQUAKE",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        },
+        {
+          "title": "Dragonball Durag",
+          "artist": "Thundercat",
+          "isHighlighted": false
+        },
+        {
+          "title": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        },
+        {
+          "title": "All Your Love",
+          "artist": "Jakob",
+          "isHighlighted": true
+        },
+        {
+          "title": "I. Flight of the Navigator",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "West (feat. Daniel Caesar)",
+          "artist": "River Tiber",
+          "isHighlighted": false
+        },
+        {
+          "title": "You Might Be Sleeping (with Clairo) [with Clairo]",
+          "artist": "Jakob",
+          "isHighlighted": true
+        },
+        {
+          "title": "Like or Like Like",
+          "artist": "Miniature Tigers",
+          "isHighlighted": false
+        },
+        {
+          "title": "Rolled Up (feat. Mac DeMarco)",
+          "artist": "Benny Sings",
+          "isHighlighted": false
+        },
+        {
+          "title": "Habit (Blood Cultures Remix)",
+          "artist": "Cool Company",
+          "isHighlighted": false
+        },
+        {
+          "title": "Purity (feat. Frank Ocean)",
+          "artist": "A$AP Rocky",
+          "isHighlighted": false
+        },
+        {
+          "title": "Revelation",
+          "artist": "Hans Zimmer & David Fleming",
+          "isHighlighted": false
+        },
+        {
+          "title": "Passionfruit",
+          "artist": "Benny Sings",
+          "isHighlighted": false
+        },
+        {
+          "title": "Bad Bitch With a Stutter",
+          "artist": "iLoveMakonnen",
+          "isHighlighted": false
+        },
+        {
+          "title": "Selfish",
+          "artist": "Slum Village",
+          "isHighlighted": false
+        },
+        {
+          "title": "This Time Around",
+          "artist": "Jessica Pratt",
+          "isHighlighted": false
+        },
+        {
+          "title": "Right Down the Line",
+          "artist": "Gerry Rafferty",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mr. Ambulance Driver",
+          "artist": "The Flaming Lips",
+          "isHighlighted": false
+        },
+        {
+          "title": "Coming Home",
+          "artist": "Leon Bridges",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tired of Being Alone",
+          "artist": "Al Green",
+          "isHighlighted": false
+        },
+        {
+          "title": "Home Again",
+          "artist": "Michael Kiwanuka",
+          "isHighlighted": false
+        },
+        {
+          "title": "It's Forever",
+          "artist": "The Ebonys",
+          "isHighlighted": false
+        },
+        {
+          "title": "Impatient (feat. Ty Dolla $ign)",
+          "artist": "Jeremih",
+          "isHighlighted": false
+        },
+        {
+          "title": "Space Song",
+          "artist": "Beach House",
+          "isHighlighted": false
+        },
+        {
+          "title": "Kokomo, IN",
+          "artist": "Japanese Breakfast",
+          "isHighlighted": false
+        },
+        {
+          "title": "Amoeba",
+          "artist": "Clairo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Some",
+          "artist": "Steve Lacy",
+          "isHighlighted": false
+        },
+        {
+          "title": "Give Up Baby Go",
+          "artist": "Peach Pit",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ex-Factor",
+          "artist": "Lauryn Hill",
+          "isHighlighted": false
+        },
+        {
+          "title": "Can't Take My Eyes Off of You (I Love You Baby)",
+          "artist": "Lauryn Hill",
+          "isHighlighted": false
+        },
+        {
+          "title": "Thinkin Bout You",
+          "artist": "Frank Ocean",
+          "isHighlighted": false
+        },
+        {
+          "title": "Try a Little Tenderness",
+          "artist": "Otis Redding",
+          "isHighlighted": false
+        },
+        {
+          "title": "vampire",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "Karma",
+          "artist": "Taylor Swift",
+          "isHighlighted": false
+        },
+        {
+          "title": "Kill Bill",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Nothing New (Taylor's Version) (From The Vault) [feat. Phoebe Bridgers]",
+          "artist": "Taylor Swift",
+          "isHighlighted": false
+        },
+        {
+          "title": "favorite crime",
+          "artist": "Olivia Rodrigo",
+          "isHighlighted": false
+        },
+        {
+          "title": "On Melancholy Hill",
+          "artist": "Gorillaz",
+          "isHighlighted": true
+        },
+        {
+          "title": "I Love You Always Forever",
+          "artist": "Donna Lewis",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ungodly Hour",
+          "artist": "Chloe x Halle",
+          "isHighlighted": false
+        },
+        {
+          "title": "BEST INTEREST",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        }
       ]
     },
     {
       "id": "cc",
       "name": "CC",
-      "description": "Core Collection - timeless favorites",
-      "vibe": "classic, essential, timeless",
+      "description": "Core Collection - essential favorites",
+      "vibe": "",
       "isHighFrequency": true,
       "tracks": [
-        { "title": "Dreams", "artist": "Fleetwood Mac", "isHighlighted": true },
-        { "title": "Everywhere", "artist": "Fleetwood Mac", "isHighlighted": true },
-        { "title": "Africa", "artist": "Toto", "isHighlighted": true },
-        { "title": "September", "artist": "Earth Wind & Fire", "isHighlighted": true },
-        { "title": "Dancing Queen", "artist": "ABBA", "isHighlighted": true },
-        { "title": "Don't Stop Me Now", "artist": "Queen", "isHighlighted": true },
-        { "title": "Bohemian Rhapsody", "artist": "Queen", "isHighlighted": true },
-        { "title": "Take On Me", "artist": "a-ha", "isHighlighted": true },
-        { "title": "I Wanna Dance with Somebody", "artist": "Whitney Houston", "isHighlighted": true },
-        { "title": "Everybody Wants to Rule the World", "artist": "Tears for Fears", "isHighlighted": true },
-        { "title": "Come On Eileen", "artist": "Dexys Midnight Runners", "isHighlighted": true },
-        { "title": "Sweet Dreams", "artist": "Eurythmics", "isHighlighted": true },
-        { "title": "Just Like Heaven", "artist": "The Cure", "isHighlighted": true },
-        { "title": "Bizarre Love Triangle", "artist": "New Order", "isHighlighted": true },
-        { "title": "Blue Monday", "artist": "New Order", "isHighlighted": true }
+        {
+          "title": "11th Dimension",
+          "artist": "Julian Casablancas",
+          "isHighlighted": false
+        },
+        {
+          "title": "My Smile Is Extinct",
+          "artist": "Kane Strang",
+          "isHighlighted": true
+        },
+        {
+          "title": "Basil",
+          "artist": "Soft Glas",
+          "isHighlighted": true
+        },
+        {
+          "title": "Spook",
+          "artist": "Adult Jazz",
+          "isHighlighted": true
+        },
+        {
+          "title": "Rêverie, L. 68",
+          "artist": "Alain Planès",
+          "isHighlighted": true
+        },
+        {
+          "title": "The Light",
+          "artist": "The Album Leaf",
+          "isHighlighted": false
+        },
+        {
+          "title": "Sleep Apnea",
+          "artist": "Beach Fossils",
+          "isHighlighted": true
+        },
+        {
+          "title": "Saint Ivy",
+          "artist": "Beach Fossils",
+          "isHighlighted": true
+        },
+        {
+          "title": "Julia (2018 Mix)",
+          "artist": "The Beatles",
+          "isHighlighted": true
+        },
+        {
+          "title": "Elephant Gun",
+          "artist": "Beirut",
+          "isHighlighted": true
+        },
+        {
+          "title": "Great White Shark",
+          "artist": "Big Thief",
+          "isHighlighted": true
+        },
+        {
+          "title": "So Here We Are",
+          "artist": "Bloc Party",
+          "isHighlighted": true
+        },
+        {
+          "title": "Re: Stacks",
+          "artist": "Bon Iver",
+          "isHighlighted": true
+        },
+        {
+          "title": "First Day of My Life",
+          "artist": "Bright Eyes",
+          "isHighlighted": true
+        },
+        {
+          "title": "SUMMER",
+          "artist": "BROCKHAMPTON",
+          "isHighlighted": true
+        },
+        {
+          "title": "Antes de Morirme (feat. ROSALÍA)",
+          "artist": "C. Tangana",
+          "isHighlighted": true
+        },
+        {
+          "title": "How Are You True",
+          "artist": "Cage the Elephant",
+          "isHighlighted": true
+        },
+        {
+          "title": "I. Flight of the Navigator",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Playing Around Before the Party Starts",
+          "artist": "Childish Gambino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Our House",
+          "artist": "Crosby, Stills, Nash & Young",
+          "isHighlighted": true
+        },
+        {
+          "title": "ARE YOU OK?",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "Come On Eileen (Single Edit)",
+          "artist": "Dexys Midnight Runners",
+          "isHighlighted": false
+        },
+        {
+          "title": "Thirteen",
+          "artist": "Elliott Smith",
+          "isHighlighted": true
+        },
+        {
+          "title": "Landslide (Remastered)",
+          "artist": "Fleetwood Mac",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ballad of Sir Frankie Crisp (Let It Roll)",
+          "artist": "George Harrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ready, Able (KCRW Session)",
+          "artist": "Grizzly Bear",
+          "isHighlighted": true
+        },
+        {
+          "title": "Game Over!",
+          "artist": "Harris Cole",
+          "isHighlighted": true
+        },
+        {
+          "title": "Chinatown",
+          "artist": "Hate Drugs & BEST DAD",
+          "isHighlighted": false
+        },
+        {
+          "title": "Love Is Only a Feeling",
+          "artist": "HOMESHAKE",
+          "isHighlighted": true
+        },
+        {
+          "title": "All of Me",
+          "artist": "Jonah Conrad & James Blue",
+          "isHighlighted": true
+        },
+        {
+          "title": "The Moon Song (Live)",
+          "artist": "Karen O",
+          "isHighlighted": true
+        },
+        {
+          "title": "The Ways",
+          "artist": "Khalid, Swae Lee",
+          "isHighlighted": true
+        },
+        {
+          "title": "Seaside",
+          "artist": "The Kooks",
+          "isHighlighted": true
+        },
+        {
+          "title": "River",
+          "artist": "Leon Bridges",
+          "isHighlighted": true
+        },
+        {
+          "title": "Outro",
+          "artist": "M83",
+          "isHighlighted": false
+        },
+        {
+          "title": "Honey Moon",
+          "artist": "Mac DeMarco",
+          "isHighlighted": true
+        },
+        {
+          "title": "Mercy Mercy Me (The Ecology)",
+          "artist": "Marvin Gaye",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ji Yeon",
+          "artist": "Michael Giacchino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Elegy",
+          "artist": "Mild High Club",
+          "isHighlighted": true
+        },
+        {
+          "title": "stuck",
+          "artist": "mxmtoon",
+          "isHighlighted": true
+        },
+        {
+          "title": "Agape",
+          "artist": "Nicholas Britell",
+          "isHighlighted": true
+        },
+        {
+          "title": "Little's Theme",
+          "artist": "Nicholas Britell",
+          "isHighlighted": true
+        },
+        {
+          "title": "Where Is My Mind?",
+          "artist": "Pixies",
+          "isHighlighted": true
+        },
+        {
+          "title": "Motion Picture Soundtrack",
+          "artist": "Vitamin String Quartet",
+          "isHighlighted": true
+        },
+        {
+          "title": "Happiness",
+          "artist": "Rex Orange County",
+          "isHighlighted": true
+        },
+        {
+          "title": "Golden Slumbers",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tuyo (Narcos Theme) [A Netflix Original Series Soundtrack]",
+          "artist": "Rodrigo Amarante",
+          "isHighlighted": true
+        },
+        {
+          "title": "Sorry Bro",
+          "artist": "SALES",
+          "isHighlighted": true
+        },
+        {
+          "title": "The Sounds of Silence",
+          "artist": "Simon & Garfunkel",
+          "isHighlighted": false
+        },
+        {
+          "title": "Feels Better",
+          "artist": "Spacey Jane",
+          "isHighlighted": true
+        },
+        {
+          "title": "Black Like Me",
+          "artist": "Spoon",
+          "isHighlighted": true
+        },
+        {
+          "title": "Out Go the Lights",
+          "artist": "Spoon",
+          "isHighlighted": true
+        },
+        {
+          "title": "John Wayne Gacy, Jr.",
+          "artist": "Sufjan Stevens",
+          "isHighlighted": true
+        },
+        {
+          "title": "Hawaiian Boi",
+          "artist": "Triathalon",
+          "isHighlighted": true
+        },
+        {
+          "title": "Pale Blue Eyes",
+          "artist": "The Velvet Underground",
+          "isHighlighted": false
+        },
+        {
+          "title": "One Sunday Morning (Song for Jane Smiley's Boyfriend)",
+          "artist": "Wilco",
+          "isHighlighted": false
+        },
+        {
+          "title": "Beach Comber",
+          "artist": "Real Estate",
+          "isHighlighted": true
+        },
+        {
+          "title": "Time (From \"Inception\")",
+          "artist": "Tina Guo, Gavin Greenaway & Czech Philharmonic Orchestra",
+          "isHighlighted": true
+        },
+        {
+          "title": "No One Here",
+          "artist": "The 88",
+          "isHighlighted": true
+        },
+        {
+          "title": "Lew's Lullaby",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Command V",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "On Love (An Alternative Response to Almitra's Request)",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Sofia",
+          "artist": "Clairo",
+          "isHighlighted": true
+        },
+        {
+          "title": "Chinatown",
+          "artist": "Regular Spread",
+          "isHighlighted": false
+        },
+        {
+          "title": "Higher Ground",
+          "artist": "Stevie Wonder",
+          "isHighlighted": false
+        },
+        {
+          "title": "Amour (Alt Version 2018)",
+          "artist": "Akira Kosemura",
+          "isHighlighted": false
+        },
+        {
+          "title": "Let's Fall in Love for the Night",
+          "artist": "FINNEAS",
+          "isHighlighted": true
+        },
+        {
+          "title": "Norman f*****g Rockwell",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "Mariners Apartment Complex",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cinnamon Girl",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "Happiness is a butterfly",
+          "artist": "Lana Del Rey",
+          "isHighlighted": true
+        },
+        {
+          "title": "Bartender",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "The greatest",
+          "artist": "Lana Del Rey",
+          "isHighlighted": true
+        },
+        {
+          "title": "Venice Bitch",
+          "artist": "Lana Del Rey",
+          "isHighlighted": false
+        },
+        {
+          "title": "Put Your Records On",
+          "artist": "Ritt Momney",
+          "isHighlighted": false
+        },
+        {
+          "title": "Lovely Day",
+          "artist": "Bill Withers",
+          "isHighlighted": false
+        },
+        {
+          "title": "Say So",
+          "artist": "Doja Cat",
+          "isHighlighted": true
+        },
+        {
+          "title": "Say So",
+          "artist": "Doja Cat",
+          "isHighlighted": true
+        },
+        {
+          "title": "You & Jennifer",
+          "artist": "bülow",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ex-Factor",
+          "artist": "Lauryn Hill",
+          "isHighlighted": false
+        },
+        {
+          "title": "If I Ain't Got You",
+          "artist": "Alicia Keys",
+          "isHighlighted": false
+        },
+        {
+          "title": "Too Sweet",
+          "artist": "Hozier",
+          "isHighlighted": true
+        },
+        {
+          "title": "EoO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Hannah Sun",
+          "artist": "Lomelda",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ooh La",
+          "artist": "The Kooks",
+          "isHighlighted": true
+        },
+        {
+          "title": "How To Love",
+          "artist": "Lil Wayne",
+          "isHighlighted": true
+        },
+        {
+          "title": "bless ur heart",
+          "artist": "serpentwithfeet",
+          "isHighlighted": false
+        },
+        {
+          "title": "Soledad y el Mar (feat. Los Macorinos)",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": true
+        },
+        {
+          "title": "Para Qué Sufrir",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": true
+        },
+        {
+          "title": "San Lucas",
+          "artist": "Kevin Kaarl",
+          "isHighlighted": true
+        },
+        {
+          "title": "Que Me Alcance la Vida",
+          "artist": "Sin Bandera",
+          "isHighlighted": false
+        },
+        {
+          "title": "Lo Que Construimos",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": false
+        },
+        {
+          "title": "Como Quisiera Quererte",
+          "artist": "Natalia Lafourcade & El David Aguilar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Entra en Mi Vida",
+          "artist": "Sin Bandera",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ven Que Te Quiero Ver",
+          "artist": "Alex Ferreira",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tú Me Acostumbraste",
+          "artist": "Alex Ferreira",
+          "isHighlighted": false
+        },
+        {
+          "title": "Te Regalo",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Confidently Lost (Live)",
+          "artist": "Sabrina Claudio",
+          "isHighlighted": false
+        },
+        {
+          "title": "Holocene",
+          "artist": "Bon Iver",
+          "isHighlighted": true
+        }
+      ]
+    },
+    {
+      "id": "aligned",
+      "name": "Aligned",
+      "description": "Songs for feeling aligned and centered",
+      "vibe": "",
+      "isHighFrequency": true,
+      "tracks": [
+        {
+          "title": "Qué Pasaría...",
+          "artist": "Rauw Alejandro & Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Carita Linda",
+          "artist": "Rauw Alejandro",
+          "isHighlighted": true
+        },
+        {
+          "title": "Una Vez Más",
+          "artist": "Ximena Sariñana",
+          "isHighlighted": true
+        },
+        {
+          "title": "Me Pierdo Contigo",
+          "artist": "Alex Ferreira",
+          "isHighlighted": true
+        },
+        {
+          "title": "Todo Lamento",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "Cuestión De Suerte",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "CHIHIRO",
+          "artist": "Billie Eilish",
+          "isHighlighted": true
+        },
+        {
+          "title": "Buena Malicia",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Simulation Swarm",
+          "artist": "Big Thief",
+          "isHighlighted": false
+        },
+        {
+          "title": "Linger (SiriusXM Session)",
+          "artist": "Royel Otis",
+          "isHighlighted": true
+        },
+        {
+          "title": "ALAMBRE PúA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "Apego Feroz",
+          "artist": "Natalia Lacunza",
+          "isHighlighted": true
+        },
+        {
+          "title": "Hard to Let Go",
+          "artist": "Men I Trust",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ella Tú y Yo",
+          "artist": "Girl Ultra",
+          "isHighlighted": false
+        },
+        {
+          "title": "x ti",
+          "artist": "Paula Cendejas",
+          "isHighlighted": false
+        },
+        {
+          "title": "Te Guardo",
+          "artist": "Silvana Estrada",
+          "isHighlighted": false
+        },
+        {
+          "title": "18+1",
+          "artist": "Álvaro Díaz & Jesse Baez",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ateo",
+          "artist": "C. Tangana & Nathy Peluso",
+          "isHighlighted": false
+        },
+        {
+          "title": "atravesao",
+          "artist": "Elsa y Elmar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Goteo",
+          "artist": "Paloma Mami",
+          "isHighlighted": false
+        },
+        {
+          "title": "Lisa",
+          "artist": "Young Miko",
+          "isHighlighted": false
+        },
+        {
+          "title": "Classy 101",
+          "artist": "Feid & Young Miko",
+          "isHighlighted": false
+        },
+        {
+          "title": "Over the Moon",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Skin Tight (feat. Steve Lacy)",
+          "artist": "Ravyn Lenae",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ultralight Beam",
+          "artist": "Kanye West",
+          "isHighlighted": true
+        },
+        {
+          "title": "Fade",
+          "artist": "Kanye West",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ghost Town (feat. PARTYNEXTDOOR)",
+          "artist": "Kanye West",
+          "isHighlighted": false
+        },
+        {
+          "title": "Contact",
+          "artist": "Kelela",
+          "isHighlighted": false
+        },
+        {
+          "title": "Introspection",
+          "artist": "UMI",
+          "isHighlighted": false
+        },
+        {
+          "title": "Dribble",
+          "artist": "Sycco",
+          "isHighlighted": false
+        },
+        {
+          "title": "Need Your Love",
+          "artist": "Tennis",
+          "isHighlighted": false
+        },
+        {
+          "title": "Locket",
+          "artist": "Crumb",
+          "isHighlighted": false
+        },
+        {
+          "title": "Motorbike",
+          "artist": "Leon Bridges",
+          "isHighlighted": false
+        },
+        {
+          "title": "In Your Head",
+          "artist": "Nilüfer Yanya",
+          "isHighlighted": false
+        },
+        {
+          "title": "Deadwater",
+          "artist": "Wet",
+          "isHighlighted": false
+        },
+        {
+          "title": "Back On 74",
+          "artist": "Jungle",
+          "isHighlighted": false
+        },
+        {
+          "title": "10% (feat. Kali Uchis)",
+          "artist": "KAYTRANADA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Penelope",
+          "artist": "Col3trane",
+          "isHighlighted": false
+        },
+        {
+          "title": "Too Good",
+          "artist": "Arlo Parks",
+          "isHighlighted": false
+        },
+        {
+          "title": "Love Me Right",
+          "artist": "Amber Mark",
+          "isHighlighted": false
+        },
+        {
+          "title": "On My Mind",
+          "artist": "Jorja Smith & Preditah",
+          "isHighlighted": false
+        },
+        {
+          "title": "Something, in General",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Swimming",
+          "artist": "Florence + the Machine",
+          "isHighlighted": true
+        },
+        {
+          "title": "New Light",
+          "artist": "John Mayer",
+          "isHighlighted": true
+        },
+        {
+          "title": "Erase",
+          "artist": "Omar Apollo",
+          "isHighlighted": true
+        },
+        {
+          "title": "Probably!",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Olivia",
+          "artist": "The Backseat Lovers",
+          "isHighlighted": true
+        },
+        {
+          "title": "Seven (Audiotree Live)",
+          "artist": "Rainbow Kitten Surprise",
+          "isHighlighted": true
+        },
+        {
+          "title": "No Sé (feat. Girl Ultra)",
+          "artist": "Ximena Sariñana",
+          "isHighlighted": false
+        },
+        {
+          "title": "Chantaje (feat. Maluma)",
+          "artist": "Shakira",
+          "isHighlighted": false
+        },
+        {
+          "title": "Basta Ya",
+          "artist": "The Marías",
+          "isHighlighted": true
+        },
+        {
+          "title": "Déjate Llevar",
+          "artist": "The Marías",
+          "isHighlighted": false
+        },
+        {
+          "title": "Cheerleader",
+          "artist": "St. Vincent",
+          "isHighlighted": true
+        },
+        {
+          "title": "Deja Vu (feat. Justin Bieber)",
+          "artist": "Post Malone",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ji Yeon",
+          "artist": "Michael Giacchino",
+          "isHighlighted": true
+        },
+        {
+          "title": "Lax",
+          "artist": "Michael Giacchino, Tim Simonec & Hollywood Studio Symphony",
+          "isHighlighted": true
+        },
+        {
+          "title": "Marvins Room",
+          "artist": "Drake",
+          "isHighlighted": true
+        },
+        {
+          "title": "Motion Picture Soundtrack",
+          "artist": "Radiohead",
+          "isHighlighted": true
+        },
+        {
+          "title": "She Used to Be Mine",
+          "artist": "Sara Bareilles",
+          "isHighlighted": true
+        },
+        {
+          "title": "Streetcar",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "So Here We Are",
+          "artist": "Bloc Party",
+          "isHighlighted": true
+        },
+        {
+          "title": "There Is a Light That Never Goes Out",
+          "artist": "The Smiths",
+          "isHighlighted": false
+        },
+        {
+          "title": "Wash.",
+          "artist": "Bon Iver",
+          "isHighlighted": true
+        },
+        {
+          "title": "You've Got the Love",
+          "artist": "Florence + The Machine",
+          "isHighlighted": true
+        },
+        {
+          "title": "Art Exhibit",
+          "artist": "Young the Giant",
+          "isHighlighted": true
+        },
+        {
+          "title": "La Vie En Rose",
+          "artist": "Daniela Andrade",
+          "isHighlighted": true
+        },
+        {
+          "title": "Best Part (feat. H.E.R.)",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "Transform (feat. Charlotte Day Wilson)",
+          "artist": "Daniel Caesar",
+          "isHighlighted": true
+        },
+        {
+          "title": "Blues Run the Game (2001 - Remaster)",
+          "artist": "Jackson C. Frank",
+          "isHighlighted": true
+        },
+        {
+          "title": "For Emma",
+          "artist": "Bon Iver",
+          "isHighlighted": true
+        },
+        {
+          "title": "I Just Want You (Live)",
+          "artist": "Sara Bareilles",
+          "isHighlighted": true
+        },
+        {
+          "title": "Merry Go 'Round",
+          "artist": "Kacey Musgraves",
+          "isHighlighted": true
+        },
+        {
+          "title": "Since I Left You",
+          "artist": "The Avalanches",
+          "isHighlighted": false
+        },
+        {
+          "title": "She (feat. Frank Ocean)",
+          "artist": "Tyler, The Creator",
+          "isHighlighted": false
+        },
+        {
+          "title": "1901",
+          "artist": "Phoenix",
+          "isHighlighted": true
+        },
+        {
+          "title": "Rome",
+          "artist": "Phoenix",
+          "isHighlighted": true
+        },
+        {
+          "title": "Heaven",
+          "artist": "The Walkmen",
+          "isHighlighted": true
+        },
+        {
+          "title": "K.",
+          "artist": "Cigarettes After Sex",
+          "isHighlighted": true
+        },
+        {
+          "title": "Young Adult",
+          "artist": "Ritt Momney",
+          "isHighlighted": true
+        },
+        {
+          "title": "Nous étions deux",
+          "artist": "La Femme",
+          "isHighlighted": true
+        },
+        {
+          "title": "Threat of Joy",
+          "artist": "The Strokes",
+          "isHighlighted": true
+        },
+        {
+          "title": "In Season",
+          "artist": "CASE",
+          "isHighlighted": true
+        },
+        {
+          "title": "dead girl in the pool.",
+          "artist": "girl in red",
+          "isHighlighted": false
+        },
+        {
+          "title": "Chinese New Year",
+          "artist": "SALES",
+          "isHighlighted": true
+        },
+        {
+          "title": "COLMILLO (feat. Jowell & Randy)",
+          "artist": "Tainy, J Balvin & Young Miko",
+          "isHighlighted": true
+        },
+        {
+          "title": "BAILE INoLVIDABLE",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "EoO",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "luther",
+          "artist": "Kendrick Lamar & SZA",
+          "isHighlighted": true
+        },
+        {
+          "title": "How To Love",
+          "artist": "Lil Wayne",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ella",
+          "artist": "maye",
+          "isHighlighted": true
+        },
+        {
+          "title": "Compartir",
+          "artist": "Carla Morrison",
+          "isHighlighted": false
+        },
+        {
+          "title": "esa también fui yo (quiero acordarme)",
+          "artist": "Alba Reche",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Adults Are Talking",
+          "artist": "The Strokes",
+          "isHighlighted": true
+        },
+        {
+          "title": "On Melancholy Hill",
+          "artist": "Gorillaz",
+          "isHighlighted": true
+        },
+        {
+          "title": "ADIVINO",
+          "artist": "Myke Towers & Bad Bunny",
+          "isHighlighted": false
+        },
+        {
+          "title": "Heybb!",
+          "artist": "binki",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tears Dry On Their Own",
+          "artist": "Amy Winehouse",
+          "isHighlighted": true
+        },
+        {
+          "title": "Elastic",
+          "artist": "Joey Purp",
+          "isHighlighted": true
+        },
+        {
+          "title": "PICK IT UP (feat. A$AP Rocky)",
+          "artist": "Famous Dex",
+          "isHighlighted": true
+        },
+        {
+          "title": "Just Wanna Rock",
+          "artist": "Lil Uzi Vert",
+          "isHighlighted": false
+        },
+        {
+          "title": "Ric Flair Drip",
+          "artist": "Offset & Metro Boomin",
+          "isHighlighted": true
+        },
+        {
+          "title": "Cerebral",
+          "artist": "Boys Noize & Pilo",
+          "isHighlighted": false
+        },
+        {
+          "title": "EL CLúB",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "TURiSTA",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "DtMF",
+          "artist": "Bad Bunny",
+          "isHighlighted": true
+        },
+        {
+          "title": "WELTiTA",
+          "artist": "Bad Bunny & Chuwi",
+          "isHighlighted": true
+        },
+        {
+          "title": "Instant Crush",
+          "artist": "Daft Punk & Julian Casablancas",
+          "isHighlighted": true
+        },
+        {
+          "title": "GATAS",
+          "artist": "Rauw Alejandro & Chris Palace",
+          "isHighlighted": false
+        },
+        {
+          "title": "Todo el Universo (feat. Rosario Ortega, Axel Fiks & Delfina Campos)",
+          "artist": "Isla de Caras",
+          "isHighlighted": false
+        },
+        {
+          "title": "Swell",
+          "artist": "Lunar Vacation",
+          "isHighlighted": false
+        },
+        {
+          "title": "Naked In Manhattan",
+          "artist": "Chappell Roan",
+          "isHighlighted": false
+        },
+        {
+          "title": "Te Vas",
+          "artist": "DORA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Comfort Crowd",
+          "artist": "Conan Gray",
+          "isHighlighted": false
+        },
+        {
+          "title": "PELÍCULA",
+          "artist": "El Zar",
+          "isHighlighted": false
+        },
+        {
+          "title": "Diente de León",
+          "artist": "Anthony Escandón",
+          "isHighlighted": false
+        },
+        {
+          "title": "Tal Vez (Maybe en Español)",
+          "artist": "Gabriela Bee",
+          "isHighlighted": false
+        },
+        {
+          "title": "Duele",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Me Lo Merezco",
+          "artist": "ELENA ROSE",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ojos Tristes",
+          "artist": "Selena Gomez, benny blanco & The Marías",
+          "isHighlighted": false
+        },
+        {
+          "title": "En Mi Bolsillo",
+          "artist": "Martina Lluvias",
+          "isHighlighted": false
+        },
+        {
+          "title": "Open Arms (just SZA)",
+          "artist": "SZA",
+          "isHighlighted": false
+        },
+        {
+          "title": "Better Times",
+          "artist": "Beach House",
+          "isHighlighted": true
+        },
+        {
+          "title": "Silver Soul",
+          "artist": "Beach House",
+          "isHighlighted": false
+        },
+        {
+          "title": "Si Antes Te Hubiera Conocido",
+          "artist": "KAROL G",
+          "isHighlighted": true
+        },
+        {
+          "title": "Sorry Bro",
+          "artist": "SALES",
+          "isHighlighted": true
+        },
+        {
+          "title": "Ex-Factor",
+          "artist": "Lauryn Hill",
+          "isHighlighted": false
+        },
+        {
+          "title": "Te Regalo",
+          "artist": "Carla Morrison",
+          "isHighlighted": true
+        },
+        {
+          "title": "Tú Me Acostumbraste",
+          "artist": "Alex Ferreira",
+          "isHighlighted": false
+        },
+        {
+          "title": "Soledad y el Mar (feat. Los Macorinos)",
+          "artist": "Natalia Lafourcade",
+          "isHighlighted": true
+        },
+        {
+          "title": "A 1000 Times",
+          "artist": "Hamilton Leithauser & Rostam",
+          "isHighlighted": false
+        },
+        {
+          "title": "Hips Shaking",
+          "artist": "Mr President",
+          "isHighlighted": false
+        },
+        {
+          "title": "Can't Take My Eyes Off You",
+          "artist": "Frankie Valli",
+          "isHighlighted": false
+        },
+        {
+          "title": "Solitude",
+          "artist": "Billie Holiday",
+          "isHighlighted": false
+        },
+        {
+          "title": "Professor 3",
+          "artist": "Professor Rhythm",
+          "isHighlighted": false
+        },
+        {
+          "title": "Most Really Pretty Girls Have Pretty Ugly Feet",
+          "artist": "HNNY",
+          "isHighlighted": false
+        },
+        {
+          "title": "I Hadn't Known (I Only Heard)",
+          "artist": "Matthew Herbert",
+          "isHighlighted": false
+        },
+        {
+          "title": "Voyager",
+          "artist": "Daft Punk",
+          "isHighlighted": false
+        },
+        {
+          "title": "The Shit Baby (feat. D Taylor)",
+          "artist": "Omar S",
+          "isHighlighted": false
+        },
+        {
+          "title": "Amazing",
+          "artist": "George Michael",
+          "isHighlighted": false
+        },
+        {
+          "title": "Imitadora",
+          "artist": "Romeo Santos",
+          "isHighlighted": false
+        },
+        {
+          "title": "Do It",
+          "artist": "Tuxedo",
+          "isHighlighted": false
+        },
+        {
+          "title": "No One Noticed",
+          "artist": "The Marías",
+          "isHighlighted": true
+        }
       ]
     }
   ],
   "highlightCriteria": {
-    "description": "Songs are highlighted based on: appearing in multiple playlists, being core to Jenn's identity/vibe, high play frequency, or being essential to the playlist's theme",
-    "highFrequencyPlaylists": ["joy-aligned", "im-hot", "fjy26", "shes-pedaling", "unabridged", "cc"]
+    "description": "Songs are highlighted based on: Loved status in Apple Music, or play count > 50",
+    "highFrequencyPlaylists": [
+      "joy-aligned",
+      "im-hot",
+      "jfy26",
+      "shes-pedaling",
+      "slow-flow",
+      "cc",
+      "aligned"
+    ]
   },
   "meta": {
     "lastUpdated": "2026-01-02",
-    "version": "1.0"
+    "version": "2.0",
+    "source": "Apple Music Library.xml"
   }
 }
