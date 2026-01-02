@@ -175,19 +175,19 @@ export default function FTIPortalPage() {
       </section>
 
       {/* ========== VISUAL MOCKUP: Bar Graph Navigation ========== */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-16 overflow-hidden" style={{ backgroundColor: '#003763' }}>
         <div className="container-editorial">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#E0503D' }}>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#00C9D4' }}>
               Signature Design Element
             </p>
             <h2
               className="text-3xl md:text-4xl mb-4"
-              style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+              style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
             >
               Data-Viz Inspired Navigation
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(59,65,45,0.8)' }}>
+            <p className="text-sm max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Quick access styled as a bar graph—each section&apos;s height varies creating visual rhythm and hierarchy.
             </p>
           </div>
@@ -195,16 +195,16 @@ export default function FTIPortalPage() {
           {/* Interactive Bar Graph Mockup */}
           <div className="relative max-w-4xl mx-auto px-4">
             {/* Mockup Container with Browser Chrome */}
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-white/20">
               {/* Browser Chrome */}
-              <div className="bg-gray-100 px-4 py-3 flex items-center gap-3 border-b">
+              <div className="bg-white/10 px-4 py-3 flex items-center gap-3 border-b border-white/10">
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                  <div className="w-3 h-3 rounded-full bg-red-400/80" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
+                  <div className="w-3 h-3 rounded-full bg-green-400/80" />
                 </div>
                 <div className="flex-1 flex justify-center">
-                  <div className="bg-white px-4 py-1 rounded-lg text-sm text-gray-500 flex items-center gap-2">
+                  <div className="bg-white/10 px-4 py-1 rounded-lg text-sm flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.6)' }}>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
@@ -286,7 +286,7 @@ export default function FTIPortalPage() {
                   </div>
                 </div>
 
-                <p className="text-center text-xs text-gray-400 mt-4">
+                <p className="text-center text-xs mt-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
                   Hover to interact • Each bar links to a different training hub
                 </p>
               </div>
@@ -294,10 +294,10 @@ export default function FTIPortalPage() {
 
             {/* Floating annotation */}
             <div className="absolute -right-4 top-1/2 -translate-y-1/2 translate-x-full hidden lg:block">
-              <div className="bg-[#003763] text-white px-4 py-3 rounded-xl shadow-xl max-w-[200px] relative">
-                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[#003763] rotate-45" />
+              <div className="bg-[#1BB680] text-white px-4 py-3 rounded-xl shadow-xl max-w-[200px] relative">
+                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[#1BB680] rotate-45" />
                 <p className="text-xs leading-relaxed">
-                  <span className="text-[#00C9D4] font-medium">Heights vary</span> to create visual interest and hierarchy—breaking from standard nav patterns.
+                  <span className="font-medium" style={{ color: '#FFFFFF' }}>Heights vary</span> to create visual interest and hierarchy—breaking from standard nav patterns.
                 </p>
               </div>
             </div>
@@ -306,20 +306,20 @@ export default function FTIPortalPage() {
       </section>
 
       {/* ========== VISUAL MOCKUP: Team Dashboard ========== */}
-      <section className="py-16" style={{ backgroundColor: '#F8FAFC' }}>
+      <section className="py-16" style={{ backgroundColor: '#0067B1' }}>
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5">
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#8B5CF6' }}>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#00C9D4' }}>
                 Admin Feature
               </p>
               <h2
                 className="text-3xl md:text-4xl mb-4"
-                style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+                style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
               >
                 Team Dashboard
               </h2>
-              <p className="text-lg mb-6" style={{ color: 'rgba(59,65,45,0.8)' }}>
+              <p className="text-sm mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
                 Birthdays, PTO tracking, time entry codes, and team directory—all in one place.
               </p>
               <div className="space-y-3">
@@ -331,7 +331,7 @@ export default function FTIPortalPage() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="text-xl">{item.icon}</span>
-                    <span style={{ color: 'rgba(59,65,45,0.8)' }}>{item.text}</span>
+                    <span className="text-sm" style={{ color: 'rgba(255,255,255,0.9)' }}>{item.text}</span>
                   </div>
                 ))}
               </div>
@@ -442,19 +442,19 @@ export default function FTIPortalPage() {
       </section>
 
       {/* ========== VISUAL: Animated Tool Showcase ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: '#1BB680' }}>
         <div className="container-editorial">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#1BB680' }}>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Purpose-Built Utilities
             </p>
             <h2
               className="text-3xl md:text-4xl mb-4"
-              style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+              style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
             >
-              10 Interactive Tools
+              14 Interactive Tools
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(59,65,45,0.8)' }}>
+            <p className="text-sm max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.8)' }}>
               Each tool was designed to solve a specific workflow problem.
             </p>
           </div>
@@ -465,7 +465,7 @@ export default function FTIPortalPage() {
             <div
               className={`relative rounded-2xl p-8 mb-6 transition-all duration-300 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
               style={{
-                background: `linear-gradient(135deg, ${tools[activeToolIndex].color}15 0%, ${tools[activeToolIndex].color}05 100%)`,
+                background: 'rgba(255,255,255,0.95)',
                 borderLeft: `4px solid ${tools[activeToolIndex].color}`,
               }}
             >
@@ -484,13 +484,13 @@ export default function FTIPortalPage() {
                       className="px-2 py-0.5 rounded-full text-xs font-medium"
                       style={{ backgroundColor: tools[activeToolIndex].color, color: 'white' }}
                     >
-                      Tool {activeToolIndex + 1} of 10
+                      Tool {activeToolIndex + 1} of 14
                     </span>
                   </div>
                   <h3 className="text-2xl font-semibold mb-2" style={{ color: '#003763' }}>
                     {tools[activeToolIndex].name}
                   </h3>
-                  <p className="text-lg" style={{ color: 'rgba(59,65,45,0.8)' }}>
+                  <p className="text-sm" style={{ color: 'rgba(59,65,45,0.8)' }}>
                     {tools[activeToolIndex].desc}
                   </p>
                 </div>
@@ -509,7 +509,7 @@ export default function FTIPortalPage() {
             </div>
 
             {/* Tool Grid */}
-            <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
+            <div className="grid grid-cols-7 md:grid-cols-14 gap-2">
               {tools.map((tool, i) => (
                 <button
                   key={i}
@@ -520,14 +520,13 @@ export default function FTIPortalPage() {
                       setIsAnimating(false);
                     }, 300);
                   }}
-                  className={`p-3 rounded-xl transition-all ${
+                  className={`p-2 rounded-xl transition-all ${
                     activeToolIndex === i
-                      ? 'ring-2 ring-offset-2 scale-110 shadow-lg'
-                      : 'hover:scale-105 opacity-60 hover:opacity-100'
+                      ? 'ring-2 ring-white ring-offset-2 ring-offset-[#1BB680] scale-110 shadow-lg'
+                      : 'hover:scale-105 opacity-70 hover:opacity-100'
                   }`}
                   style={{
-                    backgroundColor: `${tool.color}15`,
-                    ringColor: tool.color,
+                    backgroundColor: 'rgba(255,255,255,0.2)',
                   }}
                 >
                   <div
@@ -554,7 +553,7 @@ export default function FTIPortalPage() {
             >
               Built to Scale
             </h2>
-            <p className="text-lg max-w-2xl mx-auto text-white/70">
+            <p className="text-sm max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)' }}>
               A modular architecture that makes it easy to add new training content and tools.
             </p>
           </div>
@@ -642,20 +641,20 @@ export default function FTIPortalPage() {
       </section>
 
       {/* Training Hubs */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: '#8B5CF6' }}>
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-8">
             <div className="md:col-span-4">
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#0067B1' }}>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Comprehensive Coverage
               </p>
               <h2
                 className="text-2xl md:text-3xl mb-4"
-                style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+                style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
               >
-                8 Training Hubs
+                12 Training Hubs
               </h2>
-              <p className="mb-6" style={{ color: 'rgba(59,65,45,0.8)' }}>
+              <p className="text-sm mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
                 From onboarding new hires to deep-dive economics training, each hub
                 provides structured learning paths.
               </p>
@@ -666,12 +665,12 @@ export default function FTIPortalPage() {
                   <button
                     key={i}
                     onClick={() => setActiveHub(i)}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
+                    className={`w-full text-left px-4 py-2.5 rounded-lg transition-all text-sm ${
                       activeHub === i
-                        ? 'bg-[#003763] text-white shadow-lg'
-                        : 'bg-gray-50 hover:bg-gray-100'
+                        ? 'bg-white shadow-lg'
+                        : 'bg-white/10 hover:bg-white/20'
                     }`}
-                    style={{ color: activeHub === i ? '#FFF5EB' : '#003763' }}
+                    style={{ color: activeHub === i ? '#8B5CF6' : '#FFFFFF' }}
                   >
                     <span className="font-medium">{hub.name}</span>
                   </button>
@@ -709,19 +708,19 @@ export default function FTIPortalPage() {
       </section>
 
       {/* ========== VISUAL: Color Palette Showcase ========== */}
-      <section className="py-16" style={{ backgroundColor: '#F8FAFC' }}>
+      <section className="py-16" style={{ backgroundColor: '#E0503D' }}>
         <div className="container-editorial">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#0067B1' }}>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Brand Extension
             </p>
             <h2
               className="text-3xl md:text-4xl mb-4"
-              style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+              style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
             >
               FTI Brand System
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(59,65,45,0.8)' }}>
+            <p className="text-sm max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.8)' }}>
               Extended FTI&apos;s corporate colors into a functional design system with gradients,
               functional variants, and accessible combinations.
             </p>
@@ -765,7 +764,7 @@ export default function FTIPortalPage() {
                   >
                     <span className="text-white text-sm font-medium">{c.name}</span>
                   </div>
-                  <p className="text-xs text-center font-mono text-gray-500">{c.color}</p>
+                  <p className="text-xs text-center font-mono" style={{ color: 'rgba(255,255,255,0.6)' }}>{c.color}</p>
                 </div>
               ))}
             </div>
@@ -787,20 +786,20 @@ export default function FTIPortalPage() {
       </section>
 
       {/* Key Features + Impact */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: '#00C9D4' }}>
         <div className="container-editorial">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#1BB680' }}>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Features
               </p>
               <h2
                 className="text-2xl md:text-3xl mb-6"
-                style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+                style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
               >
                 What Makes It Special
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   'Team Dashboard with birthday tracking, PTO calendar, and time entry codes',
                   'Searchable document library with tag filtering',
@@ -811,42 +810,42 @@ export default function FTIPortalPage() {
                   'AI training resources and prompt bank',
                   'Visual methodology diagrams with interactive nodes',
                 ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#1BB680' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <svg className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#FFFFFF' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span style={{ color: 'rgba(59,65,45,0.8)' }}>{feature}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.9)' }}>{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: '#0067B1' }}>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Impact
               </p>
               <h2
                 className="text-2xl md:text-3xl mb-6"
-                style={{ fontFamily: 'var(--font-instrument)', color: '#003763' }}
+                style={{ fontFamily: 'var(--font-instrument)', color: '#FFFFFF' }}
               >
                 Real Results
               </h2>
-              <div className="space-y-6">
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#F8FAFC' }}>
+              <div className="space-y-4">
+                <div className="p-5 rounded-xl" style={{ backgroundColor: 'rgba(255,255,255,0.95)' }}>
                   <p className="text-3xl font-bold mb-1" style={{ color: '#1BB680' }}>80%</p>
-                  <p className="text-sm" style={{ color: 'rgba(59,65,45,0.8)' }}>
+                  <p className="text-xs" style={{ color: 'rgba(59,65,45,0.8)' }}>
                     Reduction in time spent searching for training materials
                   </p>
                 </div>
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#F8FAFC' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: 'rgba(255,255,255,0.95)' }}>
                   <p className="text-3xl font-bold mb-1" style={{ color: '#0067B1' }}>15+</p>
-                  <p className="text-sm" style={{ color: 'rgba(59,65,45,0.8)' }}>
+                  <p className="text-xs" style={{ color: 'rgba(59,65,45,0.8)' }}>
                     Team members actively using the portal daily
                   </p>
                 </div>
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#F8FAFC' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: 'rgba(255,255,255,0.95)' }}>
                   <p className="text-3xl font-bold mb-1" style={{ color: '#E8A847' }}>3x</p>
-                  <p className="text-sm" style={{ color: 'rgba(59,65,45,0.8)' }}>
+                  <p className="text-xs" style={{ color: 'rgba(59,65,45,0.8)' }}>
                     Faster onboarding for new analysts and consultants
                   </p>
                 </div>
