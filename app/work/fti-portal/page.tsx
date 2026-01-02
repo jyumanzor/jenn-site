@@ -600,19 +600,19 @@ export default function FTIPortalPage() {
                 <rect x="100" y="280" width="160" height="80" rx="10" fill="url(#nodeGradient1)" stroke="#1BB680" strokeWidth="2"/>
                 <text x="180" y="310" textAnchor="middle" fill="#1BB680" fontSize="10" fontWeight="600">TRAINING HUBS</text>
                 <text x="180" y="330" textAnchor="middle" fill="white" fontSize="11">8 Categories</text>
-                <text x="180" y="348" textAnchor="middle" fill="white/70" fontSize="10">R Manual • Econ • AI</text>
+                <text x="180" y="348" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="10">R Manual • Econ • AI</text>
 
                 {/* Interactive Tools */}
                 <rect x="320" y="280" width="160" height="80" rx="10" fill="url(#nodeGradient2)" stroke="#0067B1" strokeWidth="2"/>
                 <text x="400" y="310" textAnchor="middle" fill="#00C9D4" fontSize="10" fontWeight="600">INTERACTIVE TOOLS</text>
                 <text x="400" y="330" textAnchor="middle" fill="white" fontSize="11">10 Utilities</text>
-                <text x="400" y="348" textAnchor="middle" fill="white/70" fontSize="10">QC • Citation • Timeline</text>
+                <text x="400" y="348" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="10">QC • Citation • Timeline</text>
 
                 {/* Team Dashboard */}
                 <rect x="540" y="280" width="160" height="80" rx="10" fill="url(#nodeGradient1)" stroke="#8B5CF6" strokeWidth="2"/>
                 <text x="620" y="310" textAnchor="middle" fill="#8B5CF6" fontSize="10" fontWeight="600">TEAM FEATURES</text>
                 <text x="620" y="330" textAnchor="middle" fill="white" fontSize="11">Dashboard + Admin</text>
-                <text x="620" y="348" textAnchor="middle" fill="white/70" fontSize="10">PTO • Birthdays • Dir</text>
+                <text x="620" y="348" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="10">PTO • Birthdays • Dir</text>
               </g>
 
               {/* Floating Stats */}
