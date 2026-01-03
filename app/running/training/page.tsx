@@ -13,6 +13,7 @@ import {
 import ouraFullData from "@/data/oura-full.json";
 import appleWatchData from "@/data/apple-watch.json";
 import healthData from "@/data/health.json";
+import bloodTestData from "@/data/blood-tests.json";
 
 // Type definitions
 type TimeRange = "week" | "12weeks" | "year" | "all";
@@ -38,11 +39,12 @@ const colors = {
 };
 
 // Data source badge component
-const DataSourceBadge = ({ source }: { source: "oura" | "apple" | "renpho" }) => {
+const DataSourceBadge = ({ source }: { source: "oura" | "apple" | "renpho" | "labcorp" }) => {
   const badges = {
     oura: { label: "Oura Ring", color: "#2A3C24", bg: "rgba(42,60,36,0.1)" },
     apple: { label: "Apple Watch", color: "#FF2D55", bg: "rgba(255,45,85,0.1)" },
     renpho: { label: "Renpho", color: "#4A90D9", bg: "rgba(74,144,217,0.1)" },
+    labcorp: { label: "Labcorp", color: "#E53E3E", bg: "rgba(229,62,62,0.1)" },
   };
   const badge = badges[source];
   return (
@@ -629,6 +631,132 @@ const BodyCompositionCard = () => {
   );
 };
 
+// Blood Test Biomarkers for Athletes
+const BloodTestBiomarkers = () => {
+  const tests = bloodTestData.tests;
+  const recommendations = bloodTestData.nutritionRecommendations;
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'low': return colors.coral;
+      case 'high': return colors.gold;
+      case 'normal':
+      case 'optimal': return colors.lime;
+      default: return colors.sage;
+    }
+  };
+
+  const athleteMarkers = [
+    { key: 'hemoglobin', label: 'Hemoglobin', impact: 'Oxygen delivery to muscles', icon: '🩸' },
+    { key: 'iron', label: 'Iron', impact: 'Energy and endurance', icon: '⚡' },
+    { key: 'vitaminD', label: 'Vitamin D', impact: 'Bone health & performance', icon: '☀️' },
+    { key: 'vitaminB12', label: 'B12', impact: 'Red blood cell production', icon: '💊' },
+    { key: 'hba1c', label: 'HbA1c', impact: 'Blood sugar control', icon: '📊' },
+    { key: 'magnesium', label: 'Magnesium', impact: 'Muscle & nerve function', icon: '💪' },
+  ];
+
+  return (
+    <div className="bg-white rounded-xl p-6 border border-sand/30">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <h3
+            className="text-xl"
+            style={{ fontFamily: "var(--font-instrument), Instrument Serif, Georgia, serif", color: colors.deepForest }}
+          >
+            Blood Biomarkers for Athletes
+          </h3>
+          <DataSourceBadge source="labcorp" />
+        </div>
+        <span className="text-xs" style={{ color: colors.sage }}>
+          Updated: {bloodTestData.lastUpdated}
+        </span>
+      </div>
+
+      {/* Alert for Vitamin D */}
+      <div className="p-3 rounded-lg mb-4" style={{ backgroundColor: 'rgba(229,62,62,0.1)', border: '1px solid rgba(229,62,62,0.2)' }}>
+        <div className="flex items-start gap-2">
+          <span>⚠️</span>
+          <div>
+            <p className="text-sm font-medium" style={{ color: colors.deepForest }}>
+              Vitamin D Insufficiency Detected
+            </p>
+            <p className="text-xs mt-1" style={{ color: 'rgba(42,60,36,0.7)' }}>
+              Your level of {tests.vitaminD.value} ng/mL is below optimal (30+). This can impact bone density and athletic performance.
+              Consider supplementation and eating more salmon, sardines, and eggs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Biomarkers Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {athleteMarkers.map((marker) => {
+          const test = tests[marker.key as keyof typeof tests];
+          if (!test) return null;
+
+          return (
+            <div key={marker.key} className="p-3 rounded-lg" style={{ backgroundColor: 'rgba(42,60,36,0.03)' }}>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-sm">{marker.icon}</span>
+                <span className="text-xs font-medium" style={{ color: colors.deepForest }}>{marker.label}</span>
+              </div>
+              <div className="flex items-baseline gap-1">
+                <span className="text-lg font-semibold" style={{ color: colors.deepForest }}>
+                  {test.value}
+                </span>
+                <span className="text-xs" style={{ color: 'rgba(42,60,36,0.5)' }}>{test.unit}</span>
+              </div>
+              <span
+                className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-medium"
+                style={{
+                  backgroundColor: `${getStatusColor(test.status)}20`,
+                  color: getStatusColor(test.status)
+                }}
+              >
+                {test.status}
+              </span>
+              <p className="text-[10px] mt-1" style={{ color: 'rgba(42,60,36,0.5)' }}>
+                {marker.impact}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Runner Insights */}
+      <div className="mt-4 pt-4 border-t" style={{ borderColor: 'rgba(42,60,36,0.1)' }}>
+        <p className="text-xs font-medium mb-2" style={{ color: colors.sage }}>Training Implications</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="flex items-start gap-2">
+            <span style={{ color: colors.lime }}>✓</span>
+            <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
+              {bloodTestData.runnerInsights.oxygenCapacity}
+            </p>
+          </div>
+          <div className="flex items-start gap-2">
+            <span style={{ color: colors.lime }}>✓</span>
+            <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
+              {bloodTestData.runnerInsights.energyMetabolism}
+            </p>
+          </div>
+          <div className="flex items-start gap-2">
+            <span style={{ color: colors.lime }}>✓</span>
+            <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
+              {bloodTestData.runnerInsights.recoverySupport}
+            </p>
+          </div>
+          <div className="flex items-start gap-2">
+            <span style={{ color: colors.gold }}>!</span>
+            <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
+              {bloodTestData.runnerInsights.inflammationRisk}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Recent Workouts List
 const RecentWorkoutsList = () => {
   const workouts = ouraFullData.recentWorkouts.slice(0, 6);
@@ -768,8 +896,9 @@ export default function TrainingPage() {
               <DataSourceBadge source="oura" />
               <DataSourceBadge source="apple" />
               <DataSourceBadge source="renpho" />
+              <DataSourceBadge source="labcorp" />
               <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: "rgba(42,60,36,0.1)", color: "rgba(42,60,36,0.6)" }}>
-                Since Jan 2023
+                4 integrated data sources
               </span>
             </div>
           </div>
@@ -936,10 +1065,13 @@ export default function TrainingPage() {
             <WeeklyGoalsCalendar />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6 mb-6">
             <VO2MaxChart />
             <BodyCompositionCard />
           </div>
+
+          {/* Blood Test Biomarkers - Full Width */}
+          <BloodTestBiomarkers />
         </div>
       </section>
 
