@@ -6,11 +6,17 @@ import IOAuthGate from "@/components/IOAuthGate";
 
 const tools = [
   {
+    id: 'workflow-insights',
+    name: 'Workflow Insights',
+    description: 'Capture questions, track patterns, export to prompts',
+    href: '/io/sandbox/workflow-insights',
+    isNew: true,
+  },
+  {
     id: 'voice-memos',
     name: 'Voice Memos',
     description: 'Transform voice recordings into actionable prompts',
     href: '/io/sandbox/voice-memos',
-    isNew: true,
   },
   {
     id: 'prompt-builder',

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import IOAuthGate from "@/components/IOAuthGate";
+import stravaData from "@/data/strava.json";
 
 // Color palette
 const colors = {
@@ -11,7 +12,50 @@ const colors = {
   sage: "#97A97C",
   lime: "#D4ED39",
   gold: "#FABF34",
+  strava: "#FC4C02",
 };
+
+// Helper to get Strava runs for a specific date
+interface StravaActivity {
+  sport: string;
+  date: string;
+  title: string;
+  activityId: string;
+  time: string;
+  distance_miles: number;
+  elevation_feet: number;
+  relativeEffort: number;
+  isRace?: boolean;
+}
+
+function getStravaRunsForDate(dateStr: string): StravaActivity[] {
+  return stravaData.activities.filter(
+    (activity: StravaActivity) => activity.date === dateStr && activity.sport === "Run"
+  );
+}
+
+function getTotalStravaMilesForDate(dateStr: string): number {
+  const runs = getStravaRunsForDate(dateStr);
+  return runs.reduce((sum: number, run: StravaActivity) => sum + (run.distance_miles || 0), 0);
+}
+
+function getStravaWeekSummary(weekStart: Date): { totalMiles: number; runCount: number; activities: StravaActivity[] } {
+  const activities: StravaActivity[] = [];
+  let totalMiles = 0;
+  let runCount = 0;
+
+  for (let i = 0; i < 7; i++) {
+    const currentDate = new Date(weekStart);
+    currentDate.setDate(weekStart.getDate() + i);
+    const dateStr = currentDate.toISOString().split('T')[0];
+    const dayRuns = getStravaRunsForDate(dateStr);
+    activities.push(...dayRuns);
+    totalMiles += dayRuns.reduce((sum: number, r: StravaActivity) => sum + (r.distance_miles || 0), 0);
+    runCount += dayRuns.length;
+  }
+
+  return { totalMiles, runCount, activities };
+}
 
 // Pfitzinger run types with colors and paces (sub-3:00 goal)
 const runTypes = {
@@ -423,10 +467,17 @@ export default function RunningAdminPage() {
 
   const totalPlannedMiles = Object.values(schedule).reduce((sum, day) => sum + (day?.plannedMiles || 0), 0);
   const completedRuns = Object.values(schedule).filter(day => day?.completed).length;
+
+  // Get Strava data for the current week
+  const stravaWeekData = getStravaWeekSummary(currentWeekStart);
+
+  // Combine manual logs with Strava data (Strava takes priority)
   const totalActualMiles = Object.entries(schedule).reduce((sum, [day]) => {
     const dayIndex = dayNames.indexOf(day);
     const dateStr = getDayDate(dayIndex).toISOString().split('T')[0];
-    return sum + (actualRuns[dateStr]?.actualMiles || 0);
+    const stravaMiles = getTotalStravaMilesForDate(dateStr);
+    // Use Strava if available, otherwise use manual log
+    return sum + (stravaMiles > 0 ? stravaMiles : (actualRuns[dateStr]?.actualMiles || 0));
   }, 0);
 
   if (!loaded) {
@@ -448,9 +499,20 @@ export default function RunningAdminPage() {
               <Link href="/io" className="text-[#FFF5EB]/60 text-xs hover:text-[#FFF5EB] transition-colors mb-4 inline-block">
                 ← Back to IO
               </Link>
-              <h1 className="font-display text-4xl md:text-5xl mb-4 leading-tight" style={{ color: colors.lime }}>
-                Training Command Center
-              </h1>
+              <div className="flex items-center gap-3 mb-4">
+                <h1 className="font-display text-4xl md:text-5xl leading-tight" style={{ color: colors.lime }}>
+                  Training Command Center
+                </h1>
+                <span
+                  className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
+                  style={{ backgroundColor: colors.strava, color: "white" }}
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
+                  </svg>
+                  Strava Synced
+                </span>
+              </div>
               <p className="text-[#FFF5EB]/70 text-base leading-relaxed max-w-xl">
                 Pfitzinger 18/70 for Sub-3:00. Boston (April 20, 2026) and Chicago (October 11, 2026).
               </p>
@@ -605,6 +667,9 @@ export default function RunningAdminPage() {
                   const dayDate = getDayDate(index);
                   const dateStr = dayDate.toISOString().split('T')[0];
                   const actualRun = actualRuns[dateStr];
+                  const stravaRuns = getStravaRunsForDate(dateStr);
+                  const stravaMiles = getTotalStravaMilesForDate(dateStr);
+                  const hasStravaData = stravaRuns.length > 0;
                   const isSelected = selectedDay === day;
 
                   return (
@@ -614,11 +679,20 @@ export default function RunningAdminPage() {
                       className={`relative rounded-2xl p-4 transition-all duration-300 cursor-pointer border-2 ${runType.borderColor} ${runType.color} ${
                         today ? "ring-4 ring-[#D4ED39]/50" : ""
                       } ${isSelected ? "scale-105 shadow-xl z-10" : "hover:scale-102 hover:shadow-md"} ${
-                        dayData?.completed ? "opacity-90" : ""
+                        (dayData?.completed || hasStravaData) ? "opacity-90" : ""
                       }`}
                     >
-                      {/* Completed badge */}
-                      {dayData?.completed && (
+                      {/* Strava badge - takes priority over manual complete */}
+                      {hasStravaData ? (
+                        <div
+                          className="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center shadow-md"
+                          style={{ backgroundColor: colors.strava }}
+                        >
+                          <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
+                          </svg>
+                        </div>
+                      ) : dayData?.completed && (
                         <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#D4ED39] flex items-center justify-center shadow-md">
                           <svg className="w-4 h-4 text-[#2A3C24]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -658,8 +732,20 @@ export default function RunningAdminPage() {
                         </div>
                       )}
 
-                      {/* Actual miles (if logged) */}
-                      {actualRun && (
+                      {/* Strava data (priority) or manual actual miles */}
+                      {hasStravaData ? (
+                        <div className="mt-2 pt-2 border-t border-current/10">
+                          <p className="text-xs font-bold flex items-center gap-1" style={{ color: colors.strava }}>
+                            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
+                            </svg>
+                            {stravaMiles.toFixed(1)}mi
+                          </p>
+                          {stravaRuns.length > 1 && (
+                            <p className="text-[9px] text-[#8B8780]">{stravaRuns.length} runs</p>
+                          )}
+                        </div>
+                      ) : actualRun && (
                         <div className="mt-2 pt-2 border-t border-current/10">
                           <p className="text-xs text-[#546E40] font-medium">
                             Actual: {actualRun.actualMiles}mi
@@ -763,13 +849,85 @@ export default function RunningAdminPage() {
                       </div>
                     </div>
 
-                    {/* Right: Log actual run */}
+                    {/* Right: Strava data or Manual log */}
                     <div className="bg-white rounded-2xl border-2 border-[#E8E4DC] p-6">
+                      {/* Strava Activities Section */}
+                      {(() => {
+                        const dateStr = getDayDate(dayNames.indexOf(selectedDay)).toISOString().split('T')[0];
+                        const stravaRuns = getStravaRunsForDate(dateStr);
+                        if (stravaRuns.length > 0) {
+                          return (
+                            <div className="mb-6">
+                              <h3 className="font-display text-xl text-[#2A3C24] mb-4 flex items-center gap-2">
+                                <svg className="w-6 h-6" style={{ color: colors.strava }} viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
+                                </svg>
+                                Strava Activities
+                              </h3>
+                              <div className="space-y-3">
+                                {stravaRuns.map((run, idx) => (
+                                  <a
+                                    key={idx}
+                                    href={`https://www.strava.com/activities/${run.activityId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-md hover:scale-[1.01]"
+                                    style={{ borderColor: colors.strava + '40', backgroundColor: colors.strava + '08' }}
+                                  >
+                                    <div className="flex items-start justify-between">
+                                      <div>
+                                        <p className="font-medium text-[#2A3C24] text-sm">{run.title}</p>
+                                        <div className="flex items-center gap-4 mt-2">
+                                          <span className="text-lg font-bold" style={{ color: colors.strava }}>
+                                            {run.distance_miles.toFixed(2)} mi
+                                          </span>
+                                          <span className="text-sm text-[#8B8780]">{run.time}</span>
+                                          <span className="text-sm text-[#8B8780]">{run.elevation_feet} ft ↑</span>
+                                        </div>
+                                      </div>
+                                      {run.isRace && (
+                                        <span className="px-2 py-1 rounded-full text-[10px] font-bold uppercase bg-[#FABF34] text-[#2A3C24]">
+                                          Race
+                                        </span>
+                                      )}
+                                    </div>
+                                    {run.relativeEffort > 0 && (
+                                      <div className="mt-3 flex items-center gap-2">
+                                        <span className="text-[10px] uppercase tracking-wider text-[#8B8780]">Effort</span>
+                                        <div className="flex-1 h-2 bg-[#E8E4DC] rounded-full overflow-hidden">
+                                          <div
+                                            className="h-full rounded-full"
+                                            style={{
+                                              width: `${Math.min(100, (run.relativeEffort / 300) * 100)}%`,
+                                              backgroundColor: run.relativeEffort > 200 ? colors.strava : run.relativeEffort > 100 ? colors.gold : colors.sage
+                                            }}
+                                          />
+                                        </div>
+                                        <span className="text-xs font-medium text-[#8B8780]">{run.relativeEffort}</span>
+                                      </div>
+                                    )}
+                                  </a>
+                                ))}
+                              </div>
+                              <div className="mt-4 pt-4 border-t border-[#E8E4DC]">
+                                <div className="flex items-center justify-between text-sm">
+                                  <span className="text-[#8B8780]">Total from Strava:</span>
+                                  <span className="font-bold" style={{ color: colors.strava }}>
+                                    {stravaRuns.reduce((sum, r) => sum + r.distance_miles, 0).toFixed(2)} miles
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })()}
+
                       <h3 className="font-display text-xl text-[#2A3C24] mb-6 flex items-center gap-2">
                         <svg className="w-6 h-6 text-[#97A97C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                         </svg>
-                        Log Actual Run
+                        {getStravaRunsForDate(getDayDate(dayNames.indexOf(selectedDay)).toISOString().split('T')[0]).length > 0 ? 'Add Notes' : 'Log Actual Run'}
                       </h3>
 
                       {/* Actual Miles */}

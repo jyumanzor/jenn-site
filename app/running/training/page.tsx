@@ -14,6 +14,7 @@ import ouraFullData from "@/data/oura-full.json";
 import appleWatchData from "@/data/apple-watch.json";
 import healthData from "@/data/health.json";
 import bloodTestData from "@/data/blood-tests.json";
+import stravaData from "@/data/strava.json";
 
 // Type definitions
 type TimeRange = "week" | "12weeks" | "year" | "all";
@@ -30,6 +31,7 @@ const colors = {
   blue: "#4A90D9",
   purple: "#9B6FC3",
   sand: "#e7d8c6",
+  strava: "#FC4C02",
   // Zone colors (Strava-inspired)
   zone1: "#63C7FF", // Easy
   zone2: "#44D688", // Moderate
@@ -39,12 +41,13 @@ const colors = {
 };
 
 // Data source badge component
-const DataSourceBadge = ({ source }: { source: "oura" | "apple" | "renpho" | "labcorp" }) => {
+const DataSourceBadge = ({ source }: { source: "oura" | "apple" | "renpho" | "labcorp" | "strava" }) => {
   const badges = {
     oura: { label: "Oura Ring", color: "#2A3C24", bg: "rgba(42,60,36,0.1)" },
     apple: { label: "Apple Watch", color: "#FF2D55", bg: "rgba(255,45,85,0.1)" },
     renpho: { label: "Renpho", color: "#4A90D9", bg: "rgba(74,144,217,0.1)" },
     labcorp: { label: "Labcorp", color: "#E53E3E", bg: "rgba(229,62,62,0.1)" },
+    strava: { label: "Strava", color: "#FC4C02", bg: "rgba(252,76,2,0.1)" },
   };
   const badge = badges[source];
   return (
@@ -814,6 +817,93 @@ const RecentWorkoutsList = () => {
   );
 };
 
+// Strava Recent Activities
+const StravaRecentRuns = () => {
+  // Get the most recent runs from Strava
+  const recentRuns = stravaData.activities
+    .filter((a: { sport: string }) => a.sport === "Run")
+    .slice(0, 8);
+
+  return (
+    <div className="bg-white rounded-xl p-6 border border-sand/30">
+      <div className="flex items-center gap-2 mb-4">
+        <h3
+          className="text-xl"
+          style={{ fontFamily: "var(--font-instrument), Instrument Serif, Georgia, serif", color: colors.deepForest }}
+        >
+          Strava Runs
+        </h3>
+        <DataSourceBadge source="strava" />
+      </div>
+
+      <div className="space-y-3">
+        {recentRuns.map((run: { date: string; title: string; distance_miles: number; time: string; elevation_feet: number; activityId: string; isRace?: boolean }, i: number) => (
+          <a
+            key={i}
+            href={`https://www.strava.com/activities/${run.activityId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg transition-all hover:scale-[1.01]"
+            style={{ backgroundColor: "rgba(252,76,2,0.05)" }}
+          >
+            <span
+              className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold"
+              style={{ backgroundColor: colors.strava, color: "white" }}
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
+              </svg>
+            </span>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium truncate" style={{ color: colors.deepForest }}>
+                {run.title}
+                {run.isRace && (
+                  <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-[#FABF34] text-[#2A3C24] font-bold">RACE</span>
+                )}
+              </p>
+              <p className="text-xs" style={{ color: "rgba(42,60,36,0.5)" }}>
+                {new Date(run.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-sm font-bold" style={{ color: colors.strava }}>
+                {run.distance_miles.toFixed(1)}mi
+              </p>
+              <p className="text-xs" style={{ color: "rgba(42,60,36,0.5)" }}>
+                {run.time}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Weekly summary */}
+      <div className="mt-4 pt-4 border-t border-sand/30">
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div>
+            <p className="text-lg font-bold" style={{ color: colors.strava }}>
+              {stravaData.activities.filter((a: { sport: string }) => a.sport === "Run").slice(0, 7).reduce((sum: number, r: { distance_miles: number }) => sum + r.distance_miles, 0).toFixed(1)}
+            </p>
+            <p className="text-[10px] uppercase tracking-wider" style={{ color: "rgba(42,60,36,0.5)" }}>Miles (7 days)</p>
+          </div>
+          <div>
+            <p className="text-lg font-bold" style={{ color: colors.deepForest }}>
+              {stravaData.activities.filter((a: { sport: string }) => a.sport === "Run").length}
+            </p>
+            <p className="text-[10px] uppercase tracking-wider" style={{ color: "rgba(42,60,36,0.5)" }}>Total Runs</p>
+          </div>
+          <div>
+            <p className="text-lg font-bold" style={{ color: colors.gold }}>
+              {stravaData.activities.filter((a: { isRace?: boolean }) => a.isRace).length}
+            </p>
+            <p className="text-[10px] uppercase tracking-wider" style={{ color: "rgba(42,60,36,0.5)" }}>Races</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Main Dashboard Component
 export default function TrainingPage() {
   const [timeRange, setTimeRange] = useState<TimeRange>("week");
@@ -893,12 +983,13 @@ export default function TrainingPage() {
 
             {/* Data Source Badges */}
             <div className="flex flex-wrap gap-2">
+              <DataSourceBadge source="strava" />
               <DataSourceBadge source="oura" />
               <DataSourceBadge source="apple" />
               <DataSourceBadge source="renpho" />
               <DataSourceBadge source="labcorp" />
               <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: "rgba(42,60,36,0.1)", color: "rgba(42,60,36,0.6)" }}>
-                4 integrated data sources
+                5 integrated data sources
               </span>
             </div>
           </div>
@@ -1079,8 +1170,16 @@ export default function TrainingPage() {
       <section className="py-8" style={{ backgroundColor: "rgba(212,237,57,0.1)" }}>
         <div className="container-editorial">
           <div className="grid lg:grid-cols-2 gap-6">
+            <StravaRecentRuns />
             <RecentWorkoutsList />
+          </div>
+        </div>
+      </section>
 
+      {/* Workout Analysis */}
+      <section className="py-8" style={{ backgroundColor: colors.cream }}>
+        <div className="container-editorial">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Workout Types Summary */}
             <div className="bg-white rounded-xl p-6 border border-sand/30">
               <h3

@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-01-03",
+  "questions": [],
+  "themes": [],
+  "builds": [
+    {
+      "id": "jenns-site",
+      "name": "Jenn's Site",
+      "color": "#97A97C",
+      "description": "Personal website and portfolio",
+      "active": true
+    },
+    {
+      "id": "fti-portal",
+      "name": "FTI Training Portal",
+      "color": "#003763",
+      "description": "Work training portal",
+      "active": true
+    },
+    {
+      "id": "prompt-repo",
+      "name": "Prompt Repo",
+      "color": "#FABF34",
+      "description": "Prompt engineering and workflow tools",
+      "active": true
+    },
+    {
+      "id": "general",
+      "name": "General",
+      "color": "#CBAD8C",
+      "description": "Non-project-specific questions",
+      "active": true
+    }
+  ],
+  "stats": {
+    "totalQuestions": 0,
+    "questionsThisWeek": 0,
+    "topBuild": "",
+    "topCategory": ""
+  }
+}

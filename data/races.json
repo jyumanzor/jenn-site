@@ -33,10 +33,10 @@
     {
       "id": "honolulu-2025",
       "name": "Honolulu Marathon",
-      "date": "2025-12-08",
+      "date": "2025-12-14",
       "location": "Honolulu, HI",
-      "time": "3:36:56",
-      "pace": "8:16/mi",
+      "time": "3:36:27",
+      "pace": "8:15/mi",
       "bostonQualifier": false,
       "isPR": false,
       "temp": "75°F",
@@ -44,7 +44,8 @@
       "placement": "29th in division",
       "participants": "34,000+",
       "ageGroupPercentile": "Top 10-12%",
-      "notes": "Fun race. 34k+ runners."
+      "notes": "Fun race in paradise. 34k+ runners.",
+      "stravaActivityId": "16847830110"
     },
     {
       "id": "cascade-express-2024",
@@ -81,11 +82,13 @@
       "name": "Taco Bell DC 50K",
       "date": "2025-11-29",
       "location": "Alexandria, VA",
-      "time": "4:39:00",
-      "distance": "31 miles",
+      "time": "4:39:02",
+      "distance": "32.73 miles",
+      "elevation": "1,501 ft",
       "temp": "48°F",
       "conditions": "Fall weather",
-      "notes": "First ultra."
+      "notes": "First ultra! Crushed it.",
+      "stravaActivityId": "16603172862"
     }
   ],
   "upcoming": [
@@ -107,9 +110,11 @@
   "stats": {
     "marathonPR": "3:09",
     "totalMarathons": 6,
+    "totalUltras": 1,
     "bostonQualifications": 3,
     "weeklyMileage": "50-60",
-    "improvement": "19:52 from first to PR"
+    "improvement": "19:52 from first to PR",
+    "dataSource": "Strava"
   },
   "worldMajors": {
     "goal": 7,
