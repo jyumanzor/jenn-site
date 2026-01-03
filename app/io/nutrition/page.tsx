@@ -804,6 +804,212 @@ interface WeeklyPlan {
   };
 }
 
+// Standalone Weekly Meal Planner Component for Hero Section
+function WeeklyMealPlannerHero() {
+  const [weeklyPlan, setWeeklyPlan] = useState<WeeklyPlan>(nutritionData.weeklyMealPlan);
+  const [editingCell, setEditingCell] = useState<{ day: string; meal: string } | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [vitaminDCount, setVitaminDCount] = useState(0);
+
+  const defaultWeeklyPlan = nutritionData.weeklyMealPlan;
+  const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+  const dayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  // Load from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("jenn-weekly-meal-plan");
+    if (saved) {
+      try {
+        setWeeklyPlan(JSON.parse(saved));
+      } catch (e) {
+        console.error("Failed to parse weekly meal plan:", e);
+      }
+    }
+    setIsLoaded(true);
+  }, []);
+
+  // Save to localStorage and count Vitamin D meals
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem("jenn-weekly-meal-plan", JSON.stringify(weeklyPlan));
+
+      // Count Vitamin D meals
+      let count = 0;
+      Object.values(weeklyPlan).forEach(day => {
+        Object.values(day).forEach(meal => {
+          if (meal.toLowerCase().includes('salmon') ||
+              meal.toLowerCase().includes('sardine') ||
+              meal.toLowerCase().includes('vitamin d') ||
+              meal.toLowerCase().includes('eggs')) {
+            count++;
+          }
+        });
+      });
+      setVitaminDCount(count);
+    }
+  }, [weeklyPlan, isLoaded]);
+
+  const updateMeal = (day: string, meal: string, value: string) => {
+    setWeeklyPlan(prev => ({
+      ...prev,
+      [day]: {
+        ...prev[day],
+        [meal]: value
+      }
+    }));
+    setEditingCell(null);
+  };
+
+  const resetPlan = () => {
+    setWeeklyPlan(defaultWeeklyPlan);
+    localStorage.removeItem("jenn-weekly-meal-plan");
+  };
+
+  const getMealOptions = (meal: string): string[] => {
+    if (meal === "postRun") return MEAL_OPTIONS.postRun;
+    if (meal in MEAL_OPTIONS) return MEAL_OPTIONS[meal as MealSlot];
+    return MEAL_OPTIONS.snack;
+  };
+
+  const isVitaminDMeal = (mealName: string): boolean => {
+    const lower = mealName.toLowerCase();
+    return lower.includes('salmon') || lower.includes('sardine') ||
+           lower.includes('vitamin d') || lower.includes('eggs');
+  };
+
+  const getMealIcon = (mealType: string) => {
+    switch(mealType) {
+      case 'breakfast': return '🌅';
+      case 'lunch': return '☀️';
+      case 'dinner': return '🌙';
+      case 'snack': return '🍎';
+      case 'postRun': return '🏃';
+      default: return '🍽️';
+    }
+  };
+
+  if (!isLoaded) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Stats Bar */}
+      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl" style={{ backgroundColor: '#FFF5EB10' }}>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">☀️</span>
+            <div>
+              <p className="text-xs" style={{ color: '#FFF5EB60' }}>Vitamin D Meals</p>
+              <p className="text-lg font-medium" style={{ color: vitaminDCount >= 4 ? '#38A169' : '#FABF34' }}>
+                {vitaminDCount}/4+ weekly
+              </p>
+            </div>
+          </div>
+          <div className="w-px h-8" style={{ backgroundColor: '#FFF5EB20' }} />
+          <div>
+            <p className="text-xs" style={{ color: '#FFF5EB60' }}>Current Level</p>
+            <p className="text-sm" style={{ color: '#E53E3E' }}>27.7 ng/mL (low)</p>
+          </div>
+        </div>
+        <button
+          onClick={resetPlan}
+          className="px-4 py-2 text-xs rounded-lg transition-all hover:opacity-80"
+          style={{ backgroundColor: '#FFF5EB20', color: '#FFF5EB' }}
+        >
+          Reset to Default
+        </button>
+      </div>
+
+      {/* Weekly Grid */}
+      <div className="overflow-x-auto">
+        <div className="grid grid-cols-7 gap-2 min-w-[700px]">
+          {/* Day Headers */}
+          {days.map((day, i) => (
+            <div key={day} className="text-center pb-2">
+              <p className="text-xs font-medium uppercase" style={{ color: '#FFF5EB' }}>{dayLabels[i]}</p>
+            </div>
+          ))}
+
+          {/* Meal Rows */}
+          {['breakfast', 'lunch', 'dinner', 'snack'].map(mealType => (
+            days.map((day) => {
+              const mealName = weeklyPlan[day]?.[mealType] || '';
+              const isEditing = editingCell?.day === day && editingCell?.meal === mealType;
+              const hasVitaminD = isVitaminDMeal(mealName);
+
+              return (
+                <div key={`${day}-${mealType}`} className="relative">
+                  {isEditing ? (
+                    <div
+                      className="p-2 rounded-lg min-h-[70px]"
+                      style={{ backgroundColor: '#97A97C', border: '2px solid #D4ED39' }}
+                    >
+                      <select
+                        value={mealName}
+                        onChange={(e) => updateMeal(day, mealType, e.target.value)}
+                        onBlur={() => setEditingCell(null)}
+                        autoFocus
+                        className="w-full text-xs bg-transparent border-none focus:outline-none cursor-pointer"
+                        style={{ color: '#FFF5EB' }}
+                      >
+                        {getMealOptions(mealType).map((option) => (
+                          <option key={option} value={option} style={{ color: '#2A3C24' }}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => setEditingCell({ day, meal: mealType })}
+                      className="w-full p-2 rounded-lg text-left transition-all hover:scale-105 min-h-[70px] group"
+                      style={{
+                        backgroundColor: hasVitaminD ? '#FABF3420' : '#FFF5EB10',
+                        border: hasVitaminD ? '1px solid #FABF3440' : '1px solid transparent'
+                      }}
+                    >
+                      <div className="flex items-start gap-1">
+                        <span className="text-xs">{getMealIcon(mealType)}</span>
+                        {hasVitaminD && <span className="text-xs">☀️</span>}
+                      </div>
+                      <p
+                        className="text-xs mt-1 line-clamp-2"
+                        style={{ color: '#FFF5EB' }}
+                      >
+                        {mealName || 'Add meal'}
+                      </p>
+                      <svg
+                        className="w-3 h-3 absolute top-2 right-2 opacity-0 group-hover:opacity-50 transition-opacity"
+                        style={{ color: '#FFF5EB' }}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+              );
+            })
+          ))}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="flex flex-wrap items-center gap-4 pt-2">
+        <div className="flex items-center gap-2">
+          <span className="text-xs">☀️</span>
+          <span className="text-xs" style={{ color: '#FFF5EB60' }}>= Vitamin D rich (prioritize for your deficiency)</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-4 rounded" style={{ backgroundColor: '#FABF3420', border: '1px solid #FABF3440' }} />
+          <span className="text-xs" style={{ color: '#FFF5EB60' }}>= Highlighted for blood work optimization</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Blueprint Meals Section
 function BlueprintMeals() {
   const [activeTab, setActiveTab] = useState<'blueprint' | 'pescatarian' | 'mixes' | 'weekly'>('blueprint');
@@ -1776,13 +1982,8 @@ export default function NutritionPage() {
             <BloodTestInsights />
           </div>
 
-          {/* Quick Jump to Planner */}
-          <div className="p-4 rounded-xl mb-4" style={{ backgroundColor: '#FFF5EB10', border: '1px dashed #FFF5EB30' }}>
-            <p className="text-sm" style={{ color: '#FFF5EB' }}>
-              <span style={{ color: '#FABF34' }}>Tip:</span> Meals marked with &quot;(Vitamin D)&quot; help address your insufficiency.
-              Aim for 3-4 Vitamin D-rich meals per week.
-            </p>
-          </div>
+          {/* Weekly Meal Planner Grid */}
+          <WeeklyMealPlannerHero />
         </div>
       </section>
 
