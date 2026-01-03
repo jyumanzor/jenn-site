@@ -1,0 +1,65 @@
+{
+  "captures": [
+    {
+      "id": "1735948800000",
+      "question": "Compliance Legal buttons on ai hub section 8 need to be white text",
+      "questionType": "design",
+      "buildContext": "fti-portal",
+      "category": "contrast",
+      "timestamp": "2026-01-03T12:00:00.000Z",
+      "tags": ["buttons", "text-color", "ai-hub"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": true,
+      "fix": "Added explicit inline styles for white text (#FFFFFF) on both Compliance and Legal buttons in Module 8",
+      "fixSource": "cc"
+    },
+    {
+      "id": "1735948900000",
+      "question": "Section header (Research & Analysis) too close to previous element - needs spacing",
+      "questionType": "design",
+      "buildContext": "fti-portal",
+      "category": "layout",
+      "timestamp": "2026-01-03T12:15:00.000Z",
+      "tags": ["spacing", "section-header", "margin"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": true,
+      "fix": "In [filename], find the section header component. Add margin-top: 2rem to its styles. Do not use conditional logic or responsive adjustments—just add the fixed spacing. Then grep the codebase for any other section headers and apply the same treatment.",
+      "fixSource": "chat"
+    },
+    {
+      "id": "1735949000000",
+      "question": "Make 'All Standards' button a lighter blue - currently teal/green gradient",
+      "questionType": "design",
+      "buildContext": "fti-portal",
+      "category": "color",
+      "timestamp": "2026-01-03T12:30:00.000Z",
+      "tags": ["buttons", "color", "ai-hub", "module-8"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": false
+    },
+    {
+      "id": "1735949100000",
+      "question": "View Full Timeline Guide is not visible - too dark",
+      "questionType": "design",
+      "buildContext": "fti-portal",
+      "category": "contrast",
+      "timestamp": "2026-01-03T12:45:00.000Z",
+      "tags": ["text-color", "contrast", "visibility", "timeline"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": false
+    },
+    {
+      "id": "1735949200000",
+      "question": "Training Categories section on /01-onboarding - ALL links are dead (Onboarding, Core Technical, Subject Matter, Automation Tools, QC Standards, Seminars & Workshops, Specialized Topics, Marketing Templates)",
+      "questionType": "technical",
+      "buildContext": "fti-portal",
+      "category": "technical",
+      "timestamp": "2026-01-03T13:00:00.000Z",
+      "tags": ["dead-links", "navigation", "onboarding", "training-categories"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": false,
+      "page": "/01-onboarding"
+    }
+  ],
+  "lastUpdated": "2026-01-03"
+}

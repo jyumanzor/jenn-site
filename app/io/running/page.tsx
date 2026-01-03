@@ -497,10 +497,10 @@ export default function RunningAdminPage() {
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-7">
-              <Link href="/io" className="text-[#FABF34] text-xs hover:text-[#D4ED39] transition-colors mb-4 inline-block font-medium">
+              <Link href="/io" className="text-[#FFF5EB] text-sm hover:text-[#FABF34] transition-colors mb-4 inline-block font-medium underline underline-offset-2">
                 ← Back to IO
               </Link>
-              <h1 className="font-display text-4xl md:text-5xl leading-tight mb-3" style={{ color: colors.lime }}>
+              <h1 className="font-display text-4xl md:text-5xl leading-tight mb-3" style={{ color: colors.cream }}>
                 Training Command Center
               </h1>
               <div className="flex items-center gap-3 mb-4">
@@ -539,7 +539,7 @@ export default function RunningAdminPage() {
                   <p className="text-[#FFF5EB]/60 text-[11px] uppercase tracking-wider mt-1">Current PR</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center">
-                  <p className="font-display text-3xl" style={{ color: colors.lime }}>Sub-3</p>
+                  <p className="font-display text-3xl" style={{ color: colors.sage }}>Sub-3</p>
                   <p className="text-[#FFF5EB]/60 text-[11px] uppercase tracking-wider mt-1">Target</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-2xl p-5 text-center">

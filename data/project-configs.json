@@ -1,0 +1,210 @@
+{
+  "jenns-site": {
+    "name": "Jenn's Site",
+    "icon": "J",
+    "description": "Personal website - running, portfolio, IO dashboard",
+    "colors": {
+      "primary": {
+        "name": "Deep Forest",
+        "hex": "#3B412D",
+        "use": "Dark backgrounds, headers"
+      },
+      "secondary": {
+        "name": "Olive",
+        "hex": "#546E40",
+        "use": "Active states, panels"
+      },
+      "accent": {
+        "name": "Sage",
+        "hex": "#97A97C",
+        "use": "Secondary text, accents"
+      },
+      "background": {
+        "name": "Ivory",
+        "hex": "#FFF5EB",
+        "use": "Light backgrounds"
+      },
+      "gold": {
+        "name": "Gold",
+        "hex": "#FABF34",
+        "use": "ONLY numbers, icons, small accents"
+      },
+      "warm": {
+        "name": "Terracotta",
+        "hex": "#C76B4A",
+        "use": "Warm accent (replaces dark blue)"
+      },
+      "neutral": {
+        "name": "Tan",
+        "hex": "#CBAD8C",
+        "use": "Labels, borders"
+      }
+    },
+    "forbidden": [
+      "dark blue",
+      "purple",
+      "bright red",
+      "any off-palette colors"
+    ],
+    "typography": {
+      "headers": "Instrument Serif (var(--font-instrument))",
+      "body": "system-ui, DM Sans",
+      "stats": "font-mono with gold color"
+    },
+    "quickCommands": {
+      "DC": "Fix colors. Use only: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Ivory #FFF5EB, Tan #CBAD8C. NO dark blue or off-palette.",
+      "TC": "Fix text contrast. Dark bg (#3B412D, #546E40) needs light text (#FFF5EB). Light bg (#FFF5EB) needs dark text (#3B412D).",
+      "GR": "Gold #FABF34 is ONLY for numbers, icons, small badges. NEVER for body text or headers.",
+      "SP": "Fix spacing. Badges small, below titles. Standard gaps: gap-4 for grids, gap-2 for tight groups.",
+      "SC": "Fix scroll. Page may need scroll-mt-20 on target elements or scroll-behavior: smooth.",
+      "PD": "Content too high. Move it and all content below it down - add pt-20 or mt-20 to the first section. Use consistent spacing we've been using.",
+      "SH": "Section header too close to element above. Find the section header component, add margin-top: 2rem (mt-8) to its styles. No conditional logic - just add fixed spacing. Grep codebase for other section headers and apply same."
+    },
+    "commonIssues": [
+      {
+        "problem": "Dark blue appeared",
+        "fix": "Replace with terracotta #C76B4A"
+      },
+      {
+        "problem": "Text unreadable on dark bg",
+        "fix": "Use #FFF5EB for text on #3B412D or #546E40"
+      },
+      {
+        "problem": "Page scroll stuck at top",
+        "fix": "Add pt-20 to main content or scroll-mt-20 to target"
+      },
+      {
+        "problem": "Content appears too far up on page",
+        "fix": "Move first section down 5 notches - add pt-20 or mt-20, use consistent spacing"
+      },
+      {
+        "problem": "Section shows up way too high",
+        "fix": "Add padding-top to main container: pt-16 or pt-20 to push content down"
+      },
+      {
+        "problem": "Emoji icons everywhere",
+        "fix": "Prefer drawn SVG icons over emoji icons"
+      },
+      {
+        "problem": "Gold used as text color",
+        "fix": "Gold only for numbers/accents, use #FFF5EB or #3B412D for text"
+      }
+    ],
+    "rules": [
+      "Gold ONLY for accents, numbers, small badges",
+      "No dark blue - use terracotta instead",
+      "Terracotta replaces dark blue everywhere",
+      "Badges small, below titles, not inline",
+      "12px corners (rounded-xl) for panels",
+      "Editorial, magazine aesthetic",
+      "Prefer drawn icons to emoji icons",
+      "Always check text contrast on backgrounds"
+    ]
+  },
+  "fti-portal": {
+    "name": "FTI Portal",
+    "icon": "F",
+    "description": "Internal FTI tools and documentation",
+    "colors": {
+      "primary": {
+        "name": "Navy",
+        "hex": "#1B2B4B",
+        "use": "Headers, primary actions"
+      },
+      "secondary": {
+        "name": "Steel Blue",
+        "hex": "#4A6FA5",
+        "use": "Secondary elements, links"
+      },
+      "accent": {
+        "name": "Teal",
+        "hex": "#2A9D8F",
+        "use": "Highlights, success states"
+      },
+      "background": {
+        "name": "Light Gray",
+        "hex": "#F8F9FA",
+        "use": "Page backgrounds"
+      },
+      "surface": {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "use": "Cards, panels"
+      },
+      "text": {
+        "name": "Charcoal",
+        "hex": "#333333",
+        "use": "Body text"
+      }
+    },
+    "forbidden": [
+      "bright colors",
+      "playful fonts",
+      "rounded corners over 8px"
+    ],
+    "typography": {
+      "headers": "Inter, system-ui",
+      "body": "Inter, system-ui",
+      "stats": "font-mono"
+    },
+    "quickCommands": {
+      "DC": "Fix colors. Use only: Navy #1B2B4B, Steel Blue #4A6FA5, Teal #2A9D8F, Light Gray #F8F9FA, White #FFFFFF, Charcoal #333333.",
+      "TC": "Fix text contrast. Dark bg needs white text. Light bg (#F8F9FA, #FFFFFF) needs dark text (#333333, #1B2B4B).",
+      "SP": "Fix spacing. Professional, compact layout. Use 4px, 8px, 16px, 24px increments.",
+      "SH": "Section header too close to element above. Find the section header component, add margin-top: 2rem (mt-8) to its styles. No conditional logic or responsive adjustments - just add fixed spacing. Then grep codebase for other section headers and apply same treatment."
+    },
+    "commonIssues": [
+      {
+        "problem": "Too playful/casual",
+        "fix": "Keep professional, use smaller corners (rounded-md max)"
+      },
+      {
+        "problem": "Colors too vibrant",
+        "fix": "Stick to muted palette - navy, steel, teal"
+      },
+      {
+        "problem": "Section header too close to previous element",
+        "fix": "Add margin-top: 2rem (mt-8) to section header. No conditionals, just fixed spacing. Grep for other section headers and apply same."
+      },
+      {
+        "problem": "Buttons need white text on dark bg",
+        "fix": "Add explicit style={{ color: '#FFFFFF' }} to button text, not just className"
+      },
+      {
+        "problem": "Content crowding the footer / not enough space at bottom",
+        "fix": "Create a utility class .content-bottom-spacing that adds padding-bottom: 3rem to any page's main content area before the footer. Apply it to all page containers."
+      }
+    ],
+    "rules": [
+      "Professional, corporate aesthetic",
+      "Max 8px border radius",
+      "Clean, compact layouts",
+      "Standard button styles",
+      "No decorative elements"
+    ]
+  },
+  "general": {
+    "name": "General",
+    "icon": "G",
+    "description": "Default rules for any project",
+    "colors": {},
+    "forbidden": [],
+    "typography": {
+      "headers": "system-ui",
+      "body": "system-ui",
+      "stats": "font-mono"
+    },
+    "quickCommands": {
+      "DC": "Check color palette for this project and only use approved colors.",
+      "TC": "Ensure text has sufficient contrast (4.5:1 minimum for body text).",
+      "SP": "Check spacing consistency - use consistent gap/padding values."
+    },
+    "commonIssues": [],
+    "rules": [
+      "Read files before editing",
+      "Only change what's explicitly requested",
+      "Maintain existing patterns",
+      "Check contrast ratios"
+    ]
+  }
+}

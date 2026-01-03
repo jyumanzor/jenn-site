@@ -84,6 +84,19 @@ const dashboardSections = [
       </svg>
     ),
     color: "panel-gradient-honey"
+  },
+  {
+    id: "agents",
+    title: "Agent Command",
+    description: "Track agents, probabilities, redundancy",
+    href: "/io/agents",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    color: "panel-gradient-forest",
+    isNew: true
   }
 ];
 
@@ -121,6 +134,14 @@ export default function IODashboardPage() {
                 className={`${section.color} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group relative overflow-hidden`}
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 rounded-bl-full" />
+                {'isNew' in section && section.isNew && (
+                  <span
+                    className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[10px] font-bold z-20"
+                    style={{ background: '#D4ED39', color: '#2A3C24' }}
+                  >
+                    NEW
+                  </span>
+                )}
                 <div className="relative z-10">
                   <div className="mb-4 text-cream/80 group-hover:text-gold transition-colors">
                     {section.icon}

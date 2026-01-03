@@ -13,28 +13,22 @@ const tools = [
     isNew: true,
   },
   {
-    id: 'voice-memos',
-    name: 'Voice Memos',
-    description: 'Transform voice recordings into actionable prompts',
-    href: '/io/sandbox/voice-memos',
-  },
-  {
     id: 'prompt-builder',
     name: 'Prompt Builder',
-    description: 'Force commands, prompt library & AI profile',
+    description: 'Fix finder, quick codes, issue log & design rules',
     href: '/io/sandbox/prompt-builder',
   },
   {
     id: 'brand-builder',
-    name: 'Brand Builder',
-    description: 'Extract palettes from images',
+    name: 'Brand Generator',
+    description: 'Mix palettes, fonts, styles + live preview',
     href: '/io/sandbox/brand-builder',
   },
   {
-    id: 'palettes',
-    name: 'My Palettes',
-    description: 'Saved color schemes',
-    href: '/io/sandbox/palettes',
+    id: 'voice-memos',
+    name: 'Voice Memos',
+    description: 'Transform voice recordings into actionable prompts',
+    href: '/io/sandbox/voice-memos',
   },
 ];
 

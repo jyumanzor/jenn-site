@@ -1,1579 +1,810 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import IOAuthGate from "@/components/IOAuthGate";
 
 // Types
-interface SavedPrompt {
+interface LoggedIssue {
   id: string;
-  text: string;
-  category: 'design' | 'technical' | 'layout' | 'content' | 'debug';
-  createdAt: string;
-  useCount: number;
-  tags: string[];
+  project: string;
+  category: string;
+  description: string;
+  timestamp: string;
+  resolved: boolean;
+  fix?: string;
+  fixSource?: 'chat' | 'cc' | 'manual';
+  fixTimestamp?: string;
 }
 
-interface ForceCommand {
-  id: string;
-  text: string;
-  isDefault: boolean;
+interface ProjectConfig {
+  name: string;
+  icon: string;
+  description: string;
+  colors: Record<string, { name: string; hex: string; use: string }>;
+  forbidden: string[];
+  typography: { headers: string; body: string; stats: string };
+  quickCommands: Record<string, string>;
+  commonIssues: { problem: string; fix: string }[];
+  rules: string[];
 }
 
-interface QuickCode {
-  code: string;
-  meaning: string;
-  expansion: string;
+interface SessionContext {
+  lastProject: string;
+  lastCategory: string;
+  recentIssues: string[];
+  lastUpdated: string;
 }
 
-// Default data
-const defaultForceCommands: ForceCommand[] = [
-  { id: '1', text: 'Stop. Re-read the requirements I gave you.', isDefault: true },
-  { id: '2', text: "You're not paying attention to what I'm asking.", isDefault: true },
-  { id: '3', text: 'Go back to the original file and start over.', isDefault: true },
-  { id: '4', text: 'DO NOT change anything else. ONLY change what I specified.', isDefault: true },
-  { id: '5', text: 'Read the entire file before making changes.', isDefault: true },
-  { id: '6', text: "Explain what you think I want, then I'll confirm before you proceed.", isDefault: true },
-  { id: '7', text: "That's wrong. The issue is [X], not [Y].", isDefault: true },
-  { id: '8', text: 'Keep the exact same structure, just change [specific thing].', isDefault: true },
-];
-
-const quickCodes: QuickCode[] = [
-  { code: 'DC', meaning: 'Design/Color', expansion: 'Fix the color scheme. Use only hex codes from my palette: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Cream #FFF5EB, Tan #CBAD8C. NO dark blue, purple, or off-palette colors.' },
-  { code: 'SP', meaning: 'Spacing', expansion: 'Fix the spacing and alignment. Badges should be small and understated, below titles not inline.' },
-  { code: 'TF', meaning: 'Type Fix', expansion: "Fix the TypeScript types. Don't use 'any'." },
-  { code: 'RA', meaning: 'Re-read All', expansion: 'Stop. Re-read all the requirements I gave you.' },
-  { code: 'KS', meaning: 'Keep Structure', expansion: 'Keep the exact same structure, only change what I specified.' },
-  { code: 'NE', meaning: 'No Extras', expansion: 'DO NOT add anything I didn\'t ask for. No comments, no refactoring.' },
-];
-
-const colorPalettes = [
-  { name: 'Editorial Greens', colors: ['#3B412D', '#97A97C', '#546E40'] },
-  { name: 'Warm Neutrals', colors: ['#FFF5EB', '#FAF3E8', '#CBAD8C'] },
-  { name: 'Full Jenn Palette', colors: ['#3B412D', '#546E40', '#97A97C', '#FFF5EB', '#FAF3E8', '#FABF34', '#CBAD8C', '#C76B4A'] },
-  { name: 'Accent Colors Only', colors: ['#FABF34', '#D4A853', '#C76B4A'] },
-  { name: 'Warm Tones', colors: ['#C76B4A', '#CBAD8C', '#FABF34'] },
-];
-
-const frustrationCodes = [
-  { trigger: 'wrong color', code: 'DC', description: 'Color issues', expansion: 'Fix the color scheme. Use only hex codes from my palette.' },
-  { trigger: 'off-palette color', code: 'DC', description: 'Off-palette', expansion: 'You used a color NOT in my palette. Replace with: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Cream #FFF5EB, or Tan #CBAD8C.' },
-  { trigger: 'dark blue', code: 'DC', description: 'No dark blue', expansion: 'NEVER use dark blue (#0D2240). Use terracotta #C76B4A or deep forest #3B412D instead.' },
-  { trigger: 'not what I asked', code: 'RA', description: 'Re-read all', expansion: 'Stop. Re-read all the requirements I gave you.' },
-  { trigger: 'changed too much', code: 'KS', description: 'Keep structure', expansion: 'Keep the exact same structure, only change what I specified.' },
-  { trigger: 'added extras', code: 'NE', description: 'No extras', expansion: 'DO NOT add anything I didn\'t ask for. No comments, no refactoring.' },
-  { trigger: 'types broken', code: 'TF', description: 'Type fix', expansion: 'Fix the TypeScript types. Don\'t use \'any\'.' },
-  { trigger: 'spacing/alignment', code: 'SP', description: 'Spacing fix', expansion: 'Fix the spacing and alignment. Badges should be small, below titles, not inline.' },
-];
-
-// Category colors for the bar chart
-const categoryColors: Record<string, string> = {
-  design: '#97A97C',    // Sage
-  technical: '#FABF34', // Gold
-  layout: '#546E40',    // Olive Dark
-  content: '#CBAD8C',   // Tan
-  debug: '#D4A853',     // Accent Gold
+// Issue categories (generic)
+const issueCategories = {
+  color: { label: "Colors wrong", icon: "color" },
+  contrast: { label: "Can't read text", icon: "contrast" },
+  layout: { label: "Layout broken", icon: "layout" },
+  scroll: { label: "Scroll stuck", icon: "scroll" },
+  typography: { label: "Wrong fonts", icon: "type" },
+  behavior: { label: "Not listening", icon: "behavior" },
+  technical: { label: "Code errors", icon: "code" },
 };
 
-const jennProfile = {
-  coreValues: [
-    'Efficiency over perfection',
-    'Clear communication is respect',
-    'Tools should serve, not obstruct',
-    'Personal aesthetic matters',
-  ],
-  creativeStyle: [
-    'Minimal but warm designs',
-    'Editorial, magazine-like aesthetics',
-    'Serif headers, clean body text',
-    'Nature-inspired color palettes',
-  ],
-  communicationStyle: [
-    'Direct communication',
-    'No unnecessary pleasantries in tools',
-    'Prefers functional over decorative',
-    'Appreciates when AI remembers context',
-  ],
-  designRules: [
-    'Never use lime green as a background',
-    'Gold is ONLY for accents (numbers, icons)',
-    'Always use Instrument Serif for headers',
-    'Body text stays in system-ui/sans-serif',
-    'Rounded corners: 12px for panels, 100px for buttons',
-    'NEVER use off-palette colors (no dark blue #0D2240, no purple, no bright red)',
-    'Use terracotta #C76B4A for warm accent cards (instead of dark blue)',
-    'Strava/external brand colors should be muted or replaced with palette equivalents',
-    'Badges should be small and understated, not inline with titles',
-  ],
-  palette: [
-    { name: 'Deep Forest', hex: '#3B412D' },
-    { name: 'Forest Mid', hex: '#3C422E' },
-    { name: 'Olive Dark', hex: '#546E40' },
-    { name: 'Sage', hex: '#97A97C' },
-    { name: 'Ivory', hex: '#FFF5EB' },
-    { name: 'Cream', hex: '#FAF3E8' },
-    { name: 'Gold', hex: '#FABF34' },
-    { name: 'Tan', hex: '#CBAD8C' },
-    { name: 'Terracotta', hex: '#C76B4A' },
-    { name: 'Lime (accent only)', hex: '#D4ED39' },
-  ],
-  // From the manifestos
-  lifePhilosophy: [
-    'Running is the one place with no luck, no shortcuts, and no one else to blame—the result is yours alone',
-    'Effort compounds. Setbacks aren\'t permanent. Legacies are built a mile at a time',
-    'Ceilings exist until you break them, and then they don\'t',
-    'Choose hard things on purpose',
-    'It\'s not enough to feel moved by history—you have a responsibility to live differently because of it',
-  ],
-  workPhilosophy: [
-    'How much effort you put into engaging with your team dictates how well you weather tough moments',
-    'Joy, even in the thick of the mundane, becomes infectious',
-    'You can succeed alone, but achievement is much more meaningful when it\'s shared',
-    'Show up, keep going, push through doubt until the work holds',
-    'Rituals create culture; culture creates trust',
-  ],
-  runningMantras: [
-    'Using only your heart, mind, and soul, you are responsible for seeing how fast you can get your body to travel 26.2',
-    'Running always asks for receipts. It doesn\'t care if the logic makes sense. It cares if you showed up',
-    'Progress is measurable and personal—you set a time, a distance, a pace, then see if you can meet it',
-    'What brings the race back into focus is the record of what I\'ve already done',
-    'I run knowing that with only my heart, mind, and soul, I am responsible for how far I go',
-  ],
-  background: [
-    'Senior Consultant, Economics at FTI Consulting (Litigation & Dispute Resolution)',
-    'Marathon runner pursuing sub-3:00 (current PR: 3:09)',
-    'BA in Sociology & HIPS from University of Chicago',
-    'First-generation, from Dallas, based in Washington DC',
-    'Languages: Spanish (native), French (professional), Hindi (proficient)',
-  ],
-  interests: [
-    'Marathon training and running culture',
-    'Editorial design and magazine aesthetics',
-    'Economic analysis and damages estimation',
-    'Travel photography and documentation',
-    'Literature (Vonnegut, Kundera, Nietzsche)',
-  ],
+// Simple SVG icons (drawn, not emoji)
+const icons: Record<string, JSX.Element> = {
+  color: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>,
+  contrast: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2a10 10 0 0 0 0 20" fill="currentColor" opacity="0.3"/></svg>,
+  layout: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>,
+  scroll: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 8v4M12 16v.01"/></svg>,
+  type: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>,
+  behavior: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>,
+  code: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>,
+  capture: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>,
+  check: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><path d="M20 6L9 17l-5-5"/></svg>,
+  copy: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>,
+  fix: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>,
+  link: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>,
 };
 
-type TabType = 'commands' | 'builder' | 'library' | 'patterns' | 'profile' | 'brand' | 'palettes';
-type PromptType = 'design' | 'voice' | 'technical' | 'layout' | 'restructuring' | 'new-idea';
-type Category = 'design' | 'technical' | 'layout' | 'content' | 'debug';
-type SortOption = 'newest' | 'most-used' | 'alphabetical';
+// Jenn Logo Component
+const JennLogo = ({ size = 32 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
+    <rect x="2" y="2" width="36" height="36" rx="8" fill="#3B412D"/>
+    <path
+      d="M14 10h6v14c0 4-2 6-6 6"
+      stroke="#FABF34"
+      strokeWidth="3"
+      strokeLinecap="round"
+      fill="none"
+    />
+    <circle cx="26" cy="12" r="2" fill="#97A97C"/>
+    <path
+      d="M26 16v8c0 4-2 6-6 6"
+      stroke="#97A97C"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      fill="none"
+    />
+  </svg>
+);
 
-export default function SandboxPage() {
-  const [activeTab, setActiveTab] = useState<TabType>('commands');
-  const [copiedId, setCopiedId] = useState<string | null>(null);
+export default function PromptBuilder() {
+  // State
+  const [activeView, setActiveView] = useState<'fix' | 'codes' | 'log' | 'os'>('fix');
+  const [projectConfigs, setProjectConfigs] = useState<Record<string, ProjectConfig>>({});
+  const [activeProject, setActiveProject] = useState<string>('jenns-site');
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [copied, setCopied] = useState<string | null>(null);
+  const [issues, setIssues] = useState<LoggedIssue[]>([]);
+  const [quickNote, setQuickNote] = useState('');
+  const [showCaptureModal, setShowCaptureModal] = useState(false);
+  const [showFixModal, setShowFixModal] = useState(false);
+  const [selectedIssueForFix, setSelectedIssueForFix] = useState<string | null>(null);
+  const [fixText, setFixText] = useState('');
+  const [fixSource, setFixSource] = useState<'chat' | 'cc' | 'manual'>('chat');
+  const [session, setSession] = useState<SessionContext | null>(null);
 
-  // Force Commands state
-  const [forceCommands, setForceCommands] = useState<ForceCommand[]>(defaultForceCommands);
-  const [newCommand, setNewCommand] = useState('');
-
-  // Prompt Builder state
-  const [promptType, setPromptType] = useState<PromptType>('design');
-  const [keywords, setKeywords] = useState('');
-  const [styleRef, setStyleRef] = useState('');
-  const [audience, setAudience] = useState('');
-  const [selectedPalette, setSelectedPalette] = useState('Full Jenn Palette');
-  const [additionalContext, setAdditionalContext] = useState('');
-
-  // Library state
-  const [savedPrompts, setSavedPrompts] = useState<SavedPrompt[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState<Category | 'all'>('all');
-  const [sortOption, setSortOption] = useState<SortOption>('newest');
-  const [newPromptText, setNewPromptText] = useState('');
-  const [newPromptCategory, setNewPromptCategory] = useState<Category>('design');
-  const [newPromptTags, setNewPromptTags] = useState('');
-
-  // Feedback state
-  const [savedFeedback, setSavedFeedback] = useState(false);
-
-  // Load from localStorage
+  // Load project configs
   useEffect(() => {
-    const storedCommands = localStorage.getItem('jenn-force-commands');
-    const storedPrompts = localStorage.getItem('jenn-prompt-library');
-
-    if (storedCommands) {
-      const customCommands = JSON.parse(storedCommands);
-      setForceCommands([...defaultForceCommands, ...customCommands]);
-    }
-    if (storedPrompts) {
-      setSavedPrompts(JSON.parse(storedPrompts));
-    }
+    fetch('/data/project-configs.json')
+      .then(res => res.json())
+      .then(data => setProjectConfigs(data))
+      .catch(() => {
+        // Fallback to inline config if fetch fails
+        setProjectConfigs({
+          'jenns-site': {
+            name: "Jenn's Site",
+            icon: 'J',
+            description: 'Personal website',
+            colors: {
+              primary: { name: 'Deep Forest', hex: '#3B412D', use: 'Dark backgrounds' },
+              accent: { name: 'Sage', hex: '#97A97C', use: 'Secondary text' },
+              gold: { name: 'Gold', hex: '#FABF34', use: 'Numbers only' },
+              background: { name: 'Ivory', hex: '#FFF5EB', use: 'Light backgrounds' },
+              warm: { name: 'Terracotta', hex: '#C76B4A', use: 'Replaces dark blue' },
+              neutral: { name: 'Tan', hex: '#CBAD8C', use: 'Labels' },
+            },
+            forbidden: ['dark blue', 'purple', 'bright red'],
+            typography: { headers: 'Instrument Serif', body: 'system-ui', stats: 'font-mono gold' },
+            quickCommands: {
+              DC: 'Fix colors. Use only: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Ivory #FFF5EB, Tan #CBAD8C. NO dark blue.',
+              TC: 'Fix text contrast. Dark bg needs light text (#FFF5EB). Light bg needs dark text (#3B412D).',
+              GR: 'Gold #FABF34 is ONLY for numbers, icons, small badges. NEVER for body text.',
+              SC: 'Fix scroll. Add pt-20 to content or scroll-mt-20 to target elements.',
+            },
+            commonIssues: [
+              { problem: 'Dark blue appeared', fix: 'Replace with terracotta #C76B4A' },
+              { problem: 'Text unreadable', fix: 'Use #FFF5EB on dark bg, #3B412D on light bg' },
+              { problem: 'Page scroll stuck', fix: 'Add pt-20 or scroll-mt-20' },
+              { problem: 'Emoji icons', fix: 'Use drawn SVG icons instead' },
+            ],
+            rules: ['Gold ONLY for accents', 'No dark blue', 'Drawn icons over emoji', 'Check contrast'],
+          },
+          'fti-portal': {
+            name: 'FTI Portal',
+            icon: 'F',
+            description: 'Internal FTI tools',
+            colors: {
+              primary: { name: 'Navy', hex: '#1B2B4B', use: 'Headers' },
+              secondary: { name: 'Steel Blue', hex: '#4A6FA5', use: 'Links' },
+              accent: { name: 'Teal', hex: '#2A9D8F', use: 'Success states' },
+              background: { name: 'Light Gray', hex: '#F8F9FA', use: 'Page bg' },
+            },
+            forbidden: ['bright colors', 'playful fonts', 'large rounded corners'],
+            typography: { headers: 'Inter', body: 'Inter', stats: 'font-mono' },
+            quickCommands: {
+              DC: 'Fix colors. Use only: Navy #1B2B4B, Steel Blue #4A6FA5, Teal #2A9D8F, Light Gray #F8F9FA.',
+              TC: 'Fix text contrast. Dark bg needs white text. Light bg needs dark text (#333333).',
+              SP: 'Professional layout. Use 4px, 8px, 16px, 24px spacing increments.',
+            },
+            commonIssues: [
+              { problem: 'Too casual/playful', fix: 'Keep professional, use rounded-md max (8px)' },
+            ],
+            rules: ['Professional aesthetic', 'Max 8px corners', 'Compact layouts'],
+          },
+          'general': {
+            name: 'General',
+            icon: 'G',
+            description: 'Default rules',
+            colors: {},
+            forbidden: [],
+            typography: { headers: 'system-ui', body: 'system-ui', stats: 'font-mono' },
+            quickCommands: {
+              DC: 'Check color palette and use only approved colors.',
+              TC: 'Ensure text has 4.5:1 minimum contrast ratio.',
+            },
+            commonIssues: [],
+            rules: ['Read files before editing', 'Only change what asked'],
+          },
+        });
+      });
   }, []);
 
-  // Generate prompt
-  const generatedPrompt = useMemo(() => {
-    const parts: string[] = [];
-    const typeLabel = promptType.charAt(0).toUpperCase() + promptType.slice(1).replace('-', ' ');
+  // Load issues and session from localStorage
+  useEffect(() => {
+    const savedIssues = localStorage.getItem('jenn-logged-issues-v2');
+    if (savedIssues) setIssues(JSON.parse(savedIssues));
 
-    parts.push(`# ${typeLabel} Prompt`);
-    parts.push('');
+    const savedSession = localStorage.getItem('jenn-session-context');
+    if (savedSession) setSession(JSON.parse(savedSession));
+  }, []);
 
-    const typeIntros: Record<PromptType, string> = {
-      'design': 'I need help with a design task. Please follow my specific aesthetic preferences and design rules.',
-      'voice': 'I need help establishing or refining voice and tone. Please match my communication style preferences.',
-      'technical': 'I need technical implementation help. Please provide clean, well-typed code.',
-      'layout': 'I need help with layout and structure. Please follow my design system specifications.',
-      'restructuring': 'I need help restructuring existing content or code. Please maintain the core intent while improving organization.',
-      'new-idea': 'I have a new idea I want to explore. Please help me develop it while respecting my established preferences.',
-    };
-    parts.push(`> ${typeIntros[promptType]}`);
-    parts.push('');
-
-    parts.push('## Details');
-    parts.push('');
-
-    if (keywords) {
-      parts.push(`**Key Words/Concepts:** ${keywords}`);
-      parts.push('');
-    }
-
-    if (styleRef) {
-      parts.push(`**Style Reference:** ${styleRef}`);
-      parts.push('');
-    }
-
-    if (audience) {
-      parts.push(`**Target Audience:** ${audience}`);
-      parts.push('');
-    }
-
-    const palette = colorPalettes.find(p => p.name === selectedPalette);
-    if (palette) {
-      parts.push('## Color Palette');
-      parts.push('');
-      parts.push(`**${palette.name}**`);
-      parts.push('');
-      parts.push('| Color | Hex Code |');
-      parts.push('|-------|----------|');
-      palette.colors.forEach(hex => {
-        const colorInfo = jennProfile.palette.find(c => c.hex === hex);
-        const name = colorInfo ? colorInfo.name : 'Custom';
-        parts.push(`| ${name} | \`${hex}\` |`);
-      });
-      parts.push('');
-    }
-
-    if (additionalContext) {
-      parts.push('## Additional Context');
-      parts.push('');
-      parts.push(additionalContext);
-      parts.push('');
-    }
-
-    if (['design', 'layout'].includes(promptType)) {
-      parts.push('---');
-      parts.push('');
-      parts.push('## Jenn\'s Design Rules (MUST FOLLOW)');
-      parts.push('');
-      parts.push('**Colors:**');
-      parts.push('- NEVER use lime green as a background');
-      parts.push('- Gold (`#FABF34`) is ONLY for accents (numbers, icons, highlights)');
-      parts.push('');
-      parts.push('**Typography:**');
-      parts.push('- Headers: `Instrument Serif` (italic for emphasis)');
-      parts.push('- Body text: `system-ui` / sans-serif');
-      parts.push('');
-      parts.push('**Border Radius:**');
-      parts.push('- Panels/cards: `12px`');
-      parts.push('- Buttons: `100px` (pill shape)');
-      parts.push('');
-      parts.push('**General:**');
-      parts.push('- Minimal but warm aesthetic');
-      parts.push('- Editorial, magazine-like feel');
-      parts.push('- Nature-inspired color choices');
-      parts.push('');
-    }
-
-    if (promptType === 'voice') {
-      parts.push('---');
-      parts.push('');
-      parts.push('## Voice & Tone Guidelines');
-      parts.push('');
-      parts.push('- Direct communication, no unnecessary pleasantries');
-      parts.push('- Functional over decorative language');
-      parts.push('- Clear and efficient, but not cold');
-      parts.push('- Professional but personable');
-      parts.push('');
-    }
-
-    if (promptType === 'technical') {
-      parts.push('---');
-      parts.push('');
-      parts.push('## Technical Preferences');
-      parts.push('');
-      parts.push('- Use TypeScript with proper types (avoid `any`)');
-      parts.push('- Prefer functional components with hooks');
-      parts.push('- Keep code clean and well-organized');
-      parts.push('- No unnecessary comments or refactoring beyond the ask');
-      parts.push('');
-    }
-
-    return parts.join('\n');
-  }, [promptType, keywords, styleRef, audience, selectedPalette, additionalContext]);
-
-  // Filtered and sorted prompts
-  const filteredPrompts = useMemo(() => {
-    const filtered = savedPrompts.filter(p => {
-      const searchLower = searchQuery.toLowerCase();
-      const matchesSearch = p.text.toLowerCase().includes(searchLower) ||
-        p.tags.some(t => t.toLowerCase().includes(searchLower));
-      const matchesCategory = categoryFilter === 'all' || p.category === categoryFilter;
-      return matchesSearch && matchesCategory;
+  // Save session context (uses functional update to avoid dependency issues)
+  const saveSession = useCallback((updates: Partial<SessionContext>) => {
+    setSession(prev => {
+      const newSession = {
+        ...prev,
+        ...updates,
+        lastUpdated: new Date().toISOString(),
+      } as SessionContext;
+      localStorage.setItem('jenn-session-context', JSON.stringify(newSession));
+      return newSession;
     });
+  }, []);
 
-    const sorted = [...filtered];
-    switch (sortOption) {
-      case 'newest':
-        sorted.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-        break;
-      case 'most-used':
-        sorted.sort((a, b) => b.useCount - a.useCount);
-        break;
-      case 'alphabetical':
-        sorted.sort((a, b) => a.text.localeCompare(b.text));
-        break;
-    }
-    return sorted;
-  }, [savedPrompts, searchQuery, categoryFilter, sortOption]);
+  // Update session when project changes (only on user action, not on mount)
+  const handleProjectChange = useCallback((projectKey: string) => {
+    setActiveProject(projectKey);
+    saveSession({ lastProject: projectKey });
+  }, [saveSession]);
 
-  // Usage stats
-  const usageStats = useMemo(() => {
-    const stats: Record<Category, number> = { design: 0, technical: 0, layout: 0, content: 0, debug: 0 };
-    savedPrompts.forEach(p => {
-      stats[p.category] = (stats[p.category] || 0) + 1;
-    });
-    return stats;
-  }, [savedPrompts]);
-
-  const maxStat = Math.max(...Object.values(usageStats), 1);
-
-  // Save to localStorage
-  const saveCommands = (commands: ForceCommand[]) => {
-    const customCommands = commands.filter(c => !c.isDefault);
-    localStorage.setItem('jenn-force-commands', JSON.stringify(customCommands));
-  };
-
-  const savePrompts = (prompts: SavedPrompt[]) => {
-    localStorage.setItem('jenn-prompt-library', JSON.stringify(prompts));
+  // Save issues
+  const saveIssues = (updated: LoggedIssue[]) => {
+    setIssues(updated);
+    localStorage.setItem('jenn-logged-issues-v2', JSON.stringify(updated));
   };
 
   // Copy to clipboard
-  const copyToClipboard = async (text: string, id: string) => {
+  const copyText = async (text: string, id: string) => {
     await navigator.clipboard.writeText(text);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 2000);
+    setCopied(id);
+    setTimeout(() => setCopied(null), 1500);
   };
 
-  // Add custom command
-  const addCommand = () => {
-    if (!newCommand.trim()) return;
-    const newCmd: ForceCommand = {
+  // Quick capture issue
+  const captureIssue = (description?: string) => {
+    const note = description || quickNote;
+    if (!note.trim()) return;
+
+    const newIssue: LoggedIssue = {
       id: Date.now().toString(),
-      text: newCommand.trim(),
-      isDefault: false,
+      project: activeProject,
+      category: selectedCategory || 'general',
+      description: note,
+      timestamp: new Date().toISOString(),
+      resolved: false,
     };
-    const updated = [...forceCommands, newCmd];
-    setForceCommands(updated);
-    saveCommands(updated);
-    setNewCommand('');
+    saveIssues([newIssue, ...issues]);
+    saveSession({
+      recentIssues: [note, ...(session?.recentIssues || []).slice(0, 4)],
+      lastCategory: selectedCategory || 'general',
+    });
+    setQuickNote('');
+    setShowCaptureModal(false);
   };
 
-  // Delete command
-  const deleteCommand = (id: string) => {
-    const updated = forceCommands.filter(c => c.id !== id);
-    setForceCommands(updated);
-    saveCommands(updated);
+  // Log a fix for an existing issue
+  const logFix = () => {
+    if (!selectedIssueForFix || !fixText.trim()) return;
+
+    const updated = issues.map(issue => {
+      if (issue.id === selectedIssueForFix) {
+        return {
+          ...issue,
+          fix: fixText,
+          fixSource: fixSource,
+          fixTimestamp: new Date().toISOString(),
+          resolved: true,
+        };
+      }
+      return issue;
+    });
+    saveIssues(updated);
+    setFixText('');
+    setSelectedIssueForFix(null);
+    setShowFixModal(false);
   };
 
-  const saveToLibrary = () => {
-    // Map prompt types to categories
-    const categoryMap: Record<PromptType, Category> = {
-      'design': 'design',
-      'voice': 'content',
-      'technical': 'technical',
-      'layout': 'layout',
-      'restructuring': 'debug',
-      'new-idea': 'design',
-    };
+  // Get unresolved issues for current project
+  const unresolvedIssues = issues.filter(i => i.project === activeProject && !i.resolved);
 
-    const newPrompt: SavedPrompt = {
-      id: Date.now().toString(),
-      text: generatedPrompt,
-      category: categoryMap[promptType],
-      createdAt: new Date().toISOString(),
-      useCount: 0,
-      tags: keywords.split(',').map(t => t.trim()).filter(Boolean),
-    };
-    const updated = [...savedPrompts, newPrompt];
-    setSavedPrompts(updated);
-    savePrompts(updated);
+  // Get current project config
+  const config = projectConfigs[activeProject] || projectConfigs['general'];
 
-    // Show saved feedback
-    setSavedFeedback(true);
-    setTimeout(() => setSavedFeedback(false), 2000);
-  };
+  // Get issue stats for current project
+  const projectIssues = issues.filter(i => i.project === activeProject);
+  const issueStats = projectIssues.reduce((acc, issue) => {
+    acc[issue.category] = (acc[issue.category] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
 
-  // Add manual prompt
-  const addManualPrompt = () => {
-    if (!newPromptText.trim()) return;
-    const parsedTags = newPromptTags
-      .split(',')
-      .map(t => t.trim())
-      .filter(Boolean);
-    const newPrompt: SavedPrompt = {
-      id: Date.now().toString(),
-      text: newPromptText.trim(),
-      category: newPromptCategory,
-      createdAt: new Date().toISOString(),
-      useCount: 0,
-      tags: parsedTags,
-    };
-    const updated = [...savedPrompts, newPrompt];
-    setSavedPrompts(updated);
-    savePrompts(updated);
-    setNewPromptText('');
-    setNewPromptTags('');
-  };
-
-  // Copy prompt and increment use count
-  const copyPromptAndIncrement = async (prompt: SavedPrompt) => {
-    await navigator.clipboard.writeText(prompt.text);
-    setCopiedId(prompt.id);
-    setTimeout(() => setCopiedId(null), 2000);
-
-    // Increment use count
-    const updated = savedPrompts.map(p =>
-      p.id === prompt.id ? { ...p, useCount: p.useCount + 1 } : p
-    );
-    setSavedPrompts(updated);
-    savePrompts(updated);
-  };
-
-  // Delete prompt
-  const deletePrompt = (id: string) => {
-    const updated = savedPrompts.filter(p => p.id !== id);
-    setSavedPrompts(updated);
-    savePrompts(updated);
-  };
-
-  // Copy full profile
-  const copyFullProfile = async () => {
-    const profileText = `# Jenn's AI Profile
-
-## Background
-${jennProfile.background.map(b => `- ${b}`).join('\n')}
-
-## Life Philosophy
-${jennProfile.lifePhilosophy.map((p, i) => `${i + 1}. ${p}`).join('\n')}
-
-## Running Mantras
-${jennProfile.runningMantras.map(m => `> "${m}"`).join('\n')}
-
-## Work Philosophy
-${jennProfile.workPhilosophy.map(w => `- ${w}`).join('\n')}
-
-## Core Values
-${jennProfile.coreValues.map(v => `- ${v}`).join('\n')}
-
-## Creative Style
-${jennProfile.creativeStyle.map(s => `- ${s}`).join('\n')}
-
-## Communication Style
-${jennProfile.communicationStyle.map(s => `- ${s}`).join('\n')}
-
-## Design Rules
-${jennProfile.designRules.map((r, i) => `${i + 1}. ${r}`).join('\n')}
-
-## Interests
-${jennProfile.interests.map(i => `- ${i}`).join('\n')}
-
-## Color Palette
-${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
-
-    await navigator.clipboard.writeText(profileText);
-    setCopiedId('profile');
-    setTimeout(() => setCopiedId(null), 2000);
-  };
-
-  const tabs: { id: TabType; label: string }[] = [
-    { id: 'commands', label: 'Force Commands' },
-    { id: 'builder', label: 'Prompt Builder' },
-    { id: 'library', label: 'Library' },
-    { id: 'patterns', label: 'Patterns' },
-    { id: 'profile', label: 'AI Understanding' },
-    { id: 'brand', label: 'Brand Builder' },
-    { id: 'palettes', label: 'Palettes' },
-  ];
+  if (!config) return null;
 
   return (
-    <div className="min-h-screen bg-cream">
-      <div className="container-editorial py-8 md:py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl mb-2" style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}>
-            <span className="italic">Jenn&apos;s</span> Prompt Builder
-          </h1>
-          <p style={{ color: '#546E40' }}>Tools for wrangling AI when it&apos;s being difficult</p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex flex-wrap gap-2 mb-6 border-b pb-4" style={{ borderColor: '#97A97C' }}>
-          {tabs.map(tab => (
+    <IOAuthGate>
+      <div className="min-h-screen relative" style={{ background: '#0F0F0F' }}>
+        {/* Floating Action Buttons */}
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-2">
+          {unresolvedIssues.length > 0 && (
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className="px-4 py-2 rounded-full text-sm font-medium transition-all"
-              style={{
-                background: activeTab === tab.id ? '#546E40' : 'transparent',
-                color: activeTab === tab.id ? '#FFF5EB' : '#3B412D',
-                border: activeTab === tab.id ? 'none' : '1px solid #97A97C',
-              }}
+              onClick={() => setShowFixModal(true)}
+              className="flex items-center gap-2 px-4 py-3 rounded-full shadow-lg transition-all hover:scale-105"
+              style={{ background: '#546E40', color: '#FFF5EB' }}
             >
-              {tab.label}
+              {icons.fix}
+              <span className="font-medium text-sm">Log Fix</span>
+              <span className="px-1.5 py-0.5 rounded text-xs font-mono" style={{ background: '#FABF34', color: '#1A1A1A' }}>
+                {unresolvedIssues.length}
+              </span>
             </button>
-          ))}
+          )}
+          <button
+            onClick={() => setShowCaptureModal(true)}
+            className="flex items-center gap-2 px-4 py-3 rounded-full shadow-lg transition-all hover:scale-105"
+            style={{ background: '#FABF34', color: '#1A1A1A' }}
+          >
+            {icons.capture}
+            <span className="font-medium text-sm">Capture</span>
+          </button>
         </div>
 
-        {/* Tab Content */}
-        <div className="animate-in">
-          {/* Force Commands */}
-          {activeTab === 'commands' && (
-            <div className="space-y-6">
-              {/* Header with stats */}
-              <div className="flex items-center justify-between">
-                <p className="text-sm" style={{ color: '#CBAD8C' }}>
-                  Quick commands for when Claude is being really stupid
+        {/* Capture Modal */}
+        {showCaptureModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setShowCaptureModal(false)}>
+            <div
+              className="w-full max-w-md mx-4 rounded-xl p-6"
+              style={{ background: '#1A1A1A' }}
+              onClick={e => e.stopPropagation()}
+            >
+              <h3 className="text-lg mb-4" style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}>
+                Quick Capture
+              </h3>
+              <input
+                type="text"
+                autoFocus
+                value={quickNote}
+                onChange={e => setQuickNote(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && captureIssue()}
+                placeholder="What went wrong?"
+                className="w-full px-4 py-3 rounded-lg text-sm mb-4"
+                style={{ background: '#252525', color: '#FFF5EB', border: '1px solid #3a3a3a' }}
+              />
+              <div className="flex flex-wrap gap-2 mb-4">
+                {Object.entries(issueCategories).map(([key, val]) => (
+                  <button
+                    key={key}
+                    onClick={() => setSelectedCategory(selectedCategory === key ? null : key)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all"
+                    style={{
+                      background: selectedCategory === key ? '#546E40' : '#252525',
+                      color: selectedCategory === key ? '#FFF5EB' : '#97A97C',
+                    }}
+                  >
+                    <span className="opacity-70">{icons[val.icon]}</span>
+                    {val.label}
+                  </button>
+                ))}
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowCaptureModal(false)}
+                  className="flex-1 px-4 py-2 rounded-lg text-sm"
+                  style={{ background: '#252525', color: '#808080' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => captureIssue()}
+                  disabled={!quickNote.trim()}
+                  className="flex-1 px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-50"
+                  style={{ background: '#FABF34', color: '#1A1A1A' }}
+                >
+                  Capture
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Fix Modal */}
+        {showFixModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setShowFixModal(false)}>
+            <div
+              className="w-full max-w-lg mx-4 rounded-xl p-6"
+              style={{ background: '#1A1A1A' }}
+              onClick={e => e.stopPropagation()}
+            >
+              <h3 className="text-lg mb-4" style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}>
+                Log a Fix
+              </h3>
+
+              {/* Select Issue */}
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
+                  Which issue did you fix?
                 </p>
-                <div className="flex items-center gap-3">
-                  <span className="text-xs px-2 py-1 rounded" style={{ background: '#EFE4D6', color: '#97A97C' }}>
-                    <span style={{ color: '#FABF34', fontFamily: 'monospace' }}>{forceCommands.filter(c => c.isDefault).length}</span> default
-                  </span>
-                  <span className="text-xs px-2 py-1 rounded" style={{ background: '#EFE4D6', color: '#97A97C' }}>
-                    <span style={{ color: '#FABF34', fontFamily: 'monospace' }}>{forceCommands.filter(c => !c.isDefault).length}</span> custom
-                  </span>
+                <div className="space-y-2 max-h-40 overflow-y-auto">
+                  {unresolvedIssues.map(issue => (
+                    <button
+                      key={issue.id}
+                      onClick={() => setSelectedIssueForFix(issue.id)}
+                      className="w-full p-3 rounded-lg text-left text-sm transition-all"
+                      style={{
+                        background: selectedIssueForFix === issue.id ? '#546E40' : '#252525',
+                        border: selectedIssueForFix === issue.id ? '1px solid #97A97C' : '1px solid transparent',
+                        color: '#FFF5EB',
+                      }}
+                    >
+                      <div className="flex items-start gap-2">
+                        <span className="shrink-0 mt-0.5" style={{ color: selectedIssueForFix === issue.id ? '#FABF34' : '#97A97C' }}>
+                          {icons[issueCategories[issue.category as keyof typeof issueCategories]?.icon || 'code']}
+                        </span>
+                        <span>{issue.description}</span>
+                      </div>
+                    </button>
+                  ))}
+                  {unresolvedIssues.length === 0 && (
+                    <p className="text-sm text-center py-4" style={{ color: '#808080' }}>
+                      No open issues. Capture an issue first!
+                    </p>
+                  )}
                 </div>
               </div>
 
-              {/* Quick Codes */}
-              <div className="rounded-xl p-4" style={{ background: '#FFF5EB', border: '1px solid #97A97C' }}>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg" style={{ color: '#3B412D' }}>Quick Codes</h3>
-                  <span className="text-xs" style={{ color: '#97A97C' }}>2-letter shortcuts</span>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                  {quickCodes.map(qc => (
+              {/* Fix Source */}
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
+                  Where did you find the fix?
+                </p>
+                <div className="flex gap-2">
+                  {[
+                    { id: 'chat', label: 'Claude Chat' },
+                    { id: 'cc', label: 'Claude Code' },
+                    { id: 'manual', label: 'Figured it out' },
+                  ].map(source => (
                     <button
-                      key={qc.code}
-                      onClick={() => copyToClipboard(qc.expansion, qc.code)}
-                      className="relative p-3 rounded-lg text-left transition-all hover:scale-[1.02] group"
+                      key={source.id}
+                      onClick={() => setFixSource(source.id as typeof fixSource)}
+                      className="px-3 py-2 rounded-lg text-xs transition-all"
                       style={{
-                        background: copiedId === qc.code ? '#546E40' : '#3C422E',
-                        border: copiedId === qc.code ? '1px solid #97A97C' : '1px solid transparent'
+                        background: fixSource === source.id ? '#546E40' : '#252525',
+                        color: fixSource === source.id ? '#FFF5EB' : '#97A97C',
                       }}
-                      title={qc.expansion}
                     >
-                      <span className="block text-xl font-mono font-bold" style={{ color: '#FABF34' }}>{qc.code}</span>
-                      <span className="text-xs block mb-1" style={{ color: '#CBAD8C' }}>{qc.meaning}</span>
-                      <span
-                        className="text-xs line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity"
-                        style={{ color: '#FFF5EB' }}
-                      >
-                        {qc.expansion}
-                      </span>
-                      {copiedId === qc.code && (
-                        <span
-                          className="absolute top-2 right-2 text-xs px-1.5 py-0.5 rounded"
-                          style={{ background: '#97A97C', color: '#2F2F2C' }}
-                        >
-                          Copied!
-                        </span>
-                      )}
+                      {source.label}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* Default Commands */}
-              <div>
-                <h3 className="text-sm uppercase tracking-wider mb-3 flex items-center gap-2" style={{ color: '#CBAD8C' }}>
-                  <span>Default Commands</span>
-                  <span className="text-xs px-1.5 py-0.5 rounded" style={{ background: '#EFE4D6', color: '#97A97C' }}>protected</span>
-                </h3>
-                <div className="space-y-2">
-                  {forceCommands.filter(cmd => cmd.isDefault).map((cmd, index) => (
-                    <div
-                      key={cmd.id}
-                      onClick={() => copyToClipboard(cmd.text, cmd.id)}
-                      className="flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all hover:translate-x-1"
-                      style={{
-                        background: copiedId === cmd.id ? '#546E40' : '#3B412D',
-                        border: copiedId === cmd.id ? '1px solid #97A97C' : '1px solid transparent'
-                      }}
-                    >
-                      <span
-                        className="text-sm font-mono w-6 text-center flex-shrink-0"
-                        style={{ color: '#FABF34' }}
-                      >
-                        {index + 1}
-                      </span>
-                      <span className="flex-1 text-sm" style={{ color: '#FFF5EB' }}>
-                        {cmd.text}
-                      </span>
-                      <div className="flex items-center gap-2 flex-shrink-0">
-                        {copiedId === cmd.id && (
-                          <span
-                            className="text-xs px-2 py-1 rounded"
-                            style={{ background: '#97A97C', color: '#2F2F2C' }}
-                          >
-                            Copied!
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Custom Commands */}
-              <div>
-                <h3 className="text-sm uppercase tracking-wider mb-3 flex items-center gap-2" style={{ color: '#CBAD8C' }}>
-                  <span>Custom Commands</span>
-                  <span className="text-xs px-1.5 py-0.5 rounded" style={{ background: '#546E40', color: '#FFF5EB' }}>editable</span>
-                </h3>
-                {forceCommands.filter(cmd => !cmd.isDefault).length === 0 ? (
-                  <div
-                    className="text-center py-6 rounded-lg"
-                    style={{ background: '#3B412D', border: '1px dashed #3C422E' }}
-                  >
-                    <p className="text-sm" style={{ color: '#97A97C' }}>No custom commands yet</p>
-                    <p className="text-xs mt-1" style={{ color: '#546E40' }}>Add your own below</p>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    {forceCommands.filter(cmd => !cmd.isDefault).map(cmd => (
-                      <div
-                        key={cmd.id}
-                        className="flex items-center gap-3 p-3 rounded-lg group transition-all"
-                        style={{
-                          background: copiedId === cmd.id ? '#546E40' : '#3B412D',
-                          border: '1px solid #546E40'
-                        }}
-                      >
-                        <button
-                          onClick={() => copyToClipboard(cmd.text, cmd.id)}
-                          className="flex-1 text-left text-sm"
-                          style={{ color: '#FFF5EB' }}
-                        >
-                          {cmd.text}
-                        </button>
-                        <div className="flex items-center gap-2 flex-shrink-0">
-                          {copiedId === cmd.id ? (
-                            <span
-                              className="text-xs px-2 py-1 rounded"
-                              style={{ background: '#97A97C', color: '#2F2F2C' }}
-                            >
-                              Copied!
-                            </span>
-                          ) : (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                deleteCommand(cmd.id);
-                              }}
-                              className="opacity-0 group-hover:opacity-100 px-2 py-1 rounded text-xs transition-all hover:bg-red-900/30"
-                              style={{ color: '#CBAD8C', background: '#EFE4D6' }}
-                            >
-                              Delete
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Add Custom Command */}
-              <div className="rounded-xl p-4" style={{ background: '#3B412D', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-sm uppercase tracking-wider mb-3" style={{ color: '#CBAD8C' }}>
-                  Add Custom Command
-                </h3>
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    value={newCommand}
-                    onChange={(e) => setNewCommand(e.target.value)}
-                    placeholder="Type a new command phrase..."
-                    className="flex-1 px-4 py-3 rounded-lg text-sm"
-                    style={{
-                      background: '#EFE4D6',
-                      color: '#FFF5EB',
-                      border: '1px solid #546E40',
-                      outline: 'none'
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && newCommand.trim()) {
-                        addCommand();
-                      }
-                    }}
-                  />
-                  <button
-                    onClick={addCommand}
-                    disabled={!newCommand.trim()}
-                    className="px-6 py-3 rounded-lg text-sm font-medium transition-all hover:scale-[1.02]"
-                    style={{
-                      background: newCommand.trim() ? '#546E40' : '#3C422E',
-                      color: '#FFF5EB',
-                      opacity: newCommand.trim() ? 1 : 0.5,
-                      cursor: newCommand.trim() ? 'pointer' : 'not-allowed'
-                    }}
-                  >
-                    + Add
-                  </button>
-                </div>
-                <p className="text-xs mt-2" style={{ color: '#97A97C' }}>
-                  Press Enter to add quickly. Custom commands are saved to your browser.
+              {/* Fix Text */}
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
+                  What was the fix? (paste command/code/explanation)
                 </p>
+                <textarea
+                  value={fixText}
+                  onChange={e => setFixText(e.target.value)}
+                  placeholder="Paste the fix that worked..."
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg text-sm resize-none"
+                  style={{ background: '#252525', color: '#FFF5EB', border: '1px solid #3a3a3a' }}
+                />
+              </div>
+
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    setShowFixModal(false);
+                    setSelectedIssueForFix(null);
+                    setFixText('');
+                  }}
+                  className="flex-1 px-4 py-2 rounded-lg text-sm"
+                  style={{ background: '#252525', color: '#808080' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={logFix}
+                  disabled={!selectedIssueForFix || !fixText.trim()}
+                  className="flex-1 px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-50"
+                  style={{ background: '#546E40', color: '#FFF5EB' }}
+                >
+                  Save Fix
+                </button>
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Prompt Builder */}
-          {activeTab === 'builder' && (
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Form */}
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Prompt Type
-                  </label>
-                  <div className="flex flex-wrap gap-2">
-                    {(['design', 'voice', 'technical', 'layout', 'restructuring', 'new-idea'] as PromptType[]).map(type => (
+        {/* Header */}
+        <header className="border-b px-6 py-4" style={{ borderColor: '#2a2a2a', background: '#171717' }}>
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <Link href="/io/sandbox" className="text-xs transition-colors hover:opacity-70" style={{ color: '#97A97C' }}>
+                  ← Sandbox
+                </Link>
+                <div className="flex items-center gap-3">
+                  <JennLogo size={28} />
+                  <h1 className="text-xl italic" style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}>
+                    Prompt Builder
+                  </h1>
+                </div>
+              </div>
+
+              {/* Project Selector */}
+              <div className="flex items-center gap-2">
+                <span className="text-xs" style={{ color: '#808080' }}>Project:</span>
+                {Object.entries(projectConfigs).map(([key, proj]) => (
+                  <button
+                    key={key}
+                    onClick={() => handleProjectChange(key)}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-all"
+                    style={{
+                      background: activeProject === key ? '#546E40' : '#252525',
+                      color: activeProject === key ? '#FFF5EB' : '#808080',
+                      border: activeProject === key ? '1px solid #97A97C' : '1px solid transparent',
+                    }}
+                  >
+                    <span className="w-5 h-5 rounded flex items-center justify-center text-xs font-bold"
+                          style={{ background: activeProject === key ? '#FABF34' : '#3a3a3a', color: '#1A1A1A' }}>
+                      {proj.icon}
+                    </span>
+                    <span className="hidden sm:inline">{proj.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* View Toggle */}
+            <div className="flex gap-1 p-1 rounded-lg w-fit" style={{ background: '#252525' }}>
+              {[
+                { id: 'fix', label: 'Fix Issue' },
+                { id: 'codes', label: 'Quick Codes' },
+                { id: 'log', label: 'Issue Log' },
+                { id: 'os', label: 'Jenn OS' },
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveView(tab.id as typeof activeView)}
+                  className="px-4 py-2 rounded-md text-sm font-medium transition-all"
+                  style={{
+                    background: activeView === tab.id ? '#546E40' : 'transparent',
+                    color: activeView === tab.id ? '#FFF5EB' : '#808080',
+                  }}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </header>
+
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          {/* === FIX ISSUE VIEW === */}
+          {activeView === 'fix' && (
+            <div className="grid grid-cols-12 gap-6">
+              {/* Left: What went wrong */}
+              <div className="col-span-4 space-y-4">
+                <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                  <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                    What went wrong?
+                  </h2>
+                  <div className="space-y-2">
+                    {Object.entries(issueCategories).map(([key, val]) => (
                       <button
-                        key={type}
-                        onClick={() => setPromptType(type)}
-                        className="px-3 py-1.5 rounded-full text-sm capitalize"
+                        key={key}
+                        onClick={() => setSelectedCategory(selectedCategory === key ? null : key)}
+                        className="w-full p-3 rounded-lg text-left transition-all hover:scale-[1.02] flex items-center gap-3"
                         style={{
-                          background: promptType === type ? '#546E40' : '#3C422E',
-                          color: promptType === type ? '#FFF5EB' : '#97A97C',
+                          background: selectedCategory === key ? '#546E40' : '#252525',
+                          border: selectedCategory === key ? '1px solid #97A97C' : '1px solid transparent',
                         }}
                       >
-                        {type.replace('-', ' ')}
+                        <span style={{ color: selectedCategory === key ? '#FABF34' : '#97A97C' }}>
+                          {icons[val.icon]}
+                        </span>
+                        <span style={{ color: '#FFF5EB' }}>{val.label}</span>
+                        {issueStats[key] && (
+                          <span
+                            className="ml-auto px-2 py-0.5 rounded text-xs font-mono"
+                            style={{ background: '#FABF34', color: '#1A1A1A' }}
+                          >
+                            {issueStats[key]}
+                          </span>
+                        )}
                       </button>
                     ))}
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Key Words/Concepts
-                  </label>
-                  <input
-                    type="text"
-                    value={keywords}
-                    onChange={(e) => setKeywords(e.target.value)}
-                    placeholder="warm, editorial, minimal..."
-                    className="w-full px-4 py-2 rounded-lg text-sm"
-                    style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Style Reference
-                  </label>
-                  <input
-                    type="text"
-                    value={styleRef}
-                    onChange={(e) => setStyleRef(e.target.value)}
-                    placeholder="Graza, Kinfolk, etc..."
-                    className="w-full px-4 py-2 rounded-lg text-sm"
-                    style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Audience
-                  </label>
-                  <input
-                    type="text"
-                    value={audience}
-                    onChange={(e) => setAudience(e.target.value)}
-                    placeholder="Personal use, portfolio visitors..."
-                    className="w-full px-4 py-2 rounded-lg text-sm"
-                    style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Color Palette
-                  </label>
-                  <select
-                    value={selectedPalette}
-                    onChange={(e) => setSelectedPalette(e.target.value)}
-                    className="w-full px-4 py-2 rounded-lg text-sm"
-                    style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                  >
-                    {colorPalettes.map(p => (
-                      <option key={p.name} value={p.name}>{p.name}</option>
-                    ))}
-                  </select>
-                  <div className="flex gap-1 mt-2">
-                    {colorPalettes.find(p => p.name === selectedPalette)?.colors.map((c, i) => (
-                      <div
-                        key={i}
-                        className="w-6 h-6 rounded"
-                        style={{ background: c }}
-                        title={c}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#CBAD8C' }}>
-                    Additional Context
-                  </label>
-                  <textarea
-                    value={additionalContext}
-                    onChange={(e) => setAdditionalContext(e.target.value)}
-                    placeholder="Any other details..."
-                    rows={4}
-                    className="w-full px-4 py-2 rounded-lg text-sm resize-none"
-                    style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                  />
-                </div>
-              </div>
-
-              {/* Output */}
-              <div className="rounded-xl p-4" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-lg" style={{ color: '#3B412D' }}>Generated Prompt</h3>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => copyToClipboard(generatedPrompt, 'generated')}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium"
-                      style={{ background: '#546E40', color: '#FFF5EB' }}
-                    >
-                      {copiedId === 'generated' ? 'Copied!' : 'Copy'}
-                    </button>
-                    <button
-                      onClick={saveToLibrary}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-                      style={{
-                        background: savedFeedback ? '#546E40' : '#3C422E',
-                        color: savedFeedback ? '#FFF5EB' : '#97A97C',
-                      }}
-                    >
-                      {savedFeedback ? 'Saved!' : 'Save to Library'}
-                    </button>
-                  </div>
-                </div>
-                <pre
-                  className="whitespace-pre-wrap text-sm font-sans"
-                  style={{ color: '#3B412D' }}
-                >
-                  {generatedPrompt}
-                </pre>
-              </div>
-            </div>
-          )}
-
-          {/* Library */}
-          {activeTab === 'library' && (
-            <div className="space-y-4">
-              {/* Search & Filter */}
-              <div className="flex flex-col md:flex-row gap-3">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search prompts..."
-                  className="flex-1 px-4 py-2 rounded-lg text-sm"
-                  style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                />
-                <div className="flex gap-2">
-                  {(['all', 'design', 'technical', 'layout', 'content', 'debug'] as const).map(cat => (
-                    <button
-                      key={cat}
-                      onClick={() => setCategoryFilter(cat)}
-                      className="px-3 py-1.5 rounded-full text-xs capitalize"
-                      style={{
-                        background: categoryFilter === cat ? '#546E40' : '#3C422E',
-                        color: categoryFilter === cat ? '#FFF5EB' : '#97A97C',
-                      }}
-                    >
-                      {cat}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Saved Prompts */}
-              {/* Sort Options */}
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs" style={{ color: '#97A97C' }}>Sort by:</span>
-                {(['newest', 'most-used', 'alphabetical'] as SortOption[]).map(opt => (
-                  <button
-                    key={opt}
-                    onClick={() => setSortOption(opt)}
-                    className="px-2 py-1 rounded text-xs capitalize"
-                    style={{
-                      background: sortOption === opt ? '#546E40' : 'transparent',
-                      color: sortOption === opt ? '#FFF5EB' : '#97A97C',
-                    }}
-                  >
-                    {opt.replace('-', ' ')}
-                  </button>
-                ))}
-              </div>
-
-              <div className="space-y-2">
-                {savedPrompts.length === 0 ? (
-                  <div className="text-center py-12 rounded-xl" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                    <div className="mb-4" style={{ color: '#546E40' }}>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                      </svg>
-                    </div>
-                    <h3 className="text-lg mb-2" style={{ color: '#3B412D' }}>No prompts saved yet</h3>
-                    <p className="text-sm" style={{ color: '#97A97C' }}>
-                      Use the Prompt Builder or add prompts manually below
-                    </p>
-                  </div>
-                ) : filteredPrompts.length === 0 ? (
-                  <div className="text-center py-8 rounded-xl" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                    <p style={{ color: '#97A97C' }}>
-                      No prompts match your search or filter
-                    </p>
-                  </div>
-                ) : (
-                  filteredPrompts.map(prompt => (
-                    <div
-                      key={prompt.id}
-                      className="p-4 rounded-lg group"
-                      style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}
-                    >
-                      <div className="flex justify-between items-start gap-4">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2 flex-wrap">
-                            <span
-                              className="px-2 py-0.5 rounded text-xs uppercase"
-                              style={{ background: categoryColors[prompt.category] || '#3C422E', color: '#FFF5EB' }}
-                            >
-                              {prompt.category}
-                            </span>
-                            <span className="text-xs" style={{ color: '#97A97C' }}>
-                              {new Date(prompt.createdAt).toLocaleDateString()}
-                            </span>
-                            {prompt.useCount > 0 && (
-                              <span className="text-xs font-mono" style={{ color: '#FABF34' }}>
-                                Used {prompt.useCount}x
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-sm line-clamp-3 mb-2" style={{ color: '#3B412D' }}>
-                            {prompt.text}
+                {/* Project Colors Reference */}
+                {Object.keys(config.colors).length > 0 && (
+                  <div className="rounded-xl p-4" style={{ background: '#1A1A1A' }}>
+                    <h3 className="text-xs uppercase tracking-wider mb-3" style={{ color: '#CBAD8C' }}>
+                      {config.name} Colors
+                    </h3>
+                    <div className="grid grid-cols-3 gap-2">
+                      {Object.entries(config.colors).map(([key, color]) => (
+                        <button
+                          key={key}
+                          onClick={() => copyText(color.hex, `color-${key}`)}
+                          className="text-center group"
+                        >
+                          <div
+                            className="aspect-square rounded-lg mb-1 transition-transform group-hover:scale-110"
+                            style={{ background: color.hex }}
+                          />
+                          <p className="text-[9px] truncate" style={{ color: copied === `color-${key}` ? '#FABF34' : '#808080' }}>
+                            {copied === `color-${key}` ? 'Copied!' : color.name}
                           </p>
-                          {prompt.tags.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {prompt.tags.map((tag, i) => (
-                                <span
-                                  key={i}
-                                  className="px-2 py-0.5 rounded-full text-xs"
-                                  style={{ background: '#EFE4D6', color: '#97A97C' }}
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                        <div className="flex gap-2 flex-shrink-0">
-                          <button
-                            onClick={() => copyPromptAndIncrement(prompt)}
-                            className="px-3 py-1.5 rounded-lg text-xs"
-                            style={{ background: '#546E40', color: '#FFF5EB' }}
-                          >
-                            {copiedId === prompt.id ? 'Copied!' : 'Copy'}
-                          </button>
-                          <button
-                            onClick={() => deletePrompt(prompt.id)}
-                            className="opacity-0 group-hover:opacity-100 px-2 py-1.5 rounded-lg text-xs transition-opacity"
-                            style={{ background: '#EFE4D6', color: '#97A97C' }}
-                          >
-                            ×
-                          </button>
-                        </div>
-                      </div>
+                        </button>
+                      ))}
                     </div>
-                  ))
+                  </div>
                 )}
               </div>
 
-              {/* Prompt count */}
-              {savedPrompts.length > 0 && (
-                <div className="text-xs text-center" style={{ color: '#97A97C' }}>
-                  Showing {filteredPrompts.length} of {savedPrompts.length} prompts
-                </div>
-              )}
-
-              {/* Add Manual Prompt */}
-              <div className="rounded-xl p-4 mt-6" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-sm uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>Add Prompt Manually</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>
-                      Prompt Text
-                    </label>
-                    <textarea
-                      value={newPromptText}
-                      onChange={(e) => setNewPromptText(e.target.value)}
-                      placeholder="Enter your prompt text..."
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg text-sm resize-none"
-                      style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                    />
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>
-                        Category
-                      </label>
-                      <select
-                        value={newPromptCategory}
-                        onChange={(e) => setNewPromptCategory(e.target.value as Category)}
-                        className="w-full px-3 py-2 rounded-lg text-sm"
-                        style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                      >
-                        {(['design', 'technical', 'layout', 'content', 'debug'] as Category[]).map(cat => (
-                          <option key={cat} value={cat}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>
-                        Tags (comma separated)
-                      </label>
-                      <input
-                        type="text"
-                        value={newPromptTags}
-                        onChange={(e) => setNewPromptTags(e.target.value)}
-                        placeholder="react, styling, animation..."
-                        className="w-full px-3 py-2 rounded-lg text-sm"
-                        style={{ background: '#EFE4D6', color: '#3B412D', border: '1px solid #546E40' }}
-                      />
-                    </div>
-                  </div>
-                  <button
-                    onClick={addManualPrompt}
-                    disabled={!newPromptText.trim()}
-                    className="w-full px-4 py-2.5 rounded-lg text-sm font-medium transition-all"
-                    style={{
-                      background: newPromptText.trim() ? '#546E40' : '#3C422E',
-                      color: newPromptText.trim() ? '#FFF5EB' : '#97A97C',
-                      cursor: newPromptText.trim() ? 'pointer' : 'not-allowed',
-                    }}
-                  >
-                    Add to Library
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Patterns */}
-          {activeTab === 'patterns' && (
-            <div className="space-y-6">
-              {/* Quick Insights */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="rounded-xl p-4 text-center" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                  <span className="block text-3xl font-mono mb-1" style={{ color: '#FABF34' }}>
-                    {savedPrompts.length}
-                  </span>
-                  <span className="text-xs uppercase tracking-wider" style={{ color: '#97A97C' }}>
-                    Total Prompts
-                  </span>
-                </div>
-                <div className="rounded-xl p-4 text-center" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                  <span className="block text-2xl font-mono mb-1 capitalize" style={{ color: '#FABF34' }}>
-                    {savedPrompts.length > 0
-                      ? (Object.entries(usageStats) as [Category, number][]).reduce(
-                          (max, [cat, count]) => (count > max.count ? { cat, count } : max),
-                          { cat: 'none' as string, count: 0 }
-                        ).cat
-                      : '-'}
-                  </span>
-                  <span className="text-xs uppercase tracking-wider" style={{ color: '#97A97C' }}>
-                    Most Used
-                  </span>
-                </div>
-                <div className="rounded-xl p-4 text-center" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                  <span className="block text-3xl font-mono mb-1" style={{ color: '#FABF34' }}>
-                    {savedPrompts.length > 0
-                      ? Math.round(savedPrompts.reduce((sum, p) => sum + p.text.length, 0) / savedPrompts.length)
-                      : 0}
-                  </span>
-                  <span className="text-xs uppercase tracking-wider" style={{ color: '#97A97C' }}>
-                    Avg Length
-                  </span>
-                </div>
-              </div>
-
-              {/* Usage Stats Bar Chart */}
-              <div className="rounded-xl p-4" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-lg mb-4" style={{ color: '#3B412D' }}>Prompt Usage by Category</h3>
-                <div className="space-y-3">
-                  {(Object.entries(usageStats) as [Category, number][]).map(([cat, count]) => (
-                    <div key={cat} className="flex items-center gap-3">
-                      <span className="w-20 text-xs uppercase" style={{ color: '#CBAD8C' }}>{cat}</span>
-                      <div className="flex-1 h-8 rounded-lg overflow-hidden" style={{ background: '#2F2F2C' }}>
-                        <div
-                          className="h-full rounded-lg transition-all duration-500 flex items-center justify-end pr-2"
-                          style={{
-                            width: count > 0 ? `${Math.max((count / maxStat) * 100, 8)}%` : '0%',
-                            background: categoryColors[cat] || '#546E40',
-                            minWidth: count > 0 ? '32px' : '0',
-                          }}
-                        >
-                          {count > 0 && (
-                            <span className="text-xs font-mono font-medium" style={{ color: '#2F2F2C' }}>
-                              {count}
-                            </span>
-                          )}
-                        </div>
+              {/* Right: Suggested Fix */}
+              <div className="col-span-8 space-y-4">
+                {selectedCategory ? (
+                  <>
+                    {/* Common Issues for this category */}
+                    <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                      <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                        Common {issueCategories[selectedCategory as keyof typeof issueCategories]?.label} Issues
+                      </h2>
+                      <div className="space-y-3">
+                        {config.commonIssues
+                          .filter(i => {
+                            // Filter by category relevance
+                            const lower = i.problem.toLowerCase();
+                            if (selectedCategory === 'color') return lower.includes('color') || lower.includes('blue') || lower.includes('palette');
+                            if (selectedCategory === 'contrast') return lower.includes('text') || lower.includes('read') || lower.includes('contrast');
+                            if (selectedCategory === 'scroll') return lower.includes('scroll') || lower.includes('stuck');
+                            if (selectedCategory === 'typography') return lower.includes('font') || lower.includes('icon') || lower.includes('emoji');
+                            return true;
+                          })
+                          .map((issue, i) => (
+                            <div
+                              key={i}
+                              className="p-4 rounded-lg"
+                              style={{ background: '#252525' }}
+                            >
+                              <p className="text-sm font-medium mb-2" style={{ color: '#FFF5EB' }}>
+                                {issue.problem}
+                              </p>
+                              <button
+                                onClick={() => copyText(issue.fix, `issue-${i}`)}
+                                className="flex items-center gap-2 px-3 py-2 rounded text-xs transition-all hover:scale-105"
+                                style={{
+                                  background: copied === `issue-${i}` ? '#546E40' : '#1A1A1A',
+                                  color: copied === `issue-${i}` ? '#FFF5EB' : '#97A97C',
+                                  border: '1px solid #3a3a3a',
+                                }}
+                              >
+                                {copied === `issue-${i}` ? icons.check : icons.copy}
+                                <span>{copied === `issue-${i}` ? 'Copied!' : issue.fix}</span>
+                              </button>
+                            </div>
+                          ))}
+                        {config.commonIssues.length === 0 && (
+                          <p className="text-sm" style={{ color: '#808080' }}>
+                            No specific issues documented for this project yet.
+                          </p>
+                        )}
                       </div>
-                      {count === 0 && (
-                        <span className="w-8 text-right font-mono text-xs" style={{ color: '#546E40' }}>0</span>
+                    </div>
+
+                    {/* Relevant Quick Commands */}
+                    <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                      <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                        Quick Commands for {config.name}
+                      </h2>
+                      <div className="space-y-2">
+                        {Object.entries(config.quickCommands)
+                          .filter(([code]) => {
+                            // Show relevant commands for category
+                            if (selectedCategory === 'color' || selectedCategory === 'contrast') return ['DC', 'TC', 'GR'].includes(code);
+                            if (selectedCategory === 'scroll') return code === 'SC';
+                            if (selectedCategory === 'layout') return ['SP', 'SC'].includes(code);
+                            return true;
+                          })
+                          .map(([code, text]) => (
+                            <button
+                              key={code}
+                              onClick={() => copyText(text, `cmd-${code}`)}
+                              className="w-full p-4 rounded-lg text-left transition-all hover:scale-[1.01] flex items-start gap-3"
+                              style={{ background: '#252525' }}
+                            >
+                              <span
+                                className="px-2 py-1 rounded text-xs font-mono font-bold shrink-0"
+                                style={{ background: '#FABF34', color: '#1A1A1A' }}
+                              >
+                                {code}
+                              </span>
+                              <span className="text-sm" style={{ color: copied === `cmd-${code}` ? '#FABF34' : '#97A97C' }}>
+                                {copied === `cmd-${code}` ? 'Copied!' : text}
+                              </span>
+                            </button>
+                          ))}
+                      </div>
+                    </div>
+
+                    {/* Project Rules */}
+                    <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                      <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                        {config.name} Rules
+                      </h2>
+                      <div className="flex flex-wrap gap-2">
+                        {config.rules.map((rule, i) => (
+                          <button
+                            key={i}
+                            onClick={() => copyText(rule, `rule-${i}`)}
+                            className="px-3 py-2 rounded-lg text-xs transition-all hover:scale-105"
+                            style={{
+                              background: copied === `rule-${i}` ? '#546E40' : '#252525',
+                              color: copied === `rule-${i}` ? '#FFF5EB' : '#97A97C',
+                            }}
+                          >
+                            {copied === `rule-${i}` ? 'Copied!' : rule}
+                          </button>
+                        ))}
+                      </div>
+                      {config.forbidden.length > 0 && (
+                        <div className="mt-4 pt-4 border-t" style={{ borderColor: '#3a3a3a' }}>
+                          <p className="text-xs mb-2" style={{ color: '#E07850' }}>Never use:</p>
+                          <p className="text-sm" style={{ color: '#808080' }}>
+                            {config.forbidden.join(', ')}
+                          </p>
+                        </div>
                       )}
                     </div>
-                  ))}
-                </div>
-                {/* Legend */}
-                <div className="flex flex-wrap gap-3 mt-4 pt-4" style={{ borderTop: '1px solid #3C422E' }}>
-                  {(Object.entries(categoryColors) as [string, string][]).map(([cat, color]) => (
-                    <div key={cat} className="flex items-center gap-1.5">
-                      <div className="w-3 h-3 rounded" style={{ background: color }} />
-                      <span className="text-xs capitalize" style={{ color: '#97A97C' }}>{cat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Frustration Codes Mapping Table */}
-              <div className="rounded-xl p-4" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-lg mb-2" style={{ color: '#3B412D' }}>Frustration Codes Mapping</h3>
-                <p className="text-sm mb-4" style={{ color: '#97A97C' }}>
-                  Click any row to copy the quick code expansion
-                </p>
-
-                {/* Table Header */}
-                <div
-                  className="grid gap-4 px-4 py-2 rounded-t-lg text-xs uppercase tracking-wider"
-                  style={{
-                    gridTemplateColumns: '1fr 60px 1fr',
-                    background: '#2F2F2C',
-                    color: '#CBAD8C'
-                  }}
-                >
-                  <span>Trigger Phrase</span>
-                  <span className="text-center">Code</span>
-                  <span>Description</span>
-                </div>
-
-                {/* Table Rows */}
-                <div className="space-y-1 mt-1">
-                  {frustrationCodes.map(fc => (
-                    <button
-                      key={fc.code}
-                      onClick={() => copyToClipboard(fc.expansion, `frustration-${fc.code}`)}
-                      className="w-full grid gap-4 px-4 py-3 rounded-lg text-left transition-all hover:scale-[1.01] group"
-                      style={{
-                        gridTemplateColumns: '1fr 60px 1fr',
-                        background: copiedId === `frustration-${fc.code}` ? '#546E40' : '#3C422E',
-                      }}
-                    >
-                      <span className="text-sm" style={{ color: '#FFF5EB' }}>
-                        &ldquo;{fc.trigger}&rdquo;
-                      </span>
-                      <span
-                        className="text-center font-mono font-bold text-sm"
-                        style={{ color: copiedId === `frustration-${fc.code}` ? '#FFF5EB' : '#FABF34' }}
+                  </>
+                ) : (
+                  <div className="rounded-xl p-12 text-center" style={{ background: '#1A1A1A', border: '2px dashed #3a3a3a' }}>
+                    <p className="text-lg mb-2" style={{ color: '#FFF5EB' }}>
+                      Select an issue category
+                    </p>
+                    <p className="text-sm mb-6" style={{ color: '#808080' }}>
+                      Get project-specific fixes for {config.name}
+                    </p>
+                    {session?.lastCategory && (
+                      <button
+                        onClick={() => setSelectedCategory(session.lastCategory)}
+                        className="px-4 py-2 rounded-lg text-sm"
+                        style={{ background: '#252525', color: '#97A97C' }}
                       >
-                        {fc.code}
-                      </span>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm" style={{ color: '#97A97C' }}>{fc.description}</span>
-                        <span
-                          className="text-xs px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity"
-                          style={{
-                            background: '#2F2F2C',
-                            color: copiedId === `frustration-${fc.code}` ? '#FABF34' : '#97A97C'
-                          }}
-                        >
-                          {copiedId === `frustration-${fc.code}` ? 'Copied!' : 'Click to copy'}
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+                        Continue from: {issueCategories[session.lastCategory as keyof typeof issueCategories]?.label || session.lastCategory}
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           )}
 
-          {/* AI Understanding Profile */}
-          {activeTab === 'profile' && (
+          {/* === QUICK CODES VIEW === */}
+          {activeView === 'codes' && (
             <div className="space-y-6">
-              {/* Header */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-4" style={{ borderBottom: '1px solid #3C422E' }}>
-                <div>
-                  <h2
-                    className="text-2xl md:text-3xl italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Jenn&apos;s AI Profile
+              <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xs uppercase tracking-wider" style={{ color: '#CBAD8C' }}>
+                    {config.name} Quick Codes
                   </h2>
-                  <p className="text-sm mt-1" style={{ color: '#97A97C' }}>
-                    Share this with AI to help it understand your preferences
-                  </p>
-                </div>
-                <button
-                  onClick={copyFullProfile}
-                  className="px-6 py-2.5 text-sm font-medium transition-all hover:opacity-90"
-                  style={{
-                    background: '#546E40',
-                    color: '#FFF5EB',
-                    borderRadius: '100px'
-                  }}
-                >
-                  {copiedId === 'profile' ? 'Copied to Clipboard!' : 'Copy Full Profile'}
-                </button>
-              </div>
-
-              {/* Background Section - Full Width */}
-              <div
-                className="p-5"
-                style={{
-                  background: '#FFF5EB',
-                  borderRadius: '12px',
-                  border: '1px solid #CBAD8C'
-                }}
-              >
-                <h3
-                  className="text-lg mb-4 italic"
-                  style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                >
-                  Background
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {jennProfile.background.map((item, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1.5 rounded-full text-sm"
-                      style={{ background: '#3B412D', color: '#FFF5EB' }}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Life Philosophy - Full Width Feature */}
-              <div
-                className="p-6"
-                style={{
-                  background: 'linear-gradient(135deg, #3B412D 0%, #546E40 100%)',
-                  borderRadius: '12px',
-                  border: '1px solid #97A97C'
-                }}
-              >
-                <h3
-                  className="text-xl mb-5 italic"
-                  style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}
-                >
-                  Life Philosophy
-                </h3>
-                <div className="space-y-4">
-                  {jennProfile.lifePhilosophy.map((p, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <span
-                        className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-lg font-mono font-bold rounded-full"
-                        style={{ background: 'rgba(250,191,52,0.2)', color: '#FABF34' }}
-                      >
-                        {i + 1}
-                      </span>
-                      <p className="text-sm leading-relaxed pt-1" style={{ color: '#FFF5EB' }}>
-                        {p}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Running Mantras */}
-              <div
-                className="p-5"
-                style={{
-                  background: '#FFF5EB',
-                  borderRadius: '12px',
-                  border: '2px solid #FABF34'
-                }}
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span style={{ color: '#FABF34', fontSize: '1.5rem' }}>&#127939;</span>
-                  <h3
-                    className="text-lg italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Running Mantras
-                  </h3>
-                </div>
-                <div className="space-y-3">
-                  {jennProfile.runningMantras.map((m, i) => (
-                    <blockquote
-                      key={i}
-                      className="text-sm italic pl-4 border-l-2"
-                      style={{ color: '#546E40', borderColor: '#FABF34' }}
-                    >
-                      &ldquo;{m}&rdquo;
-                    </blockquote>
-                  ))}
-                </div>
-              </div>
-
-              {/* Profile Cards Grid */}
-              <div className="grid md:grid-cols-2 gap-4">
-                {/* Work Philosophy */}
-                <div
-                  className="p-5"
-                  style={{
-                    background: '#FFF5EB',
-                    borderRadius: '12px',
-                    border: '1px solid #CBAD8C'
-                  }}
-                >
-                  <h3
-                    className="text-lg mb-4 italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Work Philosophy
-                  </h3>
-                  <ul className="space-y-3">
-                    {jennProfile.workPhilosophy.map((w, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#546E40' }}>
-                        <span
-                          className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-xs font-medium"
-                          style={{ color: '#FABF34' }}
-                        >
-                          &#10004;
-                        </span>
-                        <span>{w}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Core Values */}
-                <div
-                  className="p-5"
-                  style={{
-                    background: '#FFF5EB',
-                    borderRadius: '12px',
-                    border: '1px solid #CBAD8C'
-                  }}
-                >
-                  <h3
-                    className="text-lg mb-4 italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Core Values
-                  </h3>
-                  <ul className="space-y-3">
-                    {jennProfile.coreValues.map((v, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#546E40' }}>
-                        <span
-                          className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-xs font-medium"
-                          style={{ color: '#FABF34' }}
-                        >
-                          *
-                        </span>
-                        <span>{v}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Creative Style */}
-                <div
-                  className="p-5"
-                  style={{
-                    background: '#FFF5EB',
-                    borderRadius: '12px',
-                    border: '1px solid #CBAD8C'
-                  }}
-                >
-                  <h3
-                    className="text-lg mb-4 italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Creative Style
-                  </h3>
-                  <ul className="space-y-3">
-                    {jennProfile.creativeStyle.map((s, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#546E40' }}>
-                        <span
-                          className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-xs font-medium"
-                          style={{ color: '#FABF34' }}
-                        >
-                          *
-                        </span>
-                        <span>{s}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Communication Style */}
-                <div
-                  className="p-5"
-                  style={{
-                    background: '#FFF5EB',
-                    borderRadius: '12px',
-                    border: '1px solid #CBAD8C'
-                  }}
-                >
-                  <h3
-                    className="text-lg mb-4 italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Communication Style
-                  </h3>
-                  <ul className="space-y-3">
-                    {jennProfile.communicationStyle.map((s, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#546E40' }}>
-                        <span
-                          className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-xs font-medium"
-                          style={{ color: '#FABF34' }}
-                        >
-                          *
-                        </span>
-                        <span>{s}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Design Rules - Full Width */}
-              <div
-                className="p-5"
-                style={{
-                  background: '#FFF5EB',
-                  borderRadius: '12px',
-                  border: '1px solid #CBAD8C'
-                }}
-              >
-                <h3
-                  className="text-lg mb-4 italic"
-                  style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                >
-                  Design Rules
-                </h3>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {jennProfile.designRules.map((r, i) => (
-                    <div key={i} className="flex items-start gap-3 text-sm p-3 rounded-lg" style={{ background: '#3B412D' }}>
-                      <span
-                        className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-xs font-mono font-bold rounded"
-                        style={{ background: '#FABF34', color: '#3B412D' }}
-                      >
-                        {i + 1}
-                      </span>
-                      <span style={{ color: '#FFF5EB' }}>{r}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Interests */}
-              <div
-                className="p-5"
-                style={{
-                  background: '#FFF5EB',
-                  borderRadius: '12px',
-                  border: '1px solid #CBAD8C'
-                }}
-              >
-                <h3
-                  className="text-lg mb-4 italic"
-                  style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                >
-                  Interests
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {jennProfile.interests.map((item, i) => (
-                    <span
-                      key={i}
-                      className="px-4 py-2 rounded-full text-sm"
-                      style={{ background: '#97A97C', color: '#FFF5EB' }}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Color Palette - Full Width */}
-              <div
-                className="p-5"
-                style={{
-                  background: '#FFF5EB',
-                  borderRadius: '12px',
-                  border: '1px solid #CBAD8C'
-                }}
-              >
-                <div className="flex items-center justify-between mb-5">
-                  <h3
-                    className="text-lg italic"
-                    style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}
-                  >
-                    Color Palette
-                  </h3>
-                  <span className="text-xs" style={{ color: '#97A97C' }}>
-                    Click any swatch to copy hex
+                  <span className="text-xs" style={{ color: '#808080' }}>
+                    Click any code to copy
                   </span>
                 </div>
-                <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-                  {jennProfile.palette.map(color => (
+                <div className="grid grid-cols-2 gap-4">
+                  {Object.entries(config.quickCommands).map(([code, text]) => (
                     <button
-                      key={color.hex}
-                      onClick={() => copyToClipboard(color.hex, color.hex)}
-                      className="text-center group cursor-pointer"
+                      key={code}
+                      onClick={() => copyText(text, `qc-${code}`)}
+                      className="p-4 rounded-lg text-left transition-all hover:scale-[1.02]"
+                      style={{ background: '#252525' }}
                     >
-                      <div
-                        className="w-full aspect-square mb-3 transition-all group-hover:scale-105 group-hover:shadow-lg"
-                        style={{
-                          background: color.hex,
-                          borderRadius: '12px',
-                          border: color.hex === '#FFF5EB' || color.hex === '#FAF3E8'
-                            ? '1px solid #CBAD8C'
-                            : 'none',
-                          boxShadow: copiedId === color.hex ? '0 0 0 2px #FABF34' : 'none'
-                        }}
-                      />
-                      <span
-                        className="text-xs block mb-0.5 truncate"
-                        style={{ color: '#546E40' }}
-                      >
-                        {color.name}
-                      </span>
-                      <span
-                        className="text-xs font-mono block transition-colors"
-                        style={{ color: copiedId === color.hex ? '#FABF34' : '#97A97C' }}
-                      >
-                        {copiedId === color.hex ? 'Copied!' : color.hex}
-                      </span>
+                      <div className="flex items-center gap-3 mb-2">
+                        <span
+                          className="px-3 py-1.5 rounded text-sm font-mono font-bold"
+                          style={{ background: '#FABF34', color: '#1A1A1A' }}
+                        >
+                          {code}
+                        </span>
+                        <span className="text-xs" style={{ color: copied === `qc-${code}` ? '#FABF34' : '#808080' }}>
+                          {copied === `qc-${code}` ? 'Copied!' : 'Click to copy'}
+                        </span>
+                      </div>
+                      <p className="text-sm" style={{ color: '#97A97C' }}>{text}</p>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Force Commands (project-agnostic) */}
+              <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                  Force Commands (When Claude Won't Listen)
+                </h2>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    "Stop. Re-read the requirements I gave you.",
+                    "You're not paying attention to what I'm asking.",
+                    "Go back to the original file and start over.",
+                    "DO NOT change anything else. ONLY change what I specified.",
+                    "Read the entire file before making changes.",
+                    "Explain what you think I want, then I'll confirm before you proceed.",
+                    "Keep the exact same structure, just change [specific thing].",
+                    "No extras. No comments. No refactoring. Just what I asked.",
+                  ].map((cmd, i) => (
+                    <button
+                      key={i}
+                      onClick={() => copyText(cmd, `force-${i}`)}
+                      className="p-3 rounded-lg text-left text-sm transition-all hover:scale-[1.01]"
+                      style={{
+                        background: copied === `force-${i}` ? '#546E40' : '#252525',
+                        color: copied === `force-${i}` ? '#FFF5EB' : '#97A97C',
+                      }}
+                    >
+                      {copied === `force-${i}` ? 'Copied!' : cmd}
                     </button>
                   ))}
                 </div>
@@ -1581,49 +812,294 @@ ${jennProfile.palette.map(c => `- ${c.name}: ${c.hex}`).join('\n')}`;
             </div>
           )}
 
-          {/* Brand Builder Tab */}
-          {activeTab === 'brand' && (
+          {/* === ISSUE LOG VIEW === */}
+          {activeView === 'log' && (
             <div className="space-y-6">
-              <div className="rounded-xl p-6" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-lg mb-4" style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}>
-                  Brand Builder
-                </h3>
-                <p className="text-sm mb-4" style={{ color: '#546E40' }}>
-                  Create color palettes & brand identities from images
-                </p>
-                <a
-                  href="/io/sandbox/brand-builder"
-                  className="inline-block px-6 py-3 rounded-full text-sm font-medium transition-transform hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #FABF34 0%, #CC7722 100%)', color: '#2F2F2C' }}
-                >
-                  Open Brand Builder →
-                </a>
+              {/* Stats */}
+              <div className="grid grid-cols-6 gap-4">
+                <div className="rounded-xl p-4 text-center" style={{ background: '#1A1A1A' }}>
+                  <span className="block text-2xl font-mono" style={{ color: '#FABF34' }}>{projectIssues.length}</span>
+                  <span className="text-xs" style={{ color: '#808080' }}>Total</span>
+                </div>
+                <div className="rounded-xl p-4 text-center" style={{ background: '#1A1A1A' }}>
+                  <span className="block text-2xl font-mono" style={{ color: '#E07850' }}>
+                    {projectIssues.filter(i => !i.resolved).length}
+                  </span>
+                  <span className="text-xs" style={{ color: '#808080' }}>Open</span>
+                </div>
+                {Object.entries(issueStats).slice(0, 4).map(([cat, count]) => (
+                  <div key={cat} className="rounded-xl p-4 text-center" style={{ background: '#1A1A1A' }}>
+                    <span className="block text-2xl font-mono" style={{ color: '#97A97C' }}>{count}</span>
+                    <span className="text-xs capitalize" style={{ color: '#808080' }}>{cat}</span>
+                  </div>
+                ))}
               </div>
+
+              {/* Issue List */}
+              <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xs uppercase tracking-wider" style={{ color: '#CBAD8C' }}>
+                    {config.name} Issues
+                  </h2>
+                  {projectIssues.length > 0 && (
+                    <button
+                      onClick={() => saveIssues(issues.filter(i => i.project !== activeProject))}
+                      className="text-xs px-2 py-1 rounded"
+                      style={{ color: '#E07850' }}
+                    >
+                      Clear all
+                    </button>
+                  )}
+                </div>
+                {projectIssues.length === 0 ? (
+                  <p className="text-center py-8 text-sm" style={{ color: '#808080' }}>
+                    No issues logged for {config.name}. Use the Capture button to log problems.
+                  </p>
+                ) : (
+                  <div className="space-y-2">
+                    {projectIssues.map(issue => (
+                      <div
+                        key={issue.id}
+                        className="p-4 rounded-lg flex items-start gap-4"
+                        style={{ background: '#252525', opacity: issue.resolved ? 0.5 : 1 }}
+                      >
+                        <button
+                          onClick={() => {
+                            const updated = issues.map(i =>
+                              i.id === issue.id ? { ...i, resolved: !i.resolved } : i
+                            );
+                            saveIssues(updated);
+                          }}
+                          className="w-5 h-5 rounded flex items-center justify-center mt-0.5 shrink-0"
+                          style={{ background: issue.resolved ? '#546E40' : '#3a3a3a' }}
+                        >
+                          {issue.resolved && <span style={{ color: '#FFF5EB' }}>{icons.check}</span>}
+                        </button>
+                        <div className="flex-1 min-w-0">
+                          <p
+                            className="text-sm mb-1"
+                            style={{ color: '#FFF5EB', textDecoration: issue.resolved ? 'line-through' : 'none' }}
+                          >
+                            {issue.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2 mb-2">
+                            <span className="px-2 py-0.5 rounded text-[10px] capitalize"
+                                  style={{ background: '#3a3a3a', color: '#97A97C' }}>
+                              {issue.category}
+                            </span>
+                            <span className="text-[10px]" style={{ color: '#808080' }}>
+                              {new Date(issue.timestamp).toLocaleDateString()}
+                            </span>
+                            {issue.fixSource && (
+                              <span className="px-2 py-0.5 rounded text-[10px]"
+                                    style={{
+                                      background: issue.fixSource === 'chat' ? '#1B2B4B' : issue.fixSource === 'cc' ? '#546E40' : '#3a3a3a',
+                                      color: '#FFF5EB'
+                                    }}>
+                                {issue.fixSource === 'chat' ? 'via Chat' : issue.fixSource === 'cc' ? 'via CC' : 'Manual'}
+                              </span>
+                            )}
+                          </div>
+                          {/* Show fix if exists */}
+                          {issue.fix && (
+                            <button
+                              onClick={() => copyText(issue.fix!, `fix-${issue.id}`)}
+                              className="w-full p-2 rounded text-xs text-left transition-all hover:scale-[1.01]"
+                              style={{
+                                background: copied === `fix-${issue.id}` ? '#546E40' : '#1A1A1A',
+                                color: copied === `fix-${issue.id}` ? '#FFF5EB' : '#97A97C',
+                                border: '1px solid #3a3a3a'
+                              }}
+                            >
+                              <span className="flex items-center gap-1 mb-1" style={{ color: '#FABF34' }}>
+                                {icons.fix} <span className="text-[10px] uppercase">Fix:</span>
+                              </span>
+                              <span className="block" style={{ color: copied === `fix-${issue.id}` ? '#FFF5EB' : '#97A97C' }}>
+                                {copied === `fix-${issue.id}` ? 'Copied!' : issue.fix.length > 100 ? issue.fix.slice(0, 100) + '...' : issue.fix}
+                              </span>
+                            </button>
+                          )}
+                        </div>
+                        <div className="flex flex-col gap-1 shrink-0">
+                          {!issue.resolved && (
+                            <button
+                              onClick={() => {
+                                setSelectedIssueForFix(issue.id);
+                                setShowFixModal(true);
+                              }}
+                              className="text-xs px-2 py-1 rounded"
+                              style={{ background: '#546E40', color: '#FFF5EB' }}
+                            >
+                              + Fix
+                            </button>
+                          )}
+                          <button
+                            onClick={() => saveIssues(issues.filter(i => i.id !== issue.id))}
+                            className="text-xs px-2 py-1 rounded"
+                            style={{ color: '#E07850' }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Pattern Analysis */}
+              {projectIssues.length >= 3 && (
+                <div className="rounded-xl p-5" style={{ background: '#1A1A1A' }}>
+                  <h2 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>
+                    Pattern Analysis
+                  </h2>
+                  <div className="grid grid-cols-3 gap-4">
+                    {Object.entries(issueStats)
+                      .sort((a, b) => b[1] - a[1])
+                      .slice(0, 3)
+                      .map(([cat, count]) => {
+                        const pct = Math.round((count / projectIssues.length) * 100);
+                        return (
+                          <div key={cat}>
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-xs capitalize" style={{ color: '#97A97C' }}>{cat}</span>
+                              <span className="text-xs font-mono" style={{ color: '#FABF34' }}>{pct}%</span>
+                            </div>
+                            <div className="h-2 rounded-full overflow-hidden" style={{ background: '#3a3a3a' }}>
+                              <div
+                                className="h-full rounded-full"
+                                style={{ width: `${pct}%`, background: 'linear-gradient(90deg, #546E40, #97A97C)' }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                  </div>
+                  {Object.keys(issueStats).length > 0 && (
+                    <p className="mt-4 text-xs" style={{ color: '#808080' }}>
+                      Most common issue: <span style={{ color: '#FABF34' }}>{Object.entries(issueStats).sort((a, b) => b[1] - a[1])[0]?.[0]}</span>
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
-          {/* Palettes Tab */}
-          {activeTab === 'palettes' && (
+          {/* === JENN OS VIEW === */}
+          {activeView === 'os' && (
             <div className="space-y-6">
-              <div className="rounded-xl p-6" style={{ background: '#FFF5EB', border: '1px solid #CBAD8C' }}>
-                <h3 className="text-lg mb-4" style={{ color: '#3B412D', fontFamily: 'var(--font-instrument)' }}>
-                  My Palettes
-                </h3>
-                <p className="text-sm mb-4" style={{ color: '#546E40' }}>
-                  Gallery of saved color palettes & brand schemes
-                </p>
-                <a
-                  href="/io/sandbox/palettes"
-                  className="inline-block px-6 py-3 rounded-full text-sm font-medium transition-transform hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #97A97C 0%, #546E40 100%)', color: '#FFF5EB' }}
-                >
-                  Open Palettes →
-                </a>
+              {/* Header */}
+              <div className="rounded-xl p-8" style={{ background: 'linear-gradient(135deg, #3B412D 0%, #546E40 100%)' }}>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center gap-4">
+                    <JennLogo size={48} />
+                    <div>
+                      <h2 className="text-3xl mb-1" style={{ fontFamily: 'var(--font-instrument)', color: '#FFF5EB' }}>
+                        Jenn OS
+                      </h2>
+                      <p className="text-sm" style={{ color: '#97A97C' }}>
+                        Operating system for AI collaboration
+                      </p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs uppercase tracking-wider mb-1" style={{ color: '#CBAD8C' }}>Version</p>
+                    <p className="font-mono" style={{ color: '#FABF34' }}>2.2.0</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                {/* Philosophy */}
+                <div className="rounded-xl p-6" style={{ background: '#1A1A1A' }}>
+                  <h3 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>Core Philosophy</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-xs mb-2" style={{ color: '#808080' }}>On Running</p>
+                      <ul className="space-y-1">
+                        {[
+                          "Running is the one place with no luck, no shortcuts",
+                          "Effort compounds. Setbacks aren't permanent",
+                          "Choose hard things on purpose",
+                        ].map((item, i) => (
+                          <li key={i} className="text-sm" style={{ color: '#97A97C' }}>"{item}"</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="text-xs mb-2" style={{ color: '#808080' }}>On Work</p>
+                      <ul className="space-y-1">
+                        {[
+                          "Effort dictates how well you weather tough moments",
+                          "Joy, even in the mundane, becomes infectious",
+                          "Rituals create culture; culture creates trust",
+                        ].map((item, i) => (
+                          <li key={i} className="text-sm" style={{ color: '#97A97C' }}>"{item}"</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Profile */}
+                <div className="rounded-xl p-6" style={{ background: '#1A1A1A' }}>
+                  <h3 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>Profile</h3>
+                  <div className="space-y-4 text-sm">
+                    <div>
+                      <p className="text-xs" style={{ color: '#808080' }}>Role</p>
+                      <p style={{ color: '#FFF5EB' }}>Senior Consultant, Economics</p>
+                      <p className="text-xs" style={{ color: '#97A97C' }}>FTI Consulting</p>
+                    </div>
+                    <div>
+                      <p className="text-xs" style={{ color: '#808080' }}>Running</p>
+                      <p style={{ color: '#FFF5EB' }}>Marathon PR: 3:09 | Pursuing sub-3:00</p>
+                    </div>
+                    <div>
+                      <p className="text-xs" style={{ color: '#808080' }}>Education</p>
+                      <p style={{ color: '#FFF5EB' }}>BA Sociology & HIPS, UChicago</p>
+                    </div>
+                    <div>
+                      <p className="text-xs" style={{ color: '#808080' }}>Languages</p>
+                      <p style={{ color: '#97A97C' }}>Spanish, French, Hindi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* AI Instructions */}
+              <div className="rounded-xl p-6" style={{ background: '#1A1A1A' }}>
+                <h3 className="text-xs uppercase tracking-wider mb-4" style={{ color: '#CBAD8C' }}>AI Collaboration Rules</h3>
+                <div className="grid grid-cols-3 gap-6">
+                  <div>
+                    <p className="text-xs mb-2" style={{ color: '#808080' }}>Communication</p>
+                    <ul className="space-y-1 text-sm">
+                      {["Direct, no pleasantries", "Functional over decorative", "Remember context", "Efficiency over perfection"].map((item, i) => (
+                        <li key={i} style={{ color: '#97A97C' }}>• {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs mb-2" style={{ color: '#808080' }}>Do</p>
+                    <ul className="space-y-1 text-sm">
+                      {["Read files before editing", "Only change what's asked", "Use palette colors only", "Check text contrast"].map((item, i) => (
+                        <li key={i} style={{ color: '#97A97C' }}>+ {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs mb-2" style={{ color: '#808080' }}>Don't</p>
+                    <ul className="space-y-1 text-sm">
+                      {["Add unsolicited changes", "Use off-palette colors", "Use emoji icons", "Over-engineer"].map((item, i) => (
+                        <li key={i} style={{ color: '#E07850' }}>- {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           )}
         </div>
       </div>
-    </div>
+    </IOAuthGate>
   );
 }
