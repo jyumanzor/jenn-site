@@ -497,7 +497,7 @@ export default function RunningAdminPage() {
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-7">
-              <Link href="/io" className="text-[#97A97C] text-xs hover:text-[#D4ED39] transition-colors mb-4 inline-block">
+              <Link href="/io" className="text-[#FABF34] text-xs hover:text-[#D4ED39] transition-colors mb-4 inline-block font-medium">
                 ← Back to IO
               </Link>
               <h1 className="font-display text-4xl md:text-5xl leading-tight mb-3" style={{ color: colors.lime }}>
@@ -520,16 +520,16 @@ export default function RunningAdminPage() {
             </div>
             <div className="md:col-span-5">
               {/* Boston Marathon Feature Tile */}
-              <div className="bg-gradient-to-br from-[#C76B4A] to-[#A85A3D] rounded-2xl p-5 mb-4 border border-[#FABF34]/20">
+              <div className="bg-gradient-to-br from-[#CBAD8C] to-[#A89470] rounded-2xl p-5 mb-4 border border-[#FABF34]/30">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-[#FFF5EB]/80 text-xs uppercase tracking-wider font-medium">Boston Marathon 2026</p>
-                    <p className="font-display text-2xl text-[#FFF5EB] mt-1">April 20</p>
-                    <p className="text-[#FFF5EB]/60 text-xs mt-1">{weeksUntilBoston} weeks to go</p>
+                    <p className="text-[#3B412D] text-xs uppercase tracking-wider font-medium">Boston Marathon 2026</p>
+                    <p className="font-display text-2xl text-[#2A3C24] mt-1">April 20</p>
+                    <p className="text-[#3B412D]/70 text-xs mt-1">{weeksUntilBoston} weeks to go</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-display text-4xl" style={{ color: colors.lime }}>{getDaysUntilRace(new Date(), BOSTON_DATE)}</p>
-                    <p className="text-[#FFF5EB]/60 text-[10px] uppercase tracking-wider">days</p>
+                    <p className="font-display text-4xl text-[#2A3C24]">{getDaysUntilRace(new Date(), BOSTON_DATE)}</p>
+                    <p className="text-[#3B412D]/70 text-[10px] uppercase tracking-wider">days</p>
                   </div>
                 </div>
               </div>
