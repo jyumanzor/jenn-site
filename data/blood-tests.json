@@ -1,0 +1,142 @@
+{
+  "lastUpdated": "2025-05-24",
+  "source": "Labcorp",
+  "tests": {
+    "vitaminD": {
+      "name": "Vitamin D, 25-hydroxy",
+      "value": 27.7,
+      "unit": "ng/mL",
+      "referenceRange": "30.0-100.0",
+      "status": "low",
+      "interpretation": "Vitamin D insufficiency. Consider supplementation and increasing dietary sources."
+    },
+    "magnesium": {
+      "name": "Magnesium",
+      "value": 2.7,
+      "unit": "mg/dL",
+      "referenceRange": "1.6-2.3",
+      "status": "high",
+      "interpretation": "Slightly elevated magnesium. No concerns, may indicate good supplementation."
+    },
+    "iron": {
+      "name": "Iron",
+      "value": 119,
+      "unit": "ug/dL",
+      "referenceRange": "27-159",
+      "status": "normal",
+      "interpretation": "Iron levels are optimal for endurance performance."
+    },
+    "ironSaturation": {
+      "name": "Iron Saturation",
+      "value": 28,
+      "unit": "%",
+      "referenceRange": "15-55",
+      "status": "normal",
+      "interpretation": "Good iron absorption and utilization."
+    },
+    "tibc": {
+      "name": "Total Iron Binding Capacity",
+      "value": 418,
+      "unit": "ug/dL",
+      "referenceRange": "250-450",
+      "status": "normal",
+      "interpretation": "Normal iron transport capacity."
+    },
+    "vitaminB12": {
+      "name": "Vitamin B12",
+      "value": 666,
+      "unit": "pg/mL",
+      "referenceRange": "232-1245",
+      "status": "normal",
+      "interpretation": "Pescatarian diet providing adequate B12 from seafood."
+    },
+    "folate": {
+      "name": "Folate",
+      "value": 12.1,
+      "unit": "ng/mL",
+      "referenceRange": ">3.0",
+      "status": "normal",
+      "interpretation": "Excellent folate levels from leafy greens and legumes."
+    },
+    "hba1c": {
+      "name": "Hemoglobin A1c",
+      "value": 5.5,
+      "unit": "%",
+      "referenceRange": "4.8-5.6",
+      "status": "normal",
+      "interpretation": "Excellent blood sugar control. No prediabetes risk."
+    },
+    "hemoglobin": {
+      "name": "Hemoglobin",
+      "value": 14.2,
+      "unit": "g/dL",
+      "referenceRange": "12.0-16.0",
+      "status": "normal",
+      "interpretation": "Good oxygen-carrying capacity for endurance performance."
+    },
+    "cholesterolTotal": {
+      "name": "Cholesterol, Total",
+      "value": 133,
+      "unit": "mg/dL",
+      "referenceRange": "<200",
+      "status": "optimal",
+      "interpretation": "Excellent total cholesterol."
+    },
+    "hdl": {
+      "name": "HDL Cholesterol",
+      "value": 52,
+      "unit": "mg/dL",
+      "referenceRange": ">40",
+      "status": "normal",
+      "interpretation": "Good HDL (protective) cholesterol."
+    },
+    "glucose": {
+      "name": "Glucose, Fasting",
+      "value": 79,
+      "unit": "mg/dL",
+      "referenceRange": "70-100",
+      "status": "normal",
+      "interpretation": "Normal fasting blood sugar."
+    }
+  },
+  "nutritionRecommendations": {
+    "prioritize": [
+      {
+        "nutrient": "Vitamin D",
+        "reason": "Current level 27.7 ng/mL is below optimal (30+)",
+        "foods": ["Wild salmon", "Sardines", "Eggs", "Fortified foods", "Mushrooms (UV-exposed)"],
+        "supplements": "Consider 2000-4000 IU D3 daily with fat-containing meal"
+      }
+    ],
+    "maintain": [
+      {
+        "nutrient": "Iron",
+        "reason": "Current levels optimal for runner",
+        "foods": ["Dark leafy greens", "Lentils", "Fortified cereals", "Pair with vitamin C"]
+      },
+      {
+        "nutrient": "B12",
+        "reason": "Pescatarian diet working well",
+        "foods": ["Salmon", "Sardines", "Tuna", "Eggs", "Fortified nutritional yeast"]
+      },
+      {
+        "nutrient": "Folate",
+        "reason": "Excellent levels from plant foods",
+        "foods": ["Spinach", "Lentils", "Asparagus", "Broccoli"]
+      }
+    ],
+    "moderate": [
+      {
+        "nutrient": "Magnesium",
+        "reason": "Slightly elevated - no need to supplement further",
+        "note": "Continue dietary sources, avoid additional supplementation"
+      }
+    ]
+  },
+  "runnerInsights": {
+    "oxygenCapacity": "Hemoglobin 14.2 g/dL supports good oxygen delivery for endurance",
+    "energyMetabolism": "HbA1c 5.5% indicates excellent blood sugar regulation for consistent energy",
+    "recoverySupport": "Iron status optimal for post-run muscle recovery",
+    "inflammationRisk": "Consider omega-3 focus to support recovery (already in pescatarian diet)"
+  }
+}

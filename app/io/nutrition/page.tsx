@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo, ReactNode } from "react";
 import Link from "next/link";
 import nutritionData from "@/data/nutrition.json";
+import bloodTestData from "@/data/blood-tests.json";
 
 // ===================== TYPES =====================
 interface FoodEntry {
@@ -583,7 +584,7 @@ function AIAnalysisPanel({ entries, onAnalyze, analysis, isAnalyzing }: {
   );
 }
 
-// Meal options for the weekly planner
+// Expanded meal options for the weekly planner - organized by vitamin D priority for blood test optimization
 const MEAL_OPTIONS = {
   breakfast: [
     "Nutty Pudding",
@@ -591,23 +592,46 @@ const MEAL_OPTIONS = {
     "Oatmeal with berries",
     "Greek yogurt parfait",
     "Eggs + avocado toast",
-    "Smoothie bowl"
+    "Smoothie bowl",
+    "Salmon + eggs (Vitamin D boost)",
+    "Chia pudding with fruit",
+    "Overnight oats",
+    "Acai bowl",
+    "Egg white omelette + spinach",
+    "Cottage cheese + fruit"
   ],
   lunch: [
     "Super Veggie",
     "Super Veggie + extra lentils",
-    "Salmon Bowl",
-    "Sardine Super Toast",
+    "Salmon Bowl (Vitamin D)",
+    "Sardine Super Toast (Vitamin D)",
     "Quinoa salad",
-    "Lentil soup"
+    "Lentil soup",
+    "Mediterranean bowl",
+    "Poke bowl",
+    "Buddha bowl",
+    "Grain bowl + roasted vegetables",
+    "Minestrone soup",
+    "Black bean tacos",
+    "Sushi rolls",
+    "Miso soup + edamame"
   ],
   dinner: [
-    "Salmon Bowl",
+    "Salmon Bowl (Vitamin D)",
     "Tuna Poke Bowl",
     "Shrimp Stir-Fry",
     "Shrimp Stir-Fry (carb load)",
     "Super Veggie",
-    "Grilled fish + vegetables"
+    "Grilled fish + vegetables",
+    "Baked salmon + sweet potato",
+    "Seafood pasta",
+    "Fish tacos",
+    "Seared ahi tuna",
+    "Cioppino (seafood stew)",
+    "Miso-glazed cod",
+    "Shrimp scampi",
+    "Paella",
+    "Grilled halibut + greens"
   ],
   snack: [
     "Morning Mix",
@@ -615,18 +639,164 @@ const MEAL_OPTIONS = {
     "Pre-Run Mix",
     "Greek yogurt",
     "Fruit + nuts",
-    "Hummus + vegetables"
+    "Hummus + vegetables",
+    "Hard-boiled eggs (Vitamin D)",
+    "Cheese + crackers",
+    "Trail mix",
+    "Apple + almond butter",
+    "Protein bar",
+    "Edamame",
+    "Dark chocolate + almonds",
+    "Cottage cheese + berries"
   ],
   postRun: [
-    "Salmon Bowl",
+    "Salmon Bowl (Vitamin D)",
     "Protein smoothie",
     "Recovery shake",
-    "Greek yogurt + banana"
+    "Greek yogurt + banana",
+    "Chocolate milk",
+    "PB&J on whole grain",
+    "Tart cherry juice + protein",
+    "Eggs + toast"
   ]
 };
 
 type MealSlot = "breakfast" | "lunch" | "dinner" | "snack" | "postRun";
 type DayName = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
+
+// Blood Test Insights Component
+function BloodTestInsights() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const tests = bloodTestData.tests;
+  const recommendations = bloodTestData.nutritionRecommendations;
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'low': return '#E53E3E';
+      case 'high': return '#ED8936';
+      case 'normal': return '#38A169';
+      case 'optimal': return '#38A169';
+      default: return '#718096';
+    }
+  };
+
+  const getStatusBg = (status: string) => {
+    switch (status) {
+      case 'low': return '#FED7D7';
+      case 'high': return '#FEEBC8';
+      case 'normal': return '#C6F6D5';
+      case 'optimal': return '#C6F6D5';
+      default: return '#E2E8F0';
+    }
+  };
+
+  const priorityTests = [tests.vitaminD, tests.iron, tests.vitaminB12, tests.hba1c];
+
+  return (
+    <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: '#2A3C24' }}>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full p-5 flex items-center justify-between text-left"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#FABF3420' }}>
+            <svg className="w-5 h-5" style={{ color: '#FABF34' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-medium" style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}>
+              Blood Test Insights
+            </h3>
+            <p className="text-xs" style={{ color: '#FFF5EB99' }}>
+              Last updated: {bloodTestData.lastUpdated}
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <span className="px-2 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: '#FED7D7', color: '#E53E3E' }}>
+              1 Low
+            </span>
+            <span className="px-2 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: '#C6F6D5', color: '#38A169' }}>
+              9 Normal
+            </span>
+          </div>
+          <svg
+            className={`w-5 h-5 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+            style={{ color: '#FFF5EB99' }}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+
+      {isExpanded && (
+        <div className="px-5 pb-5 space-y-4">
+          {/* Priority Alert */}
+          <div className="p-4 rounded-xl" style={{ backgroundColor: '#FED7D720', border: '1px solid #E53E3E40' }}>
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 mt-0.5" style={{ color: '#E53E3E' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <div>
+                <p className="font-medium text-sm" style={{ color: '#FFF5EB' }}>Vitamin D Insufficiency</p>
+                <p className="text-xs mt-1" style={{ color: '#FFF5EB99' }}>
+                  Current: {tests.vitaminD.value} {tests.vitaminD.unit} (optimal: 30+)
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {recommendations.prioritize[0].foods.map((food, i) => (
+                    <span key={i} className="px-2 py-1 rounded-full text-xs" style={{ backgroundColor: '#FABF3420', color: '#FABF34' }}>
+                      {food}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Metrics Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {priorityTests.map((test, i) => (
+              <div key={i} className="p-3 rounded-xl" style={{ backgroundColor: '#FFF5EB10' }}>
+                <p className="text-xs mb-1" style={{ color: '#FFF5EB60' }}>{test.name}</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-lg font-medium" style={{ color: '#FFF5EB' }}>{test.value}</span>
+                  <span className="text-xs" style={{ color: '#FFF5EB60' }}>{test.unit}</span>
+                </div>
+                <span
+                  className="inline-block mt-1 px-2 py-0.5 rounded-full text-xs font-medium"
+                  style={{ backgroundColor: getStatusBg(test.status), color: getStatusColor(test.status) }}
+                >
+                  {test.status}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Runner Insights */}
+          <div className="p-4 rounded-xl" style={{ backgroundColor: '#97A97C20' }}>
+            <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#97A97C' }}>Runner Insights</p>
+            <ul className="space-y-1">
+              <li className="text-sm" style={{ color: '#FFF5EB99' }}>
+                <span style={{ color: '#97A97C' }}>•</span> {bloodTestData.runnerInsights.oxygenCapacity}
+              </li>
+              <li className="text-sm" style={{ color: '#FFF5EB99' }}>
+                <span style={{ color: '#97A97C' }}>•</span> {bloodTestData.runnerInsights.energyMetabolism}
+              </li>
+              <li className="text-sm" style={{ color: '#FFF5EB99' }}>
+                <span style={{ color: '#97A97C' }}>•</span> {bloodTestData.runnerInsights.recoverySupport}
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface WeeklyPlan {
   [day: string]: {
@@ -1574,6 +1744,44 @@ export default function NutritionPage() {
             {filteredDatabase.map((food) => (
               <FoodDatabaseCard key={food.name} food={food} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Weekly Meal Planner - PROMINENT HERO SECTION */}
+      <section className="py-12" style={{ backgroundColor: '#2A3C24' }}>
+        <div className="container-editorial">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <p className="text-xs uppercase tracking-wider mb-2" style={{ color: '#FABF34' }}>Your Personalized Plan</p>
+              <h2 className="text-3xl" style={{ color: '#FFF5EB', fontFamily: 'var(--font-instrument)' }}>
+                Weekly Meal Planner
+              </h2>
+              <p className="text-sm mt-2" style={{ color: '#FFF5EB99' }}>
+                Click any meal to customize. Vitamin D-rich options highlighted based on your blood work.
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full text-xs" style={{ backgroundColor: '#FABF3420', color: '#FABF34' }}>
+                Personalized
+              </span>
+              <span className="px-3 py-1 rounded-full text-xs" style={{ backgroundColor: '#97A97C20', color: '#97A97C' }}>
+                Blood-Test Optimized
+              </span>
+            </div>
+          </div>
+
+          {/* Blood Test Insights Panel */}
+          <div className="mb-6">
+            <BloodTestInsights />
+          </div>
+
+          {/* Quick Jump to Planner */}
+          <div className="p-4 rounded-xl mb-4" style={{ backgroundColor: '#FFF5EB10', border: '1px dashed #FFF5EB30' }}>
+            <p className="text-sm" style={{ color: '#FFF5EB' }}>
+              <span style={{ color: '#FABF34' }}>Tip:</span> Meals marked with &quot;(Vitamin D)&quot; help address your insufficiency.
+              Aim for 3-4 Vitamin D-rich meals per week.
+            </p>
           </div>
         </div>
       </section>
