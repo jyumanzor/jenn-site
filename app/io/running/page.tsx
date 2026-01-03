@@ -497,7 +497,7 @@ export default function RunningAdminPage() {
         <div className="container-editorial">
           <div className="grid md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-7">
-              <Link href="/io" className="text-[#FFF5EB]/60 text-xs hover:text-[#FFF5EB] transition-colors mb-4 inline-block">
+              <Link href="/io" className="text-[#97A97C] text-xs hover:text-[#D4ED39] transition-colors mb-4 inline-block">
                 ← Back to IO
               </Link>
               <h1 className="font-display text-4xl md:text-5xl leading-tight mb-3" style={{ color: colors.lime }}>
