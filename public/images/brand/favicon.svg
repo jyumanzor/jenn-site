@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#3B412D"/>
+  <!-- J letterform -->
+  <path d="M12 7H20V21C20 25 17.5 28 13 28C10 28 8 26 8 22" stroke="#FFF5EB" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Gold accent dot -->
+  <circle cx="24" cy="8" r="2.5" fill="#FABF34"/>
+</svg>

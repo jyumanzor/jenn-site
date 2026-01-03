@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import races from "@/data/races.json";
+import stravaData from "@/data/strava.json";
 import RunningSchedule from "@/components/RunningSchedule";
 
 // Animated counter for dramatic stat reveals
@@ -65,6 +66,28 @@ type Marathon = typeof races.marathons[0] & {
 };
 type Ultra = typeof races.ultras[0];
 type Upcoming = typeof races.upcoming[0];
+
+// Calculate weekly running mileage from Strava data
+function getWeeklyMileage(): { miles: number; runs: number; lastUpdated: string } {
+  const now = new Date();
+  const startOfWeek = new Date(now);
+  startOfWeek.setDate(now.getDate() - now.getDay()); // Sunday
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  const weekRuns = stravaData.activities.filter((activity) => {
+    if (activity.sport !== "Run") return false;
+    const activityDate = new Date(activity.date);
+    return activityDate >= startOfWeek && activityDate <= now;
+  });
+
+  const totalMiles = weekRuns.reduce((sum, run) => sum + (run.distance_miles || 0), 0);
+
+  return {
+    miles: Math.round(totalMiles * 10) / 10,
+    runs: weekRuns.length,
+    lastUpdated: stravaData.lastUpdated
+  };
+}
 
 type WorldMajor = {
   city: string;
@@ -364,6 +387,47 @@ export default function RunningPage() {
       {/* Stats Panels */}
       <section className="py-16 bg-ivory">
         <div className="container-editorial">
+          {/* Weekly Mileage Widget */}
+          {(() => {
+            const weeklyStats = getWeeklyMileage();
+            return (
+              <div
+                className="mb-6 rounded-xl p-5 flex items-center justify-between"
+                style={{
+                  background: 'linear-gradient(135deg, #d4ed39 0%, #97a97c 100%)',
+                  boxShadow: '0 4px 20px rgba(212,237,57,0.3)',
+                }}
+              >
+                <div className="flex items-center gap-4">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: 'rgba(42,60,36,0.15)' }}
+                  >
+                    <svg className="w-6 h-6" style={{ color: '#2a3c24' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider font-medium" style={{ color: 'rgba(42,60,36,0.7)' }}>
+                      This Week
+                    </p>
+                    <p className="text-3xl font-display" style={{ color: '#2a3c24' }}>
+                      {weeklyStats.miles} miles
+                    </p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-medium" style={{ color: '#2a3c24' }}>
+                    {weeklyStats.runs} run{weeklyStats.runs !== 1 ? 's' : ''}
+                  </p>
+                  <p className="text-xs" style={{ color: 'rgba(42,60,36,0.6)' }}>
+                    via Strava
+                  </p>
+                </div>
+              </div>
+            );
+          })()}
+
           <div className="grid md:grid-cols-4 gap-4">
             <div className="panel-gradient-deep text-center">
               <p className="font-display text-4xl text-ivory">{races.stats.marathonPR}</p>

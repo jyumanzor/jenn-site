@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const dashboardSections = [
   {
@@ -106,17 +107,26 @@ export default function IODashboardPage() {
       {/* Header */}
       <section className="pt-8 pb-12 md:pt-16 md:pb-16">
         <div className="container-editorial">
-          <div className="max-w-2xl">
-            <p className="light-bg-label mb-3">Backend</p>
-            <h1
-              className="text-4xl md:text-5xl mb-4 tracking-tight"
-              style={{ fontFamily: "var(--font-instrument), Instrument Serif, Georgia, serif", color: "#3B412D" }}
-            >
-              Control Center
-            </h1>
-            <p className="light-bg-body leading-relaxed">
-              Private dashboard for managing site content, tracking personal data, and building tools.
-            </p>
+          <div className="flex items-start gap-6">
+            <Image
+              src="/images/brand/jenn-logo.svg"
+              alt="Jenn Logo"
+              width={80}
+              height={80}
+              className="rounded-2xl shadow-md hidden md:block"
+            />
+            <div className="max-w-2xl">
+              <p className="light-bg-label mb-3">Backend</p>
+              <h1
+                className="text-4xl md:text-5xl mb-4 tracking-tight"
+                style={{ fontFamily: "var(--font-instrument), Instrument Serif, Georgia, serif", color: "#3B412D" }}
+              >
+                Control Center
+              </h1>
+              <p className="light-bg-body leading-relaxed">
+                Private dashboard for managing site content, tracking personal data, and building tools.
+              </p>
+            </div>
           </div>
         </div>
       </section>

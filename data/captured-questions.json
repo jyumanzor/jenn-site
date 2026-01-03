@@ -59,6 +59,18 @@
       "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
       "resolved": false,
       "page": "/01-onboarding"
+    },
+    {
+      "id": "1735949300000",
+      "question": "Nav pane buttons need subfolder dropdowns to show all links - want structured buttons like version from 3 days ago but optimized",
+      "questionType": "design",
+      "buildContext": "fti-portal",
+      "category": "layout",
+      "timestamp": "2026-01-03T13:15:00.000Z",
+      "tags": ["navigation", "dropdowns", "subfolders", "nav-pane", "structure"],
+      "workingDir": "/Users/jennumanzor/Desktop/~Working/~BUILDS/Work/FTI WORKFLOW/FTI_TRAINING_PORTAL",
+      "resolved": false,
+      "notes": "Reference older version of site nav from ~3 days ago for structure, but optimize for current needs"
     }
   ],
   "lastUpdated": "2026-01-03"

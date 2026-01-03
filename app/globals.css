@@ -44,6 +44,14 @@
   --foreground: var(--charcoal);
   --primary: var(--deep-forest);
   --accent: var(--sage);
+
+  /* Text Colors (consolidated) */
+  --text-dark: #3B412D;
+  --text-light: #FFF5EB;
+
+  /* Additional green variants */
+  --olive-mid: #6B8B4E;
+  --sage-deep: #97A97C;
 }
 
 @theme inline {
@@ -627,30 +635,6 @@ a:hover {
   color: var(--lime);
   font-family: Georgia, serif;
   line-height: 1;
-}
-
-/* ===== EDITORIAL PALETTE - Locked Colors ===== */
-:root {
-  /* Deep Greens - Primary */
-  --deep-forest: #3B412D;
-  --forest-mid: #3C422E;
-  --olive-dark: #546E40;
-  --olive-mid: #6B8B4E;
-
-  /* Sage Greens - Secondary */
-  --sage-deep: #97A97C;
-  --sage-mid: #A8B98D;
-  --sage-light: #B8C9A0;
-
-  /* Warm Neutrals */
-  --ivory: #FFF5EB;
-  --cream: #FAF3E8;
-  --sand: #EDE5D8;
-  --taupe: #C4B8A5;
-
-  /* Text Colors */
-  --text-dark: #3B412D;
-  --text-light: #FFF5EB;
 }
 
 /* ===== CONTAINER - Editorial ===== */

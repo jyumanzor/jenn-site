@@ -20,10 +20,17 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Jenn Umanzor",
   description: "Hi, I'm Jenn. Welcome to my digital mental palace.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://jennumanzor.com'),
   openGraph: {
     title: "Jenn Umanzor",
     description: "Hi, I'm Jenn. Welcome to my digital mental palace.",
     type: "website",
+    siteName: "Jenn Umanzor",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jenn Umanzor",
+    description: "Hi, I'm Jenn. Welcome to my digital mental palace.",
   },
 };
 

@@ -63,25 +63,18 @@ const icons: Record<string, JSX.Element> = {
   link: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>,
 };
 
-// Jenn Logo Component
-const JennLogo = ({ size = 32 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
-    <rect x="2" y="2" width="36" height="36" rx="8" fill="#3B412D"/>
+// Jenn Logo Component - matches brand logo (J with gold dot)
+const JennLogo = ({ size = 32, variant = 'dark' }: { size?: number; variant?: 'light' | 'dark' }) => (
+  <svg width={size} height={size} viewBox="0 0 120 120" fill="none">
+    <rect width="120" height="120" rx="24" fill={variant === 'dark' ? '#3B412D' : '#FFF5EB'}/>
     <path
-      d="M14 10h6v14c0 4-2 6-6 6"
-      stroke="#FABF34"
-      strokeWidth="3"
+      d="M45 28H75V78C75 92 65 102 50 102C38 102 30 94 30 82"
+      stroke={variant === 'dark' ? '#FFF5EB' : '#3B412D'}
+      strokeWidth="12"
       strokeLinecap="round"
       fill="none"
     />
-    <circle cx="26" cy="12" r="2" fill="#97A97C"/>
-    <path
-      d="M26 16v8c0 4-2 6-6 6"
-      stroke="#97A97C"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      fill="none"
-    />
+    <circle cx="88" cy="32" r="8" fill="#FABF34"/>
   </svg>
 );
 

@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import watching from "@/data/culture.json";
+import playlistsData from "@/data/playlists.json";
 
 // Song of the Day interface
 interface SongOfTheDay {
@@ -613,6 +614,7 @@ export default function WatchingPage() {
   const [expandedPlaylist, setExpandedPlaylist] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedMusicGenre, setSelectedMusicGenre] = useState<string>("all");
+  const [showSotdCandidates, setShowSotdCandidates] = useState(false);
 
   // Build unique music genres from all tracks across playlists
   const allTracks = useMemo(() => {
@@ -640,6 +642,24 @@ export default function WatchingPage() {
       track.genre?.toLowerCase() === selectedMusicGenre.toLowerCase()
     );
   }, [allTracks, selectedMusicGenre]);
+
+  // Song of the Day candidates - highlighted tracks from playlists.json
+  const sotdCandidates = useMemo(() => {
+    const candidates: { title: string; artist: string; playlist: string; isHighlighted: boolean }[] = [];
+    playlistsData.playlists.forEach((playlist) => {
+      playlist.tracks.forEach((track) => {
+        if (track.isHighlighted) {
+          candidates.push({
+            title: track.title,
+            artist: track.artist,
+            playlist: playlist.name,
+            isHighlighted: true
+          });
+        }
+      });
+    });
+    return candidates;
+  }, []);
 
   // Build unique genres and directors from actual data
   const uniqueGenres = useMemo(() => {
@@ -959,11 +979,37 @@ export default function WatchingPage() {
                   {watching.playlists.length} vibes · {watching.playlists.reduce((acc: number, p: Playlist) => acc + p.trackCount, 0).toLocaleString()} tracks
                 </span>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  {/* Song of Day Filter */}
+                  <button
+                    onClick={() => {
+                      setShowSotdCandidates(!showSotdCandidates);
+                      if (!showSotdCandidates) setSelectedMusicGenre("all");
+                    }}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 ${
+                      showSotdCandidates
+                        ? "bg-gold text-deep-forest"
+                        : "bg-white text-dark-brown hover:bg-stone border border-sand"
+                    }`}
+                    style={{
+                      boxShadow: showSotdCandidates ? '0 2px 10px rgba(250,191,52,0.3)' : 'none'
+                    }}
+                  >
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                    <span>Song of Day ({sotdCandidates.length})</span>
+                  </button>
+
+                  <span className="text-sand">|</span>
+
                   <span className="text-xs" style={{ color: 'rgba(42,60,36,0.5)' }}>Filter by genre:</span>
                   <select
                     value={selectedMusicGenre}
-                    onChange={(e) => setSelectedMusicGenre(e.target.value)}
+                    onChange={(e) => {
+                      setSelectedMusicGenre(e.target.value);
+                      if (e.target.value !== "all") setShowSotdCandidates(false);
+                    }}
                     className="px-3 py-1.5 bg-white rounded-full text-xs border border-sand focus:outline-none focus:border-olive"
                   >
                     <option value="all">All Genres</option>
@@ -971,9 +1017,12 @@ export default function WatchingPage() {
                       <option key={g} value={g}>{g}</option>
                     ))}
                   </select>
-                  {selectedMusicGenre !== "all" && (
+                  {(selectedMusicGenre !== "all" || showSotdCandidates) && (
                     <button
-                      onClick={() => setSelectedMusicGenre("all")}
+                      onClick={() => {
+                        setSelectedMusicGenre("all");
+                        setShowSotdCandidates(false);
+                      }}
                       className="text-xs text-olive hover:text-deep-forest transition-colors underline"
                     >
                       Clear
@@ -981,6 +1030,79 @@ export default function WatchingPage() {
                   )}
                 </div>
               </div>
+
+              {/* Song of Day Candidates View */}
+              {showSotdCandidates && (
+                <div className="mb-8">
+                  <div
+                    className="rounded-xl overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, #2a3c24 0%, #546e40 100%)',
+                      boxShadow: '0 8px 32px rgba(42, 60, 36, 0.2)'
+                    }}
+                  >
+                    <div className="p-5 border-b" style={{ borderColor: 'rgba(255,245,235,0.1)' }}>
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-10 h-10 rounded-full flex items-center justify-center"
+                          style={{ background: '#d4ed39' }}
+                        >
+                          <svg className="w-5 h-5" style={{ color: '#2a3c24' }} fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <h3
+                            className="text-xl"
+                            style={{
+                              fontFamily: 'var(--font-instrument), Instrument Serif, Georgia, serif',
+                              color: '#fff5eb'
+                            }}
+                          >
+                            Song of the Day Candidates
+                          </h3>
+                          <p className="text-xs" style={{ color: 'rgba(255,245,235,0.6)' }}>
+                            {sotdCandidates.length} highlighted "Peak Jenn" tracks
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="max-h-[400px] overflow-y-auto">
+                      <div className="divide-y" style={{ borderColor: 'rgba(255,245,235,0.08)' }}>
+                        {sotdCandidates.map((track, idx) => (
+                          <div
+                            key={`sotd-${track.title}-${track.artist}-${idx}`}
+                            className="px-5 py-3 transition-colors hover:bg-white/5"
+                          >
+                            <div className="flex items-center gap-3">
+                              <span
+                                className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0"
+                                style={{ backgroundColor: '#d4ed39', color: '#2a3c24' }}
+                              >
+                                {idx + 1}
+                              </span>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-medium truncate" style={{ color: '#fff5eb' }}>
+                                  {track.title}
+                                </p>
+                                <p className="text-xs truncate" style={{ color: 'rgba(255,245,235,0.6)' }}>
+                                  {track.artist}
+                                </p>
+                              </div>
+                              <span
+                                className="text-[9px] px-2 py-0.5 rounded-full flex-shrink-0"
+                                style={{ backgroundColor: 'rgba(255,245,235,0.15)', color: 'rgba(255,245,235,0.7)' }}
+                              >
+                                {track.playlist}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Filtered Tracks View (when genre selected) */}
               {selectedMusicGenre !== "all" && (

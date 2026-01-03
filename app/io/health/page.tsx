@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import IOAuthGate from "@/components/IOAuthGate";
 
-// Color palette
+// Color palette - expanded for visual variety
 const colors = {
   deepForest: "#2A3C24",
   darkOlive: "#3B412D",
@@ -16,6 +16,21 @@ const colors = {
   amber: "#FFCB69",
   lime: "#D4ED39",
   tan: "#CBAD8C",
+  // Additional vibrant colors
+  coral: "#FF7F6B",
+  blue: "#4A90D9",
+  purple: "#9B6FC3",
+  teal: "#38B2AC",
+  rose: "#F687B3",
+  indigo: "#667EEA",
+  orange: "#ED8936",
+  cyan: "#00B5D8",
+  // Zone colors for training
+  zone1: "#63C7FF",
+  zone2: "#44D688",
+  zone3: "#FFCB3D",
+  zone4: "#FF7F50",
+  zone5: "#FF4757",
 };
 
 // Types
@@ -744,21 +759,21 @@ function OverviewTab({ healthData, ouraData }: { healthData: HealthData; ouraDat
           label="Avg Sleep Score"
           value={avgSleepScore.toFixed(0)}
           unit="/100"
-          color={colors.sage}
+          color={colors.purple}
           icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>}
         />
         <StatCard
           label="Avg HRV"
           value={avgHRV.toFixed(0)}
           unit="ms"
-          color={colors.gold}
+          color={colors.coral}
           icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>}
         />
         <StatCard
           label="Avg Readiness"
           value={avgReadiness.toFixed(0)}
           unit="/100"
-          color={colors.olive}
+          color={colors.teal}
           icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>}
         />
       </div>
@@ -1006,16 +1021,16 @@ function BodyTab({ healthData }: { healthData: HealthData }) {
       {/* Metabolic & Other Metrics */}
       <div className="grid md:grid-cols-4 gap-4">
         <StatCard label="Metabolic Age" value={latest.metabolicAge} unit="years" color={colors.lime} />
-        <StatCard label="BMR" value={latest.bmr} unit="kcal" color={colors.sage} />
-        <StatCard label="Visceral Fat" value={latest.visceralFat} unit="/15" color={colors.olive} />
-        <StatCard label="Waist-Hip Ratio" value={latest.whr.toFixed(2)} color={colors.gold} />
+        <StatCard label="BMR" value={latest.bmr} unit="kcal" color={colors.orange} />
+        <StatCard label="Visceral Fat" value={latest.visceralFat} unit="/15" color={colors.teal} />
+        <StatCard label="Waist-Hip Ratio" value={latest.whr.toFixed(2)} color={colors.indigo} />
       </div>
 
       {/* Additional Metrics */}
       <div className="grid md:grid-cols-3 gap-4">
-        <StatCard label="Bone Mass" value={latest.boneMass} unit="lbs" color={colors.tan} />
-        <StatCard label="Protein Mass" value={latest.proteinMass} unit="lbs" color={colors.sage} />
-        <StatCard label="Body Water" value={latest.bodyWaterMass} unit="%" color={colors.olive} />
+        <StatCard label="Bone Mass" value={latest.boneMass} unit="lbs" color={colors.cyan} />
+        <StatCard label="Protein Mass" value={latest.proteinMass} unit="lbs" color={colors.purple} />
+        <StatCard label="Body Water" value={latest.bodyWaterMass} unit="%" color={colors.blue} />
       </div>
     </div>
   );
@@ -1078,7 +1093,7 @@ function SleepTab({ ouraData }: { ouraData: OuraEntry[] }) {
               progress={latest.readinessScore || 0}
               size={140}
               strokeWidth={12}
-              color={latest.readinessScore && latest.readinessScore >= 70 ? colors.lime : colors.gold}
+              color={latest.readinessScore && latest.readinessScore >= 70 ? colors.teal : colors.orange}
             >
               <div className="text-center">
                 <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{latest.readinessScore}</p>
@@ -1096,7 +1111,7 @@ function SleepTab({ ouraData }: { ouraData: OuraEntry[] }) {
               progress={Math.min((latest.avgHRV || 0) / 1.5, 100)}
               size={140}
               strokeWidth={12}
-              color={colors.gold}
+              color={colors.coral}
             >
               <div className="text-center">
                 <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{latest.avgHRV}</p>
@@ -1191,19 +1206,19 @@ function SleepTab({ ouraData }: { ouraData: OuraEntry[] }) {
               label="Sleep Efficiency"
               value={latest.sleepEfficiency || "--"}
               unit="%"
-              color={colors.sage}
+              color={colors.purple}
             />
             <StatCard
               label="Resting HR"
               value={latest.avgRestingHR?.toFixed(0) || "--"}
               unit="bpm"
-              color={colors.gold}
+              color={colors.coral}
             />
             <StatCard
               label="Temp Deviation"
               value={latest.tempDeviation?.toFixed(2) || "--"}
               unit="°C"
-              color={latest.tempDeviation && latest.tempDeviation > 0.5 ? "#ef4444" : colors.olive}
+              color={latest.tempDeviation && latest.tempDeviation > 0.5 ? colors.zone5 : colors.teal}
             />
             <StatCard
               label="Activity Score"
@@ -1336,21 +1351,21 @@ function RunningTab() {
       <div className="rounded-2xl p-6" style={{ backgroundColor: colors.ivory }}>
         <h3 className="text-lg font-medium mb-4" style={{ color: colors.deepForest }}>Target Training Paces (Sub-3)</h3>
         <div className="grid md:grid-cols-4 gap-4">
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.sage}15` }}>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.zone1}20` }}>
             <p className="text-xs uppercase tracking-wide mb-1" style={{ color: `${colors.deepForest}70` }}>Easy</p>
-            <p className="text-xl font-semibold" style={{ color: colors.deepForest }}>{paces.easy}</p>
+            <p className="text-xl font-semibold" style={{ color: colors.zone1 }}>{paces.easy}</p>
           </div>
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.gold}15` }}>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.zone3}20` }}>
             <p className="text-xs uppercase tracking-wide mb-1" style={{ color: `${colors.deepForest}70` }}>Tempo</p>
-            <p className="text-xl font-semibold" style={{ color: colors.deepForest }}>{paces.tempo}</p>
+            <p className="text-xl font-semibold" style={{ color: colors.zone3 }}>{paces.tempo}</p>
           </div>
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.lime}20` }}>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.zone4}20` }}>
             <p className="text-xs uppercase tracking-wide mb-1" style={{ color: `${colors.deepForest}70` }}>Interval</p>
-            <p className="text-xl font-semibold" style={{ color: colors.deepForest }}>{paces.interval}</p>
+            <p className="text-xl font-semibold" style={{ color: colors.zone4 }}>{paces.interval}</p>
           </div>
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.olive}15` }}>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.zone5}20` }}>
             <p className="text-xs uppercase tracking-wide mb-1" style={{ color: `${colors.deepForest}70` }}>Race Pace</p>
-            <p className="text-xl font-semibold" style={{ color: colors.deepForest }}>{paces.sub3Target}</p>
+            <p className="text-xl font-semibold" style={{ color: colors.zone5 }}>{paces.sub3Target}</p>
           </div>
         </div>
       </div>
@@ -1500,9 +1515,9 @@ function RecommendationsTab({ healthData, ouraData }: { healthData: HealthData; 
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return colors.gold;
-      case 'medium': return colors.sage;
-      default: return colors.olive;
+      case 'high': return colors.coral;
+      case 'medium': return colors.blue;
+      default: return colors.teal;
     }
   };
 
@@ -1512,20 +1527,20 @@ function RecommendationsTab({ healthData, ouraData }: { healthData: HealthData; 
       <div className="rounded-2xl p-6" style={{ backgroundColor: colors.ivory }}>
         <h3 className="text-lg font-medium mb-4" style={{ color: colors.deepForest }}>Current Status</h3>
         <div className="grid md:grid-cols-4 gap-4">
-          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgReadiness >= 70 ? colors.lime : colors.gold}20` }}>
-            <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{avgReadiness.toFixed(0)}</p>
+          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgReadiness >= 70 ? colors.teal : colors.orange}20` }}>
+            <p className="text-3xl font-semibold" style={{ color: avgReadiness >= 70 ? colors.teal : colors.orange }}>{avgReadiness.toFixed(0)}</p>
             <p className="text-xs uppercase tracking-wide" style={{ color: `${colors.deepForest}70` }}>7-Day Readiness</p>
           </div>
-          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgSleepScore >= 70 ? colors.lime : colors.gold}20` }}>
-            <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{avgSleepScore.toFixed(0)}</p>
+          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgSleepScore >= 70 ? colors.purple : colors.gold}20` }}>
+            <p className="text-3xl font-semibold" style={{ color: avgSleepScore >= 70 ? colors.purple : colors.gold }}>{avgSleepScore.toFixed(0)}</p>
             <p className="text-xs uppercase tracking-wide" style={{ color: `${colors.deepForest}70` }}>7-Day Sleep</p>
           </div>
-          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgHRV >= 60 ? colors.lime : colors.gold}20` }}>
-            <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{avgHRV.toFixed(0)}</p>
+          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${avgHRV >= 60 ? colors.coral : colors.zone5}20` }}>
+            <p className="text-3xl font-semibold" style={{ color: avgHRV >= 60 ? colors.coral : colors.zone5 }}>{avgHRV.toFixed(0)}</p>
             <p className="text-xs uppercase tracking-wide" style={{ color: `${colors.deepForest}70` }}>Avg HRV</p>
           </div>
-          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${colors.sage}20` }}>
-            <p className="text-3xl font-semibold" style={{ color: colors.deepForest }}>{latest.bodyScore}</p>
+          <div className="text-center p-4 rounded-xl" style={{ backgroundColor: `${colors.lime}20` }}>
+            <p className="text-3xl font-semibold" style={{ color: colors.lime }}>{latest.bodyScore}</p>
             <p className="text-xs uppercase tracking-wide" style={{ color: `${colors.deepForest}70` }}>Body Score</p>
           </div>
         </div>
@@ -1585,31 +1600,31 @@ function RecommendationsTab({ healthData, ouraData }: { healthData: HealthData; 
       <div className="rounded-2xl p-6" style={{ backgroundColor: colors.ivory }}>
         <h3 className="text-lg font-medium mb-4" style={{ color: colors.deepForest }}>Recovery Protocol</h3>
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.sage}15` }}>
-            <h4 className="font-medium mb-2" style={{ color: colors.deepForest }}>Sleep</h4>
-            <ul className="text-sm space-y-1" style={{ color: `${colors.deepForest}80` }}>
-              <li>* Target 7-9 hours</li>
-              <li>* Consistent bedtime</li>
-              <li>* Cool, dark room</li>
-              <li>* No screens 1hr before</li>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.purple}15` }}>
+            <h4 className="font-medium mb-2" style={{ color: colors.purple }}>Sleep</h4>
+            <ul className="text-sm space-y-1.5" style={{ color: `${colors.deepForest}80` }}>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.purple }} />Target 7-9 hours</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.purple }} />Consistent bedtime</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.purple }} />Cool, dark room</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.purple }} />No screens 1hr before</li>
             </ul>
           </div>
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.olive}15` }}>
-            <h4 className="font-medium mb-2" style={{ color: colors.deepForest }}>Active Recovery</h4>
-            <ul className="text-sm space-y-1" style={{ color: `${colors.deepForest}80` }}>
-              <li>* Easy 20-30 min walks</li>
-              <li>* Foam rolling</li>
-              <li>* Light stretching</li>
-              <li>* Yoga or mobility work</li>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.teal}15` }}>
+            <h4 className="font-medium mb-2" style={{ color: colors.teal }}>Active Recovery</h4>
+            <ul className="text-sm space-y-1.5" style={{ color: `${colors.deepForest}80` }}>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.teal }} />Easy 20-30 min walks</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.teal }} />Foam rolling</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.teal }} />Light stretching</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.teal }} />Yoga or mobility work</li>
             </ul>
           </div>
-          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.gold}15` }}>
-            <h4 className="font-medium mb-2" style={{ color: colors.deepForest }}>Stress Management</h4>
-            <ul className="text-sm space-y-1" style={{ color: `${colors.deepForest}80` }}>
-              <li>* 5-10 min meditation</li>
-              <li>* Box breathing</li>
-              <li>* Nature exposure</li>
-              <li>* Social connection</li>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: `${colors.indigo}15` }}>
+            <h4 className="font-medium mb-2" style={{ color: colors.indigo }}>Stress Management</h4>
+            <ul className="text-sm space-y-1.5" style={{ color: `${colors.deepForest}80` }}>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.indigo }} />5-10 min meditation</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.indigo }} />Box breathing</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.indigo }} />Nature exposure</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.indigo }} />Social connection</li>
             </ul>
           </div>
         </div>
@@ -1619,28 +1634,40 @@ function RecommendationsTab({ healthData, ouraData }: { healthData: HealthData; 
       <div className="rounded-2xl p-6" style={{ backgroundColor: colors.ivory }}>
         <h3 className="text-lg font-medium mb-4" style={{ color: colors.deepForest }}>Nutrition Timing for Runners</h3>
         <div className="space-y-4">
-          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.lime}10` }}>
-            <div className="text-2xl">🌅</div>
+          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.orange}10` }}>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${colors.orange}20` }}>
+              <svg className="w-5 h-5" style={{ color: colors.orange }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
             <div>
-              <h4 className="font-medium" style={{ color: colors.deepForest }}>Pre-Run (2-3 hours before)</h4>
+              <h4 className="font-medium" style={{ color: colors.orange }}>Pre-Run (2-3 hours before)</h4>
               <p className="text-sm" style={{ color: `${colors.deepForest}80` }}>
                 Complex carbs + small protein. Example: Oatmeal with banana and nut butter, or toast with eggs.
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.sage}10` }}>
-            <div className="text-2xl">🏃</div>
+          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.zone2}10` }}>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${colors.zone2}20` }}>
+              <svg className="w-5 h-5" style={{ color: colors.zone2 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
             <div>
-              <h4 className="font-medium" style={{ color: colors.deepForest }}>During (runs over 60 min)</h4>
+              <h4 className="font-medium" style={{ color: colors.zone2 }}>During (runs over 60 min)</h4>
               <p className="text-sm" style={{ color: `${colors.deepForest}80` }}>
                 30-60g carbs per hour. Gels, chews, or sports drinks. Practice with what you will use on race day.
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.gold}10` }}>
-            <div className="text-2xl">💪</div>
+          <div className="flex items-start gap-4 p-4 rounded-xl" style={{ backgroundColor: `${colors.blue}10` }}>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${colors.blue}20` }}>
+              <svg className="w-5 h-5" style={{ color: colors.blue }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
             <div>
-              <h4 className="font-medium" style={{ color: colors.deepForest }}>Post-Run (within 30 min)</h4>
+              <h4 className="font-medium" style={{ color: colors.blue }}>Post-Run (within 30 min)</h4>
               <p className="text-sm" style={{ color: `${colors.deepForest}80` }}>
                 3:1 or 4:1 carb to protein ratio. Example: Chocolate milk, protein smoothie, or recovery shake.
               </p>

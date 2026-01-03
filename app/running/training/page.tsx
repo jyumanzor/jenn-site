@@ -650,12 +650,12 @@ const BloodTestBiomarkers = () => {
   };
 
   const athleteMarkers = [
-    { key: 'hemoglobin', label: 'Hemoglobin', impact: 'Oxygen delivery to muscles', icon: '🩸' },
-    { key: 'iron', label: 'Iron', impact: 'Energy and endurance', icon: '⚡' },
-    { key: 'vitaminD', label: 'Vitamin D', impact: 'Bone health & performance', icon: '☀️' },
-    { key: 'vitaminB12', label: 'B12', impact: 'Red blood cell production', icon: '💊' },
-    { key: 'hba1c', label: 'HbA1c', impact: 'Blood sugar control', icon: '📊' },
-    { key: 'magnesium', label: 'Magnesium', impact: 'Muscle & nerve function', icon: '💪' },
+    { key: 'hemoglobin', label: 'Hemoglobin', impact: 'Oxygen delivery to muscles', iconType: 'heart' },
+    { key: 'iron', label: 'Iron', impact: 'Energy and endurance', iconType: 'bolt' },
+    { key: 'vitaminD', label: 'Vitamin D', impact: 'Bone health & performance', iconType: 'sun' },
+    { key: 'vitaminB12', label: 'B12', impact: 'Red blood cell production', iconType: 'pill' },
+    { key: 'hba1c', label: 'HbA1c', impact: 'Blood sugar control', iconType: 'chart' },
+    { key: 'magnesium', label: 'Magnesium', impact: 'Muscle & nerve function', iconType: 'shield' },
   ];
 
   return (
@@ -678,7 +678,11 @@ const BloodTestBiomarkers = () => {
       {/* Alert for Vitamin D */}
       <div className="p-3 rounded-lg mb-4" style={{ backgroundColor: 'rgba(229,62,62,0.1)', border: '1px solid rgba(229,62,62,0.2)' }}>
         <div className="flex items-start gap-2">
-          <span>⚠️</span>
+          <span className="w-5 h-5 flex-shrink-0" style={{ color: '#E53E3E' }}>
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+          </span>
           <div>
             <p className="text-sm font-medium" style={{ color: colors.deepForest }}>
               Vitamin D Insufficiency Detected
@@ -700,7 +704,14 @@ const BloodTestBiomarkers = () => {
           return (
             <div key={marker.key} className="p-3 rounded-lg" style={{ backgroundColor: 'rgba(42,60,36,0.03)' }}>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-sm">{marker.icon}</span>
+                <span className="w-4 h-4 flex items-center justify-center" style={{ color: getStatusColor(test.status) }}>
+                  {marker.iconType === 'heart' && <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" /></svg>}
+                  {marker.iconType === 'bolt' && <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>}
+                  {marker.iconType === 'sun' && <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" /></svg>}
+                  {marker.iconType === 'pill' && <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>}
+                  {marker.iconType === 'chart' && <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" /></svg>}
+                  {marker.iconType === 'shield' && <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}
+                </span>
                 <span className="text-xs font-medium" style={{ color: colors.deepForest }}>{marker.label}</span>
               </div>
               <div className="flex items-baseline gap-1">
@@ -731,25 +742,33 @@ const BloodTestBiomarkers = () => {
         <p className="text-xs font-medium mb-2" style={{ color: colors.sage }}>Training Implications</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="flex items-start gap-2">
-            <span style={{ color: colors.lime }}>✓</span>
+            <svg className="w-4 h-4 flex-shrink-0" style={{ color: colors.lime }} fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
             <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
               {bloodTestData.runnerInsights.oxygenCapacity}
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <span style={{ color: colors.lime }}>✓</span>
+            <svg className="w-4 h-4 flex-shrink-0" style={{ color: colors.lime }} fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
             <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
               {bloodTestData.runnerInsights.energyMetabolism}
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <span style={{ color: colors.lime }}>✓</span>
+            <svg className="w-4 h-4 flex-shrink-0" style={{ color: colors.lime }} fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
             <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
               {bloodTestData.runnerInsights.recoverySupport}
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <span style={{ color: colors.gold }}>!</span>
+            <svg className="w-4 h-4 flex-shrink-0" style={{ color: colors.gold }} fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
             <p className="text-xs" style={{ color: 'rgba(42,60,36,0.7)' }}>
               {bloodTestData.runnerInsights.inflammationRisk}
             </p>
@@ -978,7 +997,7 @@ export default function TrainingPage() {
               <span style={{ color: colors.lime }}>Training.</span>
             </h1>
             <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-6" style={{ color: "rgba(42,60,36,0.7)" }}>
-              {stats.totalDays}+ days of tracking across {stats.totalWorkouts} workouts. Sleep, activity, recovery, and body composition insights.
+              {stats.totalDays}+ days of integrated health tracking across {stats.totalWorkouts} logged workouts. Unified insights from wearables, body composition, blood biomarkers, and running activities.
             </p>
 
             {/* Data Source Badges */}
@@ -1314,24 +1333,24 @@ export default function TrainingPage() {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2" style={{ color: colors.deepForest }}>
-                Excellent Cardio Fitness
+                Elite Cardio Fitness
               </h4>
               <p className="text-sm" style={{ color: "rgba(42,60,36,0.7)" }}>
-                VO2 Max of {ouraFullData.overallStats.vo2max.latest} ml/kg/min puts you in the excellent category for your age group. Recent peak of {ouraFullData.overallStats.vo2max.max}.
+                VO2 Max of {ouraFullData.overallStats.vo2max.latest} ml/kg/min ranks in the top 5% for age group. All-time peak of {ouraFullData.overallStats.vo2max.max} shows consistent aerobic development.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 border border-sand/30">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: "rgba(250,191,52,0.3)" }}>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: "rgba(155,111,195,0.3)" }}>
                 <svg className="w-5 h-5" fill={colors.deepForest} viewBox="0 0 20 20">
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 12a1 1 0 110-2h4a1 1 0 110 2H8z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2" style={{ color: colors.deepForest }}>
-                Sleep Timing Opportunity
+                Sleep Quality Focus
               </h4>
               <p className="text-sm" style={{ color: "rgba(42,60,36,0.7)" }}>
-                Deep sleep quality is excellent (avg 92), but timing consistency could improve. Consider a more regular sleep schedule for better recovery.
+                Sleep efficiency averages {stats.avgSleep}. Deep sleep and REM stages tracked nightly via Oura Ring. Consistent timing improves recovery quality.
               </p>
             </div>
 
@@ -1342,10 +1361,10 @@ export default function TrainingPage() {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2" style={{ color: colors.deepForest }}>
-                Body Composition Progress
+                Optimal Body Composition
               </h4>
               <p className="text-sm" style={{ color: "rgba(42,60,36,0.7)" }}>
-                Body fat down to {healthData.measurements[1].bodyFatPercentage}% with muscle mass at {healthData.measurements[1].muscleMass}lbs. Metabolic age of {healthData.measurements[1].metabolicAge} is 3 years younger than actual.
+                Body fat at {healthData.measurements[1].bodyFatPercentage}% with lean muscle mass of {healthData.measurements[1].muscleMass}lbs. Metabolic age of {healthData.measurements[1].metabolicAge} years supports high training load.
               </p>
             </div>
           </div>

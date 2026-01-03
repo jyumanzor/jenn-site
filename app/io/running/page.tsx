@@ -316,6 +316,50 @@ export default function RunningAdminPage() {
   const [tempFeeling, setTempFeeling] = useState<string>("good");
   const [loaded, setLoaded] = useState(false);
 
+  // Strava sync state
+  const [stravaStatus, setStravaStatus] = useState<{
+    isConnected: boolean;
+    lastSync: string | null;
+    totalActivities: number;
+  }>({ isConnected: false, lastSync: null, totalActivities: 0 });
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [syncMessage, setSyncMessage] = useState<string | null>(null);
+
+  // Check Strava connection status
+  useEffect(() => {
+    fetch('/api/strava/sync')
+      .then(res => res.json())
+      .then(data => setStravaStatus(data))
+      .catch(() => {});
+  }, []);
+
+  // Sync Strava activities
+  const syncStrava = async () => {
+    setIsSyncing(true);
+    setSyncMessage(null);
+    try {
+      const res = await fetch('/api/strava/sync', { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) {
+        setSyncMessage(`Synced ${data.newActivities} new activities`);
+        setStravaStatus(prev => ({
+          ...prev,
+          lastSync: data.lastSync,
+          totalActivities: data.totalActivities,
+        }));
+        // Reload page to get fresh data
+        if (data.newActivities > 0) {
+          setTimeout(() => window.location.reload(), 1500);
+        }
+      } else {
+        setSyncMessage(data.error || 'Sync failed');
+      }
+    } catch {
+      setSyncMessage('Sync failed');
+    }
+    setIsSyncing(false);
+  };
+
   const activePlan = activeRace === "boston" ? bostonTrainingPlan : chicagoTrainingPlan;
   const activeRaceDate = activeRace === "boston" ? BOSTON_DATE : CHICAGO_DATE;
 

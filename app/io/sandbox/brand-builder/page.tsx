@@ -118,6 +118,30 @@ const colorLibrary: Record<string, ColorSwatch[]> = {
     { hex: "#FAFAD2", name: "Light Goldenrod", pantone: "11-0616" },
     { hex: "#EEE8AA", name: "Pale Goldenrod", pantone: "12-0722" },
   ],
+  "Terminal & Code": [
+    { hex: "#0D0F0D", name: "Terminal Black", pantone: "19-0508" },
+    { hex: "#151815", name: "Elevated Dark", pantone: "19-0506" },
+    { hex: "#1C1F1C", name: "Modal Dark", pantone: "19-0405" },
+    { hex: "#2A2D2A", name: "Card Dark", pantone: "19-0404" },
+    { hex: "#4A5D3E", name: "Dark Olive", pantone: "19-0419" },
+    { hex: "#5C6B4A", name: "Dark Sage", pantone: "18-0422" },
+    { hex: "#7D9B6A", name: "Terminal Green", pantone: "17-0230" },
+    { hex: "#9A7BA8", name: "Function Purple", pantone: "17-3612" },
+    { hex: "#6A9B9B", name: "Type Cyan", pantone: "17-4818" },
+    { hex: "#B8923A", name: "Dark Amber", pantone: "16-0954" },
+  ],
+  "Syntax Highlights": [
+    { hex: "#E8E5E0", name: "Warm White", pantone: "11-0602" },
+    { hex: "#9A9590", name: "Warm Gray", pantone: "16-1305" },
+    { hex: "#5A5855", name: "Stone Gray", pantone: "18-1108" },
+    { hex: "#A86B55", name: "Error Rust", pantone: "18-1336" },
+    { hex: "#C4846C", name: "Warning Coral", pantone: "16-1431" },
+    { hex: "#7D9B6A", name: "Success Green", pantone: "17-0230" },
+    { hex: "#6A8FA3", name: "Info Blue", pantone: "17-4320" },
+    { hex: "#D4A84A", name: "String Gold", pantone: "15-0953" },
+    { hex: "#9A7BA8", name: "Keyword Purple", pantone: "17-3612" },
+    { hex: "#6A9B9B", name: "Variable Teal", pantone: "17-4818" },
+  ],
 };
 
 // Suggested palettes for Jenn's aesthetic
@@ -186,6 +210,39 @@ const suggestedPalettes = [
       { hex: "#C4D4B5", name: "Fern" },
       { hex: "#FAF3E8", name: "Cream" },
       { hex: "#E8B923", name: "Honey" },
+    ],
+  },
+  {
+    name: "Dark Terminal",
+    description: "Moody tech - GitHub meets Graza",
+    colors: [
+      { hex: "#0D0F0D", name: "Terminal Black" },
+      { hex: "#4A5D3E", name: "Dark Olive" },
+      { hex: "#7D9B6A", name: "Terminal Green" },
+      { hex: "#E8E5E0", name: "Warm White" },
+      { hex: "#B8923A", name: "Dark Amber" },
+    ],
+  },
+  {
+    name: "Syntax Noir",
+    description: "Code editor vibes - Nord meets forest",
+    colors: [
+      { hex: "#151815", name: "Elevated Dark" },
+      { hex: "#5C6B4A", name: "Dark Sage" },
+      { hex: "#9A7BA8", name: "Function Purple" },
+      { hex: "#6A9B9B", name: "Type Cyan" },
+      { hex: "#D4A84A", name: "String Gold" },
+    ],
+  },
+  {
+    name: "Gruvbox Organic",
+    description: "Retro terminal warmth - Gruvbox inspired",
+    colors: [
+      { hex: "#1C1F1C", name: "Modal Dark" },
+      { hex: "#A86B55", name: "Error Rust" },
+      { hex: "#7D9B6A", name: "Success Green" },
+      { hex: "#9A9590", name: "Warm Gray" },
+      { hex: "#C4846C", name: "Warning Coral" },
     ],
   },
 ];

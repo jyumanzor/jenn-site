@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="120" rx="24" fill="#FFF5EB"/>
+  <!-- J letterform -->
+  <path d="M45 28H75V78C75 92 65 102 50 102C38 102 30 94 30 82" stroke="#3B412D" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Gold accent dot -->
+  <circle cx="88" cy="32" r="8" fill="#FABF34"/>
+</svg>

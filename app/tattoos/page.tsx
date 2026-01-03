@@ -6,23 +6,23 @@ import Image from "next/image";
 import tattoos from "@/data/tattoos.json";
 import journal from "@/data/journal.json";
 
-// Map tattoo IDs to line art image filenames (NEW RENDERS)
+// Map tattoo IDs to line art image filenames (V3 SVG RENDERS)
 const lineArtMap: Record<string, string> = {
-  "umbrella": "01_umbrella.png",
-  "anatomical-heart": "02_anatomical_heart.png",
-  "so-it-goes": "03_so_it_goes.png",
-  "es-muss-sein": "04_es_muss_sein.png",
-  "little-prince": "05_california_bear.png",
-  "volcano": "06_volcano.png",
-  "410": "07_410.png",
-  "cowboy-hat": "08_cowboy_hat.png",
-  "spoon": "09_spoon.png",
-  "bike-lane": "10_bicycle.png",
-  "marathon-clock": "11_marathon_time.png",
-  "disco-ball": "12_disco_ball.png",
-  "squirrel": "13_squirrel.png",
-  "honey-pot": "14_honey_jar.png",
-  "hummingbird": "15_hummingbird.png",
+  "umbrella": "jenn_umbrella_panel.svg",
+  "anatomical-heart": "jenn_anatomical_heart_panel.svg",
+  "so-it-goes": "jenn_so_it_goes_panel.svg",
+  "es-muss-sein": "jenn_es_muss_sein_panel.svg",
+  "little-prince": "jenn_california_bear_panel.svg",
+  "volcano": "jenn_volcano_panel.svg",
+  "410": "07_410.png", // No SVG render available
+  "cowboy-hat": "jenn_cowboy_hat_panel.svg",
+  "spoon": "jenn_spoon_panel.svg",
+  "bike-lane": "jenn_bicycle_panel.svg",
+  "marathon-clock": "jenn_marathon_time_panel.svg",
+  "disco-ball": "jenn_disco_ball_panel.svg",
+  "squirrel": "jenn_squirrel_panel.svg",
+  "honey-pot": "jenn_honey_jar_panel.svg",
+  "hummingbird": "jenn_hummingbird_panel.svg",
 };
 
 // Color tattoos (umbrella and hummingbird)
