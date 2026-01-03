@@ -12,6 +12,7 @@ const colors = {
   sage: "#97A97C",
   lime: "#D4ED39",
   gold: "#FABF34",
+  terracotta: "#C76B4A",
   strava: "#FC4C02",
 };
 
@@ -499,18 +500,18 @@ export default function RunningAdminPage() {
               <Link href="/io" className="text-[#FFF5EB]/60 text-xs hover:text-[#FFF5EB] transition-colors mb-4 inline-block">
                 ← Back to IO
               </Link>
+              <h1 className="font-display text-4xl md:text-5xl leading-tight mb-3" style={{ color: colors.lime }}>
+                Training Command Center
+              </h1>
               <div className="flex items-center gap-3 mb-4">
-                <h1 className="font-display text-4xl md:text-5xl leading-tight" style={{ color: colors.lime }}>
-                  Training Command Center
-                </h1>
                 <span
-                  className="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
-                  style={{ backgroundColor: colors.strava, color: "white" }}
+                  className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1"
+                  style={{ backgroundColor: colors.terracotta, color: colors.cream }}
                 >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.599h4.172L10.463 0l-7 13.828h4.169"/>
                   </svg>
-                  Strava Synced
+                  Strava
                 </span>
               </div>
               <p className="text-[#FFF5EB]/70 text-base leading-relaxed max-w-xl">
@@ -519,16 +520,16 @@ export default function RunningAdminPage() {
             </div>
             <div className="md:col-span-5">
               {/* Boston Marathon Feature Tile */}
-              <div className="bg-gradient-to-br from-[#0D2240] to-[#1A3A5C] rounded-2xl p-5 mb-4 border border-[#FABF34]/30">
+              <div className="bg-gradient-to-br from-[#C76B4A] to-[#A85A3D] rounded-2xl p-5 mb-4 border border-[#FABF34]/20">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-[#FABF34] text-xs uppercase tracking-wider font-medium">Boston Marathon 2026</p>
-                    <p className="font-display text-2xl text-white mt-1">April 20</p>
-                    <p className="text-white/60 text-xs mt-1">{weeksUntilBoston} weeks to go</p>
+                    <p className="text-[#FFF5EB]/80 text-xs uppercase tracking-wider font-medium">Boston Marathon 2026</p>
+                    <p className="font-display text-2xl text-[#FFF5EB] mt-1">April 20</p>
+                    <p className="text-[#FFF5EB]/60 text-xs mt-1">{weeksUntilBoston} weeks to go</p>
                   </div>
                   <div className="text-right">
                     <p className="font-display text-4xl" style={{ color: colors.lime }}>{getDaysUntilRace(new Date(), BOSTON_DATE)}</p>
-                    <p className="text-white/60 text-[10px] uppercase tracking-wider">days</p>
+                    <p className="text-[#FFF5EB]/60 text-[10px] uppercase tracking-wider">days</p>
                   </div>
                 </div>
               </div>

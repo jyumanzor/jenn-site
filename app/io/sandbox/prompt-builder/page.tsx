@@ -37,7 +37,8 @@ const defaultForceCommands: ForceCommand[] = [
 ];
 
 const quickCodes: QuickCode[] = [
-  { code: 'DC', meaning: 'Design/Color', expansion: 'Fix the color scheme. Use only hex codes from my palette.' },
+  { code: 'DC', meaning: 'Design/Color', expansion: 'Fix the color scheme. Use only hex codes from my palette: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Cream #FFF5EB, Tan #CBAD8C. NO dark blue, purple, or off-palette colors.' },
+  { code: 'SP', meaning: 'Spacing', expansion: 'Fix the spacing and alignment. Badges should be small and understated, below titles not inline.' },
   { code: 'TF', meaning: 'Type Fix', expansion: "Fix the TypeScript types. Don't use 'any'." },
   { code: 'RA', meaning: 'Re-read All', expansion: 'Stop. Re-read all the requirements I gave you.' },
   { code: 'KS', meaning: 'Keep Structure', expansion: 'Keep the exact same structure, only change what I specified.' },
@@ -47,16 +48,20 @@ const quickCodes: QuickCode[] = [
 const colorPalettes = [
   { name: 'Editorial Greens', colors: ['#3B412D', '#97A97C', '#546E40'] },
   { name: 'Warm Neutrals', colors: ['#FFF5EB', '#FAF3E8', '#CBAD8C'] },
-  { name: 'Full Jenn Palette', colors: ['#3B412D', '#546E40', '#97A97C', '#FFF5EB', '#FAF3E8', '#FABF34', '#CBAD8C'] },
-  { name: 'Accent Colors Only', colors: ['#FABF34', '#D4A853'] },
+  { name: 'Full Jenn Palette', colors: ['#3B412D', '#546E40', '#97A97C', '#FFF5EB', '#FAF3E8', '#FABF34', '#CBAD8C', '#C76B4A'] },
+  { name: 'Accent Colors Only', colors: ['#FABF34', '#D4A853', '#C76B4A'] },
+  { name: 'Warm Tones', colors: ['#C76B4A', '#CBAD8C', '#FABF34'] },
 ];
 
 const frustrationCodes = [
   { trigger: 'wrong color', code: 'DC', description: 'Color issues', expansion: 'Fix the color scheme. Use only hex codes from my palette.' },
+  { trigger: 'off-palette color', code: 'DC', description: 'Off-palette', expansion: 'You used a color NOT in my palette. Replace with: Deep Forest #3B412D, Sage #97A97C, Terracotta #C76B4A, Gold #FABF34, Cream #FFF5EB, or Tan #CBAD8C.' },
+  { trigger: 'dark blue', code: 'DC', description: 'No dark blue', expansion: 'NEVER use dark blue (#0D2240). Use terracotta #C76B4A or deep forest #3B412D instead.' },
   { trigger: 'not what I asked', code: 'RA', description: 'Re-read all', expansion: 'Stop. Re-read all the requirements I gave you.' },
   { trigger: 'changed too much', code: 'KS', description: 'Keep structure', expansion: 'Keep the exact same structure, only change what I specified.' },
   { trigger: 'added extras', code: 'NE', description: 'No extras', expansion: 'DO NOT add anything I didn\'t ask for. No comments, no refactoring.' },
   { trigger: 'types broken', code: 'TF', description: 'Type fix', expansion: 'Fix the TypeScript types. Don\'t use \'any\'.' },
+  { trigger: 'spacing/alignment', code: 'SP', description: 'Spacing fix', expansion: 'Fix the spacing and alignment. Badges should be small, below titles, not inline.' },
 ];
 
 // Category colors for the bar chart
@@ -93,6 +98,10 @@ const jennProfile = {
     'Always use Instrument Serif for headers',
     'Body text stays in system-ui/sans-serif',
     'Rounded corners: 12px for panels, 100px for buttons',
+    'NEVER use off-palette colors (no dark blue #0D2240, no purple, no bright red)',
+    'Use terracotta #C76B4A for warm accent cards (instead of dark blue)',
+    'Strava/external brand colors should be muted or replaced with palette equivalents',
+    'Badges should be small and understated, not inline with titles',
   ],
   palette: [
     { name: 'Deep Forest', hex: '#3B412D' },
@@ -103,6 +112,8 @@ const jennProfile = {
     { name: 'Cream', hex: '#FAF3E8' },
     { name: 'Gold', hex: '#FABF34' },
     { name: 'Tan', hex: '#CBAD8C' },
+    { name: 'Terracotta', hex: '#C76B4A' },
+    { name: 'Lime (accent only)', hex: '#D4ED39' },
   ],
   // From the manifestos
   lifePhilosophy: [
